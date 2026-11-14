@@ -1,5 +1,5 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-eva-v7';
+const CACHE='mars-shift-crew-20261114-eva-v8';
 const CORE=['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin'].map(file=>root+'/'+file));
 async function status(){
  const cache=await caches.open(CACHE);
