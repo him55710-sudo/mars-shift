@@ -13,7 +13,7 @@ pnpm install
 pnpm dev
 ```
 
-Open the printed local URL. `/evidence` is the source register; `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. The UI is English and responsive. Export mission produces JSON with routes, assumptions, scenario and provenance.
+Open the printed local URL. `/evidence` is the source register; `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. A validated seven-slide PowerPoint is downloadable from the briefing and at `/downloads/MARS-SHIFT-7-slides.pptx`; it includes embedded real imagery, source notes and an editable comparison table. The UI is English and responsive. Export mission produces JSON with routes, assumptions, scenario and provenance.
 
 ```sh
 pnpm test

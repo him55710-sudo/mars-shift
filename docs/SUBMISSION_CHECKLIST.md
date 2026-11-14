@@ -9,6 +9,7 @@ MARS SHIFT is an adaptive EVA planning prototype that helps a future Mars crew c
 ## Required links
 
 - Project demonstration: the published `/briefing` URL (exactly seven slides), or a verified <=30-second video. Choose **one** demo link.
+- A standalone, exactly seven-slide PowerPoint is available at `/downloads/MARS-SHIFT-7-slides.pptx`. The briefing includes a download link. This is an alternative format for the same demonstration, not a second required demo link.
 - Final project: the published planner root URL.
 - Both must load without passwords, permissions or registration in a signed-out browser. Owner-private publication is not sufficient; check the final site audience before submitting.
 - NASA data/resources: list Mars Trek and relevant challenge resources plus the actual HiRISE and THEMIS product sources. Distinguish contextual resources from measurements used in calculations.
