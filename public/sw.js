@@ -1,15 +1,15 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-v1';
+const CACHE='mars-shift-crew-20261114-v2';
 const CORE=['/data/terrain.json','/data/manifest.json','/data/optical.webp','/data/slope.png','/data/thermal.png','/data/exposure.png'];
 async function status(){
  const cache=await caches.open(CACHE);
  const checks=await Promise.all(['/',...CORE].map(url=>cache.match(url)));
  const shell=await cache.match('/');
- if(!shell)return false;
+ if(!shell)return {ready:false,assets:[]};
  const html=await shell.text();
  const assets=[...html.matchAll(/(?:src|href)="(\/assets\/[^\"]+)"/g)].map(m=>m[1]);
  const scripts=await Promise.all(assets.map(url=>cache.match(url)));
- return checks.every(Boolean)&&assets.length>=2&&scripts.every(Boolean);
+ return {ready:checks.every(Boolean)&&assets.length>=2&&scripts.every(Boolean),assets};
 }
 self.addEventListener('install',event=>event.waitUntil((async()=>{
  const cache=await caches.open(CACHE);
@@ -26,10 +26,10 @@ self.addEventListener('install',event=>event.waitUntil((async()=>{
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
  for(const name of await caches.keys())if(name.startsWith('mars-shift-crew-')&&name!==CACHE)await caches.delete(name);
  await self.clients.claim();
- for(const client of await self.clients.matchAll())client.postMessage({type:'MARS_CACHE_STATUS',ready:await status()});
+ for(const client of await self.clients.matchAll())client.postMessage({type:'MARS_CACHE_STATUS',...await status()});
 })()));
 self.addEventListener('message',event=>{
- if(event.data?.type==='MARS_CACHE_STATUS')event.waitUntil(status().then(ready=>event.source?.postMessage({type:'MARS_CACHE_STATUS',ready})));
+ if(event.data?.type==='MARS_CACHE_STATUS')event.waitUntil(status().then(result=>event.source?.postMessage({type:'MARS_CACHE_STATUS',...result})));
 });
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);
