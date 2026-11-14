@@ -3,9 +3,10 @@
   "editableTables": 1,
   "tableSlide": 4,
   "embeddedImages": 4,
-  "sha256": "dcea1344cdf8d7d273626f28186570bf076c849644f96bc33d20c06507f86689",
-  "bytes": 1839663,
+  "sha256": "7fedde509128c578e56d16207cef881fa943186a9e968f8ee23e1bfd98f15dfe",
+  "bytes": 1646011,
   "validation": "Package integrity, native table presence, font policy, layout geometry and first-party import passed; all seven imported final slides rendered and visually reviewed.",
   "nativePowerPointExecution": false,
-  "aiDisclosure": "Codex-assisted authoring; scientific imagery and source measurements are real."
+  "aiDisclosure": "Codex-assisted authoring; scientific imagery and source measurements are real.",
+  "revision": "Crew workflow revision, 2026-11-14"
 }

@@ -2,7 +2,7 @@
 
 **Adaptive EVA Navigator — When Mars changes, your map changes.**
 
-A working NASA Space Apps 2026 research prototype for **Interplanetary Survival Guide: Martian Map**. Compare complete, terrain-based round trips on a real 1 km Jezero region, inspect the evidence, change mission budgets and revalidate a route after a clearly simulated exclusion event.
+A working NASA Space Apps 2026 research prototype for **Interplanetary Survival Guide: Martian Map**. The default crew view guides a simulated EVA through preparation, traverse, science and return. Mission Control compares complete, terrain-based round trips on a real 1 km Jezero region and hands the selected plan to the crew.
 
 ## Run
 
@@ -13,7 +13,9 @@ pnpm install
 pnpm dev
 ```
 
-Open the printed local URL. `/evidence` is the source register; `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. A validated seven-slide PowerPoint is downloadable from the briefing and at `/downloads/MARS-SHIFT-7-slides.pptx`; it includes embedded real imagery, source notes and an editable comparison table. The UI is English and responsive. Export mission produces JSON with routes, assumptions, scenario and provenance.
+Open the printed local URL. `/` is Crew view, `/planning` is Mission Control, `/evidence` is the source register, and `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. A validated seven-slide PowerPoint is downloadable at `/downloads/MARS-SHIFT-7-slides.pptx`. The UI is English and responsive. Local exports retain assumptions, events and provenance.
+
+Crew view keeps the next checkpoint, current-position return time and projected return reserve visible. HOLD stops progression; an obstacle scenario requires position/buddy checks, an alternative comparison and explicit adoption. An early return requires confirmation and skips remaining science. A saved rehearsal restores on HOLD. Production builds cache the application and six terrain assets for offline use; the interface reports readiness only after the worker verifies the cache. A first successful online load is required. This cache does not include external NASA sites or the PowerPoint download.
 
 ```sh
 pnpm test
@@ -48,7 +50,9 @@ ROI: **77.640° E, 18.450° N**, 1,000 × 1,000 m in the source Mars equirectang
 - Configurable mission assumptions; infeasible budgets are rejected explicitly.
 - A simulated 35 m exclusion invalidates a previous route and triggers alternate round trips.
 - Reduced-visibility simulation leads to HOLD/verify, rather than a claim of assured return.
-- Three proposed science targets, custom map target, point inspector, zoom, layer selection, tablet layout, JSON export and seven-slide briefing.
+- Crew checkpoints, local-corridor map, early return, science notes, session restoration and offline terrain cache.
+- Large field controls, daylight/night display, keyboard dialogs and progressive disclosure of simulation controls.
+- Three proposed science targets, custom map target, point inspector, zoom, layer selection, JSON export and seven-slide briefing.
 
 ## Actual measured baseline
 
@@ -76,6 +80,7 @@ Mission-aware routing minimizes a transparent terrain cost and then checks resou
 - [Data sources and classification](docs/DATA_SOURCES.md)
 - [Methodology and equations](docs/METHODOLOGY.md)
 - [Validation](docs/VALIDATION.md)
+- [Crew workflow and human-factors rationale](docs/CREW_WORKFLOW.md)
 - [Limitations](docs/LIMITATIONS.md)
 - [Submission checklist](docs/SUBMISSION_CHECKLIST.md)
 - [Seven-slide content](docs/DEMO_SLIDES_EN.md)
