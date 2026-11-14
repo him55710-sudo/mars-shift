@@ -72,7 +72,7 @@ Visible in-app browser, Windows host, Eastern Ridge, helmet camera, Auto quality
 - TypeScript project check passed.
 - Vitest: **18 files, 181 tests passed**, final full run 17.63 s.
 - Vite production build passed, 1,839 modules, 4.31 s in the local final build. Main JS 344.08 kB / 109.16 kB gzip; Three.js 593.74 kB is a separate lazy chunk. Build timing varies on shared hardware.
-- Git whitespace check passed. Exact integration source is rebuilt again by the Sites publication helper.
+- Authored UI diff whitespace check passed against the published baseline. Imported PDS label bytes and frozen scientific source formatting are preserved. Exact integration source is rebuilt again by the Sites publication helper.
 
 ## Licenses, scientific boundaries and limitations
 
