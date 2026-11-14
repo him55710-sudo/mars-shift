@@ -1,5 +1,5 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-noah-v14';
+const CACHE='mars-shift-crew-20261114-realism-v15';
 const CORE=[...['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin','optical-native.webp','optical-native-meta.json','surface-optical-meta.json','surface-tiles/manifest.json','obstacle-candidates-v2.json','optical-v2-mask.png','optical-v2-meta.json','science/terrain-metrics.json','science/terrain-report.json'].map(file=>root+'/'+file)),'/data/optical-benchmark.json','/data/optical-benchmark-v2.json','/data/optical-model-v2.json','/media/mars-global.jpg','/data/science-results.json','/data/noah/integration-results.json','/models/nasa-emu-web.glb','/models/nasa-emu-web.json',...['/data','/data/ridge','/data/noah'].map(root=>root+'/noah-terrain.json'),...['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin','optical-native.webp','optical-native-meta.json','surface-optical-meta.json','surface-tiles/manifest.json','science/terrain-metrics.json','science/terrain-report.json'].map(file=>'/data/noah/'+file)];
 async function status(){
  const cache=await caches.open(CACHE);

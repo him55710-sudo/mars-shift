@@ -49,10 +49,14 @@ export function nativeNormalPixels(native:NativeDEM){
 
 /** Resample the actual polyline, without smoothing a route across excluded cells. */
 export function groundRibbon(t:Terrain,native:NativeDEM|null,cells:number[],min:number,width=.65){
+ return groundPolyline(t,native,cells.map(i=>({x:i%t.width,y:Math.floor(i/t.width)})),min,width);
+}
+
+/** A display ribbon follows the actual DEM along an unsmoothed metric polyline. */
+export function groundPolyline(t:Terrain,native:NativeDEM|null,points:Point[],min:number,width=.65){
  const positions:number[]=[],uv:number[]=[],indices:number[]=[];let along=0,previous=-1;
- const centre=(i:number)=>({x:i%t.width,y:Math.floor(i/t.width)});
- for(let n=1;n<cells.length;n++){
-  const a=centre(cells[n-1]),b=centre(cells[n]),dx=b.x-a.x,dy=b.y-a.y,length=Math.hypot(dx,dy)*t.cellSize,steps=Math.max(1,Math.ceil(length/.75));
+ for(let n=1;n<points.length;n++){
+  const a=points[n-1],b=points[n],dx=b.x-a.x,dy=b.y-a.y,length=Math.hypot(dx,dy)*t.cellSize,steps=Math.max(1,Math.ceil(length/.75));
   if(!length)continue;const side={x:-dy/Math.hypot(dx,dy)*width/2/t.cellSize,y:dx/Math.hypot(dx,dy)*width/2/t.cellSize};
   for(let s=n===1?0:1;s<=steps;s++){
    const q={x:a.x+dx*s/steps,y:a.y+dy*s/steps},left={x:q.x+side.x,y:q.y+side.y},right={x:q.x-side.x,y:q.y-side.y},le=heightAt(t,left,native),re=heightAt(t,right,native),v=along+length*s/steps;

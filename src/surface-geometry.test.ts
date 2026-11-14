@@ -1,5 +1,5 @@
 import {describe,it,expect} from 'vitest';
-import {surfaceAxis,surfaceGeometry,groundRibbon,nativeNormalPixels} from './surface-geometry';
+import {surfaceAxis,surfaceGeometry,groundRibbon,groundPolyline,nativeNormalPixels} from './surface-geometry';
 import {groundHazardPixels} from './ground-overlay';
 import {DEFAULTS} from './planner';
 import type {Terrain} from './planner';
@@ -12,8 +12,9 @@ describe('native terrain with adaptive display detail',()=>{
  it('does not let a coarse quad bridge native NoData or excluded data coverage',()=>{const {t,native}=fixture(),before=surfaceGeometry(t,native,{x:3,y:3},false,10);native.values[2*40+2]=NaN;const after=surfaceGeometry(t,{...native,values:native.values.slice()},{x:3,y:3},false,10);expect(after.triangles).toBeLessThan(before.triangles);const masked={...t,valid:t.valid.map((v,i)=>i===20?0:v)};expect(surfaceGeometry(masked,native,{x:3,y:3},false,10).triangles).toBeLessThan(before.triangles);});
 });
 describe('ground registered navigation',()=>{
+ it('drapes continuous obstacle boundaries without snapping their coordinates to planning cells',()=>{const {t,native}=fixture(),points=Array.from({length:65},(_,i)=>({x:3.15+Math.cos(i/64*Math.PI*2),y:3.35+Math.sin(i/64*Math.PI*2)})),g=groundPolyline(t,native,points,10,.18);expect(g.indices.length).toBeGreaterThan(0);for(let i=0;i<g.positions.length;i+=3){const x=g.positions[i]+20-.5,z=g.positions[i+2]+20-.5;expect(g.positions[i+1]).toBeCloseTo(x*.1+z*.2+.045,5);}expect(Math.max(...g.uv.filter((_,i)=>i%2))).toBeCloseTo(Math.PI*10,1);});
  it('derives object-space lighting normals from physical DEM gradients',()=>{const {native}=fixture(),pixels=nativeNormalPixels(native),i=((39-10)*40+10)*4,l=Math.hypot(.1,1,.2);expect(pixels[i]/255*2-1).toBeCloseTo(-.1/l,2);expect(pixels[i+1]/255*2-1).toBeCloseTo(1/l,2);expect(pixels[i+2]/255*2-1).toBeCloseTo(-.2/l,2);});
  it('drapes both ribbon edges on the interpolated DEM with only a display offset',()=>{const {t,native}=fixture(),g=groundRibbon(t,native,[18,19,20],10);expect(g.indices.length).toBeGreaterThan(0);for(let i=0;i<g.positions.length;i+=3){const x=g.positions[i]+20-.5,z=g.positions[i+2]+20-.5;expect(g.positions[i+1]).toBeCloseTo(x*.1+z*.2+.045,5);}expect(Math.max(...g.uv.filter((_,i)=>i%2))).toBeCloseTo(10);});
  it('never fabricates a ribbon over unknown DEM support',()=>{const {t,native}=fixture();native.values.fill(NaN);expect(groundRibbon(t,native,[18,19],10).indices).toHaveLength(0);});
- it('separates excluded, derived caution and unknown overlay classes',()=>{const {t}=fixture();t.slope[1]=30;t.exposure[2]=1;t.valid[3]=0;const rgba=groundHazardPixels(t,DEFAULTS,null);expect([...rgba.slice(0,4)]).toEqual([0,0,0,0]);expect([...rgba.slice(4,8)]).toEqual([245,89,63,235]);expect([...rgba.slice(8,12)]).toEqual([244,173,64,180]);expect([...rgba.slice(12,16)]).toEqual([165,145,201,210]);});
+ it('separates excluded, derived caution and unknown overlay classes',()=>{const {t}=fixture();t.slope[1]=30;t.exposure[2]=1;t.valid[3]=0;const rgba=groundHazardPixels(t,DEFAULTS,null);expect([...rgba.slice(0,4)]).toEqual([0,0,0,0]);expect([...rgba.slice(4,8)]).toEqual([245,89,63,235]);expect([...rgba.slice(8,12)]).toEqual([244,173,64,180]);expect([...rgba.slice(12,16)]).toEqual([135,145,157,145]);});
 });

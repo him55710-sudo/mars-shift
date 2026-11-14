@@ -1,13 +1,15 @@
 {
   "schemaVersion": 1,
   "engineSources": {
-    "src/surface-geometry.ts": "bbe43bd079ed9ee6ee9ba8a53b1559a985ea9e983972b1c3063bd9ffdff62ce5",
+    "src/surface-geometry.ts": "2b34bb214bb2687778ee37b2580309dbf7a770e075bef2dcef16f0093b7d23dd",
     "src/surface-chunks.ts": "5a2cb01580ca7694c41f46dc9170ee2bb0d5951a057629fa54763a38891ce786",
-    "src/surface-tiles.ts": "a0a2faae5ad38cea7c5c663da93243be68135e9130f246b875085c6e22ac5f27",
+    "src/surface-tiles.ts": "f407796f2092cd6ccf915feabb7a998dfca7a7dfb3cc28337c2c2ee3a9df8644",
     "src/native-registration.ts": "e9508fc6bd88411e116f55da6e832fdd8ef94f3d1e31fa123a7833cfb5713a94",
-    "src/ground-overlay.ts": "70113ebc9d67ade39e2b56c929d8052ba91e9ec19b92f1342cdcb0f388b48675",
-    "src/TerrainScene.tsx": "a8915b3d4afac508b54c15132fcef3e96589db03d15a25fb659ba5ef30a73ddd",
-    "src/astronaut-avatar.ts": "7605cff517d04b122e723c6b56b52fd637f7cb95922fd2b45fe59b556af28ddb"
+    "src/ground-overlay.ts": "b1ce935478dbb4f568138a93efeff70b4d4ebf1424dd83b5a4e1d01af0891e47",
+    "src/TerrainScene.tsx": "53c87e282588e64e63604d7bd9cd6bb77deb883abbe0f5f53c9cd69c410ce411",
+    "src/astronaut-avatar.ts": "df540facfb66da84ee62cd98add30748db01a88ce5067fd866a228c8a9d4e35b",
+    "src/render-quality.ts": "404161316140738d8a3b7d4e5d8d474264fe806c9d7b929a9532cb47d9603227",
+    "src/gpu-timer.ts": "cc06ab2ed4be71e08fb39bd448bcd4c03c6a01e99dce3c5b9510159130d1aecf"
   },
   "regions": [
     {
@@ -23,7 +25,7 @@
       "opticalAtlasBytesBeforeMipmaps": 4194304,
       "baseOpticalBytesBeforeMipmaps": 4000000,
       "priorFullOpticalBytesBeforeMipmaps": 44462224,
-      "oneBuildCpuMilliseconds": 17.351100000000002,
+      "oneBuildCpuMilliseconds": 23.758700000000005,
       "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
       "texture": {
         "width": 3334,
@@ -44,7 +46,7 @@
       "opticalAtlasBytesBeforeMipmaps": 4194304,
       "baseOpticalBytesBeforeMipmaps": 4000000,
       "priorFullOpticalBytesBeforeMipmaps": 44462224,
-      "oneBuildCpuMilliseconds": 25.477600000000024,
+      "oneBuildCpuMilliseconds": 16.26600000000002,
       "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
       "texture": {
         "width": 3334,
@@ -65,7 +67,7 @@
       "opticalAtlasBytesBeforeMipmaps": 4194304,
       "baseOpticalBytesBeforeMipmaps": 4000000,
       "priorFullOpticalBytesBeforeMipmaps": 44462224,
-      "oneBuildCpuMilliseconds": 14.18950000000001,
+      "oneBuildCpuMilliseconds": 15.390499999999975,
       "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
       "texture": {
         "width": 3334,
@@ -81,21 +83,27 @@
     "sourceSha256": "4dd79f1f8e02ab39bc15d87a7bbeda1f437e1103ab7661f7797340e0c114f372",
     "sourceBytes": 3448904,
     "originalTriangles": 343455,
-    "webTriangles": 23238,
-    "webVertices": 11634,
-    "webBytes": 852596,
-    "webSha256": "fca4b5fc654c2bfa6c8234e696a56f0e4015402bbe0b1427895e7b292402dfdd",
+    "webTriangles": 29364,
+    "webVertices": 14762,
+    "webBytes": 1216908,
+    "webSha256": "55ffe57e3437696bbf5d93e3d1b1a6ec3944e9a81b5a52cf6bdd05a379519ee6",
     "materials": 7,
     "bones": 9,
     "heightMetres": 1.85,
     "forward": "glTF local -Z",
     "ground": "neutral sole at glTF local y=0",
     "blenderVersion": "5.2.2 LTS",
+    "bakedOcclusion": {
+      "method": "12 deterministic hemisphere rays per vertex on illustrative suit geometry",
+      "radiusMetres": 0.14,
+      "output": "glTF COLOR_0; zero texture bytes",
+      "scope": "character display only"
+    },
     "adaptation": [
-      "Removed redundant nested visor layers and unioned overlapping legacy shells at 6 mm display scale",
+      "Removed redundant nested visor layers and unioned overlapping legacy shells at 4.5 mm display scale",
       "Reduced polygons without adding terrain or physical suit claims",
-      "Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS pack for a surface-rehearsal silhouette",
-      "Added illustrative 9-bone skin for a procedural walk"
+      "Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS cover, seams, recessed panel, latches and hoses for a surface-rehearsal silhouette",
+      "Added illustrative 9-bone skin for a procedural walk and vertex-baked geometric occlusion; no calibrated suit physiology"
     ],
     "terms": "NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification"
   },
@@ -104,9 +112,11 @@
     "4m overview geometry; object-space normals derived from actual native1m DEM",
     "128m spatial patches with tight per-patch frustum bounds; identical shared-edge coordinates and normals",
     "Four resident512px optical images feed one1024px atlas; no full3334px optical image decoded in EVA",
-    "Draw only while camera/crew changes; capped at60fps, adaptive pixel ratio0.75–1.5",
+    "Draw only while camera/crew/pose changes; auto display ratio1–1.5, capped by device ratio; high detail and efficiency overrides",
     "Dispose the surface renderer while the expanded map is open",
-    "Load detailed crew and its shadows only for third-person EVA;7material draws and23,238 triangles",
+    "Load detailed crew and its shadows only for third-person EVA;7material draws and29,364 triangles; vertex-baked character occlusion adds no texture or extra pass",
+    "Cache settled poses and static shadow maps; compute contour geometry only when enabled",
+    "Optional asynchronous GPU timer queries; no synchronous GPU readback or universal FPS claim",
     "Asynchronous WebP objectURLs for2D; no full-resolution synchronous PNG serialization in3D"
   ],
   "limits": [

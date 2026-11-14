@@ -3,3 +3,14 @@
 @media(min-width:761px){.surface-waypoint{left:58%;bottom:185px}}
 
 @media(max-width:760px){.eva-workspace.eva-surface .eva-touch-pad{right:auto;bottom:70px;width:142px;grid-template-columns:repeat(3,44px)}.eva-workspace.eva-surface .eva-touch-pad button{min-width:44px;min-height:44px;max-width:44px;max-height:44px;width:44px;height:44px}.surface-bottom-left{bottom:180px}.surface-waypoint{bottom:280px}}
+
+.surface-top-actions select{pointer-events:auto;max-width:125px;min-height:44px;border:1px solid #ffffff40;border-radius:10px;color:#f1f4f3;background:#283139e8;padding:0 10px;font:inherit;font-size:11px;color-scheme:dark;cursor:pointer}.surface-top-actions select:focus-visible{outline:2px solid #b9f2d4;outline-offset:3px}.surface-hazard-key{position:absolute;bottom:82px;left:30px;display:flex;gap:14px;font-size:10px;color:#f3f5f5;text-shadow:0 1px 4px #000}.surface-hazard-key span{display:flex;gap:5px;align-items:center}.surface-hazard-key i{width:12px;height:3px;border-radius:2px}
+@media(max-width:760px){.surface-top-actions{flex-wrap:wrap;justify-content:flex-end;max-width:calc(100% - 24px);gap:5px}.surface-top-actions select{min-height:38px;font-size:9px;max-width:94px;padding:0 6px}.surface-hazard-key{left:17px;bottom:55px;gap:9px;font-size:8px}.surface-hazard-key i{width:8px}}
+
+.surface-top-actions button{white-space:nowrap}.surface-top-actions select{flex-shrink:0}
+
+.surface-hazard-key{position:static;flex-wrap:wrap;gap:8px 12px;margin-top:16px;line-height:1.5;text-shadow:0 1px 4px #000}.surface-hazard-key span{white-space:nowrap}@media(max-width:760px){.surface-top-actions select{min-height:44px}.surface-hazard-key{gap:6px 10px;margin-top:12px;font-size:8px}}
+
+@media(max-width:760px){.surface-top-actions{top:72px;flex-wrap:nowrap}.surface-top-actions select{position:absolute;right:0;top:-54px;width:140px;max-width:140px;font-size:16px;min-height:44px}.surface-compass{left:17px;top:75px;transform:none;width:150px;height:55px}.surface-top-actions button{min-height:44px;min-width:44px}.surface-top-actions button:first-of-type{min-width:96px}.surface-objective h1{font-size:20px}}
+
+@media(max-width:760px){.surface-waypoint{top:326px;bottom:auto}.surface-hazard-key{font-size:10px}.surface-footer,.surface-footer small{font-size:8px}}

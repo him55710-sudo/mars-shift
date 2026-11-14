@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 
-export type AstronautAvatar={group:THREE.Group;update:(walkPhase:number,moving:boolean)=>void;ready:Promise<void>;load:()=>Promise<void>;dispose:()=>void};
+export type AstronautAvatar={group:THREE.Group;update:(walkPhase:number,moving:boolean,deltaSeconds?:number)=>boolean;ready:Promise<void>;load:()=>Promise<void>;dispose:()=>void};
 
 /** Illustrative crew figure. Local -Z is forward; neutral soles sit at y=0 metres. */
 function createFallbackAstronaut() {
@@ -75,13 +75,45 @@ function createFallbackAstronaut() {
 export function createAstronautAvatar(loadDetailed=true):AstronautAvatar {
  const group=new THREE.Group();group.name='NASA EMU / illustrative EVA rehearsal';
  group.userData={classification:'NASA-derived visual asset with illustrative walking',assetStatus:'deferred',source:'NASA / Michael D. Carbajal',forward:'local -Z',units:'metres'};
- let disposed=false,started=false,model:THREE.Group|null=null,fallback:ReturnType<typeof createFallbackAstronaut>|null=null,phase=0,moving=false;
- const bones=new Map<string,{bone:THREE.Bone;rest:THREE.Quaternion}>(),axis=new THREE.Vector3(1,0,0),rotation=new THREE.Quaternion();
+ let disposed=false,started=false,model:THREE.Group|null=null,fallback:ReturnType<typeof createFallbackAstronaut>|null=null,phase=0,moving=false,walkBlend=0,poseReady=false;
+ const bones=new Map<string,{bone:THREE.Bone;rest:THREE.Quaternion}>(),axis=new THREE.Vector3(1,0,0),stanceAxis=new THREE.Vector3(0,0,1),rotation=new THREE.Quaternion();
+ const soleAnchors:{bone:THREE.Bone;point:THREE.Vector3}[]=[],probe=new THREE.Vector3(),modelOrigin=new THREE.Vector3();
  let finish:()=>void=()=>{};const ready=new Promise<void>(resolve=>{finish=resolve;});
  const release=(object:THREE.Object3D)=>{const geometries=new Set<THREE.BufferGeometry>(),materials=new Set<THREE.Material>(),textures=new Set<THREE.Texture>(),skeletons=new Set<THREE.Skeleton>();object.traverse(child=>{if(child instanceof THREE.Mesh){geometries.add(child.geometry);(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>materials.add(material));if(child instanceof THREE.SkinnedMesh)skeletons.add(child.skeleton);}});materials.forEach(material=>{Object.values(material).forEach(v=>{if(v instanceof THREE.Texture)textures.add(v);});material.dispose();});textures.forEach(t=>t.dispose());geometries.forEach(g=>g.dispose());skeletons.forEach(s=>s.dispose());object.removeFromParent();};
- const update=(walkPhase:number,isMoving:boolean)=>{phase=Number.isFinite(walkPhase)?walkPhase:0;moving=isMoving;fallback?.update(phase,moving);if(!model)return;const stride=moving?Math.sin(phase):0;for(const [name,{bone,rest}] of bones){let angle=0;if(name.startsWith('Thigh_'))angle=(name.endsWith('_L')?1:-1)*stride*.22;else if(name.startsWith('Shin_'))angle=moving?Math.max(0,(name.endsWith('_L')?-1:1)*stride)*.30:0;else if(name.startsWith('Arm_'))angle=(name.endsWith('_L')?-1:1)*stride*.13;else if(name.startsWith('Forearm_'))angle=moving?-.04-Math.max(0,(name.endsWith('_L')?1:-1)*stride)*.06:0;bone.quaternion.copy(rest).multiply(rotation.setFromAxisAngle(axis,angle));}model.position.y=moving?Math.abs(Math.sin(phase))*.012:0;};
- const load=()=>{if(started||disposed)return ready;started=true;group.userData.assetStatus='loading';fallback=createFallbackAstronaut();group.add(fallback.group);new GLTFLoader().load('/models/nasa-emu-web.glb',gltf=>{if(disposed){release(gltf.scene);finish();return;}if(fallback){release(fallback.group);fallback=null;}model=gltf.scene;model.traverse(child=>{if(child instanceof THREE.Bone)bones.set(child.name,{bone:child,rest:child.quaternion.clone()});if(child instanceof THREE.Mesh){child.castShadow=true;child.receiveShadow=false;(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>{if(material instanceof THREE.MeshStandardMaterial){material.envMapIntensity=.6;material.needsUpdate=true;}});}});group.add(model);group.userData.assetStatus='ready';let triangles=0;model.traverse(child=>{if(child instanceof THREE.Mesh)triangles+=(child.geometry.index?.count??child.geometry.attributes.position.count)/3;});group.userData.triangles=triangles;group.userData.materials=7;update(phase,moving);finish();},undefined,()=>{group.userData.assetStatus='fallback';finish();});return ready;};
- const dispose=()=>{if(disposed)return;disposed=true;if(model){release(model);model=null;}if(fallback){release(fallback.group);fallback=null;}bones.clear();group.clear();finish();};
+ const update=(walkPhase:number,isMoving:boolean,deltaSeconds=1/60)=>{
+  const next=Number.isFinite(walkPhase)?walkPhase:0,oldBlend=walkBlend,changed=next!==phase||isMoving!==moving;
+  phase=next;moving=isMoving;
+  walkBlend=THREE.MathUtils.damp(walkBlend,moving?1:0,12,Math.min(.1,Math.max(0,deltaSeconds)));
+  if(Math.abs(walkBlend-(moving?1:0))<.001)walkBlend=moving?1:0;
+  fallback?.update(phase,moving);
+  if(!model)return changed;
+  if(poseReady&&!changed&&oldBlend===walkBlend)return false;
+  poseReady=true;
+  const stride=Math.sin(phase)*walkBlend;
+  for(const [name,{bone,rest}] of bones){
+   let angle=0;
+   if(name.startsWith('Thigh_'))angle=(name.endsWith('_L')?1:-1)*stride*.25;
+   else if(name.startsWith('Shin_'))angle=Math.max(0,(name.endsWith('_L')?-1:1)*Math.sin(phase))*.36*walkBlend;
+   else if(name.startsWith('Arm_'))angle=-.32+(name.endsWith('_L')?-1:1)*stride*.17;
+   else if(name.startsWith('Forearm_'))angle=-.12-.035*walkBlend-Math.max(0,(name.endsWith('_L')?1:-1)*stride)*.08;
+   bone.quaternion.copy(rest).multiply(rotation.setFromAxisAngle(axis,angle));
+   if(name.startsWith('Thigh_'))bone.quaternion.multiply(rotation.setFromAxisAngle(stanceAxis,name.endsWith('_L')?-.035:.035));
+  }
+  // Keep the lowest boot close to the local support plane. This is display
+  // stance correction, not independent foot collision or suit biomechanics.
+  model.position.y=0;model.updateWorldMatrix(true,true);model.getWorldPosition(modelOrigin);
+  let lowest=Infinity;
+  for(const anchor of soleAnchors){probe.copy(anchor.point);anchor.bone.localToWorld(probe);lowest=Math.min(lowest,probe.y-modelOrigin.y);}
+  model.position.y=Number.isFinite(lowest)?THREE.MathUtils.clamp(-lowest,-.08,.12):0;
+  return changed||oldBlend!==walkBlend;
+ };
+ const load=()=>{if(started||disposed)return ready;started=true;group.userData.assetStatus='loading';fallback=createFallbackAstronaut();group.add(fallback.group);new GLTFLoader().load('/models/nasa-emu-web.glb',gltf=>{if(disposed){release(gltf.scene);finish();return;}if(fallback){release(fallback.group);fallback=null;}model=gltf.scene;model.traverse(child=>{if(child instanceof THREE.Bone)bones.set(child.name,{bone:child,rest:child.quaternion.clone()});if(child instanceof THREE.Mesh){child.castShadow=true;child.receiveShadow=false;(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>{if(material instanceof THREE.MeshStandardMaterial){material.envMapIntensity=material.name.includes('visor')?1.15:.55;material.needsUpdate=true;}});}});group.add(model);model.updateWorldMatrix(true,true);
+  // Bind four representative neutral sole points per boot once at load time.
+  // Eight anchors are cheap enough to follow each skinned pose without walking
+  // all vertices every frame.
+  for(const side of ['L','R']){const shin=bones.get('Shin_'+side)?.bone;if(!shin)continue;const x=side==='L'?.135:-.135;for(const dx of [-.055,.055])for(const z of [-.12,.015])soleAnchors.push({bone:shin,point:shin.worldToLocal(model.localToWorld(new THREE.Vector3(x+dx,0,z)))});}
+  group.userData.assetStatus='ready';let triangles=0;model.traverse(child=>{if(child instanceof THREE.Mesh)triangles+=(child.geometry.index?.count??child.geometry.attributes.position.count)/3;});group.userData.triangles=triangles;group.userData.materials=7;update(phase,moving);finish();},undefined,()=>{group.userData.assetStatus='fallback';finish();});return ready;};
+ const dispose=()=>{if(disposed)return;disposed=true;if(model){release(model);model=null;}if(fallback){release(fallback.group);fallback=null;}bones.clear();soleAnchors.length=0;group.clear();finish();};
  if(loadDetailed)void load();
  return {group,update,ready,load,dispose};
 }

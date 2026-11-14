@@ -50,13 +50,13 @@ def material(name, color, roughness, metalness=0):
     m.diffuse_color = (*color,1)
     return m
 
-mats = [material('Pressure suit / unbranded',(.82,.81,.75),.73),
-        material('Life support pack',(.72,.74,.71),.65),
-        material('Connectors and seals',(.10,.13,.15),.62,.2),
-        material('Hardware',(.17,.21,.24),.4,.45),
-        material('Safety bands',(.58,.065,.035),.63),
-        material('Gold visor',(.47,.31,.09),.19,.86),
-        material('Hose couplings',(.43,.32,.20),.48,.35)]
+mats = [material('Pressure suit / unbranded',(.67,.66,.60),.86),
+        material('Life support pack',(.57,.59,.56),.69),
+        material('Connectors and seals',(.034,.045,.052),.82,.08),
+        material('Hardware',(.20,.24,.27),.32,.68),
+        material('Safety bands',(.50,.055,.025),.69),
+        material('Gold visor',(.49,.32,.105),.13,.93),
+        material('Hose couplings',(.34,.27,.17),.40,.72)]
 mapping = {0:0,1:3,2:0,3:1,4:2,5:1,6:1,7:3,8:2,9:4,10:0,11:3,12:6,13:5,14:3,15:6,16:5,18:5,19:3,20:0,21:0,22:5}
 indices = [mapping.get(p.material_index,0) for p in mesh.data.polygons]
 mesh.data.materials.clear()
@@ -75,10 +75,10 @@ for v in mesh.data.vertices:
 from mathutils.bvhtree import BVHTree
 source_tree=BVHTree.FromPolygons([v.co.copy() for v in mesh.data.vertices],[list(p.vertices) for p in mesh.data.polygons],all_triangles=True)
 source_materials=[p.material_index for p in mesh.data.polygons]
-mesh.data.remesh_voxel_size=.006
+mesh.data.remesh_voxel_size=.0045
 bpy.ops.object.voxel_remesh()
 dec = mesh.modifiers.new('Web surface reduction','DECIMATE')
-dec.ratio = min(1.0,38000/sum(len(p.vertices)-2 for p in mesh.data.polygons))
+dec.ratio = min(1.0,45000/sum(len(p.vertices)-2 for p in mesh.data.polygons))
 dec.use_collapse_triangulate=True
 bpy.ops.object.modifier_apply(modifier=dec.name)
 for p in mesh.data.polygons:
@@ -90,7 +90,7 @@ for p in mesh.data.polygons:
 # It is asset geometry, never an observed or engineered NASA Mars suit claim.
 from mathutils import Matrix
 # Remove the original space maneuvering frame behind the pressure suit.
-# The cut is capped before remeshing; the head silhouette remains above a
+# The cut is capped after source-shell union; the head silhouette remains above a
 # separately constructed compact illustrative surface-rehearsal pack.
 bm=bmesh.new();bm.from_mesh(mesh.data)
 cut=bmesh.ops.bisect_plane(bm,geom=list(bm.verts)+list(bm.edges)+list(bm.faces),dist=1e-6,plane_co=(0,-.12,0),plane_no=(0,-1,0),clear_outer=True,clear_inner=False)
@@ -105,14 +105,91 @@ def box(center,dimensions,material_index,bevel):
     edges=list({e for v in result['verts'] for e in v.link_edges})
     if bevel:bmesh.ops.bevel(bm,geom=edges,offset=bevel,segments=3,affect='EDGES')
     for f in set(bm.faces)-before:f.material_index=material_index;f.smooth=False
-box((0,-.28,1.12),(.54,.30,.67),1,.035)
-box((0,-.441,1.13),(.405,.024,.43),3,.012)
-box((0,-.456,1.29),(.405,.015,.025),4,.005)
-box((0,-.448,.91),(.37,.016,.045),2,.006)
-box((-.19,-.127,1.14),(.045,.026,.59),2,.01)
-box((.19,-.127,1.14),(.045,.026,.59),2,.01)
+# An illustrative padded cover, recessed equipment panel and service hardware.
+# This is a visual interpretation, not a NASA Mars-suit engineering drawing.
+box((0,-.267,1.12),(.485,.275,.63),1,.035)
+box((0,-.410,1.12),(.422,.014,.55),2,.014)
+box((0,-.424,1.12),(.402,.023,.527),0,.028)
+box((0,-.441,1.18),(.22,.012,.31),3,.016)
+box((0,-.450,1.18),(.19,.012,.275),2,.012)
+# Inset seams and two low-profile perimeter reinforcement channels.
+for side in [-1,1]:
+    box((side*.173,-.443,1.13),(.022,.019,.45),1,.008)
+    box((side*.222,-.280,1.12),(.03,.13,.53),0,.012)
+    box((side*.194,-.449,1.32),(.039,.017,.038),3,.004)
+    box((side*.194,-.449,.94),(.039,.017,.038),3,.004)
+    box((side*.18,-.128,1.14),(.04,.027,.57),2,.008)
+box((0,-.452,1.36),(.31,.013,.025),4,.005)
+box((0,-.448,.89),(.29,.017,.044),3,.006)
+for z in [1.085,1.105,1.125,1.145]:
+    box((0,-.458,z),(.128,.008,.005),3,.002)
+
+def tube(points,radius,material_index,sides=8):
+    before=set(bm.faces)
+    rings=[]
+    for n,p in enumerate(points):
+        tangent=Vector(points[min(n+1,len(points)-1)])-Vector(points[max(n-1,0)])
+        tangent.normalize()
+        reference=Vector((0,0,1)) if abs(tangent.z)<.9 else Vector((1,0,0))
+        u=tangent.cross(reference).normalized();v=tangent.cross(u).normalized()
+        rings.append([bm.verts.new(Vector(p)+radius*(math.cos(k*2*math.pi/sides)*u+math.sin(k*2*math.pi/sides)*v)) for k in range(sides)])
+    for a,b in zip(rings[:-1],rings[1:]):
+        for k in range(sides):bm.faces.new((a[k],a[(k+1)%sides],b[(k+1)%sides],b[k]))
+    bm.faces.new(tuple(reversed(rings[0])));bm.faces.new(tuple(rings[-1]))
+    for f in set(bm.faces)-before:f.material_index=material_index;f.smooth=True
+
+for side in [-1,1]:
+    # The visible arc communicates a tether/umbilical, not a real pressure circuit.
+    points=[]
+    for k in range(17):
+        u=k/16
+        points.append((side*(.185+.12*math.sin(u*math.pi)),-.34+.48*u,.90-.14*math.sin(u*math.pi)))
+    tube(points,.017,2)
+    for u in [0,.96]:
+        q=points[round(u*16)]
+        box(q,(.052,.048,.044),6,.009)
+# Low-profile external helmet hardware retains the original helmet silhouette.
+box((0,-.135,1.69),(.105,.018,.038),2,.009)
+box((0,-.148,1.69),(.06,.009,.014),3,.003)
+bmesh.ops.triangulate(bm,faces=list(bm.faces))
 bm.verts.index_update();pack_indices={v.index for v in bm.verts if v not in existing};bm.to_mesh(mesh.data);bm.free()
 mesh.name = 'NASA EMU / adapted visual crew'
+mesh.data.validate(verbose=True,clean_customdata=False)
+for uv in list(mesh.data.uv_layers):mesh.data.uv_layers.remove(uv)
+
+# Bake local geometric occlusion into vertex colors: no runtime AO pass, no image
+# decoder or added draw calls. The deterministic hemisphere probes only this
+# illustrative suit mesh. They do not affect Mars observations or navigation.
+mesh.data.update()
+occlusion_tree=BVHTree.FromPolygons([v.co.copy() for v in mesh.data.vertices],[list(p.vertices) for p in mesh.data.polygons],all_triangles=True)
+colors=mesh.data.color_attributes.new(name='CrewOcclusion',type='FLOAT_COLOR',domain='POINT')
+probes=12
+for vertex in mesh.data.vertices:
+    normal=vertex.normal.normalized()
+    reference=Vector((0,0,1)) if abs(normal.z)<.9 else Vector((1,0,0))
+    u=normal.cross(reference).normalized();v=normal.cross(u).normalized()
+    origin=vertex.co+normal*.0015
+    covered=0.0
+    for k in range(probes):
+        z=(k+.5)/probes;r=math.sqrt(1-z*z);angle=k*2.399963229728653
+        direction=normal*z+u*(r*math.cos(angle))+v*(r*math.sin(angle))
+        hit=occlusion_tree.ray_cast(origin,direction,.14)
+        if hit[0] is not None:covered+=1-min(1,hit[3]/.14)
+    shade=1-.57*covered/probes
+    colors.data[vertex.index].color=(shade,shade,shade,1)
+
+# ShaderNodeVertexColor reproduces the same bake in the editable Blender preview.
+# Export uses glTF COLOR_0 and the unchanged material base colors.
+preview_links=[]
+for m in mats:
+    bsdf=next(n for n in m.node_tree.nodes if n.type=='BSDF_PRINCIPLED')
+    tint=bsdf.inputs['Base Color'].default_value[:]
+    node=m.node_tree.nodes.new('ShaderNodeVertexColor');node.layer_name='CrewOcclusion'
+    multiply=m.node_tree.nodes.new('ShaderNodeMixRGB');multiply.blend_type='MULTIPLY'
+    multiply.inputs[0].default_value=1;multiply.inputs[2].default_value=tint
+    m.node_tree.links.new(node.outputs['Color'],multiply.inputs[1])
+    m.node_tree.links.new(multiply.outputs['Color'],bsdf.inputs['Base Color'])
+    preview_links.append((m,bsdf,multiply,tint))
 
 # A small skin keeps knees and shoulders continuous rather than splitting the
 # detailed suit into disconnected primitives. Joint locations are visual fits,
@@ -162,14 +239,20 @@ mesh['source_url']=URL
 target=OUT/'nasa-emu-web.glb'
 bpy.ops.object.select_all(action='DESELECT');mesh.select_set(True);rig.select_set(True)
 bpy.context.view_layer.objects.active=mesh
-bpy.ops.export_scene.gltf(filepath=str(target),use_selection=True,export_format='GLB',export_animations=False,export_yup=True,export_apply=False)
+# glTF's base factor * COLOR_0 is the portable equivalent of the preview node.
+# Exporter cannot infer this MixRGB graph reliably, so use explicit vertex color.
+for m,bsdf,multiply,tint in preview_links:
+    for link in list(bsdf.inputs['Base Color'].links):m.node_tree.links.remove(link)
+    bsdf.inputs['Base Color'].default_value=tint
+bpy.ops.export_scene.gltf(filepath=str(target),use_selection=True,export_format='GLB',export_animations=False,export_yup=True,export_apply=False,export_vertex_color='NAME',export_vertex_color_name='CrewOcclusion',export_all_vertex_colors=False)
+for m,bsdf,multiply,tint in preview_links:m.node_tree.links.new(multiply.outputs['Color'],bsdf.inputs['Base Color'])
 triangles=sum(len(p.vertices)-2 for p in mesh.data.polygons)
-metadata={'sourceUrl':URL,'sourcePage':'https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/','credit':'NASA / Michael D. Carbajal','sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'sourceBytes':SOURCE.stat().st_size,'originalTriangles':original_triangles,'webTriangles':triangles,'webVertices':len(mesh.data.vertices),'webBytes':target.stat().st_size,'webSha256':hashlib.sha256(target.read_bytes()).hexdigest(),'materials':len(mats),'bones':len(armature.bones),'heightMetres':1.85,'forward':'glTF local -Z','ground':'neutral sole at glTF local y=0','blenderVersion':bpy.app.version_string,'adaptation':['Removed redundant nested visor layers and unioned overlapping legacy shells at 6 mm display scale','Reduced polygons without adding terrain or physical suit claims','Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS pack for a surface-rehearsal silhouette','Added illustrative 9-bone skin for a procedural walk'],'terms':'NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification'}
+metadata={'sourceUrl':URL,'sourcePage':'https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/','credit':'NASA / Michael D. Carbajal','sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'sourceBytes':SOURCE.stat().st_size,'originalTriangles':original_triangles,'webTriangles':triangles,'webVertices':len(mesh.data.vertices),'webBytes':target.stat().st_size,'webSha256':hashlib.sha256(target.read_bytes()).hexdigest(),'materials':len(mats),'bones':len(armature.bones),'heightMetres':1.85,'forward':'glTF local -Z','ground':'neutral sole at glTF local y=0','blenderVersion':bpy.app.version_string,'bakedOcclusion':{'method':'12 deterministic hemisphere rays per vertex on illustrative suit geometry','radiusMetres':.14,'output':'glTF COLOR_0; zero texture bytes','scope':'character display only'},'adaptation':['Removed redundant nested visor layers and unioned overlapping legacy shells at 4.5 mm display scale','Reduced polygons without adding terrain or physical suit claims','Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS cover, seams, recessed panel, latches and hoses for a surface-rehearsal silhouette','Added illustrative 9-bone skin for a procedural walk and vertex-baked geometric occlusion; no calibrated suit physiology'],'terms':'NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification'}
 (OUT/'nasa-emu-web.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8')
 
 # Keep editable source outside the application bundle, plus one compact preview.
 deliver=ROOT.parent/'deliverables';deliver.mkdir(exist_ok=True)
-bpy.ops.wm.save_as_mainfile(filepath=str(deliver/'MARS-SHIFT-NASA-EMU.blend'))
+bpy.ops.wm.save_as_mainfile(filepath=str(deliver/'MARS-SHIFT-NASA-EMU-v15.blend'))
 for name in ['Camera','Light']:
     if name in bpy.data.objects:bpy.data.objects.remove(bpy.data.objects[name],do_unlink=True)
 scene=bpy.context.scene
@@ -182,6 +265,6 @@ def area(name,location,energy,size):
 area('Warm key',(2,3,4),500,4);area('Cool rim',(-2,-2,3),350,3)
 camera_data=bpy.data.cameras.new('Crew preview camera');camera=bpy.data.objects.new('Crew preview camera',camera_data);scene.collection.objects.link(camera)
 camera.location=(2.7,3.8,2.2);camera.rotation_euler=(Vector((0,-.1,.98))-camera.location).to_track_quat('-Z','Y').to_euler();camera_data.type='ORTHO';camera_data.ortho_scale=2.25;scene.camera=camera
-scene.render.image_settings.file_format='PNG';scene.render.filepath=str(WORK/'nasa-emu-web-preview.png');bpy.ops.render.render(write_still=True)
-camera.location=(-2.7,-3.8,2.2);camera.rotation_euler=(Vector((0,-.1,.98))-camera.location).to_track_quat('-Z','Y').to_euler();scene.render.filepath=str(WORK/'nasa-emu-web-back-preview.png');bpy.ops.render.render(write_still=True)
+scene.render.image_settings.file_format='PNG';scene.render.filepath=str(WORK/'nasa-emu-web-v15-preview.png');bpy.ops.render.render(write_still=True)
+camera.location=(-2.7,-3.8,2.2);camera.rotation_euler=(Vector((0,-.1,.98))-camera.location).to_track_quat('-Z','Y').to_euler();scene.render.filepath=str(WORK/'nasa-emu-web-v15-back-preview.png');bpy.ops.render.render(write_still=True)
 print('CREW_ASSET_REPORT',json.dumps(metadata))
