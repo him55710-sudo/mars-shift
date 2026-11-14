@@ -3,11 +3,11 @@ import type {Point, Terrain} from './planner';
 export type LayerId = 'optical' | 'elevation' | 'slope' | 'roughness' | 'thermal';
 export type NumericLayer = Exclude<LayerId, 'optical'>;
 export const LAYERS: {id: LayerId; name: string; en: string; unit: string; resolution: string; colors: string[]}[] = [
-  {id:'optical', name:'광학 영상', en:'HiRISE optical', unit:'', resolution:'원본 0.3 m · 표시 1 m', colors:['#b4a28b','#e5d7bd']},
-  {id:'elevation', name:'고도', en:'Elevation', unit:'m', resolution:'원본 1 m · 분석 5 m', colors:['#294656','#538b8d','#b9c99c','#d1a56b','#f3dbb5']},
-  {id:'slope', name:'경사도', en:'Maximum slope', unit:'°', resolution:'1 m 경사의 5 m 셀 최댓값', colors:['#31534c','#78a78d','#e0c477','#df9063','#c95b56']},
-  {id:'roughness', name:'국지 기복', en:'Local relief', unit:'m', resolution:'11 × 11 m 고도 범위의 셀 평균', colors:['#263f51','#5d849a','#9cafb6','#d9b685','#ebd7ac']},
-  {id:'thermal', name:'열관성', en:'Thermal inertia', unit:'J m⁻² K⁻¹ s⁻½', resolution:'원본 100 m · 최근접 재투영', colors:['#445875','#7987aa','#b6a0b7','#d5ac99','#e9cd9e']},
+  {id:'optical', name:'Optical imagery', en:'HiRISE optical', unit:'', resolution:'Native 0.3 m · display 1 m', colors:['#b4a28b','#e5d7bd']},
+  {id:'elevation', name:'Elevation', en:'Elevation', unit:'m', resolution:'Native 1 m · analysis 5 m', colors:['#294656','#538b8d','#b9c99c','#d1a56b','#f3dbb5']},
+  {id:'slope', name:'Slope', en:'Maximum slope', unit:'°', resolution:'Maximum native 1 m slope per 5 m cell', colors:['#31534c','#78a78d','#e0c477','#df9063','#c95b56']},
+  {id:'roughness', name:'Local relief', en:'Local relief', unit:'m', resolution:'Cell mean of 11 × 11 m elevation range', colors:['#263f51','#5d849a','#9cafb6','#d9b685','#ebd7ac']},
+  {id:'thermal', name:'Thermal inertia', en:'Thermal inertia', unit:'J m⁻² K⁻¹ s⁻½', resolution:'Native 100 m · nearest-neighbour reprojection', colors:['#445875','#7987aa','#b6a0b7','#d5ac99','#e9cd9e']},
 ];
 export const isValue = (v: number | null | undefined): v is number => typeof v === 'number' && Number.isFinite(v);
 export const clamp = (v:number, lo:number, hi:number) => Math.min(hi, Math.max(lo, v));
@@ -27,7 +27,7 @@ export function histogram(t:Terrain, key:NumericLayer, bins=20) {
   return {counts,min:s.min,max:s.max,total:s.count};
 }
 export function slopeClasses(t:Terrain) {
-  const groups=[{name:'완만',range:'0–5°',min:0,max:5,color:'#78a78d',count:0},{name:'중간',range:'5–15°',min:5,max:15,color:'#e0c477',count:0},{name:'가파름',range:'15–25°',min:15,max:25,color:'#df9063',count:0},{name:'급경사',range:'25° 이상',min:25,max:Infinity,color:'#c95b56',count:0}];
+  const groups=[{name:'Gentle',range:'0–5°',min:0,max:5,color:'#78a78d',count:0},{name:'Moderate',range:'5–15°',min:5,max:15,color:'#e0c477',count:0},{name:'Steep',range:'15–25°',min:15,max:25,color:'#df9063',count:0},{name:'Very steep',range:'25° or more',min:25,max:Infinity,color:'#c95b56',count:0}];
   let total=0;
   t.slope.forEach((v,i)=>{if(validCell(t,i)&&isValue(v)){groups.find(g=>v>=g.min&&v<g.max)!.count++;total++;}});
   return groups.map(g=>({...g,percent:total?g.count/total*100:0,area:g.count*t.cellSize*t.cellSize}));

@@ -1,6 +1,6 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-atlas-v5';
-const CORE=['/data/terrain.json','/data/manifest.json','/data/optical.webp','/data/slope.png','/data/thermal.png','/data/exposure.png'];
+const CACHE='mars-shift-crew-20261114-eva-v7';
+const CORE=['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin'].map(file=>root+'/'+file));
 async function status(){
  const cache=await caches.open(CACHE);
  const checks=await Promise.all(['/',...CORE].map(url=>cache.match(url)));

@@ -1,5 +1,7 @@
 # Browser verification
 
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
 Chrome on 2026-11-14, using the actual running Vite app and bundled scientific data.
 
 | Flow | Observed result |

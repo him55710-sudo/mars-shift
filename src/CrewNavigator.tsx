@@ -88,7 +88,7 @@ export default function CrewNavigator({terrain:t,manifest,onPlanning,onEvidence}
    <section className="crew-map-section" aria-label="Crew route map"><div className="crew-map-heading"><div><MapPin size={17}/><strong>Jezero central floor</strong><span>1 km analysis region</span></div><button onClick={()=>setShowReturn(v=>!v)} aria-pressed={showReturn}><RouteIcon size={17}/>{showReturn?'Return corridor shown':'Show return corridor'}</button></div>
     <div ref={mapRef} className="crew-map-canvas"><svg viewBox={`${cx-viewWidth/2} ${cy-viewHeight/2} ${viewWidth} ${viewHeight}`} role="img" aria-label="Actual Jezero terrain with simulated crew position, active route and return corridor">
      <defs><pattern id="crew-exclusion" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#f86442" strokeWidth="2"/></pattern></defs>
-     <image href={layer==='slope'?'/data/slope.png':'/data/optical.webp'} width="1000" height="1000"/>
+     <image href={layer==='slope'?(t.assetRoot??'/data')+'/slope.png':(t.assetRoot??'/data')+'/optical.webp'} width="1000" height="1000"/>
      <rect width="1000" height="1000" fill="#0b1f1d" opacity=".24"/>
      {showReturn&&crew.phase!=='return'&&<CrewPath t={t} cells={crew.returnTrack} color="#f0e5b6" dashed/>}
      <CrewPath t={t} cells={crew.track.slice(crew.cursor)} color={crew.held?'#f4ad5a':'#bcf8d9'}/>

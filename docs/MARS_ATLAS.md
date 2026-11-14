@@ -1,6 +1,8 @@
 # Mars Atlas
 
-`/terrain` is the global explorer; `/terrain/local` retains the quantitative Jezero Terrain Lab. The application reuses the same global services as Caltech's [published CTX SceneView](https://murray-lab.caltech.edu/CTX/V01/SceneView/MurrayLabCTXmosaic.html), using ArcGIS Maps SDK for JavaScript 4.34, without an API key. It does not use an Earth globe or pretend Earth Web Mercator is Mars.
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
+`/terrain` is the global explorer; `/terrain/analysis` retains the quantitative Jezero Terrain Lab. The application reuses the same global services as Caltech's [published CTX SceneView](https://murray-lab.caltech.edu/CTX/V01/SceneView/MurrayLabCTXmosaic.html), using ArcGIS Maps SDK for JavaScript 4.34, without an API key. It does not use an Earth globe or pretend Earth Web Mercator is Mars.
 
 ## Explore and inspect
 

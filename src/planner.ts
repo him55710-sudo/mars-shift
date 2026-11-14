@@ -1,5 +1,5 @@
 export type Point = {x:number;y:number};
-export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[]};
+export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string};
 export type Mode = 'shortest'|'exposure'|'mission';
 export type Exclusion = Point & {radius:number};
 export type Settings = {maxSlope:number;speed:number;scienceMinutes:number;durationMinutes:number;oxygenMinutes:number;powerMinutes:number;reservePercent:number;loadKg:number;dust:boolean;hazardWeight:number};
@@ -14,7 +14,7 @@ class Heap {
 export const index=(t:Terrain,p:Point)=>p.y*t.width+p.x;
 export const point=(t:Terrain,i:number):Point=>({x:i%t.width,y:Math.floor(i/t.width)});
 export function blocked(t:Terrain,i:number,s:Settings,e:Exclusion|null){
-  if(i<0||i>=t.width*t.height||!t.valid[i]||t.slope[i]===null||t.elevation[i]===null||!Number.isFinite(t.slope[i])||!Number.isFinite(t.elevation[i])||t.slope[i]!>s.maxSlope)return true;
+  if(i<0||i>=t.width*t.height||!t.valid[i]||t.obstacleMask?.[i]||t.slope[i]===null||t.elevation[i]===null||!Number.isFinite(t.slope[i])||!Number.isFinite(t.elevation[i])||t.slope[i]!>s.maxSlope)return true;
   const p=point(t,i);return !!e && Math.hypot(p.x-e.x,p.y-e.y)*t.cellSize<=e.radius;
 }
 export function leg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null):{cells:number[];cost:number}|null{

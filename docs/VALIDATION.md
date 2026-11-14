@@ -1,5 +1,7 @@
 # Validation
 
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
 ## Executed checks
 
 - `pnpm test`: **30 tests passed** after the crew workflow revision (18 routing tests and 12 crew-state tests).

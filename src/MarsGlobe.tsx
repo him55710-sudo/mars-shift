@@ -11,11 +11,11 @@ function loadSDK(){
   if(sdkPromise)return sdkPromise;
   sdkPromise=new Promise<SDKModule[]>((resolve,reject)=>{
     const link=document.createElement('link');link.rel='stylesheet';link.href='https://js.arcgis.com/4.34/esri/themes/dark/main.css';link.dataset.marsSdk='css';if(!document.querySelector('[data-mars-sdk="css"]'))document.head.append(link);
-    const ready=()=>{const amd=(window as AMDWindow).require;if(!amd){reject(Error('지도 엔진을 시작하지 못했습니다.'));return;}amd(MODULES,(...modules)=>resolve(modules),reject);};
+    const ready=()=>{const amd=(window as AMDWindow).require;if(!amd){reject(Error('Could not initialize the map engine.'));return;}amd(MODULES,(...modules)=>resolve(modules),reject);};
     if((window as AMDWindow).require){ready();return;}
     const script=document.createElement('script');script.src='https://js.arcgis.com/4.34/';script.async=true;script.dataset.marsSdk='js';
-    const timer=setTimeout(()=>{script.remove();reject(Error('지도 서버 연결이 지연됩니다. 네트워크를 확인하고 다시 시도하세요.'));},45000);
-    script.onload=()=>{clearTimeout(timer);ready();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error('지도 엔진을 불러오지 못했습니다. 네트워크 연결을 확인하세요.'));};document.head.append(script);
+    const timer=setTimeout(()=>{script.remove();reject(Error('Map connection timed out. Check your network and retry.'));},45000);
+    script.onload=()=>{clearTimeout(timer);ready();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error('Could not load the map engine. Check your network.'));};document.head.append(script);
   }).catch(e=>{sdkPromise=null;throw e;});return sdkPromise;
 }
 export type AtlasCommand={id:number;type:'home'|'fly'|'around'|'top'|'in'|'out'|'north';position?:MarsPosition;scale?:number};
@@ -66,7 +66,7 @@ export default function MarsGlobe(props:Props){
       const report=()=>{if(!cancelled&&!view.destroyed)latest.current.onStatus({ready:true,updating:view.updating,scale:view.scale,altitude:view.camera.position.z,tilt:view.camera.tilt,error:''});};
       handles.push(reactive.watch(()=>view.updating,report),reactive.watch(()=>view.stationary,(stationary:boolean)=>{if(stationary)report();}));
       handles.push(view.on('click',(event:any)=>{const p=event.mapPoint;if(p&&Number.isFinite(p.x)&&Number.isFinite(p.y))latest.current.onPick({lon:p.x,lat:p.y});}));report();
-    }).catch(e=>{if(!cancelled){const message=e?.message||'3D 지도를 시작하지 못했습니다.';setError(message);latest.current.onStatus({...startingStatus,updating:false,error:message});}});
+    }).catch(e=>{if(!cancelled){const message=e?.message||'Could not initialize the 3D map.';setError(message);latest.current.onStatus({...startingStatus,updating:false,error:message});}});
     return()=>{cancelled=true;handles.forEach(h=>h.remove());const state=runtime.current;runtime.current=null;if(view){view.map=null;view.destroy();}state?.map.destroy();el.replaceChildren();};
   },[attempt]);
   useEffect(()=>{const r=runtime.current;if(!r)return;r.ctx.visible=props.base==='ctx';r.color.visible=props.base==='color';r.hirise.visible=props.hirise;r.jezero.visible=props.hirise;},[props.base,props.hirise,ready]);
@@ -80,7 +80,7 @@ export default function MarsGlobe(props:Props){
     else if(command.type==='top')destination={target,scale:Math.min(r.view.scale,350000),tilt:0,heading:0};
     else if(command.type==='north'){const camera=r.view.camera.clone();camera.heading=0;destination=camera;}
     else destination={target:r.view.center,scale:Math.max(90,r.view.scale*(command.type==='in'?.5:2)),tilt:r.view.camera.tilt};
-    r.view.goTo(destination,{duration}).catch((e:any)=>{if(e.name!=='AbortError'&&e.name!=='view:goto-interrupted')latest.current.onStatus({...startingStatus,ready:true,updating:false,error:'시점을 이동하지 못했습니다. 지도가 준비되면 다시 시도하세요.'});});
+    r.view.goTo(destination,{duration}).catch((e:any)=>{if(e.name!=='AbortError'&&e.name!=='view:goto-interrupted')latest.current.onStatus({...startingStatus,ready:true,updating:false,error:'Could not move the view. Retry when the map is ready.'});});
   },[props.command,ready]);
   useEffect(()=>{
     const r=runtime.current;if(!r||!ready)return;const {position,myPosition,radius}=props,graphics=[];
@@ -96,5 +96,5 @@ export default function MarsGlobe(props:Props){
     r.elevation.queryElevation(new r.Multipoint({points,spatialReference:{wkid:MARS_WKID}}),{demResolution:'finest-contiguous',returnSampleInfo:true,noDataValue:-999999}).then((result:any)=>{if(!current)return;const values=result.geometry.points.map((p:number[])=>p[2]);latest.current.onSamples({...summarizeHeights(values),position,status:'ready',resolution:Math.max(0,...(result.sampleInfo??[]).map((s:any)=>Number.isFinite(s.demResolution)?s.demResolution:200))||200});}).catch(()=>{if(current)latest.current.onSamples({...summarizeHeights([]),position,status:'error',resolution:200});});
     return()=>{current=false;};
   },[props.position,ready]);
-  return <><div className="ma-globe" ref={host} aria-label="화성 전역 3D 지도. 휠로 확대, 드래그로 이동, 오른쪽 드래그로 회전. 지도를 클릭해 위치 선택."/>{error&&<div className="ma-engine-error"><h2>전역 지도를 불러오지 못했습니다</h2><p>{error}</p><button onClick={()=>setAttempt(v=>v+1)}>다시 불러오기</button><a href="https://murray-lab.caltech.edu/CTX/V01/SceneView/MurrayLabCTXmosaic.html" target="_blank" rel="noreferrer">Caltech 원본 지도 열기 ↗</a></div>}</>;
+  return <><div className="ma-globe" ref={host} aria-label="Global Mars 3D map. Scroll to zoom, drag to pan, right-drag to rotate. Click to select a point."/>{error&&<div className="ma-engine-error"><h2>Could not load the global map</h2><p>{error}</p><button onClick={()=>setAttempt(v=>v+1)}>Reload</button><a href="https://murray-lab.caltech.edu/CTX/V01/SceneView/MurrayLabCTXmosaic.html" target="_blank" rel="noreferrer">Open original Caltech map ↗</a></div>}</>;
 }

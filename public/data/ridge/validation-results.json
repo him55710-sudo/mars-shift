@@ -1,0 +1,115 @@
+{
+  "createdAt": "2026-11-14T07:51:42.038Z",
+  "dataset": "ridge",
+  "center": [
+    77.73152233744179,
+    18.5043948063779
+  ],
+  "bounds": [
+    4369772.037914526,
+    1096342.6170900527,
+    4370772.037914526,
+    1097342.6170900527
+  ],
+  "settings": {
+    "maxSlope": 18,
+    "speed": 0.6,
+    "scienceMinutes": 20,
+    "durationMinutes": 110,
+    "oxygenMinutes": 150,
+    "powerMinutes": 140,
+    "reservePercent": 25,
+    "loadKg": 12,
+    "dust": false,
+    "hazardWeight": 8
+  },
+  "legacyStart": {
+    "x": 32,
+    "y": 168
+  },
+  "legacyTarget": {
+    "x": 153,
+    "y": 43
+  },
+  "allThreeLegacyPathsExist": true,
+  "allThreeLegacyPathsResourceFeasible": true,
+  "baseline": [
+    {
+      "mode": "shortest",
+      "route": {
+        "mode": "shortest",
+        "distance": 1752.7432213762706,
+        "gain": 28.059999999999036,
+        "maxSlope": 17.23,
+        "meanSlope": 3.498946947566333,
+        "exposureDistance": 0,
+        "unknownThermalDistance": 0,
+        "travelMinutes": 68.04272391776476,
+        "totalMinutes": 88.04272391776476,
+        "oxygenRemaining": 40.52809947473565,
+        "powerRemaining": 37.05336617654953,
+        "timeRemaining": 21.95727608223524,
+        "reserve": 37.05336617654953,
+        "feasible": true,
+        "reasons": [],
+        "cost": 1752.7432213762713
+      }
+    },
+    {
+      "mode": "exposure",
+      "route": {
+        "mode": "exposure",
+        "distance": 1927.8180025588754,
+        "gain": 23.799999999998818,
+        "maxSlope": 6.44,
+        "meanSlope": 1.9852693113142525,
+        "exposureDistance": 0,
+        "unknownThermalDistance": 0,
+        "travelMinutes": 67.37362479805144,
+        "totalMinutes": 87.37362479805144,
+        "oxygenRemaining": 41.027693484121585,
+        "powerRemaining": 37.55996979576105,
+        "timeRemaining": 22.626375201948562,
+        "reserve": 37.55996979576105,
+        "feasible": true,
+        "reasons": [],
+        "cost": 2397.3724431537253
+      }
+    },
+    {
+      "mode": "mission",
+      "route": {
+        "mode": "mission",
+        "distance": 1793.4189380949838,
+        "gain": 27.7199999999998,
+        "maxSlope": 9.81,
+        "meanSlope": 2.42565517244656,
+        "exposureDistance": 0,
+        "unknownThermalDistance": 0,
+        "travelMinutes": 64.4097828464726,
+        "totalMinutes": 84.4097828464726,
+        "oxygenRemaining": 43.240695474633796,
+        "powerRemaining": 39.80402155909931,
+        "timeRemaining": 25.590217153527405,
+        "reserve": 39.80402155909931,
+        "feasible": true,
+        "reasons": [],
+        "cost": 2074.8235519095415
+      }
+    }
+  ],
+  "recommended": null,
+  "terrain": {
+    "validCells": 40000,
+    "planningReliefMetres": 108.39999999999964,
+    "nativeReliefMetres": 109.097900390625,
+    "meanCellMaximumSlopeDegrees": 6.919558500000142,
+    "p95CellMaximumSlopeDegrees": 17.64,
+    "maximumCellSlopeDegrees": 42.1,
+    "cellsOver25Degrees": 430,
+    "exposureProxyCells": 2527,
+    "exposureProxyAreaSquareMetres": 63175
+  },
+  "source": "CaltechDATA 10.22002/stqse-yay61 cenjez_DEM_1m.tif",
+  "disclosure": "Terrain selection is an observed higher-relief crop. Habitat and target coordinates are illustrative. Route feasibility is only under the existing simulated assumptions. Exposure is a cliff-proximity heuristic, not a rockfall probability."
+}

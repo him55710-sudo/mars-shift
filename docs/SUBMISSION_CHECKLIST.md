@@ -1,5 +1,7 @@
 # Submission package
 
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
 Verified against the supplied Seoul event deck and the live 2026 project form. Deadline: **November 15, 2026, 23:59 KST**. Event guide recommends finishing by 23:55.
 
 ## English project summary (117 words)

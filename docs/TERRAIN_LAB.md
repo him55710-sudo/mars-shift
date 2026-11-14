@@ -1,6 +1,8 @@
 # 3D Terrain Lab
 
-Open `http://127.0.0.1:5173/terrain/local` after `pnpm dev`, or choose **Jezero 수치·단면 분석** inside Mars Atlas. This workspace uses the existing real Jezero 1,000 × 1,000 m dataset at 77.640° E, 18.450° N. It does not accept arbitrary external rasters or provide a global terrain catalogue.
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
+Open `http://127.0.0.1:5173/terrain/analysis` after `pnpm dev`, or choose **Statistics & profiles inside the 3D EVA Explorer** inside Mars Atlas. This workspace uses the existing real Jezero 1,000 × 1,000 m dataset at 77.640° E, 18.450° N. It does not accept arbitrary external rasters or provide a global terrain catalogue.
 
 ## Explore
 
@@ -30,7 +32,7 @@ The actual default region has 40,000 valid cells. Elevation spans −2,621.64 to
 
 ## Exports and evidence
 
-**Analysis JSON** includes the full source manifest, original CRS and bounds, layer statistics, slope classes, inspected values, section samples and display settings. **Grid CSV** includes 40,000 cell rows with projected metre coordinates, measurements, explicit unit-bearing headers and validity. **Profile CSV** includes horizontal distance, projected coordinates, actual elevation and cell-maximum slope. Missing numeric values are blank, never zero-filled. CSV files have a UTF-8 BOM for Korean Windows/Excel compatibility; source and resolution metadata are in the accompanying analysis JSON.
+**Analysis JSON** includes the full source manifest, original CRS and bounds, layer statistics, slope classes, inspected values, section samples and display settings. **Grid CSV** includes 40,000 cell rows with projected metre coordinates, measurements, explicit unit-bearing headers and validity. **Profile CSV** includes horizontal distance, projected coordinates, actual elevation and cell-maximum slope. Missing numeric values are blank, never zero-filled. CSV files have a UTF-8 BOM for English Windows/Excel compatibility; source and resolution metadata are in the accompanying analysis JSON.
 
 The scientific scope remains the existing data source limitations: unknown observation dates and inter-product registration error; coarse THEMIS values provide regional context; slope classes are not geological units or safety certifications. See `DATA_SOURCES.md` and `LIMITATIONS.md`.
 

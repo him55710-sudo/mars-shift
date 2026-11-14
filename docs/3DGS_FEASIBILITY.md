@@ -1,0 +1,9 @@
+# Gaussian splatting feasibility — 14 November 2026
+
+Decision: retain the registered optical-textured DEM mesh. No verified, geometrically registered and redistributable real Mars Gaussian scene was found for these regions. No splat dependency or synthetic terrain is added to the core demo.
+
+[Spark](https://sparkjs.dev/docs/) is a suitable optional visual renderer: MIT license, Three.js integration, `SparkRenderer({renderer})` and `SplatMesh({url})`, formats including PLY/SPZ/SOG/RAD. Its current Three.js peer requirement is compatible with this application's 0.187. [Loading documentation](https://sparkjs.dev/docs/loading-splats/) describes scene loading; this is a feasibility assessment, not an integrated or benchmarked Mars layer. [SuperSplat](https://github.com/playcanvas/supersplat) is a useful MIT-licensed editing/optimization option; its WebGPU editor and exported SPZ versions require target-runtime compatibility checks. [PlayCanvas guidance](https://developer.playcanvas.com/user-manual/gaussian-splatting/creating/) describes reconstruction inputs.
+
+A single orthomosaic plus DEM cannot establish a learned, observed multiview reconstruction. DEM-derived Gaussian primitives would only change rendering, not add observed geometry. Synthetic orbital views or image-generated boulders would not establish real surface structure and are excluded.
+
+A future authentic surface asset requires legally usable multiview rover images, intrinsics/distortion, camera poses and preferably registered stereo XYZ products. It must include source provenance, units, axis conventions, a validated transformation into the Mars projected frame and independent error measurements. Splat visuals remain optional; native DEM mesh, conservative planning cells and explicit obstacle buffers remain authoritative for collision and navigation. Any unresolved geometry must remain unknown.

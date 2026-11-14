@@ -1,5 +1,7 @@
 # Methodology
 
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
 ## Geometry and alignment
 
 The DEM is `cenjez_DEM_1m.tif`, CaltechDATA v2. The Mars sphere radius is 3,396,190 m; the equirectangular standard parallel is 18.4663°. All graph distances use projected metres in a 1 km ROI close to that standard parallel. Projection-scale error and source geolocation error are not quantified. Optical CRS equality is checked before reading the common bounds. The optical source window is resampled to the same 1 km footprint for display. No visual image is synthesized as terrain.

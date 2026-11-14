@@ -1,0 +1,95 @@
+{
+  "processedAt": "2026-11-14T07:51:00.187513+00:00",
+  "roi": {
+    "centerLonLat": [
+      77.73152233744179,
+      18.5043948063779
+    ],
+    "sizeMeters": 1000,
+    "gridMeters": 5,
+    "bounds": [
+      4369772.037914526,
+      1096342.6170900527,
+      4370772.037914526,
+      1097342.6170900527
+    ],
+    "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]"
+  },
+  "sources": [
+    {
+      "id": "dem",
+      "agency": "NASA / Caltech",
+      "instrument": "MRO HiRISE stereo",
+      "product": "cenjez_DEM_1m.tif",
+      "url": "https://data.caltech.edu/records/stqse-yay61",
+      "doi": "10.22002/stqse-yay61",
+      "version": "v2 (2024)",
+      "observationDate": null,
+      "resolutionMeters": [
+        1.0,
+        1.0
+      ],
+      "verticalUnits": "metres",
+      "nodata": -32767.0,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "license": "CC BY 4.0; Annex & Ehlmann (2024)",
+      "classification": "observed-derived",
+      "processing": "1 km crop; native 1m gradient; maximum slope and mean elevation aggregated to 5m planning cells"
+    },
+    {
+      "id": "optical",
+      "agency": "NASA / Caltech",
+      "instrument": "MRO HiRISE",
+      "product": "cenjez_DRG_0_3m.tif",
+      "url": "https://data.caltech.edu/api/records/stqse-yay61/files/cenjez_DRG_0_3m.tif/content",
+      "record": "https://data.caltech.edu/records/stqse-yay61",
+      "resolutionMeters": 0.3,
+      "displayMeters": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "observationDate": null,
+      "license": "CC BY 4.0; Annex & Ehlmann (2024)",
+      "classification": "observed",
+      "processing": "HTTP range crop, bilinear display resample to1m; percentile contrast stretch; grayscale"
+    },
+    {
+      "id": "thermal",
+      "agency": "NASA Mars 2020 / Caltech Murray Lab",
+      "instrument": "Mars Odyssey THEMIS",
+      "product": "THEMIS_TI_Quantitative",
+      "url": "https://murray-lab.caltech.edu/Mars2020/data/ThemisTI/THEMIS_TI_Quantitative.zip",
+      "record": "https://murray-lab.caltech.edu/Mars2020/",
+      "resolutionMeters": [
+        100.0,
+        100.0
+      ],
+      "nominalResolutionMeters": 100,
+      "units": "J m^-2 K^-1 s^-1/2",
+      "crs": "PROJCS[\"MarsEC0\",GEOGCS[\"GCS_Mars_2000\",DATUM[\"Mars_2000\",SPHEROID[\"Mars_2000_IAU_IAG\",3396190,169.894447223612]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "observationDate": null,
+      "classification": "observed-derived",
+      "processing": "Mars-to-Mars reprojection, nearest-neighbour sampling; only regional material context",
+      "limitations": "Registered to global THEMIS, not quantitatively controlled. No calibrated bearing strength, astronaut safety or wheel-slip estimates. Coarse layer is excluded from routing cost."
+    }
+  ],
+  "coverage": {
+    "demValidFraction": 1.0,
+    "thermalValidFraction": 1.0,
+    "opticalValidFraction": 1.0,
+    "optical": "Aligned real HiRISE crop; display contrast enhanced",
+    "thermalMin": 337.1024475097656,
+    "thermalMax": 458.59527587890625
+  },
+  "heuristics": {
+    "exposure": "Within 4 planning cells (20m Manhattan dilation) of native maximum slope >25deg; undirected proximity only, not a rockfall forecast",
+    "opticalClassification": "No automated boulder or dune classifier claimed; optical image supports manual inspection only",
+    "evidence": "DEM/thermal coverage and resolution; no probabilistic confidence score"
+  },
+  "simulation": "Habitat, targets, new exclusion event and resource budgets are illustrative planning inputs. No confirmed local hazard change is asserted.",
+  "aiDisclosure": "Implementation, analysis code and documents authored with Codex assistance. Source measurements were not generated by AI.",
+  "dataset": {
+    "id": "ridge",
+    "name": "Eastern Jezero ridge",
+    "assetBase": "/data/ridge",
+    "selection": "A separate real 1 km crop chosen for higher observed relief; it does not replace the original study area."
+  }
+}

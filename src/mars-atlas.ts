@@ -9,21 +9,21 @@ export const SERVICES={
   jezero:'https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0/default/default028mm/{level}/{row}/{col}.png',
 };
 export const PLACES=[
-  {id:'jezero',name:'Jezero',ko:'예제로 분화구',lon:77.4508,lat:18.4447,scale:180000,detail:'Perseverance · 25 cm 정사영상 구역',tag:'HiRISE'},
-  {id:'gale',name:'Gale',ko:'게일 분화구',lon:137.4417,lat:-4.5895,scale:260000,detail:'Curiosity · 중앙의 Mount Sharp',tag:'ROVER'},
-  {id:'olympus',name:'Olympus Mons',ko:'올림푸스산',lon:-133.8,lat:18.65,scale:5000000,detail:'거대한 순상 화산과 산기슭 절벽',tag:'VOLCANO'},
-  {id:'valles',name:'Valles Marineris',ko:'매리너 계곡',lon:-65,lat:-13.9,scale:6500000,detail:'길게 이어진 협곡과 가파른 벽',tag:'CANYON'},
-  {id:'noctis',name:'Noctis Labyrinthus',ko:'밤의 미궁',lon:-102.2,lat:-7.2,scale:2200000,detail:'교차하는 골짜기와 함몰 지형',tag:'RELIEF'},
-  {id:'hellas',name:'Hellas Planitia',ko:'헬라스 평원',lon:70.5,lat:-42.4,scale:14000000,detail:'남반구의 대형 충돌 분지',tag:'BASIN'},
-  {id:'north',name:'Planum Boreum',ko:'북극 고원',lon:0,lat:86,scale:6500000,detail:'북극의 나선형 골과 층상 퇴적물',tag:'POLAR'},
-  {id:'south',name:'Planum Australe',ko:'남극 고원',lon:0,lat:-86,scale:6500000,detail:'남극의 층상 퇴적물',tag:'POLAR'},
+  {id:'jezero',name:'Jezero',ko:'Jezero crater',lon:77.4508,lat:18.4447,scale:180000,detail:'Perseverance · 25 cm orthomosaic',tag:'HiRISE'},
+  {id:'gale',name:'Gale',ko:'Gale crater',lon:137.4417,lat:-4.5895,scale:260000,detail:'Curiosity · Mount Sharp',tag:'ROVER'},
+  {id:'olympus',name:'Olympus Mons',ko:'Olympus Mons',lon:-133.8,lat:18.65,scale:5000000,detail:'Giant shield volcano and basal cliffs',tag:'VOLCANO'},
+  {id:'valles',name:'Valles Marineris',ko:'Valles Marineris',lon:-65,lat:-13.9,scale:6500000,detail:'Long canyons and steep walls',tag:'CANYON'},
+  {id:'noctis',name:'Noctis Labyrinthus',ko:'Noctis Labyrinthus',lon:-102.2,lat:-7.2,scale:2200000,detail:'Intersecting valleys and depressions',tag:'RELIEF'},
+  {id:'hellas',name:'Hellas Planitia',ko:'Hellas Planitia',lon:70.5,lat:-42.4,scale:14000000,detail:'Large southern impact basin',tag:'BASIN'},
+  {id:'north',name:'Planum Boreum',ko:'Planum Boreum',lon:0,lat:86,scale:6500000,detail:'Northern spiral troughs and layered deposits',tag:'POLAR'},
+  {id:'south',name:'Planum Australe',ko:'Planum Australe',lon:0,lat:-86,scale:6500000,detail:'Southern layered deposits',tag:'POLAR'},
 ] as const;
 export const PANORAMAS=[
-  {id:1,name:'Butler Landing',detail:'Sol 3–11 · 착륙지',kind:'Mastcam-Z 실제 촬영',lon:77.45081155,lat:18.44467749},
-  {id:37,name:'Bunsen Peak',detail:'Sol 1074–1082 · 암석과 지평선',kind:'Mastcam-Z 실제 촬영',lon:77.32720278,lat:18.49183272},
-  {id:50,name:'Crocodile Bridge',detail:'Sol 1717–1754 · 분화구 가장자리',kind:'Mastcam-Z 실제 촬영',lon:77.25129581,lat:18.42898923},
-  {id:52,name:'Vingeanne',detail:'Sol 1823 · 지표 관측',kind:'Mastcam-Z 실제 촬영',lon:77.21840919,lat:18.43181976},
-  {id:56,name:'Marble Mountain',detail:'Sol 1968 · 지표 관측',kind:'Mastcam-Z 실제 촬영',lon:77.23186719,lat:18.43714650},
+  {id:1,name:'Butler Landing',detail:'Sol 3–11 · landing site',kind:'Actual Mastcam-Z observations',lon:77.45081155,lat:18.44467749},
+  {id:37,name:'Bunsen Peak',detail:'Sol 1074–1082 · rocks and horizon',kind:'Actual Mastcam-Z observations',lon:77.32720278,lat:18.49183272},
+  {id:50,name:'Crocodile Bridge',detail:'Sol 1717–1754 · crater rim',kind:'Actual Mastcam-Z observations',lon:77.25129581,lat:18.42898923},
+  {id:52,name:'Vingeanne',detail:'Sol 1823 · surface observation',kind:'Actual Mastcam-Z observations',lon:77.21840919,lat:18.43181976},
+  {id:56,name:'Marble Mountain',detail:'Sol 1968 · surface observation',kind:'Actual Mastcam-Z observations',lon:77.23186719,lat:18.43714650},
 ] as const;
 export const normalizeLongitude=(lon:number)=>((lon+180)%360+360)%360-180;
 export function parsePosition(lon:string,lat:string):MarsPosition|null{

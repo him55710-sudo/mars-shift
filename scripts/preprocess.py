@@ -134,7 +134,9 @@ def main():
                     if src.crs!=demcrs:raise ValueError('Optical CRS differs; explicit reprojection required')
                     win=from_bounds(*bounds,src.transform)
                     image=src.read(1,window=win,out_shape=(1000,1000),resampling=Resampling.bilinear,masked=True)
-                    np.save(CACHE/'optical-roi.npy',image.filled(0))
+                    # Separate presets must not overwrite the default ROI cache.
+                    optical_cache='optical-roi.npy' if OUT==ROOT/'public'/'data' else f'optical-{OUT.name}-roi.npy'
+                    np.save(CACHE/optical_cache,image.filled(0))
                     optical_valid=float((~np.ma.getmaskarray(image)).mean())
                     qlo,qhi=np.percentile(image.compressed(),[1,99])
                     gray=np.clip((image.filled(qlo)-qlo)/(qhi-qlo),0,1)

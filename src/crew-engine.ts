@@ -1,8 +1,11 @@
 import {DEFAULTS, blocked, leg, metrics, nearestAllowed, point} from './planner';
 import type {Exclusion, Mode, Point, Settings, Terrain} from './planner';
+import {withObstacles} from './obstacles';
+import type {ObstacleAnnotation} from './obstacles';
+import {constrainedPlan} from './constrained-planner';
 
 export type Phase='prepare'|'outbound'|'science'|'return'|'complete';
-export type CrewPlan={base:Point;target:Point;targetName:string;purpose:string;settings:Settings;mode:Mode;exclusion?:Exclusion|null};
+export type CrewPlan={base:Point;target:Point;targetName:string;purpose:string;settings:Settings;mode:Mode;exclusion?:Exclusion|null;obstacles?:ObstacleAnnotation[];computed?:{outbound:number[];inbound:number[]}};
 export type CrewEvent={id:number;minute:number;title:string;detail:string;level:'warning'|'caution'|'advisory'};
 export type CrewState={version:1;terrainKey:string;config:CrewPlan;phase:Phase;track:number[];returnTrack:number[];cursor:number;trail:number[];elapsed:number;oxygenSpent:number;powerSpent:number;scienceSpent:number;held:boolean;holdReason:string;exclusion:Exclusion|null;events:CrewEvent[];revision:number;scienceTasks?:boolean[]};
 export type Candidate={track:number[];returnTrack:number[];distance:number;minutes:number;reserve:number;timeMargin:number;feasible:boolean;reasons:string[]};
@@ -36,8 +39,19 @@ function futureMetrics(t:Terrain,s:CrewState,track:number[],returnTrack:number[]
  return {distance:m.distance,minutes:m.totalMinutes,reserve,timeMargin,feasible:!reasons.length,reasons,travel:m.travelMinutes,oxygenAfter:o,powerAfter:p};
 }
 export function candidate(t:Terrain,s:CrewState,exclusion=s.exclusion,returnOnly=false):Candidate|null{
+ t=withObstacles(t,s.config.obstacles??[]);
  const current=position(t,s),cfg=s.config;
  const needsOutbound=!returnOnly&&(s.phase==='prepare'||s.phase==='outbound');
+ if(needsOutbound){
+  const supplied=s.phase==='prepare'&&cfg.computed&&JSON.stringify(exclusion)===JSON.stringify(cfg.exclusion??null)?cfg.computed:null;
+  const validPath=(cells:number[],start:Point,end:Point)=>Array.isArray(cells)&&cells.length>0&&cells.length<100000&&cells[0]===start.y*t.width+start.x&&cells.at(-1)===end.y*t.width+end.x&&cells.every((i,n)=>{if(!Number.isInteger(i)||i<0||i>=t.width*t.height||blocked(t,i,cfg.settings,exclusion))return false;if(!n)return true;const a=point(t,cells[n-1]),b=point(t,i),dx=Math.abs(a.x-b.x),dy=Math.abs(a.y-b.y);return dx<=1&&dy<=1&&(!dx||!dy||!blocked(t,a.y*t.width+b.x,cfg.settings,exclusion)&&!blocked(t,b.y*t.width+a.x,cfg.settings,exclusion));});
+  if(supplied&&validPath(supplied.outbound,current,cfg.target)&&validPath(supplied.inbound,cfg.target,cfg.base))return {track:supplied.outbound,returnTrack:supplied.inbound,...futureMetrics(t,s,supplied.outbound,supplied.inbound)};
+  const reserveFactor=1-cfg.settings.reservePercent/100;
+  if(reserveFactor<=0)return null;
+  const remaining={...cfg.settings,scienceMinutes:Math.max(0,cfg.settings.scienceMinutes-s.scienceSpent),durationMinutes:cfg.settings.durationMinutes-s.elapsed,oxygenMinutes:cfg.settings.oxygenMinutes-s.oxygenSpent/reserveFactor,powerMinutes:cfg.settings.powerMinutes-s.powerSpent/reserveFactor};
+  const route=constrainedPlan(t,current,cfg.target,cfg.mode,remaining,exclusion,cfg.base).route;
+  return route?{track:route.outbound,returnTrack:route.inbound,...futureMetrics(t,s,route.outbound,route.inbound)}:null;
+ }
  const a=leg(t,current,needsOutbound?cfg.target:cfg.base,cfg.mode,cfg.settings,exclusion);
  if(!a)return null;
  const b=needsOutbound?leg(t,cfg.target,cfg.base,cfg.mode,cfg.settings,exclusion):a;
@@ -53,6 +67,7 @@ export function initialCrew(t:Terrain,config=defaultCrewPlan(t)):CrewState{
  const c=candidate(t,s);return c?{...s,track:c.track,returnTrack:c.returnTrack}:s;
 }
 export function assessCrew(t:Terrain,s:CrewState){
+ t=withObstacles(t,s.config.obstacles??[]);
  const future=futureMetrics(t,s,s.track.slice(s.cursor),s.returnTrack);
  const remaining=s.phase==='science'?s.returnTrack:s.phase==='return'||s.phase==='complete'?s.track.slice(s.cursor):[...s.track.slice(s.cursor),...s.returnTrack.slice(1)];
  const routeBlocked=remaining.some(i=>blocked(t,i,s.config.settings,s.exclusion));
@@ -104,6 +119,7 @@ export function useCandidate(s:CrewState,c:Candidate,returnOnly=false):CrewState
 export function validSavedCrew(t:Terrain,value:unknown):value is CrewState{
  if(!value||typeof value!=='object')return false;
  const s=value as CrewState;
+ try{t=withObstacles(t,s.config?.obstacles??[]);}catch{return false;}
  if(s.version!==1||s.terrainKey!==terrainKey(t)||!['prepare','outbound','science','return','complete'].includes(s.phase)||!s.config?.settings)return false;
  if(!['shortest','exposure','mission'].includes(s.config.mode)||typeof s.config.targetName!=='string'||typeof s.config.purpose!=='string'||typeof s.held!=='boolean'||typeof s.holdReason!=='string'||!Number.isInteger(s.revision)||s.revision<0)return false;
  if(![s.config.base,s.config.target].every(p=>p&&Number.isInteger(p.x)&&Number.isInteger(p.y)&&p.x>=0&&p.y>=0&&p.x<t.width&&p.y<t.height))return false;

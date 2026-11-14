@@ -1,6 +1,8 @@
 # Integrated session and repository handoff
 
-The NASA workspace now contains one source application: Crew view at `/`, Mission Control at `/planning`, optional Terrain Lab at `/terrain`, evidence at `/evidence` and the seven-slide briefing at `/briefing`.
+Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+
+The NASA workspace now contains one source application: Crew view at `/crew`, Mission Control at `/planning`, global Mars Atlas at `/terrain` and detailed analysis at `/terrain/analysis`, evidence at `/evidence` and the seven-slide briefing at `/briefing`.
 
 The published crew revision was c3cd4d7c7de73875cbba543db3af00a85a3edd65. Its crew engine, navigator and offline hook are retained. Terrain Lab work from the primary workspace is integrated with its tests, provenance and documentation. Three.js is a lazy-loaded analysis dependency; it is not required to plan a mission or use Crew view. The release checkout's package removal is superseded by the integrated manifest, which intentionally includes the optional analysis dependency.
 
