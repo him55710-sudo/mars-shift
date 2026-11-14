@@ -1,0 +1,34 @@
+{
+  "title": "Mars Image Texture",
+  "localAsset": "/media/mars-global.jpg",
+  "sourcePage": "https://science.nasa.gov/3d-resources/mars/",
+  "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars/Mars.jpg",
+  "downloadedOn": "2026-11-14",
+  "publisher": "NASA Science, 3D Resources",
+  "credit": "NASA/Jet Propulsion Laboratory & Caltech",
+  "observations": "Viking images processed at the USGS; JPL/Caltech-generated planetary map database.",
+  "width": 1440,
+  "height": 720,
+  "format": "JPEG",
+  "colorMode": "RGB",
+  "bytes": 972896,
+  "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+  "processing": "Original NASA JPEG downloaded byte-for-byte; no resizing, generation, recoloring, city lights or invented geography.",
+  "mapping": {
+    "projection": "Equirectangular global latitude-longitude texture (2:1 aspect ratio)",
+    "north": "top",
+    "south": "bottom",
+    "longitudeLeftDegreesEast": -180,
+    "longitudeRightDegreesEast": 180,
+    "latitudeTopDegreesNorth": 90,
+    "latitudeBottomDegreesNorth": -90,
+    "orientationEvidence": "The 2:1 texture has polar stretching and a north polar cap at the top. Olympus Mons is near image x=184, y=279, consistent with approximately -134 degrees east, +18 degrees north under this mapping. This orientation is a visual cross-check; the JPEG has no embedded geospatial transform.",
+    "usage": "Presentation globe context only. Do not use this coarse color map as the authoritative navigation or hazard raster."
+  },
+  "usageTerms": {
+    "name": "NASA Images and Media Usage Guidelines",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "basis": "NASA states that images and texture maps used for 3D models generally are not subject to copyright in the United States and may be used for educational or informational purposes, including computer graphical simulations and Internet pages. Retain the published image credit; NASA branding and endorsement rights are separate.",
+    "imageSpecificThirdPartyRestrictionFound": false
+  }
+}

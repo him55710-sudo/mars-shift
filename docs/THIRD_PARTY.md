@@ -12,3 +12,12 @@
 - CaltechData: Annex & Ehlmann (2024), CC BY 4.0. Retain NASA instrument-team and provider credit; see DATA_SOURCES.md for thermal product terms and uncertainty.
 
 No code was copied from a prior Space Apps winner. Their public project descriptions informed presentation and workflow choices only; the inferences are documented in RESEARCH.md.
+
+
+## Spatial explorer upgrade
+
+- Apple-inspired web interaction guidance: Emil Kowalski `emilkowalski/skills`, MIT, copied with license to `.agents/skills/apple-design`. This is community material, not an official Apple SDK or endorsement.
+- NASA Mars global texture: NASA/JPL/Caltech, Viking observations processed at USGS; metadata and NASA media usage references in `public/media/mars-global-source.json`.
+- Actual boulder training/evaluation imagery and expert masks: Mars-Bench mb-boulder_seg v1, DOI10.5281/zenodo.15494673, CC BY4.0. Original image credit NASA/JPL/University of Arizona HiRISE. See OPTICAL_BENCHMARK.md for precise authors, source records, splits and limits.
+- scikit-learn HistGradientBoostingClassifier (BSD-3-Clause), trained from real Mars train patches; no terrestrial pretrained detector was repackaged as Mars validation. Model parameters/protocol are public.
+- Three.js MIT Line2, LineGeometry and LineMaterial are reused from the installed package; route ribbons remain visualizations of the existing measured graph.

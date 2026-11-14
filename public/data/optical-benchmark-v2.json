@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-exploratory-follow-up",
+  "measuredAt": "2026-11-14T08:52:58.476592+00:00",
+  "title": "Train/validation-only supervised follow-up on the previously inspected Mars-Bench test split",
+  "dataset": {
+    "url": "https://zenodo.org/records/15494673",
+    "license": "CC-BY-4.0",
+    "tileCount": 4,
+    "pixels": 1000000,
+    "originalSplits": {
+      "train": 39,
+      "val": 6,
+      "test": 4
+    }
+  },
+  "model": {
+    "name": "boulder-pixel-hgb-v2",
+    "url": "/data/optical-model-v2.json",
+    "sha256": "198944090a23706da214406d6c53e7cb8317f8740ee9def10a21dfc904f1f860",
+    "threshold": 0.25,
+    "validationSelectedMetrics": {
+      "precision": 0.35665914221218964,
+      "recall": 0.42241307660340766,
+      "f1": 0.3867612832854543,
+      "iou": 0.23974212822831087
+    },
+    "lock": {
+      "frozenAt": "2026-11-14T08:52:19.163944+00:00",
+      "modelSha256": "198944090a23706da214406d6c53e7cb8317f8740ee9def10a21dfc904f1f860",
+      "trainingScriptSha256": "acce980e83afab1ce2782db1b1d40f6f17e4246353a3bb6930604e8b8b0b081f",
+      "selectedThreshold": 0.25,
+      "testUsedForFittingOrThreshold": false
+    }
+  },
+  "aggregate": {
+    "pixelCounts": {
+      "tp": 16857,
+      "fp": 40100,
+      "fn": 15607,
+      "tn": 927436
+    },
+    "pixelMetrics": {
+      "precision": 0.2959601102586161,
+      "recall": 0.5192520946278956,
+      "f1": 0.37702553091555674,
+      "iou": 0.23230527534314535
+    },
+    "pixelBootstrap95": {
+      "precision": {
+        "low": 0.05968003999500063,
+        "high": 0.3987222191885546
+      },
+      "recall": {
+        "low": 0.23145904023267086,
+        "high": 0.6514518432326651
+      },
+      "f1": {
+        "low": 0.09489268680445151,
+        "high": 0.4869470168513739
+      },
+      "iou": {
+        "low": 0.04980962812288114,
+        "high": 0.32183077676371197
+      }
+    },
+    "componentBoxCounts": {
+      "tp": 77,
+      "fp": 1894,
+      "fn": 285
+    },
+    "componentBoxMetrics": {
+      "precision": 0.03906646372399797,
+      "recall": 0.212707182320442,
+      "f1": 0.06600942991855979
+    },
+    "componentBoxBootstrap95": {
+      "precision": {
+        "low": 0.010101010101010102,
+        "high": 0.07481186365648516
+      },
+      "recall": {
+        "low": 0.05555555555555555,
+        "high": 0.33152173913043476
+      },
+      "f1": {
+        "low": 0.018306636155606407,
+        "high": 0.1178171304662089
+      }
+    }
+  },
+  "samples": [
+    {
+      "id": "ESP_017355_2260_RED_6161",
+      "imageSha256": "0ac94b9aaa752ad06bdccd2928310292a7367a2186df7088ce367d68ee3668af",
+      "maskSha256": "490ad922a677bffa38ed47caefa353f4b711832dac03995863c0737282b619d6",
+      "resolutionM": 0.5,
+      "pixels": 250000,
+      "pixelCounts": {
+        "tp": 3806,
+        "fp": 8072,
+        "fn": 5918,
+        "tn": 232204
+      },
+      "pixelMetrics": {
+        "precision": 0.32042431385755177,
+        "recall": 0.3914027149321267,
+        "f1": 0.3523747801129525,
+        "iou": 0.21386828500786695
+      },
+      "componentBoxCounts": {
+        "tp": 15,
+        "fp": 558,
+        "fn": 90
+      },
+      "componentBoxMetrics": {
+        "precision": 0.02617801047120419,
+        "recall": 0.14285714285714285,
+        "f1": 0.04424778761061947
+      }
+    },
+    {
+      "id": "ESP_025650_2165_RED_6402",
+      "imageSha256": "4349f4d21e4bc4d1630a449617f1c2dc0119d2bf31af8a7f995dda774d17c5f1",
+      "maskSha256": "5a1e197d47ccfc0d2a4e136d5762d20b5727e80d0fb9d1f11b08d2db0c0290eb",
+      "resolutionM": 0.25,
+      "pixels": 250000,
+      "pixelCounts": {
+        "tp": 734,
+        "fp": 10934,
+        "fn": 3099,
+        "tn": 235233
+      },
+      "pixelMetrics": {
+        "precision": 0.0629070963318478,
+        "recall": 0.19149491260109575,
+        "f1": 0.09470356751177343,
+        "iou": 0.04970542425678878
+      },
+      "componentBoxCounts": {
+        "tp": 1,
+        "fp": 350,
+        "fn": 72
+      },
+      "componentBoxMetrics": {
+        "precision": 0.002849002849002849,
+        "recall": 0.0136986301369863,
+        "f1": 0.0047169811320754715
+      }
+    },
+    {
+      "id": "ESP_028537_2270_RED_3105",
+      "imageSha256": "11bce8d3f221c3e2ab1c4a7fbbe83be3257166d5c332c52c2f8f7a9466800f37",
+      "maskSha256": "66cdc6ba95cc5814b6691660f3261e69d3d7c75547d2e329247ddc5d498663ce",
+      "resolutionM": 0.25,
+      "pixels": 250000,
+      "pixelCounts": {
+        "tp": 12096,
+        "fp": 16981,
+        "fn": 6518,
+        "tn": 214405
+      },
+      "pixelMetrics": {
+        "precision": 0.4159988994738109,
+        "recall": 0.6498334586870098,
+        "f1": 0.5072655217965654,
+        "iou": 0.3398230088495575
+      },
+      "componentBoxCounts": {
+        "tp": 54,
+        "fp": 552,
+        "fn": 121
+      },
+      "componentBoxMetrics": {
+        "precision": 0.0891089108910891,
+        "recall": 0.30857142857142855,
+        "f1": 0.1382842509603073
+      }
+    },
+    {
+      "id": "ESP_037018_2170_RED_MRDR_0751",
+      "imageSha256": "ade860b7454519aea9182c448ed94ca5ca07fe21d3df6130117ff68ec0941ad3",
+      "maskSha256": "5ca1806839acee324e58f7f54e61464e5fb64739f41411e31d390faf0fa7b11f",
+      "resolutionM": 0.59518424784513,
+      "pixels": 250000,
+      "pixelCounts": {
+        "tp": 221,
+        "fp": 4113,
+        "fn": 72,
+        "tn": 245594
+      },
+      "pixelMetrics": {
+        "precision": 0.05099215505306876,
+        "recall": 0.7542662116040956,
+        "f1": 0.09552625891506375,
+        "iou": 0.05015887426236949
+      },
+      "componentBoxCounts": {
+        "tp": 7,
+        "fp": 434,
+        "fn": 2
+      },
+      "componentBoxMetrics": {
+        "precision": 0.015873015873015872,
+        "recall": 0.7777777777777778,
+        "f1": 0.03111111111111111
+      }
+    }
+  ],
+  "baselineUrl": "/data/optical-benchmark.json",
+  "protocol": {
+    "weightsFitOnlyOn": "original train39",
+    "thresholdSelectedOnlyOn": "original val6",
+    "v2FrozenBeforeTestInference": true,
+    "testPreviouslyInspectedForBaseline": true,
+    "testDrivenV2ThresholdTuning": false,
+    "resampling": false,
+    "metricDefinitions": "Same strict native pixel and 8-connected component box IoU>=.5 proxy as baseline; tile-bootstrap10k seed20261114."
+  },
+  "limitations": [
+    "Model family proposed after baseline test results were inspected. Any V2 test result is exploratory follow-up, not a fresh independent confirmation.",
+    "Original split shares parent HiRISE observations; not geographically independent.",
+    "Four tiny test patches give unstable intervals. Local Jezero and ridge accuracy remain unmeasured.",
+    "Semantic components are not original boulder instances. No measured height, traversability or safety claim.",
+    "Classifier scores are not calibrated probabilities."
+  ],
+  "localValidation": {
+    "status": "unreviewed",
+    "jezeroPrecision": null,
+    "jezeroRecall": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "region": "ridge",
+  "generatedAt": "2026-11-14T09:01:16.356372+00:00",
+  "image": "/data/ridge/optical-v2-mask.png",
+  "sourceImage": "/data/ridge/optical-native.webp",
+  "sourceMetadata": "/data/ridge/optical-native-meta.json",
+  "width": 2000,
+  "height": 2000,
+  "metresPerPixel": 0.5,
+  "bounds": [
+    4369772.037914526,
+    1096342.6170900527,
+    4370772.037914526,
+    1097342.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "sourceCropSha256": "a646f18e3d4ec8683cd66b714291c8d10fee559abeaa4058c85d6c935215f6a5",
+  "modelSha256": "198944090a23706da214406d6c53e7cb8317f8740ee9def10a21dfc904f1f860",
+  "configSha256": "47e5395d7c7768dfb5deaf9663c50b6f11daeaf4fd9ae82c1b9cec0f0746417a",
+  "generatorScriptSha256": "53357e9ee9bd659503ffbcfd4244cc90391591127541d4432d066a2479c864e1",
+  "trainingScriptSha256": "acce980e83afab1ce2782db1b1d40f6f17e4246353a3bb6930604e8b8b0b081f",
+  "inferenceBackend": "Checksum-verified local estimator; same exported tree model",
+  "maskSha256": "e8d743f0be866d7e18c0a2cc2e13cbc34cd1058184dabe4345c6f32ee27d59cf",
+  "maskEncoding": "uint8 single-channel PNG, 0=below fixed model threshold, 255=at or above0.25; full semantic mask before geometric filtering/top150.",
+  "nativeSourceMetresPerPixel": [
+    0.29995473187602484,
+    0.29995473187602484
+  ],
+  "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024), DOI 10.22002/stqse-yay61, CC BY 4.0",
+  "trainingDataCredit": "Purohit et al.(2025), Mars-Bench; HiRISE NASA/JPL-Caltech/University of Arizona.",
+  "processing": "Same frozen normalized multiscale pixel features and classifier as V2 benchmark; no local fitting, threshold tuning, synthetic image generation or per-region parameters.",
+  "statistics": {
+    "rawComponents": 3585,
+    "eligibleComponents": 2252,
+    "selected": 150,
+    "truncatedOrSuppressed": 2102,
+    "configSha256": "47e5395d7c7768dfb5deaf9663c50b6f11daeaf4fd9ae82c1b9cec0f0746417a",
+    "validFraction": 1.0,
+    "positivePixels": 62300,
+    "pixels": 4000000,
+    "positiveAreaM2": 15575.0
+  },
+  "elapsedSeconds": 10.563,
+  "localAccuracy": "Unmeasured; semantic benchmark is not local candidate accuracy or safety validation."
+}

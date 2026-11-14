@@ -85,7 +85,7 @@ export default function CrewNavigator({terrain:t,manifest,onPlanning,onEvidence}
    <div className={assessment.timeMargin<0?'critical':''}><span><Flag size={17}/>Time margin</span><strong>{n(assessment.timeMargin)}<small>min</small></strong><p>After travel and planned science</p></div>
   </section>
   <div className="crew-grid">
-   <section className="crew-map-section" aria-label="Crew route map"><div className="crew-map-heading"><div><MapPin size={17}/><strong>Jezero central floor</strong><span>1 km analysis region</span></div><button onClick={()=>setShowReturn(v=>!v)} aria-pressed={showReturn}><RouteIcon size={17}/>{showReturn?'Return corridor shown':'Show return corridor'}</button></div>
+   <section className="crew-map-section" aria-label="Crew route map"><div className="crew-map-heading"><div><MapPin size={17}/><strong>Jezero {t.assetRoot==='/data/ridge'?'eastern ridge':'central floor'}</strong><span>1 km analysis region</span></div><button onClick={()=>setShowReturn(v=>!v)} aria-pressed={showReturn}><RouteIcon size={17}/>{showReturn?'Return corridor shown':'Show return corridor'}</button></div>
     <div ref={mapRef} className="crew-map-canvas"><svg viewBox={`${cx-viewWidth/2} ${cy-viewHeight/2} ${viewWidth} ${viewHeight}`} role="img" aria-label="Actual Jezero terrain with simulated crew position, active route and return corridor">
      <defs><pattern id="crew-exclusion" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#f86442" strokeWidth="2"/></pattern></defs>
      <image href={layer==='slope'?(t.assetRoot??'/data')+'/slope.png':(t.assetRoot??'/data')+'/optical.webp'} width="1000" height="1000"/>

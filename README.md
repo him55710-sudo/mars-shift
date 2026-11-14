@@ -1,5 +1,7 @@
 # MARS SHIFT
 
+Current release: [destination-first spatial explorer, automatic optical proposals and measured validation](docs/XR_OPTICAL_UPGRADE.md). Open `/` for the new introduction, `/destinations` to choose a science mission, or `/explore` directly.
+
 **Adaptive EVA Navigator — When Mars changes, your map changes.**
 
 A working NASA Space Apps 2026 research prototype for **Interplanetary Survival Guide: Martian Map**. The default 3D EVA Explorer connects native DEM walking, optical evidence, mission alternatives and simulated route revalidation. Two real 1 km Jezero study regions are available. Mission Control shares the same calculated round trips and hands the exact selected paths to the existing crew rehearsal.
@@ -13,7 +15,7 @@ pnpm install
 pnpm dev
 ```
 
-Open the printed local URL. `/` and `/explore` open 3D EVA, `/crew` is Crew view, `/planning` is Mission Control, `/evidence` is the source register, and `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. A validated seven-slide PowerPoint is downloadable at `/downloads/MARS-SHIFT-7-slides.pptx`. The UI is English and responsive. Local exports retain assumptions, events and provenance.
+Open the printed local URL. `/` opens the introduction, `/destinations` chooses a mission and `/explore` opens 3D EVA, `/crew` is Crew view, `/planning` is Mission Control, `/evidence` is the source register, and `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. A validated seven-slide PowerPoint is downloadable at `/downloads/MARS-SHIFT-7-slides.pptx`. The UI is English and responsive. Local exports retain assumptions, events and provenance.
 
 **Mars Atlas:** open `/terrain` or **Mars Atlas** for the English global Mars explorer. Reused Caltech/Esri CTX and MOLA/HRSC services stream actual imagery and 3D terrain, with sparse HiRISE and a NASA Trek Jezero 25 cm orthomosaic. Scroll/drag to explore, enter Mars coordinates, save a Mars position and inspect nearby elevation. Five locally hosted real Mastcam-Z 360° panoramas provide a camera-level view at actual observation locations. Global imagery and 3D elevation have different resolutions; source limits are explicit. See [Mars Atlas](docs/MARS_ATLAS.md).
 
@@ -82,7 +84,7 @@ The five resources in the official challenge's Resources tab are documented in `
 
 ## Scientific boundaries
 
-This is not certified astronaut navigation. Slope/relief are derived measurements; cliff proximity is an uncalibrated heuristic. Habitat, targets, resources, new hazards and visibility are simulated planning inputs. THEMIS values provide regional context and are excluded from physical routing cost. Observation dates and cross-product registration error are unknown. No boulder classifier, imminent-collapse prediction, real-time Mars weather, calibrated wheel slip or suit-performance model is claimed.
+This is not certified astronaut navigation. Slope/relief are derived measurements; cliff proximity is an uncalibrated heuristic. Habitat, targets, resources, new hazards and visibility are simulated planning inputs. THEMIS values provide regional context and are excluded from physical routing cost. Observation dates and cross-product registration error are unknown. No validated Jezero boulder recognizer, imminent-collapse prediction, real-time Mars weather, calibrated wheel slip or suit-performance model is claimed.
 
 The unified planner evaluates five terrain/effort objective weights per direction, deduplicates paths, filters all distinct outbound × return pairs by hard modeled time, oxygen and power limits, and selects the lowest requested-mode cost among feasible candidates. This bounded alternative method does not claim global constrained optimality. No-feasible-route messages refer to this search and these assumptions.
 

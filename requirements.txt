@@ -4,3 +4,6 @@ scipy>=1.14,<2
 Pillow>=11,<14
 requests>=2.32,<3
 truststore>=0.10
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.8.0

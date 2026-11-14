@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "region": "floor",
+  "image": "/data/optical-native.webp",
+  "width": 2000,
+  "height": 2000,
+  "metresPerPixel": 0.5,
+  "nativeMetresPerPixel": [
+    0.29995473187602484,
+    0.29995473187602484
+  ],
+  "bounds": [
+    4364626.037914526,
+    1093118.6170900527,
+    4365626.037914526,
+    1094118.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "source": {
+    "bounds": [
+      4364626.037914526,
+      1093118.6170900527,
+      4365626.037914526,
+      1094118.6170900527
+    ],
+    "cropFloat32Sha256": "a56bba1d5ba212ff31b4dbea7b23efd41a555c0fe181e0d02506c1c1d4a3b6a1",
+    "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "outputResolution": [
+      0.5,
+      0.5
+    ],
+    "rangeRequests": [
+      {
+        "bytes": 16384,
+        "range": "bytes=0-16383",
+        "sha256": "61024d254895cc42a039b672c8b5485d86938bbe0abb2373014b7674880c12be"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=622592-638975",
+        "sha256": "3118f01b5dbdea0cfad276c0a12f0d2cf3c14ce34a614d90e87ec6616894065c"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=98304-114687",
+        "sha256": "b35d93985280bf315fcba2ed4948de8073756693fa111bb205a0db5051d9973c"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=409600-425983",
+        "sha256": "b817b5daeaea821b8796c764b74e772ef18e0f8194843e4405d5c94e4d383766"
+      },
+      {
+        "bytes": 32768,
+        "range": "bytes=425984-458751",
+        "sha256": "53db7085afd54113281536388b51997a628659b9898cb468adde78085ce8bd30"
+      },
+      {
+        "bytes": 31780,
+        "range": "bytes=428066444-428098223",
+        "sha256": "9becc264154acb0ba158a27c5bdfa9d76014c295b559cc3228f94b5f79ec8407"
+      },
+      {
+        "bytes": 34034,
+        "range": "bytes=431931908-431965941",
+        "sha256": "c480e0d8cb122871841d487dd1eab67699b2f049d2d7c7bf26e484bf98f128d1"
+      },
+      {
+        "bytes": 428268,
+        "range": "bytes=437393251-437821518",
+        "sha256": "c37ce4b01e82108bf07eb192962c647f13344ee27c4d44e274c0557094e5fe97"
+      },
+      {
+        "bytes": 33697,
+        "range": "bytes=429536654-429570350",
+        "sha256": "5e3a01b6957deb791da2873dd0051e165399a926520546058ccca1615bfaeff1"
+      },
+      {
+        "bytes": 33261,
+        "range": "bytes=430014757-430048017",
+        "sha256": "98db901b080d785f171e823d36b9c70a74475c825cc0e9034e25d79419a308f5"
+      },
+      {
+        "bytes": 32986,
+        "range": "bytes=430497103-430530088",
+        "sha256": "44b663c71f2d09287a4ae6d79f16ee2d6da024d4299235a445bf939fb40b8632"
+      },
+      {
+        "bytes": 33441,
+        "range": "bytes=433338297-433371737",
+        "sha256": "50f91ed4449e6c58cf7609d7d06816a60ab4110c19cf3b57f0dbfe31172b5b85"
+      },
+      {
+        "bytes": 34055,
+        "range": "bytes=430985483-431019537",
+        "sha256": "801135ba0dcf6e2dd81e3958c74a9f84e5c73afbd78b511570305fcfebf4dbb1"
+      },
+      {
+        "bytes": 31743,
+        "range": "bytes=427587732-427619474",
+        "sha256": "cfd0f54b69436c293b5020e58012b6f7881a4dc3926988562afddee7589016fd"
+      },
+      {
+        "bytes": 34055,
+        "range": "bytes=429051457-429085511",
+        "sha256": "137b94f008c38dd3b7ee521bdbfa21f565f0b0a815cb844e3b8b84a30943ceb3"
+      },
+      {
+        "bytes": 33217,
+        "range": "bytes=432403504-432436720",
+        "sha256": "13dcbee8c78fa66c308beeb41d6c34bb6c5c0749aca671c7eca1fcdb318da186"
+      },
+      {
+        "bytes": 33654,
+        "range": "bytes=431460922-431494575",
+        "sha256": "c03f68552c4c73a870ef5f54c7a07946f3fc29014efc96fbb8a603a9cc439eaa"
+      },
+      {
+        "bytes": 32694,
+        "range": "bytes=428565535-428598228",
+        "sha256": "bdb51750fd016825fdf3957c326e856739d88e59037b9a6dfa22a6e5886cb731"
+      },
+      {
+        "bytes": 33380,
+        "range": "bytes=432869331-432902710",
+        "sha256": "c7b19abfa01995b82bc9351f47cfd04220c38e4f5fa2c9102ae4ab44613008b3"
+      },
+      {
+        "bytes": 32874,
+        "range": "bytes=427105337-427138210",
+        "sha256": "83859dff6946721a2f02e3d83d0abbd03f3bc2e81eeed3e0d735d97691308a60"
+      },
+      {
+        "bytes": 423707,
+        "range": "bytes=441516577-441940283",
+        "sha256": "6027a945fe638832caad595d45931456cf7f7de2a5d6e41eb9c31a1d462033ff"
+      },
+      {
+        "bytes": 418053,
+        "range": "bytes=438963223-439381275",
+        "sha256": "986ab740530bee46fe6d23cd63f7816b5d81d1dc864a0d6a8377fa64b273733f"
+      },
+      {
+        "bytes": 428399,
+        "range": "bytes=442033542-442461940",
+        "sha256": "749fa810b97375e21645c778d8e7b61b009c6a99e07b78e69f0d46bfb922470e"
+      },
+      {
+        "bytes": 421768,
+        "range": "bytes=438444122-438865889",
+        "sha256": "d4c24fa4cd5490e74f3ccaf196c55e46c2d89003c07dab0af8c97f7f6706b9d6"
+      },
+      {
+        "bytes": 414115,
+        "range": "bytes=440499654-440913768",
+        "sha256": "6d11ea6cddadc18233d83a0dddb9e860c2eeef81f95909d86d43ec921d1b102f"
+      },
+      {
+        "bytes": 421906,
+        "range": "bytes=439984853-440406758",
+        "sha256": "46c0bc207684b9054b2f93ace3974c2626066f97de3ff667e8fe2027abf176bb"
+      },
+      {
+        "bytes": 430572,
+        "range": "bytes=436867816-437298387",
+        "sha256": "625097808287f879839f6a93c6a93f4efb1e1f65b1eb113605f9aa8fbb441d37"
+      },
+      {
+        "bytes": 428507,
+        "range": "bytes=436343228-436771734",
+        "sha256": "8e0da8f42948e8ea3272a0747987506c2a1cf05a6d60d61ea4a80bb5f1238b16"
+      },
+      {
+        "bytes": 417507,
+        "range": "bytes=439476478-439893984",
+        "sha256": "032b6fa106653f9e2ebf29993dc9b28c9142e8460c6552ecd530005a370de741"
+      },
+      {
+        "bytes": 417877,
+        "range": "bytes=441005003-441422879",
+        "sha256": "30e21ba27c299f13f8b79dc97b9d78c0b51a36a89026bb75ca3a7505e2af6956"
+      },
+      {
+        "bytes": 429239,
+        "range": "bytes=443073830-443503068",
+        "sha256": "c3e5e716b1454027a0d109b22d668e0fc3e92dd98e579f8522ba8677ded96f3a"
+      },
+      {
+        "bytes": 425902,
+        "range": "bytes=442556114-442982015",
+        "sha256": "5574f7c3f6ed2e42a81f68cf9b83634bc43de13689f6a0b854859641a63a6a34"
+      },
+      {
+        "bytes": 425793,
+        "range": "bytes=437918764-438344556",
+        "sha256": "264361a6ff78b819f2a9af8ae2b5d897a63cf9e6458634780c1d31733516bf80"
+      }
+    ],
+    "resampling": "bilinear",
+    "source": "https://data.caltech.edu/api/records/stqse-yay61/files/cenjez_DRG_0_3m.tif/content",
+    "sourcePublishedMd5": "cb546a61f83426c56a5576523423f9fa",
+    "sourceRasterSize": [
+      63261,
+      81340
+    ],
+    "sourceResolution": [
+      0.29995473187602484,
+      0.29995473187602484
+    ],
+    "sourceWindow": [
+      15479.419445888949,
+      26330.214404245045,
+      3333.8363883964757,
+      3333.836388396474
+    ],
+    "transferBytesThisAcquisition": 6494788,
+    "wholeSourceChecksumVerified": false
+  },
+  "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024), DOI 10.22002/stqse-yay61, CC BY 4.0",
+  "processing": {
+    "display": "Bilinear source sampling to exact 0.5 m pixels; 1\u201399 percentile grayscale stretch; WebP quality95",
+    "imageSha256": "5b8a19f5a976b196b8177a77d0c52917e44a87d7f26f92fafa4d53b0c7609f06",
+    "imageByteLength": 1685546
+  },
+  "limitations": "This display samples native ~0.3 m imagery at 0.5 m. Pixel spacing is not positional accuracy. Observation date and optical/DEM registration error are unknown. No automatic boulder confirmation or subpixel reconstruction."
+}

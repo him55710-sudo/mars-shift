@@ -1,0 +1,6527 @@
+{
+  "schemaVersion": 1,
+  "region": "floor",
+  "method": "frozen supervised multiscale pixel classifier candidates",
+  "config": {
+    "version": "boulder-pixel-hgb-v2-candidates",
+    "modelSha256": "198944090a23706da214406d6c53e7cb8317f8740ee9def10a21dfc904f1f860",
+    "threshold": 0.25,
+    "min_area_m2": 0.75,
+    "max_area_m2": 50.0,
+    "max_bbox_length_m": 16.0,
+    "max_aspect_ratio": 4.0,
+    "min_fill_ratio": 0.12,
+    "candidate_buffer_m": 1.0,
+    "min_separation_m": 4.0,
+    "maximum_candidates": 150,
+    "filterProvenance": "All geometry constants inherited unchanged from baseline configuration frozen before the first held-out evaluation.",
+    "ranking": "Descending mean uncalibrated response; larger area then pixel row/column break ties."
+  },
+  "configSha256": "47e5395d7c7768dfb5deaf9663c50b6f11daeaf4fd9ae82c1b9cec0f0746417a",
+  "sourceImage": "/data/optical-native.webp",
+  "sourceMetadata": "/data/optical-native-meta.json",
+  "sourceCropSha256": "a56bba1d5ba212ff31b4dbea7b23efd41a555c0fe181e0d02506c1c1d4a3b6a1",
+  "bounds": [
+    4364626.037914526,
+    1093118.6170900527,
+    4365626.037914526,
+    1094118.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "pixelResolutionMetres": 0.5,
+  "nativeOpticalResolutionMetres": [
+    0.29995473187602484,
+    0.29995473187602484
+  ],
+  "planningGridMetres": 5,
+  "model": {
+    "name": "boulder-pixel-hgb-v2",
+    "url": "/data/optical-model-v2.json",
+    "sha256": "198944090a23706da214406d6c53e7cb8317f8740ee9def10a21dfc904f1f860"
+  },
+  "predictionMask": "/data/optical-v2-mask.png",
+  "predictionMetadata": "/data/optical-v2-meta.json",
+  "scoreDefinition": "Mean uncalibrated classifier response within a predicted component; probability-like model output, not confidence, local precision, or safety probability.",
+  "status": "unreviewed optical candidates",
+  "routingPolicy": "No candidate is automatically excluded; a user must review and explicitly accept/edit an exclusion buffer",
+  "validation": {
+    "independentAccuracyEstablished": false,
+    "localAccuracyMeasured": false,
+    "visualAuditIsNotGroundTruth": true,
+    "candidateMaskIsNotBoulderSegmentation": false,
+    "benchmarkUrl": "/data/optical-benchmark-v2.json",
+    "heldOutBenchmark": "Exploratory V2 semantic-mask evaluation of original Mars-Bench test4, after baseline test inspection; not a fresh independent test.",
+    "candidateGeometryEvaluatedByBenchmark": false
+  },
+  "statistics": {
+    "rawComponents": 4991,
+    "eligibleComponents": 3157,
+    "selected": 150,
+    "truncatedOrSuppressed": 3007,
+    "configSha256": "47e5395d7c7768dfb5deaf9663c50b6f11daeaf4fd9ae82c1b9cec0f0746417a",
+    "validFraction": 1.0,
+    "positivePixels": 83157,
+    "pixels": 4000000,
+    "positiveAreaM2": 20789.25
+  },
+  "candidates": [
+    {
+      "id": "floor-optical-v2-001",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 187.62797,
+        "y": 115.63814
+      },
+      "projectedPosition": {
+        "easting": 4365566.677764526,
+        "northing": 1093537.9263900528
+      },
+      "pixelCenter": [
+        1880.7797,
+        1160.8814
+      ],
+      "pixelBBox": [
+        1877,
+        1157,
+        9,
+        9
+      ],
+      "radiusMeters": 4.182,
+      "score": 0.615459,
+      "evidence": {
+        "componentPixels": 59,
+        "predictedAreaM2": 14.75,
+        "meanModelResponse": 0.615459,
+        "peakModelResponse": 0.897754,
+        "bboxFillRatio": 0.728395,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 11.75,
+        "localReliefMetres": 1.76,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-002",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 100.62727,
+        "y": 179.11818
+      },
+      "projectedPosition": {
+        "easting": 4365131.674264526,
+        "northing": 1093220.5261900527
+      },
+      "pixelCenter": [
+        1010.7727,
+        1795.6818
+      ],
+      "pixelBBox": [
+        1006,
+        1791,
+        10,
+        10
+      ],
+      "radiusMeters": 4.536,
+      "score": 0.571012,
+      "evidence": {
+        "componentPixels": 66,
+        "predictedAreaM2": 16.5,
+        "meanModelResponse": 0.571012,
+        "peakModelResponse": 0.861155,
+        "bboxFillRatio": 0.66,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.33,
+        "localReliefMetres": 0.74,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-003",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 53.53793,
+        "y": 5.90345
+      },
+      "projectedPosition": {
+        "easting": 4364896.227564526,
+        "northing": 1094086.5998400527
+      },
+      "pixelCenter": [
+        539.8793,
+        63.5345
+      ],
+      "pixelBBox": [
+        535,
+        60,
+        10,
+        9
+      ],
+      "radiusMeters": 4.363,
+      "score": 0.567622,
+      "evidence": {
+        "componentPixels": 58,
+        "predictedAreaM2": 14.5,
+        "meanModelResponse": 0.567622,
+        "peakModelResponse": 0.861569,
+        "bboxFillRatio": 0.644444,
+        "bboxAspectRatio": 1.111111,
+        "maximumCellSlopeDegrees": 9.03,
+        "localReliefMetres": 1.0,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-004",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 31.365,
+        "y": 184.9325
+      },
+      "projectedPosition": {
+        "easting": 4364785.362914526,
+        "northing": 1093191.4545900526
+      },
+      "pixelCenter": [
+        318.15,
+        1853.825
+      ],
+      "pixelBBox": [
+        315,
+        1851,
+        7,
+        7
+      ],
+      "radiusMeters": 3.475,
+      "score": 0.567483,
+      "evidence": {
+        "componentPixels": 40,
+        "predictedAreaM2": 10.0,
+        "meanModelResponse": 0.567483,
+        "peakModelResponse": 0.868003,
+        "bboxFillRatio": 0.816327,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 11.01,
+        "localReliefMetres": 2.28,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-005",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 134.95833,
+        "y": 191.91111
+      },
+      "projectedPosition": {
+        "easting": 4365303.329564526,
+        "northing": 1093156.5615400528
+      },
+      "pixelCenter": [
+        1354.0833,
+        1923.6111
+      ],
+      "pixelBBox": [
+        1351,
+        1921,
+        7,
+        7
+      ],
+      "radiusMeters": 3.475,
+      "score": 0.564374,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.564374,
+        "peakModelResponse": 0.8756,
+        "bboxFillRatio": 0.734694,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.46,
+        "localReliefMetres": 1.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-006",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 19.175,
+        "y": 190.09318
+      },
+      "projectedPosition": {
+        "easting": 4364724.412914526,
+        "northing": 1093165.6511900527
+      },
+      "pixelCenter": [
+        196.25,
+        1905.4318
+      ],
+      "pixelBBox": [
+        193,
+        1901,
+        7,
+        9
+      ],
+      "radiusMeters": 3.85,
+      "score": 0.561243,
+      "evidence": {
+        "componentPixels": 44,
+        "predictedAreaM2": 11.0,
+        "meanModelResponse": 0.561243,
+        "peakModelResponse": 0.912404,
+        "bboxFillRatio": 0.698413,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 9.07,
+        "localReliefMetres": 1.58,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-007",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 10.33493,
+        "y": 71.67603
+      },
+      "projectedPosition": {
+        "easting": 4364680.212564526,
+        "northing": 1093757.7369400526
+      },
+      "pixelCenter": [
+        107.8493,
+        721.2603
+      ],
+      "pixelBBox": [
+        104,
+        716,
+        9,
+        11
+      ],
+      "radiusMeters": 4.553,
+      "score": 0.560846,
+      "evidence": {
+        "componentPixels": 73,
+        "predictedAreaM2": 18.25,
+        "meanModelResponse": 0.560846,
+        "peakModelResponse": 0.844072,
+        "bboxFillRatio": 0.737374,
+        "bboxAspectRatio": 1.222222,
+        "maximumCellSlopeDegrees": 14.3,
+        "localReliefMetres": 2.11,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-008",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 120.16556,
+        "y": 195.00111
+      },
+      "projectedPosition": {
+        "easting": 4365229.365714526,
+        "northing": 1093141.1115400528
+      },
+      "pixelCenter": [
+        1206.1556,
+        1954.5111
+      ],
+      "pixelBBox": [
+        1204,
+        1950,
+        6,
+        10
+      ],
+      "radiusMeters": 3.915,
+      "score": 0.554892,
+      "evidence": {
+        "componentPixels": 45,
+        "predictedAreaM2": 11.25,
+        "meanModelResponse": 0.554892,
+        "peakModelResponse": 0.847581,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 8.57,
+        "localReliefMetres": 1.31,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-009",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 119.76719,
+        "y": 125.85156
+      },
+      "projectedPosition": {
+        "easting": 4365227.373864526,
+        "northing": 1093486.8592900527
+      },
+      "pixelCenter": [
+        1202.1719,
+        1263.0156
+      ],
+      "pixelBBox": [
+        1198,
+        1258,
+        9,
+        11
+      ],
+      "radiusMeters": 4.553,
+      "score": 0.551528,
+      "evidence": {
+        "componentPixels": 64,
+        "predictedAreaM2": 16.0,
+        "meanModelResponse": 0.551528,
+        "peakModelResponse": 0.871858,
+        "bboxFillRatio": 0.646465,
+        "bboxAspectRatio": 1.222222,
+        "maximumCellSlopeDegrees": 7.87,
+        "localReliefMetres": 1.45,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-010",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 70.90417,
+        "y": 21.75417
+      },
+      "projectedPosition": {
+        "easting": 4364983.058764526,
+        "northing": 1094007.3462400527
+      },
+      "pixelCenter": [
+        713.5417,
+        222.0417
+      ],
+      "pixelBBox": [
+        711,
+        220,
+        6,
+        5
+      ],
+      "radiusMeters": 2.953,
+      "score": 0.547819,
+      "evidence": {
+        "componentPixels": 24,
+        "predictedAreaM2": 6.0,
+        "meanModelResponse": 0.547819,
+        "peakModelResponse": 0.818269,
+        "bboxFillRatio": 0.8,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 6.28,
+        "localReliefMetres": 0.78,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-011",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 9.58469,
+        "y": 21.65612
+      },
+      "projectedPosition": {
+        "easting": 4364676.461364525,
+        "northing": 1094007.8364900528
+      },
+      "pixelCenter": [
+        100.3469,
+        221.0612
+      ],
+      "pixelBBox": [
+        97,
+        216,
+        8,
+        10
+      ],
+      "radiusMeters": 4.202,
+      "score": 0.546774,
+      "evidence": {
+        "componentPixels": 49,
+        "predictedAreaM2": 12.25,
+        "meanModelResponse": 0.546774,
+        "peakModelResponse": 0.883338,
+        "bboxFillRatio": 0.6125,
+        "bboxAspectRatio": 1.25,
+        "maximumCellSlopeDegrees": 5.17,
+        "localReliefMetres": 0.82,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-012",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 166.25,
+        "y": 80.67917
+      },
+      "projectedPosition": {
+        "easting": 4365459.787914526,
+        "northing": 1093712.7212400527
+      },
+      "pixelCenter": [
+        1667.0,
+        811.2917
+      ],
+      "pixelBBox": [
+        1664,
+        807,
+        8,
+        9
+      ],
+      "radiusMeters": 4.01,
+      "score": 0.546159,
+      "evidence": {
+        "componentPixels": 48,
+        "predictedAreaM2": 12.0,
+        "meanModelResponse": 0.546159,
+        "peakModelResponse": 0.887523,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.125,
+        "maximumCellSlopeDegrees": 4.7,
+        "localReliefMetres": 0.67,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-013",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 57.19423,
+        "y": 84.94038
+      },
+      "projectedPosition": {
+        "easting": 4364914.509064525,
+        "northing": 1093691.4151900527
+      },
+      "pixelCenter": [
+        576.4423,
+        853.9038
+      ],
+      "pixelBBox": [
+        574,
+        849,
+        7,
+        10
+      ],
+      "radiusMeters": 4.052,
+      "score": 0.543436,
+      "evidence": {
+        "componentPixels": 52,
+        "predictedAreaM2": 13.0,
+        "meanModelResponse": 0.543436,
+        "peakModelResponse": 0.840879,
+        "bboxFillRatio": 0.742857,
+        "bboxAspectRatio": 1.428571,
+        "maximumCellSlopeDegrees": 5.62,
+        "localReliefMetres": 0.71,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-014",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 187.87128,
+        "y": 109.5266
+      },
+      "projectedPosition": {
+        "easting": 4365567.894314526,
+        "northing": 1093568.4840900528
+      },
+      "pixelCenter": [
+        1883.2128,
+        1099.766
+      ],
+      "pixelBBox": [
+        1880,
+        1097,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.54177,
+      "evidence": {
+        "componentPixels": 47,
+        "predictedAreaM2": 11.75,
+        "meanModelResponse": 0.54177,
+        "peakModelResponse": 0.773723,
+        "bboxFillRatio": 0.839286,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 1.43,
+        "localReliefMetres": 0.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-015",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 59.34583,
+        "y": 150.67917
+      },
+      "projectedPosition": {
+        "easting": 4364925.267064526,
+        "northing": 1093362.7212400527
+      },
+      "pixelCenter": [
+        597.9583,
+        1511.2917
+      ],
+      "pixelBBox": [
+        596,
+        1506,
+        5,
+        11
+      ],
+      "radiusMeters": 4.021,
+      "score": 0.539531,
+      "evidence": {
+        "componentPixels": 48,
+        "predictedAreaM2": 12.0,
+        "meanModelResponse": 0.539531,
+        "peakModelResponse": 0.81288,
+        "bboxFillRatio": 0.872727,
+        "bboxAspectRatio": 2.2,
+        "maximumCellSlopeDegrees": 3.25,
+        "localReliefMetres": 0.49,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-016",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 123.40147,
+        "y": 92.05588
+      },
+      "projectedPosition": {
+        "easting": 4365245.545264525,
+        "northing": 1093655.8376900526
+      },
+      "pixelCenter": [
+        1238.5147,
+        925.0588
+      ],
+      "pixelBBox": [
+        1234,
+        920,
+        10,
+        11
+      ],
+      "radiusMeters": 4.717,
+      "score": 0.537988,
+      "evidence": {
+        "componentPixels": 68,
+        "predictedAreaM2": 17.0,
+        "meanModelResponse": 0.537988,
+        "peakModelResponse": 0.825632,
+        "bboxFillRatio": 0.618182,
+        "bboxAspectRatio": 1.1,
+        "maximumCellSlopeDegrees": 7.73,
+        "localReliefMetres": 0.57,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-017",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 55.53,
+        "y": 11.74818
+      },
+      "projectedPosition": {
+        "easting": 4364906.187914526,
+        "northing": 1094057.3761900526
+      },
+      "pixelCenter": [
+        559.8,
+        121.9818
+      ],
+      "pixelBBox": [
+        556,
+        117,
+        10,
+        12
+      ],
+      "radiusMeters": 4.905,
+      "score": 0.533923,
+      "evidence": {
+        "componentPixels": 55,
+        "predictedAreaM2": 13.75,
+        "meanModelResponse": 0.533923,
+        "peakModelResponse": 0.883121,
+        "bboxFillRatio": 0.458333,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 10.76,
+        "localReliefMetres": 2.23,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-018",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 106.18125,
+        "y": 81.96375
+      },
+      "projectedPosition": {
+        "easting": 4365159.444164526,
+        "northing": 1093706.2983400526
+      },
+      "pixelCenter": [
+        1066.3125,
+        824.1375
+      ],
+      "pixelBBox": [
+        1062,
+        817,
+        10,
+        15
+      ],
+      "radiusMeters": 5.507,
+      "score": 0.533817,
+      "evidence": {
+        "componentPixels": 80,
+        "predictedAreaM2": 20.0,
+        "meanModelResponse": 0.533817,
+        "peakModelResponse": 0.83482,
+        "bboxFillRatio": 0.533333,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 4.85,
+        "localReliefMetres": 0.63,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-019",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 166.23095,
+        "y": 147.85238
+      },
+      "projectedPosition": {
+        "easting": 4365459.6926645255,
+        "northing": 1093376.8551900527
+      },
+      "pixelCenter": [
+        1666.8095,
+        1483.0238
+      ],
+      "pixelBBox": [
+        1664,
+        1479,
+        7,
+        9
+      ],
+      "radiusMeters": 3.85,
+      "score": 0.532654,
+      "evidence": {
+        "componentPixels": 42,
+        "predictedAreaM2": 10.5,
+        "meanModelResponse": 0.532654,
+        "peakModelResponse": 0.832523,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 3.85,
+        "localReliefMetres": 0.61,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-020",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 34.15769,
+        "y": 135.03291
+      },
+      "projectedPosition": {
+        "easting": 4364799.326364526,
+        "northing": 1093440.9525400526
+      },
+      "pixelCenter": [
+        346.0769,
+        1354.8291
+      ],
+      "pixelBBox": [
+        339,
+        1350,
+        16,
+        12
+      ],
+      "radiusMeters": 6.0,
+      "score": 0.531204,
+      "evidence": {
+        "componentPixels": 117,
+        "predictedAreaM2": 29.25,
+        "meanModelResponse": 0.531204,
+        "peakModelResponse": 0.894852,
+        "bboxFillRatio": 0.609375,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 12.32,
+        "localReliefMetres": 1.42,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-021",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 9.348,
+        "y": 72.67
+      },
+      "projectedPosition": {
+        "easting": 4364675.277914526,
+        "northing": 1093752.7670900526
+      },
+      "pixelCenter": [
+        97.98,
+        731.2
+      ],
+      "pixelBBox": [
+        95,
+        727,
+        7,
+        10
+      ],
+      "radiusMeters": 4.052,
+      "score": 0.530218,
+      "evidence": {
+        "componentPixels": 50,
+        "predictedAreaM2": 12.5,
+        "meanModelResponse": 0.530218,
+        "peakModelResponse": 0.83789,
+        "bboxFillRatio": 0.714286,
+        "bboxAspectRatio": 1.428571,
+        "maximumCellSlopeDegrees": 17.77,
+        "localReliefMetres": 2.73,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-022",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 172.89359,
+        "y": 42.44487
+      },
+      "projectedPosition": {
+        "easting": 4365493.005864526,
+        "northing": 1093903.8927400527
+      },
+      "pixelCenter": [
+        1733.4359,
+        428.9487
+      ],
+      "pixelBBox": [
+        1730,
+        426,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.529521,
+      "evidence": {
+        "componentPixels": 39,
+        "predictedAreaM2": 9.75,
+        "meanModelResponse": 0.529521,
+        "peakModelResponse": 0.844485,
+        "bboxFillRatio": 0.696429,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 15.67,
+        "localReliefMetres": 2.31,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-023",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 60.31667,
+        "y": 53.58667
+      },
+      "projectedPosition": {
+        "easting": 4364930.121264526,
+        "northing": 1093848.1837400526
+      },
+      "pixelCenter": [
+        607.6667,
+        540.3667
+      ],
+      "pixelBBox": [
+        605,
+        537,
+        6,
+        7
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.529317,
+      "evidence": {
+        "componentPixels": 30,
+        "predictedAreaM2": 7.5,
+        "meanModelResponse": 0.529317,
+        "peakModelResponse": 0.718606,
+        "bboxFillRatio": 0.714286,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 2.01,
+        "localReliefMetres": 0.4,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-024",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 112.12802,
+        "y": 139.2522
+      },
+      "projectedPosition": {
+        "easting": 4365189.178014526,
+        "northing": 1093419.8560900528
+      },
+      "pixelCenter": [
+        1125.7802,
+        1397.022
+      ],
+      "pixelBBox": [
+        1121,
+        1392,
+        11,
+        12
+      ],
+      "radiusMeters": 5.07,
+      "score": 0.529301,
+      "evidence": {
+        "componentPixels": 91,
+        "predictedAreaM2": 22.75,
+        "meanModelResponse": 0.529301,
+        "peakModelResponse": 0.893257,
+        "bboxFillRatio": 0.689394,
+        "bboxAspectRatio": 1.090909,
+        "maximumCellSlopeDegrees": 7.75,
+        "localReliefMetres": 1.12,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-025",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 111.07273,
+        "y": 121.87273
+      },
+      "projectedPosition": {
+        "easting": 4365183.901564525,
+        "northing": 1093506.7534400527
+      },
+      "pixelCenter": [
+        1115.2273,
+        1223.2273
+      ],
+      "pixelBBox": [
+        1112,
+        1220,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.529059,
+      "evidence": {
+        "componentPixels": 44,
+        "predictedAreaM2": 11.0,
+        "meanModelResponse": 0.529059,
+        "peakModelResponse": 0.862035,
+        "bboxFillRatio": 0.785714,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 6.77,
+        "localReliefMetres": 1.0,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-026",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 115.35213,
+        "y": 78.45638
+      },
+      "projectedPosition": {
+        "easting": 4365205.298564525,
+        "northing": 1093723.8351900526
+      },
+      "pixelCenter": [
+        1158.0213,
+        789.0638
+      ],
+      "pixelBBox": [
+        1155,
+        785,
+        7,
+        9
+      ],
+      "radiusMeters": 3.85,
+      "score": 0.52627,
+      "evidence": {
+        "componentPixels": 47,
+        "predictedAreaM2": 11.75,
+        "meanModelResponse": 0.52627,
+        "peakModelResponse": 0.780561,
+        "bboxFillRatio": 0.746032,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 2.18,
+        "localReliefMetres": 0.29,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-027",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 92.83182,
+        "y": 49.12091
+      },
+      "projectedPosition": {
+        "easting": 4365092.6970145255,
+        "northing": 1093870.5125400526
+      },
+      "pixelCenter": [
+        932.8182,
+        495.7091
+      ],
+      "pixelBBox": [
+        930,
+        490,
+        7,
+        11
+      ],
+      "radiusMeters": 4.26,
+      "score": 0.526212,
+      "evidence": {
+        "componentPixels": 55,
+        "predictedAreaM2": 13.75,
+        "meanModelResponse": 0.526212,
+        "peakModelResponse": 0.804588,
+        "bboxFillRatio": 0.714286,
+        "bboxAspectRatio": 1.571429,
+        "maximumCellSlopeDegrees": 7.9,
+        "localReliefMetres": 1.03,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-028",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 95.7575,
+        "y": 3.945
+      },
+      "projectedPosition": {
+        "easting": 4365107.325414525,
+        "northing": 1094096.3920900526
+      },
+      "pixelCenter": [
+        962.075,
+        43.95
+      ],
+      "pixelBBox": [
+        959,
+        41,
+        7,
+        7
+      ],
+      "radiusMeters": 3.475,
+      "score": 0.524788,
+      "evidence": {
+        "componentPixels": 40,
+        "predictedAreaM2": 10.0,
+        "meanModelResponse": 0.524788,
+        "peakModelResponse": 0.793305,
+        "bboxFillRatio": 0.816327,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.31,
+        "localReliefMetres": 0.66,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-029",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 103.12708,
+        "y": 83.64792
+      },
+      "projectedPosition": {
+        "easting": 4365144.173314526,
+        "northing": 1093697.8774900527
+      },
+      "pixelCenter": [
+        1035.7708,
+        840.9792
+      ],
+      "pixelBBox": [
+        1033,
+        837,
+        7,
+        9
+      ],
+      "radiusMeters": 3.85,
+      "score": 0.524258,
+      "evidence": {
+        "componentPixels": 48,
+        "predictedAreaM2": 12.0,
+        "meanModelResponse": 0.524258,
+        "peakModelResponse": 0.842478,
+        "bboxFillRatio": 0.761905,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 3.69,
+        "localReliefMetres": 0.49,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-030",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 177.16905,
+        "y": 104.51905
+      },
+      "projectedPosition": {
+        "easting": 4365514.383164526,
+        "northing": 1093593.5218400527
+      },
+      "pixelCenter": [
+        1776.1905,
+        1049.6905
+      ],
+      "pixelBBox": [
+        1774,
+        1045,
+        6,
+        10
+      ],
+      "radiusMeters": 3.915,
+      "score": 0.523888,
+      "evidence": {
+        "componentPixels": 42,
+        "predictedAreaM2": 10.5,
+        "meanModelResponse": 0.523888,
+        "peakModelResponse": 0.879707,
+        "bboxFillRatio": 0.7,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 5.11,
+        "localReliefMetres": 0.93,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-031",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 131.13444,
+        "y": 133.39667
+      },
+      "projectedPosition": {
+        "easting": 4365284.210114526,
+        "northing": 1093449.1337400526
+      },
+      "pixelCenter": [
+        1315.8444,
+        1338.4667
+      ],
+      "pixelBBox": [
+        1312,
+        1335,
+        8,
+        8
+      ],
+      "radiusMeters": 3.828,
+      "score": 0.522421,
+      "evidence": {
+        "componentPixels": 45,
+        "predictedAreaM2": 11.25,
+        "meanModelResponse": 0.522421,
+        "peakModelResponse": 0.800732,
+        "bboxFillRatio": 0.703125,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 10.72,
+        "localReliefMetres": 1.81,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-032",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 111.18043,
+        "y": 44.3529
+      },
+      "projectedPosition": {
+        "easting": 4365184.440064526,
+        "northing": 1093894.3525900526
+      },
+      "pixelCenter": [
+        1116.3043,
+        448.029
+      ],
+      "pixelBBox": [
+        1111,
+        442,
+        12,
+        12
+      ],
+      "radiusMeters": 5.243,
+      "score": 0.521354,
+      "evidence": {
+        "componentPixels": 69,
+        "predictedAreaM2": 17.25,
+        "meanModelResponse": 0.521354,
+        "peakModelResponse": 0.825324,
+        "bboxFillRatio": 0.479167,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.74,
+        "localReliefMetres": 1.16,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-033",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 55.95392,
+        "y": 8.98529
+      },
+      "projectedPosition": {
+        "easting": 4364908.307514526,
+        "northing": 1094071.1906400528
+      },
+      "pixelCenter": [
+        564.0392,
+        94.3529
+      ],
+      "pixelBBox": [
+        557,
+        88,
+        18,
+        13
+      ],
+      "radiusMeters": 6.551,
+      "score": 0.521226,
+      "evidence": {
+        "componentPixels": 102,
+        "predictedAreaM2": 25.5,
+        "meanModelResponse": 0.521226,
+        "peakModelResponse": 0.876939,
+        "bboxFillRatio": 0.435897,
+        "bboxAspectRatio": 1.384615,
+        "maximumCellSlopeDegrees": 13.52,
+        "localReliefMetres": 2.14,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-034",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 8.49,
+        "y": 128.41
+      },
+      "projectedPosition": {
+        "easting": 4364670.987914526,
+        "northing": 1093474.0670900526
+      },
+      "pixelCenter": [
+        89.4,
+        1288.6
+      ],
+      "pixelBBox": [
+        86,
+        1285,
+        8,
+        8
+      ],
+      "radiusMeters": 3.828,
+      "score": 0.52039,
+      "evidence": {
+        "componentPixels": 45,
+        "predictedAreaM2": 11.25,
+        "meanModelResponse": 0.52039,
+        "peakModelResponse": 0.885343,
+        "bboxFillRatio": 0.703125,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.34,
+        "localReliefMetres": 0.74,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-035",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 95.12222,
+        "y": 84.32778
+      },
+      "projectedPosition": {
+        "easting": 4365104.149014526,
+        "northing": 1093694.4781900528
+      },
+      "pixelCenter": [
+        955.7222,
+        847.7778
+      ],
+      "pixelBBox": [
+        953,
+        845,
+        7,
+        7
+      ],
+      "radiusMeters": 3.475,
+      "score": 0.519844,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.519844,
+        "peakModelResponse": 0.828739,
+        "bboxFillRatio": 0.734694,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 10.73,
+        "localReliefMetres": 2.1,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-036",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 186.51286,
+        "y": 88.31857
+      },
+      "projectedPosition": {
+        "easting": 4365561.102214525,
+        "northing": 1093674.5242400528
+      },
+      "pixelCenter": [
+        1869.6286,
+        887.6857
+      ],
+      "pixelBBox": [
+        1866,
+        885,
+        8,
+        6
+      ],
+      "radiusMeters": 3.5,
+      "score": 0.519612,
+      "evidence": {
+        "componentPixels": 35,
+        "predictedAreaM2": 8.75,
+        "meanModelResponse": 0.519612,
+        "peakModelResponse": 0.767789,
+        "bboxFillRatio": 0.729167,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 5.08,
+        "localReliefMetres": 0.76,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-037",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 18.22975,
+        "y": 148.98671
+      },
+      "projectedPosition": {
+        "easting": 4364719.686664525,
+        "northing": 1093371.1835400527
+      },
+      "pixelCenter": [
+        186.7975,
+        1494.3671
+      ],
+      "pixelBBox": [
+        183,
+        1487,
+        9,
+        15
+      ],
+      "radiusMeters": 5.373,
+      "score": 0.519308,
+      "evidence": {
+        "componentPixels": 79,
+        "predictedAreaM2": 19.75,
+        "meanModelResponse": 0.519308,
+        "peakModelResponse": 0.814425,
+        "bboxFillRatio": 0.585185,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 4.6,
+        "localReliefMetres": 0.68,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-038",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 173.68077,
+        "y": 142.37308
+      },
+      "projectedPosition": {
+        "easting": 4365496.941764526,
+        "northing": 1093404.2516900527
+      },
+      "pixelCenter": [
+        1741.3077,
+        1428.2308
+      ],
+      "pixelBBox": [
+        1739,
+        1426,
+        6,
+        6
+      ],
+      "radiusMeters": 3.121,
+      "score": 0.517671,
+      "evidence": {
+        "componentPixels": 26,
+        "predictedAreaM2": 6.5,
+        "meanModelResponse": 0.517671,
+        "peakModelResponse": 0.748315,
+        "bboxFillRatio": 0.722222,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.49,
+        "localReliefMetres": 0.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-039",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 196.32123,
+        "y": 27.80068
+      },
+      "projectedPosition": {
+        "easting": 4365610.144064526,
+        "northing": 1093977.1136900526
+      },
+      "pixelCenter": [
+        1967.7123,
+        282.5068
+      ],
+      "pixelBBox": [
+        1963,
+        275,
+        11,
+        13
+      ],
+      "radiusMeters": 5.257,
+      "score": 0.517511,
+      "evidence": {
+        "componentPixels": 73,
+        "predictedAreaM2": 18.25,
+        "meanModelResponse": 0.517511,
+        "peakModelResponse": 0.887754,
+        "bboxFillRatio": 0.51049,
+        "bboxAspectRatio": 1.181818,
+        "maximumCellSlopeDegrees": 9.1,
+        "localReliefMetres": 1.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-040",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 189.24259,
+        "y": 117.50926
+      },
+      "projectedPosition": {
+        "easting": 4365574.750864525,
+        "northing": 1093528.5707900526
+      },
+      "pixelCenter": [
+        1896.9259,
+        1179.5926
+      ],
+      "pixelBBox": [
+        1895,
+        1177,
+        5,
+        6
+      ],
+      "radiusMeters": 2.953,
+      "score": 0.516214,
+      "evidence": {
+        "componentPixels": 27,
+        "predictedAreaM2": 6.75,
+        "meanModelResponse": 0.516214,
+        "peakModelResponse": 0.802567,
+        "bboxFillRatio": 0.9,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 9.02,
+        "localReliefMetres": 2.07,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-041",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 131.70893,
+        "y": 60.925
+      },
+      "projectedPosition": {
+        "easting": 4365287.082564525,
+        "northing": 1093811.4920900527
+      },
+      "pixelCenter": [
+        1321.5893,
+        613.75
+      ],
+      "pixelBBox": [
+        1318,
+        609,
+        8,
+        11
+      ],
+      "radiusMeters": 4.4,
+      "score": 0.516054,
+      "evidence": {
+        "componentPixels": 56,
+        "predictedAreaM2": 14.0,
+        "meanModelResponse": 0.516054,
+        "peakModelResponse": 0.762807,
+        "bboxFillRatio": 0.636364,
+        "bboxAspectRatio": 1.375,
+        "maximumCellSlopeDegrees": 8.3,
+        "localReliefMetres": 1.17,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-042",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 145.18077,
+        "y": 199.35769
+      },
+      "projectedPosition": {
+        "easting": 4365354.441764526,
+        "northing": 1093119.3286400526
+      },
+      "pixelCenter": [
+        1456.3077,
+        1998.0769
+      ],
+      "pixelBBox": [
+        1454,
+        1997,
+        5,
+        3
+      ],
+      "radiusMeters": 2.458,
+      "score": 0.515387,
+      "evidence": {
+        "componentPixels": 13,
+        "predictedAreaM2": 3.25,
+        "meanModelResponse": 0.515387,
+        "peakModelResponse": 0.721038,
+        "bboxFillRatio": 0.866667,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 2.35,
+        "localReliefMetres": 0.34,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-043",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 51.40714,
+        "y": 158.17143
+      },
+      "projectedPosition": {
+        "easting": 4364885.573614526,
+        "northing": 1093325.2599400526
+      },
+      "pixelCenter": [
+        518.5714,
+        1586.2143
+      ],
+      "pixelBBox": [
+        515,
+        1583,
+        8,
+        8
+      ],
+      "radiusMeters": 3.828,
+      "score": 0.51515,
+      "evidence": {
+        "componentPixels": 42,
+        "predictedAreaM2": 10.5,
+        "meanModelResponse": 0.51515,
+        "peakModelResponse": 0.805882,
+        "bboxFillRatio": 0.65625,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.89,
+        "localReliefMetres": 1.06,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-044",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 21.62059,
+        "y": 188.36765
+      },
+      "projectedPosition": {
+        "easting": 4364736.640864526,
+        "northing": 1093174.2788400527
+      },
+      "pixelCenter": [
+        220.7059,
+        1888.1765
+      ],
+      "pixelBBox": [
+        216,
+        1885,
+        9,
+        7
+      ],
+      "radiusMeters": 3.85,
+      "score": 0.51465,
+      "evidence": {
+        "componentPixels": 34,
+        "predictedAreaM2": 8.5,
+        "meanModelResponse": 0.51465,
+        "peakModelResponse": 0.898078,
+        "bboxFillRatio": 0.539683,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 4.53,
+        "localReliefMetres": 0.55,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-045",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 110.33553,
+        "y": 102.45921
+      },
+      "projectedPosition": {
+        "easting": 4365180.215564526,
+        "northing": 1093603.8210400527
+      },
+      "pixelCenter": [
+        1107.8553,
+        1029.0921
+      ],
+      "pixelBBox": [
+        1102,
+        1025,
+        12,
+        10
+      ],
+      "radiusMeters": 4.905,
+      "score": 0.514603,
+      "evidence": {
+        "componentPixels": 76,
+        "predictedAreaM2": 19.0,
+        "meanModelResponse": 0.514603,
+        "peakModelResponse": 0.817459,
+        "bboxFillRatio": 0.633333,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 12.02,
+        "localReliefMetres": 1.28,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-046",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 96.48985,
+        "y": 102.13271
+      },
+      "projectedPosition": {
+        "easting": 4365110.987164525,
+        "northing": 1093605.4535400528
+      },
+      "pixelCenter": [
+        969.3985,
+        1025.8271
+      ],
+      "pixelBBox": [
+        964,
+        1019,
+        13,
+        16
+      ],
+      "radiusMeters": 6.154,
+      "score": 0.514278,
+      "evidence": {
+        "componentPixels": 133,
+        "predictedAreaM2": 33.25,
+        "meanModelResponse": 0.514278,
+        "peakModelResponse": 0.890076,
+        "bboxFillRatio": 0.639423,
+        "bboxAspectRatio": 1.230769,
+        "maximumCellSlopeDegrees": 13.19,
+        "localReliefMetres": 1.83,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-047",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 95.49,
+        "y": 188.72333
+      },
+      "projectedPosition": {
+        "easting": 4365105.987914526,
+        "northing": 1093172.5004400527
+      },
+      "pixelCenter": [
+        959.4,
+        1891.7333
+      ],
+      "pixelBBox": [
+        957,
+        1890,
+        5,
+        5
+      ],
+      "radiusMeters": 2.768,
+      "score": 0.513408,
+      "evidence": {
+        "componentPixels": 15,
+        "predictedAreaM2": 3.75,
+        "meanModelResponse": 0.513408,
+        "peakModelResponse": 0.774002,
+        "bboxFillRatio": 0.6,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.79,
+        "localReliefMetres": 0.99,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-048",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 92.112,
+        "y": 99.458
+      },
+      "projectedPosition": {
+        "easting": 4365089.097914525,
+        "northing": 1093618.8270900527
+      },
+      "pixelCenter": [
+        925.62,
+        999.08
+      ],
+      "pixelBBox": [
+        922,
+        994,
+        8,
+        11
+      ],
+      "radiusMeters": 4.4,
+      "score": 0.512989,
+      "evidence": {
+        "componentPixels": 50,
+        "predictedAreaM2": 12.5,
+        "meanModelResponse": 0.512989,
+        "peakModelResponse": 0.801904,
+        "bboxFillRatio": 0.568182,
+        "bboxAspectRatio": 1.375,
+        "maximumCellSlopeDegrees": 11.19,
+        "localReliefMetres": 1.68,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-049",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 14.86786,
+        "y": 65.24286
+      },
+      "projectedPosition": {
+        "easting": 4364702.877214526,
+        "northing": 1093789.9027900526
+      },
+      "pixelCenter": [
+        153.1786,
+        656.9286
+      ],
+      "pixelBBox": [
+        151,
+        654,
+        5,
+        7
+      ],
+      "radiusMeters": 3.151,
+      "score": 0.512981,
+      "evidence": {
+        "componentPixels": 28,
+        "predictedAreaM2": 7.0,
+        "meanModelResponse": 0.512981,
+        "peakModelResponse": 0.764782,
+        "bboxFillRatio": 0.8,
+        "bboxAspectRatio": 1.4,
+        "maximumCellSlopeDegrees": 3.72,
+        "localReliefMetres": 0.57,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-050",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 191.62174,
+        "y": 91.91957
+      },
+      "projectedPosition": {
+        "easting": 4365586.6466145255,
+        "northing": 1093656.5192400527
+      },
+      "pixelCenter": [
+        1920.7174,
+        923.6957
+      ],
+      "pixelBBox": [
+        1918,
+        919,
+        7,
+        10
+      ],
+      "radiusMeters": 4.052,
+      "score": 0.512691,
+      "evidence": {
+        "componentPixels": 46,
+        "predictedAreaM2": 11.5,
+        "meanModelResponse": 0.512691,
+        "peakModelResponse": 0.871435,
+        "bboxFillRatio": 0.657143,
+        "bboxAspectRatio": 1.428571,
+        "maximumCellSlopeDegrees": 6.06,
+        "localReliefMetres": 0.84,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-051",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 158.83333,
+        "y": 88.775
+      },
+      "projectedPosition": {
+        "easting": 4365422.704564526,
+        "northing": 1093672.2420900527
+      },
+      "pixelCenter": [
+        1592.8333,
+        892.25
+      ],
+      "pixelBBox": [
+        1590,
+        889,
+        7,
+        8
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.512292,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.512292,
+        "peakModelResponse": 0.812022,
+        "bboxFillRatio": 0.642857,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 5.22,
+        "localReliefMetres": 0.65,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-052",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 66.63571,
+        "y": 33.59286
+      },
+      "projectedPosition": {
+        "easting": 4364961.716464526,
+        "northing": 1093948.1527900526
+      },
+      "pixelCenter": [
+        670.8571,
+        340.4286
+      ],
+      "pixelBBox": [
+        668,
+        336,
+        6,
+        10
+      ],
+      "radiusMeters": 3.915,
+      "score": 0.511642,
+      "evidence": {
+        "componentPixels": 42,
+        "predictedAreaM2": 10.5,
+        "meanModelResponse": 0.511642,
+        "peakModelResponse": 0.813244,
+        "bboxFillRatio": 0.7,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 6.01,
+        "localReliefMetres": 0.92,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-053",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 195.66389,
+        "y": 38.33056
+      },
+      "projectedPosition": {
+        "easting": 4365606.857364526,
+        "northing": 1093924.4642900527
+      },
+      "pixelCenter": [
+        1961.1389,
+        387.8056
+      ],
+      "pixelBBox": [
+        1957,
+        385,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.511367,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.511367,
+        "peakModelResponse": 0.820381,
+        "bboxFillRatio": 0.642857,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 3.81,
+        "localReliefMetres": 0.6,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-054",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 4.24444,
+        "y": 163.325
+      },
+      "projectedPosition": {
+        "easting": 4364649.760114525,
+        "northing": 1093299.4920900527
+      },
+      "pixelCenter": [
+        46.9444,
+        1637.75
+      ],
+      "pixelBBox": [
+        43,
+        1635,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.5111,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.5111,
+        "peakModelResponse": 0.746267,
+        "bboxFillRatio": 0.642857,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 4.22,
+        "localReliefMetres": 0.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-055",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 161.1,
+        "y": 41.83462
+      },
+      "projectedPosition": {
+        "easting": 4365434.037914526,
+        "northing": 1093906.9439900527
+      },
+      "pixelCenter": [
+        1615.5,
+        422.8462
+      ],
+      "pixelBBox": [
+        1613,
+        418,
+        6,
+        11
+      ],
+      "radiusMeters": 4.132,
+      "score": 0.51097,
+      "evidence": {
+        "componentPixels": 52,
+        "predictedAreaM2": 13.0,
+        "meanModelResponse": 0.51097,
+        "peakModelResponse": 0.824308,
+        "bboxFillRatio": 0.787879,
+        "bboxAspectRatio": 1.833333,
+        "maximumCellSlopeDegrees": 4.61,
+        "localReliefMetres": 0.94,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-056",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 109.5029,
+        "y": 174.47899
+      },
+      "projectedPosition": {
+        "easting": 4365176.052414525,
+        "northing": 1093243.7221400526
+      },
+      "pixelCenter": [
+        1099.529,
+        1749.2899
+      ],
+      "pixelBBox": [
+        1095,
+        1739,
+        12,
+        24
+      ],
+      "radiusMeters": 7.708,
+      "score": 0.510703,
+      "evidence": {
+        "componentPixels": 138,
+        "predictedAreaM2": 34.5,
+        "meanModelResponse": 0.510703,
+        "peakModelResponse": 0.84851,
+        "bboxFillRatio": 0.479167,
+        "bboxAspectRatio": 2.0,
+        "maximumCellSlopeDegrees": 9.85,
+        "localReliefMetres": 1.3,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-057",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 40.44556,
+        "y": 187.73444
+      },
+      "projectedPosition": {
+        "easting": 4364830.765714526,
+        "northing": 1093177.4448900528
+      },
+      "pixelCenter": [
+        408.9556,
+        1881.8444
+      ],
+      "pixelBBox": [
+        405,
+        1878,
+        10,
+        8
+      ],
+      "radiusMeters": 4.202,
+      "score": 0.510499,
+      "evidence": {
+        "componentPixels": 45,
+        "predictedAreaM2": 11.25,
+        "meanModelResponse": 0.510499,
+        "peakModelResponse": 0.805039,
+        "bboxFillRatio": 0.5625,
+        "bboxAspectRatio": 1.25,
+        "maximumCellSlopeDegrees": 9.37,
+        "localReliefMetres": 1.47,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-058",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 60.14043,
+        "y": 155.96304
+      },
+      "projectedPosition": {
+        "easting": 4364929.240064526,
+        "northing": 1093336.3018900526
+      },
+      "pixelCenter": [
+        605.9043,
+        1564.1304
+      ],
+      "pixelBBox": [
+        600,
+        1553,
+        12,
+        20
+      ],
+      "radiusMeters": 6.831,
+      "score": 0.510323,
+      "evidence": {
+        "componentPixels": 115,
+        "predictedAreaM2": 28.75,
+        "meanModelResponse": 0.510323,
+        "peakModelResponse": 0.867403,
+        "bboxFillRatio": 0.479167,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 5.26,
+        "localReliefMetres": 0.68,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-059",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 67.54636,
+        "y": 152.22273
+      },
+      "projectedPosition": {
+        "easting": 4364966.269714526,
+        "northing": 1093355.0034400527
+      },
+      "pixelCenter": [
+        679.9636,
+        1526.7273
+      ],
+      "pixelBBox": [
+        676,
+        1523,
+        9,
+        9
+      ],
+      "radiusMeters": 4.182,
+      "score": 0.509609,
+      "evidence": {
+        "componentPixels": 55,
+        "predictedAreaM2": 13.75,
+        "meanModelResponse": 0.509609,
+        "peakModelResponse": 0.887626,
+        "bboxFillRatio": 0.679012,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.15,
+        "localReliefMetres": 0.8,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-060",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 137.99138,
+        "y": 2.16379
+      },
+      "projectedPosition": {
+        "easting": 4365318.494814525,
+        "northing": 1094105.2981400527
+      },
+      "pixelCenter": [
+        1384.4138,
+        26.1379
+      ],
+      "pixelBBox": [
+        1382,
+        24,
+        6,
+        6
+      ],
+      "radiusMeters": 3.121,
+      "score": 0.508862,
+      "evidence": {
+        "componentPixels": 29,
+        "predictedAreaM2": 7.25,
+        "meanModelResponse": 0.508862,
+        "peakModelResponse": 0.86515,
+        "bboxFillRatio": 0.805556,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.28,
+        "localReliefMetres": 0.83,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-061",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 93.36848,
+        "y": 165.82826
+      },
+      "projectedPosition": {
+        "easting": 4365095.380314526,
+        "northing": 1093286.9757900527
+      },
+      "pixelCenter": [
+        938.1848,
+        1662.7826
+      ],
+      "pixelBBox": [
+        934,
+        1655,
+        9,
+        17
+      ],
+      "radiusMeters": 5.809,
+      "score": 0.508694,
+      "evidence": {
+        "componentPixels": 92,
+        "predictedAreaM2": 23.0,
+        "meanModelResponse": 0.508694,
+        "peakModelResponse": 0.82339,
+        "bboxFillRatio": 0.601307,
+        "bboxAspectRatio": 1.888889,
+        "maximumCellSlopeDegrees": 6.1,
+        "localReliefMetres": 1.2,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-062",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 112.06867,
+        "y": 76.59933
+      },
+      "projectedPosition": {
+        "easting": 4365188.8812645255,
+        "northing": 1093733.1204400526
+      },
+      "pixelCenter": [
+        1125.1867,
+        770.4933
+      ],
+      "pixelBBox": [
+        1120,
+        766,
+        13,
+        10
+      ],
+      "radiusMeters": 5.1,
+      "score": 0.5084,
+      "evidence": {
+        "componentPixels": 75,
+        "predictedAreaM2": 18.75,
+        "meanModelResponse": 0.5084,
+        "peakModelResponse": 0.852204,
+        "bboxFillRatio": 0.576923,
+        "bboxAspectRatio": 1.3,
+        "maximumCellSlopeDegrees": 8.05,
+        "localReliefMetres": 1.16,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-063",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 106.54357,
+        "y": 45.11214
+      },
+      "projectedPosition": {
+        "easting": 4365161.255764525,
+        "northing": 1093890.5563900527
+      },
+      "pixelCenter": [
+        1069.9357,
+        455.6214
+      ],
+      "pixelBBox": [
+        1065,
+        447,
+        12,
+        18
+      ],
+      "radiusMeters": 6.408,
+      "score": 0.508364,
+      "evidence": {
+        "componentPixels": 140,
+        "predictedAreaM2": 35.0,
+        "meanModelResponse": 0.508364,
+        "peakModelResponse": 0.898335,
+        "bboxFillRatio": 0.648148,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 9.66,
+        "localReliefMetres": 1.13,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-064",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 126.50938,
+        "y": 143.85938
+      },
+      "projectedPosition": {
+        "easting": 4365261.084814526,
+        "northing": 1093396.8201900527
+      },
+      "pixelCenter": [
+        1269.5938,
+        1443.0938
+      ],
+      "pixelBBox": [
+        1267,
+        1440,
+        6,
+        7
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.507595,
+      "evidence": {
+        "componentPixels": 32,
+        "predictedAreaM2": 8.0,
+        "meanModelResponse": 0.507595,
+        "peakModelResponse": 0.812892,
+        "bboxFillRatio": 0.761905,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 6.92,
+        "localReliefMetres": 1.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-065",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 96.46053,
+        "y": 67.62789
+      },
+      "projectedPosition": {
+        "easting": 4365110.840564526,
+        "northing": 1093777.9776400528
+      },
+      "pixelCenter": [
+        969.1053,
+        680.7789
+      ],
+      "pixelBBox": [
+        964,
+        673,
+        11,
+        15
+      ],
+      "radiusMeters": 5.65,
+      "score": 0.50726,
+      "evidence": {
+        "componentPixels": 95,
+        "predictedAreaM2": 23.75,
+        "meanModelResponse": 0.50726,
+        "peakModelResponse": 0.837436,
+        "bboxFillRatio": 0.575758,
+        "bboxAspectRatio": 1.363636,
+        "maximumCellSlopeDegrees": 5.45,
+        "localReliefMetres": 0.7,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-066",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 117.98465,
+        "y": 36.83416
+      },
+      "projectedPosition": {
+        "easting": 4365218.461164526,
+        "northing": 1093931.9462900527
+      },
+      "pixelCenter": [
+        1184.3465,
+        372.8416
+      ],
+      "pixelBBox": [
+        1179,
+        367,
+        13,
+        12
+      ],
+      "radiusMeters": 5.423,
+      "score": 0.507195,
+      "evidence": {
+        "componentPixels": 101,
+        "predictedAreaM2": 25.25,
+        "meanModelResponse": 0.507195,
+        "peakModelResponse": 0.883032,
+        "bboxFillRatio": 0.647436,
+        "bboxAspectRatio": 1.083333,
+        "maximumCellSlopeDegrees": 7.85,
+        "localReliefMetres": 0.73,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-067",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 109.11486,
+        "y": 155.00135
+      },
+      "projectedPosition": {
+        "easting": 4365174.112214526,
+        "northing": 1093341.1103400527
+      },
+      "pixelCenter": [
+        1095.6486,
+        1554.5135
+      ],
+      "pixelBBox": [
+        1092,
+        1552,
+        9,
+        7
+      ],
+      "radiusMeters": 3.85,
+      "score": 0.506721,
+      "evidence": {
+        "componentPixels": 37,
+        "predictedAreaM2": 9.25,
+        "meanModelResponse": 0.506721,
+        "peakModelResponse": 0.867237,
+        "bboxFillRatio": 0.587302,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 9.78,
+        "localReliefMetres": 1.17,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-068",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 165.90426,
+        "y": 32.68411
+      },
+      "projectedPosition": {
+        "easting": 4365458.059214526,
+        "northing": 1093952.6965400528
+      },
+      "pixelCenter": [
+        1663.5426,
+        331.3411
+      ],
+      "pixelBBox": [
+        1659,
+        323,
+        10,
+        19
+      ],
+      "radiusMeters": 6.368,
+      "score": 0.506154,
+      "evidence": {
+        "componentPixels": 129,
+        "predictedAreaM2": 32.25,
+        "meanModelResponse": 0.506154,
+        "peakModelResponse": 0.856799,
+        "bboxFillRatio": 0.678947,
+        "bboxAspectRatio": 1.9,
+        "maximumCellSlopeDegrees": 13.83,
+        "localReliefMetres": 1.46,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-069",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 96.965,
+        "y": 0.03
+      },
+      "projectedPosition": {
+        "easting": 4365113.362914526,
+        "northing": 1094115.9670900528
+      },
+      "pixelCenter": [
+        974.15,
+        4.8
+      ],
+      "pixelBBox": [
+        971,
+        2,
+        7,
+        7
+      ],
+      "radiusMeters": 3.475,
+      "score": 0.505707,
+      "evidence": {
+        "componentPixels": 40,
+        "predictedAreaM2": 10.0,
+        "meanModelResponse": 0.505707,
+        "peakModelResponse": 0.799223,
+        "bboxFillRatio": 0.816327,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.38,
+        "localReliefMetres": 0.79,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-070",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 167.84032,
+        "y": 31.74355
+      },
+      "projectedPosition": {
+        "easting": 4365467.739514526,
+        "northing": 1093957.3993400526
+      },
+      "pixelCenter": [
+        1682.9032,
+        321.9355
+      ],
+      "pixelBBox": [
+        1680,
+        320,
+        7,
+        6
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.505126,
+      "evidence": {
+        "componentPixels": 31,
+        "predictedAreaM2": 7.75,
+        "meanModelResponse": 0.505126,
+        "peakModelResponse": 0.758546,
+        "bboxFillRatio": 0.738095,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 10.19,
+        "localReliefMetres": 1.29,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-071",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 122.48425,
+        "y": 36.08425
+      },
+      "projectedPosition": {
+        "easting": 4365240.959164525,
+        "northing": 1093935.6958400528
+      },
+      "pixelCenter": [
+        1229.3425,
+        365.3425
+      ],
+      "pixelBBox": [
+        1225,
+        360,
+        10,
+        14
+      ],
+      "radiusMeters": 5.301,
+      "score": 0.504727,
+      "evidence": {
+        "componentPixels": 73,
+        "predictedAreaM2": 18.25,
+        "meanModelResponse": 0.504727,
+        "peakModelResponse": 0.834552,
+        "bboxFillRatio": 0.521429,
+        "bboxAspectRatio": 1.4,
+        "maximumCellSlopeDegrees": 5.95,
+        "localReliefMetres": 1.08,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-072",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 81.29286,
+        "y": 96.19643
+      },
+      "projectedPosition": {
+        "easting": 4365035.002214526,
+        "northing": 1093635.1349400526
+      },
+      "pixelCenter": [
+        817.4286,
+        966.4643
+      ],
+      "pixelBBox": [
+        815,
+        963,
+        6,
+        7
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.504686,
+      "evidence": {
+        "componentPixels": 28,
+        "predictedAreaM2": 7.0,
+        "meanModelResponse": 0.504686,
+        "peakModelResponse": 0.804388,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 3.76,
+        "localReliefMetres": 0.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-073",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 82.90455,
+        "y": 51.09318
+      },
+      "projectedPosition": {
+        "easting": 4365043.060664525,
+        "northing": 1093860.6511900527
+      },
+      "pixelCenter": [
+        833.5455,
+        515.4318
+      ],
+      "pixelBBox": [
+        829,
+        512,
+        9,
+        8
+      ],
+      "radiusMeters": 4.01,
+      "score": 0.504245,
+      "evidence": {
+        "componentPixels": 44,
+        "predictedAreaM2": 11.0,
+        "meanModelResponse": 0.504245,
+        "peakModelResponse": 0.828561,
+        "bboxFillRatio": 0.611111,
+        "bboxAspectRatio": 1.125,
+        "maximumCellSlopeDegrees": 7.87,
+        "localReliefMetres": 1.02,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-074",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 92.57857,
+        "y": 98.20357
+      },
+      "projectedPosition": {
+        "easting": 4365091.430764526,
+        "northing": 1093625.0992400527
+      },
+      "pixelCenter": [
+        930.2857,
+        986.5357
+      ],
+      "pixelBBox": [
+        925,
+        983,
+        10,
+        9
+      ],
+      "radiusMeters": 4.363,
+      "score": 0.503736,
+      "evidence": {
+        "componentPixels": 56,
+        "predictedAreaM2": 14.0,
+        "meanModelResponse": 0.503736,
+        "peakModelResponse": 0.794068,
+        "bboxFillRatio": 0.622222,
+        "bboxAspectRatio": 1.111111,
+        "maximumCellSlopeDegrees": 13.3,
+        "localReliefMetres": 1.89,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-075",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 133.55755,
+        "y": 132.3217
+      },
+      "projectedPosition": {
+        "easting": 4365296.325664526,
+        "northing": 1093454.5085900526
+      },
+      "pixelCenter": [
+        1340.0755,
+        1327.717
+      ],
+      "pixelBBox": [
+        1336,
+        1324,
+        9,
+        10
+      ],
+      "radiusMeters": 4.363,
+      "score": 0.503725,
+      "evidence": {
+        "componentPixels": 53,
+        "predictedAreaM2": 13.25,
+        "meanModelResponse": 0.503725,
+        "peakModelResponse": 0.794008,
+        "bboxFillRatio": 0.588889,
+        "bboxAspectRatio": 1.111111,
+        "maximumCellSlopeDegrees": 6.57,
+        "localReliefMetres": 1.24,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-076",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 117.84796,
+        "y": 190.87857
+      },
+      "projectedPosition": {
+        "easting": 4365217.777714525,
+        "northing": 1093161.7242400527
+      },
+      "pixelCenter": [
+        1182.9796,
+        1913.2857
+      ],
+      "pixelBBox": [
+        1180,
+        1909,
+        7,
+        11
+      ],
+      "radiusMeters": 4.26,
+      "score": 0.502769,
+      "evidence": {
+        "componentPixels": 49,
+        "predictedAreaM2": 12.25,
+        "meanModelResponse": 0.502769,
+        "peakModelResponse": 0.82094,
+        "bboxFillRatio": 0.636364,
+        "bboxAspectRatio": 1.571429,
+        "maximumCellSlopeDegrees": 8.98,
+        "localReliefMetres": 1.62,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-077",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 110.76194,
+        "y": 173.3306
+      },
+      "projectedPosition": {
+        "easting": 4365182.347614526,
+        "northing": 1093249.4640900528
+      },
+      "pixelCenter": [
+        1112.1194,
+        1737.806
+      ],
+      "pixelBBox": [
+        1108,
+        1734,
+        12,
+        9
+      ],
+      "radiusMeters": 4.75,
+      "score": 0.500365,
+      "evidence": {
+        "componentPixels": 67,
+        "predictedAreaM2": 16.75,
+        "meanModelResponse": 0.500365,
+        "peakModelResponse": 0.8468,
+        "bboxFillRatio": 0.62037,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 13.24,
+        "localReliefMetres": 1.61,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-078",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 180.61364,
+        "y": 148.76212
+      },
+      "projectedPosition": {
+        "easting": 4365531.606114525,
+        "northing": 1093372.3064900527
+      },
+      "pixelCenter": [
+        1810.6364,
+        1492.1212
+      ],
+      "pixelBBox": [
+        1808,
+        1489,
+        6,
+        7
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.500363,
+      "evidence": {
+        "componentPixels": 33,
+        "predictedAreaM2": 8.25,
+        "meanModelResponse": 0.500363,
+        "peakModelResponse": 0.775306,
+        "bboxFillRatio": 0.785714,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 3.62,
+        "localReliefMetres": 0.53,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-079",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 27.0875,
+        "y": 133.425
+      },
+      "projectedPosition": {
+        "easting": 4364763.975414526,
+        "northing": 1093448.9920900527
+      },
+      "pixelCenter": [
+        275.375,
+        1338.75
+      ],
+      "pixelBBox": [
+        267,
+        1332,
+        17,
+        16
+      ],
+      "radiusMeters": 6.836,
+      "score": 0.499601,
+      "evidence": {
+        "componentPixels": 104,
+        "predictedAreaM2": 26.0,
+        "meanModelResponse": 0.499601,
+        "peakModelResponse": 0.817303,
+        "bboxFillRatio": 0.382353,
+        "bboxAspectRatio": 1.0625,
+        "maximumCellSlopeDegrees": 10.2,
+        "localReliefMetres": 1.38,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-080",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 77.09865,
+        "y": 199.25811
+      },
+      "projectedPosition": {
+        "easting": 4365014.031164526,
+        "northing": 1093119.8265400527
+      },
+      "pixelCenter": [
+        775.4865,
+        1997.0811
+      ],
+      "pixelBBox": [
+        772,
+        1994,
+        9,
+        6
+      ],
+      "radiusMeters": 3.704,
+      "score": 0.499029,
+      "evidence": {
+        "componentPixels": 37,
+        "predictedAreaM2": 9.25,
+        "meanModelResponse": 0.499029,
+        "peakModelResponse": 0.874611,
+        "bboxFillRatio": 0.685185,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 11.56,
+        "localReliefMetres": 1.28,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-081",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 190.90366,
+        "y": 27.5622
+      },
+      "projectedPosition": {
+        "easting": 4365583.056214525,
+        "northing": 1093978.3060900527
+      },
+      "pixelCenter": [
+        1913.5366,
+        280.122
+      ],
+      "pixelBBox": [
+        1910,
+        277,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.497372,
+      "evidence": {
+        "componentPixels": 41,
+        "predictedAreaM2": 10.25,
+        "meanModelResponse": 0.497372,
+        "peakModelResponse": 0.780908,
+        "bboxFillRatio": 0.732143,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 6.15,
+        "localReliefMetres": 0.76,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-082",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 42.43333,
+        "y": 100.83889
+      },
+      "projectedPosition": {
+        "easting": 4364840.704564526,
+        "northing": 1093611.9226400526
+      },
+      "pixelCenter": [
+        428.8333,
+        1012.8889
+      ],
+      "pixelBBox": [
+        426,
+        1010,
+        7,
+        7
+      ],
+      "radiusMeters": 3.475,
+      "score": 0.496488,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.496488,
+        "peakModelResponse": 0.791086,
+        "bboxFillRatio": 0.734694,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.39,
+        "localReliefMetres": 0.56,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-083",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 121.24875,
+        "y": 165.9625
+      },
+      "projectedPosition": {
+        "easting": 4365234.781664526,
+        "northing": 1093286.3045900527
+      },
+      "pixelCenter": [
+        1216.9875,
+        1664.125
+      ],
+      "pixelBBox": [
+        1214,
+        1657,
+        8,
+        17
+      ],
+      "radiusMeters": 5.697,
+      "score": 0.495301,
+      "evidence": {
+        "componentPixels": 80,
+        "predictedAreaM2": 20.0,
+        "meanModelResponse": 0.495301,
+        "peakModelResponse": 0.857584,
+        "bboxFillRatio": 0.588235,
+        "bboxAspectRatio": 2.125,
+        "maximumCellSlopeDegrees": 7.13,
+        "localReliefMetres": 1.09,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-084",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 16.12963,
+        "y": 107.72778
+      },
+      "projectedPosition": {
+        "easting": 4364709.1860645255,
+        "northing": 1093577.4781900528
+      },
+      "pixelCenter": [
+        165.7963,
+        1081.7778
+      ],
+      "pixelBBox": [
+        162,
+        1077,
+        8,
+        11
+      ],
+      "radiusMeters": 4.4,
+      "score": 0.494466,
+      "evidence": {
+        "componentPixels": 54,
+        "predictedAreaM2": 13.5,
+        "meanModelResponse": 0.494466,
+        "peakModelResponse": 0.786836,
+        "bboxFillRatio": 0.613636,
+        "bboxAspectRatio": 1.375,
+        "maximumCellSlopeDegrees": 11.2,
+        "localReliefMetres": 2.16,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-085",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 69.91779,
+        "y": 53.54799
+      },
+      "projectedPosition": {
+        "easting": 4364978.1268645255,
+        "northing": 1093848.3771400526
+      },
+      "pixelCenter": [
+        703.6779,
+        539.9799
+      ],
+      "pixelBBox": [
+        696,
+        533,
+        17,
+        17
+      ],
+      "radiusMeters": 7.01,
+      "score": 0.494388,
+      "evidence": {
+        "componentPixels": 149,
+        "predictedAreaM2": 37.25,
+        "meanModelResponse": 0.494388,
+        "peakModelResponse": 0.890277,
+        "bboxFillRatio": 0.515571,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.66,
+        "localReliefMetres": 1.09,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-086",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 25.9625,
+        "y": 187.7
+      },
+      "projectedPosition": {
+        "easting": 4364758.350414526,
+        "northing": 1093177.6170900527
+      },
+      "pixelCenter": [
+        264.125,
+        1881.5
+      ],
+      "pixelBBox": [
+        261,
+        1879,
+        8,
+        6
+      ],
+      "radiusMeters": 3.5,
+      "score": 0.494245,
+      "evidence": {
+        "componentPixels": 32,
+        "predictedAreaM2": 8.0,
+        "meanModelResponse": 0.494245,
+        "peakModelResponse": 0.872417,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 11.64,
+        "localReliefMetres": 1.95,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-087",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 141.43919,
+        "y": 98.75
+      },
+      "projectedPosition": {
+        "easting": 4365335.733864525,
+        "northing": 1093622.3670900527
+      },
+      "pixelCenter": [
+        1418.8919,
+        992.0
+      ],
+      "pixelBBox": [
+        1416,
+        988,
+        8,
+        8
+      ],
+      "radiusMeters": 3.828,
+      "score": 0.49412,
+      "evidence": {
+        "componentPixels": 37,
+        "predictedAreaM2": 9.25,
+        "meanModelResponse": 0.49412,
+        "peakModelResponse": 0.805985,
+        "bboxFillRatio": 0.578125,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.13,
+        "localReliefMetres": 1.02,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-088",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 21.76467,
+        "y": 168.04867
+      },
+      "projectedPosition": {
+        "easting": 4364737.361264526,
+        "northing": 1093275.8737400528
+      },
+      "pixelCenter": [
+        222.1467,
+        1684.9867
+      ],
+      "pixelBBox": [
+        218,
+        1678,
+        9,
+        15
+      ],
+      "radiusMeters": 5.373,
+      "score": 0.494022,
+      "evidence": {
+        "componentPixels": 75,
+        "predictedAreaM2": 18.75,
+        "meanModelResponse": 0.494022,
+        "peakModelResponse": 0.765697,
+        "bboxFillRatio": 0.555556,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 4.86,
+        "localReliefMetres": 0.53,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-089",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 120.03889,
+        "y": 93.75556
+      },
+      "projectedPosition": {
+        "easting": 4365228.732364526,
+        "northing": 1093647.3392900527
+      },
+      "pixelCenter": [
+        1204.8889,
+        942.0556
+      ],
+      "pixelBBox": [
+        1202,
+        938,
+        6,
+        9
+      ],
+      "radiusMeters": 3.704,
+      "score": 0.493614,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.493614,
+        "peakModelResponse": 0.7881,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 6.46,
+        "localReliefMetres": 0.91,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-090",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 139.73222,
+        "y": 122.32444
+      },
+      "projectedPosition": {
+        "easting": 4365327.199014526,
+        "northing": 1093504.4948900526
+      },
+      "pixelCenter": [
+        1401.8222,
+        1227.7444
+      ],
+      "pixelBBox": [
+        1399,
+        1217,
+        7,
+        22
+      ],
+      "radiusMeters": 6.772,
+      "score": 0.493578,
+      "evidence": {
+        "componentPixels": 90,
+        "predictedAreaM2": 22.5,
+        "meanModelResponse": 0.493578,
+        "peakModelResponse": 0.782461,
+        "bboxFillRatio": 0.584416,
+        "bboxAspectRatio": 3.142857,
+        "maximumCellSlopeDegrees": 2.43,
+        "localReliefMetres": 0.27,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-091",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 114.61522,
+        "y": 87.93261
+      },
+      "projectedPosition": {
+        "easting": 4365201.614014526,
+        "northing": 1093676.4540400526
+      },
+      "pixelCenter": [
+        1150.6522,
+        883.8261
+      ],
+      "pixelBBox": [
+        1148,
+        880,
+        6,
+        10
+      ],
+      "radiusMeters": 3.915,
+      "score": 0.493446,
+      "evidence": {
+        "componentPixels": 46,
+        "predictedAreaM2": 11.5,
+        "meanModelResponse": 0.493446,
+        "peakModelResponse": 0.787112,
+        "bboxFillRatio": 0.766667,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 5.42,
+        "localReliefMetres": 0.79,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-092",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 20.55577,
+        "y": 41.56346
+      },
+      "projectedPosition": {
+        "easting": 4364731.316764526,
+        "northing": 1093908.2997900527
+      },
+      "pixelCenter": [
+        210.0577,
+        420.1346
+      ],
+      "pixelBBox": [
+        207,
+        414,
+        7,
+        12
+      ],
+      "radiusMeters": 4.473,
+      "score": 0.491402,
+      "evidence": {
+        "componentPixels": 52,
+        "predictedAreaM2": 13.0,
+        "meanModelResponse": 0.491402,
+        "peakModelResponse": 0.851618,
+        "bboxFillRatio": 0.619048,
+        "bboxAspectRatio": 1.714286,
+        "maximumCellSlopeDegrees": 4.05,
+        "localReliefMetres": 0.4,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-093",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 159.48697,
+        "y": 2.82152
+      },
+      "projectedPosition": {
+        "easting": 4365425.972764526,
+        "northing": 1094102.0094900527
+      },
+      "pixelCenter": [
+        1599.3697,
+        32.7152
+      ],
+      "pixelBBox": [
+        1591,
+        22,
+        20,
+        29
+      ],
+      "radiusMeters": 9.807,
+      "score": 0.491398,
+      "evidence": {
+        "componentPixels": 165,
+        "predictedAreaM2": 41.25,
+        "meanModelResponse": 0.491398,
+        "peakModelResponse": 0.851922,
+        "bboxFillRatio": 0.284483,
+        "bboxAspectRatio": 1.45,
+        "maximumCellSlopeDegrees": 5.15,
+        "localReliefMetres": 0.54,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-094",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 125.47727,
+        "y": 192.57727
+      },
+      "projectedPosition": {
+        "easting": 4365255.924264526,
+        "northing": 1093153.2307400526
+      },
+      "pixelCenter": [
+        1259.2727,
+        1930.2727
+      ],
+      "pixelBBox": [
+        1256,
+        1928,
+        8,
+        6
+      ],
+      "radiusMeters": 3.5,
+      "score": 0.491372,
+      "evidence": {
+        "componentPixels": 33,
+        "predictedAreaM2": 8.25,
+        "meanModelResponse": 0.491372,
+        "peakModelResponse": 0.759391,
+        "bboxFillRatio": 0.6875,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 6.51,
+        "localReliefMetres": 0.89,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-095",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 5.2686,
+        "y": 72.52442
+      },
+      "projectedPosition": {
+        "easting": 4364654.880914526,
+        "northing": 1093753.4949900527
+      },
+      "pixelCenter": [
+        57.186,
+        729.7442
+      ],
+      "pixelBBox": [
+        54,
+        727,
+        8,
+        7
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.490929,
+      "evidence": {
+        "componentPixels": 43,
+        "predictedAreaM2": 10.75,
+        "meanModelResponse": 0.490929,
+        "peakModelResponse": 0.77331,
+        "bboxFillRatio": 0.767857,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 6.09,
+        "localReliefMetres": 0.72,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-096",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 93.955,
+        "y": 190.895
+      },
+      "projectedPosition": {
+        "easting": 4365098.312914526,
+        "northing": 1093161.6420900526
+      },
+      "pixelCenter": [
+        944.05,
+        1913.45
+      ],
+      "pixelBBox": [
+        938,
+        1909,
+        12,
+        11
+      ],
+      "radiusMeters": 5.07,
+      "score": 0.490892,
+      "evidence": {
+        "componentPixels": 80,
+        "predictedAreaM2": 20.0,
+        "meanModelResponse": 0.490892,
+        "peakModelResponse": 0.778893,
+        "bboxFillRatio": 0.606061,
+        "bboxAspectRatio": 1.090909,
+        "maximumCellSlopeDegrees": 5.42,
+        "localReliefMetres": 0.71,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-097",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 108.35,
+        "y": 122.6756
+      },
+      "projectedPosition": {
+        "easting": 4365170.287914526,
+        "northing": 1093502.7390900527
+      },
+      "pixelCenter": [
+        1088.0,
+        1231.256
+      ],
+      "pixelBBox": [
+        1080,
+        1223,
+        18,
+        15
+      ],
+      "radiusMeters": 6.858,
+      "score": 0.490849,
+      "evidence": {
+        "componentPixels": 125,
+        "predictedAreaM2": 31.25,
+        "meanModelResponse": 0.490849,
+        "peakModelResponse": 0.836157,
+        "bboxFillRatio": 0.462963,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 7.69,
+        "localReliefMetres": 1.02,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-098",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 101.60231,
+        "y": 80.37923
+      },
+      "projectedPosition": {
+        "easting": 4365136.549464526,
+        "northing": 1093714.2209400528
+      },
+      "pixelCenter": [
+        1020.5231,
+        808.2923
+      ],
+      "pixelBBox": [
+        1016,
+        803,
+        10,
+        12
+      ],
+      "radiusMeters": 4.905,
+      "score": 0.490721,
+      "evidence": {
+        "componentPixels": 65,
+        "predictedAreaM2": 16.25,
+        "meanModelResponse": 0.490721,
+        "peakModelResponse": 0.777509,
+        "bboxFillRatio": 0.541667,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 11.51,
+        "localReliefMetres": 1.52,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-099",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 18.25,
+        "y": 93.40857
+      },
+      "projectedPosition": {
+        "easting": 4364719.787914526,
+        "northing": 1093649.0742400526
+      },
+      "pixelCenter": [
+        187.0,
+        938.5857
+      ],
+      "pixelBBox": [
+        181,
+        935,
+        13,
+        8
+      ],
+      "radiusMeters": 4.816,
+      "score": 0.490678,
+      "evidence": {
+        "componentPixels": 70,
+        "predictedAreaM2": 17.5,
+        "meanModelResponse": 0.490678,
+        "peakModelResponse": 0.805474,
+        "bboxFillRatio": 0.673077,
+        "bboxAspectRatio": 1.625,
+        "maximumCellSlopeDegrees": 17.17,
+        "localReliefMetres": 2.67,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-100",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 33.4247,
+        "y": 197.68012
+      },
+      "projectedPosition": {
+        "easting": 4364795.6614145255,
+        "northing": 1093127.7164900526
+      },
+      "pixelCenter": [
+        338.747,
+        1981.3012
+      ],
+      "pixelBBox": [
+        334,
+        1974,
+        11,
+        15
+      ],
+      "radiusMeters": 5.65,
+      "score": 0.490356,
+      "evidence": {
+        "componentPixels": 83,
+        "predictedAreaM2": 20.75,
+        "meanModelResponse": 0.490356,
+        "peakModelResponse": 0.814892,
+        "bboxFillRatio": 0.50303,
+        "bboxAspectRatio": 1.363636,
+        "maximumCellSlopeDegrees": 19.99,
+        "localReliefMetres": 2.75,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-101",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 58.82857,
+        "y": 158.24762
+      },
+      "projectedPosition": {
+        "easting": 4364922.680764526,
+        "northing": 1093324.8789900527
+      },
+      "pixelCenter": [
+        592.7857,
+        1586.9762
+      ],
+      "pixelBBox": [
+        591,
+        1582,
+        5,
+        11
+      ],
+      "radiusMeters": 4.021,
+      "score": 0.489986,
+      "evidence": {
+        "componentPixels": 42,
+        "predictedAreaM2": 10.5,
+        "meanModelResponse": 0.489986,
+        "peakModelResponse": 0.78057,
+        "bboxFillRatio": 0.763636,
+        "bboxAspectRatio": 2.2,
+        "maximumCellSlopeDegrees": 3.34,
+        "localReliefMetres": 0.35,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-102",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 162.74902,
+        "y": 35.62157
+      },
+      "projectedPosition": {
+        "easting": 4365442.283014526,
+        "northing": 1093938.0092400527
+      },
+      "pixelCenter": [
+        1631.9902,
+        360.7157
+      ],
+      "pixelBBox": [
+        1626,
+        354,
+        12,
+        15
+      ],
+      "radiusMeters": 5.802,
+      "score": 0.489913,
+      "evidence": {
+        "componentPixels": 102,
+        "predictedAreaM2": 25.5,
+        "meanModelResponse": 0.489913,
+        "peakModelResponse": 0.880039,
+        "bboxFillRatio": 0.566667,
+        "bboxAspectRatio": 1.25,
+        "maximumCellSlopeDegrees": 16.92,
+        "localReliefMetres": 1.87,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-103",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 152.23261,
+        "y": 91.5413
+      },
+      "projectedPosition": {
+        "easting": 4365389.700964525,
+        "northing": 1093658.4105900526
+      },
+      "pixelCenter": [
+        1526.8261,
+        919.913
+      ],
+      "pixelBBox": [
+        1524,
+        916,
+        7,
+        10
+      ],
+      "radiusMeters": 4.052,
+      "score": 0.489893,
+      "evidence": {
+        "componentPixels": 46,
+        "predictedAreaM2": 11.5,
+        "meanModelResponse": 0.489893,
+        "peakModelResponse": 0.696084,
+        "bboxFillRatio": 0.657143,
+        "bboxAspectRatio": 1.428571,
+        "maximumCellSlopeDegrees": 6.89,
+        "localReliefMetres": 1.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-104",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 0.66702,
+        "y": 85.94574
+      },
+      "projectedPosition": {
+        "easting": 4364631.8730145255,
+        "northing": 1093686.3883900526
+      },
+      "pixelCenter": [
+        11.1702,
+        863.9574
+      ],
+      "pixelBBox": [
+        7,
+        860,
+        8,
+        10
+      ],
+      "radiusMeters": 4.202,
+      "score": 0.488854,
+      "evidence": {
+        "componentPixels": 47,
+        "predictedAreaM2": 11.75,
+        "meanModelResponse": 0.488854,
+        "peakModelResponse": 0.815771,
+        "bboxFillRatio": 0.5875,
+        "bboxAspectRatio": 1.25,
+        "maximumCellSlopeDegrees": 10.48,
+        "localReliefMetres": 1.14,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-105",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 102.78077,
+        "y": 32.67308
+      },
+      "projectedPosition": {
+        "easting": 4365142.441764526,
+        "northing": 1093952.7516900527
+      },
+      "pixelCenter": [
+        1032.3077,
+        331.2308
+      ],
+      "pixelBBox": [
+        1030,
+        329,
+        6,
+        6
+      ],
+      "radiusMeters": 3.121,
+      "score": 0.488752,
+      "evidence": {
+        "componentPixels": 26,
+        "predictedAreaM2": 6.5,
+        "meanModelResponse": 0.488752,
+        "peakModelResponse": 0.815202,
+        "bboxFillRatio": 0.722222,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.58,
+        "localReliefMetres": 0.79,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-106",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 41.9359,
+        "y": 8.66538
+      },
+      "projectedPosition": {
+        "easting": 4364838.217414525,
+        "northing": 1094072.7901900527
+      },
+      "pixelCenter": [
+        423.859,
+        91.1538
+      ],
+      "pixelBBox": [
+        421,
+        84,
+        7,
+        16
+      ],
+      "radiusMeters": 5.366,
+      "score": 0.488565,
+      "evidence": {
+        "componentPixels": 78,
+        "predictedAreaM2": 19.5,
+        "meanModelResponse": 0.488565,
+        "peakModelResponse": 0.838916,
+        "bboxFillRatio": 0.696429,
+        "bboxAspectRatio": 2.285714,
+        "maximumCellSlopeDegrees": 13.12,
+        "localReliefMetres": 2.25,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-107",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 170.74444,
+        "y": 112.05833
+      },
+      "projectedPosition": {
+        "easting": 4365482.260114525,
+        "northing": 1093555.8254400527
+      },
+      "pixelCenter": [
+        1711.9444,
+        1125.0833
+      ],
+      "pixelBBox": [
+        1709,
+        1122,
+        6,
+        8
+      ],
+      "radiusMeters": 3.5,
+      "score": 0.488306,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.488306,
+        "peakModelResponse": 0.73584,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 22.66,
+        "localReliefMetres": 3.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-108",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 27.69919,
+        "y": 189.21371
+      },
+      "projectedPosition": {
+        "easting": 4364767.033864526,
+        "northing": 1093170.0485400527
+      },
+      "pixelCenter": [
+        281.4919,
+        1896.6371
+      ],
+      "pixelBBox": [
+        274,
+        1889,
+        16,
+        15
+      ],
+      "radiusMeters": 6.483,
+      "score": 0.48823,
+      "evidence": {
+        "componentPixels": 124,
+        "predictedAreaM2": 31.0,
+        "meanModelResponse": 0.48823,
+        "peakModelResponse": 0.846652,
+        "bboxFillRatio": 0.516667,
+        "bboxAspectRatio": 1.066667,
+        "maximumCellSlopeDegrees": 12.49,
+        "localReliefMetres": 1.64,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-109",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 135.28243,
+        "y": 190.36149
+      },
+      "projectedPosition": {
+        "easting": 4365304.950064526,
+        "northing": 1093164.3096400527
+      },
+      "pixelCenter": [
+        1357.3243,
+        1908.1149
+      ],
+      "pixelBBox": [
+        1347,
+        1901,
+        22,
+        17
+      ],
+      "radiusMeters": 7.951,
+      "score": 0.487964,
+      "evidence": {
+        "componentPixels": 148,
+        "predictedAreaM2": 37.0,
+        "meanModelResponse": 0.487964,
+        "peakModelResponse": 0.85493,
+        "bboxFillRatio": 0.395722,
+        "bboxAspectRatio": 1.294118,
+        "maximumCellSlopeDegrees": 8.02,
+        "localReliefMetres": 1.14,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-110",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 89.58333,
+        "y": 58.50667
+      },
+      "projectedPosition": {
+        "easting": 4365076.454564526,
+        "northing": 1093823.5837400528
+      },
+      "pixelCenter": [
+        900.3333,
+        589.5667
+      ],
+      "pixelBBox": [
+        898,
+        587,
+        6,
+        6
+      ],
+      "radiusMeters": 3.121,
+      "score": 0.487244,
+      "evidence": {
+        "componentPixels": 30,
+        "predictedAreaM2": 7.5,
+        "meanModelResponse": 0.487244,
+        "peakModelResponse": 0.747604,
+        "bboxFillRatio": 0.833333,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.04,
+        "localReliefMetres": 1.11,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-111",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 116.86667,
+        "y": 85.96728
+      },
+      "projectedPosition": {
+        "easting": 4365212.871264526,
+        "northing": 1093686.2806900528
+      },
+      "pixelCenter": [
+        1173.1667,
+        864.1728
+      ],
+      "pixelBBox": [
+        1163,
+        857,
+        22,
+        14
+      ],
+      "radiusMeters": 7.519,
+      "score": 0.486637,
+      "evidence": {
+        "componentPixels": 162,
+        "predictedAreaM2": 40.5,
+        "meanModelResponse": 0.486637,
+        "peakModelResponse": 0.876872,
+        "bboxFillRatio": 0.525974,
+        "bboxAspectRatio": 1.571429,
+        "maximumCellSlopeDegrees": 8.44,
+        "localReliefMetres": 1.0,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-112",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 26.09062,
+        "y": 2.12188
+      },
+      "projectedPosition": {
+        "easting": 4364758.991014525,
+        "northing": 1094105.5076900527
+      },
+      "pixelCenter": [
+        265.4062,
+        25.7188
+      ],
+      "pixelBBox": [
+        263,
+        23,
+        6,
+        7
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.486537,
+      "evidence": {
+        "componentPixels": 32,
+        "predictedAreaM2": 8.0,
+        "meanModelResponse": 0.486537,
+        "peakModelResponse": 0.724145,
+        "bboxFillRatio": 0.761905,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 9.22,
+        "localReliefMetres": 1.43,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-113",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 171.45571,
+        "y": 111.44429
+      },
+      "projectedPosition": {
+        "easting": 4365485.816464526,
+        "northing": 1093558.8956400526
+      },
+      "pixelCenter": [
+        1719.0571,
+        1118.9429
+      ],
+      "pixelBBox": [
+        1716,
+        1115,
+        7,
+        8
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.486364,
+      "evidence": {
+        "componentPixels": 35,
+        "predictedAreaM2": 8.75,
+        "meanModelResponse": 0.486364,
+        "peakModelResponse": 0.693237,
+        "bboxFillRatio": 0.625,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 9.44,
+        "localReliefMetres": 1.65,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-114",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 132.24091,
+        "y": 186.04091
+      },
+      "projectedPosition": {
+        "easting": 4365289.742464526,
+        "northing": 1093185.9125400528
+      },
+      "pixelCenter": [
+        1326.9091,
+        1864.9091
+      ],
+      "pixelBBox": [
+        1325,
+        1863,
+        5,
+        5
+      ],
+      "radiusMeters": 2.768,
+      "score": 0.48567,
+      "evidence": {
+        "componentPixels": 22,
+        "predictedAreaM2": 5.5,
+        "meanModelResponse": 0.48567,
+        "peakModelResponse": 0.747811,
+        "bboxFillRatio": 0.88,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.09,
+        "localReliefMetres": 0.5,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-115",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 163.05342,
+        "y": 12.71667
+      },
+      "projectedPosition": {
+        "easting": 4365443.805014526,
+        "northing": 1094052.5337400527
+      },
+      "pixelCenter": [
+        1635.0342,
+        131.6667
+      ],
+      "pixelBBox": [
+        1629,
+        124,
+        14,
+        18
+      ],
+      "radiusMeters": 6.701,
+      "score": 0.485376,
+      "evidence": {
+        "componentPixels": 117,
+        "predictedAreaM2": 29.25,
+        "meanModelResponse": 0.485376,
+        "peakModelResponse": 0.861812,
+        "bboxFillRatio": 0.464286,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 4.38,
+        "localReliefMetres": 0.57,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-116",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 80.25984,
+        "y": 9.95492
+      },
+      "projectedPosition": {
+        "easting": 4365029.837114526,
+        "northing": 1094066.3424900528
+      },
+      "pixelCenter": [
+        807.0984,
+        104.0492
+      ],
+      "pixelBBox": [
+        803,
+        99,
+        10,
+        12
+      ],
+      "radiusMeters": 4.905,
+      "score": 0.485162,
+      "evidence": {
+        "componentPixels": 61,
+        "predictedAreaM2": 15.25,
+        "meanModelResponse": 0.485162,
+        "peakModelResponse": 0.838437,
+        "bboxFillRatio": 0.508333,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 4.76,
+        "localReliefMetres": 0.75,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-117",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 59.93611,
+        "y": 35.16667
+      },
+      "projectedPosition": {
+        "easting": 4364928.218464525,
+        "northing": 1093940.2837400527
+      },
+      "pixelCenter": [
+        603.8611,
+        356.1667
+      ],
+      "pixelBBox": [
+        601,
+        352,
+        6,
+        9
+      ],
+      "radiusMeters": 3.704,
+      "score": 0.484656,
+      "evidence": {
+        "componentPixels": 36,
+        "predictedAreaM2": 9.0,
+        "meanModelResponse": 0.484656,
+        "peakModelResponse": 0.794024,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 5.44,
+        "localReliefMetres": 0.82,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-118",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 102.6877,
+        "y": 52.52377
+      },
+      "projectedPosition": {
+        "easting": 4365141.976414526,
+        "northing": 1093853.4982400527
+      },
+      "pixelCenter": [
+        1031.377,
+        529.7377
+      ],
+      "pixelBBox": [
+        1028,
+        522,
+        8,
+        15
+      ],
+      "radiusMeters": 5.25,
+      "score": 0.484215,
+      "evidence": {
+        "componentPixels": 61,
+        "predictedAreaM2": 15.25,
+        "meanModelResponse": 0.484215,
+        "peakModelResponse": 0.72881,
+        "bboxFillRatio": 0.508333,
+        "bboxAspectRatio": 1.875,
+        "maximumCellSlopeDegrees": 6.11,
+        "localReliefMetres": 0.93,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-119",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 10.41786,
+        "y": 105.40714
+      },
+      "projectedPosition": {
+        "easting": 4364680.627214526,
+        "northing": 1093589.0813900528
+      },
+      "pixelCenter": [
+        108.6786,
+        1058.5714
+      ],
+      "pixelBBox": [
+        106,
+        1056,
+        6,
+        6
+      ],
+      "radiusMeters": 3.121,
+      "score": 0.484056,
+      "evidence": {
+        "componentPixels": 28,
+        "predictedAreaM2": 7.0,
+        "meanModelResponse": 0.484056,
+        "peakModelResponse": 0.804002,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.1,
+        "localReliefMetres": 0.9,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-120",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 161.47727,
+        "y": 89.38409
+      },
+      "projectedPosition": {
+        "easting": 4365435.924264526,
+        "northing": 1093669.1966400526
+      },
+      "pixelCenter": [
+        1619.2727,
+        898.3409
+      ],
+      "pixelBBox": [
+        1616,
+        895,
+        8,
+        8
+      ],
+      "radiusMeters": 3.828,
+      "score": 0.48313,
+      "evidence": {
+        "componentPixels": 44,
+        "predictedAreaM2": 11.0,
+        "meanModelResponse": 0.48313,
+        "peakModelResponse": 0.830946,
+        "bboxFillRatio": 0.6875,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.7,
+        "localReliefMetres": 0.57,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-121",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 136.55,
+        "y": 96.65435
+      },
+      "projectedPosition": {
+        "easting": 4365311.287914526,
+        "northing": 1093632.8453400526
+      },
+      "pixelCenter": [
+        1370.0,
+        971.0435
+      ],
+      "pixelBBox": [
+        1367,
+        969,
+        7,
+        5
+      ],
+      "radiusMeters": 3.151,
+      "score": 0.482826,
+      "evidence": {
+        "componentPixels": 23,
+        "predictedAreaM2": 5.75,
+        "meanModelResponse": 0.482826,
+        "peakModelResponse": 0.813797,
+        "bboxFillRatio": 0.657143,
+        "bboxAspectRatio": 1.4,
+        "maximumCellSlopeDegrees": 9.49,
+        "localReliefMetres": 1.8,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-122",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 10.09872,
+        "y": 131.82692
+      },
+      "projectedPosition": {
+        "easting": 4364679.031514525,
+        "northing": 1093456.9824900527
+      },
+      "pixelCenter": [
+        105.4872,
+        1322.7692
+      ],
+      "pixelBBox": [
+        101,
+        1320,
+        9,
+        6
+      ],
+      "radiusMeters": 3.704,
+      "score": 0.48273,
+      "evidence": {
+        "componentPixels": 39,
+        "predictedAreaM2": 9.75,
+        "meanModelResponse": 0.48273,
+        "peakModelResponse": 0.737772,
+        "bboxFillRatio": 0.722222,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 9.77,
+        "localReliefMetres": 1.4,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-123",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 83.62179,
+        "y": 102.80385
+      },
+      "projectedPosition": {
+        "easting": 4365046.646864526,
+        "northing": 1093602.0978400528
+      },
+      "pixelCenter": [
+        840.7179,
+        1032.5385
+      ],
+      "pixelBBox": [
+        837,
+        1030,
+        8,
+        6
+      ],
+      "radiusMeters": 3.5,
+      "score": 0.482703,
+      "evidence": {
+        "componentPixels": 39,
+        "predictedAreaM2": 9.75,
+        "meanModelResponse": 0.482703,
+        "peakModelResponse": 0.783944,
+        "bboxFillRatio": 0.8125,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 9.29,
+        "localReliefMetres": 1.14,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-124",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 23.99524,
+        "y": 165.05714
+      },
+      "projectedPosition": {
+        "easting": 4364748.514114526,
+        "northing": 1093290.8313900528
+      },
+      "pixelCenter": [
+        244.4524,
+        1655.0714
+      ],
+      "pixelBBox": [
+        240,
+        1653,
+        10,
+        6
+      ],
+      "radiusMeters": 3.915,
+      "score": 0.482473,
+      "evidence": {
+        "componentPixels": 42,
+        "predictedAreaM2": 10.5,
+        "meanModelResponse": 0.482473,
+        "peakModelResponse": 0.724594,
+        "bboxFillRatio": 0.7,
+        "bboxAspectRatio": 1.666667,
+        "maximumCellSlopeDegrees": 1.94,
+        "localReliefMetres": 0.17,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-125",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 111.04765,
+        "y": 50.88882
+      },
+      "projectedPosition": {
+        "easting": 4365183.776164526,
+        "northing": 1093861.6729900527
+      },
+      "pixelCenter": [
+        1114.9765,
+        513.3882
+      ],
+      "pixelBBox": [
+        1112,
+        504,
+        8,
+        20
+      ],
+      "radiusMeters": 6.385,
+      "score": 0.482071,
+      "evidence": {
+        "componentPixels": 85,
+        "predictedAreaM2": 21.25,
+        "meanModelResponse": 0.482071,
+        "peakModelResponse": 0.766334,
+        "bboxFillRatio": 0.53125,
+        "bboxAspectRatio": 2.5,
+        "maximumCellSlopeDegrees": 5.54,
+        "localReliefMetres": 0.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-126",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 72.92353,
+        "y": 21.54706
+      },
+      "projectedPosition": {
+        "easting": 4364993.155564526,
+        "northing": 1094008.3817900526
+      },
+      "pixelCenter": [
+        733.7353,
+        219.9706
+      ],
+      "pixelBBox": [
+        731,
+        216,
+        7,
+        8
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.481193,
+      "evidence": {
+        "componentPixels": 34,
+        "predictedAreaM2": 8.5,
+        "meanModelResponse": 0.481193,
+        "peakModelResponse": 0.807448,
+        "bboxFillRatio": 0.607143,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 10.54,
+        "localReliefMetres": 1.32,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-127",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 84.02143,
+        "y": 160.51429
+      },
+      "projectedPosition": {
+        "easting": 4365048.645064525,
+        "northing": 1093313.5456400528
+      },
+      "pixelCenter": [
+        844.7143,
+        1609.6429
+      ],
+      "pixelBBox": [
+        842,
+        1607,
+        7,
+        6
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.480323,
+      "evidence": {
+        "componentPixels": 28,
+        "predictedAreaM2": 7.0,
+        "meanModelResponse": 0.480323,
+        "peakModelResponse": 0.721999,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 4.67,
+        "localReliefMetres": 0.83,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-128",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 191.55,
+        "y": 109.935
+      },
+      "projectedPosition": {
+        "easting": 4365586.287914526,
+        "northing": 1093566.4420900526
+      },
+      "pixelCenter": [
+        1920.0,
+        1103.85
+      ],
+      "pixelBBox": [
+        1916,
+        1101,
+        8,
+        8
+      ],
+      "radiusMeters": 3.828,
+      "score": 0.480114,
+      "evidence": {
+        "componentPixels": 40,
+        "predictedAreaM2": 10.0,
+        "meanModelResponse": 0.480114,
+        "peakModelResponse": 0.827517,
+        "bboxFillRatio": 0.625,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.55,
+        "localReliefMetres": 0.66,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-129",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 74.18276,
+        "y": 57.82069
+      },
+      "projectedPosition": {
+        "easting": 4364999.451714526,
+        "northing": 1093827.0136400526
+      },
+      "pixelCenter": [
+        746.3276,
+        582.7069
+      ],
+      "pixelBBox": [
+        741,
+        579,
+        12,
+        8
+      ],
+      "radiusMeters": 4.606,
+      "score": 0.480091,
+      "evidence": {
+        "componentPixels": 58,
+        "predictedAreaM2": 14.5,
+        "meanModelResponse": 0.480091,
+        "peakModelResponse": 0.818896,
+        "bboxFillRatio": 0.604167,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 12.71,
+        "localReliefMetres": 1.78,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-130",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 86.89886,
+        "y": 54.41591
+      },
+      "projectedPosition": {
+        "easting": 4365063.032214526,
+        "northing": 1093844.0375400528
+      },
+      "pixelCenter": [
+        873.4886,
+        548.6591
+      ],
+      "pixelBBox": [
+        868,
+        543,
+        11,
+        13
+      ],
+      "radiusMeters": 5.257,
+      "score": 0.48002,
+      "evidence": {
+        "componentPixels": 88,
+        "predictedAreaM2": 22.0,
+        "meanModelResponse": 0.48002,
+        "peakModelResponse": 0.805907,
+        "bboxFillRatio": 0.615385,
+        "bboxAspectRatio": 1.181818,
+        "maximumCellSlopeDegrees": 9.25,
+        "localReliefMetres": 1.13,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-131",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 97.16034,
+        "y": 100.35
+      },
+      "projectedPosition": {
+        "easting": 4365114.339614525,
+        "northing": 1093614.3670900527
+      },
+      "pixelCenter": [
+        976.1034,
+        1008.0
+      ],
+      "pixelBBox": [
+        974,
+        1005,
+        6,
+        7
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.479414,
+      "evidence": {
+        "componentPixels": 29,
+        "predictedAreaM2": 7.25,
+        "meanModelResponse": 0.479414,
+        "peakModelResponse": 0.715883,
+        "bboxFillRatio": 0.690476,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 3.05,
+        "localReliefMetres": 0.47,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-132",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 180.7,
+        "y": 7.22
+      },
+      "projectedPosition": {
+        "easting": 4365532.037914526,
+        "northing": 1094080.0170900526
+      },
+      "pixelCenter": [
+        1811.5,
+        76.7
+      ],
+      "pixelBBox": [
+        1809,
+        75,
+        6,
+        5
+      ],
+      "radiusMeters": 2.953,
+      "score": 0.479144,
+      "evidence": {
+        "componentPixels": 20,
+        "predictedAreaM2": 5.0,
+        "meanModelResponse": 0.479144,
+        "peakModelResponse": 0.719996,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 5.07,
+        "localReliefMetres": 0.89,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-133",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 185.7875,
+        "y": 24.8
+      },
+      "projectedPosition": {
+        "easting": 4365557.475414526,
+        "northing": 1093992.1170900527
+      },
+      "pixelCenter": [
+        1862.375,
+        252.5
+      ],
+      "pixelBBox": [
+        1860,
+        250,
+        6,
+        6
+      ],
+      "radiusMeters": 3.121,
+      "score": 0.479101,
+      "evidence": {
+        "componentPixels": 24,
+        "predictedAreaM2": 6.0,
+        "meanModelResponse": 0.479101,
+        "peakModelResponse": 0.723393,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.33,
+        "localReliefMetres": 0.72,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-134",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 162.36136,
+        "y": 92.22273
+      },
+      "projectedPosition": {
+        "easting": 4365440.344714526,
+        "northing": 1093655.0034400527
+      },
+      "pixelCenter": [
+        1628.1136,
+        926.7273
+      ],
+      "pixelBBox": [
+        1625,
+        923,
+        7,
+        8
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.479048,
+      "evidence": {
+        "componentPixels": 44,
+        "predictedAreaM2": 11.0,
+        "meanModelResponse": 0.479048,
+        "peakModelResponse": 0.822108,
+        "bboxFillRatio": 0.785714,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 5.99,
+        "localReliefMetres": 0.82,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-135",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 178.822,
+        "y": 112.459
+      },
+      "projectedPosition": {
+        "easting": 4365522.647914526,
+        "northing": 1093553.8220900528
+      },
+      "pixelCenter": [
+        1792.72,
+        1129.09
+      ],
+      "pixelBBox": [
+        1787,
+        1121,
+        12,
+        18
+      ],
+      "radiusMeters": 6.408,
+      "score": 0.478991,
+      "evidence": {
+        "componentPixels": 100,
+        "predictedAreaM2": 25.0,
+        "meanModelResponse": 0.478991,
+        "peakModelResponse": 0.867403,
+        "bboxFillRatio": 0.462963,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 13.74,
+        "localReliefMetres": 1.53,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-136",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 23.15645,
+        "y": 164.90484
+      },
+      "projectedPosition": {
+        "easting": 4364744.320164526,
+        "northing": 1093291.5928900526
+      },
+      "pixelCenter": [
+        236.0645,
+        1653.5484
+      ],
+      "pixelBBox": [
+        234,
+        1650,
+        5,
+        8
+      ],
+      "radiusMeters": 3.358,
+      "score": 0.478754,
+      "evidence": {
+        "componentPixels": 31,
+        "predictedAreaM2": 7.75,
+        "meanModelResponse": 0.478754,
+        "peakModelResponse": 0.783939,
+        "bboxFillRatio": 0.775,
+        "bboxAspectRatio": 1.6,
+        "maximumCellSlopeDegrees": 2.84,
+        "localReliefMetres": 0.18,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-137",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 77.29054,
+        "y": 83.72095
+      },
+      "projectedPosition": {
+        "easting": 4365014.990614526,
+        "northing": 1093697.5123400528
+      },
+      "pixelCenter": [
+        777.4054,
+        841.7095
+      ],
+      "pixelBBox": [
+        771,
+        834,
+        14,
+        18
+      ],
+      "radiusMeters": 6.701,
+      "score": 0.47734,
+      "evidence": {
+        "componentPixels": 148,
+        "predictedAreaM2": 37.0,
+        "meanModelResponse": 0.47734,
+        "peakModelResponse": 0.888579,
+        "bboxFillRatio": 0.587302,
+        "bboxAspectRatio": 1.285714,
+        "maximumCellSlopeDegrees": 7.67,
+        "localReliefMetres": 1.01,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-138",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 184.87022,
+        "y": 191.20056
+      },
+      "projectedPosition": {
+        "easting": 4365552.889014525,
+        "northing": 1093160.1142900528
+      },
+      "pixelCenter": [
+        1853.2022,
+        1916.5056
+      ],
+      "pixelBBox": [
+        1849,
+        1911,
+        11,
+        13
+      ],
+      "radiusMeters": 5.257,
+      "score": 0.477292,
+      "evidence": {
+        "componentPixels": 89,
+        "predictedAreaM2": 22.25,
+        "meanModelResponse": 0.477292,
+        "peakModelResponse": 0.769262,
+        "bboxFillRatio": 0.622378,
+        "bboxAspectRatio": 1.181818,
+        "maximumCellSlopeDegrees": 11.02,
+        "localReliefMetres": 1.61,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-139",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 77.37785,
+        "y": 105.68165
+      },
+      "projectedPosition": {
+        "easting": 4365015.427164526,
+        "northing": 1093587.7088400526
+      },
+      "pixelCenter": [
+        778.2785,
+        1061.3165
+      ],
+      "pixelBBox": [
+        773,
+        1056,
+        12,
+        11
+      ],
+      "radiusMeters": 5.07,
+      "score": 0.47722,
+      "evidence": {
+        "componentPixels": 79,
+        "predictedAreaM2": 19.75,
+        "meanModelResponse": 0.47722,
+        "peakModelResponse": 0.885738,
+        "bboxFillRatio": 0.598485,
+        "bboxAspectRatio": 1.090909,
+        "maximumCellSlopeDegrees": 9.88,
+        "localReliefMetres": 1.08,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-140",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 108.17727,
+        "y": 55.06364
+      },
+      "projectedPosition": {
+        "easting": 4365169.424264526,
+        "northing": 1093840.7988900526
+      },
+      "pixelCenter": [
+        1086.2727,
+        555.1364
+      ],
+      "pixelBBox": [
+        1084,
+        553,
+        6,
+        5
+      ],
+      "radiusMeters": 2.953,
+      "score": 0.476462,
+      "evidence": {
+        "componentPixels": 22,
+        "predictedAreaM2": 5.5,
+        "meanModelResponse": 0.476462,
+        "peakModelResponse": 0.709336,
+        "bboxFillRatio": 0.733333,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 12.06,
+        "localReliefMetres": 1.48,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-141",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 166.55741,
+        "y": 141.80926
+      },
+      "projectedPosition": {
+        "easting": 4365461.324964526,
+        "northing": 1093407.0707900526
+      },
+      "pixelCenter": [
+        1670.0741,
+        1422.5926
+      ],
+      "pixelBBox": [
+        1668,
+        1420,
+        5,
+        6
+      ],
+      "radiusMeters": 2.953,
+      "score": 0.47625,
+      "evidence": {
+        "componentPixels": 27,
+        "predictedAreaM2": 6.75,
+        "meanModelResponse": 0.47625,
+        "peakModelResponse": 0.833385,
+        "bboxFillRatio": 0.9,
+        "bboxAspectRatio": 1.2,
+        "maximumCellSlopeDegrees": 3.73,
+        "localReliefMetres": 0.69,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-142",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 179.55784,
+        "y": 107.43627
+      },
+      "projectedPosition": {
+        "easting": 4365526.327114526,
+        "northing": 1093578.9357400527
+      },
+      "pixelCenter": [
+        1800.0784,
+        1078.8627
+      ],
+      "pixelBBox": [
+        1797,
+        1075,
+        7,
+        10
+      ],
+      "radiusMeters": 4.052,
+      "score": 0.476132,
+      "evidence": {
+        "componentPixels": 51,
+        "predictedAreaM2": 12.75,
+        "meanModelResponse": 0.476132,
+        "peakModelResponse": 0.806267,
+        "bboxFillRatio": 0.728571,
+        "bboxAspectRatio": 1.428571,
+        "maximumCellSlopeDegrees": 5.75,
+        "localReliefMetres": 0.68,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-143",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 110.63136,
+        "y": 154.52966
+      },
+      "projectedPosition": {
+        "easting": 4365181.694714526,
+        "northing": 1093343.4687900527
+      },
+      "pixelCenter": [
+        1110.8136,
+        1549.7966
+      ],
+      "pixelBBox": [
+        1106,
+        1546,
+        10,
+        8
+      ],
+      "radiusMeters": 4.202,
+      "score": 0.476099,
+      "evidence": {
+        "componentPixels": 59,
+        "predictedAreaM2": 14.75,
+        "meanModelResponse": 0.476099,
+        "peakModelResponse": 0.818801,
+        "bboxFillRatio": 0.7375,
+        "bboxAspectRatio": 1.25,
+        "maximumCellSlopeDegrees": 5.21,
+        "localReliefMetres": 0.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-144",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 175.80579,
+        "y": 193.16368
+      },
+      "projectedPosition": {
+        "easting": 4365507.566864526,
+        "northing": 1093150.2986900527
+      },
+      "pixelCenter": [
+        1762.5579,
+        1936.1368
+      ],
+      "pixelBBox": [
+        1758,
+        1931,
+        11,
+        13
+      ],
+      "radiusMeters": 5.257,
+      "score": 0.475963,
+      "evidence": {
+        "componentPixels": 95,
+        "predictedAreaM2": 23.75,
+        "meanModelResponse": 0.475963,
+        "peakModelResponse": 0.787422,
+        "bboxFillRatio": 0.664336,
+        "bboxAspectRatio": 1.181818,
+        "maximumCellSlopeDegrees": 6.9,
+        "localReliefMetres": 1.03,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-145",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 57.87703,
+        "y": 180.15135
+      },
+      "projectedPosition": {
+        "easting": 4364917.923064526,
+        "northing": 1093215.3603400527
+      },
+      "pixelCenter": [
+        583.2703,
+        1806.0135
+      ],
+      "pixelBBox": [
+        576,
+        1801,
+        14,
+        11
+      ],
+      "radiusMeters": 5.451,
+      "score": 0.475931,
+      "evidence": {
+        "componentPixels": 74,
+        "predictedAreaM2": 18.5,
+        "meanModelResponse": 0.475931,
+        "peakModelResponse": 0.844944,
+        "bboxFillRatio": 0.480519,
+        "bboxAspectRatio": 1.272727,
+        "maximumCellSlopeDegrees": 11.39,
+        "localReliefMetres": 1.6,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-146",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 64.32,
+        "y": 6.4125
+      },
+      "projectedPosition": {
+        "easting": 4364950.137914525,
+        "northing": 1094084.0545900527
+      },
+      "pixelCenter": [
+        647.7,
+        68.625
+      ],
+      "pixelBBox": [
+        644,
+        65,
+        7,
+        8
+      ],
+      "radiusMeters": 3.658,
+      "score": 0.475904,
+      "evidence": {
+        "componentPixels": 40,
+        "predictedAreaM2": 10.0,
+        "meanModelResponse": 0.475904,
+        "peakModelResponse": 0.801723,
+        "bboxFillRatio": 0.714286,
+        "bboxAspectRatio": 1.142857,
+        "maximumCellSlopeDegrees": 3.77,
+        "localReliefMetres": 0.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-147",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 30.85357,
+        "y": 66.32143
+      },
+      "projectedPosition": {
+        "easting": 4364782.805764526,
+        "northing": 1093784.5099400526
+      },
+      "pixelCenter": [
+        313.0357,
+        667.7143
+      ],
+      "pixelBBox": [
+        310,
+        665,
+        7,
+        6
+      ],
+      "radiusMeters": 3.305,
+      "score": 0.475415,
+      "evidence": {
+        "componentPixels": 28,
+        "predictedAreaM2": 7.0,
+        "meanModelResponse": 0.475415,
+        "peakModelResponse": 0.767307,
+        "bboxFillRatio": 0.666667,
+        "bboxAspectRatio": 1.166667,
+        "maximumCellSlopeDegrees": 5.05,
+        "localReliefMetres": 0.73,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-148",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 193.45357,
+        "y": 163.8625
+      },
+      "projectedPosition": {
+        "easting": 4365595.805764526,
+        "northing": 1093296.8045900527
+      },
+      "pixelCenter": [
+        1939.0357,
+        1643.125
+      ],
+      "pixelBBox": [
+        1932,
+        1637,
+        16,
+        12
+      ],
+      "radiusMeters": 6.0,
+      "score": 0.474674,
+      "evidence": {
+        "componentPixels": 112,
+        "predictedAreaM2": 28.0,
+        "meanModelResponse": 0.474674,
+        "peakModelResponse": 0.892477,
+        "bboxFillRatio": 0.583333,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 14.39,
+        "localReliefMetres": 2.19,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-149",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 148.29235,
+        "y": 94.98882
+      },
+      "projectedPosition": {
+        "easting": 4365369.9996645255,
+        "northing": 1093641.1729900527
+      },
+      "pixelCenter": [
+        1487.4235,
+        954.3882
+      ],
+      "pixelBBox": [
+        1482,
+        949,
+        11,
+        14
+      ],
+      "radiusMeters": 5.451,
+      "score": 0.474054,
+      "evidence": {
+        "componentPixels": 85,
+        "predictedAreaM2": 21.25,
+        "meanModelResponse": 0.474054,
+        "peakModelResponse": 0.89546,
+        "bboxFillRatio": 0.551948,
+        "bboxAspectRatio": 1.272727,
+        "maximumCellSlopeDegrees": 7.43,
+        "localReliefMetres": 1.24,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    },
+    {
+      "id": "floor-optical-v2-150",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 70.32108,
+        "y": 63.52952
+      },
+      "projectedPosition": {
+        "easting": 4364980.1433145255,
+        "northing": 1093798.4694900527
+      },
+      "pixelCenter": [
+        707.7108,
+        639.7952
+      ],
+      "pixelBBox": [
+        704,
+        633,
+        9,
+        14
+      ],
+      "radiusMeters": 5.161,
+      "score": 0.473798,
+      "evidence": {
+        "componentPixels": 83,
+        "predictedAreaM2": 20.75,
+        "meanModelResponse": 0.473798,
+        "peakModelResponse": 0.775566,
+        "bboxFillRatio": 0.65873,
+        "bboxAspectRatio": 1.555556,
+        "maximumCellSlopeDegrees": 8.65,
+        "localReliefMetres": 1.35,
+        "terrainGridMetres": 5,
+        "signals": [
+          "frozen supervised pixel classifier response",
+          "connected predicted region passing fixed geometry constraints"
+        ],
+        "interpretation": "Unreviewed transferred model suggestion; not a confirmed boulder or obstacle height. Score is uncalibrated model response."
+      }
+    }
+  ],
+  "limitations": [
+    "Model transferred from other HiRISE patches; no Jezero or ridge ground-truth accuracy measurement.",
+    "Semantic benchmark scores are for all thresholded pixels, not this geometry-filtered top150 proposal set.",
+    "Geometric filters, four-meter spacing and cap intentionally suppress regions; absence does not mean clear terrain.",
+    "Classifier can confuse shadows, crater edges, ripples, fractures and mosaic artifacts with boulder pixels.",
+    "Pixel resolution is not positional accuracy. Optical/DEM registration, object height and physical traversability remain uncertain.",
+    "All proposals require human review and explicit buffer acceptance before affecting routing."
+  ]
+}

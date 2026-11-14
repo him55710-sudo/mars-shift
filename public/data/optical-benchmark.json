@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "status": "measured",
+  "measuredAt": "2026-11-14T08:49:36.298960+00:00",
+  "title": "Independent labeled HiRISE patch benchmark of the frozen optical cue detector",
+  "dataset": {
+    "name": "Mars-Bench mb-boulder_seg",
+    "version": "v1",
+    "recordId": 15494673,
+    "doi": "10.5281/zenodo.15494673",
+    "url": "https://zenodo.org/records/15494673",
+    "metadataUrl": "https://zenodo.org/api/records/15494673",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "credit": "Mirali Purohit et al. (2025), Mars-Bench: mb-boulder_seg; HiRISE/MRO: NASA/JPL-Caltech/University of Arizona.",
+    "creators": [
+      "Purohit, Mirali",
+      "Gajera, Bimal",
+      "Malaviya, Vatsal",
+      "Mehta, Irish",
+      "Kasodekar, Kunal",
+      "Adler, Jacob",
+      "Lu, Steven",
+      "Rebbapragada, Umaa",
+      "Kerner, Hannah"
+    ],
+    "originalSplits": {
+      "train": 39,
+      "val": 6,
+      "test": 4
+    },
+    "evaluatedSplit": "test",
+    "tileCount": 4,
+    "pixels": 1000000,
+    "maskClasses": {
+      "0": "Background",
+      "1": "Boulder"
+    },
+    "archives": [
+      {
+        "file": "data.zip",
+        "url": "https://zenodo.org/api/records/15494673/files/data.zip/content",
+        "md5": "9b82c4b9110eab668ecd2c9eb7c222e1",
+        "sha256": "d94389edd86e14bcaed0b7eaa52a3e5aef2364ed1a9dab92af5d9b8190e6e39e"
+      },
+      {
+        "file": "mapping.json",
+        "url": "https://zenodo.org/api/records/15494673/files/mapping.json/content",
+        "md5": "551e3db637c7f6c7ad1097524f27095a",
+        "sha256": "9271d36ffce55fde2fa21578ed2c3efbf0007e778093e944ffde619c8eb8e78e"
+      },
+      {
+        "file": "partitions.zip",
+        "url": "https://zenodo.org/api/records/15494673/files/partitions.zip/content",
+        "md5": "cdadf1f9f5b29ea225a8d606a27b3b32",
+        "sha256": "04632de89f88dc511c0e76db42cad18801b0e024a406fae5126ce625d9ddd7f6"
+      }
+    ]
+  },
+  "detector": {
+    "name": "shadow-contrast-v1",
+    "trainedWeights": false,
+    "source": "scripts/detect_optical.py",
+    "sourceSha256": "993997cbdd995babbd66f794b03684d5295521c9a9f7444032509ffb750e2dc8",
+    "sourceIntegrity": {
+      "status": "audited-equivalent-refactor",
+      "auditedAt": "2026-11-14T08:49:32.050277+00:00",
+      "originalSourceSha256": "94e63ef6f383d12d5aec6955092479d0337b3a2ba2e25f64186aad03cdb700fe",
+      "currentSourceSha256": "7eaf79d9dcdb58cafe6a4993a774afa4607ac438accd1e32da0491b206c6d949",
+      "originalBytecodeSha256": "151e87282e9f867f7922060e3c30586e1c9b021b59fce4876f31a04d9ffefa69",
+      "configUnchanged": true,
+      "change": "Pure computation optimization: precompute normalized-background once rather than inside the component loop. No threshold or ranking change.",
+      "checks": [
+        {
+          "imageSha256": "0ac94b9aaa752ad06bdccd2928310292a7367a2186df7088ce367d68ee3668af",
+          "maskBitwiseEqual": true,
+          "candidateRecordsExactlyEqual": true,
+          "statsExactlyEqual": true
+        },
+        {
+          "imageSha256": "4349f4d21e4bc4d1630a449617f1c2dc0119d2bf31af8a7f995dda774d17c5f1",
+          "maskBitwiseEqual": true,
+          "candidateRecordsExactlyEqual": true,
+          "statsExactlyEqual": true
+        },
+        {
+          "imageSha256": "11bce8d3f221c3e2ab1c4a7fbbe83be3257166d5c332c52c2f8f7a9466800f37",
+          "maskBitwiseEqual": true,
+          "candidateRecordsExactlyEqual": true,
+          "statsExactlyEqual": true
+        },
+        {
+          "imageSha256": "ade860b7454519aea9182c448ed94ca5ca07fe21d3df6130117ff68ec0941ad3",
+          "maskBitwiseEqual": true,
+          "candidateRecordsExactlyEqual": true,
+          "statsExactlyEqual": true
+        }
+      ],
+      "firstAttemptPreserved": "benchmark-attempt-1.json",
+      "testTuning": false,
+      "sourceScopeReview": {
+        "reviewedAt": "2026-11-14T08:59:35.662764+00:00",
+        "auditedFullSourceSha256": "7eaf79d9dcdb58cafe6a4993a774afa4607ac438accd1e32da0491b206c6d949",
+        "currentFullSourceSha256": "993997cbdd995babbd66f794b03684d5295521c9a9f7444032509ffb750e2dc8",
+        "acceptedApiSha256": "a5d3a2a432964cb121d831ea88487323756fa56bfa9f11ea6165971c20b2d91e",
+        "scope": "detect/detect_candidates/config_sha256 AST, DEFAULT_CONFIG AST and NumPy/SciPy/math/json/hashlib import AST; line numbers excluded",
+        "change": "Only asset acquisition range-server validation/byte reservation and unused imports changed after evaluated source; frozen detector API/defaults/imports are identical."
+      }
+    },
+    "lock": {
+      "lockedAt": "2026-11-14T08:45:58.079451+00:00",
+      "detectorSha256": "94e63ef6f383d12d5aec6955092479d0337b3a2ba2e25f64186aad03cdb700fe",
+      "briefFrozenBeforeEvaluation": {
+        "version": "shadow-contrast-v1",
+        "normalization_percentiles": [
+          1,
+          99
+        ],
+        "background_sigma_m": 3,
+        "dark_residual_min": 0.055,
+        "below_global_median": true,
+        "component_area_m2": [
+          0.75,
+          50
+        ],
+        "max_bbox_side_m": 16,
+        "max_aspect": 4,
+        "min_fill": 0.12,
+        "bright_neighbor_residual_min": 0.025,
+        "bright_neighbor_radius_m": 2,
+        "radius_buffer_m": 1,
+        "min_center_separation_m": 4,
+        "max_candidates": 150
+      },
+      "moduleDefaultConfig": {
+        "version": "shadow-contrast-v1",
+        "normalization_percentiles": [
+          1.0,
+          99.0
+        ],
+        "background_sigma_m": 3.0,
+        "dark_residual_threshold": 0.055,
+        "dark_percentile_ceiling": 50.0,
+        "min_area_m2": 0.75,
+        "max_area_m2": 50.0,
+        "max_bbox_length_m": 16.0,
+        "max_aspect_ratio": 4.0,
+        "min_fill_ratio": 0.12,
+        "bright_pair_threshold": 0.025,
+        "search_ring_m": 2.0,
+        "candidate_buffer_m": 1.0,
+        "min_separation_m": 4.0,
+        "maximum_candidates": 150
+      },
+      "protocol": "No test-driven tuning; all original test tiles, native resolution; no weights."
+    },
+    "input": "Untouched single-band uint8 native GeoTIFF pixels; native meters per pixel passed to detect().",
+    "apiSha256": "a5d3a2a432964cb121d831ea88487323756fa56bfa9f11ea6165971c20b2d91e"
+  },
+  "protocol": {
+    "name": "native-pixel-frozen-v1",
+    "testTuning": false,
+    "noResampling": true,
+    "groundTruthUsedByDetector": false,
+    "allPublishedTestTiles": true,
+    "leakageAudit": {
+      "exactImageDuplicates": [],
+      "testTrainValOverlappingBoundsInIdenticalCrs": [],
+      "sameObservationAcrossSplits": true,
+      "scope": "Original patch holdout, not observation-level or geographic generalization."
+    },
+    "pixel": "Boulder=1; compare returned bool mask at exact native pixels. Micro sums TP/FP/FN/TN; no tolerance, filtering or mask dilation.",
+    "componentBox": "Secondary proxy only: 8-connected binary components on reference and prediction; half-open axis-aligned boxes; one-to-one cardinality-first matches at box IoU >=0.5. These are not original boulder instances.",
+    "interval": {
+      "method": "Percentile bootstrap of whole test tiles, recomputing micro metrics",
+      "coverage": 0.95,
+      "iterations": 10000,
+      "seed": 20261114,
+      "unit": "tile",
+      "warning": "Four tiles only; interval is unstable and does not establish regional generalization."
+    }
+  },
+  "aggregate": {
+    "pixelCounts": {
+      "tp": 5306,
+      "fp": 51024,
+      "fn": 27158,
+      "tn": 916512
+    },
+    "pixelMetrics": {
+      "precision": 0.09419492277649565,
+      "recall": 0.16344258255298177,
+      "f1": 0.11951257967880713,
+      "iou": 0.06355404369490227
+    },
+    "pixelBootstrap95": {
+      "precision": {
+        "low": 0.06054809494066209,
+        "high": 0.12225695122745328
+      },
+      "recall": {
+        "low": 0.0806628731157033,
+        "high": 0.37590887057682987
+      },
+      "f1": {
+        "low": 0.08858677776559588,
+        "high": 0.13341147269718698
+      },
+      "iou": {
+        "low": 0.04634622002982677,
+        "high": 0.07147342370627563
+      }
+    },
+    "componentBoxCounts": {
+      "tp": 5,
+      "fp": 595,
+      "fn": 357
+    },
+    "componentBoxMetrics": {
+      "precision": 0.008333333333333333,
+      "recall": 0.013812154696132596,
+      "f1": 0.010395010395010396
+    },
+    "componentBoxBootstrap95": {
+      "precision": {
+        "low": 0.0016666666666666668,
+        "high": 0.016666666666666666
+      },
+      "recall": {
+        "low": 0.005434782608695652,
+        "high": 0.02631578947368421
+      },
+      "f1": {
+        "low": 0.002857142857142857,
+        "high": 0.01948051948051948
+      }
+    }
+  },
+  "samples": [
+    {
+      "id": "ESP_017355_2260_RED_6161",
+      "observation": "ESP_017355_2260",
+      "split": "test",
+      "image": "data/test/images/ESP_017355_2260_RED_6161.tif",
+      "mask": "data/test/masks/ESP_017355_2260_RED_6161.tif",
+      "imageSha256": "0ac94b9aaa752ad06bdccd2928310292a7367a2186df7088ce367d68ee3668af",
+      "maskSha256": "490ad922a677bffa38ed47caefa353f4b711832dac03995863c0737282b619d6",
+      "width": 500,
+      "height": 500,
+      "resolutionM": [
+        0.5,
+        0.5
+      ],
+      "boundsM": [
+        -6830633.5,
+        2693723.0,
+        -6830383.5,
+        2693973.0
+      ],
+      "crsWkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3386150.7470034,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",45],PARAMETER[\"central_meridian\",180],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        0.5,
+        0.0,
+        -6830633.5,
+        0.0,
+        -0.5,
+        2693973.0
+      ],
+      "sourceUrl": "https://www.uahirise.org/ESP_017355_2260",
+      "pixels": 250000,
+      "referencePositivePixels": 9724,
+      "predictedPositivePixels": 6334,
+      "pixelCounts": {
+        "tp": 795,
+        "fp": 5539,
+        "fn": 8929,
+        "tn": 234737
+      },
+      "pixelMetrics": {
+        "precision": 0.1255131038838017,
+        "recall": 0.08175647881530235,
+        "f1": 0.09901606675800224,
+        "iou": 0.05208674572495577
+      },
+      "componentBoxCounts": {
+        "tp": 3,
+        "fp": 147,
+        "fn": 102
+      },
+      "componentBoxMetrics": {
+        "precision": 0.02,
+        "recall": 0.02857142857142857,
+        "f1": 0.023529411764705882
+      },
+      "detectorCandidateCount": 150
+    },
+    {
+      "id": "ESP_025650_2165_RED_6402",
+      "observation": "ESP_025650_2165",
+      "split": "test",
+      "image": "data/test/images/ESP_025650_2165_RED_6402.tif",
+      "mask": "data/test/masks/ESP_025650_2165_RED_6402.tif",
+      "imageSha256": "4349f4d21e4bc4d1630a449617f1c2dc0119d2bf31af8a7f995dda774d17c5f1",
+      "maskSha256": "5a1e197d47ccfc0d2a4e136d5762d20b5727e80d0fb9d1f11b08d2db0c0290eb",
+      "width": 500,
+      "height": 500,
+      "resolutionM": [
+        0.25,
+        0.25
+      ],
+      "boundsM": [
+        8264868.75,
+        2139132.25,
+        8264993.75,
+        2139257.25
+      ],
+      "crsWkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3389574.3490888,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",35],PARAMETER[\"central_meridian\",180],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        0.25,
+        0.0,
+        8264868.75,
+        0.0,
+        -0.25,
+        2139257.25
+      ],
+      "sourceUrl": "https://www.uahirise.org/ESP_025650_2165",
+      "pixels": 250000,
+      "referencePositivePixels": 3833,
+      "predictedPositivePixels": 23725,
+      "pixelCounts": {
+        "tp": 1538,
+        "fp": 22187,
+        "fn": 2295,
+        "tn": 223980
+      },
+      "pixelMetrics": {
+        "precision": 0.06482613277133825,
+        "recall": 0.4012522828072006,
+        "f1": 0.11161913056099862,
+        "iou": 0.05910837817063797
+      },
+      "componentBoxCounts": {
+        "tp": 1,
+        "fp": 149,
+        "fn": 72
+      },
+      "componentBoxMetrics": {
+        "precision": 0.006666666666666667,
+        "recall": 0.0136986301369863,
+        "f1": 0.008968609865470852
+      },
+      "detectorCandidateCount": 150
+    },
+    {
+      "id": "ESP_028537_2270_RED_3105",
+      "observation": "ESP_028537_2270",
+      "split": "test",
+      "image": "data/test/images/ESP_028537_2270_RED_3105.tif",
+      "mask": "data/test/masks/ESP_028537_2270_RED_3105.tif",
+      "imageSha256": "11bce8d3f221c3e2ab1c4a7fbbe83be3257166d5c332c52c2f8f7a9466800f37",
+      "maskSha256": "66cdc6ba95cc5814b6691660f3261e69d3d7c75547d2e329247ddc5d498663ce",
+      "width": 500,
+      "height": 500,
+      "resolutionM": [
+        0.25,
+        0.25
+      ],
+      "boundsM": [
+        -6733886.25,
+        2745420.0,
+        -6733761.25,
+        2745545.0
+      ],
+      "crsWkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3386150.7470034,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",45],PARAMETER[\"central_meridian\",180],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        0.25,
+        0.0,
+        -6733886.25,
+        0.0,
+        -0.25,
+        2745545.0
+      ],
+      "sourceUrl": "https://www.uahirise.org/ESP_028537_2270",
+      "pixels": 250000,
+      "referencePositivePixels": 18614,
+      "predictedPositivePixels": 24380,
+      "pixelCounts": {
+        "tp": 2960,
+        "fp": 21420,
+        "fn": 15654,
+        "tn": 209966
+      },
+      "pixelMetrics": {
+        "precision": 0.1214109926168991,
+        "recall": 0.1590200924035672,
+        "f1": 0.13769363166953527,
+        "iou": 0.07393715341959335
+      },
+      "componentBoxCounts": {
+        "tp": 1,
+        "fp": 149,
+        "fn": 174
+      },
+      "componentBoxMetrics": {
+        "precision": 0.006666666666666667,
+        "recall": 0.005714285714285714,
+        "f1": 0.006153846153846154
+      },
+      "detectorCandidateCount": 150
+    },
+    {
+      "id": "ESP_037018_2170_RED_MRDR_0751",
+      "observation": "ESP_037018_2170",
+      "split": "test",
+      "image": "data/test/images/ESP_037018_2170_RED_MRDR_0751.tif",
+      "mask": "data/test/masks/ESP_037018_2170_RED_MRDR_0751.tif",
+      "imageSha256": "ade860b7454519aea9182c448ed94ca5ca07fe21d3df6130117ff68ec0941ad3",
+      "maskSha256": "5ca1806839acee324e58f7f54e61464e5fb64739f41411e31d390faf0fa7b11f",
+      "width": 500,
+      "height": 500,
+      "resolutionM": [
+        0.59518424784513,
+        0.59518424784513
+      ],
+      "boundsM": [
+        -710.0548076792852,
+        2155494.869441769,
+        -412.4626837567202,
+        2155792.4615656915
+      ],
+      "crsWkt": "PROJCS[\"Sinusoidal Mars\",GEOGCS[\"GCS_Mars\",DATUM[\"D_Mars\",SPHEROID[\"Mars\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Sinusoidal\"],PARAMETER[\"longitude_of_center\",314.7204813795],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "transform": [
+        0.59518424784513,
+        0.0,
+        -710.0548076792852,
+        0.0,
+        -0.59518424784513,
+        2155792.4615656915
+      ],
+      "sourceUrl": "https://www.uahirise.org/ESP_037018_2170",
+      "pixels": 250000,
+      "referencePositivePixels": 293,
+      "predictedPositivePixels": 1891,
+      "pixelCounts": {
+        "tp": 13,
+        "fp": 1878,
+        "fn": 280,
+        "tn": 247829
+      },
+      "pixelMetrics": {
+        "precision": 0.006874669487043892,
+        "recall": 0.04436860068259386,
+        "f1": 0.011904761904761904,
+        "iou": 0.005988023952095809
+      },
+      "componentBoxCounts": {
+        "tp": 0,
+        "fp": 150,
+        "fn": 9
+      },
+      "componentBoxMetrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "detectorCandidateCount": 150
+    }
+  ],
+  "limitations": [
+    "The detector flags shadow/contrast cue regions; reference masks outline boulders. Pixel scores measure this task mismatch directly.",
+    "Semantic connected components can merge touching boulders; box proxy scores are not true instance detection metrics or average precision.",
+    "Four test patches at 0.25\u20130.6 m/px are a small external patch check. They do not validate Jezero, local hazard identity, boulder height or EVA safety.",
+    "Published train/validation/test include common HiRISE observation IDs. No exact pixel crop duplicate or same-CRS bound overlap was found, but the split is not observation-independent.",
+    "No paper or pretrained model metric is used as our measured result. No parameters were tuned on this holdout."
+  ],
+  "localValidation": {
+    "status": "unreviewed",
+    "jezeroPrecision": null,
+    "jezeroRecall": null,
+    "requiredProtocol": "Freeze scene/ROI and detector hash before independent blind annotation; review all positives and a preregistered sample of negatives; adjudicate unknowns; retain reviewer, image hash, scale and mask/box geometry; do not label candidate confidence as calibrated probability."
+  }
+}

@@ -1,0 +1,6672 @@
+{
+  "schemaVersion": 1,
+  "region": "ridge",
+  "method": "deterministic optical shadow/contrast candidates",
+  "config": {
+    "version": "shadow-contrast-v1",
+    "normalization_percentiles": [
+      1.0,
+      99.0
+    ],
+    "background_sigma_m": 3.0,
+    "dark_residual_threshold": 0.055,
+    "dark_percentile_ceiling": 50.0,
+    "min_area_m2": 0.75,
+    "max_area_m2": 50.0,
+    "max_bbox_length_m": 16.0,
+    "max_aspect_ratio": 4.0,
+    "min_fill_ratio": 0.12,
+    "bright_pair_threshold": 0.025,
+    "search_ring_m": 2.0,
+    "candidate_buffer_m": 1.0,
+    "min_separation_m": 4.0,
+    "maximum_candidates": 150
+  },
+  "configSha256": "ea499665773c7a5304764e2388feba1d428dd442b2285aafc0f8e94f679cae2a",
+  "sourceImage": "/data/ridge/optical-native.webp",
+  "sourceMetadata": "/data/ridge/optical-native-meta.json",
+  "sourceCropSha256": "a646f18e3d4ec8683cd66b714291c8d10fee559abeaa4058c85d6c935215f6a5",
+  "bounds": [
+    4369772.037914526,
+    1096342.6170900527,
+    4370772.037914526,
+    1097342.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "pixelResolutionMetres": 0.5,
+  "nativeOpticalResolutionMetres": [
+    0.29995473187602484,
+    0.29995473187602484
+  ],
+  "planningGridMetres": 5,
+  "scoreDefinition": "Transparent dimensionless ranking heuristic, not a probability/confidence or validated classifier score",
+  "status": "unreviewed optical candidates",
+  "routingPolicy": "No candidate is automatically excluded; a user must review and explicitly accept/edit an exclusion buffer",
+  "validation": {
+    "independentAccuracyEstablished": false,
+    "visualAuditIsNotGroundTruth": true,
+    "candidateMaskIsNotBoulderSegmentation": true,
+    "heldOutBenchmark": "Mars-Bench mb-boulder_seg v1, separate evaluation; no test-set tuning permitted"
+  },
+  "statistics": {
+    "rawComponents": 28453,
+    "eligibleComponents": 17771,
+    "selected": 150,
+    "validFraction": 1.0,
+    "truncatedOrSuppressed": 17621,
+    "configSha256": "ea499665773c7a5304764e2388feba1d428dd442b2285aafc0f8e94f679cae2a",
+    "normalizationRawRange": [
+      83.0,
+      154.0
+    ]
+  },
+  "candidates": [
+    {
+      "id": "ridge-optical-001",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 167.75,
+        "y": 43.85
+      },
+      "projectedPosition": {
+        "easting": 4370613.287914526,
+        "northing": 1097120.8670900527
+      },
+      "pixelCenter": [
+        1682.0,
+        443.0
+      ],
+      "pixelBBox": [
+        1681,
+        442,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 9,
+        "darkCueAreaM2": 2.25,
+        "medianDarkContrast": 0.304045,
+        "peakDarkResidual": 0.453319,
+        "adjacentBrightResidual": 0.293069,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.08,
+        "localReliefMetres": 1.01,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-002",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 170.05,
+        "y": 113.55
+      },
+      "projectedPosition": {
+        "easting": 4370624.787914526,
+        "northing": 1096772.3670900527
+      },
+      "pixelCenter": [
+        1705.0,
+        1140.0
+      ],
+      "pixelBBox": [
+        1704,
+        1139,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 9,
+        "darkCueAreaM2": 2.25,
+        "medianDarkContrast": 0.292334,
+        "peakDarkResidual": 0.466072,
+        "adjacentBrightResidual": 0.27272,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.25,
+        "localReliefMetres": 0.98,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-003",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 68.6,
+        "y": 7.2
+      },
+      "projectedPosition": {
+        "easting": 4370117.537914526,
+        "northing": 1097304.1170900527
+      },
+      "pixelCenter": [
+        690.5,
+        76.5
+      ],
+      "pixelBBox": [
+        690,
+        76,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.301181,
+        "peakDarkResidual": 0.328786,
+        "adjacentBrightResidual": 0.268955,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.6,
+        "localReliefMetres": 1.56,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-004",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 135.4,
+        "y": 45.2
+      },
+      "projectedPosition": {
+        "easting": 4370451.537914526,
+        "northing": 1097114.1170900527
+      },
+      "pixelCenter": [
+        1358.5,
+        456.5
+      ],
+      "pixelBBox": [
+        1358,
+        456,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.254167,
+        "peakDarkResidual": 0.300461,
+        "adjacentBrightResidual": 0.233874,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.44,
+        "localReliefMetres": 0.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-005",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 149.7,
+        "y": 51.5
+      },
+      "projectedPosition": {
+        "easting": 4370523.037914526,
+        "northing": 1097082.6170900527
+      },
+      "pixelCenter": [
+        1501.5,
+        519.5
+      ],
+      "pixelBBox": [
+        1501,
+        519,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.338965,
+        "peakDarkResidual": 0.411688,
+        "adjacentBrightResidual": 0.259317,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.6,
+        "localReliefMetres": 0.45,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-006",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 191.0,
+        "y": 52.4
+      },
+      "projectedPosition": {
+        "easting": 4370729.537914526,
+        "northing": 1097078.1170900527
+      },
+      "pixelCenter": [
+        1914.5,
+        528.5
+      ],
+      "pixelBBox": [
+        1914,
+        528,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.287806,
+        "peakDarkResidual": 0.441938,
+        "adjacentBrightResidual": 0.277251,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.07,
+        "localReliefMetres": 0.14,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-007",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 194.5,
+        "y": 53.6
+      },
+      "projectedPosition": {
+        "easting": 4370747.037914526,
+        "northing": 1097072.1170900527
+      },
+      "pixelCenter": [
+        1949.5,
+        540.5
+      ],
+      "pixelBBox": [
+        1949,
+        540,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.320488,
+        "peakDarkResidual": 0.327789,
+        "adjacentBrightResidual": 0.232227,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.66,
+        "localReliefMetres": 0.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-008",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 110.3,
+        "y": 57.1
+      },
+      "projectedPosition": {
+        "easting": 4370326.037914526,
+        "northing": 1097054.6170900527
+      },
+      "pixelCenter": [
+        1107.5,
+        575.5
+      ],
+      "pixelBBox": [
+        1107,
+        575,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.282347,
+        "peakDarkResidual": 0.32119,
+        "adjacentBrightResidual": 0.216615,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.57,
+        "localReliefMetres": 0.8,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-009",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 131.9,
+        "y": 58.3
+      },
+      "projectedPosition": {
+        "easting": 4370434.037914526,
+        "northing": 1097048.6170900527
+      },
+      "pixelCenter": [
+        1323.5,
+        587.5
+      ],
+      "pixelBBox": [
+        1323,
+        587,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.30272,
+        "peakDarkResidual": 0.319633,
+        "adjacentBrightResidual": 0.253363,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.5,
+        "localReliefMetres": 0.6,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-010",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 180.9,
+        "y": 59.6
+      },
+      "projectedPosition": {
+        "easting": 4370679.037914526,
+        "northing": 1097042.1170900527
+      },
+      "pixelCenter": [
+        1813.5,
+        600.5
+      ],
+      "pixelBBox": [
+        1813,
+        600,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.28364,
+        "peakDarkResidual": 0.340824,
+        "adjacentBrightResidual": 0.207935,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.6,
+        "localReliefMetres": 0.73,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-011",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 141.5,
+        "y": 61.7
+      },
+      "projectedPosition": {
+        "easting": 4370482.037914526,
+        "northing": 1097031.6170900527
+      },
+      "pixelCenter": [
+        1419.5,
+        621.5
+      ],
+      "pixelBBox": [
+        1419,
+        621,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.262545,
+        "peakDarkResidual": 0.340604,
+        "adjacentBrightResidual": 0.222835,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.74,
+        "localReliefMetres": 0.71,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-012",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 86.7,
+        "y": 68.7
+      },
+      "projectedPosition": {
+        "easting": 4370208.037914526,
+        "northing": 1096996.6170900527
+      },
+      "pixelCenter": [
+        871.5,
+        691.5
+      ],
+      "pixelBBox": [
+        871,
+        691,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.274067,
+        "peakDarkResidual": 0.351223,
+        "adjacentBrightResidual": 0.279547,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.66,
+        "localReliefMetres": 1.1,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-013",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 73.3,
+        "y": 74.9
+      },
+      "projectedPosition": {
+        "easting": 4370141.037914526,
+        "northing": 1096965.6170900527
+      },
+      "pixelCenter": [
+        737.5,
+        753.5
+      ],
+      "pixelBBox": [
+        737,
+        753,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.324331,
+        "peakDarkResidual": 0.417456,
+        "adjacentBrightResidual": 0.226713,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.75,
+        "localReliefMetres": 1.23,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-014",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 173.9,
+        "y": 75.5
+      },
+      "projectedPosition": {
+        "easting": 4370644.037914526,
+        "northing": 1096962.6170900527
+      },
+      "pixelCenter": [
+        1743.5,
+        759.5
+      ],
+      "pixelBBox": [
+        1743,
+        759,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.296716,
+        "peakDarkResidual": 0.312587,
+        "adjacentBrightResidual": 0.2319,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.78,
+        "localReliefMetres": 0.46,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-015",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 123.3,
+        "y": 76.5
+      },
+      "projectedPosition": {
+        "easting": 4370391.037914526,
+        "northing": 1096957.6170900527
+      },
+      "pixelCenter": [
+        1237.5,
+        769.5
+      ],
+      "pixelBBox": [
+        1237,
+        769,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.262075,
+        "peakDarkResidual": 0.300069,
+        "adjacentBrightResidual": 0.226429,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.37,
+        "localReliefMetres": 0.72,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-016",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 149.9,
+        "y": 76.5
+      },
+      "projectedPosition": {
+        "easting": 4370524.037914526,
+        "northing": 1096957.6170900527
+      },
+      "pixelCenter": [
+        1503.5,
+        769.5
+      ],
+      "pixelBBox": [
+        1503,
+        769,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.268871,
+        "peakDarkResidual": 0.330447,
+        "adjacentBrightResidual": 0.205279,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.62,
+        "localReliefMetres": 0.5,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-017",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 188.7,
+        "y": 77.6
+      },
+      "projectedPosition": {
+        "easting": 4370718.037914526,
+        "northing": 1096952.1170900527
+      },
+      "pixelCenter": [
+        1891.5,
+        780.5
+      ],
+      "pixelBBox": [
+        1891,
+        780,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.293976,
+        "peakDarkResidual": 0.314774,
+        "adjacentBrightResidual": 0.24006,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 1.86,
+        "localReliefMetres": 0.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-018",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 84.8,
+        "y": 77.7
+      },
+      "projectedPosition": {
+        "easting": 4370198.537914526,
+        "northing": 1096951.6170900527
+      },
+      "pixelCenter": [
+        852.5,
+        781.5
+      ],
+      "pixelBBox": [
+        852,
+        781,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.290269,
+        "peakDarkResidual": 0.335286,
+        "adjacentBrightResidual": 0.302413,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.51,
+        "localReliefMetres": 1.11,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-019",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 187.3,
+        "y": 78.6
+      },
+      "projectedPosition": {
+        "easting": 4370711.037914526,
+        "northing": 1096947.1170900527
+      },
+      "pixelCenter": [
+        1877.5,
+        790.5
+      ],
+      "pixelBBox": [
+        1877,
+        790,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.283587,
+        "peakDarkResidual": 0.309952,
+        "adjacentBrightResidual": 0.252473,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.94,
+        "localReliefMetres": 0.34,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-020",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 148.2,
+        "y": 80.1
+      },
+      "projectedPosition": {
+        "easting": 4370515.537914526,
+        "northing": 1096939.6170900527
+      },
+      "pixelCenter": [
+        1486.5,
+        805.5
+      ],
+      "pixelBBox": [
+        1486,
+        805,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.288171,
+        "peakDarkResidual": 0.328659,
+        "adjacentBrightResidual": 0.244601,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 1.73,
+        "localReliefMetres": 0.17,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-021",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 181.1,
+        "y": 92.3
+      },
+      "projectedPosition": {
+        "easting": 4370680.037914526,
+        "northing": 1096878.6170900527
+      },
+      "pixelCenter": [
+        1815.5,
+        927.5
+      ],
+      "pixelBBox": [
+        1815,
+        927,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.271746,
+        "peakDarkResidual": 0.31122,
+        "adjacentBrightResidual": 0.296347,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.49,
+        "localReliefMetres": 0.36,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-022",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 140.1,
+        "y": 99.7
+      },
+      "projectedPosition": {
+        "easting": 4370475.037914526,
+        "northing": 1096841.6170900527
+      },
+      "pixelCenter": [
+        1405.5,
+        1001.5
+      ],
+      "pixelBBox": [
+        1405,
+        1001,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.256207,
+        "peakDarkResidual": 0.312186,
+        "adjacentBrightResidual": 0.311077,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.8,
+        "localReliefMetres": 0.78,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-023",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 179.7,
+        "y": 105.4
+      },
+      "projectedPosition": {
+        "easting": 4370673.037914526,
+        "northing": 1096813.1170900527
+      },
+      "pixelCenter": [
+        1801.5,
+        1058.5
+      ],
+      "pixelBBox": [
+        1801,
+        1058,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.320128,
+        "peakDarkResidual": 0.357701,
+        "adjacentBrightResidual": 0.220613,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.14,
+        "localReliefMetres": 0.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-024",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 172.6,
+        "y": 117.4
+      },
+      "projectedPosition": {
+        "easting": 4370637.537914526,
+        "northing": 1096753.1170900527
+      },
+      "pixelCenter": [
+        1730.5,
+        1178.5
+      ],
+      "pixelBBox": [
+        1730,
+        1178,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.298743,
+        "peakDarkResidual": 0.333102,
+        "adjacentBrightResidual": 0.297786,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.85,
+        "localReliefMetres": 0.71,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-025",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 99.6,
+        "y": 118.0
+      },
+      "projectedPosition": {
+        "easting": 4370272.537914526,
+        "northing": 1096750.1170900527
+      },
+      "pixelCenter": [
+        1000.5,
+        1184.5
+      ],
+      "pixelBBox": [
+        1000,
+        1184,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.280408,
+        "peakDarkResidual": 0.305091,
+        "adjacentBrightResidual": 0.210648,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.72,
+        "localReliefMetres": 0.44,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-026",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 99.1,
+        "y": 120.7
+      },
+      "projectedPosition": {
+        "easting": 4370270.037914526,
+        "northing": 1096736.6170900527
+      },
+      "pixelCenter": [
+        995.5,
+        1211.5
+      ],
+      "pixelBBox": [
+        995,
+        1211,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.315346,
+        "peakDarkResidual": 0.356496,
+        "adjacentBrightResidual": 0.290148,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.13,
+        "localReliefMetres": 0.56,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-027",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 178.8,
+        "y": 152.4
+      },
+      "projectedPosition": {
+        "easting": 4370668.537914526,
+        "northing": 1096578.1170900527
+      },
+      "pixelCenter": [
+        1792.5,
+        1528.5
+      ],
+      "pixelBBox": [
+        1792,
+        1528,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.253295,
+        "peakDarkResidual": 0.308272,
+        "adjacentBrightResidual": 0.253141,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.07,
+        "localReliefMetres": 1.09,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-028",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 167.1,
+        "y": 161.6
+      },
+      "projectedPosition": {
+        "easting": 4370610.037914526,
+        "northing": 1096532.1170900527
+      },
+      "pixelCenter": [
+        1675.5,
+        1620.5
+      ],
+      "pixelBBox": [
+        1675,
+        1620,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.273203,
+        "peakDarkResidual": 0.305845,
+        "adjacentBrightResidual": 0.219283,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.86,
+        "localReliefMetres": 0.67,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-029",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 179.2,
+        "y": 164.9
+      },
+      "projectedPosition": {
+        "easting": 4370670.537914526,
+        "northing": 1096515.6170900527
+      },
+      "pixelCenter": [
+        1796.5,
+        1653.5
+      ],
+      "pixelBBox": [
+        1796,
+        1653,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.366082,
+        "peakDarkResidual": 0.445889,
+        "adjacentBrightResidual": 0.204894,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.49,
+        "localReliefMetres": 1.16,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-030",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 150.2,
+        "y": 166.3
+      },
+      "projectedPosition": {
+        "easting": 4370525.537914526,
+        "northing": 1096508.6170900527
+      },
+      "pixelCenter": [
+        1506.5,
+        1667.5
+      ],
+      "pixelBBox": [
+        1506,
+        1667,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.260653,
+        "peakDarkResidual": 0.358604,
+        "adjacentBrightResidual": 0.307683,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.85,
+        "localReliefMetres": 0.96,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-031",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 170.0,
+        "y": 168.8
+      },
+      "projectedPosition": {
+        "easting": 4370624.537914526,
+        "northing": 1096496.1170900527
+      },
+      "pixelCenter": [
+        1704.5,
+        1692.5
+      ],
+      "pixelBBox": [
+        1704,
+        1692,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.351249,
+        "peakDarkResidual": 0.41686,
+        "adjacentBrightResidual": 0.252892,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.86,
+        "localReliefMetres": 1.69,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-032",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 181.8,
+        "y": 173.4
+      },
+      "projectedPosition": {
+        "easting": 4370683.537914526,
+        "northing": 1096473.1170900527
+      },
+      "pixelCenter": [
+        1822.5,
+        1738.5
+      ],
+      "pixelBBox": [
+        1822,
+        1738,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.351758,
+        "peakDarkResidual": 0.414534,
+        "adjacentBrightResidual": 0.242186,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.55,
+        "localReliefMetres": 0.98,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-033",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 135.6,
+        "y": 179.7
+      },
+      "projectedPosition": {
+        "easting": 4370452.537914526,
+        "northing": 1096441.6170900527
+      },
+      "pixelCenter": [
+        1360.5,
+        1801.5
+      ],
+      "pixelBBox": [
+        1360,
+        1801,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.260883,
+        "peakDarkResidual": 0.320829,
+        "adjacentBrightResidual": 0.223665,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.52,
+        "localReliefMetres": 1.25,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-034",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 178.2,
+        "y": 181.4
+      },
+      "projectedPosition": {
+        "easting": 4370665.537914526,
+        "northing": 1096433.1170900527
+      },
+      "pixelCenter": [
+        1786.5,
+        1818.5
+      ],
+      "pixelBBox": [
+        1786,
+        1818,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.394433,
+        "peakDarkResidual": 0.451854,
+        "adjacentBrightResidual": 0.220566,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.62,
+        "localReliefMetres": 0.74,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-035",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 198.9,
+        "y": 185.1
+      },
+      "projectedPosition": {
+        "easting": 4370769.037914526,
+        "northing": 1096414.6170900527
+      },
+      "pixelCenter": [
+        1993.5,
+        1855.5
+      ],
+      "pixelBBox": [
+        1993,
+        1855,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.306762,
+        "peakDarkResidual": 0.331834,
+        "adjacentBrightResidual": 0.253449,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.51,
+        "localReliefMetres": 0.94,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-036",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 138.6,
+        "y": 187.8
+      },
+      "projectedPosition": {
+        "easting": 4370467.537914526,
+        "northing": 1096401.1170900527
+      },
+      "pixelCenter": [
+        1390.5,
+        1882.5
+      ],
+      "pixelBBox": [
+        1390,
+        1882,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.339841,
+        "peakDarkResidual": 0.371019,
+        "adjacentBrightResidual": 0.255363,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.1,
+        "localReliefMetres": 1.2,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-037",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 86.9,
+        "y": 198.0
+      },
+      "projectedPosition": {
+        "easting": 4370209.037914526,
+        "northing": 1096350.1170900527
+      },
+      "pixelCenter": [
+        873.5,
+        1984.5
+      ],
+      "pixelBBox": [
+        873,
+        1984,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 1.0,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.259447,
+        "peakDarkResidual": 0.321551,
+        "adjacentBrightResidual": 0.311035,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 14.09,
+        "localReliefMetres": 1.86,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-038",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 179.6,
+        "y": 70.7
+      },
+      "projectedPosition": {
+        "easting": 4370672.537914526,
+        "northing": 1096986.6170900527
+      },
+      "pixelCenter": [
+        1800.5,
+        711.5
+      ],
+      "pixelBBox": [
+        1800,
+        711,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99967,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.276788,
+        "peakDarkResidual": 0.299345,
+        "adjacentBrightResidual": 0.262632,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.05,
+        "localReliefMetres": 0.65,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-039",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 164.7,
+        "y": 187.5
+      },
+      "projectedPosition": {
+        "easting": 4370598.037914526,
+        "northing": 1096402.6170900527
+      },
+      "pixelCenter": [
+        1651.5,
+        1879.5
+      ],
+      "pixelBBox": [
+        1651,
+        1879,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99957,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.280415,
+        "peakDarkResidual": 0.299136,
+        "adjacentBrightResidual": 0.328326,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.9,
+        "localReliefMetres": 0.93,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-040",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 198.5,
+        "y": 25.2
+      },
+      "projectedPosition": {
+        "easting": 4370767.037914526,
+        "northing": 1097214.1170900527
+      },
+      "pixelCenter": [
+        1989.5,
+        256.5
+      ],
+      "pixelBBox": [
+        1989,
+        256,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99946,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.328162,
+        "peakDarkResidual": 0.386941,
+        "adjacentBrightResidual": 0.199281,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.2,
+        "localReliefMetres": 0.87,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-041",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 145.9,
+        "y": 123.5
+      },
+      "projectedPosition": {
+        "easting": 4370504.037914526,
+        "northing": 1096722.6170900527
+      },
+      "pixelCenter": [
+        1463.5,
+        1239.5
+      ],
+      "pixelBBox": [
+        1463,
+        1239,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99875,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.26808,
+        "peakDarkResidual": 0.297499,
+        "adjacentBrightResidual": 0.270628,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.18,
+        "localReliefMetres": 0.97,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-042",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 118.4,
+        "y": 91.6
+      },
+      "projectedPosition": {
+        "easting": 4370366.537914526,
+        "northing": 1096882.1170900527
+      },
+      "pixelCenter": [
+        1188.5,
+        920.5
+      ],
+      "pixelBBox": [
+        1188,
+        920,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99678,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.270607,
+        "peakDarkResidual": 0.29355,
+        "adjacentBrightResidual": 0.230751,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.84,
+        "localReliefMetres": 0.54,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-043",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 86.9,
+        "y": 129.3
+      },
+      "projectedPosition": {
+        "easting": 4370209.037914526,
+        "northing": 1096693.6170900527
+      },
+      "pixelCenter": [
+        873.5,
+        1297.5
+      ],
+      "pixelBBox": [
+        873,
+        1297,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99637,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.285554,
+        "peakDarkResidual": 0.292734,
+        "adjacentBrightResidual": 0.227853,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.44,
+        "localReliefMetres": 0.33,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-044",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 133.5,
+        "y": 62.3
+      },
+      "projectedPosition": {
+        "easting": 4370442.037914526,
+        "northing": 1097028.6170900527
+      },
+      "pixelCenter": [
+        1339.5,
+        627.5
+      ],
+      "pixelBBox": [
+        1339,
+        627,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99588,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.247939,
+        "peakDarkResidual": 0.317896,
+        "adjacentBrightResidual": 0.268019,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.84,
+        "localReliefMetres": 1.28,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-045",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 84.9,
+        "y": 100.3
+      },
+      "projectedPosition": {
+        "easting": 4370199.037914526,
+        "northing": 1096838.6170900527
+      },
+      "pixelCenter": [
+        853.5,
+        1007.5
+      ],
+      "pixelBBox": [
+        853,
+        1007,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99424,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.268377,
+        "peakDarkResidual": 0.288483,
+        "adjacentBrightResidual": 0.215994,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.67,
+        "localReliefMetres": 0.46,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-046",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 139.0,
+        "y": 195.9
+      },
+      "projectedPosition": {
+        "easting": 4370469.537914526,
+        "northing": 1096360.6170900527
+      },
+      "pixelCenter": [
+        1394.5,
+        1963.5
+      ],
+      "pixelBBox": [
+        1394,
+        1963,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.9922,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.246101,
+        "peakDarkResidual": 0.322727,
+        "adjacentBrightResidual": 0.251479,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.07,
+        "localReliefMetres": 1.64,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-047",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 86.3,
+        "y": 1.1
+      },
+      "projectedPosition": {
+        "easting": 4370206.037914526,
+        "northing": 1097334.6170900527
+      },
+      "pixelCenter": [
+        867.5,
+        15.5
+      ],
+      "pixelBBox": [
+        867,
+        15,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99201,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.422054,
+        "peakDarkResidual": 0.496089,
+        "adjacentBrightResidual": 0.189352,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 9.54,
+        "localReliefMetres": 2.22,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-048",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 162.4,
+        "y": 53.2
+      },
+      "projectedPosition": {
+        "easting": 4370586.537914526,
+        "northing": 1097074.1170900527
+      },
+      "pixelCenter": [
+        1628.5,
+        536.5
+      ],
+      "pixelBBox": [
+        1628,
+        536,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99197,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.26362,
+        "peakDarkResidual": 0.283933,
+        "adjacentBrightResidual": 0.290591,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.65,
+        "localReliefMetres": 1.28,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-049",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 115.4,
+        "y": 93.4
+      },
+      "projectedPosition": {
+        "easting": 4370351.537914526,
+        "northing": 1096873.1170900527
+      },
+      "pixelCenter": [
+        1158.5,
+        938.5
+      ],
+      "pixelBBox": [
+        1158,
+        938,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99048,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.256952,
+        "peakDarkResidual": 0.280968,
+        "adjacentBrightResidual": 0.282693,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.29,
+        "localReliefMetres": 0.65,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-050",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 16.5,
+        "y": 83.5
+      },
+      "projectedPosition": {
+        "easting": 4369857.037914526,
+        "northing": 1096922.6170900527
+      },
+      "pixelCenter": [
+        169.5,
+        839.5
+      ],
+      "pixelBBox": [
+        169,
+        839,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.99014,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.256277,
+        "peakDarkResidual": 0.280274,
+        "adjacentBrightResidual": 0.223588,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.48,
+        "localReliefMetres": 1.24,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-051",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 181.1,
+        "y": 106.6
+      },
+      "projectedPosition": {
+        "easting": 4370680.037914526,
+        "northing": 1096807.1170900527
+      },
+      "pixelCenter": [
+        1815.5,
+        1070.5
+      ],
+      "pixelBBox": [
+        1815,
+        1070,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98944,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.333508,
+        "peakDarkResidual": 0.369181,
+        "adjacentBrightResidual": 0.185922,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.3,
+        "localReliefMetres": 0.16,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-052",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 102.55,
+        "y": 77.25
+      },
+      "projectedPosition": {
+        "easting": 4370287.287914526,
+        "northing": 1096953.8670900527
+      },
+      "pixelCenter": [
+        1030.0,
+        777.0
+      ],
+      "pixelBBox": [
+        1029,
+        776,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.98888,
+      "evidence": {
+        "componentPixels": 9,
+        "darkCueAreaM2": 2.25,
+        "medianDarkContrast": 0.244438,
+        "peakDarkResidual": 0.396918,
+        "adjacentBrightResidual": 0.264898,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.56,
+        "localReliefMetres": 0.64,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-053",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 161.7,
+        "y": 194.6
+      },
+      "projectedPosition": {
+        "easting": 4370583.037914526,
+        "northing": 1096367.1170900527
+      },
+      "pixelCenter": [
+        1621.5,
+        1950.5
+      ],
+      "pixelBBox": [
+        1621,
+        1950,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98836,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.248442,
+        "peakDarkResidual": 0.282948,
+        "adjacentBrightResidual": 0.28454,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.04,
+        "localReliefMetres": 0.74,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-054",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 178.1,
+        "y": 94.4
+      },
+      "projectedPosition": {
+        "easting": 4370665.037914526,
+        "northing": 1096868.1170900527
+      },
+      "pixelCenter": [
+        1785.5,
+        948.5
+      ],
+      "pixelBBox": [
+        1785,
+        948,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98769,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.256364,
+        "peakDarkResidual": 0.275378,
+        "adjacentBrightResidual": 0.269245,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 1.15,
+        "localReliefMetres": 0.15,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-055",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 116.9,
+        "y": 92.4
+      },
+      "projectedPosition": {
+        "easting": 4370359.037914526,
+        "northing": 1096878.1170900527
+      },
+      "pixelCenter": [
+        1173.5,
+        928.5
+      ],
+      "pixelBBox": [
+        1173,
+        928,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98601,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.272111,
+        "peakDarkResidual": 0.318251,
+        "adjacentBrightResidual": 0.181347,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 1.44,
+        "localReliefMetres": 0.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-056",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 102.8,
+        "y": 125.2
+      },
+      "projectedPosition": {
+        "easting": 4370288.537914526,
+        "northing": 1096714.1170900527
+      },
+      "pixelCenter": [
+        1032.5,
+        1256.5
+      ],
+      "pixelBBox": [
+        1032,
+        1256,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98576,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.257502,
+        "peakDarkResidual": 0.27153,
+        "adjacentBrightResidual": 0.357605,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.88,
+        "localReliefMetres": 0.49,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-057",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 198.5,
+        "y": 19.9
+      },
+      "projectedPosition": {
+        "easting": 4370767.037914526,
+        "northing": 1097240.6170900527
+      },
+      "pixelCenter": [
+        1989.5,
+        203.5
+      ],
+      "pixelBBox": [
+        1989,
+        203,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98559,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.27405,
+        "peakDarkResidual": 0.314075,
+        "adjacentBrightResidual": 0.180781,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.12,
+        "localReliefMetres": 0.76,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-058",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 122.2,
+        "y": 51.6
+      },
+      "projectedPosition": {
+        "easting": 4370385.537914526,
+        "northing": 1097082.1170900527
+      },
+      "pixelCenter": [
+        1226.5,
+        520.5
+      ],
+      "pixelBBox": [
+        1226,
+        520,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98155,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.240773,
+        "peakDarkResidual": 0.318933,
+        "adjacentBrightResidual": 0.20282,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.13,
+        "localReliefMetres": 0.45,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-059",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 123.5,
+        "y": 52.0
+      },
+      "projectedPosition": {
+        "easting": 4370392.037914526,
+        "northing": 1097080.1170900527
+      },
+      "pixelCenter": [
+        1239.5,
+        524.5
+      ],
+      "pixelBBox": [
+        1239,
+        524,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98124,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.251859,
+        "peakDarkResidual": 0.284726,
+        "adjacentBrightResidual": 0.185167,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.44,
+        "localReliefMetres": 0.82,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-060",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 159.4,
+        "y": 79.4
+      },
+      "projectedPosition": {
+        "easting": 4370571.537914526,
+        "northing": 1096943.1170900527
+      },
+      "pixelCenter": [
+        1598.5,
+        798.5
+      ],
+      "pixelBBox": [
+        1598,
+        798,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.98076,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.280047,
+        "peakDarkResidual": 0.32854,
+        "adjacentBrightResidual": 0.174353,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.88,
+        "localReliefMetres": 0.35,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-061",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 146.1,
+        "y": 152.4
+      },
+      "projectedPosition": {
+        "easting": 4370505.037914526,
+        "northing": 1096578.1170900527
+      },
+      "pixelCenter": [
+        1465.5,
+        1528.5
+      ],
+      "pixelBBox": [
+        1465,
+        1528,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97984,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.327664,
+        "peakDarkResidual": 0.376178,
+        "adjacentBrightResidual": 0.173126,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.45,
+        "localReliefMetres": 0.89,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-062",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 113.3,
+        "y": 98.7
+      },
+      "projectedPosition": {
+        "easting": 4370341.037914526,
+        "northing": 1096846.6170900527
+      },
+      "pixelCenter": [
+        1137.5,
+        991.5
+      ],
+      "pixelBBox": [
+        1137,
+        991,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97914,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.286568,
+        "peakDarkResidual": 0.318017,
+        "adjacentBrightResidual": 0.172189,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 12.6,
+        "localReliefMetres": 2.2,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-063",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 150.1,
+        "y": 73.3
+      },
+      "projectedPosition": {
+        "easting": 4370525.037914526,
+        "northing": 1096973.6170900527
+      },
+      "pixelCenter": [
+        1505.5,
+        737.5
+      ],
+      "pixelBBox": [
+        1505,
+        737,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97815,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.272204,
+        "peakDarkResidual": 0.286746,
+        "adjacentBrightResidual": 0.179697,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.11,
+        "localReliefMetres": 0.83,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-064",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 154.8375,
+        "y": 63.1375
+      },
+      "projectedPosition": {
+        "easting": 4370548.725414526,
+        "northing": 1097024.4295900527
+      },
+      "pixelCenter": [
+        1552.875,
+        635.875
+      ],
+      "pixelBBox": [
+        1552,
+        635,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.294379,
+        "peakDarkResidual": 0.450416,
+        "adjacentBrightResidual": 0.289572,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.33,
+        "localReliefMetres": 0.9,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-065",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 192.7625,
+        "y": 78.4375
+      },
+      "projectedPosition": {
+        "easting": 4370738.350414526,
+        "northing": 1096947.9295900527
+      },
+      "pixelCenter": [
+        1932.125,
+        788.875
+      ],
+      "pixelBBox": [
+        1931,
+        788,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.305683,
+        "peakDarkResidual": 0.403756,
+        "adjacentBrightResidual": 0.283816,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.47,
+        "localReliefMetres": 0.31,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-066",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 155.6375,
+        "y": 90.6375
+      },
+      "projectedPosition": {
+        "easting": 4370552.725414526,
+        "northing": 1096886.9295900527
+      },
+      "pixelCenter": [
+        1560.875,
+        910.875
+      ],
+      "pixelBBox": [
+        1560,
+        910,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.300367,
+        "peakDarkResidual": 0.485315,
+        "adjacentBrightResidual": 0.291349,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.36,
+        "localReliefMetres": 0.54,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-067",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 63.7375,
+        "y": 93.2625
+      },
+      "projectedPosition": {
+        "easting": 4370093.225414526,
+        "northing": 1096873.8045900527
+      },
+      "pixelCenter": [
+        641.875,
+        937.125
+      ],
+      "pixelBBox": [
+        641,
+        936,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.372172,
+        "peakDarkResidual": 0.604352,
+        "adjacentBrightResidual": 0.200281,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.91,
+        "localReliefMetres": 1.44,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-068",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 195.4375,
+        "y": 152.6625
+      },
+      "projectedPosition": {
+        "easting": 4370751.725414526,
+        "northing": 1096576.8045900527
+      },
+      "pixelCenter": [
+        1958.875,
+        1531.125
+      ],
+      "pixelBBox": [
+        1958,
+        1530,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.269732,
+        "peakDarkResidual": 0.364369,
+        "adjacentBrightResidual": 0.336743,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.92,
+        "localReliefMetres": 1.67,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-069",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 137.0625,
+        "y": 155.1375
+      },
+      "projectedPosition": {
+        "easting": 4370459.850414526,
+        "northing": 1096564.4295900527
+      },
+      "pixelCenter": [
+        1375.125,
+        1555.875
+      ],
+      "pixelBBox": [
+        1374,
+        1555,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.281289,
+        "peakDarkResidual": 0.397537,
+        "adjacentBrightResidual": 0.224339,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.85,
+        "localReliefMetres": 0.58,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-070",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 196.4375,
+        "y": 162.4375
+      },
+      "projectedPosition": {
+        "easting": 4370756.725414526,
+        "northing": 1096527.9295900527
+      },
+      "pixelCenter": [
+        1968.875,
+        1628.875
+      ],
+      "pixelBBox": [
+        1968,
+        1628,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97778,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.31066,
+        "peakDarkResidual": 0.40889,
+        "adjacentBrightResidual": 0.209302,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.83,
+        "localReliefMetres": 0.58,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-071",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 151.1,
+        "y": 105.6
+      },
+      "projectedPosition": {
+        "easting": 4370530.037914526,
+        "northing": 1096812.1170900527
+      },
+      "pixelCenter": [
+        1515.5,
+        1060.5
+      ],
+      "pixelBBox": [
+        1515,
+        1060,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97694,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.240702,
+        "peakDarkResidual": 0.29107,
+        "adjacentBrightResidual": 0.34015,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.66,
+        "localReliefMetres": 1.17,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-072",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 148.5,
+        "y": 81.7
+      },
+      "projectedPosition": {
+        "easting": 4370517.037914526,
+        "northing": 1096931.6170900527
+      },
+      "pixelCenter": [
+        1489.5,
+        821.5
+      ],
+      "pixelBBox": [
+        1489,
+        821,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97683,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.246755,
+        "peakDarkResidual": 0.266633,
+        "adjacentBrightResidual": 0.234805,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.16,
+        "localReliefMetres": 0.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-073",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 127.7625,
+        "y": 157.1625
+      },
+      "projectedPosition": {
+        "easting": 4370413.350414526,
+        "northing": 1096554.3045900527
+      },
+      "pixelCenter": [
+        1282.125,
+        1576.125
+      ],
+      "pixelBBox": [
+        1281,
+        1575,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97593,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.249078,
+        "peakDarkResidual": 0.42738,
+        "adjacentBrightResidual": 0.292358,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.12,
+        "localReliefMetres": 0.74,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-074",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 118.17857,
+        "y": 66.21429
+      },
+      "projectedPosition": {
+        "easting": 4370365.430764526,
+        "northing": 1097009.0456400528
+      },
+      "pixelCenter": [
+        1186.2857,
+        666.6429
+      ],
+      "pixelBBox": [
+        1185,
+        665,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.975,
+      "evidence": {
+        "componentPixels": 14,
+        "darkCueAreaM2": 3.5,
+        "medianDarkContrast": 0.338028,
+        "peakDarkResidual": 0.549276,
+        "adjacentBrightResidual": 0.269917,
+        "bboxFillRatio": 0.875,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.9,
+        "localReliefMetres": 1.17,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-075",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 177.87857,
+        "y": 165.11429
+      },
+      "projectedPosition": {
+        "easting": 4370663.930764526,
+        "northing": 1096514.5456400528
+      },
+      "pixelCenter": [
+        1783.2857,
+        1655.6429
+      ],
+      "pixelBBox": [
+        1782,
+        1654,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.975,
+      "evidence": {
+        "componentPixels": 14,
+        "darkCueAreaM2": 3.5,
+        "medianDarkContrast": 0.353265,
+        "peakDarkResidual": 0.682511,
+        "adjacentBrightResidual": 0.268712,
+        "bboxFillRatio": 0.875,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.38,
+        "localReliefMetres": 1.1,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-076",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 171.67857,
+        "y": 176.3
+      },
+      "projectedPosition": {
+        "easting": 4370632.930764526,
+        "northing": 1096458.6170900527
+      },
+      "pixelCenter": [
+        1721.2857,
+        1767.5
+      ],
+      "pixelBBox": [
+        1720,
+        1766,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.975,
+      "evidence": {
+        "componentPixels": 14,
+        "darkCueAreaM2": 3.5,
+        "medianDarkContrast": 0.386564,
+        "peakDarkResidual": 0.640907,
+        "adjacentBrightResidual": 0.228734,
+        "bboxFillRatio": 0.875,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.03,
+        "localReliefMetres": 0.7,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-077",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 87.3,
+        "y": 0.4
+      },
+      "projectedPosition": {
+        "easting": 4370211.037914526,
+        "northing": 1097338.1170900527
+      },
+      "pixelCenter": [
+        877.5,
+        8.5
+      ],
+      "pixelBBox": [
+        877,
+        8,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97397,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.250285,
+        "peakDarkResidual": 0.260934,
+        "adjacentBrightResidual": 0.191341,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 11.31,
+        "localReliefMetres": 2.31,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-078",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 163.5625,
+        "y": 144.6375
+      },
+      "projectedPosition": {
+        "easting": 4370592.350414526,
+        "northing": 1096616.9295900527
+      },
+      "pixelCenter": [
+        1640.125,
+        1450.875
+      ],
+      "pixelBBox": [
+        1639,
+        1450,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97224,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.247231,
+        "peakDarkResidual": 0.490976,
+        "adjacentBrightResidual": 0.256293,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 13.81,
+        "localReliefMetres": 2.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-079",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 146.4,
+        "y": 62.9
+      },
+      "projectedPosition": {
+        "easting": 4370506.537914526,
+        "northing": 1097025.6170900527
+      },
+      "pixelCenter": [
+        1468.5,
+        633.5
+      ],
+      "pixelBBox": [
+        1468,
+        633,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97194,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.427556,
+        "peakDarkResidual": 0.453065,
+        "adjacentBrightResidual": 0.16259,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.68,
+        "localReliefMetres": 1.3,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-080",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 198.1625,
+        "y": 156.1625
+      },
+      "projectedPosition": {
+        "easting": 4370765.350414526,
+        "northing": 1096559.3045900527
+      },
+      "pixelCenter": [
+        1986.125,
+        1566.125
+      ],
+      "pixelBBox": [
+        1985,
+        1565,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.9711,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.246659,
+        "peakDarkResidual": 0.391032,
+        "adjacentBrightResidual": 0.234059,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.15,
+        "localReliefMetres": 0.83,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-081",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 171.6625,
+        "y": 92.6375
+      },
+      "projectedPosition": {
+        "easting": 4370632.850414526,
+        "northing": 1096876.9295900527
+      },
+      "pixelCenter": [
+        1721.125,
+        930.875
+      ],
+      "pixelBBox": [
+        1720,
+        930,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.97105,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.307433,
+        "peakDarkResidual": 0.452689,
+        "adjacentBrightResidual": 0.191034,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.92,
+        "localReliefMetres": 0.39,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-082",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 186.8,
+        "y": 118.0
+      },
+      "projectedPosition": {
+        "easting": 4370708.537914526,
+        "northing": 1096750.1170900527
+      },
+      "pixelCenter": [
+        1872.5,
+        1184.5
+      ],
+      "pixelBBox": [
+        1872,
+        1184,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.97094,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.277519,
+        "peakDarkResidual": 0.315157,
+        "adjacentBrightResidual": 0.161254,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.66,
+        "localReliefMetres": 0.51,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-083",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 174.4,
+        "y": 167.8
+      },
+      "projectedPosition": {
+        "easting": 4370646.537914526,
+        "northing": 1096501.1170900527
+      },
+      "pixelCenter": [
+        1748.5,
+        1682.5
+      ],
+      "pixelBBox": [
+        1748,
+        1682,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.96866,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.243489,
+        "peakDarkResidual": 0.263363,
+        "adjacentBrightResidual": 0.221886,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.37,
+        "localReliefMetres": 0.82,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-084",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 125.61667,
+        "y": 70.42619
+      },
+      "projectedPosition": {
+        "easting": 4370402.621264526,
+        "northing": 1096987.9861400528
+      },
+      "pixelCenter": [
+        1260.6667,
+        708.7619
+      ],
+      "pixelBBox": [
+        1259,
+        707,
+        5,
+        5
+      ],
+      "radiusMeters": 2.768,
+      "score": 0.968,
+      "evidence": {
+        "componentPixels": 21,
+        "darkCueAreaM2": 5.25,
+        "medianDarkContrast": 0.312665,
+        "peakDarkResidual": 0.52044,
+        "adjacentBrightResidual": 0.229639,
+        "bboxFillRatio": 0.84,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.31,
+        "localReliefMetres": 0.95,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-085",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 195.7,
+        "y": 132.3
+      },
+      "projectedPosition": {
+        "easting": 4370753.037914526,
+        "northing": 1096678.6170900527
+      },
+      "pixelCenter": [
+        1961.5,
+        1327.5
+      ],
+      "pixelBBox": [
+        1961,
+        1327,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.96763,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.251427,
+        "peakDarkResidual": 0.267368,
+        "adjacentBrightResidual": 0.178601,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.46,
+        "localReliefMetres": 0.86,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-086",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 22.71,
+        "y": 122.79
+      },
+      "projectedPosition": {
+        "easting": 4369888.0879145255,
+        "northing": 1096726.1670900527
+      },
+      "pixelCenter": [
+        231.6,
+        1232.4
+      ],
+      "pixelBBox": [
+        230,
+        1231,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.96654,
+      "evidence": {
+        "componentPixels": 15,
+        "darkCueAreaM2": 3.75,
+        "medianDarkContrast": 0.239522,
+        "peakDarkResidual": 0.367028,
+        "adjacentBrightResidual": 0.227491,
+        "bboxFillRatio": 0.9375,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.73,
+        "localReliefMetres": 0.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-087",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 149.8,
+        "y": 83.5
+      },
+      "projectedPosition": {
+        "easting": 4370523.537914526,
+        "northing": 1096922.6170900527
+      },
+      "pixelCenter": [
+        1502.5,
+        839.5
+      ],
+      "pixelBBox": [
+        1502,
+        839,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.96466,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.278496,
+        "peakDarkResidual": 0.30943,
+        "adjacentBrightResidual": 0.152875,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.52,
+        "localReliefMetres": 0.27,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-088",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 187.8,
+        "y": 46.95
+      },
+      "projectedPosition": {
+        "easting": 4370713.537914526,
+        "northing": 1097105.3670900527
+      },
+      "pixelCenter": [
+        1882.5,
+        474.0
+      ],
+      "pixelBBox": [
+        1882,
+        473,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.288299,
+        "peakDarkResidual": 0.390826,
+        "adjacentBrightResidual": 0.21023,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 4.44,
+        "localReliefMetres": 0.49,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-089",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 165.7,
+        "y": 51.45
+      },
+      "projectedPosition": {
+        "easting": 4370603.037914526,
+        "northing": 1097082.8670900527
+      },
+      "pixelCenter": [
+        1661.5,
+        519.0
+      ],
+      "pixelBBox": [
+        1661,
+        518,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.266974,
+        "peakDarkResidual": 0.322295,
+        "adjacentBrightResidual": 0.28021,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 6.02,
+        "localReliefMetres": 1.16,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-090",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 87.4,
+        "y": 67.15
+      },
+      "projectedPosition": {
+        "easting": 4370211.537914526,
+        "northing": 1097004.3670900527
+      },
+      "pixelCenter": [
+        878.5,
+        676.0
+      ],
+      "pixelBBox": [
+        878,
+        675,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.278232,
+        "peakDarkResidual": 0.35288,
+        "adjacentBrightResidual": 0.26909,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 7.74,
+        "localReliefMetres": 1.42,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-091",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 155.05,
+        "y": 69.8
+      },
+      "projectedPosition": {
+        "easting": 4370549.787914526,
+        "northing": 1096991.1170900527
+      },
+      "pixelCenter": [
+        1555.0,
+        702.5
+      ],
+      "pixelBBox": [
+        1554,
+        702,
+        3,
+        2
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.285672,
+        "peakDarkResidual": 0.358394,
+        "adjacentBrightResidual": 0.245897,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 5.03,
+        "localReliefMetres": 0.6,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-092",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 189.5,
+        "y": 76.45
+      },
+      "projectedPosition": {
+        "easting": 4370722.037914526,
+        "northing": 1096957.8670900527
+      },
+      "pixelCenter": [
+        1899.5,
+        769.0
+      ],
+      "pixelBBox": [
+        1899,
+        768,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.381172,
+        "peakDarkResidual": 0.507901,
+        "adjacentBrightResidual": 0.212512,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 2.59,
+        "localReliefMetres": 0.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-093",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 169.9,
+        "y": 107.25
+      },
+      "projectedPosition": {
+        "easting": 4370624.037914526,
+        "northing": 1096803.8670900527
+      },
+      "pixelCenter": [
+        1703.5,
+        1077.0
+      ],
+      "pixelBBox": [
+        1703,
+        1076,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.323854,
+        "peakDarkResidual": 0.353224,
+        "adjacentBrightResidual": 0.237113,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 5.12,
+        "localReliefMetres": 0.53,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-094",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 176.3,
+        "y": 120.45
+      },
+      "projectedPosition": {
+        "easting": 4370656.037914526,
+        "northing": 1096737.8670900527
+      },
+      "pixelCenter": [
+        1767.5,
+        1209.0
+      ],
+      "pixelBBox": [
+        1767,
+        1208,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.357467,
+        "peakDarkResidual": 0.449329,
+        "adjacentBrightResidual": 0.260433,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 3.35,
+        "localReliefMetres": 0.69,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-095",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 161.3,
+        "y": 149.85
+      },
+      "projectedPosition": {
+        "easting": 4370581.037914526,
+        "northing": 1096590.8670900527
+      },
+      "pixelCenter": [
+        1617.5,
+        1503.0
+      ],
+      "pixelBBox": [
+        1617,
+        1502,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.421711,
+        "peakDarkResidual": 0.496619,
+        "adjacentBrightResidual": 0.20997,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 9.09,
+        "localReliefMetres": 1.19,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-096",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 163.9,
+        "y": 165.85
+      },
+      "projectedPosition": {
+        "easting": 4370594.037914526,
+        "northing": 1096510.8670900527
+      },
+      "pixelCenter": [
+        1643.5,
+        1663.0
+      ],
+      "pixelBBox": [
+        1643,
+        1662,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.300449,
+        "peakDarkResidual": 0.367153,
+        "adjacentBrightResidual": 0.218258,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 2.92,
+        "localReliefMetres": 0.66,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-097",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 195.6,
+        "y": 166.15
+      },
+      "projectedPosition": {
+        "easting": 4370752.537914526,
+        "northing": 1096509.3670900527
+      },
+      "pixelCenter": [
+        1960.5,
+        1666.0
+      ],
+      "pixelBBox": [
+        1960,
+        1665,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.289847,
+        "peakDarkResidual": 0.391324,
+        "adjacentBrightResidual": 0.302472,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 5.31,
+        "localReliefMetres": 0.86,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-098",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 171.7,
+        "y": 178.65
+      },
+      "projectedPosition": {
+        "easting": 4370633.037914526,
+        "northing": 1096446.8670900527
+      },
+      "pixelCenter": [
+        1721.5,
+        1791.0
+      ],
+      "pixelBBox": [
+        1721,
+        1790,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.281808,
+        "peakDarkResidual": 0.309955,
+        "adjacentBrightResidual": 0.273101,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 7.92,
+        "localReliefMetres": 1.22,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-099",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 136.3,
+        "y": 179.15
+      },
+      "projectedPosition": {
+        "easting": 4370456.037914526,
+        "northing": 1096444.3670900527
+      },
+      "pixelCenter": [
+        1367.5,
+        1796.0
+      ],
+      "pixelBBox": [
+        1367,
+        1795,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.402692,
+        "peakDarkResidual": 0.564357,
+        "adjacentBrightResidual": 0.213751,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 9.6,
+        "localReliefMetres": 0.96,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-100",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 117.0,
+        "y": 181.25
+      },
+      "projectedPosition": {
+        "easting": 4370359.537914526,
+        "northing": 1096433.8670900527
+      },
+      "pixelCenter": [
+        1174.5,
+        1817.0
+      ],
+      "pixelBBox": [
+        1174,
+        1816,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.286502,
+        "peakDarkResidual": 0.349953,
+        "adjacentBrightResidual": 0.261608,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 6.97,
+        "localReliefMetres": 1.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-101",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 145.9,
+        "y": 185.35
+      },
+      "projectedPosition": {
+        "easting": 4370504.037914526,
+        "northing": 1096413.3670900527
+      },
+      "pixelCenter": [
+        1463.5,
+        1858.0
+      ],
+      "pixelBBox": [
+        1463,
+        1857,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.31666,
+        "peakDarkResidual": 0.368314,
+        "adjacentBrightResidual": 0.325221,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 6.38,
+        "localReliefMetres": 1.28,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-102",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 163.0,
+        "y": 194.45
+      },
+      "projectedPosition": {
+        "easting": 4370589.537914526,
+        "northing": 1096367.8670900527
+      },
+      "pixelCenter": [
+        1634.5,
+        1949.0
+      ],
+      "pixelBBox": [
+        1634,
+        1948,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.9633,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.262432,
+        "peakDarkResidual": 0.318607,
+        "adjacentBrightResidual": 0.235706,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 5.0,
+        "localReliefMetres": 0.76,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-103",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 157.38846,
+        "y": 38.70385
+      },
+      "projectedPosition": {
+        "easting": 4370561.480214526,
+        "northing": 1097146.5978400528
+      },
+      "pixelCenter": [
+        1578.3846,
+        391.5385
+      ],
+      "pixelBBox": [
+        1577,
+        390,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.9625,
+      "evidence": {
+        "componentPixels": 13,
+        "darkCueAreaM2": 3.25,
+        "medianDarkContrast": 0.263133,
+        "peakDarkResidual": 0.407842,
+        "adjacentBrightResidual": 0.240895,
+        "bboxFillRatio": 0.8125,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.43,
+        "localReliefMetres": 0.54,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-104",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 83.28846,
+        "y": 82.58846
+      },
+      "projectedPosition": {
+        "easting": 4370190.980214526,
+        "northing": 1096927.1747900527
+      },
+      "pixelCenter": [
+        837.3846,
+        830.3846
+      ],
+      "pixelBBox": [
+        836,
+        829,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.9625,
+      "evidence": {
+        "componentPixels": 13,
+        "darkCueAreaM2": 3.25,
+        "medianDarkContrast": 0.36695,
+        "peakDarkResidual": 0.709075,
+        "adjacentBrightResidual": 0.268047,
+        "bboxFillRatio": 0.8125,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.71,
+        "localReliefMetres": 0.58,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-105",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 85.4,
+        "y": 62.1
+      },
+      "projectedPosition": {
+        "easting": 4370201.537914526,
+        "northing": 1097029.6170900527
+      },
+      "pixelCenter": [
+        858.5,
+        625.5
+      ],
+      "pixelBBox": [
+        858,
+        625,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.96138,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.254359,
+        "peakDarkResidual": 0.270035,
+        "adjacentBrightResidual": 0.168478,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.98,
+        "localReliefMetres": 0.61,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-106",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 157.0,
+        "y": 82.55
+      },
+      "projectedPosition": {
+        "easting": 4370559.537914526,
+        "northing": 1096927.3670900527
+      },
+      "pixelCenter": [
+        1574.5,
+        830.0
+      ],
+      "pixelBBox": [
+        1574,
+        829,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.96098,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.313241,
+        "peakDarkResidual": 0.480103,
+        "adjacentBrightResidual": 0.196909,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 2.65,
+        "localReliefMetres": 0.23,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-107",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 24.3,
+        "y": 186.55
+      },
+      "projectedPosition": {
+        "easting": 4369896.037914526,
+        "northing": 1096407.3670900527
+      },
+      "pixelCenter": [
+        247.5,
+        1870.0
+      ],
+      "pixelBBox": [
+        247,
+        1869,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.96087,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.265742,
+        "peakDarkResidual": 0.295141,
+        "adjacentBrightResidual": 0.321867,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 5.88,
+        "localReliefMetres": 0.5,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-108",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 178.95,
+        "y": 101.3
+      },
+      "projectedPosition": {
+        "easting": 4370669.287914526,
+        "northing": 1096833.6170900527
+      },
+      "pixelCenter": [
+        1794.0,
+        1017.5
+      ],
+      "pixelBBox": [
+        1793,
+        1017,
+        3,
+        2
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.96065,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.25004,
+        "peakDarkResidual": 0.294705,
+        "adjacentBrightResidual": 0.253629,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 2.92,
+        "localReliefMetres": 0.36,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-109",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 167.6,
+        "y": 80.2
+      },
+      "projectedPosition": {
+        "easting": 4370612.537914526,
+        "northing": 1096939.1170900527
+      },
+      "pixelCenter": [
+        1680.5,
+        806.5
+      ],
+      "pixelBBox": [
+        1680,
+        806,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95975,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.235695,
+        "peakDarkResidual": 0.276715,
+        "adjacentBrightResidual": 0.284546,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.04,
+        "localReliefMetres": 0.43,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-110",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 158.74091,
+        "y": 32.61364
+      },
+      "projectedPosition": {
+        "easting": 4370568.242464526,
+        "northing": 1097177.0488900526
+      },
+      "pixelCenter": [
+        1591.9091,
+        330.6364
+      ],
+      "pixelBBox": [
+        1591,
+        329,
+        3,
+        4
+      ],
+      "radiusMeters": 2.25,
+      "score": 0.95877,
+      "evidence": {
+        "componentPixels": 11,
+        "darkCueAreaM2": 2.75,
+        "medianDarkContrast": 0.344952,
+        "peakDarkResidual": 0.530766,
+        "adjacentBrightResidual": 0.266945,
+        "bboxFillRatio": 0.916667,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 4.76,
+        "localReliefMetres": 0.6,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-111",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 198.45909,
+        "y": 51.61364
+      },
+      "projectedPosition": {
+        "easting": 4370766.833364526,
+        "northing": 1097082.0488900526
+      },
+      "pixelCenter": [
+        1989.0909,
+        520.6364
+      ],
+      "pixelBBox": [
+        1988,
+        519,
+        3,
+        4
+      ],
+      "radiusMeters": 2.25,
+      "score": 0.95877,
+      "evidence": {
+        "componentPixels": 11,
+        "darkCueAreaM2": 2.75,
+        "medianDarkContrast": 0.305637,
+        "peakDarkResidual": 0.469936,
+        "adjacentBrightResidual": 0.266124,
+        "bboxFillRatio": 0.916667,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 4.86,
+        "localReliefMetres": 0.61,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-112",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 136.04091,
+        "y": 53.78636
+      },
+      "projectedPosition": {
+        "easting": 4370454.742464526,
+        "northing": 1097071.1852900528
+      },
+      "pixelCenter": [
+        1364.9091,
+        542.3636
+      ],
+      "pixelBBox": [
+        1364,
+        541,
+        3,
+        4
+      ],
+      "radiusMeters": 2.25,
+      "score": 0.95877,
+      "evidence": {
+        "componentPixels": 11,
+        "darkCueAreaM2": 2.75,
+        "medianDarkContrast": 0.344216,
+        "peakDarkResidual": 0.539998,
+        "adjacentBrightResidual": 0.341559,
+        "bboxFillRatio": 0.916667,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 4.75,
+        "localReliefMetres": 0.94,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-113",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 82.38636,
+        "y": 83.04091
+      },
+      "projectedPosition": {
+        "easting": 4370186.469714526,
+        "northing": 1096924.9125400528
+      },
+      "pixelCenter": [
+        828.3636,
+        834.9091
+      ],
+      "pixelBBox": [
+        827,
+        834,
+        4,
+        3
+      ],
+      "radiusMeters": 2.25,
+      "score": 0.95877,
+      "evidence": {
+        "componentPixels": 11,
+        "darkCueAreaM2": 2.75,
+        "medianDarkContrast": 0.27692,
+        "peakDarkResidual": 0.541891,
+        "adjacentBrightResidual": 0.256262,
+        "bboxFillRatio": 0.916667,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 2.62,
+        "localReliefMetres": 0.49,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-114",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 198.94091,
+        "y": 118.61364
+      },
+      "projectedPosition": {
+        "easting": 4370769.242464526,
+        "northing": 1096747.0488900526
+      },
+      "pixelCenter": [
+        1993.9091,
+        1190.6364
+      ],
+      "pixelBBox": [
+        1993,
+        1189,
+        3,
+        4
+      ],
+      "radiusMeters": 2.25,
+      "score": 0.95877,
+      "evidence": {
+        "componentPixels": 11,
+        "darkCueAreaM2": 2.75,
+        "medianDarkContrast": 0.255038,
+        "peakDarkResidual": 0.418611,
+        "adjacentBrightResidual": 0.314086,
+        "bboxFillRatio": 0.916667,
+        "bboxAspectRatio": 1.333333,
+        "maximumCellSlopeDegrees": 2.63,
+        "localReliefMetres": 0.23,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-115",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 74.1,
+        "y": 57.6
+      },
+      "projectedPosition": {
+        "easting": 4370145.037914526,
+        "northing": 1097052.1170900527
+      },
+      "pixelCenter": [
+        745.5,
+        580.5
+      ],
+      "pixelBBox": [
+        745,
+        580,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95839,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.257854,
+        "peakDarkResidual": 0.265592,
+        "adjacentBrightResidual": 0.167458,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.1,
+        "localReliefMetres": 0.56,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-116",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 193.95,
+        "y": 55.65
+      },
+      "projectedPosition": {
+        "easting": 4370744.287914526,
+        "northing": 1097061.8670900527
+      },
+      "pixelCenter": [
+        1944.0,
+        561.0
+      ],
+      "pixelBBox": [
+        1943,
+        560,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.250578,
+        "peakDarkResidual": 0.365028,
+        "adjacentBrightResidual": 0.2755,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.33,
+        "localReliefMetres": 1.0,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-117",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 189.17857,
+        "y": 61.53571
+      },
+      "projectedPosition": {
+        "easting": 4370720.430764526,
+        "northing": 1097032.4385400526
+      },
+      "pixelCenter": [
+        1896.2857,
+        619.8571
+      ],
+      "pixelBBox": [
+        1895,
+        619,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.303368,
+        "peakDarkResidual": 0.38754,
+        "adjacentBrightResidual": 0.282773,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.45,
+        "localReliefMetres": 0.98,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-118",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 101.22143,
+        "y": 67.75
+      },
+      "projectedPosition": {
+        "easting": 4370280.645064525,
+        "northing": 1097001.3670900527
+      },
+      "pixelCenter": [
+        1016.7143,
+        682.0
+      ],
+      "pixelBBox": [
+        1016,
+        681,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.252316,
+        "peakDarkResidual": 0.469166,
+        "adjacentBrightResidual": 0.25324,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.49,
+        "localReliefMetres": 0.92,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-119",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 174.65,
+        "y": 74.25
+      },
+      "projectedPosition": {
+        "easting": 4370647.787914526,
+        "northing": 1096968.8670900527
+      },
+      "pixelCenter": [
+        1751.0,
+        747.0
+      ],
+      "pixelBBox": [
+        1750,
+        746,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.265003,
+        "peakDarkResidual": 0.323899,
+        "adjacentBrightResidual": 0.25727,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.12,
+        "localReliefMetres": 0.48,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-120",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 176.45,
+        "y": 77.42143
+      },
+      "projectedPosition": {
+        "easting": 4370656.787914526,
+        "northing": 1096953.0099400526
+      },
+      "pixelCenter": [
+        1769.0,
+        778.7143
+      ],
+      "pixelBBox": [
+        1768,
+        778,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.319819,
+        "peakDarkResidual": 0.456243,
+        "adjacentBrightResidual": 0.224123,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.06,
+        "localReliefMetres": 0.27,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-121",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 149.35,
+        "y": 81.15
+      },
+      "projectedPosition": {
+        "easting": 4370521.287914526,
+        "northing": 1096934.3670900527
+      },
+      "pixelCenter": [
+        1498.0,
+        816.0
+      ],
+      "pixelBBox": [
+        1497,
+        815,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.28987,
+        "peakDarkResidual": 0.357552,
+        "adjacentBrightResidual": 0.2234,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.03,
+        "localReliefMetres": 0.3,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-122",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 194.12143,
+        "y": 83.26429
+      },
+      "projectedPosition": {
+        "easting": 4370745.145064525,
+        "northing": 1096923.7956400528
+      },
+      "pixelCenter": [
+        1945.7143,
+        837.1429
+      ],
+      "pixelBBox": [
+        1945,
+        836,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.28108,
+        "peakDarkResidual": 0.362211,
+        "adjacentBrightResidual": 0.24889,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 1.05,
+        "localReliefMetres": 0.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-123",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 128.97857,
+        "y": 114.55
+      },
+      "projectedPosition": {
+        "easting": 4370419.430764526,
+        "northing": 1096767.3670900527
+      },
+      "pixelCenter": [
+        1294.2857,
+        1150.0
+      ],
+      "pixelBBox": [
+        1293,
+        1149,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.396023,
+        "peakDarkResidual": 0.493471,
+        "adjacentBrightResidual": 0.253093,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.53,
+        "localReliefMetres": 0.98,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-124",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 127.25,
+        "y": 116.17857
+      },
+      "projectedPosition": {
+        "easting": 4370410.787914526,
+        "northing": 1096759.2242400527
+      },
+      "pixelCenter": [
+        1277.0,
+        1166.2857
+      ],
+      "pixelBBox": [
+        1276,
+        1165,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.307825,
+        "peakDarkResidual": 0.448647,
+        "adjacentBrightResidual": 0.283628,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.79,
+        "localReliefMetres": 0.58,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-125",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 31.47857,
+        "y": 127.35
+      },
+      "projectedPosition": {
+        "easting": 4369931.930764526,
+        "northing": 1096703.3670900527
+      },
+      "pixelCenter": [
+        319.2857,
+        1278.0
+      ],
+      "pixelBBox": [
+        318,
+        1277,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.282245,
+        "peakDarkResidual": 0.357204,
+        "adjacentBrightResidual": 0.227921,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.04,
+        "localReliefMetres": 0.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-126",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 122.72143,
+        "y": 153.05
+      },
+      "projectedPosition": {
+        "easting": 4370388.145064525,
+        "northing": 1096574.8670900527
+      },
+      "pixelCenter": [
+        1231.7143,
+        1535.0
+      ],
+      "pixelBBox": [
+        1231,
+        1534,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.262565,
+        "peakDarkResidual": 0.376254,
+        "adjacentBrightResidual": 0.278995,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.85,
+        "localReliefMetres": 0.67,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-127",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 161.85,
+        "y": 183.15
+      },
+      "projectedPosition": {
+        "easting": 4370583.787914526,
+        "northing": 1096424.3670900527
+      },
+      "pixelCenter": [
+        1623.0,
+        1836.0
+      ],
+      "pixelBBox": [
+        1622,
+        1835,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.292007,
+        "peakDarkResidual": 0.355646,
+        "adjacentBrightResidual": 0.257082,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.52,
+        "localReliefMetres": 0.99,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-128",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 140.75,
+        "y": 193.55
+      },
+      "projectedPosition": {
+        "easting": 4370478.287914526,
+        "northing": 1096372.3670900527
+      },
+      "pixelCenter": [
+        1412.0,
+        1940.0
+      ],
+      "pixelBBox": [
+        1411,
+        1939,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.310682,
+        "peakDarkResidual": 0.44286,
+        "adjacentBrightResidual": 0.285019,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 9.1,
+        "localReliefMetres": 1.84,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-129",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 136.25,
+        "y": 194.85
+      },
+      "projectedPosition": {
+        "easting": 4370455.787914526,
+        "northing": 1096365.8670900527
+      },
+      "pixelCenter": [
+        1367.0,
+        1953.0
+      ],
+      "pixelBBox": [
+        1366,
+        1952,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95556,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.320932,
+        "peakDarkResidual": 0.407406,
+        "adjacentBrightResidual": 0.269547,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.78,
+        "localReliefMetres": 1.89,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-130",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 181.5,
+        "y": 103.65
+      },
+      "projectedPosition": {
+        "easting": 4370682.037914526,
+        "northing": 1096821.8670900527
+      },
+      "pixelCenter": [
+        1819.5,
+        1041.0
+      ],
+      "pixelBBox": [
+        1819,
+        1040,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.95539,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.246045,
+        "peakDarkResidual": 0.327524,
+        "adjacentBrightResidual": 0.276912,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 3.08,
+        "localReliefMetres": 0.21,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-131",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 172.6,
+        "y": 174.05
+      },
+      "projectedPosition": {
+        "easting": 4370637.537914526,
+        "northing": 1096469.8670900527
+      },
+      "pixelCenter": [
+        1730.5,
+        1745.0
+      ],
+      "pixelBBox": [
+        1730,
+        1744,
+        2,
+        3
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.95451,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.390114,
+        "peakDarkResidual": 0.548834,
+        "adjacentBrightResidual": 0.188278,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 3.99,
+        "localReliefMetres": 0.69,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-132",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 183.92143,
+        "y": 91.25
+      },
+      "projectedPosition": {
+        "easting": 4370694.145064525,
+        "northing": 1096883.8670900527
+      },
+      "pixelCenter": [
+        1843.7143,
+        917.0
+      ],
+      "pixelBBox": [
+        1843,
+        916,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95428,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.259418,
+        "peakDarkResidual": 0.351783,
+        "adjacentBrightResidual": 0.198294,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.8,
+        "localReliefMetres": 0.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-133",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 148.75,
+        "y": 193.85
+      },
+      "projectedPosition": {
+        "easting": 4370518.287914526,
+        "northing": 1096370.8670900527
+      },
+      "pixelCenter": [
+        1492.0,
+        1943.0
+      ],
+      "pixelBBox": [
+        1491,
+        1942,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95296,
+      "evidence": {
+        "componentPixels": 7,
+        "darkCueAreaM2": 1.75,
+        "medianDarkContrast": 0.376433,
+        "peakDarkResidual": 0.575267,
+        "adjacentBrightResidual": 0.196543,
+        "bboxFillRatio": 0.777778,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.06,
+        "localReliefMetres": 1.1,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-134",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 63.7,
+        "y": 96.1
+      },
+      "projectedPosition": {
+        "easting": 4370093.037914526,
+        "northing": 1096859.6170900527
+      },
+      "pixelCenter": [
+        641.5,
+        965.5
+      ],
+      "pixelBBox": [
+        641,
+        965,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95273,
+      "evidence": {
+        "componentPixels": 4,
+        "darkCueAreaM2": 1.0,
+        "medianDarkContrast": 0.432783,
+        "peakDarkResidual": 0.472467,
+        "adjacentBrightResidual": 0.136972,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.03,
+        "localReliefMetres": 1.01,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-135",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 63.05,
+        "y": 84.0
+      },
+      "projectedPosition": {
+        "easting": 4370089.787914526,
+        "northing": 1096920.1170900527
+      },
+      "pixelCenter": [
+        635.0,
+        844.5
+      ],
+      "pixelBBox": [
+        634,
+        844,
+        3,
+        2
+      ],
+      "radiusMeters": 1.901,
+      "score": 0.95211,
+      "evidence": {
+        "componentPixels": 6,
+        "darkCueAreaM2": 1.5,
+        "medianDarkContrast": 0.244407,
+        "peakDarkResidual": 0.337012,
+        "adjacentBrightResidual": 0.274342,
+        "bboxFillRatio": 1.0,
+        "bboxAspectRatio": 1.5,
+        "maximumCellSlopeDegrees": 9.38,
+        "localReliefMetres": 1.6,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-136",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 188.05588,
+        "y": 185.19118
+      },
+      "projectedPosition": {
+        "easting": 4370714.817314526,
+        "northing": 1096414.1611900527
+      },
+      "pixelCenter": [
+        1885.0588,
+        1856.4118
+      ],
+      "pixelBBox": [
+        1883,
+        1855,
+        5,
+        4
+      ],
+      "radiusMeters": 2.601,
+      "score": 0.95205,
+      "evidence": {
+        "componentPixels": 17,
+        "darkCueAreaM2": 4.25,
+        "medianDarkContrast": 0.279623,
+        "peakDarkResidual": 0.504132,
+        "adjacentBrightResidual": 0.322995,
+        "bboxFillRatio": 0.85,
+        "bboxAspectRatio": 1.25,
+        "maximumCellSlopeDegrees": 6.16,
+        "localReliefMetres": 0.59,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-137",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 114.95,
+        "y": 55.95
+      },
+      "projectedPosition": {
+        "easting": 4370349.287914526,
+        "northing": 1097060.3670900527
+      },
+      "pixelCenter": [
+        1154.0,
+        564.0
+      ],
+      "pixelBBox": [
+        1152,
+        562,
+        5,
+        5
+      ],
+      "radiusMeters": 2.768,
+      "score": 0.952,
+      "evidence": {
+        "componentPixels": 19,
+        "darkCueAreaM2": 4.75,
+        "medianDarkContrast": 0.276818,
+        "peakDarkResidual": 0.490276,
+        "adjacentBrightResidual": 0.264003,
+        "bboxFillRatio": 0.76,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 1.81,
+        "localReliefMetres": 0.36,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-138",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 133.4625,
+        "y": 186.3375
+      },
+      "projectedPosition": {
+        "easting": 4370441.850414526,
+        "northing": 1096408.4295900527
+      },
+      "pixelCenter": [
+        1339.125,
+        1867.875
+      ],
+      "pixelBBox": [
+        1338,
+        1867,
+        3,
+        3
+      ],
+      "radiusMeters": 2.061,
+      "score": 0.95159,
+      "evidence": {
+        "componentPixels": 8,
+        "darkCueAreaM2": 2.0,
+        "medianDarkContrast": 0.415229,
+        "peakDarkResidual": 0.671872,
+        "adjacentBrightResidual": 0.16509,
+        "bboxFillRatio": 0.888889,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.46,
+        "localReliefMetres": 0.41,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-139",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 143.90833,
+        "y": 65.575
+      },
+      "projectedPosition": {
+        "easting": 4370494.079564526,
+        "northing": 1097012.2420900527
+      },
+      "pixelCenter": [
+        1443.5833,
+        660.25
+      ],
+      "pixelBBox": [
+        1442,
+        659,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 12,
+        "darkCueAreaM2": 3.0,
+        "medianDarkContrast": 0.294534,
+        "peakDarkResidual": 0.486599,
+        "adjacentBrightResidual": 0.255656,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.58,
+        "localReliefMetres": 0.69,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-140",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 152.7,
+        "y": 106.675
+      },
+      "projectedPosition": {
+        "easting": 4370538.037914526,
+        "northing": 1096806.7420900527
+      },
+      "pixelCenter": [
+        1531.5,
+        1071.25
+      ],
+      "pixelBBox": [
+        1530,
+        1070,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 12,
+        "darkCueAreaM2": 3.0,
+        "medianDarkContrast": 0.328422,
+        "peakDarkResidual": 0.448531,
+        "adjacentBrightResidual": 0.235369,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 7.49,
+        "localReliefMetres": 0.73,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-141",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 180.59167,
+        "y": 129.775
+      },
+      "projectedPosition": {
+        "easting": 4370677.496264526,
+        "northing": 1096691.2420900527
+      },
+      "pixelCenter": [
+        1810.4167,
+        1302.25
+      ],
+      "pixelBBox": [
+        1809,
+        1301,
+        4,
+        4
+      ],
+      "radiusMeters": 2.414,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 12,
+        "darkCueAreaM2": 3.0,
+        "medianDarkContrast": 0.407405,
+        "peakDarkResidual": 0.552244,
+        "adjacentBrightResidual": 0.234932,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.01,
+        "localReliefMetres": 0.87,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-142",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 155.11667,
+        "y": 45.48333
+      },
+      "projectedPosition": {
+        "easting": 4370550.121264526,
+        "northing": 1097112.7004400527
+      },
+      "pixelCenter": [
+        1555.6667,
+        459.3333
+      ],
+      "pixelBBox": [
+        1555,
+        459,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.268139,
+        "peakDarkResidual": 0.302489,
+        "adjacentBrightResidual": 0.262186,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 3.15,
+        "localReliefMetres": 0.34,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-143",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 192.08333,
+        "y": 52.28333
+      },
+      "projectedPosition": {
+        "easting": 4370734.954564526,
+        "northing": 1097078.7004400527
+      },
+      "pixelCenter": [
+        1925.3333,
+        527.3333
+      ],
+      "pixelBBox": [
+        1925,
+        527,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.32883,
+        "peakDarkResidual": 0.397636,
+        "adjacentBrightResidual": 0.227761,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 2.09,
+        "localReliefMetres": 0.15,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-144",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 178.28333,
+        "y": 55.58333
+      },
+      "projectedPosition": {
+        "easting": 4370665.954564526,
+        "northing": 1097062.2004400527
+      },
+      "pixelCenter": [
+        1787.3333,
+        560.3333
+      ],
+      "pixelBBox": [
+        1787,
+        560,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.318268,
+        "peakDarkResidual": 0.375113,
+        "adjacentBrightResidual": 0.238904,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.84,
+        "localReliefMetres": 1.2,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-145",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 102.58333,
+        "y": 56.01667
+      },
+      "projectedPosition": {
+        "easting": 4370287.454564526,
+        "northing": 1097060.0337400527
+      },
+      "pixelCenter": [
+        1030.3333,
+        564.6667
+      ],
+      "pixelBBox": [
+        1030,
+        564,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.292058,
+        "peakDarkResidual": 0.357736,
+        "adjacentBrightResidual": 0.243905,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.82,
+        "localReliefMetres": 0.82,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-146",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 137.78333,
+        "y": 56.61667
+      },
+      "projectedPosition": {
+        "easting": 4370463.454564526,
+        "northing": 1097057.0337400527
+      },
+      "pixelCenter": [
+        1382.3333,
+        570.6667
+      ],
+      "pixelBBox": [
+        1382,
+        570,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.328722,
+        "peakDarkResidual": 0.36298,
+        "adjacentBrightResidual": 0.216801,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 8.15,
+        "localReliefMetres": 1.2,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-147",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 142.88333,
+        "y": 58.21667
+      },
+      "projectedPosition": {
+        "easting": 4370488.954564526,
+        "northing": 1097049.0337400527
+      },
+      "pixelCenter": [
+        1433.3333,
+        586.6667
+      ],
+      "pixelBBox": [
+        1433,
+        586,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.282048,
+        "peakDarkResidual": 0.304829,
+        "adjacentBrightResidual": 0.310089,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.32,
+        "localReliefMetres": 0.77,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-148",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 189.78333,
+        "y": 60.61667
+      },
+      "projectedPosition": {
+        "easting": 4370723.454564526,
+        "northing": 1097037.0337400527
+      },
+      "pixelCenter": [
+        1902.3333,
+        610.6667
+      ],
+      "pixelBBox": [
+        1902,
+        610,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.278238,
+        "peakDarkResidual": 0.303428,
+        "adjacentBrightResidual": 0.258587,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 5.67,
+        "localReliefMetres": 1.0,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-149",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 116.88333,
+        "y": 64.71667
+      },
+      "projectedPosition": {
+        "easting": 4370358.954564526,
+        "northing": 1097016.5337400527
+      },
+      "pixelCenter": [
+        1173.3333,
+        651.6667
+      ],
+      "pixelBBox": [
+        1173,
+        651,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.258762,
+        "peakDarkResidual": 0.361907,
+        "adjacentBrightResidual": 0.281829,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 4.58,
+        "localReliefMetres": 0.65,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    },
+    {
+      "id": "ridge-optical-150",
+      "kind": "optical-candidate",
+      "status": "candidate",
+      "reviewStatus": "unreviewed",
+      "excludedFromRouting": false,
+      "point": {
+        "x": 85.28333,
+        "y": 65.21667
+      },
+      "projectedPosition": {
+        "easting": 4370200.954564526,
+        "northing": 1097014.0337400527
+      },
+      "pixelCenter": [
+        857.3333,
+        656.6667
+      ],
+      "pixelBBox": [
+        857,
+        656,
+        2,
+        2
+      ],
+      "radiusMeters": 1.707,
+      "score": 0.95,
+      "evidence": {
+        "componentPixels": 3,
+        "darkCueAreaM2": 0.75,
+        "medianDarkContrast": 0.339905,
+        "peakDarkResidual": 0.360728,
+        "adjacentBrightResidual": 0.261062,
+        "bboxFillRatio": 0.75,
+        "bboxAspectRatio": 1.0,
+        "maximumCellSlopeDegrees": 6.89,
+        "localReliefMetres": 0.88,
+        "terrainGridMetres": 5,
+        "signals": [
+          "compact dark local-contrast component",
+          "adjacent brighter-than-background pixels"
+        ],
+        "interpretation": "Image cue may be a shadow, rock, small crater, texture, or mosaic artifact; no boulder confirmation"
+      }
+    }
+  ],
+  "limitations": [
+    "Dark/bright pairs can be rocks, small crater edges, dunes/ripples, fractures, shadows or mosaic artifacts.",
+    "Boulders without visible compact shadow/contrast, masked pixels and subpixel objects can be missed.",
+    "The top150 ranking and minimum spacing intentionally suppress candidates; absence is not clear terrain.",
+    "Native source approximately0.3m; evidence display0.5m; routing grid5m. None resolves all small obstacles.",
+    "Shadow-centred locations and optical/DEM registration are uncertain; inspection and editable buffers are required."
+  ]
+}

@@ -1,0 +1,31 @@
+import {describe,expect,it} from 'vitest';
+import {confirmCandidate,reviewSummary,validateDetectionAsset} from './optical-candidates';
+import type {OpticalCandidate} from './optical-candidates';
+import {annotationMask,parseAnnotations} from './obstacles';
+import {createMissionStore} from './use-mission';
+import {defaultMission,missionDirty} from './mission-state';
+import {DEFAULTS,blocked,index,point} from './planner';
+import type {Terrain} from './planner';
+import {destinationFor,SCIENCE_GOALS} from './destinations';
+import {explainRoute,routeGuidance} from './route-explanation';
+import floor from '../public/data/terrain.json';
+import ridge from '../public/data/ridge/terrain.json';
+import floorCandidates from '../public/data/obstacle-candidates-v2.json';
+import ridgeCandidates from '../public/data/ridge/obstacle-candidates-v2.json';
+import benchmark from '../public/data/optical-benchmark-v2.json';
+const fixture=():Terrain=>{const n=400;return {width:20,height:20,cellSize:5,bounds:[0,0,100,100],center:[77,18],crs:'test',elevation:Array(n).fill(0),slope:Array(n).fill(0),meanSlope:Array(n).fill(0),roughness:Array(n).fill(0),exposure:Array(n).fill(0),valid:Array(n).fill(1),thermal:Array(n).fill(300),thermalRange:[300,300]};};
+const candidate:OpticalCandidate={id:'test-candidate',point:{x:10,y:10},radiusMeters:3,pixelBBox:[100,100,6,5],score:.63,evidence:{method:'test'}};
+describe('registered automatic optical evidence',()=>{
+ it.each([[floor,floorCandidates],[ridge,ridgeCandidates]])('retains real georegistration and never auto-excludes candidates', (terrain,data)=>{const t=terrain as Terrain,a=validateDetectionAsset(data,t);expect(a.candidates).toHaveLength(150);expect(a.candidates.every(c=>c.excludedFromRouting===false)).toBe(true);expect(a.pixelResolutionMetres).toBe(.5);expect(annotationMask(t,[]).some(Boolean)).toBe(false);expect(a.config.modelSha256).toBe(benchmark.model.sha256);});
+ it('rejects wrong-region candidate files',()=>{expect(()=>validateDetectionAsset(ridgeCandidates,floor as Terrain)).toThrow(/region/);});
+ it.each(['NaN score','duplicate ID','invalid radius','out of bounds'])('rejects %s in imported candidate evidence',kind=>{const value=structuredClone(floorCandidates);if(kind==='NaN score')value.candidates[0].score=NaN;if(kind==='duplicate ID')value.candidates[1].id=value.candidates[0].id;if(kind==='invalid radius')value.candidates[0].radiusMeters=Infinity;if(kind==='out of bounds')value.candidates[0].point.x=300;expect(()=>validateDetectionAsset(value,floor as Terrain)).toThrow();});
+ it('confirmation retains detector identity, creates a conservative exclusion and is importable',()=>{const t=fixture(),a=confirmCandidate(candidate,'v2',t);expect(a.status).toBe('verified');expect(a.exclude).toBe(true);expect(a.candidateId).toBe(candidate.id);expect(a.detectorVersion).toBe('v2');expect(parseAnnotations([a],t)).toEqual([a]);expect(annotationMask(t,[a])[210]).toBe(1);});
+ it('review statistics cannot be mistaken for recall or measured precision',()=>{const a=reviewSummary([candidate,{...candidate,id:'b'},{...candidate,id:'c'}],{[candidate.id]:'confirmed',b:'rejected',c:'uncertain'});expect(a.reviewed).toBe(2);expect(a.reviewAcceptance).toBe(.5);expect(a.uncertain).toBe(1);expect(a).not.toHaveProperty('recall');expect(a).not.toHaveProperty('precision');expect(reviewSummary([candidate],{}).reviewAcceptance).toBeNull();});
+ it('confirmed evidence updates both the collision mask and the shared calculated round trip',()=>{const t=fixture(),draft={...defaultMission(t),base:{x:2,y:10},target:{x:17,y:10},settings:{...DEFAULTS,scienceMinutes:0}},store=createMissionStore(t,draft),old=store.getSnapshot().reports.shortest.route!;expect(old.cells).toContain(index(t,candidate.point));store.update({annotations:[confirmCandidate(candidate,'v2',t)]});expect(missionDirty(store.getSnapshot())).toBe(true);store.calculate();const s=store.getSnapshot(),mask=annotationMask(t,s.draft.annotations),route=s.reports.shortest.route!;expect(route.cells.every(i=>!mask[i])).toBe(true);expect(route.distance).toBeGreaterThan(old.distance);expect(blocked({...t,obstacleMask:mask},210,s.draft.settings,null)).toBe(true);});
+ it('does not invent a route when the reviewed buffer covers the destination',()=>{const t=fixture(),draft={...defaultMission(t),base:{x:2,y:10},target:{x:10,y:10},annotations:[confirmCandidate(candidate,'v2',t)]},store=createMissionStore(t,draft);expect(store.getSnapshot().reports.mission.route).toBeNull();});
+});
+describe('purposeful destinations and grounded route guidance',()=>{
+ it.each(SCIENCE_GOALS.map(g=>g.id))('places %s on valid observed terrain for both regions',id=>{for(const data of [floor,ridge]){const t=data as Terrain,d=destinationFor(t,id);expect(blocked(t,index(t,d.target),DEFAULTS,null)).toBe(false);expect(d.purpose.length).toBeGreaterThan(30);}});
+ it('returns an interpretable next point, bearing and progress in physical metres',()=>{const t=fixture(),cells=Array.from({length:16},(_,n)=>10*t.width+2+n),g=routeGuidance(t,cells,{x:2,y:10},25)!;expect(g.target).toEqual({x:7,y:10});expect(g.distance).toBe(25);expect(g.bearing).toBe(90);expect(g.progress).toBe(0);expect(routeGuidance(t,cells,point(t,cells.at(-1)!),25)!.progress).toBe(1);expect(routeGuidance(t,[],{x:1,y:1})).toBeNull();});
+ it('explains the actual selected objective and keeps proximity claims qualified',()=>{const t=floor as Terrain,store=createMissionStore(t,defaultMission(t)),s=store.getSnapshot(),r=s.reports.mission.route!,explanation=explainRoute(r,s.reports.shortest.route,'mission');expect(explanation.reason).toContain('modeled budgets');expect(explanation.facts).toContain(`${r.exposureDistance.toFixed(0)} m within steep-slope proximity proxy`);expect(explainRoute(null,null,'mission').title).toBe('No feasible round trip');expect(explainRoute(r,null,'exposure').reason).toContain('not a calibrated rockfall forecast');});
+});
