@@ -1,5 +1,7 @@
 # MARS SHIFT
 
+Current visual release: [surface rehearsal and detailed mission map](docs/SURFACE_MISSION_MAP.md). `/explore` starts with a simulated astronaut follow camera on the actual DEM. **Expand mission map** (M) opens 3D/2D terrain, four calculated round-trip alternatives, destination editing, quantitative layers and an interactive elevation profile.
+
 Current scientific release: [terrain, directional mobility and return-feasibility results](docs/SCIENTIFIC_ENGINEERING_RESULTS.md). In `/explore`, open **Science & Safety**. Adjust the time/work/payload/reserve assumptions to recompute directed outbound and return cost maps on the actual terrain. The displayed mission route changes only after explicit recalculation. Native morphology, local cost, feasibility and evidence support are visual overlays; seeded fixed-route sensitivity and numerical exports share the same engine.
 
 Reproduce scientific products and both-region experiments:
@@ -31,7 +33,7 @@ Open the printed local URL. `/` opens the introduction, `/destinations` chooses 
 
 **Mars Atlas:** open `/terrain` or **Mars Atlas** for the English global Mars explorer. Reused Caltech/Esri CTX and MOLA/HRSC services stream actual imagery and 3D terrain, with sparse HiRISE and a NASA Trek Jezero 25 cm orthomosaic. Scroll/drag to explore, enter Mars coordinates, save a Mars position and inspect nearby elevation. Five locally hosted real Mastcam-Z 360° panoramas provide a camera-level view at actual observation locations. Global imagery and 3D elevation have different resolutions; source limits are explicit. See [Mars Atlas](docs/MARS_ATLAS.md).
 
-**3D EVA Explorer:** the default page and `/terrain/local` alias share one mission with Mission Control. Enter **Walk EVA**, then use WASD/arrows, click for pointer lock or drag to look; touch arrows are available. M opens the minimap, H toggles hazard overlays, L cycles layers, Esc exits. EVA follows the native 1 m DEM with bilinear sampling at ×1 height. The rendered mesh uses 2 m vertices; the planning and collision mask conservatively retain 5 m cells. Select start/target directly on terrain, explicitly calculate, compare three objectives, inspect optical candidates and trigger a simulated exclusion. See [EVA implementation and limits](docs/EVA_EXPLORER.md).
+**3D EVA Explorer:** the default page and `/terrain/local` alias share one mission with Mission Control. Enter **Walk EVA**, then use WASD/arrows, click for pointer lock or drag to look; touch arrows are available. M opens the expanded mission map, H toggles hazard overlays, L cycles layers, Esc exits. EVA follows the native 1 m DEM with bilinear sampling at ×1 height. The rendered mesh uses 2 m vertices; the planning and collision mask conservatively retain 5 m cells. Select start/target directly on terrain, explicitly calculate, compare four objectives, inspect optical candidates and trigger a simulated exclusion. See [EVA implementation and limits](docs/EVA_EXPLORER.md).
 
 **Terrain analysis:** `/terrain/analysis` retains statistics, profiles, contours, coordinate inspection and CSV/JSON export in English. Its displayed round trip comes from the same shared mission, replacing the independent default route. WebGL failure opens the 2D planning map.
 

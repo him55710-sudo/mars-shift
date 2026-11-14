@@ -2,7 +2,7 @@ import type {TerrainScience} from './science-data';
 import {budgetForTravel,edgeTravelMinutes,hasMobilityData} from './mobility';
 export type Point = {x:number;y:number};
 export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string;science?:TerrainScience};
-export type Mode = 'shortest'|'exposure'|'mission';
+export type Mode = 'shortest'|'exposure'|'mission'|'time';
 export type Exclusion = Point & {radius:number};
 export type Settings = {maxSlope:number;speed:number;scienceMinutes:number;durationMinutes:number;oxygenMinutes:number;powerMinutes:number;reservePercent:number;loadKg:number;dust:boolean;hazardWeight:number;mobilityModel?:1|2;terrainEffort?:number};
 export const DEFAULTS: Settings={maxSlope:18,speed:.6,scienceMinutes:20,durationMinutes:110,oxygenMinutes:150,powerMinutes:140,reservePercent:25,loadKg:12,dust:false,hazardWeight:8};
@@ -24,7 +24,7 @@ export function leg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Ex
   const first=index(t,start),last=index(t,target);if(blocked(t,first,s,e)||blocked(t,last,s,e))return null;
   const count=t.width*t.height, g=new Float64Array(count).fill(Infinity),parent=new Int32Array(count).fill(-1),closed=new Uint8Array(count),heap=new Heap();
   g[first]=0;heap.push(first,0);
-  const heuristic=(p:Point)=>Math.hypot(p.x-target.x,p.y-target.y)*t.cellSize;
+  const heuristic=(p:Point)=>Math.hypot(p.x-target.x,p.y-target.y)*t.cellSize/(mode==='time'?Math.max(.01,s.speed)*(s.dust?.55:1)*60:1);
   while(heap.data.length){
     const {i}=heap.pop();if(closed[i])continue;
     if(i===last){const cells=[last];while(cells[cells.length-1]!==first){const n=parent[cells[cells.length-1]];if(n<0)return null;cells.push(n);}return {cells:cells.reverse(),cost:g[last]};}
@@ -40,7 +40,7 @@ export function leg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Ex
       let multiplier=1;
       if(mode==='exposure')multiplier+=s.hazardWeight*ex+sl*sl*.035+(t.roughness[j]??0)*.2+uncertainty*.2;
       if(mode==='mission')multiplier+=s.hazardWeight*.55*ex+sl*sl*.012+Math.max(0,dz)/horizontal*2+(t.roughness[j]??0)*.08+uncertainty*.1;
-      const score=g[i]+dist*multiplier;
+      const score=g[i]+(mode==='time'?edgeTravelMinutes(t,i,j,s):dist*multiplier);
       if(score<g[j]){g[j]=score;parent[j]=i;heap.push(j,score+heuristic({x,y}));}
     }
   }

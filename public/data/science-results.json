@@ -3,8 +3,8 @@
   "engineSources": {
     "src/mobility.ts": "464db8031ea8052da148ce9f578b5725d4e4f4d0bdb4f5cdd9f53b42aee89d17",
     "src/return-feasibility.ts": "4f7c7ae0daf17985dfd2fbf3baff0e399b69879add5b31a8b874cba0d2f22bbb",
-    "src/planner.ts": "07a3fbcf9c49c52c86f8c36767e1a879e7f1b67702a3b3cd4e3b987862b6cb19",
-    "src/constrained-planner.ts": "55f02712548464284801b038803052b4dd6b3bca26d36602b73c981a09fc12a1",
+    "src/planner.ts": "3859fb7843c6ef4b7c46123b1f169e1afe4a36f03528a66176ea1f999fd7d769",
+    "src/constrained-planner.ts": "9caeb609eeafcee0b11aea97b5115fccc0cbd7e0c5f2a7487f1e7500f189852d",
     "scripts/analyze_science.ts": "cbf956f1ab07022e1646b48cc1e357ff208882c6e2f900b0c74a1afef42610e0"
   },
   "engineHashEncoding": "SHA256 of UTF8 text with CRLF normalized to LF; data source hashes are raw bytes.",

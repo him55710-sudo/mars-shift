@@ -3,7 +3,7 @@ import type {Point, Terrain} from './planner';
 export type LayerId = 'optical' | 'elevation' | 'slope' | 'roughness' | 'thermal';
 export type NumericLayer = Exclude<LayerId, 'optical'>;
 export const LAYERS: {id: LayerId; name: string; en: string; unit: string; resolution: string; colors: string[]}[] = [
-  {id:'optical', name:'Optical imagery', en:'HiRISE optical', unit:'', resolution:'Native 0.3 m · display 1 m', colors:['#b4a28b','#e5d7bd']},
+  {id:'optical', name:'Optical imagery', en:'HiRISE optical', unit:'', resolution:'Native ~0.3 m · display 0.5 m', colors:['#b4a28b','#e5d7bd']},
   {id:'elevation', name:'Elevation', en:'Elevation', unit:'m', resolution:'Native 1 m · analysis 5 m', colors:['#294656','#538b8d','#b9c99c','#d1a56b','#f3dbb5']},
   {id:'slope', name:'Slope', en:'Maximum slope', unit:'°', resolution:'Maximum native 1 m slope per 5 m cell', colors:['#31534c','#78a78d','#e0c477','#df9063','#c95b56']},
   {id:'roughness', name:'Local relief', en:'Local relief', unit:'m', resolution:'Cell mean of 11 × 11 m elevation range', colors:['#263f51','#5d849a','#9cafb6','#d9b685','#ebd7ac']},

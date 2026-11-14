@@ -82,5 +82,5 @@ Forward/reverse Dijkstra gives exact minimum scalar time on this fixed cropped g
 
 The seven-slide download and the web briefing use computed figures and disclose model assumptions. NASA/JPL, SEXTANT, xDEM and Whitebox are prior methods or references, not claimed new inventions. The software is a research prototype without flight or operational safety certification.
 
-Result JSON SHA256 at report generation: `eee2ee89341457045e766cb3fd9eb1a25f354c17c5a4333b353640c654fb888b`.
+Result JSON SHA256 at report generation: `dd261a7d5b19c0aabb75326439e88004832926d8fc2a3f4d47e8b22943c3efa0`.
 

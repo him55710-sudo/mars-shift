@@ -6,7 +6,7 @@ export const travelLimit=(s:Settings)=>Math.min(s.durationMinutes-s.scienceMinut
 export function edgeValues(t:Terrain,a:number,b:number,mode:Mode,s:Settings){
  const p=point(t,a),q=point(t,b),horizontal=Math.hypot(p.x-q.x,p.y-q.y)*t.cellSize,dz=t.elevation[b]!-t.elevation[a]!,distance=Math.hypot(horizontal,dz),slope=((t.meanSlope[a]??0)+(t.meanSlope[b]??0))/2,exposure=((t.exposure[a]??0)+(t.exposure[b]??0))/2,unknown=t.thermal[b]===null?1:0;
  let factor=1;if(mode==='exposure')factor+=s.hazardWeight*exposure+slope*slope*.035+(t.roughness[b]??0)*.2+unknown*.2;if(mode==='mission')factor+=s.hazardWeight*.55*exposure+slope*slope*.012+Math.max(0,dz)/horizontal*2+(t.roughness[b]??0)*.08+unknown*.1;
- return {cost:distance*factor,effortCost:edgeTravelMinutes(t,a,b,s)*Math.max(.01,s.speed)*(s.dust?.55:1)*60};
+ return {cost:mode==='time'?edgeTravelMinutes(t,a,b,s):distance*factor,effortCost:edgeTravelMinutes(t,a,b,s)*Math.max(.01,s.speed)*(s.dust?.55:1)*60};
 }
 class Heap{items:{i:number;f:number}[]=[];push(i:number,f:number){let n=this.items.length;this.items.push({i,f});while(n){const parent=(n-1)>>1;if(this.items[parent].f<=f)break;this.items[n]=this.items[parent];n=parent;}this.items[n]={i,f};}pop(){const first=this.items[0],last=this.items.pop()!;if(this.items.length){let n=0;while(n*2+1<this.items.length){let c=n*2+1;if(c+1<this.items.length&&this.items[c+1].f<this.items[c].f)c++;if(this.items[c].f>=last.f)break;this.items[n]=this.items[c];n=c;}this.items[n]=last;}return first;}}
 function alternativeLeg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null,alpha:number){
@@ -24,6 +24,11 @@ const costOf=(t:Terrain,cells:number[],mode:Mode,s:Settings)=>cells.slice(1).red
  * Do not prune scalar-label searches using resources: retain alternatives and
  * apply the hard resource limits to their complete round-trip combinations. */
 export function constrainedPlan(t:Terrain,base:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null,returnBase:Point=base):SearchReport{
+ if(mode==='time'){
+  const a=leg(t,base,target,mode,s,e),b=leg(t,target,returnBase,mode,s,e);
+  const candidate=a&&b?{...metrics(t,[...a.cells,...b.cells.slice(1)],mode,s,a.cost+b.cost),outbound:a.cells,inbound:b.cells}:null;
+  return {route:candidate?.feasible?candidate:null,candidates:candidate?[candidate]:[],searched:2,feasibleCount:candidate?.feasible?1:0,travelLimit:travelLimit(s),method:'Direction-dependent minimum travel time per leg using admissible A*. All current resource budgets are monotone in total modeled travel time.',reason:candidate?.feasible?'':candidate?'NO FEASIBLE ROUTE under the configured time, oxygen and power limits.':'No traversable round trip under terrain, exclusion and obstacle constraints.'};
+ }
  const outbound:number[][]=[],inbound:number[][]=[];let searched=0;
  for(const alpha of [0,.25,.5,.75,1]){for(const [a,b,list] of [[base,target,outbound],[target,returnBase,inbound]] as const){searched++;const cells=alpha===0?leg(t,a,b,mode,s,e)?.cells:alternativeLeg(t,a,b,mode,s,e,alpha);if(cells&&!list.some(r=>r.join(',')===cells.join(',')))list.push(cells);}}
  const candidates:Route[]=[];

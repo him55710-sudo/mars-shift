@@ -8,6 +8,6 @@ The source deck was imported and its seven slides rendered before edits. The rev
 
 Native PowerPoint execution was **not** tested. Renderer review and structural checks do not establish native application behavior or scientific/operational safety. Live Artifact Sessions were unavailable in this task, so the existing local PPTX asset followed the standalone fallback workflow. No new Spaces deck or external publication was created by this asset task.
 
-Final deck SHA256: `57e6f3477b72a7bbfbb46361dedf3a0bfa704d714117152b8c6d76d797ed67cd`. Size: **1,502,847 bytes**. Executed science-results SHA256: `eee2ee89341457045e766cb3fd9eb1a25f354c17c5a4333b353640c654fb888b`. The public summary record is `public/data/presentation-validation.json`. The detailed local finalizer receipt remains in ignored private build state.
+Final deck SHA256: `57e6f3477b72a7bbfbb46361dedf3a0bfa704d714117152b8c6d76d797ed67cd`. Size: **1,502,847 bytes**. Executed science-results SHA256: `dd261a7d5b19c0aabb75326439e88004832926d8fc2a3f4d47e8b22943c3efa0`. The public summary record is `public/data/presentation-validation.json`. The detailed local finalizer receipt remains in ignored private build state.
 
 The deck explicitly distinguishes full-area changes caused by missing TRI boundary support from mobility changes on 39,204 common known cells. It labels model coefficients and resource assumptions as simulated, keeps seeded fixed-route frequencies separate from real-world safety probabilities, and cites NASA/JPL, SEXTANT, xDEM and Whitebox as prior work. It preserves the seven-slide limit.
