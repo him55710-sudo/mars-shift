@@ -1,5 +1,5 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-v3';
+const CACHE='mars-shift-crew-20261114-terrain-v4';
 const CORE=['/data/terrain.json','/data/manifest.json','/data/optical.webp','/data/slope.png','/data/thermal.png','/data/exposure.png'];
 async function status(){
  const cache=await caches.open(CACHE);
@@ -7,9 +7,13 @@ async function status(){
  const shell=await cache.match('/');
  if(!shell)return {ready:false,assets:[]};
  const html=await shell.text();
- const assets=[...html.matchAll(/(?:src|href)="(\/assets\/[^\"]+)"/g)].map(m=>m[1]);
+ const shellAssets=[...html.matchAll(/(?:src|href)="(\/assets\/[^\"]+)"/g)].map(m=>m[1]);
+ const manifest=await cache.match('/.vite/manifest.json');
+ if(!manifest)return {ready:false,assets:[]};
+ const entries=Object.values(await manifest.json());
+ const assets=[...new Set([...shellAssets,...entries.flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path)])];
  const scripts=await Promise.all(assets.map(url=>cache.match(url)));
- return {ready:checks.every(Boolean)&&assets.length>=2&&scripts.every(Boolean),assets};
+ return {ready:checks.every(Boolean)&&shellAssets.length>=2&&scripts.every(Boolean),assets};
 }
 self.addEventListener('install',event=>event.waitUntil((async()=>{
  const cache=await caches.open(CACHE);
@@ -20,7 +24,13 @@ self.addEventListener('install',event=>event.waitUntil((async()=>{
  await cache.put('/',shell);
  const assets=[...text.matchAll(/(?:src|href)="(\/assets\/[^\"]+)"/g)].map(m=>m[1]);
  if(assets.length<2)throw Error('Built application assets missing');
- await cache.addAll([...CORE,...assets]);
+ // Include lazy terrain-analysis chunks so a verified offline shell opens Terrain Lab too.
+ const manifestResponse=await fetch('/.vite/manifest.json',{cache:'reload'});
+ if(!manifestResponse.ok)throw Error('Build manifest unavailable');
+ await cache.put('/.vite/manifest.json',manifestResponse.clone());
+ const manifest=await manifestResponse.json();
+ const chunks=Object.values(manifest).flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path);
+ await cache.addAll([...new Set([...CORE,...assets,...chunks])]);
  /* No automatic page reload: a new worker waits until existing clients close. */
 })()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
@@ -40,7 +50,9 @@ self.addEventListener('fetch',event=>{
   })());return;
  }
  if(CORE.includes(url.pathname)||url.pathname.startsWith('/assets/'))event.respondWith((async()=>{
-  const cache=await caches.open(CACHE),stored=await cache.match(event.request);
+  // These paths are public static assets. Cross-origin module request headers
+  // may differ from precache headers (Vary: Origin); the bytes are identical.
+  const cache=await caches.open(CACHE),stored=await cache.match(event.request,{ignoreVary:true});
   return stored||fetch(event.request);
  })());
 });

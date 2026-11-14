@@ -1,0 +1,20 @@
+import {describe,expect,it} from 'vitest';
+import {contours,gridCSV,histogram,localCoordinates,sampleProfile,slopeClasses,statistics} from './terrain-analysis';
+import type {Terrain} from './planner';
+import actual from '../public/data/terrain.json';
+function fixture(w=3,h=2):Terrain{const n=w*h;return {width:w,height:h,cellSize:5,bounds:[100,200,100+w*5,200+h*5],center:[77.64,18.45],crs:'Mars test metres',elevation:Array(n).fill(0),slope:Array(n).fill(0),meanSlope:Array(n).fill(0),roughness:Array(n).fill(0),exposure:Array(n).fill(0),thermal:Array(n).fill(300),valid:Array(n).fill(1),thermalRange:[300,300]};}
+describe('terrain measurements and missing-data boundaries',()=>{
+  it('excludes invalid, missing and non-finite cells while preserving zero measurements',()=>{const t=fixture();t.elevation=[0,10,null,NaN,100,20];t.valid[4]=0;expect(statistics(t,'elevation')).toEqual({count:3,min:0,max:20,mean:10,median:10,p95:19});const h=histogram(t,'elevation',4);expect(h.total).toBe(3);expect(h.counts.reduce((a,b)=>a+b,0)).toBe(3);expect(h.counts.at(-1)).toBe(1);});
+  it('reports empty statistics rather than fabricated heights',()=>{const t=fixture();t.elevation.fill(null);expect(statistics(t,'elevation').mean).toBeNull();expect(histogram(t,'elevation').total).toBe(0);expect(contours(t,2)).toEqual([]);});
+  it('uses exact threshold boundaries and physical cell areas',()=>{const t=fixture(4,1);t.slope=[4.99,5,15,25];expect(slopeClasses(t).map(c=>c.percent)).toEqual([25,25,25,25]);expect(slopeClasses(t).map(c=>c.area)).toEqual([25,25,25,25]);});
+  it('keeps north up and projected metre coordinates in CSV',()=>{const t=fixture();expect(localCoordinates(t,{x:0,y:0})).toEqual({east:2.5,north:7.5});const row=gridCSV(t).split('\r\n')[1].split(',');expect(row.slice(0,5)).toEqual(['0','0','102.5','207.5','0']);t.thermal[0]=null;expect(gridCSV(t).split('\r\n')[1].split(',')[8]).toBe('');});
+  it('samples physical distances and elevation gain without display exaggeration',()=>{const t=fixture(2,1);t.elevation=[0,12];const p=sampleProfile(t,{x:0,y:0},{x:1,y:0});expect(p.distance).toBe(5);expect(p.surfaceDistance).toBe(13);expect(p.ascent).toBe(12);expect(p.descent).toBe(0);expect(p.complete).toBe(true);});
+  it('does not bridge a missing segment or claim a complete surface distance',()=>{const t=fixture(3,1);t.elevation=[0,null,100];const p=sampleProfile(t,{x:0,y:0},{x:2,y:0});expect(p.samples[1].elevation).toBeNull();expect(p.surfaceDistance).toBeNull();expect(p.ascent).toBe(0);expect(p.complete).toBe(false);});
+  it('handles a zero-length profile and samples diagonal lines at no more than cell spacing',()=>{const t=fixture();const p=sampleProfile(t,{x:1,y:1},{x:1,y:1});expect(p.samples).toHaveLength(1);expect(p.distance).toBe(0);expect(p.surfaceDistance).toBe(0);const diagonal=sampleProfile(t,{x:0,y:0},{x:2,y:1});expect(diagonal.distance).toBeCloseTo(Math.sqrt(125));expect(diagonal.samples.every((v,i,a)=>!i||v.distance-a[i-1].distance<=5)).toBe(true);});
+  it('locates contours analytically on a planar ramp and omits NoData squares',()=>{const t=fixture(2,2);t.elevation=[0,10,0,10];const c=contours(t,5).find(c=>c.level===5)!;expect(c.a.x).toBe(.5);expect(c.b.x).toBe(.5);expect(new Set([c.a.y,c.b.y])).toEqual(new Set([0,1]));t.valid[0]=0;expect(contours(t,5)).toEqual([]);expect(contours(t,0)).toEqual([]);});
+});
+describe('published Jezero terrain analysis',()=>{
+  const t=actual as Terrain;
+  it('retains actual scientific ranges and 40,000 valid cells',()=>{const s=statistics(t,'elevation');expect(s.count).toBe(40000);expect(s.min).toBeCloseTo(-2621.64);expect(s.max).toBeCloseTo(-2598.58);expect(statistics(t,'slope').mean).toBeCloseTo(5.552935);expect(slopeClasses(t).reduce((a,c)=>a+c.area,0)).toBe(1e6);});
+  it('exports one physical row per cell and a continuous real-height profile',()=>{expect(gridCSV(t).split('\r\n')).toHaveLength(40001);const p=sampleProfile(t,{x:40,y:158},{x:155,y:42});expect(p.complete).toBe(true);expect(p.distance).toBeCloseTo(Math.hypot(115,116)*5);expect(p.surfaceDistance).toBeGreaterThanOrEqual(p.distance);expect(p.samples.every(p=>p.elevation!<0)).toBe(true);});
+});

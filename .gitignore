@@ -4,3 +4,10 @@ dist/
 *.local
 *.tsbuildinfo
 __pycache__/
+
+.local/
+coverage/
+.env
+.env.*
+!.env.example
+*.log

@@ -15,6 +15,8 @@ pnpm dev
 
 Open the printed local URL. `/` is Crew view, `/planning` is Mission Control, `/evidence` is the source register, and `/briefing` is an exactly seven-slide project demonstration, with keyboard arrows and print styles. A validated seven-slide PowerPoint is downloadable at `/downloads/MARS-SHIFT-7-slides.pptx`. The UI is English and responsive. Local exports retain assumptions, events and provenance.
 
+**Terrain Lab:** open `/terrain` or the **3D Terrain** navigation item for a Korean-language quantitative terrain workspace. Explore the actual DEM as a rotatable 3D mesh, switch optical/elevation/slope/local-relief/thermal layers, blend the optical basemap, adjust vertical exaggeration, add contours and a baseline traverse, inspect cells, draw elevation profiles, and export JSON or CSV. WebGL failure automatically opens the 2D map. See [Terrain Lab](docs/TERRAIN_LAB.md) for measurements, controls, and validation.
+
 Crew view keeps the next checkpoint, current-position return time and projected return reserve visible. HOLD stops progression; an obstacle scenario requires position/buddy checks, an alternative comparison and explicit adoption. An early return requires confirmation and skips remaining science. A saved rehearsal restores on HOLD. Production builds cache the application and six terrain assets for offline use; the interface reports readiness only after the worker verifies the cache. A first successful online load is required. This cache does not include external NASA sites or the PowerPoint download.
 
 ```sh
@@ -66,7 +68,7 @@ After the simulated exclusion, the mission-aware route is 1,945.2 m; 12 unique c
 
 ## Existing NASA tools, reused
 
-The five resources in the official challenge's Resources tab are documented in `/evidence`. Mars Trek supplies the existing planetary explorer; no custom 3D globe or mesh is built. USGS geology and the Curiosity route provide contextual references. Worldview supplies an Earth-only layer/time interface reference. Perseverance raw images supply an external surface-context archive; they are not treated as registered observations of this route.
+The five resources in the official challenge's Resources tab are documented in `/evidence`. Mars Trek supplies the existing planetary explorer; Terrain Lab renders a local 1 km DEM mesh for quantitative analysis. USGS geology and the Curiosity route provide contextual references. Worldview supplies an Earth-only layer/time interface reference. Perseverance raw images supply an external surface-context archive; they are not treated as registered observations of this route.
 
 ## Scientific boundaries
 
@@ -77,6 +79,7 @@ Mission-aware routing minimizes a transparent terrain cost and then checks resou
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md)
+- [3D Terrain Lab](docs/TERRAIN_LAB.md)
 - [Data sources and classification](docs/DATA_SOURCES.md)
 - [Methodology and equations](docs/METHODOLOGY.md)
 - [Validation](docs/VALIDATION.md)
