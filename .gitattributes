@@ -1,0 +1,4 @@
+# These scientific artifacts have recorded raw-byte SHA256 identities.
+# Preserve their original bytes across Windows and Linux checkouts.
+/public/data/optical-model-v2.json -text
+/scripts/detect_optical.py -text
