@@ -1,0 +1,66 @@
+{
+  "product": "NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04",
+  "blender": "5.2.2 LTS",
+  "sourceVertices": 212457,
+  "sourceTriangles": 415633,
+  "efficientTriangles": 103907,
+  "displayBoundsBlender": {
+    "min": [
+      -80.968758,
+      -83.489601,
+      0.009273
+    ],
+    "max": [
+      24.869652,
+      -1.456362,
+      4.552929
+    ]
+  },
+  "texturePixels": [
+    1280,
+    960
+  ],
+  "lodDistanceSample": {
+    "direction": "Used source vertices to efficient triangle surface",
+    "method": "10000 evenly spaced used source vertex indices, deterministic, nearest triangle distance in metres; orphan vertices excluded",
+    "samples": 10000,
+    "medianMetres": 0.0002942868013633415,
+    "p95Metres": 0.0009799151972401886,
+    "maximumMetres": 0.0030830525793135166,
+    "limitation": "Sampled approximation error only; not a terrain accuracy or collision guarantee."
+  },
+  "files": [
+    {
+      "name": "sol9-navcam-full.glb",
+      "bytes": 9367376,
+      "sha256": "e4171fdf9fb3595eb593b3db8a782de9635b40f15c3b557f2833f9e6225e9f88"
+    },
+    {
+      "name": "sol9-navcam-efficient.glb",
+      "bytes": 1862940,
+      "sha256": "ecb4ab5343436b6281702d193bf235c9cd00b4c00b99b892b6ee20253e31c3ce"
+    }
+  ],
+  "sources": [
+    {
+      "name": "NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04.obj",
+      "bytes": 49509495,
+      "sha256": "9657cfbfeef4a9eed0f41032f840d1f08ae4ee4841edee8cdb33e1849c508316"
+    },
+    {
+      "name": "NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04.png",
+      "bytes": 2238656,
+      "sha256": "fed2857db395615b5f20ba4e1c686cd9604de954fa4b563f01ccc3929aebcf9a"
+    },
+    {
+      "name": "NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04.mtl",
+      "bytes": 859,
+      "sha256": "ed5391d88fc9bca7389086d7fb0b3d6a4bcd46c6b01aa964960332afadb0a7de"
+    },
+    {
+      "name": "NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04.obj.xml",
+      "bytes": 15604,
+      "sha256": "b6a8d0f2ab2872b92709799d6738d397fd99c5d1b42f641c4965a664a2d7b17f"
+    }
+  ]
+}

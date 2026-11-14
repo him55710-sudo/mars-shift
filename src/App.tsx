@@ -22,6 +22,7 @@ const MODES:{id:Mode;name:string;short:string;color:string;description:string}[]
   {id:'time',name:'Fastest modeled time',short:'Fastest time',color:'#60d8f3',description:'Minimizes directed modeled travel time under the mission budgets.'},
   {id:'shortest',name:'Shortest distance',short:'Shortest',color:'#eabf86',description:'Minimizes 3D distance within your slope limit.'},
   {id:'exposure',name:'Lower exposure',short:'Lower exposure',color:'#9fbbef',description:'Prioritizes lower slope, relief and cliff-proximity exposure.'},
+  {id:'energy',name:'Energy saver · proxy',short:'Energy saver',color:'#f0a6d9',description:'Minimizes modeled effort-distance among budget-feasible alternatives; not measured suit energy.'},
   {id:'mission',name:'Mission aware',short:'Mission aware',color:'#a9dfc3',description:'Balances terrain effort and exposure across budget-feasible alternatives.'}
 ];
 const NASA_RESOURCES=[

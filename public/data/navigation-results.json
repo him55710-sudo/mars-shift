@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "runtime": "v24.22.1",
+  "engineSources": {
+    "src/energy-model.ts": "adc1033d53c486eb59bdf6505ea5f045081427bb38b1de55f1518a2748e33e5e",
+    "src/emergency-return.ts": "4c17b8ac47ee33f70a8532ba718a3f1ce11eb52104c86f0aa0a914ade840d61a",
+    "src/eva-resources.ts": "a811b11ae326b73d96d97d89b0974ad16733b3ea6139ba532f9c2a48f4cd3b93",
+    "src/constrained-planner.ts": "c36abf3b12b43d5f9f8178a84ae782e69696031b3eb25910ba709bebe34faad7",
+    "src/planner.ts": "6380cf4f79ec42f5bbd675e6b90960d5abfec19fea5f674558c6d24adb27e7e4",
+    "scripts/analyze_navigation.ts": "d41e2e8e8cb2d609f9259a706dc9027389aeb47252ca6ba262736ef8e188319f"
+  },
+  "method": "Fixed baseline endpoints. Walk halfway along mission outbound plus a 35% fractional edge, add five modeled work minutes, calculate direct current-position return. Times are one local Node run, not browser FPS. Reuses real 1m DEM with 5m graph; no calibrated physiology.",
+  "regions": [
+    {
+      "region": "floor",
+      "sourceHashes": {
+        "terrain": "2a9fcde55edf7f41b3ec8ce22985e3db19ae9d369dad0ede4b6ca5737463dd4e",
+        "dem": "46806cd4be7296da7f988416054b6e7a4b0aa64d151c99fb18c5f36a0ee14921",
+        "science": "5e3928fb943054ddd239861c4c76a38070d6620f59480fbc3d31a2df097fe454"
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      },
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "missionMs": 806.9688,
+      "returnMs": 271.182,
+      "routes": [
+        {
+          "mode": "shortest",
+          "distance": 1752.8556020692852,
+          "travelMinutes": 64.9233118350019,
+          "reserve": 39.415206753498566,
+          "effortMetres": 2275.57858973919
+        },
+        {
+          "mode": "exposure",
+          "distance": 1991.9239122830884,
+          "travelMinutes": 70.05554076686019,
+          "reserve": 35.52937627652014,
+          "effortMetres": 2468.8314315672756
+        },
+        {
+          "mode": "mission",
+          "distance": 1846.0152216003562,
+          "travelMinutes": 66.79728014491468,
+          "reserve": 37.99634503313602,
+          "effortMetres": 2334.1917526484926
+        },
+        {
+          "mode": "time",
+          "distance": 1752.8579014540223,
+          "travelMinutes": 64.91409992594187,
+          "reserve": 39.422181484644,
+          "effortMetres": 2274.7069939928606
+        },
+        {
+          "mode": "energy",
+          "distance": 1752.9338409207635,
+          "travelMinutes": 65.06963674759709,
+          "reserve": 39.30441789110506,
+          "effortMetres": 2268.77151891903
+        }
+      ],
+      "current": {
+        "x": 99.35,
+        "y": 104.65
+      },
+      "use": {
+        "elapsedMinutes": 22.70257839511321,
+        "oxygenMinutes": 23.076887802526798,
+        "powerMinutes": 22.764733098820052,
+        "distanceMetres": 480.0701301184293,
+        "unsupported": false
+      },
+      "directReturn": {
+        "distance": 471.2515989745798,
+        "travelMinutes": 17.29516976234219,
+        "reserve": 70.64456210935516,
+        "connectorMetres": 2.48234459920447,
+        "skipsScienceTarget": true
+      },
+      "exhaustedOutcome": "NO VERIFIED SAFE ROUTE under current position, exclusions and remaining time / O2 / power assumptions."
+    },
+    {
+      "region": "ridge",
+      "sourceHashes": {
+        "terrain": "ac14342fdcdd6d0b2a2bf56b565e15dffa5bc95b28a2a74b93c8fc179c50d5f5",
+        "dem": "86d006ce6d4777d4728fe52eedc100b3965f6dd22390940165fac8016cc9952f",
+        "science": "9f1cf802d5889cd25abf9351fd02e4e041295e0093ff29af52b3bc0e857e0929"
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      },
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "missionMs": 614.9593000000002,
+      "returnMs": 158.84169999999995,
+      "routes": [
+        {
+          "mode": "shortest",
+          "distance": 1752.7432213762706,
+          "travelMinutes": 65.1608316000823,
+          "reserve": 39.23537035993768,
+          "effortMetres": 2295.8925217525702
+        },
+        {
+          "mode": "exposure",
+          "distance": 1927.8180025588754,
+          "travelMinutes": 69.26149375602562,
+          "reserve": 36.13058329900917,
+          "effortMetres": 2420.1641215215527
+        },
+        {
+          "mode": "mission",
+          "distance": 1793.4189380949838,
+          "travelMinutes": 65.79192599984577,
+          "reserve": 38.75754174297391,
+          "effortMetres": 2280.6644585118565
+        },
+        {
+          "mode": "time",
+          "distance": 1764.199873690343,
+          "travelMinutes": 65.043632699911,
+          "reserve": 39.32410667006738,
+          "effortMetres": 2289.4882376598757
+        },
+        {
+          "mode": "energy",
+          "distance": 1764.4765305707422,
+          "travelMinutes": 65.33657573261397,
+          "reserve": 39.102306945306566,
+          "effortMetres": 2264.4784942810693
+        }
+      ],
+      "current": {
+        "x": 94.35,
+        "y": 108.65
+      },
+      "use": {
+        "elapsedMinutes": 21.43735765608033,
+        "oxygenMinutes": 21.65984057480998,
+        "powerMinutes": 21.423599115445132,
+        "distanceMetres": 446.6766233363043,
+        "unsupported": false
+      },
+      "directReturn": {
+        "distance": 434.99502200597743,
+        "travelMinutes": 15.926225208018739,
+        "reserve": 72.63900154575357,
+        "connectorMetres": 2.477177239958881,
+        "skipsScienceTarget": true
+      },
+      "exhaustedOutcome": "NO VERIFIED SAFE ROUTE under current position, exclusions and remaining time / O2 / power assumptions."
+    },
+    {
+      "region": "noah",
+      "sourceHashes": {
+        "terrain": "9f3cbee784fda2df5fb488d4ecb61afd7ea2080ac543709faa827aeee6d210dc",
+        "dem": "2f9f17ba9809166d5ca53f0a1324a4dc4b433b927a9e07912bdd5b3766d5c54a",
+        "science": "82e85234f982f48a197d0525e17a66aaa67fcc9121f0dab6f8f6d0a8a08eaada"
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      },
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "missionMs": 433.4721999999997,
+      "returnMs": 259.7573000000002,
+      "routes": [
+        {
+          "mode": "shortest",
+          "distance": 1751.4114378097947,
+          "travelMinutes": 60.55213341710854,
+          "reserve": 42.72481326990353,
+          "effortMetres": 2177.5698055986286
+        },
+        {
+          "mode": "exposure",
+          "distance": 1792.4193765933148,
+          "travelMinutes": 61.67224080624326,
+          "reserve": 41.87673196098724,
+          "effortMetres": 2195.144756322326
+        },
+        {
+          "mode": "mission",
+          "distance": 1751.4793806673563,
+          "travelMinutes": 60.61030489252621,
+          "reserve": 42.68076915280159,
+          "effortMetres": 2164.485942770551
+        },
+        {
+          "mode": "time",
+          "distance": 1751.4213527839358,
+          "travelMinutes": 60.517853376114196,
+          "reserve": 42.75076815808496,
+          "effortMetres": 2175.8242873626327
+        },
+        {
+          "mode": "energy",
+          "distance": 1751.4825374159936,
+          "travelMinutes": 60.624355525283924,
+          "reserve": 42.67013081657074,
+          "effortMetres": 2164.3594286304046
+        }
+      ],
+      "current": {
+        "x": 93.35,
+        "y": 104.65
+      },
+      "use": {
+        "elapsedMinutes": 20.71665960121664,
+        "oxygenMinutes": 20.852658753362643,
+        "powerMinutes": 20.65965917728964,
+        "distanceMetres": 443.94448834720396,
+        "unsupported": false
+      },
+      "directReturn": {
+        "distance": 443.8673045564677,
+        "travelMinutes": 15.219068733852572,
+        "reserve": 73.7200914034476,
+        "connectorMetres": 2.474877991570869,
+        "skipsScienceTarget": true
+      },
+      "exhaustedOutcome": "NO VERIFIED SAFE ROUTE under current position, exclusions and remaining time / O2 / power assumptions."
+    }
+  ]
+}

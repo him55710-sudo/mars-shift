@@ -6,6 +6,7 @@ export const ROUTE_OPTIONS:{id:Mode;name:string;short:string;color:string;purpos
  {id:'time',name:'Fastest time',short:'Fastest',color:'#60d8f3',purpose:'Minimum modeled round-trip travel time'},
  {id:'shortest',name:'Shortest distance',short:'Shortest',color:'#f7c675',purpose:'Minimum distance among searched feasible alternatives'},
  {id:'exposure',name:'Safety priority',short:'Lower exposure',color:'#b3e4a5',purpose:'Lower slope, relief and steep-slope proximity cost'},
+ {id:'energy',name:'Energy saver',short:'Effort',color:'#f0a6d9',purpose:'Lower modeled grade, distance and terrain effort; not measured energy'},
  {id:'mission',name:'Mission balanced',short:'Balanced',color:'#b6a0ec',purpose:'Balance terrain effort, exposure and return resources'},
 ];
 export function routePurpose(route:Route|null,shortest:Route|null,mode:Mode){return {...explainRoute(route,shortest,mode),option:ROUTE_OPTIONS.find(m=>m.id===mode)!};}

@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1",
-    "science": "node scripts/run_science_analysis.mjs"
+    "science": "node scripts/run_science_analysis.mjs",
+    "science:navigation": "node scripts/run_navigation_analysis.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",

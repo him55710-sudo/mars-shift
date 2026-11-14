@@ -1,0 +1,38 @@
+{
+  "sourceTriangles": 415633,
+  "glbTriangles": 415633,
+  "allSourceFacesPreserved": true,
+  "allGlbPositionsMatchFloat32Source": true,
+  "axisTransform": "SITE_FRAME (north,east,down) -> glTF (east,-down,-north); no shift or scale",
+  "maxFloat32CoordinateErrorMetres": 4.999999987376214e-07,
+  "checkedUvVertices": 211637,
+  "maxUvCoordinateError": 4.4631958018293005e-08,
+  "uvConvention": "glTF V = 1 - OBJ V; U unchanged",
+  "sourceTexturePixels": [
+    1280,
+    960
+  ],
+  "embeddedTexturePixels": [
+    1280,
+    960
+  ],
+  "textureJpegQuality": 95,
+  "textureRgbPsnrDb": 35.65121165364935,
+  "materialUnlit": true,
+  "sourceVertices": 212457,
+  "gltfVertices": 211637,
+  "unusedSourceVerticesRemoved": 896,
+  "displayBoundsGltf": {
+    "min": [
+      -80.96875762939453,
+      0.009273000061511993,
+      1.456362009048462
+    ],
+    "max": [
+      24.781198501586914,
+      4.552928924560547,
+      83.4896011352539
+    ]
+  },
+  "limitations": "Verifies conversion fidelity, not accuracy of the NASA stereo reconstruction or collision safety."
+}

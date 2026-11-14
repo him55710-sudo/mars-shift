@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "perseverance-sol9-site3",
+  "title": "Perseverance \u00b7 Sol 9 Navcam terrain",
+  "mission": "Mars 2020 Perseverance",
+  "instrument": "NAVCAM_LEFT",
+  "sol": 9,
+  "site": 3,
+  "drive": 0,
+  "startTimeUtc": "2021-02-28T03:54:09.291Z",
+  "stopTimeUtc": "2021-02-28T03:54:10.110Z",
+  "product": "NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04",
+  "lidvid": "urn:nasa:pds:mars2020_navcam_ops_mesh:data:nlf_0009_0667756352m693ras_n0030000ncam05000_0a0295j.obj::4.0",
+  "collectionUrl": "https://pds.nasa.gov/ds-view/pds/viewCollection.jsp?identifier=urn:nasa:pds:mars2020_navcam_ops_mesh:data",
+  "sourceDirectory": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_mesh/data/sol/00009/ids/rdr/mesh/",
+  "sourceLabelUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_mesh/data/sol/00009/ids/rdr/mesh/NLF_0009_0667756352M693RAS_N0030000NCAM05000_0A0295J04.obj.xml",
+  "credit": "Courtesy NASA/JPL-Caltech",
+  "usagePolicyUrl": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+  "sourceFrame": {
+    "name": "SITE_FRAME",
+    "index": 3,
+    "units": "metres",
+    "axes": [
+      "north",
+      "east",
+      "down"
+    ]
+  },
+  "displayFrame": {
+    "name": "glTF",
+    "units": "metres",
+    "axes": [
+      "east",
+      "up",
+      "south"
+    ],
+    "fromSource": [
+      "y",
+      "-z",
+      "-x"
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": 1
+  },
+  "registrationToPlanningGrid": null,
+  "initialView": {
+    "camera": [
+      0,
+      1.7,
+      -0.1
+    ],
+    "target": [
+      -4.5,
+      0.12,
+      6
+    ],
+    "verticalFovDegrees": 60,
+    "kind": "Illustrative human-height inspection camera; not recovered rover camera pose"
+  },
+  "assets": {
+    "efficient": "/data/navcam/sol9-navcam-efficient.glb",
+    "originalGeometry": "/data/navcam/sol9-navcam-full.glb",
+    "observation": "/data/navcam/observation.png",
+    "sourceLabel": "/data/navcam/source-label.xml",
+    "conversion": "/data/navcam/conversion.json",
+    "validation": "/data/navcam/validation.json"
+  },
+  "sourceTexturePixels": [
+    1280,
+    960
+  ],
+  "limitations": [
+    "Single observed stereo wedge with finite boundaries and missing regions.",
+    "Separate rover station: not registered to the mission terrain, paths, obstacle annotations or crew position.",
+    "Pixel ground scale and stereo depth uncertainty vary with range. No uniform centimetre resolution is claimed.",
+    "Efficient mesh is a visual approximation. Neither display LoD nor source mesh has been validated as EVA collision geometry.",
+    "Original-mesh option preserves original faces but repacks coordinates as float32 and texture as JPEG quality 95.",
+    "Photographic illumination is retained using KHR_materials_unlit. No generated rocks, terrain infill or texture sharpening."
+  ],
+  "references": [
+    {
+      "title": "Mars 2020 Camera SIS v3.7, sections 8.8\u20138.9, 9.1, 20.2",
+      "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_mission/document_camera/Mars2020_Camera_SIS.pdf"
+    }
+  ]
+}
