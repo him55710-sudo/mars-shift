@@ -86,3 +86,14 @@
 .crew-verification-complete{display:flex;align-items:center;gap:9px;padding:9px 0;border-block:1px solid #d9baa3;margin-top:12px}
 .crew-app.in-field .crew-map-tools{flex-direction:row;top:48px}
 @media(max-width:550px){.crew-app.in-field .crew-map-tools{flex-direction:column;top:46px}}
+/* HOLD removes nonessential chrome so its procedure is visible together. */
+.crew-app.is-held .crew-heading,.crew-app.is-held .crew-phases{display:none}
+.crew-app.is-held .crew-vitals{border-top:0}
+.crew-app.is-held .crew-alert{max-height:none;overflow:visible}
+.crew-app.is-held .crew-map-canvas{height:calc(100dvh - 365px);min-height:260px}
+.crew-app.is-held .crew-alert .crew-alternative{margin-top:8px}
+.crew-app.is-held .crew-alternative h3{display:none}
+.crew-app.is-held .crew-alternative dl>div{padding-block:7px}
+.crew-app.is-held .crew-verification-complete{padding-block:5px;margin-top:8px}
+.crew-app.is-held .crew-alert>small{margin-top:8px}
+@media(max-width:820px){.crew-app.is-held .crew-map-canvas{height:360px;min-height:340px}}
