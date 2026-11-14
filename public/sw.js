@@ -1,5 +1,5 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-v2';
+const CACHE='mars-shift-crew-20261114-v3';
 const CORE=['/data/terrain.json','/data/manifest.json','/data/optical.webp','/data/slope.png','/data/thermal.png','/data/exposure.png'];
 async function status(){
  const cache=await caches.open(CACHE);

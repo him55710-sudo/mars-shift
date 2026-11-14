@@ -6,4 +6,4 @@ The final exported file was imported with the first-party Artifact Tool, all sev
 
 The local Spaces editing session was unavailable, so the permitted standalone PPTX workflow was used. The unused blank draft Page was moved to Trash. No presentation is claimed to have been edited or tested in a native PowerPoint application.
 
-The crew revision replaces slide 2 with a direct capture of the actual crew interface and updates the executed software/terrain test count to 33. The v4 final file was reimported, all seven final slides rendered and visually reviewed; package, geometry, font and native-table checks passed.
+The crew revision replaces slide 2 with a direct capture of the actual crew interface and updates the executed software/terrain test count to 34. The v5 final file was reimported, all seven final slides rendered and visually reviewed; package, geometry, font and native-table checks passed.

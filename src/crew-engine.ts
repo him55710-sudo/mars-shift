@@ -54,12 +54,14 @@ export function initialCrew(t:Terrain,config=defaultCrewPlan(t)):CrewState{
 }
 export function assessCrew(t:Terrain,s:CrewState){
  const future=futureMetrics(t,s,s.track.slice(s.cursor),s.returnTrack);
+ const remaining=s.phase==='science'?s.returnTrack:s.phase==='return'||s.phase==='complete'?s.track.slice(s.cursor):[...s.track.slice(s.cursor),...s.returnTrack.slice(1)];
+ const routeBlocked=remaining.some(i=>blocked(t,i,s.config.settings,s.exclusion));
  const returnLeg=leg(t,position(t,s),s.config.base,s.config.mode,s.config.settings,s.exclusion);
  const now=returnLeg?futureMetrics(t,{...s,phase:'return'},returnLeg.cells,returnLeg.cells):null;
  const cfg=s.config.settings;
  const travel=future.travel;
  const scienceWindow=Math.max(0,Math.min(cfg.durationMinutes-s.elapsed-travel,(cfg.oxygenMinutes*(1-cfg.reservePercent/100)-s.oxygenSpent-travel*(1+cfg.loadKg*.01))/.65,(cfg.powerMinutes*(1-cfg.reservePercent/100)-s.powerSpent-travel*(1+cfg.loadKg*.005))/.8));
- return {...future,returnNow:now,returnCells:returnLeg?.cells??[],scienceWindow,oxygenNow:100*(1-s.oxygenSpent/cfg.oxygenMinutes),powerNow:100*(1-s.powerSpent/cfg.powerMinutes),hasMissionPath:s.track.length>1||s.phase!=='prepare'};
+ return {...future,feasible:future.feasible&&!routeBlocked,reasons:routeBlocked?[...future.reasons,'The current corridor intersects an exclusion. Review an alternative before moving.']:future.reasons,routeBlocked,returnNow:now,returnCells:returnLeg?.cells??[],scienceWindow,oxygenNow:100*(1-s.oxygenSpent/cfg.oxygenMinutes),powerNow:100*(1-s.powerSpent/cfg.powerMinutes),hasMissionPath:s.track.length>1||s.phase!=='prepare'};
 }
 export function addEvent(s:CrewState,title:string,detail:string,level:CrewEvent['level']='advisory'):CrewState{
  return {...s,events:[...s.events,{id:(s.events.at(-1)?.id??0)+1,minute:s.elapsed,title,detail,level}].slice(-30)};

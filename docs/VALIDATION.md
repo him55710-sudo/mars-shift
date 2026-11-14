@@ -2,7 +2,7 @@
 
 ## Executed checks
 
-- `pnpm test`: **29 tests passed** after the crew workflow revision (18 routing tests and 11 crew-state tests).
+- `pnpm test`: **30 tests passed** after the crew workflow revision (18 routing tests and 12 crew-state tests).
 - `python scripts/preprocess.py --test`: **4 tests passed** (flat surface, known planar slope, physical pixel spacing, missing-pixel display handling).
 - `pnpm build`: TypeScript check and Vite production build passed.
 - Actual acquisition and preprocessing completed: checked DEM checksum, Mars CRS, native units, optical CRS match, raster footprint, thermal alignment and valid-data coverage.
@@ -37,3 +37,5 @@ Actual-data tests additionally cover 75 m checkpoints, accumulated resource use,
 Chrome verified departure-check guidance; startup gating; checkpoint movement; obstacle HOLD → position/buddy verification → compare → explicit adoption; visibility HOLD that remains locked after acknowledgments; restoration on HOLD; return cancellation and confirmation; and Mission Control handoff of the Crater-floor comparison target (1,451 m round trip, displayed reserve 49%). A 390 × 844 responsive check showed no horizontal overflow. Primary actions measured 52–58 CSS px high and map zoom controls 48 × 48 CSS px. This is a target-size check, not a glove or pressure-suit usability experiment.
 
 A production build was served locally, its cache reached “Map saved offline”, and the HTTP server was stopped. Reload still rendered the application and terrain, restored a saved session on HOLD, and completed an explicitly confirmed early return without the server. External NASA pages and presentation downloads are outside this offline cache. Production publication is separately checked in `BROWSER_QA.md`.
+
+An additional regression check proves that an excluded corridor remains invalid after restoration or a visibility-mode change, even if its display reason is reset. The geometry check independently prevents progression until a feasible replacement is adopted.
