@@ -1,0 +1,13 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {DEFAULTS,affected,nearestAllowed,plan,point} from '../src/planner.ts';
+import type {Terrain,Mode} from '../src/planner.ts';
+const t=JSON.parse(readFileSync(new URL('../public/data/terrain.json',import.meta.url),'utf8')) as Terrain;
+const base=nearestAllowed(t,{x:32,y:168},DEFAULTS),target=nearestAllowed(t,{x:153,y:43},DEFAULTS);
+const modes:Mode[]=['shortest','exposure','mission'];
+const before=modes.map(mode=>plan(t,base,target,mode,DEFAULTS,null)!);
+const p=point(t,before[2].outbound[Math.floor(before[2].outbound.length*.55)]),exclusion={...p,radius:35};
+const after=modes.map(mode=>plan(t,base,target,mode,DEFAULTS,exclusion)!);
+const compact=(r:typeof before[number])=>r&&Object.fromEntries(Object.entries(r).filter(([k])=>!['cells','outbound','inbound'].includes(k)));
+const result={createdAt:new Date().toISOString(),base,target,settings:DEFAULTS,source:'CaltechDATA 10.22002/stqse-yay61 cenjez_DEM_1m.tif',before:before.map(compact),simulatedExclusion:exclusion,previousAffectedCells:new Set(affected(t,before[2],exclusion)).size,after:after.map(compact),afterHasNoExcludedCells:after.every(r=>r&&affected(t,r,exclusion).length===0)};
+writeFileSync(new URL('../public/data/validation-results.json',import.meta.url),JSON.stringify(result,null,2));
+console.log(JSON.stringify(result,null,2));

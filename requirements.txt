@@ -1,0 +1,6 @@
+numpy>=2.0,<3
+rasterio>=1.4,<2
+scipy>=1.14,<2
+Pillow>=11,<14
+requests>=2.32,<3
+truststore>=0.10

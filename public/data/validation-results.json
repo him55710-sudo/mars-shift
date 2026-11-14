@@ -1,0 +1,143 @@
+{
+  "createdAt": "2026-11-14T00:57:39.339Z",
+  "base": {
+    "x": 32,
+    "y": 168
+  },
+  "target": {
+    "x": 153,
+    "y": 43
+  },
+  "settings": {
+    "maxSlope": 18,
+    "speed": 0.6,
+    "scienceMinutes": 20,
+    "durationMinutes": 110,
+    "oxygenMinutes": 150,
+    "powerMinutes": 140,
+    "reservePercent": 25,
+    "loadKg": 12,
+    "dust": false,
+    "hazardWeight": 8
+  },
+  "source": "CaltechDATA 10.22002/stqse-yay61 cenjez_DEM_1m.tif",
+  "before": [
+    {
+      "mode": "shortest",
+      "distance": 1752.8556020692852,
+      "gain": 27.950000000001182,
+      "maxSlope": 16.24,
+      "meanSlope": 3.1531696112191847,
+      "exposureDistance": 0,
+      "unknownThermalDistance": 0,
+      "travelMinutes": 66.98126665572512,
+      "totalMinutes": 86.98126665572512,
+      "oxygenRemaining": 41.320654230391895,
+      "powerRemaining": 37.857040960665266,
+      "timeRemaining": 23.018733344274878,
+      "reserve": 37.857040960665266,
+      "feasible": true,
+      "reasons": [],
+      "cost": 1752.8556020692856
+    },
+    {
+      "mode": "exposure",
+      "distance": 1991.9239122830884,
+      "gain": 18.389999999998054,
+      "maxSlope": 5.29,
+      "meanSlope": 1.5963441929188211,
+      "exposureDistance": 0,
+      "unknownThermalDistance": 0,
+      "travelMinutes": 68.30955155692111,
+      "totalMinutes": 88.30955155692111,
+      "oxygenRemaining": 40.32886817083223,
+      "powerRemaining": 36.85133953547401,
+      "timeRemaining": 21.690448443078893,
+      "reserve": 36.85133953547401,
+      "feasible": true,
+      "reasons": [],
+      "cost": 2351.963979509134
+    },
+    {
+      "mode": "mission",
+      "distance": 1846.0152216003562,
+      "gain": 24.429999999999836,
+      "maxSlope": 11.01,
+      "meanSlope": 2.2542216281467726,
+      "exposureDistance": 0,
+      "unknownThermalDistance": 0,
+      "travelMinutes": 65.65539861273082,
+      "totalMinutes": 85.65539861273082,
+      "oxygenRemaining": 42.31063570249432,
+      "powerRemaining": 38.86091247893238,
+      "timeRemaining": 24.34460138726918,
+      "reserve": 38.86091247893238,
+      "feasible": true,
+      "reasons": [],
+      "cost": 2110.098324412651
+    }
+  ],
+  "simulatedExclusion": {
+    "x": 102,
+    "y": 98,
+    "radius": 35
+  },
+  "previousAffectedCells": 12,
+  "after": [
+    {
+      "mode": "shortest",
+      "distance": 1793.61441460481,
+      "gain": 26.869999999999436,
+      "maxSlope": 15.55,
+      "meanSlope": 3.625816590121325,
+      "exposureDistance": 0,
+      "unknownThermalDistance": 0,
+      "travelMinutes": 71.49668242094104,
+      "totalMinutes": 91.49668242094104,
+      "oxygenRemaining": 37.94914379236401,
+      "powerRemaining": 34.43822616700179,
+      "timeRemaining": 18.503317579058958,
+      "reserve": 34.43822616700179,
+      "feasible": true,
+      "reasons": [],
+      "cost": 1793.6144146048114
+    },
+    {
+      "mode": "exposure",
+      "distance": 1991.9239122830884,
+      "gain": 18.389999999998054,
+      "maxSlope": 5.29,
+      "meanSlope": 1.5963441929188211,
+      "exposureDistance": 0,
+      "unknownThermalDistance": 0,
+      "travelMinutes": 68.30955155692111,
+      "totalMinutes": 88.30955155692111,
+      "oxygenRemaining": 40.32886817083223,
+      "powerRemaining": 36.85133953547401,
+      "timeRemaining": 21.690448443078893,
+      "reserve": 36.85133953547401,
+      "feasible": true,
+      "reasons": [],
+      "cost": 2351.963979509134
+    },
+    {
+      "mode": "mission",
+      "distance": 1945.1548177552681,
+      "gain": 19.21000000000049,
+      "maxSlope": 7.18,
+      "meanSlope": 1.821374504119233,
+      "exposureDistance": 0,
+      "unknownThermalDistance": 0,
+      "travelMinutes": 67.44631573744199,
+      "totalMinutes": 87.44631573744199,
+      "oxygenRemaining": 40.97341758270997,
+      "powerRemaining": 37.50493237022249,
+      "timeRemaining": 22.553684262558008,
+      "reserve": 37.50493237022249,
+      "feasible": true,
+      "reasons": [],
+      "cost": 2144.9042229257143
+    }
+  ],
+  "afterHasNoExcludedCells": true
+}
