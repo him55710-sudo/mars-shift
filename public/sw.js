@@ -1,6 +1,6 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-eva-v12';
-const CORE=[...['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin','optical-native.webp','optical-native-meta.json','obstacle-candidates-v2.json','optical-v2-mask.png','optical-v2-meta.json','science/terrain-metrics.json','science/terrain-report.json'].map(file=>root+'/'+file)),'/data/optical-benchmark.json','/data/optical-benchmark-v2.json','/data/optical-model-v2.json','/media/mars-global.jpg','/data/science-results.json'];
+const CACHE='mars-shift-crew-20261114-surface-v13';
+const CORE=[...['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin','optical-native.webp','optical-native-meta.json','surface-optical-meta.json','surface-tiles/manifest.json','obstacle-candidates-v2.json','optical-v2-mask.png','optical-v2-meta.json','science/terrain-metrics.json','science/terrain-report.json'].map(file=>root+'/'+file)),'/data/optical-benchmark.json','/data/optical-benchmark-v2.json','/data/optical-model-v2.json','/media/mars-global.jpg','/data/science-results.json','/models/nasa-emu-web.glb','/models/nasa-emu-web.json'];
 async function status(){
  const cache=await caches.open(CACHE);
  const checks=await Promise.all(['/',...CORE].map(url=>cache.match(url)));
@@ -12,7 +12,8 @@ async function status(){
  if(!manifest)return {ready:false,assets:[]};
  const entries=Object.values(await manifest.json());
  const workerMetadata=await cache.match('/__science-workers.json');if(!workerMetadata)return {ready:false,assets:[]};const workers=await workerMetadata.json();
- const assets=[...new Set([...workers,...shellAssets,...entries.flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path)])];
+ const tileMetadata=await cache.match('/__surface-tiles.json');if(!tileMetadata)return {ready:false,assets:[]};const tiles=await tileMetadata.json();
+ const assets=[...new Set([...tiles,...workers,...shellAssets,...entries.flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path)])];
  const scripts=await Promise.all(assets.map(url=>cache.match(url)));
  return {ready:checks.every(Boolean)&&shellAssets.length>=2&&scripts.every(Boolean),assets};
 }
@@ -32,6 +33,7 @@ self.addEventListener('install',event=>event.waitUntil((async()=>{
  const manifest=await manifestResponse.json();
  const chunks=Object.values(manifest).flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path);
  await cache.addAll([...new Set([...CORE,...assets,...chunks])]);
+ const tileUrls=[];for(const root of ['/data','/data/ridge']){const response=await cache.match(root+'/surface-tiles/manifest.json');if(!response)throw Error('Surface tile manifest missing');const data=await response.json();for(const level of data.levels)for(const tile of level.tiles)tileUrls.push(root+'/surface-tiles/'+tile.url);}await cache.addAll(tileUrls);await cache.put('/__surface-tiles.json',new Response(JSON.stringify(tileUrls),{headers:{'Content-Type':'application/json'}}));
  const workers=[];for(const path of chunks.filter(p=>p.endsWith('.js'))){const response=await cache.match(path);if(!response)continue;const source=await response.text();for(const hit of source.matchAll(/assets\/science-worker-[A-Za-z0-9_-]+\.js/g))workers.push('/'+hit[0]);}
  const uniqueWorkers=[...new Set(workers)];if(!uniqueWorkers.length)throw Error('Scientific worker missing from offline build');await cache.addAll(uniqueWorkers);await cache.put('/__science-workers.json',new Response(JSON.stringify(uniqueWorkers),{headers:{'Content-Type':'application/json'}}));
  /* No automatic page reload: a new worker waits until existing clients close. */
@@ -52,7 +54,7 @@ self.addEventListener('fetch',event=>{
    try{return await fetch(event.request);}catch{return await (await caches.open(CACHE)).match('/')||Response.error();}
   })());return;
  }
- if(CORE.includes(url.pathname)||url.pathname.startsWith('/assets/'))event.respondWith((async()=>{
+ if(CORE.includes(url.pathname)||url.pathname.startsWith('/assets/')||url.pathname.includes('/surface-tiles/'))event.respondWith((async()=>{
   // These paths are public static assets. Cross-origin module request headers
   // may differ from precache headers (Vary: Origin); the bytes are identical.
   const cache=await caches.open(CACHE),stored=await cache.match(event.request,{ignoreVary:true});

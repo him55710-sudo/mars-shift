@@ -61,7 +61,9 @@ def prepare(check: bool = False) -> dict:
     blocks = heights.astype("float64").reshape(planning["height"], 5, planning["width"], 5)
     aggregate = np.nanmean(blocks, axis=(1, 3)).reshape(-1)
     reference = np.asarray([np.nan if v is None else v for v in planning["elevation"]])
-    overlap = np.isfinite(aggregate) & np.isfinite(reference)
+    # Invalid planning cells can contain partial means with unequal sample counts;
+    # they are excluded from routing, not an observation to validate as a full cell.
+    overlap = np.isfinite(aggregate) & np.isfinite(reference) & np.asarray(planning['valid'], dtype=bool)
     if not np.any(overlap):
         raise ValueError("No overlap with the existing planning elevations")
     max_aggregate_error = float(np.max(np.abs(aggregate[overlap] - reference[overlap])))

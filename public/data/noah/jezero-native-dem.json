@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "url": "/data/noah/jezero-native-dem.bin",
+  "width": 1000,
+  "height": 1000,
+  "cellSize": 1.0,
+  "nativeResolution": [
+    1.0,
+    1.0
+  ],
+  "bounds": [
+    4360409.037914526,
+    1093711.6170900527,
+    4361409.037914526,
+    1094711.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "verticalUnits": "metres",
+  "verticalReference": "Unmodified elevations from the published source DEM; no Earth datum conversion",
+  "dataType": "float32",
+  "byteOrder": "little-endian",
+  "layout": "row-major, rows north to south, columns west to east",
+  "noData": "NaN",
+  "sourceNoData": -32767.0,
+  "pixelCentreOffset": [
+    0.5,
+    0.5
+  ],
+  "affine": {
+    "a": 1.0,
+    "b": 0.0,
+    "c": 4360409.037914526,
+    "d": 0.0,
+    "e": -1.0,
+    "f": 1094711.6170900527
+  },
+  "coordinateFormula": {
+    "easting": "bounds[0] + (column + 0.5) * cellSize",
+    "northing": "bounds[3] - (row + 0.5) * cellSize"
+  },
+  "interpolation": "Sample coordinates are native pixel centres; any browser bilinear interpolation is a derived display/camera height, not a finer observation",
+  "source": {
+    "file": "/data/noah/jezero-dem-1m.tif",
+    "originalProduct": "cenjez_DEM_1m.tif",
+    "record": "https://data.caltech.edu/records/stqse-yay61",
+    "doi": "10.22002/stqse-yay61",
+    "version": "v2 (2024)",
+    "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024)",
+    "license": "CC BY 4.0",
+    "sourceCropSha256": "0f6e4945997490665518ed0f3c6a99b916f8a441cc7d665502d81f5c37f563cf",
+    "processing": "Existing native 1 m crop copied into little-endian Float32; no spatial resampling, terrain synthesis or vertical exaggeration"
+  },
+  "opticalReference": {
+    "url": "/data/noah/optical.webp",
+    "displayPixels": [
+      1000,
+      1000
+    ],
+    "displayMode": "RGB",
+    "displayMetresPerPixel": [
+      1.0,
+      1.0
+    ],
+    "nativeMetresPerPixel": [
+      0.29995473187602484,
+      0.29995473187602484
+    ],
+    "source": "https://data.caltech.edu/api/records/stqse-yay61/files/cenjez_DRG_0_3m.tif/content",
+    "processing": "Existing contrast-stretched, bilinear 1 m display resampling; native approximately 0.3 m observations are not all retained in this display asset",
+    "annotationLimit": "Individual sub-display-pixel objects cannot be verified from this WebP; manual annotations are observations/candidates, not validated boulder classifications"
+  },
+  "statistics": {
+    "validPixels": 999899,
+    "validFraction": 0.999899,
+    "min": -2631.1201171875,
+    "max": -2604.375,
+    "mean": -2620.135924949123
+  },
+  "validation": {
+    "planningCellSizeMetres": 5,
+    "planningCellsCompared": 39991,
+    "planningRoundedMeanMaxAbsoluteErrorMetres": 0.005000000000109139,
+    "planningRoundingToleranceMetres": 0.005001,
+    "boundsAndOpticalAlignment": "exact within 1e-8 projected metres",
+    "binaryByteLength": 4000000,
+    "binarySha256": "2f9f17ba9809166d5ca53f0a1324a4dc4b433b927a9e07912bdd5b3766d5c54a"
+  },
+  "limitations": "Native pixel spacing is not vertical accuracy or registration accuracy. Observation dates and inter-product registration error remain unknown. Heights do not resolve all small rocks or establish walkability."
+}

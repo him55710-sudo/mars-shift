@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-14T13:14:03.117804+00:00",
+  "status": "REFERENCE_EVIDENCE_ACQUIRED_NOT_APPLIED_TO_ROUTING",
+  "planet": "Mars",
+  "earthWgs84TransformUsed": false,
+  "currentDataPreserved": true,
+  "regions": {
+    "floor": {
+      "centerLonLat": [
+        77.64,
+        18.45
+      ],
+      "projectedBoundsMetres": [
+        4364626.037914526,
+        1093118.6170900527,
+        4365626.037914526,
+        1094118.6170900527
+      ],
+      "planetocentricBoundsDegrees": [
+        77.63109693950875,
+        18.44157225197563,
+        77.6488833652564,
+        18.45844285683375
+      ],
+      "awsItemFootprintOverlap": true,
+      "awsOverlapEvidence": "floor: cropped raster has 100% coverage; noah: all ROI corners inside item polygon, raster not sampled; ridge: disjoint longitude extent",
+      "msrV003ConfidenceOverlap": false,
+      "nearestRecordedRoverPoint": {
+        "minimumPointToRoiBoundsMetres": 9444.397599239897,
+        "longitude": 77.463133112,
+        "planetocentricLatitude": 18.460791395,
+        "sol": 386,
+        "matchingFrame": "ROVER",
+        "caveat": "Point-localization separation, not a complete mesh footprint intersection test; no Earth ellipsoid used."
+      }
+    },
+    "ridge": {
+      "centerLonLat": [
+        77.73152233744179,
+        18.5043948063779
+      ],
+      "projectedBoundsMetres": [
+        4369772.037914526,
+        1096342.6170900527,
+        4370772.037914526,
+        1097342.6170900527
+      ],
+      "planetocentricBoundsDegrees": [
+        77.72262588640604,
+        18.495963082038195,
+        77.74041231215365,
+        18.51283368689631
+      ],
+      "awsItemFootprintOverlap": false,
+      "awsOverlapEvidence": "floor: cropped raster has 100% coverage; noah: all ROI corners inside item polygon, raster not sampled; ridge: disjoint longitude extent",
+      "msrV003ConfidenceOverlap": false,
+      "nearestRecordedRoverPoint": {
+        "minimumPointToRoiBoundsMetres": 14737.575011786643,
+        "longitude": 77.463133112,
+        "planetocentricLatitude": 18.460791395,
+        "sol": 386,
+        "matchingFrame": "ROVER",
+        "caveat": "Point-localization separation, not a complete mesh footprint intersection test; no Earth ellipsoid used."
+      }
+    },
+    "noah": {
+      "centerLonLat": [
+        77.565,
+        18.46
+      ],
+      "projectedBoundsMetres": [
+        4360409.037914526,
+        1093711.6170900527,
+        4361409.037914526,
+        1094711.6170900527
+      ],
+      "planetocentricBoundsDegrees": [
+        77.55609158213105,
+        18.451576520656495,
+        77.57387800787865,
+        18.468447125514608
+      ],
+      "awsItemFootprintOverlap": true,
+      "awsOverlapEvidence": "floor: cropped raster has 100% coverage; noah: all ROI corners inside item polygon, raster not sampled; ridge: disjoint longitude extent",
+      "msrV003ConfidenceOverlap": false,
+      "nearestRecordedRoverPoint": {
+        "minimumPointToRoiBoundsMetres": 5226.3715852778405,
+        "longitude": 77.463133112,
+        "planetocentricLatitude": 18.460791395,
+        "sol": 386,
+        "matchingFrame": "ROVER",
+        "caveat": "Point-localization separation, not a complete mesh footprint intersection test; no Earth ellipsoid used."
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "nasa-usgs-hirise-aws",
+      "registryUrl": "https://registry.opendata.aws/nasa-usgs-mars-hirise-dtms/",
+      "documentationUrl": "https://stac.astrogeology.usgs.gov/docs/data/mars/hirise_dtms/",
+      "apiCollection": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms",
+      "staleDocumentationLink": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_controlled_socet_dtms",
+      "staleDocumentationLinkStatus": 404,
+      "license": "CC0-1.0",
+      "itemId": "DTEEC_023247_1985_022957_1985_U01",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5485,
+              18.5093
+            ],
+            [
+              77.6485,
+              18.5205
+            ],
+            [
+              77.69,
+              18.1918
+            ],
+            [
+              77.5897,
+              18.18
+            ],
+            [
+              77.5485,
+              18.5093
+            ]
+          ]
+        ]
+      },
+      "nominalDtmPostingMetres": 1.0150917197116411,
+      "heightReference": "MOLA-controlled, aeroid-relative per collection documentation; independent registration to current Caltech mosaic not established",
+      "crs": "IAU 2015:49910, Mars 3396190 m sphere, equidistant cylindrical lat_ts=0 lon_0=0",
+      "verifiedObservationDates": {
+        "ESP_023247_1985": "2011-07-12",
+        "ESP_022957_1985": "2011-06-20"
+      },
+      "observationDateSources": [
+        "https://www.uahirise.org/ESP_023247_1985",
+        "https://www.uahirise.org/ESP_022957_1985"
+      ],
+      "stacDateDiscrepancy": {
+        "stacDate": "2006-09-29T00:00:00Z",
+        "handling": "Do not use this inconsistent STAC date as the capture date; official HiRISE product pages give 2011 dates."
+      },
+      "assets": {
+        "dtm": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/DTEEC_023247_1985_022957_1985_U01.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "DTEEC_023247_1985_022957_1985_U01",
+          "extensions": [
+            "raster"
+          ],
+          "raster:bands": [
+            {
+              "nodata": -3.4028226550889045e+38,
+              "data_type": "float32",
+              "spatial_resolution": 1.0150917197116411,
+              "statistics": {
+                "minimum": -2722.7248535156,
+                "maximum": -2567.0224609375,
+                "mean": -2653.5232651455,
+                "stddev": 35.211021173729,
+                "valid_percent": 69.61
+              },
+              "unit": "",
+              "scale": 1,
+              "offset": 0
+            }
+          ],
+          "roles": [
+            "data"
+          ]
+        },
+        "fom": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/DTFEC_023247_1985_022957_1985_U01.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "FOM: DTFEC_023247_1985_022957_1985_U01",
+          "roles": [
+            "data"
+          ]
+        },
+        "ortho_0": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/ESP_022957_1985_RED_C_01_ORTHO.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "Orthoimage: ESP_022957_1985_RED_C_01_ORTHO",
+          "roles": [
+            "data"
+          ]
+        },
+        "ortho_1": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/ESP_023247_1985_RED_C_01_ORTHO.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "Orthoimage: ESP_023247_1985_RED_C_01_ORTHO",
+          "roles": [
+            "data"
+          ]
+        },
+        "ortho_2": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/ESP_022957_1985_RED_A_01_ORTHO.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "Orthoimage: ESP_022957_1985_RED_A_01_ORTHO",
+          "roles": [
+            "data"
+          ]
+        },
+        "ortho_3": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/ESP_023247_1985_RED_A_01_ORTHO.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "Orthoimage: ESP_023247_1985_RED_A_01_ORTHO",
+          "roles": [
+            "data"
+          ]
+        },
+        "provenance": {
+          "href": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/provenance.txt",
+          "type": "text/plain",
+          "title": "Provenance",
+          "roles": [
+            "metadata"
+          ]
+        }
+      },
+      "acquiredReference": {
+        "output": {
+          "path": "data-cache\\external-terrain\\usgs-hirise-floor-reference.tif",
+          "bytes": 162946,
+          "sha256": "bb542b8bb7e844c4e1035c1d46263484a7fa3ad34642469203d7b6cb64b8ffb8"
+        },
+        "comparison": {
+          "matchingCells": 40000,
+          "medianDifferenceMetres": -10.263916015625,
+          "meanDifferenceMetres": -10.299331665039062,
+          "p05DifferenceMetres": -13.95269775390625,
+          "p95DifferenceMetres": -6.853955268859863,
+          "rmseMetres": 10.5199031379966,
+          "interpretation": "USGS DTM minus current Caltech 5 m elevation. This is a raster comparison, not independently validated horizontal/vertical registration or accuracy."
+        },
+        "assetReceipts": [
+          {
+            "asset": "dtm",
+            "url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/DTEEC_023247_1985_022957_1985_U01.tif",
+            "sourceBytes": 251199052,
+            "sourceResolution": [
+              1.0150917197116411,
+              1.0150917197116411
+            ],
+            "sourceDtype": "float32",
+            "sourceScale": 1.0,
+            "sourceOffset": 0.0,
+            "sourceNoData": -3.4028226550889045e+38,
+            "outputCoverageFraction": 1.0,
+            "transferBytes": 3702009,
+            "wholeSourceHashVerified": false
+          },
+          {
+            "asset": "fom",
+            "url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_023247_1985_ESP_022957_1985/DTFEC_023247_1985_022957_1985_U01.tif",
+            "sourceBytes": 248060429,
+            "sourceResolution": [
+              1.0150917197116411,
+              1.0150917197116411
+            ],
+            "sourceDtype": "uint8",
+            "sourceScale": 1.0,
+            "sourceOffset": 0.0,
+            "sourceNoData": 0.0,
+            "outputCoverageFraction": 1.0,
+            "transferBytes": 3529966,
+            "wholeSourceHashVerified": false
+          }
+        ],
+        "totalVerifiedRangeTransferBytes": 7231975
+      },
+      "decision": "Retain as reference only. Approximately 10 m disagreement prevents silent replacement. FOM source processing uses cubic interpolation and its raw 1..255 values are not the MSR simplified confidence classes."
+    },
+    {
+      "id": "usgs-msr-trn-v003",
+      "url": "https://astrogeology.usgs.gov/search/map/mars-sample-return-terrain-relative-navigation-hirise-dtm-mosaic",
+      "doi": "10.5066/P13CPYYU",
+      "version": "v003, 2024-08-16",
+      "archiveUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/Mars/MSR_TRN_HiRISE_soc_003_USGS_release_aug2024/MSR_TRN_HiRISE_soc_003_USGS_release_aug2024_mosaics.zip",
+      "archiveBytes": 5468062403,
+      "zipDirectoryTransferBytes": 3313,
+      "archiveWholeHashVerified": false,
+      "metadataEntriesExtractedWithZipCrcVerification": true,
+      "metadataBoundsPlanetocentricDegrees": [
+        77.0578,
+        18.1357,
+        77.3808,
+        18.5881
+      ],
+      "crs": "Mars sphere equirectangular lat_ts=0 lon_0=0",
+      "heightReference": "MOLATopography DeltaGeoid, per README; distinguish from DeltaRadius referenced to 3396190 m",
+      "dataTypes": {
+        "dtmPostingMetres": 1,
+        "opticalPostingMetres": 0.25,
+        "confidencePostingMetres": 1,
+        "confidenceCodes": {
+          "0": "NoData",
+          "2": "saturated",
+          "3": "suspicious match",
+          "4": "interpolated/extrapolated",
+          "10-14": "successful correlation levels",
+          "15": "manually interpolated"
+        }
+      },
+      "license": "CC0-1.0; official DTM XML use constraint says None. License CC0 1.0",
+      "decision": "No overlap with floor, ridge or noah. README, XMLs, legend and class-table evidence acquired; 5.47 GB archive and 65.3 MB compressed confidence member intentionally not downloaded."
+    },
+    {
+      "id": "pds-perseverance-ground-mesh",
+      "navcamBundleUrl": "https://pds.nasa.gov/ds-view/pds/viewBundle.jsp?identifier=urn:nasa:pds:mars2020_navcam_ops_mesh&version=13.0",
+      "navcamDoi": "10.17189/6q2j-q039",
+      "navcamArchive": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_mesh/",
+      "mastcamzArchive": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_mastcamz_ops_mesh",
+      "mastcamzDoi": "10.17189/n6e9-1z98",
+      "placesUrl": "https://pds-geosciences.wustl.edu/missions/mars2020/places.htm",
+      "placesTableUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv",
+      "placesLabelUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv.xml",
+      "localizationReview": {
+        "rows": 666,
+        "boundsPlanetocentricLonLat": [
+          77.217899747,
+          18.424381846,
+          77.463133112,
+          18.499662754
+        ],
+        "solRange": [
+          -1,
+          1896
+        ],
+        "nearestRegions": {
+          "floor": {
+            "minimumPointToRoiBoundsMetres": 9444.397599239897,
+            "longitude": 77.463133112,
+            "planetocentricLatitude": 18.460791395,
+            "sol": 386,
+            "matchingFrame": "ROVER",
+            "caveat": "Point-localization separation, not a complete mesh footprint intersection test; no Earth ellipsoid used."
+          },
+          "ridge": {
+            "minimumPointToRoiBoundsMetres": 14737.575011786643,
+            "longitude": 77.463133112,
+            "planetocentricLatitude": 18.460791395,
+            "sol": 386,
+            "matchingFrame": "ROVER",
+            "caveat": "Point-localization separation, not a complete mesh footprint intersection test; no Earth ellipsoid used."
+          },
+          "noah": {
+            "minimumPointToRoiBoundsMetres": 5226.3715852778405,
+            "longitude": 77.463133112,
+            "planetocentricLatitude": 18.460791395,
+            "sol": 386,
+            "matchingFrame": "ROVER",
+            "caveat": "Point-localization separation, not a complete mesh footprint intersection test; no Earth ellipsoid used."
+          }
+        },
+        "noahBoundsLonLat": [
+          77.55609158213105,
+          18.451576520656495,
+          77.57387800787865,
+          18.468447125514608
+        ]
+      },
+      "coordinateRequirement": "Use the product label site/drive frame, camera model/extrinsics, texture references and matching PLACES localization. Orbital co-registration still needs validation.",
+      "license": "NASA PDS/JPL image and data use policies; individual metadata and credits must remain attached",
+      "meshBytesAcquired": false,
+      "decision": "No ground mesh inserted. Closest localization is kilometres from all three study regions; this is a point-distance screen, not exhaustive mesh footprint intersection. Archive root and collection index were reachable, but sol index requests timed out; the old archive-explorer redirects to Atlas."
+    },
+    {
+      "id": "nasa-ammos-landform",
+      "repository": "https://github.com/NASA-AMMOS/Landform",
+      "licenseUrl": "https://github.com/NASA-AMMOS/Landform/blob/main/LICENSE.txt",
+      "readmeUrl": "https://github.com/NASA-AMMOS/Landform/blob/main/README.md",
+      "inputDataGuide": "https://github.com/NASA-AMMOS/Landform/wiki/Links-to-Publicly-Available-Input-Data",
+      "language": "C#",
+      "licenseReview": "README declares GNU GPL v3 due to Emgu.CV. LICENSE also includes a Caltech 2025 commercial-use negotiation notice and export-compliance text. GitHub SPDX classification is NOASSERTION. Do not describe it as MIT or generally permissive.",
+      "integrationDecision": "Reference only; no source code, binary or dependency imported. A separate offline pipeline is a future option after license/dependency review and matched data registration.",
+      "publicRecordedExamples": [
+        "https://nasa-ammos.github.io/3DTilesRendererJS/three/mars.html",
+        "https://nasa-ammos.github.io/3DTilesRendererJS/three/landformSiteOverlay.html"
+      ],
+      "registrationWarning": "Recorded examples must remain identified at their actual sites; not a surface detail overlay for unrelated study ROIs."
+    }
+  ],
+  "accessOutcomes": [
+    {
+      "resource": "USGS Astropedia record",
+      "webTool": "403",
+      "verifiedPythonRequests": "200"
+    },
+    {
+      "resource": "USGS ScienceBase item JSON",
+      "status": 403,
+      "handling": "Used accessible official Astropedia README and archive metadata instead."
+    },
+    {
+      "resource": "USGS live STAC collection query",
+      "status": 200,
+      "matchedItems": 1
+    },
+    {
+      "resource": "PDS archive explorer",
+      "webTool": "403",
+      "verifiedPythonRequests": "200 redirect to Atlas shell"
+    },
+    {
+      "resource": "PDS Navcam mesh archive root/data",
+      "status": 200
+    },
+    {
+      "resource": "PDS Navcam sol directory",
+      "status": "web timeout and Requests read timeout at 30 s",
+      "handling": "Stopped broad enumeration; no unregistered scene was imported."
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "cachePath": "data-cache/external-terrain/best_tactical.csv",
+      "bytes": 171404,
+      "sha256": "9da19e4f70287fe0d33ba716ff2169c10447c30c7a048583f730e4155226cde9"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/best_tactical.csv.xml",
+      "bytes": 15898,
+      "sha256": "777074bc03a3f06be8241b85cd4448cbdac5bff4dfecc443de6757152d22ac79"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/FOM_clrConfidence_legend.png",
+      "bytes": 6964,
+      "sha256": "c04b6aef0ce9f21d34bb0f9209e14e3a37a70bbef07ab744696a71bbd76441af"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/hirise-jezero-stac.json",
+      "bytes": 10630,
+      "sha256": "459a953fa2d4bc335db3f49fcee5be1902b815b96f9f5f5061c7960f2f65c3f9"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/landform-LICENSE.txt",
+      "bytes": 35222,
+      "sha256": "8445a78e928efdd1a1e22a525be413333d6f51bfcf36ed3c151ca4c8f546d2d8"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/landform-README.md",
+      "bytes": 15156,
+      "sha256": "79da164fc7b6ee545fde4e337c520a007844ee568c11a34dc890de9354344b86"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/Mars2020_Camera_Bundle_SIS.pdf",
+      "bytes": 797272,
+      "sha256": "25c8601705a0aa31395c45787e572b57e0492ed48ff4964c6a3315e64d17b987"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/msr-archive-directory.json",
+      "bytes": 5616,
+      "sha256": "6855ad6317488b4cd325c3a8008ec6cb5e5c66031e4989741f674af74b49adac"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_DTM_MOLATopography_DeltaGeoid_1m_Eqc_latTs0_lon0_Blend40.tif.aux.xml",
+      "bytes": 5205,
+      "sha256": "61e46d5a97209eb20cb4a68f4c86c3b0b05cb8bb803a02c7defd23933fec87d1"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_DTM_MOLATopography_DeltaGeoid_1m_Eqc_latTs0_lon0_Blend40.tif.xml",
+      "bytes": 17047,
+      "sha256": "07d885099881ec8e8bfc8476ac545b86af8dde19af57671ad316e26243e979cc"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_FOM_ColorConfidence_1m_Eqc_latTs0_lon0.tif.xml",
+      "bytes": 12720,
+      "sha256": "7c9b9b51a9298f1fd916a95fc84fc766c1accf52b9566ea0eac4fc39bbd236fa"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_FOM_Confidence_1m_Eqc_latTs0_lon0.tif.aux.xml",
+      "bytes": 479,
+      "sha256": "1ba670adddcaeb46fe3429fd016932bc403a5fa3c1bfe6e3482abf75815071b5"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_FOM_Confidence_1m_Eqc_latTs0_lon0.tif.vat.dbf",
+      "bytes": 488,
+      "sha256": "73a9e6f7fee5d0547a2d02f94f7d2dbc7326143aa75b19a68338254f86d77fa0"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_FOM_Confidence_1m_Eqc_latTs0_lon0.tif.xml",
+      "bytes": 12646,
+      "sha256": "9c577216b7f4d2980464c62387ab6f00e41600cb175db9ec912a3d5d27f391f2"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/MSR_hirise_soc_003_Orthomosaic_0.25m_Eqc_latTs0_lon0_First_NoBlend.tif.xml",
+      "bytes": 14210,
+      "sha256": "bff01660d00869c91145f62313a161ec81d4247d50dca4f81210fd50c7c944f8"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/ortho_label_0.txt",
+      "bytes": 5388,
+      "sha256": "5fa2225df52dc30dfaf4e19328c2ad2c6e0bd73a3d61d29ab0b5628fd587c1f6"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/pds-navcam-access.html",
+      "bytes": 1589,
+      "sha256": "2c1b02766abd5a185eeddd461ba1c5524730fefd8af44dfcccca76f22620c84a"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/places-overlap-review.json",
+      "bytes": 1356,
+      "sha256": "31778ac54c30575dac5aa5d5a1ad51f812fdb85f5f55bd289e9192a3cd1ac8fc"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/provenance.txt",
+      "bytes": 3483,
+      "sha256": "039316fbf9934ceb1cde73174e48d0ec61cab2b6f3f5ff7eddbc2b007baab6b0"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/stac-collections.json",
+      "bytes": 64658,
+      "sha256": "1ef852a2cf239d04a9120279586e1b0e964b358d2410596b4e4da482673eb29b"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/stac-root.json",
+      "bytes": 2987,
+      "sha256": "93b919a775f56b58a5cdebc093381d3cbd56acb7dda07a5e53e73f92e9d066eb"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/usgs-hirise-floor-reference.json",
+      "bytes": 6624,
+      "sha256": "10d77549edba0d7ca0df317773370c3a9f08b79dac7c2c47bb75e519fd61a498"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/usgs-hirise-floor-reference.tif",
+      "bytes": 162946,
+      "sha256": "bb542b8bb7e844c4e1035c1d46263484a7fa3ad34642469203d7b6cb64b8ffb8"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/usgs-msr-readme.txt",
+      "bytes": 11377,
+      "sha256": "72452315eb16b5a9b67b3d92ad0d04d605042fdcad17c013f135644981c2788d"
+    },
+    {
+      "cachePath": "data-cache/external-terrain/usgs-msr-record.html",
+      "bytes": 28493,
+      "sha256": "aa5cb5b738c238a029896856df6af9f7864f8401897b29204643d699dc83285d"
+    }
+  ],
+  "reproduction": "Run scripts/review_external_terrain.py to re-acquire bounded floor DTM/FOM comparison; local raw metadata and ZIP central-directory receipts are in data-cache/external-terrain. Neither full upstream raster nor full ZIP checksum is asserted."
+}

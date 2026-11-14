@@ -11,8 +11,8 @@ function loadSDK(){
   if(sdkPromise)return sdkPromise;
   sdkPromise=new Promise<SDKModule[]>((resolve,reject)=>{
     const link=document.createElement('link');link.rel='stylesheet';link.href='https://js.arcgis.com/4.34/esri/themes/dark/main.css';link.dataset.marsSdk='css';if(!document.querySelector('[data-mars-sdk="css"]'))document.head.append(link);
-    const ready=()=>{const amd=(window as AMDWindow).require;if(!amd){reject(Error('Could not initialize the map engine.'));return;}amd(MODULES,(...modules)=>resolve(modules),reject);};
-    if((window as AMDWindow).require){ready();return;}
+    const ready=()=>{const amd=(window as unknown as AMDWindow).require;if(!amd){reject(Error('Could not initialize the map engine.'));return;}amd(MODULES,(...modules)=>resolve(modules),reject);};
+    if((window as unknown as AMDWindow).require){ready();return;}
     const script=document.createElement('script');script.src='https://js.arcgis.com/4.34/';script.async=true;script.dataset.marsSdk='js';
     const timer=setTimeout(()=>{script.remove();reject(Error('Map connection timed out. Check your network and retry.'));},45000);
     script.onload=()=>{clearTimeout(timer);ready();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error('Could not load the map engine. Check your network.'));};document.head.append(script);

@@ -1,9 +1,10 @@
 import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 
-export type AstronautAvatar={group:THREE.Group;update:(walkPhase:number,moving:boolean)=>void};
+export type AstronautAvatar={group:THREE.Group;update:(walkPhase:number,moving:boolean)=>void;ready:Promise<void>;load:()=>Promise<void>;dispose:()=>void};
 
 /** Illustrative crew figure. Local -Z is forward; neutral soles sit at y=0 metres. */
-export function createAstronautAvatar():AstronautAvatar {
+function createFallbackAstronaut() {
  const group=new THREE.Group();group.name='Simulated EVA crew avatar';
  group.userData={classification:'illustrative simulation',units:'metres',forward:'local -Z',ground:'neutral soles at local y=0'};
  const suit=new THREE.MeshStandardMaterial({color:'#e8e5d9',roughness:.72,metalness:.05});
@@ -65,4 +66,22 @@ export function createAstronautAvatar():AstronautAvatar {
  };
  update(0,false);
  return {group,update};
+}
+
+
+/** NASA EMU geometry with an explicitly illustrative walk rig.
+ * Loading is deferred for orbit-only maps; disposal also handles late responses.
+ */
+export function createAstronautAvatar(loadDetailed=true):AstronautAvatar {
+ const group=new THREE.Group();group.name='NASA EMU / illustrative EVA rehearsal';
+ group.userData={classification:'NASA-derived visual asset with illustrative walking',assetStatus:'deferred',source:'NASA / Michael D. Carbajal',forward:'local -Z',units:'metres'};
+ let disposed=false,started=false,model:THREE.Group|null=null,fallback:ReturnType<typeof createFallbackAstronaut>|null=null,phase=0,moving=false;
+ const bones=new Map<string,{bone:THREE.Bone;rest:THREE.Quaternion}>(),axis=new THREE.Vector3(1,0,0),rotation=new THREE.Quaternion();
+ let finish:()=>void=()=>{};const ready=new Promise<void>(resolve=>{finish=resolve;});
+ const release=(object:THREE.Object3D)=>{const geometries=new Set<THREE.BufferGeometry>(),materials=new Set<THREE.Material>(),textures=new Set<THREE.Texture>(),skeletons=new Set<THREE.Skeleton>();object.traverse(child=>{if(child instanceof THREE.Mesh){geometries.add(child.geometry);(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>materials.add(material));if(child instanceof THREE.SkinnedMesh)skeletons.add(child.skeleton);}});materials.forEach(material=>{Object.values(material).forEach(v=>{if(v instanceof THREE.Texture)textures.add(v);});material.dispose();});textures.forEach(t=>t.dispose());geometries.forEach(g=>g.dispose());skeletons.forEach(s=>s.dispose());object.removeFromParent();};
+ const update=(walkPhase:number,isMoving:boolean)=>{phase=Number.isFinite(walkPhase)?walkPhase:0;moving=isMoving;fallback?.update(phase,moving);if(!model)return;const stride=moving?Math.sin(phase):0;for(const [name,{bone,rest}] of bones){let angle=0;if(name.startsWith('Thigh_'))angle=(name.endsWith('_L')?1:-1)*stride*.22;else if(name.startsWith('Shin_'))angle=moving?Math.max(0,(name.endsWith('_L')?-1:1)*stride)*.30:0;else if(name.startsWith('Arm_'))angle=(name.endsWith('_L')?-1:1)*stride*.13;else if(name.startsWith('Forearm_'))angle=moving?-.04-Math.max(0,(name.endsWith('_L')?1:-1)*stride)*.06:0;bone.quaternion.copy(rest).multiply(rotation.setFromAxisAngle(axis,angle));}model.position.y=moving?Math.abs(Math.sin(phase))*.012:0;};
+ const load=()=>{if(started||disposed)return ready;started=true;group.userData.assetStatus='loading';fallback=createFallbackAstronaut();group.add(fallback.group);new GLTFLoader().load('/models/nasa-emu-web.glb',gltf=>{if(disposed){release(gltf.scene);finish();return;}if(fallback){release(fallback.group);fallback=null;}model=gltf.scene;model.traverse(child=>{if(child instanceof THREE.Bone)bones.set(child.name,{bone:child,rest:child.quaternion.clone()});if(child instanceof THREE.Mesh){child.castShadow=true;child.receiveShadow=false;(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>{if(material instanceof THREE.MeshStandardMaterial){material.envMapIntensity=.6;material.needsUpdate=true;}});}});group.add(model);group.userData.assetStatus='ready';let triangles=0;model.traverse(child=>{if(child instanceof THREE.Mesh)triangles+=(child.geometry.index?.count??child.geometry.attributes.position.count)/3;});group.userData.triangles=triangles;group.userData.materials=7;update(phase,moving);finish();},undefined,()=>{group.userData.assetStatus='fallback';finish();});return ready;};
+ const dispose=()=>{if(disposed)return;disposed=true;if(model){release(model);model=null;}if(fallback){release(fallback.group);fallback=null;}bones.clear();group.clear();finish();};
+ if(loadDetailed)void load();
+ return {group,update,ready,load,dispose};
 }

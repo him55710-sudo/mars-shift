@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "engineSources": {
+    "src/surface-geometry.ts": "bbe43bd079ed9ee6ee9ba8a53b1559a985ea9e983972b1c3063bd9ffdff62ce5",
+    "src/surface-chunks.ts": "5a2cb01580ca7694c41f46dc9170ee2bb0d5951a057629fa54763a38891ce786",
+    "src/surface-tiles.ts": "a0a2faae5ad38cea7c5c663da93243be68135e9130f246b875085c6e22ac5f27",
+    "src/native-registration.ts": "e9508fc6bd88411e116f55da6e832fdd8ef94f3d1e31fa123a7833cfb5713a94",
+    "src/ground-overlay.ts": "5c6cf5f80eda720008c342bac8a5260ff61be404f074176fa6ec487e06535256",
+    "src/TerrainScene.tsx": "a8915b3d4afac508b54c15132fcef3e96589db03d15a25fb659ba5ef30a73ddd",
+    "src/astronaut-avatar.ts": "7605cff517d04b122e723c6b56b52fd637f7cb95922fd2b45fe59b556af28ddb"
+  },
+  "regions": [
+    {
+      "region": "floor",
+      "referenceCamera": "default base, crew at cell32,168;1x geometry",
+      "previousUniform2mTriangles": 500000,
+      "adaptiveGroundTriangles": 61250,
+      "orbit4mTriangles": 125000,
+      "groundTriangleReduction": 0.8775,
+      "groundVertices": 30976,
+      "groundBufferBytes": 1354520,
+      "normalMapBytes": 4000000,
+      "opticalAtlasBytesBeforeMipmaps": 4194304,
+      "baseOpticalBytesBeforeMipmaps": 4000000,
+      "priorFullOpticalBytesBeforeMipmaps": 44462224,
+      "oneBuildCpuMilliseconds": 17.4863,
+      "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
+      "texture": {
+        "width": 3334,
+        "height": 3334,
+        "metresPerPixel": 0.29994001199760045
+      }
+    },
+    {
+      "region": "ridge",
+      "referenceCamera": "default base, crew at cell32,168;1x geometry",
+      "previousUniform2mTriangles": 500000,
+      "adaptiveGroundTriangles": 61250,
+      "orbit4mTriangles": 125000,
+      "groundTriangleReduction": 0.8775,
+      "groundVertices": 30976,
+      "groundBufferBytes": 1354520,
+      "normalMapBytes": 4000000,
+      "opticalAtlasBytesBeforeMipmaps": 4194304,
+      "baseOpticalBytesBeforeMipmaps": 4000000,
+      "priorFullOpticalBytesBeforeMipmaps": 44462224,
+      "oneBuildCpuMilliseconds": 15.434300000000007,
+      "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
+      "texture": {
+        "width": 3334,
+        "height": 3334,
+        "metresPerPixel": 0.29994001199760045
+      }
+    }
+  ],
+  "crew": {
+    "sourceUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Extravehicular%20Mobility%20Unit/Extravehicular%20Mobility%20Unit.glb",
+    "sourcePage": "https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/",
+    "credit": "NASA / Michael D. Carbajal",
+    "sourceSha256": "4dd79f1f8e02ab39bc15d87a7bbeda1f437e1103ab7661f7797340e0c114f372",
+    "sourceBytes": 3448904,
+    "originalTriangles": 343455,
+    "webTriangles": 23238,
+    "webVertices": 11634,
+    "webBytes": 852596,
+    "webSha256": "fca4b5fc654c2bfa6c8234e696a56f0e4015402bbe0b1427895e7b292402dfdd",
+    "materials": 7,
+    "bones": 9,
+    "heightMetres": 1.85,
+    "forward": "glTF local -Z",
+    "ground": "neutral sole at glTF local y=0",
+    "blenderVersion": "5.2.2 LTS",
+    "adaptation": [
+      "Removed redundant nested visor layers and unioned overlapping legacy shells at 6 mm display scale",
+      "Reduced polygons without adding terrain or physical suit claims",
+      "Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS pack for a surface-rehearsal silhouette",
+      "Added illustrative 9-bone skin for a procedural walk"
+    ],
+    "terms": "NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification"
+  },
+  "optimizations": [
+    "Conforming variable-spaced native grid,1m near crew and coarser at distance",
+    "4m overview geometry; object-space normals derived from actual native1m DEM",
+    "128m spatial patches with tight per-patch frustum bounds; identical shared-edge coordinates and normals",
+    "Four resident512px optical images feed one1024px atlas; no full3334px optical image decoded in EVA",
+    "Draw only while camera/crew changes; capped at60fps, adaptive pixel ratio0.75–1.5",
+    "Dispose the surface renderer while the expanded map is open",
+    "Load detailed crew and its shadows only for third-person EVA;7material draws and23,238 triangles",
+    "Asynchronous WebP objectURLs for2D; no full-resolution synchronous PNG serialization in3D"
+  ],
+  "limits": [
+    "Mesh reduction is a geometry result, not a measured frame-rate increase.",
+    "GPU, device, browser, view, texture and shadows affect frame time. No promise of zero lag.",
+    "Orbital image sampling~0.3m and native DEM1m do not resolve all human-scale rocks.",
+    "Normal lighting and continuous path marks add no invented terrain observations."
+  ]
+}

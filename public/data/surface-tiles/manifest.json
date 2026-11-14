@@ -1,0 +1,662 @@
+{
+  "schemaVersion": 1,
+  "region": "floor",
+  "classification": "OBSERVED",
+  "tileSize": 512,
+  "bounds": [
+    4364626.037914526,
+    1093118.6170900527,
+    4365626.037914526,
+    1094118.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "levels": [
+    {
+      "level": 0,
+      "pixels": 834,
+      "metresPerPixel": 1.1990407673860912,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 0,
+          "url": "0-0-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 159414,
+          "sha256": "f202fb7c7257b6d0d1ac856a037f0f5ef85b3500d09cb7bf584348db92a7cb93"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "url": "0-1-0.webp",
+          "width": 322,
+          "height": 512,
+          "bytes": 102786,
+          "sha256": "28e1ca6504aeb90cdeff726204d0458bb9697eb701ff7a3213dd0da929f8cb76"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "url": "0-0-1.webp",
+          "width": 512,
+          "height": 322,
+          "bytes": 102298,
+          "sha256": "8a9075621d976dec158823da1d277af86a7c5d726831757f78ed29e9dd2b223c"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "url": "0-1-1.webp",
+          "width": 322,
+          "height": 322,
+          "bytes": 62786,
+          "sha256": "cf29c4806fa204b741d80452265bb7ff772c8e40bd9b5b60658532d8a4fc89ab"
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "pixels": 1667,
+      "metresPerPixel": 0.5998800239952009,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 0,
+          "url": "1-0-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 133418,
+          "sha256": "3b31e8fcdee2403aeb7ebf75d86580d17d378b49fdce5ba75cecc10b32279e40"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "url": "1-1-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 138086,
+          "sha256": "5e787948bfba5ac79f0367f1ae03d8de8e60b064d88e7c8ad70d29db58a07900"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "url": "1-2-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 138932,
+          "sha256": "87cdb0971f4a6291c7717c7359894eeae2dab6ce4a8bb1cac7ab8a41e4ed6f6c"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "url": "1-3-0.webp",
+          "width": 131,
+          "height": 512,
+          "bytes": 36706,
+          "sha256": "2c14e5d3448355fbf40182353ba04555571dc1663fe024c2d2195df26a1f9e71"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "url": "1-0-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 129958,
+          "sha256": "0a5a6957379754aaf015b06b53e460ef871cdc6582b98376aadba82aeb273719"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "url": "1-1-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 135698,
+          "sha256": "1d025f0f15d3743f1e61321314e94de900f91461f81b3871c0d67c15027d8def"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "url": "1-2-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 138344,
+          "sha256": "0b8f7c77b97f6f8ca67829ffe673a29ab977d7459d7b01712952717837b78bbb"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "url": "1-3-1.webp",
+          "width": 131,
+          "height": 512,
+          "bytes": 35822,
+          "sha256": "9e4da2b89dc145b24bfc693a823b3ece19d376ad8e3d6f11898d36087ede59c2"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "url": "1-0-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 137662,
+          "sha256": "531ef4b77c318d9ef2cff234bdc864ee39977b8c8435804f43b4c72c0679fa96"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "url": "1-1-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 133824,
+          "sha256": "17db81e276e4a6f38659605b856e63f2c05b5284d1ba1e69026e72f057ce266a"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "url": "1-2-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 136350,
+          "sha256": "8a0a6d8a0734e082597a3fa830a627917a1548908ce16d4fa00fe397e0f32f7f"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "url": "1-3-2.webp",
+          "width": 131,
+          "height": 512,
+          "bytes": 35362,
+          "sha256": "0ee34ce5c777c8f219fb254199bc58abcdc32d85cfb875460dda9d3e123a4383"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "url": "1-0-3.webp",
+          "width": 512,
+          "height": 131,
+          "bytes": 37180,
+          "sha256": "5eb321748e25f2a9f8a2ad6458522fc021418942041b0e84fd1e24c46f482e5b"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "url": "1-1-3.webp",
+          "width": 512,
+          "height": 131,
+          "bytes": 35960,
+          "sha256": "660c04f4e972005a85a6b7c1f791af9412e7ccf4f85c0b9145228ff66daefa59"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "url": "1-2-3.webp",
+          "width": 512,
+          "height": 131,
+          "bytes": 36770,
+          "sha256": "cae921723919bec236da83fa521b56295f87fde3e501f904d42b305294fa1e78"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "url": "1-3-3.webp",
+          "width": 131,
+          "height": 131,
+          "bytes": 8664,
+          "sha256": "5f3c101460f399d6a041d415408171c3eb3a4fd92d973c829d9f2d3e119a2988"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "pixels": 3334,
+      "metresPerPixel": 0.29994001199760045,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 0,
+          "url": "2-0-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 91016,
+          "sha256": "023a40f451dfb1cb633e1c12b0e0c88fd0a4ecaa6cd839658b4e18f86a381270"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "url": "2-1-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 89340,
+          "sha256": "2e4e0bf9adb5958cdaf0a96c2cae6bbabcf207d0cfa9f07dfd42ae2a202e0938"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "url": "2-2-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 90646,
+          "sha256": "0f0e3e40d7b92b92ec98cf0edd736b5bf41c2999a7102e50a22daed0e1774c2c"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "url": "2-3-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92578,
+          "sha256": "e3254d563e3aa8d0dbf6105a6c629478a2a7148f2e5d138e3043f15ee5634d71"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "url": "2-4-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92602,
+          "sha256": "12cc53180334c481c7a78fd88aad557a656ca11eb6ee163e0338399b7bf5bd31"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "url": "2-5-0.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 98384,
+          "sha256": "cb2109b035683eed196a9f0645b9b9b82277579364dc43fe013e9ebe138c6947"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "url": "2-6-0.webp",
+          "width": 262,
+          "height": 512,
+          "bytes": 51500,
+          "sha256": "07ee58162ddce421f5383abe2568b3cc0e329e8d42c49ed79f3e3d7bec8f05e1"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "url": "2-0-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 90468,
+          "sha256": "8582bf76af9b5268dcc179b25e1d5453427be244c7bdf6f629bf64c7d8352530"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "url": "2-1-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 88612,
+          "sha256": "812f13a6b84a4679a53c366b3cd60b35d8ece897cf986f07cb3133d57d650e79"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "url": "2-2-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92866,
+          "sha256": "be783882de5ae3f356678ea517437eeeb574ff43a526ce626d36563968955a33"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "url": "2-3-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 96570,
+          "sha256": "f3d53a2c018d1245a80ae02baa51fb042806f10b1cf61ea05e992b7f6c169729"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "url": "2-4-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 93078,
+          "sha256": "593f1c24f7d3269659c53afa4e2816add0563b815cb3ed7c952240dd47279136"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "url": "2-5-1.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 94440,
+          "sha256": "6a382d353b7325e89d65c5c55e461944bbc2a35b023203cff7c7daef9317cb35"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "url": "2-6-1.webp",
+          "width": 262,
+          "height": 512,
+          "bytes": 48002,
+          "sha256": "1db447737c5b91a93748515c9ad7307737d2db16183ffc264ada1116a30b2fc5"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "url": "2-0-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 87584,
+          "sha256": "6dcf1daf682c4e8541f7b05fc2ef3666635dfb29db6457204e617a9c73f46243"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "url": "2-1-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 84444,
+          "sha256": "1472de2faac3d7bd041df72bcbc85b0d934c71c490c7eac7ff5ff1ee2b2e5529"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "url": "2-2-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 88850,
+          "sha256": "8809cb9873b5c2f2c15831edb0ae48219db77f4d0e002c06423249a31205e3cb"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "url": "2-3-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 96948,
+          "sha256": "23e90137d3f16d80b1df24f8b2c8c2545345a36527c06fc83ec181c388b4009b"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "url": "2-4-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 93126,
+          "sha256": "42b04009213025f713efd476210af5cf370c89567afb278fe11f0801d36eeeb2"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "url": "2-5-2.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 93184,
+          "sha256": "8364747fafa836bea09485ee9618eb4a69824eedcec75d55a398d6adfc33ee5f"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "url": "2-6-2.webp",
+          "width": 262,
+          "height": 512,
+          "bytes": 47766,
+          "sha256": "af8f3a3e6a7e5bb9b46de6f78cf3d0a017e1eef86339ff630942fe6125f873fd"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "url": "2-0-3.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 93138,
+          "sha256": "d22b762a9883738b865e6cbffaf5c7bb729537d54f68d5dcfa9cd2ac04343211"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "url": "2-1-3.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 85972,
+          "sha256": "29070c0d6725b3c89262a8b5e7bec8cd5f87fe15b239b5446fd418e5dbbc537b"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "url": "2-2-3.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 89818,
+          "sha256": "ffb12f26f85816cdb14c5562f48fc220d27f59893e598be1355c28afbc619ee6"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "url": "2-3-3.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 94728,
+          "sha256": "c524bf288a4c8e8f70173e6bb9f2bcdf6e4c5b370f4a159da2785011d2375edd"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "url": "2-4-3.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 96618,
+          "sha256": "b82fdbc3662ad08348f665cd6607c52af06b721be6f7bbaf7bb15da205d575c2"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "url": "2-5-3.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 96708,
+          "sha256": "3adf1fd0644aad3960a59a0ca1004d25975c1c00c9fe4967501860ba81fe40c9"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "url": "2-6-3.webp",
+          "width": 262,
+          "height": 512,
+          "bytes": 49812,
+          "sha256": "db30295757ce59766af6ef005b6ab7cb5753f45953ffe7794c218fd696b3edb0"
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "url": "2-0-4.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 95746,
+          "sha256": "0836480aaa5a410b04a8da262359e66ee79ac5d419978985087113d985dcc660"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "url": "2-1-4.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 87296,
+          "sha256": "31f9a3bdead838489293bd9b0e9ee2f3a4c7fc4c174281bfacaf937e5c917378"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "url": "2-2-4.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 89438,
+          "sha256": "46fe9dc60e599d890d726962c3c7f52b95f2479aa06a55fef1fbc82a60814e18"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "url": "2-3-4.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 94190,
+          "sha256": "725cd6ddf586a91fa7901819dc167d40fd70613d381837363b90af29f51cb591"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "url": "2-4-4.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 95854,
+          "sha256": "d85925e2d44c9439313615eb10a21a87518a122c726694759940f67c81b0e429"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "url": "2-5-4.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 90118,
+          "sha256": "638ca9c0b7b70caec160406bbf2ffbfd509dd5cd5f16430a78340281e060bf24"
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "url": "2-6-4.webp",
+          "width": 262,
+          "height": 512,
+          "bytes": 51788,
+          "sha256": "1b152420835d4d74d27768ca720afd3f36dfb70fbf5670a90e4646b6d5d4f14a"
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "url": "2-0-5.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 97748,
+          "sha256": "f2223a7db381ff8aab2fa70f1a2f501a08b7f9060d53d7671a7d47ee85c5d434"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "url": "2-1-5.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 94164,
+          "sha256": "b594353ddc59a2a5925d4d79cde5df03f9d58fe5539ad00428d8897b2ebbe26c"
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "url": "2-2-5.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92070,
+          "sha256": "ea7584abf640c2ba19b68ad2a38d5ca3d7e0d32777f050ed9b258589d9f4250e"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "url": "2-3-5.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92756,
+          "sha256": "ee1bff971006dbe219d8b42287a31774ae6faebbb42a2e12fd8977362fa42f07"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "url": "2-4-5.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 98970,
+          "sha256": "e265c2de1ff2f3711aa2ab564d49e36f3ce5126aef73f71ea83c7d8cdb6d2ce1"
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "url": "2-5-5.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 98632,
+          "sha256": "5fd1c3a5cab31e58ce7baa63e3b47082663980323c62a3220291e94f23e63c34"
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "url": "2-6-5.webp",
+          "width": 262,
+          "height": 512,
+          "bytes": 47232,
+          "sha256": "ca9e35295791bd3633c859bea8dd9874fa7458427e485e0395c56b22c1a61a97"
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "url": "2-0-6.webp",
+          "width": 512,
+          "height": 262,
+          "bytes": 52292,
+          "sha256": "4d4d15b421b333cf355a0757f385282d6f974a0d177d0cf176bbcfe10afe5227"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "url": "2-1-6.webp",
+          "width": 512,
+          "height": 262,
+          "bytes": 50464,
+          "sha256": "8d51c5655bcb126fa3e41968e52835d4dc7cc3c5cb5daec1d21b6a50725e2a8b"
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "url": "2-2-6.webp",
+          "width": 512,
+          "height": 262,
+          "bytes": 50612,
+          "sha256": "8223d05fb16eae4f5cb54e1db8811c1e1ff9bab94df50c9edaec4dc7e38eb58c"
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "url": "2-3-6.webp",
+          "width": 512,
+          "height": 262,
+          "bytes": 49418,
+          "sha256": "d2c3a50d25c5b8076b52169fcda265d066b5357f2cefabba79584e0fb3792da7"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "url": "2-4-6.webp",
+          "width": 512,
+          "height": 262,
+          "bytes": 52192,
+          "sha256": "3f97f68b1c6ee62250732106f1d7c7d104223f7dc0a78844d794ae9a865570a0"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "url": "2-5-6.webp",
+          "width": 512,
+          "height": 262,
+          "bytes": 50870,
+          "sha256": "49e598b2fbbf30fafe97c8faf35db679fad7fa34c4987edf50b8e19a13772394"
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "url": "2-6-6.webp",
+          "width": 262,
+          "height": 262,
+          "bytes": 24020,
+          "sha256": "75cfc4dff4be0b8669788ab057d2503f8bf3b12e0ad97878e0708097d2fa659b"
+        }
+      ]
+    }
+  ],
+  "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024), DOI 10.22002/stqse-yay61, CC BY 4.0",
+  "sourceCropSha256": "a6c0c272348d23299ef1c201daa800c9d8216c08d43107a61f7a933aebc54a8b",
+  "processing": "Same contrast as native surface product; Lanczos lower-resolution display levels, WebP97. Native level is not upsampled.",
+  "registrationResidualMetres": null,
+  "limitations": "Approximately 0.3 m orbital pixel spacing is not centimetre-scale ground imagery, positional accuracy, or boulder validation. DEM spacing remains 1 m and planning cells remain 5 m. This product does not alter detector inputs or observations. No AI generation, synthetic rocks, procedural geography or super-resolution was used."
+}

@@ -21,7 +21,7 @@ The selected route's outbound elevation profile uses the routing grid's actual e
 
 ## Resolution and interpretation
 
-Two real 1 km Jezero study regions are retained. Fresh visitors start at the eastern ridge; an existing region preference is preserved. The source DEM is sampled at 1 m for ground following, the rendered mesh uses 2 m vertex spacing, and planning/overlays use 5 m cells. Optical display sampling is 0.5 m (the smaller cached minimap/legacy evidence crop is 1 m); THEMIS is approximately 100 m regional context. Person-height zoom does not create finer image detail. No terrain, rocks or cliffs were invented to imitate the reference illustrations.
+Two real 1 km Jezero study regions are retained. Fresh visitors start at the eastern ridge; an existing region preference is preserved. The source DEM is sampled at 1 m for ground following, the rendered mesh uses native 1 m spacing near the crew and coarser spacing at distance, and planning/overlays use 5 m cells. Surface optical display sampling is now approximately 0.3 m, with 0.5 m candidate/map imagery (the smaller cached minimap/legacy evidence crop is 1 m); THEMIS is approximately 100 m regional context. Person-height zoom does not create finer image detail. No terrain, rocks or cliffs were invented to imitate the reference illustrations.
 
 Resources in the HUD are **planned return values**, not live measured oxygen consumption. All mobility and resource coefficients remain declared simulations. Safety-priority paths do not establish rockfall probability, soil strength or small-boulder clearance. The current baseline's existing steep-slope proximity exposure remains zero for the compared routes; a lower maximum slope is not a measured rockfall reduction.
 

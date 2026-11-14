@@ -1,0 +1,25 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Extravehicular%20Mobility%20Unit/Extravehicular%20Mobility%20Unit.glb",
+  "sourcePage": "https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/",
+  "credit": "NASA / Michael D. Carbajal",
+  "sourceSha256": "4dd79f1f8e02ab39bc15d87a7bbeda1f437e1103ab7661f7797340e0c114f372",
+  "sourceBytes": 3448904,
+  "originalTriangles": 343455,
+  "webTriangles": 23238,
+  "webVertices": 11634,
+  "webBytes": 852596,
+  "webSha256": "fca4b5fc654c2bfa6c8234e696a56f0e4015402bbe0b1427895e7b292402dfdd",
+  "materials": 7,
+  "bones": 9,
+  "heightMetres": 1.85,
+  "forward": "glTF local -Z",
+  "ground": "neutral sole at glTF local y=0",
+  "blenderVersion": "5.2.2 LTS",
+  "adaptation": [
+    "Removed redundant nested visor layers and unioned overlapping legacy shells at 6 mm display scale",
+    "Reduced polygons without adding terrain or physical suit claims",
+    "Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS pack for a surface-rehearsal silhouette",
+    "Added illustrative 9-bone skin for a procedural walk"
+  ],
+  "terms": "NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification"
+}
