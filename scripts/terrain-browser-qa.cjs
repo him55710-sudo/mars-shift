@@ -9,7 +9,7 @@ const base=process.env.QA_URL||'http://127.0.0.1:5173';
   try{
     const page=await browser.newPage({viewport:{width:1536,height:1100},deviceScaleFactor:1,acceptDownloads:true});
     const errors=[];page.on('pageerror',e=>errors.push(e.message));
-    await page.goto(base+'/terrain');
+    await page.goto(base+'/terrain/local');
     await page.locator('.tl-scene canvas').waitFor();
     await page.locator('.tl-profile-chart svg path[fill="url(#tl-profile-fill)"]').waitFor();
     await page.screenshot({path:'.local/terrain-qa/desktop.png',fullPage:true});
@@ -41,7 +41,7 @@ const base=process.env.QA_URL||'http://127.0.0.1:5173';
     }
     const report=JSON.parse(fs.readFileSync('.local/terrain-qa/'+reports.report,'utf8'));assert.equal(report.statistics.elevation.count,40000);assert.ok(report.profile.distance>0);assert.ok(report.profile.samples.length>2);assert.ok(fs.readFileSync('.local/terrain-qa/'+reports.grid,'utf8').split('\r\n').length===40001);
     await page.getByRole('button',{name:'3D 지형',exact:true}).click();await page.locator('.tl-scene canvas').waitFor();
-    await page.getByRole('link',{name:'Mission Control',exact:true}).click();await page.locator('.terrain-map').waitFor();await page.getByRole('link',{name:'3D Terrain',exact:true}).click();await page.locator('.tl-scene canvas').waitFor();
+    await page.getByRole('link',{name:'Mission Control',exact:true}).click();await page.locator('.terrain-map').waitFor();await page.getByRole('link',{name:'Mars Atlas',exact:true}).click();await page.getByRole('button',{name:'Jezero 수치·단면 분석',exact:false}).click();await page.locator('.tl-scene canvas').waitFor();
     for(const width of [1024,768,390]){
       await page.setViewportSize({width,height:width===390?844:1100});await page.screenshot({path:`.local/terrain-qa/width-${width}.png`,fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`overflow at ${width}`);
     }
@@ -56,6 +56,6 @@ const base=process.env.QA_URL||'http://127.0.0.1:5173';
       await page.waitForFunction(()=>!document.querySelector('.tl-status')?.textContent.includes('오프라인 준비됨'));
       assert.ok(deleted.includes('TerrainExplorer'));console.log('PASS: production offline reload and layer change; readiness retracts when the terrain chunk is missing.');
     }
-    const fallback=await browser.newPage();await fallback.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return String(type).startsWith('webgl')?null:original.call(this,type,...args);};});await fallback.goto(base+'/terrain');await fallback.locator('.tl-flat-map').waitFor();assert.match(await fallback.locator('.tl-status').innerText(),/2D/);console.log('PASS: unavailable WebGL falls back to 2D.');
+    const fallback=await browser.newPage();await fallback.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return String(type).startsWith('webgl')?null:original.call(this,type,...args);};});await fallback.goto(base+'/terrain/local');await fallback.locator('.tl-flat-map').waitFor();assert.match(await fallback.locator('.tl-status').innerText(),/2D/);console.log('PASS: unavailable WebGL falls back to 2D.');
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

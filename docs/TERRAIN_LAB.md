@@ -1,6 +1,6 @@
 # 3D Terrain Lab
 
-Open `http://127.0.0.1:5173/terrain` after `pnpm dev`, or choose **3D Terrain** in the app. This workspace uses the existing real Jezero 1,000 × 1,000 m dataset at 77.640° E, 18.450° N. It does not accept arbitrary external rasters or provide a global terrain catalogue.
+Open `http://127.0.0.1:5173/terrain/local` after `pnpm dev`, or choose **Jezero 수치·단면 분석** inside Mars Atlas. This workspace uses the existing real Jezero 1,000 × 1,000 m dataset at 77.640° E, 18.450° N. It does not accept arbitrary external rasters or provide a global terrain catalogue.
 
 ## Explore
 
