@@ -4,8 +4,8 @@ import {surfaceGeometry,nativeNormalPixels} from '../src/surface-geometry';
 import type {Terrain} from '../src/planner';
 import type {NativeDEM} from '../src/eva-motion';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
-const regions=['floor','ridge'].map(region=>{
- const root=region==='floor'?'public/data':'public/data/ridge',t=read(root+'/terrain.json') as Terrain,meta=read(root+'/jezero-native-dem.json'),bytes=readFileSync(root+'/jezero-native-dem.bin'),native:NativeDEM={...meta,values:new Float32Array(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength))};
+const regions=['floor','ridge','noah'].map(region=>{
+ const root=region==='floor'?'public/data':'public/data/'+region,t=read(root+'/terrain.json') as Terrain,meta=read(root+'/jezero-native-dem.json'),bytes=readFileSync(root+'/jezero-native-dem.bin'),native:NativeDEM={...meta,values:new Float32Array(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength))};
  const min=Math.min(...t.elevation.filter((x):x is number=>x!==null)),base={x:32,y:168},start=performance.now(),ground=surfaceGeometry(t,native,base,true,min),buildMs=performance.now()-start,orbit=surfaceGeometry(t,native,base,false,min),normal=nativeNormalPixels(native),texture=read(root+'/surface-optical-meta.json');
  const oldTriangles=2*Math.ceil((native.width-1)/2)*Math.ceil((native.height-1)/2);
  return {region,referenceCamera:'default base, crew at cell32,168;1x geometry',previousUniform2mTriangles:oldTriangles,adaptiveGroundTriangles:ground.triangles,orbit4mTriangles:orbit.triangles,groundTriangleReduction:1-ground.triangles/oldTriangles,groundVertices:ground.vertices,groundBufferBytes:ground.positions.byteLength+ground.uv.byteLength+ground.indices.byteLength,normalMapBytes:normal.byteLength,opticalAtlasBytesBeforeMipmaps:1024*1024*4,baseOpticalBytesBeforeMipmaps:1000*1000*4,priorFullOpticalBytesBeforeMipmaps:3334*3334*4,oneBuildCpuMilliseconds:buildMs,buildTimingMeaning:'one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark',texture: {width:texture.width,height:texture.height,metresPerPixel:texture.metresPerPixel??texture.displayMetresPerPixel}};

@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "region": "noah",
+  "bounds": [
+    4360409.037914526,
+    1093711.6170900527,
+    4361409.037914526,
+    1094711.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "settings": {
+    "maxSlope": 18,
+    "speed": 0.6,
+    "scienceMinutes": 20,
+    "durationMinutes": 110,
+    "oxygenMinutes": 150,
+    "powerMinutes": 140,
+    "reservePercent": 25,
+    "loadKg": 12,
+    "dust": false,
+    "hazardWeight": 8,
+    "mobilityModel": 2,
+    "terrainEffort": 0.3
+  },
+  "base": {
+    "x": 32,
+    "y": 168
+  },
+  "target": {
+    "x": 153,
+    "y": 43
+  },
+  "classificationCoverage": 0.89846088,
+  "riskCounts": {
+    "constraint": 29,
+    "candidate": 10150,
+    "lower": 25118,
+    "unknown": 4703
+  },
+  "baseline": [
+    {
+      "mode": "shortest",
+      "searched": 10,
+      "feasibleCandidates": 4,
+      "route": {
+        "distanceMetres": 1751.4114378097947,
+        "travelMinutes": 60.55213341710854,
+        "totalMinutes": 80.55213341710854,
+        "maximumSlopeDegrees": 10.57,
+        "steepProximityMetres": 0,
+        "reservePercent": 42.72481326990353
+      },
+      "reason": ""
+    },
+    {
+      "mode": "exposure",
+      "searched": 10,
+      "feasibleCandidates": 25,
+      "route": {
+        "distanceMetres": 1792.4193765933148,
+        "travelMinutes": 61.67224080624326,
+        "totalMinutes": 81.67224080624325,
+        "maximumSlopeDegrees": 4.46,
+        "steepProximityMetres": 0,
+        "reservePercent": 41.87673196098724
+      },
+      "reason": ""
+    },
+    {
+      "mode": "mission",
+      "searched": 10,
+      "feasibleCandidates": 12,
+      "route": {
+        "distanceMetres": 1751.4793806673563,
+        "travelMinutes": 60.61030489252621,
+        "totalMinutes": 80.61030489252622,
+        "maximumSlopeDegrees": 9.09,
+        "steepProximityMetres": 0,
+        "reservePercent": 42.68076915280159
+      },
+      "reason": ""
+    },
+    {
+      "mode": "time",
+      "searched": 2,
+      "feasibleCandidates": 1,
+      "route": {
+        "distanceMetres": 1751.4213527839358,
+        "travelMinutes": 60.517853376114196,
+        "totalMinutes": 80.5178533761142,
+        "maximumSlopeDegrees": 8.29,
+        "steepProximityMetres": 0,
+        "reservePercent": 42.75076815808496
+      },
+      "reason": ""
+    }
+  ],
+  "simulatedReplan": {
+    "exclusion": {
+      "x": 99,
+      "y": 99,
+      "radius": 35
+    },
+    "invalidatedUniqueCells": 9,
+    "routes": [
+      {
+        "mode": "shortest",
+        "searched": 10,
+        "feasibleCandidates": 4,
+        "route": {
+          "distanceMetres": 1804.0536022907245,
+          "travelMinutes": 61.98332021015634,
+          "totalMinutes": 81.98332021015634,
+          "maximumSlopeDegrees": 5.88,
+          "steepProximityMetres": 0,
+          "reservePercent": 41.6412004123102
+        },
+        "reason": ""
+      },
+      {
+        "mode": "exposure",
+        "searched": 10,
+        "feasibleCandidates": 25,
+        "route": {
+          "distanceMetres": 1815.8424119429817,
+          "travelMinutes": 62.52554483439317,
+          "totalMinutes": 82.52554483439317,
+          "maximumSlopeDegrees": 4.75,
+          "steepProximityMetres": 0,
+          "reservePercent": 41.2306589111023
+        },
+        "reason": ""
+      },
+      {
+        "mode": "mission",
+        "searched": 10,
+        "feasibleCandidates": 16,
+        "route": {
+          "distanceMetres": 1804.0924650131712,
+          "travelMinutes": 62.01939582217598,
+          "totalMinutes": 82.01939582217598,
+          "maximumSlopeDegrees": 5.56,
+          "steepProximityMetres": 0,
+          "reservePercent": 41.613886020352474
+        },
+        "reason": ""
+      },
+      {
+        "mode": "time",
+        "searched": 2,
+        "feasibleCandidates": 1,
+        "route": {
+          "distanceMetres": 1804.0671858551475,
+          "travelMinutes": 61.847260887485696,
+          "totalMinutes": 81.8472608874857,
+          "maximumSlopeDegrees": 5.19,
+          "steepProximityMetres": 0,
+          "reservePercent": 41.744216756617966
+        },
+        "reason": ""
+      }
+    ]
+  },
+  "budgets": [
+    {
+      "durationMinutes": 60,
+      "counts": {
+        "unknown": 796,
+        "overBudget": 21989,
+        "feasible": 17186,
+        "blocked": 29,
+        "disconnected": 0
+      },
+      "feasibleSquareMetres": 429650
+    },
+    {
+      "durationMinutes": 110,
+      "counts": {
+        "unknown": 796,
+        "overBudget": 0,
+        "feasible": 39175,
+        "blocked": 29,
+        "disconnected": 0
+      },
+      "feasibleSquareMetres": 979375
+    }
+  ],
+  "oneNodeRun": {
+    "node": "v24.22.1",
+    "initialCalculationMs": 418.1432,
+    "replanCalculationMs": 469.977,
+    "meaning": "Single CLI CPU timing, not browser worker latency, frame rate or GPU usage"
+  },
+  "sourceHashes": {
+    "public/data/noah/terrain.json": "9f3cbee784fda2df5fb488d4ecb61afd7ea2080ac543709faa827aeee6d210dc",
+    "public/data/noah/science/terrain-metrics.json": "82e85234f982f48a197d0525e17a66aaa67fcc9121f0dab6f8f6d0a8a08eaada",
+    "public/data/noah/noah-terrain.json": "fba6870749eee1db35e429b26d1c74c6f11624738c4f8a8df7bd963d1144ba2b"
+  },
+  "engineHashesUTF8LF": {
+    "src/noah-data.ts": "b629a4ce503ab4a52776a7d7840f072cf48b49e36084575542ec4c10b4b31f71",
+    "src/mission-state.ts": "89e1d937c7b97cf36ec1308bc0facb4b1473bbb27399b466dcbc08ca284f0d5d",
+    "src/planner.ts": "87f418d77e8c867436a00364e8d5753c41d193b7998938c1c26791b2ab03129d",
+    "src/constrained-planner.ts": "9caeb609eeafcee0b11aea97b5115fccc0cbd7e0c5f2a7487f1e7500f189852d",
+    "src/mobility.ts": "464db8031ea8052da148ce9f578b5725d4e4f4d0bdb4f5cdd9f53b42aee89d17",
+    "src/return-feasibility.ts": "4f7c7ae0daf17985dfd2fbf3baff0e399b69879add5b31a8b874cba0d2f22bbb",
+    "scripts/analyze_noah.ts": "6e702e6b84a0617577191f51718ddaf8e782fc3c771f5d06bf5cfb3d3639dd4d"
+  },
+  "limitations": [
+    "NOAH-H classes are display context; no classified texture is automatically promoted to a verified obstacle.",
+    "Risk thresholds are declared heuristics, not measured failure probabilities.",
+    "The new region has no evaluated local automatic optical detector; manual review remains available.",
+    "Current route scores do not include calibrated boulder abundance, soil strength or astronaut physiology.",
+    "The simulated exclusion is not an observed Mars terrain change."
+  ]
+}

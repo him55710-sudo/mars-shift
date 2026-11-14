@@ -3,6 +3,7 @@
 No new terrain is generated. Run with the project's ../.venv/Scripts/python.
 The native crop and contrast policy match prepare_surface_optical.py.
 """
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -20,7 +21,10 @@ def build(region):
         raw = data['image']
         assert hashlib.sha256(np.asarray(raw, dtype='<f4').tobytes()).hexdigest() == source['source']['cropFloat32Sha256']
     lo, hi = source['processing']['contrastRawRange']
-    image = Image.fromarray(np.round(np.clip((raw-lo)/(hi-lo), 0, 1)*255).astype('uint8'))
+    image = Image.fromarray(np.round(np.clip((np.nan_to_num(raw,nan=lo)-lo)/(hi-lo), 0, 1)*255).astype('uint8'))
+    if not np.isfinite(raw).all():
+        image = image.convert('RGBA')
+        image.putalpha(Image.fromarray((np.isfinite(raw)*255).astype('uint8')))
     output = folder / 'surface-tiles'
     output.mkdir(exist_ok=True)
     levels = []
@@ -47,5 +51,8 @@ def build(region):
     print(json.dumps({'region':region,'tiles':sum(len(l['tiles']) for l in levels),'bytes':sum(t['bytes'] for l in levels for t in l['tiles'])}))
 
 if __name__ == '__main__':
-    for region in ['floor','ridge']:
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--region',choices=['floor','ridge','noah','both'],default='both')
+    args=parser.parse_args()
+    for region in ['floor','ridge'] if args.region=='both' else [args.region]:
         build(region)

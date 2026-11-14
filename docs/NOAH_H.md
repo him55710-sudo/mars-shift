@@ -71,3 +71,21 @@ The supplied tie-point coordinate files document the authors' original registrat
 ```
 
 Four tests cover NoData in the area denominator, deterministic majority ties, registered categorical sampling, outside-coverage handling, the original rank-code mapping and actual-data coverage. The `--check` command revalidates original archive identity, TIFF identity, labels, Mars registration and all three numerical products. The script does not edit any existing terrain, optical detector or scientific analysis product.
+
+
+## Interface integration after surface v13
+
+The overlap crop now has a registered native ~0.3 m optical display and 69 display tiles. Acquisition transferred 5,370,428 bytes through the validated range bridge. Native optical NoData is transparent; it is not inpainted. Existing floor/ridge display checks still reproduce unchanged assets.
+
+`prepare_noah_science.py` reuses the existing numerically tested terrain equations without rewriting the two baseline scientific products. Its full derivative raster and planning arrays reproduce under `--check`. Native DEM coverage is 99.9899%; native 3 m morphology aggregates have 98.01% planning coverage. Planning slope median 1.64886°, p95 4.81016°; TRI median 0.07485 m, p95 0.20832 m. These are shape measures, not soil strength. The optical detector cue field is entirely null because no evaluated local model mask has been supplied.
+
+`noah-data.ts` validates exact Mars registration, original mosaic IDs and class-area sums; it supplies per-cell source/coverage/uncertainty evidence. A separate display-only rule categorizes hard graph constraints, texture candidates, lower modeled concern and missing classification. The 25% candidate-area and 95% coverage thresholds are explicit heuristics, not calibrated failure probabilities, and never create hard route obstacles by themselves. Four tests validate actual coverage, wrong-ROI rejection, missing classes and constraint precedence. The destination selector now exposes the third region. Shared 2D/3D scientific layers show the original categorical legend, classification coverage, boulder-field/ripple texture area and four-state hazard rules. The inspection panel reports class areas, source/license, publication date, unknown observation date, unknown independent registration error and route impact. The original two regions stay unclassified. Ground view uses thin, distance-faded candidate boundaries/hatching; lower concern is unpainted so the real optical image remains visible. This is additional context, not a replacement for the graph constraints or user-reviewed obstacle buffers.
+
+
+## Reproducible application integration result
+
+`node scripts/run_noah_analysis.mjs` writes `/data/noah/integration-results.json` without changing the two frozen baseline scientific reports. In the declared default model (0.6 m/s, 12 kg payload, 20 min science, 25% reserve), the shortest feasible alternative is about 1.751 km / 80.6 min including science. Safety-priority routing is 1.792 km / 81.7 min with maximum mapped slope 4.46°, compared with 10.6° for shortest distance. All compared routes have zero steep-slope proximity exposure here; this is not evidence of measured rockfall avoidance.
+
+The return-feasible area is 0.979375 km² at 110 min, falling to 0.429650 km² at 60 min. The map has 796 unknown morphology cells and 29 blocked cells. Classification uncertainty is separately displayed; it is not silently treated as measured mobility failure. A simulated 35 m exclusion invalidates nine unique old-route cells and triggers alternatives under the same resource settings.
+
+A 0.5 m optical inspection image is supplied by `prepare_noah_optical_display.py` with transparent native NoData. No automatic optical detections or precision/recall claims are generated for this new ROI. Its review panel explicitly reports the missing evaluated detector; the manual annotation workflow remains available.

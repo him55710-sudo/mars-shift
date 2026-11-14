@@ -1,0 +1,25 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import type {Terrain} from '../src/planner';
+import {blocked} from '../src/planner';
+import {validateScience} from '../src/science-data';
+import {validateNoah,evidenceRisk} from '../src/noah-data';
+import {calculateMission,defaultMission,injectMissionHazard} from '../src/mission-state';
+import {computeReturnMap} from '../src/return-feasibility';
+const root='public/data/noah',read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const t=read(root+'/terrain.json') as Terrain;t.science=validateScience(t,read(root+'/science/terrain-metrics.json'));t.noah=validateNoah(t,read(root+'/noah-terrain.json'));
+const draft=defaultMission(t),start=performance.now(),initial=calculateMission(t,draft),initialMs=performance.now()-start;
+const replanStart=performance.now(),replanned=injectMissionHazard(t,initial),replanMs=performance.now()-replanStart;
+const summarize=(s:typeof initial)=>Object.entries(s.reports).map(([mode,r])=>{
+ if(r.route?.cells.some(i=>blocked(t,i,s.calculated.settings,s.calculated.exclusion)))throw Error('Computed route crossed a hard constraint');
+ return {mode,searched:r.searched,feasibleCandidates:r.feasibleCount,route:r.route?{distanceMetres:r.route.distance,travelMinutes:r.route.travelMinutes,totalMinutes:r.route.totalMinutes,maximumSlopeDegrees:r.route.maxSlope,steepProximityMetres:r.route.exposureDistance,reservePercent:r.route.reserve}:null,reason:r.reason};
+});
+const riskCounts={constraint:0,candidate:0,lower:0,unknown:0};
+for(let i=0;i<t.width*t.height;i++)riskCounts[evidenceRisk(t,t.noah,i,draft.settings,null).state]++;
+const budgets=[60,110].map(durationMinutes=>{const map=computeReturnMap(t,draft.base,{...draft.settings,durationMinutes},null);return {durationMinutes,counts:map.counts,feasibleSquareMetres:map.counts.feasible*t.cellSize**2};});
+const sourceFiles=[root+'/terrain.json',root+'/science/terrain-metrics.json',root+'/noah-terrain.json'];
+const codeFiles=['src/noah-data.ts','src/mission-state.ts','src/planner.ts','src/constrained-planner.ts','src/mobility.ts','src/return-feasibility.ts','scripts/analyze_noah.ts'];
+const sha=(p:string,text=false)=>createHash('sha256').update(text?readFileSync(p,'utf8').replace(/\r\n/g,'\n'):readFileSync(p)).digest('hex');
+const report={schemaVersion:1,region:'noah',bounds:t.bounds,crs:t.crs,settings:draft.settings,base:draft.base,target:draft.target,classificationCoverage:t.noah.coverage.sampledFraction,riskCounts,baseline:summarize(initial),simulatedReplan:{exclusion:replanned.calculated.exclusion,invalidatedUniqueCells:new Set(replanned.invalidated).size,routes:summarize(replanned)},budgets,oneNodeRun:{node:process.version,initialCalculationMs:initialMs,replanCalculationMs:replanMs,meaning:'Single CLI CPU timing, not browser worker latency, frame rate or GPU usage'},sourceHashes:Object.fromEntries(sourceFiles.map(p=>[p,sha(p)])),engineHashesUTF8LF:Object.fromEntries(codeFiles.map(p=>[p,sha(p,true)])),limitations:['NOAH-H classes are display context; no classified texture is automatically promoted to a verified obstacle.','Risk thresholds are declared heuristics, not measured failure probabilities.','The new region has no evaluated local automatic optical detector; manual review remains available.','Current route scores do not include calibrated boulder abundance, soil strength or astronaut physiology.','The simulated exclusion is not an observed Mars terrain change.']};
+writeFileSync(root+'/integration-results.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({riskCounts,baseline:report.baseline,budgets,invalidated:report.simulatedReplan.invalidatedUniqueCells,timings:report.oneNodeRun},null,2));

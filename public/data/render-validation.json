@@ -5,7 +5,7 @@
     "src/surface-chunks.ts": "5a2cb01580ca7694c41f46dc9170ee2bb0d5951a057629fa54763a38891ce786",
     "src/surface-tiles.ts": "a0a2faae5ad38cea7c5c663da93243be68135e9130f246b875085c6e22ac5f27",
     "src/native-registration.ts": "e9508fc6bd88411e116f55da6e832fdd8ef94f3d1e31fa123a7833cfb5713a94",
-    "src/ground-overlay.ts": "5c6cf5f80eda720008c342bac8a5260ff61be404f074176fa6ec487e06535256",
+    "src/ground-overlay.ts": "70113ebc9d67ade39e2b56c929d8052ba91e9ec19b92f1342cdcb0f388b48675",
     "src/TerrainScene.tsx": "a8915b3d4afac508b54c15132fcef3e96589db03d15a25fb659ba5ef30a73ddd",
     "src/astronaut-avatar.ts": "7605cff517d04b122e723c6b56b52fd637f7cb95922fd2b45fe59b556af28ddb"
   },
@@ -23,7 +23,7 @@
       "opticalAtlasBytesBeforeMipmaps": 4194304,
       "baseOpticalBytesBeforeMipmaps": 4000000,
       "priorFullOpticalBytesBeforeMipmaps": 44462224,
-      "oneBuildCpuMilliseconds": 17.4863,
+      "oneBuildCpuMilliseconds": 17.351100000000002,
       "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
       "texture": {
         "width": 3334,
@@ -44,7 +44,28 @@
       "opticalAtlasBytesBeforeMipmaps": 4194304,
       "baseOpticalBytesBeforeMipmaps": 4000000,
       "priorFullOpticalBytesBeforeMipmaps": 44462224,
-      "oneBuildCpuMilliseconds": 15.434300000000007,
+      "oneBuildCpuMilliseconds": 25.477600000000024,
+      "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
+      "texture": {
+        "width": 3334,
+        "height": 3334,
+        "metresPerPixel": 0.29994001199760045
+      }
+    },
+    {
+      "region": "noah",
+      "referenceCamera": "default base, crew at cell32,168;1x geometry",
+      "previousUniform2mTriangles": 500000,
+      "adaptiveGroundTriangles": 61236,
+      "orbit4mTriangles": 124952,
+      "groundTriangleReduction": 0.877528,
+      "groundVertices": 30976,
+      "groundBufferBytes": 1354352,
+      "normalMapBytes": 4000000,
+      "opticalAtlasBytesBeforeMipmaps": 4194304,
+      "baseOpticalBytesBeforeMipmaps": 4000000,
+      "priorFullOpticalBytesBeforeMipmaps": 44462224,
+      "oneBuildCpuMilliseconds": 14.18950000000001,
       "buildTimingMeaning": "one Node CPU geometry build, not browser GPU frame time or a universal FPS benchmark",
       "texture": {
         "width": 3334,

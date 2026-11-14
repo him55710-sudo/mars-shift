@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "region": "noah",
+  "image": "/data/noah/optical-native.webp",
+  "width": 2000,
+  "height": 2000,
+  "metresPerPixel": 0.5,
+  "nativeMetresPerPixel": [
+    0.29995473187602484,
+    0.29995473187602484
+  ],
+  "bounds": [
+    4360409.037914526,
+    1093711.6170900527,
+    4361409.037914526,
+    1094711.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "source": {
+    "bounds": [
+      4360409.037914526,
+      1093711.6170900527,
+      4361409.037914526,
+      1094711.6170900527
+    ],
+    "cropFloat32Sha256": "c2f17801c69e436834adc29a4d63655e3c67c760bd98cadbf6c017ca0522f143",
+    "cropRequestStartIndex": 2,
+    "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "headerAndCropRangeRequests": [
+      {
+        "bytes": 16384,
+        "range": "bytes=0-16383",
+        "sha256": "61024d254895cc42a039b672c8b5485d86938bbe0abb2373014b7674880c12be"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=622592-638975",
+        "sha256": "3118f01b5dbdea0cfad276c0a12f0d2cf3c14ce34a614d90e87ec6616894065c"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=81920-98303",
+        "sha256": "fbc64b68ae2102140a473198ac572fece019172ffc3611545e6a7e99aad69a73"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=409600-425983",
+        "sha256": "b817b5daeaea821b8796c764b74e772ef18e0f8194843e4405d5c94e4d383766"
+      },
+      {
+        "bytes": 16384,
+        "range": "bytes=98304-114687",
+        "sha256": "b35d93985280bf315fcba2ed4948de8073756693fa111bb205a0db5051d9973c"
+      },
+      {
+        "bytes": 288837,
+        "range": "bytes=402665388-402954224",
+        "sha256": "af02891312873ecf93b6d9a2c5dce3a5ba4c035929d670f8601562768ae6d7bb"
+      },
+      {
+        "bytes": 277937,
+        "range": "bytes=402961925-403239861",
+        "sha256": "d8e6f61758ba3c7952588bd15df55502491118b97245ca293fadb0e88d6618b3"
+      },
+      {
+        "bytes": 261656,
+        "range": "bytes=404313118-404574773",
+        "sha256": "b27aad04b8f2b959c8c6e95ed5b8dc376c087c11149844a6177ebb221bd59365"
+      },
+      {
+        "bytes": 113218,
+        "range": "bytes=277532085-277645302",
+        "sha256": "ada70291d77fdd9f56960577531e91bcb741e2172dec6758a020d9f41e705831"
+      },
+      {
+        "bytes": 103059,
+        "range": "bytes=408237701-408340759",
+        "sha256": "c01e1af97a9efe6da92df57cbf75584026fc95647f4c0f49f56d2c4d5194a1f8"
+      },
+      {
+        "bytes": 102755,
+        "range": "bytes=410893413-410996167",
+        "sha256": "45bdb2e8e34682b5b5dccca90ff8707fb7e116666f43691561b8fafe853f678f"
+      },
+      {
+        "bytes": 98850,
+        "range": "bytes=408984098-409082947",
+        "sha256": "aa5b728af4060e2b7b9421643d5a879f05571dce2475c474a9947c757da40df7"
+      },
+      {
+        "bytes": 293768,
+        "range": "bytes=269667379-269961146",
+        "sha256": "6aafd09466f871e54d9095fe116048a0d8ec4fb5ef1d91813ca4caaa0b064ca1"
+      },
+      {
+        "bytes": 96435,
+        "range": "bytes=409736847-409833281",
+        "sha256": "5bc3c96b2ffaccd44197801c035a188ffab6ed9bd1777efa06ddcb977dd4533e"
+      },
+      {
+        "bytes": 94666,
+        "range": "bytes=409359823-409454488",
+        "sha256": "9a904eda5f89bd9691a32142d97b02a6a1db19dbdcce2e9d04fd26f9ef4ee5f1"
+      },
+      {
+        "bytes": 283875,
+        "range": "bytes=269979086-270262960",
+        "sha256": "241866dcbcc60b77aad998afe2e5283d7d2225b0932ace5165dff2eac5d35c06"
+      },
+      {
+        "bytes": 107858,
+        "range": "bytes=408604809-408712666",
+        "sha256": "cd4aac157e7f5cda991b68fef1213f1afe5ee7de0f3ad3a06e90eadd198476ae"
+      },
+      {
+        "bytes": 252388,
+        "range": "bytes=404060635-404313022",
+        "sha256": "908df5138f41019701a20e564eed61265ac27b0c84cf8d98370e1fefc2e1893e"
+      },
+      {
+        "bytes": 112819,
+        "range": "bytes=277920450-278033268",
+        "sha256": "82ffa2172e47b47099e9e92ccbb98291e7ce589dc7f8607e74bf65327309e41b"
+      },
+      {
+        "bytes": 102013,
+        "range": "bytes=407477723-407579735",
+        "sha256": "628fd39ee280261bb95e172f602d61bdfdb2a22d7f883460e9741b5c7578df75"
+      },
+      {
+        "bytes": 279656,
+        "range": "bytes=403515788-403795443",
+        "sha256": "6876df33a8d211134ab733f29d4082093b779e652b1f6bd731615fbdc0e98f1c"
+      },
+      {
+        "bytes": 104547,
+        "range": "bytes=407861049-407965595",
+        "sha256": "eff69a38b5e7d8773e545557618e3c3d2b0a113bf29de2f9ffab6b0e9118fba5"
+      },
+      {
+        "bytes": 103271,
+        "range": "bytes=410111323-410214593",
+        "sha256": "596ee8c2ed0f8542323fd76dcfe5be9e0419974c5f9d86bdf8c0075acf50c100"
+      },
+      {
+        "bytes": 285207,
+        "range": "bytes=269361342-269646548",
+        "sha256": "ea9c9de651b8726087a07a27cf5f0e03afc2e704847cb85ab579e9b5a3317992"
+      },
+      {
+        "bytes": 114575,
+        "range": "bytes=277150331-277264905",
+        "sha256": "4d60cff982dadafbe68080070cdba71f6500feda7eec47cd5db46e7ca5f9d6af"
+      },
+      {
+        "bytes": 107816,
+        "range": "bytes=278309738-278417553",
+        "sha256": "2e31a5830fd6e2d2add05c275f4b3931d06ce8dbc5898455b5cbdb19073f51ea"
+      },
+      {
+        "bytes": 103415,
+        "range": "bytes=410497306-410600720",
+        "sha256": "6f1a8291e82ccf84989ec5f7c7f081034577ffb1b6bf4892b04404c4546e1f24"
+      },
+      {
+        "bytes": 265001,
+        "range": "bytes=403795539-404060539",
+        "sha256": "7faf1ac5758cb752cadcf83c8cc610feb44f6ee2c5cdc0bc9e13d336f0528b15"
+      },
+      {
+        "bytes": 243895,
+        "range": "bytes=404831064-405074958",
+        "sha256": "fab77301865fb5ea418b23dc065360461496380b64fab10f3701bd5a0ec55fca"
+      },
+      {
+        "bytes": 272235,
+        "range": "bytes=403243172-403515406",
+        "sha256": "202d2155b432e0fef2fd78eea3a8afbf9e874495fdd770219916a2926c805a98"
+      },
+      {
+        "bytes": 283012,
+        "range": "bytes=270279215-270562226",
+        "sha256": "3cbb239aa4d71fb92f9e6a3230f23f765fe90b74af7068c9c7b8ee1152ba5d39"
+      },
+      {
+        "bytes": 279644,
+        "range": "bytes=402375168-402654811",
+        "sha256": "4a0d220eb179cd8299322a3f35f0f89003dc9efe00404bebb8e3d94ee3a29d5f"
+      },
+      {
+        "bytes": 256100,
+        "range": "bytes=404574869-404830968",
+        "sha256": "14208fe26973a7a91fa08fac5a1fa2496bb10450495d2b879f3f063de618fb1c"
+      }
+    ],
+    "newTransferBytesForRegion": 5337660,
+    "outputResolution": [
+      0.29994001199760045,
+      0.29994001199760045
+    ],
+    "rangeValidation": "HTTPS TLS verified; each HTTP206 Content-Range and byte length checked; SHA256 retained for every transferred byte range",
+    "resampling": "bilinear at approximately native source spacing; no super-resolution",
+    "source": "https://data.caltech.edu/api/records/stqse-yay61/files/cenjez_DRG_0_3m.tif/content",
+    "sourceBytes": 1640221885,
+    "sourcePublishedMd5": "cb546a61f83426c56a5576523423f9fa",
+    "sourceRasterSize": [
+      63261,
+      81340
+    ],
+    "sourceResolution": [
+      0.29995473187602484,
+      0.29995473187602484
+    ],
+    "sourceWindow": [
+      1420.6313960210086,
+      24353.249425925933,
+      3333.836388396476,
+      3333.8363883964776
+    ],
+    "totalTransferBytesThisAcquisition": 5370428,
+    "wholeSourceChecksumVerified": false
+  },
+  "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024), DOI10.22002/stqse-yay61, CC BY4.0",
+  "processing": {
+    "display": "Verified~0.3 m source crop; percentile stretch; Lanczos0.5 m display. Native NoData transparent; no super-resolution.",
+    "imageSha256": "243d3a9221ef1dc7961aea289c0bb18f6b936687d646ca1e267e005a53bfdd61",
+    "imageByteLength": 1635970
+  },
+  "limitations": "Display only. No local optical detector or field-verified boulder labels. Observation date and registration error unknown."
+}

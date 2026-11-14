@@ -21,3 +21,7 @@ No code was copied from a prior Space Apps winner. Their public project descript
 - Actual boulder training/evaluation imagery and expert masks: Mars-Bench mb-boulder_seg v1, DOI10.5281/zenodo.15494673, CC BY4.0. Original image credit NASA/JPL/University of Arizona HiRISE. See OPTICAL_BENCHMARK.md for precise authors, source records, splits and limits.
 - scikit-learn HistGradientBoostingClassifier (BSD-3-Clause), trained from real Mars train patches; no terrestrial pretrained detector was repackaged as Mars validation. Model parameters/protocol are public.
 - Three.js MIT Line2, LineGeometry and LineMaterial are reused from the installed package; route ribbons remain visualizations of the existing measured graph.
+
+## NOAH-H published texture classification
+
+Wright, Barrett, Fawdon, Favaro, Balme, Woods, Karachalios and Gerdes / The Open University, ESA NOAH. **NOAH-H terrain classifications of Jezero Crater, Mars**, version 2, published 2022-11-18. DOI: https://doi.org/10.21954/ou.rd.17121482.v2. License: **CC BY 4.0**. Original native 0.25 m categorical mosaic, original 14 rank codes/colors and sampling provenance are retained. The application redistributes transformed 5 m cell-area fractions with attribution, describes the reprojection/aggregation, and labels its own risk rules separately. Independent local registration error and observation dates are unknown. No original source code was imported. See `NOAH_H.md` and the source metadata in each `noah-terrain.json`.

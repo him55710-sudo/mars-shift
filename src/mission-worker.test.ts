@@ -1,0 +1,26 @@
+import {afterEach,describe,expect,it,vi} from 'vitest';
+import type {Terrain} from './planner';
+import {blocked} from './planner';
+import {calculateMission,defaultMission,missionDirty} from './mission-state';
+import type {MissionReply,MissionRequest,MissionWorker} from './mission-worker-protocol';
+import {createMissionStore} from './use-mission';
+const terrain=():Terrain=>{const n=900;return {width:30,height:30,cellSize:5,bounds:[0,0,150,150],center:[77,18],crs:'test',elevation:Array(n).fill(0),slope:Array(n).fill(0),meanSlope:Array(n).fill(0),roughness:Array(n).fill(0),exposure:Array(n).fill(0),valid:Array(n).fill(1),thermal:Array(n).fill(300),thermalRange:[300,300]};};
+class DelayedWorker implements MissionWorker {
+ onmessage:MissionWorker['onmessage']=null;onerror:MissionWorker['onerror']=null;
+ request!:MissionRequest;terminated=false;
+ postMessage(request:MissionRequest){this.request=structuredClone(request);}
+ terminate(){this.terminated=true;}
+ deliver(){const r=this.request;this.onmessage?.({data:{id:r.id,result:calculateMission(r.terrain,r.draft,r.history),elapsedMs:123}} as MessageEvent<MissionReply>);}
+ fail(){this.onerror?.({} as ErrorEvent);}
+}
+function setup(initial=true){const t=terrain(),d={...defaultMission(t),base:{x:2,y:15},target:{x:27,y:15}},workers:DelayedWorker[]=[];const store=createMissionStore(t,initial?d:undefined,{workerFactory:()=>{const w=new DelayedWorker();workers.push(w);return w;}});return {t,d,store,workers};}
+afterEach(()=>vi.unstubAllGlobals());
+describe('asynchronous shared mission state',()=>{
+ it('starts with no route and requires a completed worker before walking',()=>{const {store,workers}=setup();expect(store.getSnapshot().computing).toBe(true);expect(store.getSnapshot().reports.mission.route).toBeNull();expect(missionDirty(store.getSnapshot())).toBe(true);workers[0].deliver();expect(missionDirty(store.getSnapshot())).toBe(false);expect(store.getSnapshot().reports.mission.route).not.toBeNull();expect(store.getSnapshot().calculationMs).toBe(123);expect(workers[0].terminated).toBe(true);});
+ it('preserves edits and route mode made while a calculation is in flight',()=>{const {store,workers}=setup();workers[0].deliver();store.update({target:{x:20,y:20}});store.calculate();store.update({target:{x:10,y:10}});store.selectMode('shortest');workers[1].deliver();const s=store.getSnapshot();expect(s.calculated.target).toEqual({x:20,y:20});expect(s.draft.target).toEqual({x:10,y:10});expect(s.draft.mode).toBe('shortest');expect(s.reports.shortest.route!.outbound.at(-1)).toBe(620);expect(missionDirty(s)).toBe(true);});
+ it('terminates superseded work and ignores late or duplicate results',()=>{const {store,workers}=setup();store.update({target:{x:10,y:10}});store.calculate();expect(workers[0].terminated).toBe(true);workers[1].deliver();const current=store.getSnapshot();workers[0].deliver();workers[1].deliver();workers[1].fail();expect(store.getSnapshot()).toBe(current);expect(current.calculated.target).toEqual({x:10,y:10});});
+ it('keeps the previous route frozen before hazard replanning completes',()=>{const {store,workers,t}=setup();workers[0].deliver();const old=store.getSnapshot().reports.mission.route!;store.hazard();const pending=store.getSnapshot();expect(pending.previous).toBe(old);expect(pending.reports.mission.route).toBe(old);expect(pending.invalidated.length).toBeGreaterThan(0);expect(pending.pendingAdoption).toBe(true);store.adopt();expect(store.getSnapshot().pendingAdoption).toBe(true);workers[1].deliver();const s=store.getSnapshot();expect(s.reports.mission.route!.cells.every(i=>!blocked(t,i,s.calculated.settings,s.calculated.exclusion))).toBe(true);store.adopt();expect(store.getSnapshot().pendingAdoption).toBe(false);});
+ it('retains old route on error, prevents adoption and permits retry',()=>{const {store,workers}=setup();workers[0].deliver();const old=store.getSnapshot().reports;store.calculate();workers[1].fail();expect(store.getSnapshot().reports).toBe(old);expect(store.getSnapshot().calculationError).toMatch(/Retry/);expect(missionDirty(store.getSnapshot())).toBe(true);store.calculate();workers[2].deliver();expect(missionDirty(store.getSnapshot())).toBe(false);});
+ it('reset cancels old work and dispose rejects outstanding replies',()=>{const {store,workers}=setup();store.update({target:{x:10,y:10}});store.calculate();store.reset();workers[1].deliver();expect(store.getSnapshot().computing).toBe(true);workers[2].deliver();expect(store.getSnapshot().calculated.target).toEqual(defaultMission(terrain()).target);store.calculate();const before=store.getSnapshot();store.dispose();workers[3].deliver();expect(store.getSnapshot()).toBe(before);expect(workers[3].terminated).toBe(true);});
+ it('reload recomputes the last applied mission while retaining uncalculated edits',()=>{const data=new Map<string,string>();vi.stubGlobal('localStorage',{getItem:(k:string)=>data.get(k)??null,setItem:(k:string,v:string)=>data.set(k,v)});const {store,workers}=setup();workers[0].deliver();store.update({target:{x:10,y:10}});const next=setup(false);expect(next.workers[0].request.draft.target).toEqual({x:27,y:15});next.workers[0].deliver();expect(next.store.getSnapshot().draft.target).toEqual({x:10,y:10});expect(missionDirty(next.store.getSnapshot())).toBe(true);});
+});

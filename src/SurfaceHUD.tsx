@@ -1,3 +1,4 @@
+import {regionInfo} from './regions';
 import {ArrowUpRight,Camera,Crosshair,Flag,Layers,Map,Navigation,ShieldAlert} from 'lucide-react';
 import type {Point,Route,Settings,Terrain} from './planner';
 import type {NativeDEM} from './eva-motion';
@@ -11,7 +12,7 @@ type Props={terrain:Terrain;native:NativeDEM|null;route:Route;crew:Point;yaw:num
 export default function SurfaceHUD(p:Props){
  const {terrain:t,route:r}=p,g=routeGuidance(t,r.outbound,p.crew),heading=((-p.yaw*180/Math.PI)%360+360)%360,rounded=Math.round(heading/15)*15,idx=cellAt(t,p.crew),slope=t.slope[idx],color=ROUTE_OPTIONS.find(v=>v.id===r.mode)?.color??'#b3efd1',poly=(cells:number[])=>cells.map(i=>`${i%t.width+.5},${Math.floor(i/t.width)+.5}`).join(' ');
  return <div className="surface-hud" style={{'--guidance-color':color} as React.CSSProperties}>
-  <header className="surface-brand"><span className="surface-orbit-symbol">◉</span><div><strong>MARS SHIFT</strong><small>JEZERO / {p.region==='ridge'?'EASTERN RIDGE':'CENTRAL FLOOR'}</small></div><span className="surface-live">EVA REHEARSAL</span></header>
+  <header className="surface-brand"><span className="surface-orbit-symbol">◉</span><div><strong>MARS SHIFT</strong><small>JEZERO / {regionInfo(p.region).label}</small></div><span className="surface-live">EVA REHEARSAL</span></header>
   <div className="surface-compass" aria-label={`Heading ${f(heading)} degrees`}><div><span>HEADING</span><strong>{f(heading)}°</strong></div><i/><div className="surface-compass-window"><div className="surface-compass-track" style={{transform:`translateX(${(rounded-heading)*2.6}px)`}}>{Array.from({length:17},(_,n)=>{const a=((rounded+(n-8)*15)%360+360)%360;return <span key={n}><b>{a===0?'N':a===90?'E':a===180?'S':a===270?'W':a%30===0?a:''}</b><em/></span>;})}</div></div></div>
   <div className="surface-top-actions"><button aria-pressed={p.thirdPerson} onClick={p.onCamera}><Camera size={16}/>{p.thirdPerson?'Follow camera':'Helmet view'}</button><button aria-label="Ground hazard overlays" aria-pressed={p.hazards} onClick={p.onHazards}><ShieldAlert size={16}/><span>Hazards</span></button><button aria-label="Open terrain and mission tools" onClick={p.onTools}><Layers size={17}/><span>Tools</span></button></div>
   <section className="surface-objective"><div><Flag size={17}/><span>SCIENCE DESTINATION</span></div><h1>{p.goal}</h1><span className="surface-route-label"><i/>{ROUTE_OPTIONS.find(v=>v.id===r.mode)?.name}</span><p>{g&&g.offRoute>15?'Outside the planned corridor. Open the map to review your position.':'Follow the mapped route. Verify local conditions before moving.'}</p></section>

@@ -1,7 +1,8 @@
+import type {NoahTerrain} from './noah-data';
 import type {TerrainScience} from './science-data';
 import {budgetForTravel,edgeTravelMinutes,hasMobilityData} from './mobility';
 export type Point = {x:number;y:number};
-export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string;science?:TerrainScience};
+export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string;science?:TerrainScience;noah?:NoahTerrain;noahError?:string};
 export type Mode = 'shortest'|'exposure'|'mission'|'time';
 export type Exclusion = Point & {radius:number};
 export type Settings = {maxSlope:number;speed:number;scienceMinutes:number;durationMinutes:number;oxygenMinutes:number;powerMinutes:number;reservePercent:number;loadKg:number;dust:boolean;hazardWeight:number;mobilityModel?:1|2;terrainEffort?:number};

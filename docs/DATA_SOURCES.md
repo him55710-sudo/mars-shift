@@ -31,3 +31,7 @@ Chrome inspection on 2026-11-14 verified all five at the [official challenge Res
 [1] Cunningham, Nesnas & Whittaker, *Improving slip prediction on Mars using thermal inertia measurements*, Autonomous Robots 43, 503–521. [Fetched Consensus record](https://consensus.app/papers/cunningham-nesnas-improving-slip-prediction-on-mars-using-thermal/w:4b556532-5877-4c11-8431-709767ce4daa/). Supports research interest in complementary thermal data; does not validate our human resource model.
 
 [2] Hedrick & Gu (2021), *Terrain-aware traverse planning for a Mars sample return rover*, Advanced Robotics 35, 1286–1301. [Fetched Consensus record](https://consensus.app/papers/hedrick-gu-terrainaware-traverse-planning-for-a-mars-sample/w:e29c6f8b-009f-4906-a527-4a32a86ac629/). Establishes terrain-aware traversal as prior work. Full texts were not read in this project research pass.
+
+## Additional registered NOAH overlap region
+
+The third 1 km² region centered at 18.4600° N, 77.5650° E uses the same real Caltech/NASA HiRISE native DEM and optical raster plus THEMIS context. It adds actual NOAH-H class coverage where the original two regions have none. NOAH-H is a derived texture classification (CC BY 4.0; Wright et al.; DOI 10.21954/ou.rd.17121482.v2), not observed soil strength or a geological-unit map. See `NOAH_H.md` for exact bounds, original source identity, reprojection, original legend, coverage and null-data policy. Numerical integration results are in `/data/noah/integration-results.json`.

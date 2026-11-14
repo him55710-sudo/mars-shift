@@ -37,7 +37,7 @@ def sha(data: bytes) -> str:
 
 
 def region_path(region: str) -> Path:
-    return DATA / "ridge" if region == "ridge" else DATA
+    return DATA if region == "floor" else DATA / region
 
 
 def acquire(regions: list[str]) -> None:
@@ -60,8 +60,8 @@ def acquire(regions: list[str]) -> None:
                     first_request = len(state.requests)
                     masked = src.read(1, window=window, out_shape=(PIXELS, PIXELS), out_dtype="float32", resampling=Resampling.bilinear, masked=True)
                     raw = masked.filled(np.nan).astype("<f4")
-                    if not np.isfinite(raw).all():
-                        raise ValueError("These display crops require a complete observed optical footprint")
+                    if not np.isfinite(raw).any():
+                        raise ValueError("No observed optical support in this crop")
                     meta = {
                         "source": SOURCE_URL, "sourcePublishedMd5": PUBLISHED_SOURCE_MD5,
                         "sourceBytes": SOURCE_SIZE, "wholeSourceChecksumVerified": False,
@@ -91,7 +91,7 @@ def write_region(region: str, check: bool) -> dict:
     with np.load(cached_path) as cached:
         raw = cached["image"]
         source = json.loads(str(cached["metadata"]))
-    if raw.shape != (PIXELS, PIXELS) or not np.isfinite(raw).all():
+    if raw.shape != (PIXELS, PIXELS) or not np.isfinite(raw).any():
         raise ValueError("Invalid source crop")
     if sha(np.asarray(raw, dtype="<f4").tobytes()) != source["cropFloat32Sha256"]:
         raise ValueError("Source crop checksum differs")
@@ -99,20 +99,24 @@ def write_region(region: str, check: bool) -> dict:
         raise ValueError("Source crop is not aligned to the planning bounds")
     if rasterio.crs.CRS.from_wkt(source["crs"]) != rasterio.crs.CRS.from_wkt(terrain["crs"]):
         raise ValueError("Source crop CRS mismatch")
-    lo, hi = np.percentile(raw, PERCENTILES)
+    lo, hi = np.nanpercentile(raw, PERCENTILES)
     if not hi > lo:
         raise ValueError("Optical crop has no display range")
-    display = np.round(np.clip((raw - lo) / (hi - lo), 0, 1) * 255).astype("uint8")
+    display = np.round(np.clip((np.nan_to_num(raw, nan=lo) - lo) / (hi - lo), 0, 1) * 255).astype("uint8")
     path = output / "surface-optical.webp"
     meta_path = output / "surface-optical-meta.json"
     if not check:
-        Image.fromarray(display).save(path, quality=QUALITY, method=6)
+        image = Image.fromarray(display)
+        if not np.isfinite(raw).all():
+            image = image.convert("RGBA")
+            image.putalpha(Image.fromarray((np.isfinite(raw)*255).astype("uint8")))
+        image.save(path, quality=QUALITY, method=6)
     image_bytes = path.read_bytes()
     with Image.open(path) as im:
         if im.size != (PIXELS, PIXELS):
             raise ValueError("Texture dimensions differ")
         im.verify()
-    prefix = "/data/ridge" if region == "ridge" else "/data"
+    prefix = "/data" if region == "floor" else "/data/" + region
     meta = {
         "schemaVersion": 1, "region": region, "image": prefix + "/surface-optical.webp",
         "classification": "observed optical display product", "width": PIXELS, "height": PIXELS,
@@ -122,7 +126,7 @@ def write_region(region: str, check: bool) -> dict:
         "source": source,
         "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024), DOI 10.22002/stqse-yay61, CC BY 4.0",
         "processing": {"resampling": source["resampling"], "contrastPercentiles": PERCENTILES,
-            "contrastRawRange": [float(lo), float(hi)], "encoding": f"grayscale WebP quality{QUALITY}",
+            "contrastRawRange": [float(lo), float(hi)], "encoding": f"grayscale WebP quality{QUALITY}" if np.isfinite(raw).all() else f"grayscale RGBA WebP quality{QUALITY}; transparent native NoData",
             "sharpening": "none", "imageSha256": sha(image_bytes), "imageByteLength": len(image_bytes)},
         "validation": {"boundsToleranceMetres": 1e-8, "crsMatchesPlanningGrid": True,
             "validOpticalFraction": float(np.isfinite(raw).mean()), "wholeSourceChecksumVerified": False},
@@ -143,7 +147,7 @@ def write_region(region: str, check: bool) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Validate existing crops and published images without network access")
-    parser.add_argument("--region", choices=["floor", "ridge", "both"], default="both")
+    parser.add_argument("--region", choices=["floor", "ridge", "noah", "both"], default="both")
     args = parser.parse_args()
     regions = ["floor", "ridge"] if args.region == "both" else [args.region]
     if not args.check:

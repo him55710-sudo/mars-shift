@@ -15,3 +15,8 @@ Rendering runs on camera/movement/scene changes, caps device pixel ratio, reduce
 Reproduce numeric checks with `node scripts/run_render_analysis.mjs` and `pnpm test`. The output `public/data/render-validation.json` records actual geometry, asset sizes and rendering-source hashes. A development-only F8 camera sweep records five seconds of active rendering; minimized/background browser throttling must be excluded. CPU draw-call submission time is not GPU time or a frame-rate guarantee.
 
 Limitations: an overhead optical mosaic cannot reveal unobserved rock sides or centimetre detail at eye height. One metre DEM spacing is not one metre accuracy. Independent absolute registration residuals remain unknown. This is a research/education rehearsal, not certified astronaut navigation.
+
+
+The NOAH overlap region adds published texture-context boundaries in ground view. Hatching uses derivative-based antialiasing, a narrow duty cycle and a 35–110 m fade; the original image is kept visible. Classification colors in the expanded map use the authors' categorical palette, while the separate rule layer has an explicit red/orange/green/gray legend. Green in that map means lower concern under selected rules; it is not painted across all ground in helmet view.
+
+Heavy round-trip alternatives run in a dedicated cancellable mission worker. The existing science worker remains separate. Results are tagged by request and preserve edits/revisions; neither a pending nor failed calculation permits walking on an unreviewed new route. See `docs/ROUTING_WORKER.md`.

@@ -1,0 +1,328 @@
+{
+  "region": "noah",
+  "jsonSha256": "82e85234f982f48a197d0525e17a66aaa67fcc9121f0dab6f8f6d0a8a08eaada",
+  "jsonBytes": 4579556,
+  "nativeGeoTiffSha256": "00778f823acf8b053024099a54a15633a4b9c2466a6329a4ba414cfa325adb77",
+  "nativeGeoTiffBytes": 25122640,
+  "source": {
+    "demCropSha256": "0f6e4945997490665518ed0f3c6a99b916f8a441cc7d665502d81f5c37f563cf",
+    "nativeBinarySha256": "2f9f17ba9809166d5ca53f0a1324a4dc4b433b927a9e07912bdd5b3766d5c54a",
+    "source": {
+      "file": "/data/noah/jezero-dem-1m.tif",
+      "originalProduct": "cenjez_DEM_1m.tif",
+      "record": "https://data.caltech.edu/records/stqse-yay61",
+      "doi": "10.22002/stqse-yay61",
+      "version": "v2 (2024)",
+      "credit": "NASA MRO HiRISE / Caltech; Annex & Ehlmann (2024)",
+      "license": "CC BY 4.0",
+      "sourceCropSha256": "0f6e4945997490665518ed0f3c6a99b916f8a441cc7d665502d81f5c37f563cf",
+      "processing": "Existing native 1 m crop copied into little-endian Float32; no spatial resampling, terrain synthesis or vertical exaggeration"
+    },
+    "scriptSha256UTF8LF": "a692d97d352a3e132282e91b7e3b1ffed053a9ee7dc677a292cbe6d2a526a68d",
+    "methodSourceHashesUTF8LF": {
+      "scripts\\prepare_noah_science.py": "a692d97d352a3e132282e91b7e3b1ffed053a9ee7dc677a292cbe6d2a526a68d",
+      "scripts\\terrain_science.py": "c8aa100e51578459d8e044525aa8ca730aec4c77668ac3d6451726877c53a0cc"
+    },
+    "metadataTemplateSha256": "5e3928fb943054ddd239861c4c76a38070d6620f59480fbc3d31a2df097fe454",
+    "software": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "rasterio": "1.5.2",
+      "GDAL": "3.12.2"
+    }
+  },
+  "summary": {
+    "native": {
+      "slope": {
+        "count": 995903,
+        "validFraction": 0.995903,
+        "min": 0.0,
+        "median": 1.6769567672235859,
+        "mean": 2.0546662740855113,
+        "p95": 4.926365308171192,
+        "max": 30.169022794484952
+      },
+      "aspect": {
+        "count": 991990,
+        "validFraction": 0.99199,
+        "min": 0.0,
+        "median": 183.25722194066694,
+        "mean": 184.21134780114082,
+        "p95": 296.565051177078,
+        "max": 359.9001816697794
+      },
+      "tri": {
+        "count": 995903,
+        "validFraction": 0.995903,
+        "min": 0.0,
+        "median": 0.07535130557604268,
+        "mean": 0.09214539538029586,
+        "p95": 0.21278113950752578,
+        "max": 1.4443362882767175
+      },
+      "profileCurvature": {
+        "count": 991990,
+        "validFraction": 0.99199,
+        "min": -0.36893622249347485,
+        "median": 0.0,
+        "mean": -0.00016349651460901115,
+        "p95": 0.021376049957080753,
+        "max": 0.47604648568668867
+      },
+      "planCurvature": {
+        "count": 991990,
+        "validFraction": 0.99199,
+        "min": -328.0,
+        "median": 0.0,
+        "mean": 0.0009987706002794019,
+        "p95": 1.0,
+        "max": 328.0
+      },
+      "tpi11": {
+        "count": 979999,
+        "validFraction": 0.979999,
+        "min": -0.6331136067742591,
+        "median": -0.001926676432503882,
+        "mean": -0.00014297434131385555,
+        "p95": 0.054321289063045695,
+        "max": 0.6063110351560681
+      },
+      "relief11": {
+        "count": 979999,
+        "validFraction": 0.979999,
+        "min": 0.0478515625,
+        "median": 0.334716796875,
+        "mean": 0.4242072658125799,
+        "p95": 1.0390625,
+        "max": 3.837890625
+      },
+      "tpi51": {
+        "count": 902399,
+        "validFraction": 0.902399,
+        "min": -1.599991924580081,
+        "median": -0.011382399340163829,
+        "mean": -0.0017582231264989642,
+        "p95": 0.22878465857538682,
+        "max": 2.2056649075980204
+      },
+      "relief51": {
+        "count": 902399,
+        "validFraction": 0.902399,
+        "min": 0.35107421875,
+        "median": 1.45751953125,
+        "mean": 1.7840340273169595,
+        "p95": 4.26220703125,
+        "max": 8.009765625
+      },
+      "exposure": {
+        "count": 917663,
+        "validFraction": 0.917663,
+        "min": 0.0,
+        "median": 0.0,
+        "mean": 0.0033225704861152734,
+        "p95": 0.0,
+        "max": 1.0
+      },
+      "coverage": {
+        "count": 1000000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.999899,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "support3": {
+        "count": 1000000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.995903,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "support11": {
+        "count": 1000000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.979999,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "support51": {
+        "count": 1000000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.902399,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "uncertaintyMask": {
+        "count": 1000000,
+        "validFraction": 1.0,
+        "min": 32.0,
+        "median": 32.0,
+        "mean": 32.931715,
+        "p95": 40.0,
+        "max": 60.0
+      },
+      "opticalCueFraction": {
+        "count": 0,
+        "validFraction": 0.0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "max": null
+      }
+    },
+    "planning": {
+      "slope": {
+        "count": 39204,
+        "validFraction": 0.9801,
+        "min": 0.16023663525600498,
+        "median": 1.648861737743677,
+        "mean": 2.0530516844404243,
+        "p95": 4.810164218163988,
+        "max": 18.9208173056615
+      },
+      "aspect": {
+        "count": 36225,
+        "validFraction": 0.905625,
+        "min": 0.020285316892277437,
+        "median": 185.92604501913118,
+        "mean": 186.81083659623263,
+        "p95": 287.1817673927019,
+        "max": 359.99587240099055
+      },
+      "tri": {
+        "count": 39204,
+        "validFraction": 0.9801,
+        "min": 0.010724341714634497,
+        "median": 0.07485207276982135,
+        "mean": 0.09207562122926762,
+        "p95": 0.2083229644324706,
+        "max": 0.9268998383335522
+      },
+      "profileCurvature": {
+        "count": 36225,
+        "validFraction": 0.905625,
+        "min": -0.06121229906422061,
+        "median": -0.00028237917730002457,
+        "mean": -0.00016644979911887664,
+        "p95": 0.007090699600824992,
+        "max": 0.06488460912276336
+      },
+      "planCurvature": {
+        "count": 36225,
+        "validFraction": 0.905625,
+        "min": -6.968139372920288,
+        "median": -0.004112264132124839,
+        "mean": 0.0011916402470517136,
+        "p95": 0.33764851949455593,
+        "max": 26.09146933204671
+      },
+      "tpi11": {
+        "count": 39196,
+        "validFraction": 0.9799,
+        "min": -0.29204256184893895,
+        "median": -0.001588378906417347,
+        "mean": -0.00014101337062742594,
+        "p95": 0.041067525226935686,
+        "max": 0.4224003906255348
+      },
+      "relief11": {
+        "count": 39196,
+        "validFraction": 0.9799,
+        "min": 0.0653125,
+        "median": 0.33404296875,
+        "mean": 0.42418547696392805,
+        "p95": 1.036494140625,
+        "max": 3.404990234375
+      },
+      "tpi51": {
+        "count": 36092,
+        "validFraction": 0.9023,
+        "min": -1.5616870455231764,
+        "median": -0.010924337063179336,
+        "mean": -0.0017688881943473608,
+        "p95": 0.21912969407353808,
+        "max": 2.040068426981488
+      },
+      "relief51": {
+        "count": 36092,
+        "validFraction": 0.9023,
+        "min": 0.37369140625,
+        "median": 1.4571630859375002,
+        "mean": 1.7839691848695696,
+        "p95": 4.247367187499997,
+        "max": 7.947568359375
+      },
+      "exposure": {
+        "count": 36100,
+        "validFraction": 0.9025,
+        "min": 0.0,
+        "median": 0.0,
+        "mean": 0.0033783933518005543,
+        "p95": 0.0,
+        "max": 1.0
+      },
+      "coverage": {
+        "count": 40000,
+        "validFraction": 1.0,
+        "min": 0.04,
+        "median": 1.0,
+        "mean": 0.999899,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "support3": {
+        "count": 40000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.9959030000000001,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "support11": {
+        "count": 40000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.979999,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "support51": {
+        "count": 40000,
+        "validFraction": 1.0,
+        "min": 0.0,
+        "median": 1.0,
+        "mean": 0.902399,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "uncertaintyMask": {
+        "count": 40000,
+        "validFraction": 1.0,
+        "min": 32.0,
+        "median": 32.0,
+        "mean": 34.1052,
+        "p95": 48.0,
+        "max": 62.0
+      },
+      "opticalCueFraction": {
+        "count": 0,
+        "validFraction": 0.0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "max": null
+      }
+    }
+  }
+}
