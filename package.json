@@ -8,7 +8,16 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1",
-    "science": "node scripts/run_science_analysis.mjs"
+    "science": "node scripts/run_science_analysis.mjs",
+    "data:hazards": "python scripts/acquire_hazard_data.py",
+    "science:hazards": "node scripts/run_hazard_analysis.mjs",
+    "science:sand": "node scripts/run_sand_analysis.mjs",
+    "data:storms": "python scripts/acquire_storm_data.py",
+    "data:storm-boundaries": "python scripts/acquire_storm_boundaries.py",
+    "science:storms": "node scripts/run_storm_analysis.mjs",
+    "science:hazards:dev": "node scripts/run_hazard_v2.mjs dev --final-round",
+    "science:hazards:test": "node scripts/run_hazard_v2.mjs test --final-round",
+    "science:navigation": "node scripts/run_navigation_analysis.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",

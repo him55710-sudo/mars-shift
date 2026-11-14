@@ -1,0 +1,501 @@
+[
+  {
+    "filename": "baseline-v16-helmet-desktop.jpg",
+    "url": "http://127.0.0.1:5190/explore",
+    "heading": [
+      "Surface texture transect"
+    ],
+    "overflow": false,
+    "targets": [
+      {
+        "h": 36,
+        "name": "Mission balanced",
+        "w": 151
+      },
+      {
+        "h": 36,
+        "name": "Return & position",
+        "w": 140
+      },
+      {
+        "h": 36,
+        "name": "Zoom view in",
+        "w": 44
+      },
+      {
+        "h": 36,
+        "name": "Zoom view out",
+        "w": 44
+      },
+      {
+        "h": 36,
+        "name": "Switch between helmet and follow camera",
+        "w": 44
+      },
+      {
+        "h": 36,
+        "name": "NASA road view",
+        "w": 143
+      },
+      {
+        "h": 36,
+        "name": "Rendering quality",
+        "w": 86
+      }
+    ],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1440,
+      "h": 900
+    }
+  },
+  {
+    "filename": "baseline-v16-crew-desktop.jpg",
+    "url": "http://127.0.0.1:5190/crew",
+    "heading": [
+      "Review before departure"
+    ],
+    "overflow": false,
+    "targets": [
+      {
+        "h": 40,
+        "name": "Daylight display",
+        "w": 147
+      },
+      {
+        "h": 42,
+        "name": "Return corridor shown",
+        "w": 160
+      }
+    ],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-crew-desktop.jpg",
+    "url": "http://127.0.0.1:5173/crew",
+    "heading": [
+      "Review before departure"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-helmet-desktop.jpg",
+    "url": "http://127.0.0.1:5173/explore",
+    "heading": [
+      "Surface texture transect"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1440,
+      "h": 900
+    }
+  },
+  {
+    "filename": "verified-explore-desktop.jpg",
+    "url": "http://127.0.0.1:5173/explore",
+    "heading": [],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-hazards-desktop.jpg",
+    "url": "http://127.0.0.1:5173/hazards",
+    "heading": [
+      "Surface guidance"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-destinations-desktop.jpg",
+    "url": "http://127.0.0.1:5173/destinations",
+    "heading": [
+      "Where will you go?"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-planning-desktop.jpg",
+    "url": "http://127.0.0.1:5173/planning",
+    "heading": [
+      "A way there.A way home."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-evidence-desktop.jpg",
+    "url": "http://127.0.0.1:5173/evidence",
+    "heading": [
+      "A route is only as trustworthyas the evidence behind it."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-briefing-desktop.jpg",
+    "url": "http://127.0.0.1:5173/briefing",
+    "heading": [
+      "Explore the terrain.Keep a way home."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-analysis-desktop.jpg",
+    "url": "http://127.0.0.1:5173/terrain/analysis",
+    "heading": [
+      "Jezero terrain analysis01"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "verified-atlas-desktop.jpg",
+    "url": "http://127.0.0.1:5173/terrain",
+    "heading": [
+      "Explore all of Mars"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1440,
+      "h": 900
+    }
+  },
+  {
+    "filename": "verified-home-desktop.jpg",
+    "url": "http://127.0.0.1:5173/",
+    "heading": [
+      "See the terrain.Choose your next step."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "image": {
+      "w": 1425,
+      "h": 891
+    }
+  },
+  {
+    "filename": "baseline-v16-helmet-mobile.jpg",
+    "url": "http://127.0.0.1:5190/explore",
+    "heading": [
+      "Surface texture transect"
+    ],
+    "overflow": false,
+    "targets": [
+      {
+        "h": 36,
+        "name": "Mission balanced",
+        "w": 145
+      },
+      {
+        "h": 36,
+        "name": "Zoom view in",
+        "w": 44
+      },
+      {
+        "h": 36,
+        "name": "Zoom view out",
+        "w": 44
+      },
+      {
+        "h": 36,
+        "name": "Switch between helmet and follow camera",
+        "w": 44
+      },
+      {
+        "h": 36,
+        "name": "NASA road view",
+        "w": 143
+      },
+      {
+        "h": 40,
+        "name": "Rendering quality",
+        "w": 110
+      }
+    ],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 390,
+      "h": 843
+    }
+  },
+  {
+    "filename": "verified-helmet-mobile.jpg",
+    "url": "http://127.0.0.1:5173/explore",
+    "heading": [
+      "Surface texture transect"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 390,
+      "h": 843
+    }
+  },
+  {
+    "filename": "verified-explore-mobile.jpg",
+    "url": "http://127.0.0.1:5173/explore",
+    "heading": [],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-hazards-mobile.jpg",
+    "url": "http://127.0.0.1:5173/hazards",
+    "heading": [
+      "Surface guidance"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-crew-mobile.jpg",
+    "url": "http://127.0.0.1:5173/crew",
+    "heading": [
+      "Review before departure"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-destinations-mobile.jpg",
+    "url": "http://127.0.0.1:5173/destinations",
+    "heading": [
+      "Where will you go?"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-planning-mobile.jpg",
+    "url": "http://127.0.0.1:5173/planning",
+    "heading": [
+      "A way there.A way home."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-evidence-mobile.jpg",
+    "url": "http://127.0.0.1:5173/evidence",
+    "heading": [
+      "A route is only as trustworthyas the evidence behind it."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-briefing-mobile.jpg",
+    "url": "http://127.0.0.1:5173/briefing",
+    "heading": [
+      "Explore the terrain.Keep a way home."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-analysis-mobile.jpg",
+    "url": "http://127.0.0.1:5173/terrain/analysis",
+    "heading": [
+      "Jezero terrain analysis01"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  },
+  {
+    "filename": "verified-atlas-mobile.jpg",
+    "url": "http://127.0.0.1:5173/terrain",
+    "heading": [
+      "Explore all of Mars"
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 390,
+      "h": 843
+    }
+  },
+  {
+    "filename": "verified-home-mobile.jpg",
+    "url": "http://127.0.0.1:5173/",
+    "heading": [
+      "See the terrain.Choose your next step."
+    ],
+    "overflow": false,
+    "targets": [],
+    "viewport": {
+      "h": 844,
+      "w": 390
+    },
+    "image": {
+      "w": 375,
+      "h": 811
+    }
+  }
+]

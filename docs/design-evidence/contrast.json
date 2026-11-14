@@ -1,0 +1,44 @@
+[
+  {
+    "role": "primary text",
+    "foreground": "#edf2f5",
+    "background": "#0d141c",
+    "ratio": 16.42
+  },
+  {
+    "role": "secondary text",
+    "foreground": "#a8b9c6",
+    "background": "#0d141c",
+    "ratio": 9.19
+  },
+  {
+    "role": "supporting text",
+    "foreground": "#8195a6",
+    "background": "#0d141c",
+    "ratio": 5.98
+  },
+  {
+    "role": "primary action",
+    "foreground": "#10212f",
+    "background": "#b9d9f5",
+    "ratio": 11.17
+  },
+  {
+    "role": "warning",
+    "foreground": "#e7b875",
+    "background": "#0d141c",
+    "ratio": 10.15
+  },
+  {
+    "role": "danger",
+    "foreground": "#ffad98",
+    "background": "#0d141c",
+    "ratio": 10.3
+  },
+  {
+    "role": "route label",
+    "foreground": "#9ce6cb",
+    "background": "#0d141c",
+    "ratio": 12.87
+  }
+]

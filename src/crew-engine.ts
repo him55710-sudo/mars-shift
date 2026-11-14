@@ -121,7 +121,7 @@ export function validSavedCrew(t:Terrain,value:unknown):value is CrewState{
  const s=value as CrewState;
  try{t=withObstacles(t,s.config?.obstacles??[]);}catch{return false;}
  if(s.version!==1||s.terrainKey!==terrainKey(t)||!['prepare','outbound','science','return','complete'].includes(s.phase)||!s.config?.settings)return false;
- if(!['shortest','exposure','mission','time'].includes(s.config.mode)||typeof s.config.targetName!=='string'||typeof s.config.purpose!=='string'||typeof s.held!=='boolean'||typeof s.holdReason!=='string'||!Number.isInteger(s.revision)||s.revision<0)return false;
+ if(!['shortest','exposure','mission','time','energy'].includes(s.config.mode)||typeof s.config.targetName!=='string'||typeof s.config.purpose!=='string'||typeof s.held!=='boolean'||typeof s.holdReason!=='string'||!Number.isInteger(s.revision)||s.revision<0)return false;
  if(![s.config.base,s.config.target].every(p=>p&&Number.isInteger(p.x)&&Number.isInteger(p.y)&&p.x>=0&&p.y>=0&&p.x<t.width&&p.y<t.height))return false;
  if(s.scienceTasks!==undefined&&(!Array.isArray(s.scienceTasks)||s.scienceTasks.length!==3||!s.scienceTasks.every(x=>typeof x==='boolean')))return false;
  if(s.exclusion&&![s.exclusion.x,s.exclusion.y,s.exclusion.radius].every(n=>Number.isFinite(n)&&n>=0))return false;

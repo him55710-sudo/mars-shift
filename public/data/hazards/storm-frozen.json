@@ -1,0 +1,380 @@
+{
+  "selected": {
+    "damping": 0.5,
+    "growth": 0,
+    "window": 2,
+    "centerErrorKm": 1334.6907590054516,
+    "radiusErrorKm": 450.76485381509247
+  },
+  "validationTrials": [
+    {
+      "config": {
+        "damping": 0.5,
+        "growth": 0,
+        "window": 2,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247
+      },
+      "loss": 606.6707592703469,
+      "centerMAE": 478.22634659563545,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0.5,
+        "growth": 0.25,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 609.2254585885931,
+      "centerMAE": 478.22634659563545,
+      "radiusMAE": 130.99911199295767
+    },
+    {
+      "config": {
+        "damping": 0.5,
+        "growth": 0,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 614.8984463618335,
+      "centerMAE": 486.4540336871222,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0.5,
+        "growth": 0.25,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 617.1671305948896,
+      "centerMAE": 486.4540336871222,
+      "radiusMAE": 130.7130969077678
+    },
+    {
+      "config": {
+        "damping": 0.75,
+        "growth": 0,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 618.0965080289685,
+      "centerMAE": 489.65209535425686,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0.5,
+        "growth": 0.5,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 619.8087382758227,
+      "centerMAE": 478.22634659563545,
+      "radiusMAE": 141.58239168018736
+    },
+    {
+      "config": {
+        "damping": 0.75,
+        "growth": 0.25,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 620.3651922620242,
+      "centerMAE": 489.65209535425686,
+      "radiusMAE": 130.7130969077678
+    },
+    {
+      "config": {
+        "damping": 0.75,
+        "growth": 0,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 622.686609146241,
+      "centerMAE": 494.2421964715294,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0.75,
+        "growth": 0.25,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 625.2413084644866,
+      "centerMAE": 494.2421964715294,
+      "radiusMAE": 130.99911199295767
+    },
+    {
+      "config": {
+        "damping": 0.5,
+        "growth": 0.5,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 627.770695565198,
+      "centerMAE": 486.4540336871222,
+      "radiusMAE": 141.316661878076
+    },
+    {
+      "config": {
+        "damping": 0.75,
+        "growth": 0.5,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 630.9687572323331,
+      "centerMAE": 489.65209535425686,
+      "radiusMAE": 141.316661878076
+    },
+    {
+      "config": {
+        "damping": 0.75,
+        "growth": 0.5,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 635.824588151717,
+      "centerMAE": 494.2421964715294,
+      "radiusMAE": 141.58239168018736
+    },
+    {
+      "config": {
+        "damping": 0.25,
+        "growth": 0,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 635.9064337974445,
+      "centerMAE": 507.4620211227328,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0.25,
+        "growth": 0.25,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 638.46113311569,
+      "centerMAE": 507.4620211227328,
+      "radiusMAE": 130.99911199295767
+    },
+    {
+      "config": {
+        "damping": 0.25,
+        "growth": 0,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 641.5316362210469,
+      "centerMAE": 513.0872235463356,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 1,
+        "growth": 0,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 641.8318420284526,
+      "centerMAE": 513.3874293537408,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0.25,
+        "growth": 0.25,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 643.8003204541035,
+      "centerMAE": 513.0872235463356,
+      "radiusMAE": 130.7130969077678
+    },
+    {
+      "config": {
+        "damping": 1,
+        "growth": 0.25,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 644.1005262615089,
+      "centerMAE": 513.3874293537408,
+      "radiusMAE": 130.7130969077678
+    },
+    {
+      "config": {
+        "damping": 0.25,
+        "growth": 0.5,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 649.0444128029205,
+      "centerMAE": 507.4620211227328,
+      "radiusMAE": 141.58239168018736
+    },
+    {
+      "config": {
+        "damping": 0.25,
+        "growth": 0.5,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 654.4038854244114,
+      "centerMAE": 513.0872235463356,
+      "radiusMAE": 141.316661878076
+    },
+    {
+      "config": {
+        "damping": 1,
+        "growth": 0.5,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 654.7040912318168,
+      "centerMAE": 513.3874293537408,
+      "radiusMAE": 141.316661878076
+    },
+    {
+      "config": {
+        "damping": 1,
+        "growth": 0,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 669.0810438832452,
+      "centerMAE": 540.6366312085332,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 1,
+        "growth": 0.25,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 671.6357432014908,
+      "centerMAE": 540.6366312085332,
+      "radiusMAE": 130.99911199295767
+    },
+    {
+      "config": {
+        "damping": 1,
+        "growth": 0.5,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 682.2190228887208,
+      "centerMAE": 540.6366312085332,
+      "radiusMAE": 141.58239168018736
+    },
+    {
+      "config": {
+        "damping": 0,
+        "growth": 0,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 691.5209211493701,
+      "centerMAE": 563.0765084746581,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0,
+        "growth": 0,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 691.5209211493701,
+      "centerMAE": 563.0765084746581,
+      "radiusMAE": 128.44441267471166
+    },
+    {
+      "config": {
+        "damping": 0,
+        "growth": 0.25,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 693.7896053824256,
+      "centerMAE": 563.0765084746581,
+      "radiusMAE": 130.7130969077678
+    },
+    {
+      "config": {
+        "damping": 0,
+        "growth": 0.25,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 694.0756204676157,
+      "centerMAE": 563.0765084746581,
+      "radiusMAE": 130.99911199295767
+    },
+    {
+      "config": {
+        "damping": 0,
+        "growth": 0.5,
+        "window": 3,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 704.3931703527336,
+      "centerMAE": 563.0765084746581,
+      "radiusMAE": 141.316661878076
+    },
+    {
+      "config": {
+        "damping": 0,
+        "growth": 0.5,
+        "window": 2,
+        "centerErrorKm": 0,
+        "radiusErrorKm": 0
+      },
+      "loss": 704.6589001548458,
+      "centerMAE": 563.0765084746581,
+      "radiusMAE": 141.58239168018736
+    }
+  ],
+  "trainYears": [
+    24,
+    29
+  ],
+  "validationYear": 30,
+  "testYears": [
+    31,
+    32
+  ]
+}

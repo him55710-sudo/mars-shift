@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "clientDate": "2026-11-15",
+  "status": "SIMULATION_ONLY",
+  "accelerationNoise": 0.08,
+  "config": {
+    "horizon": 30,
+    "step": 1,
+    "groundWeight": 1.5,
+    "uncertainty": true,
+    "maxExpanded": 20000,
+    "maxSensorAge": 6,
+    "localizationSigma": 1
+  },
+  "selection": [
+    {
+      "q": 0.04,
+      "groundWeight": 1,
+      "meanLoss": 143.32750970421247
+    },
+    {
+      "q": 0.08,
+      "groundWeight": 1.5,
+      "meanLoss": 142.8216813538239
+    },
+    {
+      "q": 0.15,
+      "groundWeight": 2,
+      "meanLoss": 144.9457425041306
+    }
+  ],
+  "selectionSeeds": [
+    1,
+    16
+  ],
+  "holdoutSeeds": [
+    101,
+    132
+  ],
+  "protocolSHA256": "0155d35d55c0c66ce5ea38dcf6e0db69cc12c4d86b2ce82bde83b501f4154645"
+}

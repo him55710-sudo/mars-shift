@@ -17,7 +17,7 @@ export function createMissionStore(t:Terrain,initial?:MissionDraft,options:Optio
     restoreRevision=Number.isSafeInteger(saved.revision)&&saved.revision>=0?saved.revision:0;
     snapshot={...emptyMission(calculated),draft,pendingAdoption:saved.pendingAdoption===true};
     const old=saved.previous,validCells=(a:unknown):a is number[]=>Array.isArray(a)&&a.length>0&&a.length<100000&&a.every(i=>Number.isInteger(i)&&i>=0&&i<t.width*t.height);
-    if(old&&['shortest','exposure','mission','time'].includes(old.mode)&&validCells(old.outbound)&&validCells(old.inbound)){
+    if(old&&['shortest','exposure','mission','time','energy'].includes(old.mode)&&validCells(old.outbound)&&validCells(old.inbound)){
      const cells=[...old.outbound,...old.inbound.slice(1)],prepared=withObstacles(t,calculated.annotations);
      snapshot.previous={...metrics(t,cells,old.mode,calculated.settings),outbound:old.outbound,inbound:old.inbound};
      snapshot.invalidated=cells.filter(i=>blocked(prepared,i,calculated.settings,calculated.exclusion));

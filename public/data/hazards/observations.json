@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "kind": "ARCHIVED_OBSERVATION_AND_PUBLISHED_FIT",
+  "sol": 57,
+  "wind": {
+    "count": 38454,
+    "min": 0.0,
+    "median": 4.34,
+    "max": 18.05,
+    "p05": 1.54,
+    "p95": 9.42
+  },
+  "pressure": {
+    "count": 58662,
+    "min": 741.95,
+    "median": 751.47,
+    "max": 759.96,
+    "p05": 743.11,
+    "p95": 759.38
+  },
+  "rejectedWindRows": 669,
+  "totalWindRows": 39123,
+  "missingWindUncertaintyRows": 38454,
+  "catalog": [
+    {
+      "event": "57a",
+      "ltst": "0057 10:58:31",
+      "diameter": 9.13,
+      "diameterSigma": 3.1,
+      "advection": 1.68,
+      "advectionSigma": 0.52,
+      "centralDropPa": 3.16,
+      "nearSurfaceTemperatureK": 233.89957,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "57b",
+      "ltst": "0057 12:38:51",
+      "diameter": 18.87,
+      "diameterSigma": 5.58,
+      "advection": 1.91,
+      "advectionSigma": 0.57,
+      "centralDropPa": 4.13,
+      "nearSurfaceTemperatureK": 237.5832,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "82",
+      "ltst": "0082 12:04:36",
+      "diameter": 11.4,
+      "diameterSigma": 4.0,
+      "advection": 1.55,
+      "advectionSigma": 0.59,
+      "centralDropPa": 5.58,
+      "nearSurfaceTemperatureK": 237.82191,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "84",
+      "ltst": "0084 10:46:34",
+      "diameter": 4.84,
+      "diameterSigma": 1.58,
+      "advection": 1.61,
+      "advectionSigma": 0.44,
+      "centralDropPa": 3.26,
+      "nearSurfaceTemperatureK": 230.10168,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "85",
+      "ltst": "0085 15:34:55",
+      "diameter": 13.1,
+      "diameterSigma": 0.84,
+      "advection": 4.24,
+      "advectionSigma": 0.24,
+      "centralDropPa": 2.25,
+      "nearSurfaceTemperatureK": 244.79729,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "110",
+      "ltst": "0110 14:32:30",
+      "diameter": 7.63,
+      "diameterSigma": 1.02,
+      "advection": 2.87,
+      "advectionSigma": 0.37,
+      "centralDropPa": 3.32,
+      "nearSurfaceTemperatureK": 244.23429,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "119",
+      "ltst": "0119 11:42:42",
+      "diameter": 28.79,
+      "diameterSigma": 7.58,
+      "advection": 4.28,
+      "advectionSigma": 1.01,
+      "centralDropPa": 4.64,
+      "nearSurfaceTemperatureK": 235.03634,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "135",
+      "ltst": "0135 11:37:34",
+      "diameter": 11.54,
+      "diameterSigma": 2.31,
+      "advection": 4.13,
+      "advectionSigma": 0.73,
+      "centralDropPa": 0.66,
+      "nearSurfaceTemperatureK": 235.9181,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "161",
+      "ltst": "0161 13:57:41",
+      "diameter": 16.18,
+      "diameterSigma": 3.4,
+      "advection": 2.6,
+      "advectionSigma": 0.67,
+      "centralDropPa": 4.88,
+      "nearSurfaceTemperatureK": 240.69341,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "166",
+      "ltst": "0166 13:05:33",
+      "diameter": 29.95,
+      "diameterSigma": 3.13,
+      "advection": 6.38,
+      "advectionSigma": 0.6,
+      "centralDropPa": 5.36,
+      "nearSurfaceTemperatureK": 238.08938,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "168a",
+      "ltst": "0168 14:51:20",
+      "diameter": 21.87,
+      "diameterSigma": 5.69,
+      "advection": 1.63,
+      "advectionSigma": 0.42,
+      "centralDropPa": 6.23,
+      "nearSurfaceTemperatureK": 243.18331,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "168b",
+      "ltst": "0168 14:52:09",
+      "diameter": 9.42,
+      "diameterSigma": 1.83,
+      "advection": 3.58,
+      "advectionSigma": 0.68,
+      "centralDropPa": 2.67,
+      "nearSurfaceTemperatureK": 243.6417,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "173",
+      "ltst": "0173 12:01:32",
+      "diameter": 21.37,
+      "diameterSigma": 8.55,
+      "advection": 1.17,
+      "advectionSigma": 0.42,
+      "centralDropPa": 7.68,
+      "nearSurfaceTemperatureK": 241.42911,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "188",
+      "ltst": "0188 12:43:32",
+      "diameter": 102.67,
+      "diameterSigma": 51.5,
+      "advection": 1.7,
+      "advectionSigma": 0.69,
+      "centralDropPa": 3.9,
+      "nearSurfaceTemperatureK": 243.53615,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "188",
+      "ltst": "0188 13:06:10",
+      "diameter": 86.83,
+      "diameterSigma": 20.45,
+      "advection": 3.79,
+      "advectionSigma": 0.81,
+      "centralDropPa": 4.2,
+      "nearSurfaceTemperatureK": 241.71948,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "198",
+      "ltst": "0198 11:00:15",
+      "diameter": 24.92,
+      "diameterSigma": 13.39,
+      "advection": 1.56,
+      "advectionSigma": 0.69,
+      "centralDropPa": 3.41,
+      "nearSurfaceTemperatureK": 234.62366,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "213",
+      "ltst": "0213 12:14:13",
+      "diameter": 134.7,
+      "diameterSigma": 33.87,
+      "advection": 3.26,
+      "advectionSigma": 0.99,
+      "centralDropPa": 5.47,
+      "nearSurfaceTemperatureK": 241.00568,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "215",
+      "ltst": "0215 11:02:34",
+      "diameter": 24.5,
+      "diameterSigma": -1.23,
+      "advection": 5.19,
+      "advectionSigma": 0.2,
+      "centralDropPa": 1.97,
+      "nearSurfaceTemperatureK": 237.25857,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "264",
+      "ltst": "0264 11:12:53",
+      "diameter": 56.0,
+      "diameterSigma": 46.4,
+      "advection": 1.79,
+      "advectionSigma": 1.26,
+      "centralDropPa": 0.75,
+      "nearSurfaceTemperatureK": 237.02079,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "295",
+      "ltst": "0295 14:57:16",
+      "diameter": 69.78,
+      "diameterSigma": 6.23,
+      "advection": 4.49,
+      "advectionSigma": 0.41,
+      "centralDropPa": 2.92,
+      "nearSurfaceTemperatureK": 254.58881,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "310",
+      "ltst": "0310 14:56:39",
+      "diameter": 11.59,
+      "diameterSigma": 3.17,
+      "advection": 5.54,
+      "advectionSigma": 1.25,
+      "centralDropPa": 1.22,
+      "nearSurfaceTemperatureK": 254.88642,
+      "kind": "PUBLISHED_MODEL_FIT"
+    },
+    {
+      "event": "311",
+      "ltst": "0311 12:17:36",
+      "diameter": 35.1,
+      "diameterSigma": 13.0,
+      "advection": 2.71,
+      "advectionSigma": 0.9,
+      "centralDropPa": 4.68,
+      "nearSurfaceTemperatureK": 246.57,
+      "kind": "PUBLISHED_MODEL_FIT"
+    }
+  ],
+  "catalogDiameter": {
+    "count": 22,
+    "min": 4.84,
+    "median": 21.62,
+    "max": 134.7,
+    "p05": 7.63,
+    "p95": 86.83
+  },
+  "catalogAdvection": {
+    "count": 22,
+    "min": 1.17,
+    "median": 2.79,
+    "max": 6.38,
+    "p05": 1.55,
+    "p95": 5.19
+  },
+  "background": {
+    "speedMps": 4.34,
+    "pressurePa": 751.47,
+    "temperatureK": 240.849545
+  },
+  "limitations": [
+    "Sol 57 is a selected historical example, not current weather or a representative Mars climatology.",
+    "Quality: derived products only; stationary rover; numeric fill values and blank retrievals rejected. Missing uncertainty is retained, never converted to zero.",
+    "S3 diameters and advection speeds are author model fits, not independent direct track measurements. Catalog selection favors modeled events.",
+    "Wind direction frame is not assimilated into map coordinates without ancillary geometry verification. Scenario headings are simulated.",
+    "No public ground-truth EVA damage labels or 2D vortex time series are in these inputs.",
+    "MCD and published RANS CFD are contextual references; no licensed MCD grids or locally validated CFD vector field is bundled."
+  ],
+  "sources": [
+    {
+      "url": "https://zenodo.org/api/records/7315862",
+      "file": "zenodo-record.json",
+      "bytes": 7446,
+      "sha256": "b8c2ca2550ba658ae4d5b7369c58a53ce83f4493055108594cb607c2ab245a08",
+      "publishedMD5": null
+    },
+    {
+      "url": "https://zenodo.org/api/records/7315863/files/Table_S3_Mars_MEDA_Pressure_Winds_Modeled_Vortices.xlsx/content",
+      "file": "Table_S3_Mars_MEDA_Pressure_Winds_Modeled_Vortices.xlsx",
+      "bytes": 16602,
+      "sha256": "c410613d8afef33bf0ca37a4af704187d211413c31d28c58a5f4d345a2905fd9",
+      "publishedMD5": "7efe9e5281ef6b535d17e956da0fe986"
+    },
+    {
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0000_0089/sol_0057/WE__0057___________DER_WS__________________P02.xml",
+      "file": "WE__0057___________DER_WS__________________P02.xml",
+      "bytes": 10670,
+      "sha256": "52928dfabb52ff8d62a16b2065e14b03cbbae54824004bf132e3de75242188b7",
+      "publishedMD5": null
+    },
+    {
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0000_0089/sol_0057/WE__0057___________DER_WS__________________P02.CSV",
+      "file": "WE__0057___________DER_WS__________________P02.CSV",
+      "bytes": 2487596,
+      "sha256": "24ce30b5575f47189f791fb6d9a7023a1bebc6295d35404cf2d0ae3273a29e3b",
+      "publishedMD5": null
+    },
+    {
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0000_0089/sol_0057/WE__0057___________DER_PS__________________P01.xml",
+      "file": "WE__0057___________DER_PS__________________P01.xml",
+      "bytes": 9096,
+      "sha256": "c156035eb05ac8be2aa58ab10dc81d428c71ea213a42ad69ae0f29e8f9a50450",
+      "publishedMD5": null
+    },
+    {
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0000_0089/sol_0057/WE__0057___________DER_PS__________________P01.CSV",
+      "file": "WE__0057___________DER_PS__________________P01.CSV",
+      "bytes": 3167805,
+      "sha256": "28955abd49078512d65309d5164dfea0583c9b5f221f16f159cdd9d55ffaeed3",
+      "publishedMD5": null
+    }
+  ],
+  "catalogCredit": "Hueso et al., Zenodo 7315863, Table S3; CC BY 4.0",
+  "catalogURL": "https://doi.org/10.5281/zenodo.7315863",
+  "medaURL": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/",
+  "retrievedClientDate": "2026-11-15"
+}

@@ -75,3 +75,14 @@ Phase2 data are acquired but not yet exposed as a completed feature: real NOAH-H
 The original seven-slide presentation and `science-results.json` are preserved. Energy-saver objective, current-position emergency return, localization gating and hidden/observed event separation are still pending. No full-system completion or certified navigation claim is made at this checkpoint.
 
 Production-build offline check passed locally: all 59 core assets, 207 optical tiles and both module workers were present; after stopping the localhost preview server, reload restored the NOAH scene, return map and explicitly recalculated route (revision 1, 1,469.6 ms). No network-dependent global service is claimed available offline.
+
+
+## Phase 3 / surface navigation checkpoint — v16, 2026-11-15
+
+The initial table above is a historical audit. Current changes supersede its Energy saver, Emergency return, Localization and Mission routing worker entries: dedicated effort-distance routing and current-position return are implemented; accepted surface motion consumes explicit simulated resources; return calculation runs in a revision-safe worker; valid/degraded/lost fixes gate ground guidance and movement. See [SURFACE_NAVIGATION.md](SURFACE_NAVIGATION.md) and the separate actual-data numerical report. Per-calculation edge/constraint caches reuse work without carrying stale hazards across requests.
+
+NOAH-H and local native optical streaming were already delivered in v14–15. Geology, hidden simulation truth / observation events, experimental WebXR and foreground performance validation remain incomplete. Follow view remains the saved/current photo-reference preference; helmet view remains available. No full-directive completion or scientific safety certification is claimed.
+
+## Flight Deck UI verification — 2026-11-15
+
+The earlier checkpoints above are historical. Shared UI tokens, navigation and responsive field controls now cover 22 desktop/phone views. The current verification and bounded human-factors limitations are in [DESIGN_REVIEW.md](DESIGN_REVIEW.md). Published helmet/Navcam functionality and the hazard research remain integrated; this UI pass does not certify local obstacle sensing or real EVA safety. Source checks: 181 tests in 18 files and a TypeScript/Vite build. Visible-browser camera sweeps were 47.8 FPS desktop and 53.0 FPS phone-size on this host.

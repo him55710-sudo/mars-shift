@@ -1,0 +1,4412 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Actual daily orbital centroid/area rolling-origin backtest; circle IoU is an equivalent-area proxy, not observed polygon IoU.",
+  "selected": {
+    "damping": 0.5,
+    "growth": 0,
+    "window": 2,
+    "centerErrorKm": 1334.6907590054516,
+    "radiusErrorKm": 450.76485381509247
+  },
+  "splitCounts": {
+    "train": 414,
+    "validation": 131,
+    "test": 123,
+    "nonConsecutiveExcluded": 173
+  },
+  "byModel": {
+    "Persistence": {
+      "forecasts": 123,
+      "members": 85,
+      "centerMAE": 672.4892492517988,
+      "centerRMSE": 1029.8916313375114,
+      "centerP95": 1723.99932096975,
+      "radiusMAE": 157.23890251685268,
+      "areaMAPE": 0.656366183853683,
+      "circleIoU": 0.2908648703235133,
+      "centerCoverage": 0.8699186991869918,
+      "radiusCoverage": 0.943089430894309
+    },
+    "Damped advection + growth": {
+      "forecasts": 123,
+      "members": 85,
+      "centerMAE": 557.9713800318551,
+      "centerRMSE": 922.1668861895012,
+      "centerP95": 1369.545847570878,
+      "radiusMAE": 157.23890251685268,
+      "areaMAPE": 0.656366183853683,
+      "circleIoU": 0.3311580671595871,
+      "centerCoverage": 0.9349593495934959,
+      "radiusCoverage": 0.943089430894309
+    }
+  },
+  "memberMeanCenterDifference": {
+    "km": -107.49879079094238,
+    "bootstrap95": [
+      -179.4521870723241,
+      -25.206126352696057
+    ]
+  },
+  "testPredictions": [
+    {
+      "id": "31/D01/D01_001",
+      "year": 31,
+      "sol": 11,
+      "centerKm": 229.8348468572857,
+      "radiusKm": 10.769631512731308,
+      "areaRelative": 0.10117274700107884,
+      "circleIoU": 0.2308350336211472,
+      "prediction": {
+        "lon": -34.87738186146095,
+        "lat": 69.66712836541339,
+        "sol": 11,
+        "radiusKm": 228.92063093302247,
+        "areaKm2": 164634.07999999996,
+        "speedKmPerSol": 200.97586800718832,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D01",
+        "sol": 11,
+        "lon": -42.95,
+        "lat": 72.55,
+        "areaKm2": 149507.95,
+        "confidence": 75,
+        "member": "D01_001"
+      }
+    },
+    {
+      "id": "31/D01/D01_001",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 684.4139203024384,
+      "radiusKm": 179.03362287057956,
+      "areaRelative": 0.6983317786980332,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -42.071288282844705,
+        "lat": 74.1513970703148,
+        "sol": 12,
+        "radiusKm": 218.15099942029116,
+        "areaKm2": 149507.95,
+        "speedKmPerSol": 95.8963282903154,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D01",
+        "sol": 12,
+        "lon": -38.55,
+        "lat": 62.65,
+        "areaKm2": 495603.91,
+        "confidence": 75,
+        "member": "D01_001"
+      }
+    },
+    {
+      "id": "31/D01/D01_008",
+      "year": 31,
+      "sol": 31,
+      "centerKm": 127.79799025839117,
+      "radiusKm": 86.59393120477887,
+      "areaRelative": 0.39706091577227504,
+      "circleIoU": 0.5527630049363832,
+      "prediction": {
+        "lon": -30.978438189823123,
+        "lat": 68.97645336539455,
+        "sol": 31,
+        "radiusKm": 300.83625534494,
+        "areaKm2": 284321.83999999997,
+        "speedKmPerSol": 149.96762164241144,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D01",
+        "sol": 31,
+        "lon": -24.95,
+        "lat": 69.15,
+        "areaKm2": 471559.81,
+        "confidence": 75,
+        "member": "D01_008"
+      }
+    },
+    {
+      "id": "31/D02/D02_002",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 568.5302166374606,
+      "radiusKm": 80.10119052499067,
+      "areaRelative": 0.3058269968195855,
+      "circleIoU": 0.13341112740751365,
+      "prediction": {
+        "lon": -59.888234342252986,
+        "lat": 80.5443964943176,
+        "sol": 12,
+        "radiusKm": 400.03672149745023,
+        "areaKm2": 502747.12,
+        "speedKmPerSol": 593.7867935978785,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 12,
+        "lon": -84.05,
+        "lat": 72.55,
+        "areaKm2": 724238.94,
+        "confidence": 75,
+        "member": "D02_002"
+      }
+    },
+    {
+      "id": "31/D02/D02_002",
+      "year": 31,
+      "sol": 13,
+      "centerKm": 202.79194223275428,
+      "radiusKm": 126.95084337442051,
+      "areaRelative": 0.3744995574576165,
+      "circleIoU": 0.5609526604811111,
+      "prediction": {
+        "lon": -73.62583483580039,
+        "lat": 71.06949750066104,
+        "sol": 13,
+        "radiusKm": 480.1379120224409,
+        "areaKm2": 724238.94,
+        "speedKmPerSol": 211.1373475532395,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 13,
+        "lon": -79.25,
+        "lat": 68.25,
+        "areaKm2": 1157855.2,
+        "confidence": 75,
+        "member": "D02_002"
+      }
+    },
+    {
+      "id": "31/D02/D02_002",
+      "year": 31,
+      "sol": 14,
+      "centerKm": 258.6703403481558,
+      "radiusKm": 56.567254451870895,
+      "areaRelative": 0.21606225068065718,
+      "circleIoU": 0.5522736825643265,
+      "prediction": {
+        "lon": -77.0534531797228,
+        "lat": 66.11951990833576,
+        "sol": 14,
+        "radiusKm": 607.0887553968614,
+        "areaKm2": 1157855.2,
+        "speedKmPerSol": 135.71327121366738,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 14,
+        "lon": -66.45,
+        "lat": 65.55,
+        "areaKm2": 952134.81,
+        "confidence": 75,
+        "member": "D02_002"
+      }
+    },
+    {
+      "id": "31/D02/D02_002",
+      "year": 31,
+      "sol": 15,
+      "centerKm": 30.23248030352327,
+      "radiusKm": 117.06112533703504,
+      "areaRelative": 0.3199536419754321,
+      "circleIoU": 0.680046358024568,
+      "prediction": {
+        "lon": -60.363376372644666,
+        "lat": 64.34547280492934,
+        "sol": 15,
+        "radiusKm": 550.5215009449905,
+        "areaKm2": 952134.81,
+        "speedKmPerSol": 168.2092792220269,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 15,
+        "lon": -60.65,
+        "lat": 63.85,
+        "areaKm2": 1400102.8,
+        "confidence": 75,
+        "member": "D02_002"
+      }
+    },
+    {
+      "id": "31/D02/D02_002",
+      "year": 31,
+      "sol": 16,
+      "centerKm": 43.461811420177995,
+      "radiusKm": 245.03824364080424,
+      "areaRelative": 1.496119576742687,
+      "circleIoU": 0.40062183291112624,
+      "prediction": {
+        "lon": -57.834517546549364,
+        "lat": 63.030508221800325,
+        "sol": 16,
+        "radiusKm": 667.5826262820256,
+        "areaKm2": 1400102.7999999998,
+        "speedKmPerSol": 88.85044143153925,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 16,
+        "lon": -59.05,
+        "lat": 62.55,
+        "areaKm2": 560911.75,
+        "confidence": 75,
+        "member": "D02_002"
+      }
+    },
+    {
+      "id": "31/D02/D02_003",
+      "year": 31,
+      "sol": 7,
+      "centerKm": 119.68661014138232,
+      "radiusKm": 75.19078111407885,
+      "areaRelative": 0.42684116228282354,
+      "circleIoU": 0.5035364527342875,
+      "prediction": {
+        "lon": 1.8389638442209844,
+        "lat": 69.35427361937725,
+        "sol": 7,
+        "radiusKm": 234.3287047586624,
+        "areaKm2": 172504.67,
+        "speedKmPerSol": 96.99768635570588,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 7,
+        "lon": 0.850006,
+        "lat": 71.35,
+        "areaKm2": 300971.84,
+        "confidence": 75,
+        "member": "D02_003"
+      }
+    },
+    {
+      "id": "31/D02/D02_056",
+      "year": 31,
+      "sol": 25,
+      "centerKm": 492.9907113208016,
+      "radiusKm": 91.85987535002687,
+      "areaRelative": 0.24087332288038,
+      "circleIoU": 0.36456197601245904,
+      "prediction": {
+        "lon": -59.81351537736549,
+        "lat": -15.729248978943478,
+        "sol": 25,
+        "radiusKm": 621.7742936665386,
+        "areaKm2": 1214550,
+        "speedKmPerSol": 220.14303164520086,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D02",
+        "sol": 25,
+        "lon": -52.45,
+        "lat": -20.25,
+        "areaKm2": 1599930.6,
+        "confidence": 75,
+        "member": "D02_056"
+      }
+    },
+    {
+      "id": "31/D03/D03_009",
+      "year": 31,
+      "sol": 3,
+      "centerKm": 344.29907193275835,
+      "radiusKm": 220.7090586857911,
+      "areaRelative": 2.5867855085522793,
+      "circleIoU": 0.19802321330498973,
+      "prediction": {
+        "lon": -80.93683694728782,
+        "lat": -17.95088421784755,
+        "sol": 3,
+        "radiusKm": 467.62004719620063,
+        "areaKm2": 686967.38,
+        "speedKmPerSol": 343.72882513054,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D03",
+        "sol": 3,
+        "lon": -74.85,
+        "lat": -17.45,
+        "areaKm2": 191527.31,
+        "confidence": 75,
+        "member": "D03_009"
+      }
+    },
+    {
+      "id": "31/D03/D03_016",
+      "year": 31,
+      "sol": 3,
+      "centerKm": 1137.0721922095474,
+      "radiusKm": 109.63286303654547,
+      "areaRelative": 0.3191789567786105,
+      "circleIoU": 0.09368105392260592,
+      "prediction": {
+        "lon": -28.067138078958635,
+        "lat": -7.1735571318277485,
+        "sol": 3,
+        "radiusKm": 847.6271719914488,
+        "areaKm2": 2257145.8,
+        "speedKmPerSol": 231.70893688845217,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D03",
+        "sol": 3,
+        "lon": -16.95,
+        "lat": -23.15,
+        "areaKm2": 1711023.2,
+        "confidence": 75,
+        "member": "D03_016"
+      }
+    },
+    {
+      "id": "31/D04/D04_001",
+      "year": 31,
+      "sol": 3,
+      "centerKm": 116.63826260463453,
+      "radiusKm": 79.1227122407766,
+      "areaRelative": 0.5038086174794061,
+      "circleIoU": 0.6207942088241526,
+      "prediction": {
+        "lon": -55.8293028135173,
+        "lat": 61.88595143142047,
+        "sol": 3,
+        "radiusKm": 428.76102533885677,
+        "areaKm2": 577537.88,
+        "speedKmPerSol": 343.85707786719405,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 3,
+        "lon": -55.45,
+        "lat": 63.85,
+        "areaKm2": 384050.12,
+        "confidence": 75,
+        "member": "D04_001"
+      }
+    },
+    {
+      "id": "31/D04/D04_001",
+      "year": 31,
+      "sol": 4,
+      "centerKm": 315.8368475089047,
+      "radiusKm": 123.87955779314376,
+      "areaRelative": 0.454788153144388,
+      "circleIoU": 0.32838117916031084,
+      "prediction": {
+        "lon": -49.25,
+        "lat": 63.98272998120008,
+        "sol": 4,
+        "radiusKm": 349.6383130980802,
+        "areaKm2": 384050.11999999994,
+        "speedKmPerSol": 161.39360576717502,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 4,
+        "lon": -40.25,
+        "lat": 60.65,
+        "areaKm2": 704405.31,
+        "confidence": 75,
+        "member": "D04_001"
+      }
+    },
+    {
+      "id": "31/D04/D04_013",
+      "year": 31,
+      "sol": 21,
+      "centerKm": 765.1673665852866,
+      "radiusKm": 160.18983361541598,
+      "areaRelative": 0.4800634798723423,
+      "circleIoU": 0.2651347073109417,
+      "prediction": {
+        "lon": 16.85042736960088,
+        "lat": 62.9872947437977,
+        "sol": 21,
+        "radiusKm": 899.8281759417199,
+        "areaKm2": 2543718.5000000005,
+        "speedKmPerSol": 721.6926958408249,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 21,
+        "lon": 44.25,
+        "lat": 60.95,
+        "areaKm2": 1718655,
+        "confidence": 75,
+        "member": "D04_013"
+      }
+    },
+    {
+      "id": "31/D04/D04_013",
+      "year": 31,
+      "sol": 22,
+      "centerKm": 228.88860862530007,
+      "radiusKm": 27.71078077465802,
+      "areaRelative": 0.07936223828925353,
+      "circleIoU": 0.6647905556672824,
+      "prediction": {
+        "lon": 70.4456078488148,
+        "lat": 62.63854139374954,
+        "sol": 22,
+        "radiusKm": 739.6383423263039,
+        "areaKm2": 1718654.9999999998,
+        "speedKmPerSol": 733.9977693055858,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 22,
+        "lon": 64.25,
+        "lat": 60.15,
+        "areaKm2": 1592287.5,
+        "confidence": 75,
+        "member": "D04_013"
+      }
+    },
+    {
+      "id": "31/D04/D04_022",
+      "year": 31,
+      "sol": 28,
+      "centerKm": 1230.0111360685225,
+      "radiusKm": 216.28496875466521,
+      "areaRelative": 0.40617576253033405,
+      "circleIoU": 0.08172746850301774,
+      "prediction": {
+        "lon": -3.3320749548804542,
+        "lat": 64.06487589037292,
+        "sol": 28,
+        "radiusKm": 726.5436877264367,
+        "areaKm2": 1658339.1000000003,
+        "speedKmPerSol": 260.68785939382417,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 28,
+        "lon": 47.45,
+        "lat": 66.45,
+        "areaKm2": 2792643,
+        "confidence": 75,
+        "member": "D04_022"
+      }
+    },
+    {
+      "id": "31/D04/D04_022",
+      "year": 31,
+      "sol": 29,
+      "centerKm": 899.415414840394,
+      "radiusKm": 356.51856316195096,
+      "areaRelative": 1.5858945264624624,
+      "circleIoU": 0.15402265106654492,
+      "prediction": {
+        "lon": 80.24660948588553,
+        "lat": 70.88043856110234,
+        "sol": 29,
+        "radiusKm": 942.8286564811019,
+        "areaKm2": 2792642.9999999995,
+        "speedKmPerSol": 741.7379818597743,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 29,
+        "lon": 127.85,
+        "lat": 70.85,
+        "areaKm2": 1079952.4,
+        "confidence": 75,
+        "member": "D04_022"
+      }
+    },
+    {
+      "id": "31/D04/D04_022",
+      "year": 31,
+      "sol": 30,
+      "centerKm": 878.3021177985404,
+      "radiusKm": 467.0019116644861,
+      "areaRelative": 0.6901577247026446,
+      "circleIoU": 0.17442603558490075,
+      "prediction": {
+        "lon": 174.05564888298727,
+        "lat": 76.66716245470384,
+        "sol": 30,
+        "radiusKm": 586.310093319151,
+        "areaKm2": 1079952.3999999997,
+        "speedKmPerSol": 810.3660606238752,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 30,
+        "lon": 149.35,
+        "lat": 64.05,
+        "areaKm2": 3485490.8,
+        "confidence": 75,
+        "member": "D04_022"
+      }
+    },
+    {
+      "id": "31/D04/D04_034",
+      "year": 31,
+      "sol": 7,
+      "centerKm": 1187.003236312257,
+      "radiusKm": 377.69614663470077,
+      "areaRelative": 0.7956868725400206,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": 145.94907349702487,
+        "lat": -52.645967877923724,
+        "sol": 7,
+        "radiusKm": 311.5430972188972,
+        "areaKm2": 304920.1599999999,
+        "speedKmPerSol": 538.481686749377,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 7,
+        "lon": 176.25,
+        "lat": -47.25,
+        "areaKm2": 1492415.9,
+        "confidence": 75,
+        "member": "D04_034"
+      }
+    },
+    {
+      "id": "31/D04/D04_034",
+      "year": 31,
+      "sol": 11,
+      "centerKm": 302.78315398500206,
+      "radiusKm": 390.2362081689302,
+      "areaRelative": 4.887768916018253,
+      "circleIoU": 0.16984362230647368,
+      "prediction": {
+        "lon": -79.57147690290554,
+        "lat": -51.332824485091734,
+        "sol": 11,
+        "radiusKm": 663.8034877685474,
+        "areaKm2": 1384295.8999999997,
+        "speedKmPerSol": 1093.4618338164755,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 11,
+        "lon": -82.35,
+        "lat": -46.55,
+        "areaKm2": 235113.83,
+        "confidence": 75,
+        "member": "D04_034"
+      }
+    },
+    {
+      "id": "31/D04/D04_044",
+      "year": 31,
+      "sol": 13,
+      "centerKm": 113.45740648786592,
+      "radiusKm": 141.1645553580487,
+      "areaRelative": 0.5958834834711808,
+      "circleIoU": 0.6266121620764672,
+      "prediction": {
+        "lon": -138.07271405907284,
+        "lat": -42.33354044349025,
+        "sol": 13,
+        "radiusKm": 677.3353367377064,
+        "areaKm2": 1441309.8,
+        "speedKmPerSol": 445.72544258533605,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 13,
+        "lon": -136.05,
+        "lat": -41.15,
+        "areaKm2": 903142.25,
+        "confidence": 75,
+        "member": "D04_044"
+      }
+    },
+    {
+      "id": "31/D04/D04_062",
+      "year": 31,
+      "sol": 18,
+      "centerKm": 413.495318812843,
+      "radiusKm": 173.7125635333863,
+      "areaRelative": 0.5644401426141152,
+      "circleIoU": 0.22639143450762805,
+      "prediction": {
+        "lon": 45.65317497901049,
+        "lat": -53.430536029080066,
+        "sol": 18,
+        "radiusKm": 337.1610451774852,
+        "areaKm2": 357128.62,
+        "speedKmPerSol": 95.03215471340494,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 18,
+        "lon": 57.35,
+        "lat": -53.15,
+        "areaKm2": 819930.06,
+        "confidence": 75,
+        "member": "D04_062"
+      }
+    },
+    {
+      "id": "31/D04/D04_071",
+      "year": 31,
+      "sol": 21,
+      "centerKm": 293.83036490216074,
+      "radiusKm": 65.84138457289896,
+      "areaRelative": 0.3045507274269335,
+      "circleIoU": 0.44952432816968874,
+      "prediction": {
+        "lon": 63.98938518531577,
+        "lat": -53.68913460698746,
+        "sol": 21,
+        "radiusKm": 528.960925936186,
+        "areaKm2": 879016.5599999999,
+        "speedKmPerSol": 265.9918472000946,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 21,
+        "lon": 55.65,
+        "lat": -53.35,
+        "areaKm2": 673807.88,
+        "confidence": 75,
+        "member": "D04_071"
+      }
+    },
+    {
+      "id": "31/D04/D04_077",
+      "year": 31,
+      "sol": 22,
+      "centerKm": 98.00095657265999,
+      "radiusKm": 121.6779547995425,
+      "areaRelative": 1.6902096139227913,
+      "circleIoU": 0.3717182463495203,
+      "prediction": {
+        "lon": 103.1276586688175,
+        "lat": -52.296751650686616,
+        "sol": 22,
+        "radiusKm": 311.74456639185024,
+        "areaKm2": 305314.6599999999,
+        "speedKmPerSol": 119.17885581737252,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 22,
+        "lon": 104.45,
+        "lat": -53.75,
+        "areaKm2": 113491.03,
+        "confidence": 75,
+        "member": "D04_077"
+      }
+    },
+    {
+      "id": "31/D04/D04_081",
+      "year": 31,
+      "sol": 25,
+      "centerKm": 201.27452369415096,
+      "radiusKm": 48.84333284885582,
+      "areaRelative": 0.41433775623319674,
+      "circleIoU": 0.3748885328325186,
+      "prediction": {
+        "lon": 52.376571317317484,
+        "lat": -51.403687652248756,
+        "sol": 25,
+        "radiusKm": 306.91955348054006,
+        "areaKm2": 295936.81,
+        "speedKmPerSol": 85.74110925798331,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 25,
+        "lon": 56.95,
+        "lat": -53.35,
+        "areaKm2": 209240.55,
+        "confidence": 75,
+        "member": "D04_081"
+      }
+    },
+    {
+      "id": "31/D04/D04_089",
+      "year": 31,
+      "sol": 28,
+      "centerKm": 25.40231937565457,
+      "radiusKm": 28.243734467338527,
+      "areaRelative": 0.20854852470411506,
+      "circleIoU": 0.827438848799908,
+      "prediction": {
+        "lon": 63.03866676931614,
+        "lat": -33.11777891837355,
+        "sol": 28,
+        "radiusKm": 312.5574343383754,
+        "areaKm2": 306908.94,
+        "speedKmPerSol": 202.25023646369033,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D04",
+        "sol": 28,
+        "lon": 63.55,
+        "lat": -33.15,
+        "areaKm2": 253948.38,
+        "confidence": 75,
+        "member": "D04_089"
+      }
+    },
+    {
+      "id": "31/D05/D05_004",
+      "year": 31,
+      "sol": 8,
+      "centerKm": 123.89119237599007,
+      "radiusKm": 211.31718075892286,
+      "areaRelative": 0.4256717202739444,
+      "circleIoU": 0.5743282797260555,
+      "prediction": {
+        "lon": 7.573843226081522,
+        "lat": 61.38793798244233,
+        "sol": 8,
+        "radiusKm": 661.3335624327499,
+        "areaKm2": 1374013.5,
+        "speedKmPerSol": 505.9291981675707,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D05",
+        "sol": 8,
+        "lon": 8.55,
+        "lat": 59.35,
+        "areaKm2": 2392383.5,
+        "confidence": 75,
+        "member": "D05_004"
+      }
+    },
+    {
+      "id": "31/D05/D05_004",
+      "year": 31,
+      "sol": 9,
+      "centerKm": 548.984951743997,
+      "radiusKm": 307.51118713123867,
+      "areaRelative": 1.3843472958739864,
+      "circleIoU": 0.30434447816147003,
+      "prediction": {
+        "lon": 17.71366014473074,
+        "lat": 58.471016768086194,
+        "sol": 9,
+        "radiusKm": 872.6507431916727,
+        "areaKm2": 2392383.5,
+        "speedKmPerSol": 284.4776806027178,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D05",
+        "sol": 9,
+        "lon": 2.75,
+        "lat": 64.45,
+        "areaKm2": 1003370.4,
+        "confidence": 75,
+        "member": "D05_004"
+      }
+    },
+    {
+      "id": "31/D05/D05_006",
+      "year": 31,
+      "sol": 9,
+      "centerKm": 1342.1314323168228,
+      "radiusKm": 114.68880252959173,
+      "areaRelative": 0.33770916103324833,
+      "circleIoU": 0.035064588564240294,
+      "prediction": {
+        "lon": -63.88849259312519,
+        "lat": 62.392855665492,
+        "sol": 9,
+        "radiusKm": 847.0857469113193,
+        "areaKm2": 2254263.1999999997,
+        "speedKmPerSol": 94.22304493026746,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D05",
+        "sol": 9,
+        "lon": -26.85,
+        "lat": 51.25,
+        "areaKm2": 1685166.9,
+        "confidence": 75,
+        "member": "D05_006"
+      }
+    },
+    {
+      "id": "31/D05/D05_023",
+      "year": 31,
+      "sol": 4,
+      "centerKm": 831.7027226067864,
+      "radiusKm": 218.07948923077396,
+      "areaRelative": 0.5843666299291848,
+      "circleIoU": 0.04168257021656688,
+      "prediction": {
+        "lon": 42.08438713329667,
+        "lat": -44.553239911981066,
+        "sol": 4,
+        "radiusKm": 395.70391192864855,
+        "areaKm2": 491915.56,
+        "speedKmPerSol": 151.0382400766971,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D05",
+        "sol": 4,
+        "lon": 53.75,
+        "lat": -56.55,
+        "areaKm2": 1183532.4,
+        "confidence": 75,
+        "member": "D05_023"
+      }
+    },
+    {
+      "id": "31/D05/D05_028",
+      "year": 31,
+      "sol": 10,
+      "centerKm": 517.3640210310642,
+      "radiusKm": 140.8619450981403,
+      "areaRelative": 1.9845391313933072,
+      "circleIoU": 0.0015546198222709763,
+      "prediction": {
+        "lon": 43.77937628514974,
+        "lat": -52.715247742906804,
+        "sol": 10,
+        "radiusKm": 334.4648235241938,
+        "areaKm2": 351439.66,
+        "speedKmPerSol": 142.62820114786754,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D05",
+        "sol": 10,
+        "lon": 57.75,
+        "lat": -55.95,
+        "areaKm2": 117753.41,
+        "confidence": 75,
+        "member": "D05_028"
+      }
+    },
+    {
+      "id": "31/D06/D06_006",
+      "year": 31,
+      "sol": 10,
+      "centerKm": 588.2222877460475,
+      "radiusKm": 301.57259332387923,
+      "areaRelative": 0.4515269221601792,
+      "circleIoU": 0.4209298717899662,
+      "prediction": {
+        "lon": 97.72297657395961,
+        "lat": 51.577059974883554,
+        "sol": 10,
+        "radiusKm": 860.9586284158182,
+        "areaKm2": 2328704.8,
+        "speedKmPerSol": 852.2442152162417,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 10,
+        "lon": 105.55,
+        "lat": 43.15,
+        "areaKm2": 4245796,
+        "confidence": 75,
+        "member": "D06_006"
+      }
+    },
+    {
+      "id": "31/D06/D06_006",
+      "year": 31,
+      "sol": 11,
+      "centerKm": 544.431010540953,
+      "radiusKm": 213.53203024559753,
+      "areaRelative": 0.2862724569797116,
+      "circleIoU": 0.5496094940072044,
+      "prediction": {
+        "lon": 120.14280933431928,
+        "lat": 40.31689150585648,
+        "sol": 11,
+        "radiusKm": 1162.5312217396975,
+        "areaKm2": 4245796,
+        "speedKmPerSol": 664.7028652071282,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 11,
+        "lon": 132.25,
+        "lat": 40.85,
+        "areaKm2": 5948763,
+        "confidence": 75,
+        "member": "D06_006"
+      }
+    },
+    {
+      "id": "31/D06/D06_007",
+      "year": 31,
+      "sol": 14,
+      "centerKm": 196.80652918799413,
+      "radiusKm": 524.8014754805347,
+      "areaRelative": 0.3880351920231765,
+      "circleIoU": 0.6119648079768235,
+      "prediction": {
+        "lon": 124.6105589775143,
+        "lat": 31.5691272549287,
+        "sol": 14,
+        "radiusKm": 1885.6606046723784,
+        "areaKm2": 11170611,
+        "speedKmPerSol": 614.6854056834412,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 14,
+        "lon": 124.35,
+        "lat": 28.25,
+        "areaKm2": 18253682,
+        "confidence": 75,
+        "member": "D06_007"
+      }
+    },
+    {
+      "id": "31/D06/D06_010",
+      "year": 31,
+      "sol": 16,
+      "centerKm": 396.75776593579286,
+      "radiusKm": 139.52490046225472,
+      "areaRelative": 0.4703668961807769,
+      "circleIoU": 0.2693194826843957,
+      "prediction": {
+        "lon": -50.85114912708252,
+        "lat": 22.89372856418083,
+        "sol": 16,
+        "radiusKm": 372.98012246815114,
+        "areaKm2": 437040.0599999999,
+        "speedKmPerSol": 294.52879280879984,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 16,
+        "lon": -57.95,
+        "lat": 21.55,
+        "areaKm2": 825175.12,
+        "confidence": 75,
+        "member": "D06_010"
+      }
+    },
+    {
+      "id": "31/D06/D06_010",
+      "year": 31,
+      "sol": 17,
+      "centerKm": 367.0355886842367,
+      "radiusKm": 163.56000950329104,
+      "areaRelative": 1.1571595072535237,
+      "circleIoU": 0.2781400283927425,
+      "prediction": {
+        "lon": -59.28214670294068,
+        "lat": 19.407049115858637,
+        "sol": 17,
+        "radiusKm": 512.5050229304059,
+        "areaKm2": 825175.12,
+        "speedKmPerSol": 146.6994578286403,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 17,
+        "lon": -54.85,
+        "lat": 24.05,
+        "areaKm2": 382528.56,
+        "confidence": 100,
+        "member": "D06_010"
+      }
+    },
+    {
+      "id": "31/D06/D06_013",
+      "year": 31,
+      "sol": 19,
+      "centerKm": 1472.0020339468888,
+      "radiusKm": 257.72000875482456,
+      "areaRelative": 0.43943395934067314,
+      "circleIoU": 0.04475037154981076,
+      "prediction": {
+        "lon": -23.257392519578843,
+        "lat": 60.51736469443321,
+        "sol": 19,
+        "radiusKm": 767.8662929634955,
+        "areaKm2": 1852341.6,
+        "speedKmPerSol": 387.9792400707965,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 19,
+        "lon": 23.25,
+        "lat": 54.95,
+        "areaKm2": 3304412.8,
+        "confidence": 75,
+        "member": "D06_013"
+      }
+    },
+    {
+      "id": "31/D06/D06_026",
+      "year": 31,
+      "sol": 7,
+      "centerKm": 1994.8420208267162,
+      "radiusKm": 109.1704398844462,
+      "areaRelative": 0.7420656433129926,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -70.07522261490726,
+        "lat": -89.05078670818598,
+        "sol": 7,
+        "radiusKm": 112.66315765099363,
+        "areaKm2": 39876.195,
+        "speedKmPerSol": 1925.0340924258626,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 7,
+        "lon": 163.55,
+        "lat": -56.85,
+        "areaKm2": 154598.23,
+        "confidence": 75,
+        "member": "D06_026"
+      }
+    },
+    {
+      "id": "31/D06/D06_030",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 146.3080509544494,
+      "radiusKm": 45.661772122359935,
+      "areaRelative": 0.26098581011423944,
+      "circleIoU": 0.6053211249571038,
+      "prediction": {
+        "lon": 145.24154605519823,
+        "lat": -54.98213570415976,
+        "sol": 12,
+        "radiusKm": 417.0882148188982,
+        "areaKm2": 546519.56,
+        "speedKmPerSol": 192.49184074768888,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 12,
+        "lon": 144.95,
+        "lat": -57.45,
+        "areaKm2": 433406.59,
+        "confidence": 75,
+        "member": "D06_030"
+      }
+    },
+    {
+      "id": "31/D06/D06_030",
+      "year": 31,
+      "sol": 13,
+      "centerKm": 146.25103758959216,
+      "radiusKm": 33.70371728050594,
+      "areaRelative": 0.20955345717997476,
+      "circleIoU": 0.5782085204358622,
+      "prediction": {
+        "lon": 142.10294683663528,
+        "lat": -58.07988705653964,
+        "sol": 13,
+        "radiusKm": 371.4264426965383,
+        "areaKm2": 433406.58999999997,
+        "speedKmPerSol": 97.24902887868123,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D06",
+        "sol": 13,
+        "lon": 144.95,
+        "lat": -56.15,
+        "areaKm2": 358319.5,
+        "confidence": 75,
+        "member": "D06_030"
+      }
+    },
+    {
+      "id": "31/D07/D07_003",
+      "year": 31,
+      "sol": 10,
+      "centerKm": 984.4729365540992,
+      "radiusKm": 267.81384828044065,
+      "areaRelative": 0.7025584792505586,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -27.37026344313574,
+        "lat": 42.65908699624977,
+        "sol": 10,
+        "radiusKm": 321.28259199640956,
+        "areaKm2": 324283.06000000006,
+        "speedKmPerSol": 79.55360338402794,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D07",
+        "sol": 10,
+        "lon": -4.54999,
+        "lat": 43.45,
+        "areaKm2": 1090241.4,
+        "confidence": 75,
+        "member": "D07_003"
+      }
+    },
+    {
+      "id": "31/D07/D07_021",
+      "year": 31,
+      "sol": 3,
+      "centerKm": 359.0878490792912,
+      "radiusKm": 67.10218845366188,
+      "areaRelative": 0.3376059447828486,
+      "circleIoU": 0.19811054157352684,
+      "prediction": {
+        "lon": -117.13678912939736,
+        "lat": -56.207468382645324,
+        "sol": 3,
+        "radiusKm": 293.42181128697126,
+        "areaKm2": 270479.69,
+        "speedKmPerSol": 127.6838687535758,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D07",
+        "sol": 3,
+        "lon": -106.35,
+        "lat": -57.75,
+        "areaKm2": 408336.53,
+        "confidence": 75,
+        "member": "D07_021"
+      }
+    },
+    {
+      "id": "31/D07/D07_042",
+      "year": 31,
+      "sol": 23,
+      "centerKm": 271.8915463411371,
+      "radiusKm": 137.05388701220926,
+      "areaRelative": 7.683342337350332,
+      "circleIoU": 0.0013127879369247007,
+      "prediction": {
+        "lon": -107.58683419864275,
+        "lat": -63.388112610816506,
+        "sol": 23,
+        "radiusKm": 207.45522569598273,
+        "areaKm2": 135206.83,
+        "speedKmPerSol": 99.5697654199609,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D07",
+        "sol": 23,
+        "lon": -100.65,
+        "lat": -66.95,
+        "areaKm2": 15570.828,
+        "confidence": 75,
+        "member": "D07_042"
+      }
+    },
+    {
+      "id": "31/D07/D07_045",
+      "year": 31,
+      "sol": 23,
+      "centerKm": 59.44181302120826,
+      "radiusKm": 77.55339359958455,
+      "areaRelative": 2.409689396160941,
+      "circleIoU": 0.29328184588482636,
+      "prediction": {
+        "lon": -127.50680804076626,
+        "lat": -66.45229491470343,
+        "sol": 23,
+        "radiusKm": 169.16619867353444,
+        "areaKm2": 89903.59399999998,
+        "speedKmPerSol": 23.592318943264395,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D07",
+        "sol": 23,
+        "lon": -125.35,
+        "lat": -65.95,
+        "areaKm2": 26367.092,
+        "confidence": 75,
+        "member": "D07_045"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 9,
+      "centerKm": 48.90806563764019,
+      "radiusKm": 166.89736501928488,
+      "areaRelative": 0.7416459238444421,
+      "circleIoU": 0.25835407615555794,
+      "prediction": {
+        "lon": 160.89999999999998,
+        "lat": -66.35007215007022,
+        "sol": 9,
+        "radiusKm": 172.5218315412225,
+        "areaKm2": 93505.68000000001,
+        "speedKmPerSol": 3.559664630039736,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 9,
+        "lon": 158.85,
+        "lat": -66.45,
+        "areaKm2": 361928.41,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 10,
+      "centerKm": 225.66666744825145,
+      "radiusKm": 163.2051126250281,
+      "areaRelative": 0.5439779697287888,
+      "circleIoU": 0.4103426172108374,
+      "prediction": {
+        "lon": 157.89809318349944,
+        "lat": -66.50287559450686,
+        "sol": 10,
+        "radiusKm": 339.4191965605074,
+        "areaKm2": 361928.41000000003,
+        "speedKmPerSol": 22.6923212294761,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 10,
+        "lon": 167.25,
+        "lat": -67.65,
+        "areaKm2": 793664.31,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 11,
+      "centerKm": 81.47431459142386,
+      "radiusKm": 11.074540056278693,
+      "areaRelative": 0.04556728369942619,
+      "circleIoU": 0.8096552069342721,
+      "prediction": {
+        "lon": 171.5604390722914,
+        "lat": -68.30201222499885,
+        "sol": 11,
+        "radiusKm": 502.6243091855355,
+        "areaKm2": 793664.3099999999,
+        "speedKmPerSol": 103.08158564361571,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 11,
+        "lon": 172.25,
+        "lat": -66.95,
+        "areaKm2": 759075.31,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 190.13153771597638,
+      "radiusKm": 67.2243862409216,
+      "areaRelative": 0.22614004920853187,
+      "circleIoU": 0.6089906941486339,
+      "prediction": {
+        "lon": 174.71468614984417,
+        "lat": -66.62007944119684,
+        "sol": 12,
+        "radiusKm": 491.5497691292568,
+        "areaKm2": 759075.31,
+        "speedKmPerSol": 60.69267008090837,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 12,
+        "lon": 166.75,
+        "lat": -67.45,
+        "areaKm2": 980894.94,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 13,
+      "centerKm": 274.0747248479102,
+      "radiusKm": 144.15092333731565,
+      "areaRelative": 0.8162070457828184,
+      "circleIoU": 0.4309636313476077,
+      "prediction": {
+        "lon": 163.97072065327484,
+        "lat": -67.72299702909696,
+        "sol": 13,
+        "radiusKm": 558.7741553701784,
+        "areaKm2": 980894.9400000002,
+        "speedKmPerSol": 64.7307165777975,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 13,
+        "lon": 151.75,
+        "lat": -67.65,
+        "areaKm2": 540078.81,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 14,
+      "centerKm": 370.3694493301153,
+      "radiusKm": 251.615607855277,
+      "areaRelative": 0.6127001124941993,
+      "circleIoU": 0.3241402996448326,
+      "prediction": {
+        "lon": 144.21782060349824,
+        "lat": -67.92150111387545,
+        "sol": 14,
+        "radiusKm": 414.62323203286275,
+        "areaKm2": 540078.81,
+        "speedKmPerSol": 169.12142315906993,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 14,
+        "lon": 159.55,
+        "lat": -66.05,
+        "areaKm2": 1394471.9,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_041",
+      "year": 31,
+      "sol": 15,
+      "centerKm": 216.8539402912257,
+      "radiusKm": 153.4275172636278,
+      "areaRelative": 0.6878921107156073,
+      "circleIoU": 0.5499897142511003,
+      "prediction": {
+        "lon": 163.33168264114238,
+        "lat": -65.3016377156583,
+        "sol": 15,
+        "radiusKm": 666.2388398881398,
+        "areaKm2": 1394471.9,
+        "speedKmPerSol": 102.2100090383237,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 15,
+        "lon": 164.25,
+        "lat": -68.95,
+        "areaKm2": 826161.75,
+        "confidence": 75,
+        "member": "D08_041"
+      }
+    },
+    {
+      "id": "31/D08/D08_049",
+      "year": 31,
+      "sol": 18,
+      "centerKm": 31.518669018387556,
+      "radiusKm": 87.94865401357794,
+      "areaRelative": 0.5223689875508946,
+      "circleIoU": 0.47763101244910555,
+      "prediction": {
+        "lon": 42.30515298774151,
+        "lat": -67.05488127566936,
+        "sol": 18,
+        "radiusKm": 196.7748332643066,
+        "areaKm2": 121643.52,
+        "speedKmPerSol": 29.665298198323658,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 18,
+        "lon": 43.45,
+        "lat": -67.35,
+        "areaKm2": 254680.95,
+        "confidence": 75,
+        "member": "D08_049"
+      }
+    },
+    {
+      "id": "31/D08/D08_049",
+      "year": 31,
+      "sol": 19,
+      "centerKm": 117.73124786422177,
+      "radiusKm": 28.415393830007815,
+      "areaRelative": 0.17325305724477316,
+      "circleIoU": 0.592359943527492,
+      "prediction": {
+        "lon": 44.660139158101174,
+        "lat": -67.55440877160798,
+        "sol": 19,
+        "radiusKm": 284.72348727788454,
+        "areaKm2": 254680.95,
+        "speedKmPerSol": 29.995946359782824,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 19,
+        "lon": 49.35,
+        "lat": -66.75,
+        "areaKm2": 308051.88,
+        "confidence": 75,
+        "member": "D08_049"
+      }
+    },
+    {
+      "id": "31/D08/D08_050",
+      "year": 31,
+      "sol": 19,
+      "centerKm": 57.5395328280464,
+      "radiusKm": 84.2508690841438,
+      "areaRelative": 0.6242916809573731,
+      "circleIoU": 0.6156529715220794,
+      "prediction": {
+        "lon": 18.940548472718206,
+        "lat": -58.784629749354615,
+        "sol": 19,
+        "radiusKm": 391.2014047155279,
+        "areaKm2": 480784.74999999994,
+        "speedKmPerSol": 96.18227194809653,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 19,
+        "lon": 20.35,
+        "lat": -58.15,
+        "areaKm2": 295996.56,
+        "confidence": 75,
+        "member": "D08_050"
+      }
+    },
+    {
+      "id": "31/D08/D08_055",
+      "year": 31,
+      "sol": 24,
+      "centerKm": 24.831305920198844,
+      "radiusKm": 24.459136712695468,
+      "areaRelative": 0.45683277240211084,
+      "circleIoU": 0.6861261039559274,
+      "prediction": {
+        "lon": -103.09530877438164,
+        "lat": -72.45180858839014,
+        "sol": 24,
+        "radiusKm": 142.62305481189645,
+        "areaKm2": 63904.191,
+        "speedKmPerSol": 16.43102845375734,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 24,
+        "lon": -102.65,
+        "lat": -72.85,
+        "areaKm2": 43865.152,
+        "confidence": 75,
+        "member": "D08_055"
+      }
+    },
+    {
+      "id": "31/D08/D08_059",
+      "year": 31,
+      "sol": 30,
+      "centerKm": 254.00703205055285,
+      "radiusKm": 65.65373315792249,
+      "areaRelative": 0.29820814225674663,
+      "circleIoU": 0.39044861028218947,
+      "prediction": {
+        "lon": -160.18900495274795,
+        "lat": -65.14378726338461,
+        "sol": 30,
+        "radiusKm": 338.9423522094025,
+        "areaKm2": 360912.19000000006,
+        "speedKmPerSol": 90.56128809573967,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D08",
+        "sol": 30,
+        "lon": -157.95,
+        "lat": -69.35,
+        "areaKm2": 514272.41,
+        "confidence": 75,
+        "member": "D08_059"
+      }
+    },
+    {
+      "id": "31/D11/D11_009",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 50.95986317899814,
+      "radiusKm": 45.3399682416063,
+      "areaRelative": 0.3342037058131581,
+      "circleIoU": 0.7440999337202635,
+      "prediction": {
+        "lon": -159.84237350436604,
+        "lat": 31.252841544782036,
+        "sol": 12,
+        "radiusKm": 337.70997290117543,
+        "areaKm2": 358292.43999999994,
+        "speedKmPerSol": 66.18499139377724,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 12,
+        "lon": -160.85,
+        "lat": 31.25,
+        "areaKm2": 268544.03,
+        "confidence": 75,
+        "member": "D11_009"
+      }
+    },
+    {
+      "id": "31/D11/D11_033",
+      "year": 31,
+      "sol": 27,
+      "centerKm": 570.9429425175059,
+      "radiusKm": 77.46664836815376,
+      "areaRelative": 0.1450475370381394,
+      "circleIoU": 0.5186428456780151,
+      "prediction": {
+        "lon": -51.984877424910394,
+        "lat": -19.690364319822923,
+        "sol": 27,
+        "radiusKm": 1183.044212608082,
+        "areaKm2": 4396953,
+        "speedKmPerSol": 417.5579846951987,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 27,
+        "lon": -41.75,
+        "lat": -19.35,
+        "areaKm2": 3839974.2,
+        "confidence": 75,
+        "member": "D11_033"
+      }
+    },
+    {
+      "id": "31/D11/D11_033",
+      "year": 31,
+      "sol": 28,
+      "centerKm": 473.35746391378206,
+      "radiusKm": 455.79139585373287,
+      "areaRelative": 0.49861960170282466,
+      "circleIoU": 0.4997368713813638,
+      "prediction": {
+        "lon": -38.38159131933895,
+        "lat": -22.266182921862047,
+        "sol": 28,
+        "radiusKm": 1105.5775642399283,
+        "areaKm2": 3839974.1999999997,
+        "speedKmPerSol": 253.86298443286893,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 28,
+        "lon": -40.45,
+        "lat": -30.05,
+        "areaKm2": 7658804,
+        "confidence": 75,
+        "member": "D11_033"
+      }
+    },
+    {
+      "id": "31/D11/D11_033",
+      "year": 31,
+      "sol": 29,
+      "centerKm": 226.24034769360898,
+      "radiusKm": 513.2366599346183,
+      "areaRelative": 1.2191102180485875,
+      "circleIoU": 0.45063106458919683,
+      "prediction": {
+        "lon": -39.756741154821555,
+        "lat": -35.40069852568673,
+        "sol": 29,
+        "radiusKm": 1561.3689600936611,
+        "areaKm2": 7658804,
+        "speedKmPerSol": 318.4080118596399,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 29,
+        "lon": -38.05,
+        "lat": -31.85,
+        "areaKm2": 3451295,
+        "confidence": 75,
+        "member": "D11_033"
+      }
+    },
+    {
+      "id": "31/D11/D11_044",
+      "year": 31,
+      "sol": 28,
+      "centerKm": 293.9317389562477,
+      "radiusKm": 224.90632286944629,
+      "areaRelative": 0.5614422591366134,
+      "circleIoU": 0.40398948490928,
+      "prediction": {
+        "lon": -57.912397494684,
+        "lat": 49.50509910755459,
+        "sol": 28,
+        "radiusKm": 440.9637426299324,
+        "areaKm2": 610879.62,
+        "speedKmPerSol": 258.50228019238045,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 28,
+        "lon": -58.45,
+        "lat": 44.55,
+        "areaKm2": 1392928.6,
+        "confidence": 75,
+        "member": "D11_044"
+      }
+    },
+    {
+      "id": "31/D11/D11_044",
+      "year": 31,
+      "sol": 29,
+      "centerKm": 973.0317737499196,
+      "radiusKm": 338.5117132533193,
+      "areaRelative": 0.5604772773563672,
+      "circleIoU": 0.16229272847474563,
+      "prediction": {
+        "lon": -55.47668553604984,
+        "lat": 41.99937671533384,
+        "sol": 29,
+        "radiusKm": 665.8700654993787,
+        "areaKm2": 1392928.6,
+        "speedKmPerSol": 197.8804398693155,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 29,
+        "lon": -36.65,
+        "lat": 34.65,
+        "areaKm2": 3169184.5,
+        "confidence": 75,
+        "member": "D11_044"
+      }
+    },
+    {
+      "id": "31/D11/D11_046",
+      "year": 31,
+      "sol": 30,
+      "centerKm": 1172.0400405873859,
+      "radiusKm": 168.22208858915553,
+      "areaRelative": 0.7897006176106482,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -154.93935309968765,
+        "lat": 46.032112498836995,
+        "sol": 30,
+        "radiusKm": 666.2197765351738,
+        "areaKm2": 1394392.0999999999,
+        "speedKmPerSol": 791.0173120029888,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 30,
+        "lon": -125.85,
+        "lat": 51.75,
+        "areaKm2": 779120.31,
+        "confidence": 75,
+        "member": "D11_046"
+      }
+    },
+    {
+      "id": "31/D11/D11_048",
+      "year": 31,
+      "sol": 32,
+      "centerKm": 952.5652241125938,
+      "radiusKm": 3.4241725176974,
+      "areaRelative": 0.017305088588082083,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": 148.70744532596188,
+        "lat": 49.33310781262187,
+        "sol": 32,
+        "radiusKm": 400.8706070756797,
+        "areaKm2": 504845.28000000014,
+        "speedKmPerSol": 284.8300535788464,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D11",
+        "sol": 32,
+        "lon": 173.65,
+        "lat": 49.85,
+        "areaKm2": 496257.5,
+        "confidence": 75,
+        "member": "D11_048"
+      }
+    },
+    {
+      "id": "31/D12/D12_013",
+      "year": 31,
+      "sol": 8,
+      "centerKm": 249.34533327802825,
+      "radiusKm": 17.980557037661697,
+      "areaRelative": 0.03977248083656891,
+      "circleIoU": 0.7063902108187473,
+      "prediction": {
+        "lon": 5.070924100879779,
+        "lat": -66.04836747149847,
+        "sol": 8,
+        "radiusKm": 931.053935036212,
+        "areaKm2": 2723325.5,
+        "speedKmPerSol": 425.3906355780208,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D12",
+        "sol": 8,
+        "lon": 11.45,
+        "lat": -62.85,
+        "areaKm2": 2619155.2,
+        "confidence": 75,
+        "member": "D12_013"
+      }
+    },
+    {
+      "id": "31/D12/D12_013",
+      "year": 31,
+      "sol": 9,
+      "centerKm": 306.4812512732335,
+      "radiusKm": 73.39628978059523,
+      "areaRelative": 0.1432701693620819,
+      "circleIoU": 0.6525961456650567,
+      "prediction": {
+        "lon": 20.425944893785868,
+        "lat": -64.14785223440369,
+        "sol": 9,
+        "radiusKm": 913.0733779985503,
+        "areaKm2": 2619155.2,
+        "speedKmPerSol": 248.82086398605793,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D12",
+        "sol": 9,
+        "lon": 31.35,
+        "lat": -66.65,
+        "areaKm2": 3057154.2,
+        "confidence": 75,
+        "member": "D12_013"
+      }
+    },
+    {
+      "id": "31/D12/D12_019",
+      "year": 31,
+      "sol": 11,
+      "centerKm": 601.1247070934007,
+      "radiusKm": 45.14562299774093,
+      "areaRelative": 0.10747838779961619,
+      "circleIoU": 0.3595162680870559,
+      "prediction": {
+        "lon": 20.051620419355118,
+        "lat": -24.90205252687248,
+        "sol": 11,
+        "radiusKm": 771.7275421441619,
+        "areaKm2": 1871017.6,
+        "speedKmPerSol": 45.56579383391773,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D12",
+        "sol": 11,
+        "lon": 30.75,
+        "lat": -28.35,
+        "areaKm2": 2096327.5,
+        "confidence": 75,
+        "member": "D12_019"
+      }
+    },
+    {
+      "id": "31/D12/D12_019",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 354.3704678960953,
+      "radiusKm": 54.08700093457958,
+      "areaRelative": 0.12034439682718852,
+      "circleIoU": 0.5769640948767885,
+      "prediction": {
+        "lon": 36.6083328557487,
+        "lat": -30.29690396670029,
+        "sol": 12,
+        "radiusKm": 816.8731651419029,
+        "areaKm2": 2096327.5,
+        "speedKmPerSol": 323.3113630666166,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D12",
+        "sol": 12,
+        "lon": 43.55,
+        "lat": -30.55,
+        "areaKm2": 2383123,
+        "confidence": 75,
+        "member": "D12_019"
+      }
+    },
+    {
+      "id": "31/D13/D13_006",
+      "year": 31,
+      "sol": 7,
+      "centerKm": 102.99230510887503,
+      "radiusKm": 7.34541730510432,
+      "areaRelative": 0.01562450782165293,
+      "circleIoU": 0.8684141521545178,
+      "prediction": {
+        "lon": 86.58487496044211,
+        "lat": 56.170740178175656,
+        "sol": 7,
+        "radiusKm": 929.2104469524847,
+        "areaKm2": 2712551.8,
+        "speedKmPerSol": 821.3889615621893,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D13",
+        "sol": 7,
+        "lon": 87.05,
+        "lat": 54.45,
+        "areaKm2": 2755606.8,
+        "confidence": 75,
+        "member": "D13_006"
+      }
+    },
+    {
+      "id": "31/D13/D13_011",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 1015.3086572443445,
+      "radiusKm": 320.8008869913202,
+      "areaRelative": 0.5616420823148911,
+      "circleIoU": 0.1259151498284459,
+      "prediction": {
+        "lon": -42.12980173786292,
+        "lat": 45.53553639980449,
+        "sol": 12,
+        "radiusKm": 628.5558137609474,
+        "areaKm2": 1241188.0000000002,
+        "speedKmPerSol": 606.383599348764,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D13",
+        "sol": 12,
+        "lon": -20.55,
+        "lat": 39.05,
+        "areaKm2": 2831448.8,
+        "confidence": 75,
+        "member": "D13_011"
+      }
+    },
+    {
+      "id": "31/D13/D13_019",
+      "year": 31,
+      "sol": 22,
+      "centerKm": 352.4090368767328,
+      "radiusKm": 87.8972640123585,
+      "areaRelative": 0.32187055365142936,
+      "circleIoU": 0.33919832653539683,
+      "prediction": {
+        "lon": 30.906035873125802,
+        "lat": 43.82089731063675,
+        "sol": 22,
+        "radiusKm": 410.0651687434015,
+        "areaKm2": 528269.62,
+        "speedKmPerSol": 113.26158124075451,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D13",
+        "sol": 22,
+        "lon": 31.75,
+        "lat": 49.75,
+        "areaKm2": 779010,
+        "confidence": 75,
+        "member": "D13_019"
+      }
+    },
+    {
+      "id": "31/D13/D13_019",
+      "year": 31,
+      "sol": 23,
+      "centerKm": 733.8717359925006,
+      "radiusKm": 0.8811906042654982,
+      "areaRelative": 0.0035298128156699433,
+      "circleIoU": 0.08461688893765146,
+      "prediction": {
+        "lon": 33.27645095307548,
+        "lat": 52.107612422480805,
+        "sol": 23,
+        "radiusKm": 497.96243275576,
+        "areaKm2": 779010.0000000001,
+        "speedKmPerSol": 150.6288650000242,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D13",
+        "sol": 23,
+        "lon": 52.95,
+        "lat": 50.35,
+        "areaKm2": 781769.5,
+        "confidence": 75,
+        "member": "D13_019"
+      }
+    },
+    {
+      "id": "31/D14/D14_009",
+      "year": 31,
+      "sol": 8,
+      "centerKm": 928.9813394597503,
+      "radiusKm": 306.3849934530229,
+      "areaRelative": 0.6188120175147052,
+      "circleIoU": 0.08493539478039458,
+      "prediction": {
+        "lon": 144.66911485817116,
+        "lat": 50.6864429581196,
+        "sol": 8,
+        "radiusKm": 494.4210190528642,
+        "areaKm2": 767969.0599999999,
+        "speedKmPerSol": 554.0976256390601,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 8,
+        "lon": 168.45,
+        "lat": 47.85,
+        "areaKm2": 2014672.8,
+        "confidence": 75,
+        "member": "D14_009"
+      }
+    },
+    {
+      "id": "31/D14/D14_012",
+      "year": 31,
+      "sol": 13,
+      "centerKm": 1873.4739502616399,
+      "radiusKm": 524.525860708515,
+      "areaRelative": 0.7274476689449222,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": 37.52388639967501,
+        "lat": 53.32392532400632,
+        "sol": 13,
+        "radiusKm": 572.9588420088996,
+        "areaKm2": 1031327.7999999999,
+        "speedKmPerSol": 506.3388178490569,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 13,
+        "lon": 92.65,
+        "lat": 54.45,
+        "areaKm2": 3783962.5,
+        "confidence": 75,
+        "member": "D14_012"
+      }
+    },
+    {
+      "id": "31/D14/D14_015",
+      "year": 31,
+      "sol": 16,
+      "centerKm": 1369.545847570878,
+      "radiusKm": 219.51320255330972,
+      "areaRelative": 0.34612862111613696,
+      "circleIoU": 0.124072126019246,
+      "prediction": {
+        "lon": -111.43490267587293,
+        "lat": 61.93724737837514,
+        "sol": 16,
+        "radiusKm": 927.5073931329533,
+        "areaKm2": 2702617.8000000003,
+        "speedKmPerSol": 783.6556858627995,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 16,
+        "lon": -67.55,
+        "lat": 55.55,
+        "areaKm2": 4133256,
+        "confidence": 75,
+        "member": "D14_015"
+      }
+    },
+    {
+      "id": "31/D14/D14_015",
+      "year": 31,
+      "sol": 17,
+      "centerKm": 908.7069373755103,
+      "radiusKm": 653.4585562828001,
+      "areaRelative": 0.5941493571401919,
+      "circleIoU": 0.3569581041087873,
+      "prediction": {
+        "lon": -34.07080394141292,
+        "lat": 59.76694853499924,
+        "sol": 17,
+        "radiusKm": 1147.020595686263,
+        "areaKm2": 4133255.9999999995,
+        "speedKmPerSol": 1075.9920297087294,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 17,
+        "lon": -32.15,
+        "lat": 44.45,
+        "areaKm2": 10184180,
+        "confidence": 75,
+        "member": "D14_015"
+      }
+    },
+    {
+      "id": "31/D14/D14_015",
+      "year": 31,
+      "sol": 18,
+      "centerKm": 530.9255904452194,
+      "radiusKm": 57.50850134148527,
+      "areaRelative": 0.0670777036566776,
+      "circleIoU": 0.6790645053767553,
+      "prediction": {
+        "lon": -15.910186922515663,
+        "lat": 40.779546944736346,
+        "sol": 18,
+        "radiusKm": 1800.4791519690632,
+        "areaKm2": 10184179.999999998,
+        "speedKmPerSol": 738.1522735515917,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 18,
+        "lon": -23.25,
+        "lat": 33.95,
+        "areaKm2": 9543991,
+        "confidence": 75,
+        "member": "D14_015"
+      }
+    },
+    {
+      "id": "31/D14/D14_015",
+      "year": 31,
+      "sol": 19,
+      "centerKm": 450.3278925439159,
+      "radiusKm": 38.20453424469406,
+      "areaRelative": 0.04532307840927155,
+      "circleIoU": 0.7146566961154371,
+      "prediction": {
+        "lon": -19.024720309098484,
+        "lat": 28.816404843466632,
+        "sol": 19,
+        "radiusKm": 1742.970650627578,
+        "areaKm2": 9543990.999999998,
+        "speedKmPerSol": 371.07259699520114,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 19,
+        "lon": -12.65,
+        "lat": 34.15,
+        "areaKm2": 9130183,
+        "confidence": 75,
+        "member": "D14_015"
+      }
+    },
+    {
+      "id": "31/D14/D14_015",
+      "year": 31,
+      "sol": 20,
+      "centerKm": 1500.1487167257128,
+      "radiusKm": 711.1015894875351,
+      "areaRelative": 1.9434050961732698,
+      "circleIoU": 0.16751206508136346,
+      "prediction": {
+        "lon": -7.343683977062142,
+        "lat": 34.36311901326181,
+        "sol": 20,
+        "radiusKm": 1704.7661163828839,
+        "areaKm2": 9130183,
+        "speedKmPerSol": 259.73155986911576,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 20,
+        "lon": -35.75,
+        "lat": 27.15,
+        "areaKm2": 3101911.8,
+        "confidence": 75,
+        "member": "D14_015"
+      }
+    },
+    {
+      "id": "31/D14/D14_025",
+      "year": 31,
+      "sol": 33,
+      "centerKm": 1129.0091459174942,
+      "radiusKm": 266.39568400786305,
+      "areaRelative": 0.6078582820275438,
+      "circleIoU": 0.002302508529245391,
+      "prediction": {
+        "lon": 66.33471551456842,
+        "lat": 54.6282111833166,
+        "sol": 33,
+        "radiusKm": 446.2966060537913,
+        "areaKm2": 625744.5,
+        "speedKmPerSol": 617.6212219866222,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 33,
+        "lon": 97.65,
+        "lat": 51.05,
+        "areaKm2": 1595710.1,
+        "confidence": 75,
+        "member": "D14_025"
+      }
+    },
+    {
+      "id": "31/D14/D14_027",
+      "year": 31,
+      "sol": 8,
+      "centerKm": 237.65734722630253,
+      "radiusKm": 91.15690277981943,
+      "areaRelative": 0.9879590609230171,
+      "circleIoU": 0.26983130293834806,
+      "prediction": {
+        "lon": -126.1790504592937,
+        "lat": -72.62897923871068,
+        "sol": 8,
+        "radiusKm": 313.5179179595194,
+        "areaKm2": 308798.08999999997,
+        "speedKmPerSol": 123.41450641790964,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 8,
+        "lon": -138.55,
+        "lat": -74.65,
+        "areaKm2": 155334.23,
+        "confidence": 75,
+        "member": "D14_027"
+      }
+    },
+    {
+      "id": "31/D14/D14_035",
+      "year": 31,
+      "sol": 15,
+      "centerKm": 42.82847441898662,
+      "radiusKm": 78.71878455698482,
+      "areaRelative": 0.31266203585845315,
+      "circleIoU": 0.6873379641415466,
+      "prediction": {
+        "lon": -103.0509692385105,
+        "lat": -71.80670047738327,
+        "sol": 15,
+        "radiusKm": 381.7824722578468,
+        "areaKm2": 457911.8099999999,
+        "speedKmPerSol": 235.3921006881256,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 15,
+        "lon": -105.05,
+        "lat": -71.45,
+        "areaKm2": 666210.56,
+        "confidence": 75,
+        "member": "D14_035"
+      }
+    },
+    {
+      "id": "31/D14/D14_035",
+      "year": 31,
+      "sol": 16,
+      "centerKm": 782.8355858783476,
+      "radiusKm": 122.07209401807955,
+      "areaRelative": 0.37517210396813805,
+      "circleIoU": 0.07558774736016341,
+      "prediction": {
+        "lon": -99.80015167341156,
+        "lat": -70.97958387450532,
+        "sol": 16,
+        "radiusKm": 460.5012568148316,
+        "areaKm2": 666210.5600000002,
+        "speedKmPerSol": 103.77236576006324,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "D14",
+        "sol": 16,
+        "lon": -75.85,
+        "lat": -61.65,
+        "areaKm2": 1066230.5,
+        "confidence": 75,
+        "member": "D14_035"
+      }
+    },
+    {
+      "id": "31/G16/G16_003",
+      "year": 31,
+      "sol": 7,
+      "centerKm": 775.063171497607,
+      "radiusKm": 244.16257784900301,
+      "areaRelative": 0.42725978860328373,
+      "circleIoU": 0.2813401438861121,
+      "prediction": {
+        "lon": 79.04471746677564,
+        "lat": 56.45918488961217,
+        "sol": 7,
+        "radiusKm": 759.7789483962165,
+        "areaKm2": 1813528.4999999998,
+        "speedKmPerSol": 656.3357669165342,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G16",
+        "sol": 7,
+        "lon": 100.45,
+        "lat": 52.25,
+        "areaKm2": 3166406.8,
+        "confidence": 75,
+        "member": "G16_003"
+      }
+    },
+    {
+      "id": "31/G16/G16_034",
+      "year": 31,
+      "sol": 5,
+      "centerKm": 83.00351938502983,
+      "radiusKm": 4.163574902277446,
+      "areaRelative": 0.07266814378415612,
+      "circleIoU": 0.3924460707991789,
+      "prediction": {
+        "lon": -37.93786340103469,
+        "lat": -69.71723606329807,
+        "sol": 5,
+        "radiusKm": 120.80033251152958,
+        "areaKm2": 45844.383,
+        "speedKmPerSol": 79.2083305223945,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G16",
+        "sol": 5,
+        "lon": -36.25,
+        "lat": -68.45,
+        "areaKm2": 42738.645,
+        "confidence": 75,
+        "member": "G16_034"
+      }
+    },
+    {
+      "id": "31/G16/G16_041",
+      "year": 31,
+      "sol": 4,
+      "centerKm": 7132.918849090478,
+      "radiusKm": 71.42889557311992,
+      "areaRelative": 0.5529329022520166,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -3.2898696333905946,
+        "lat": 38.69867768595499,
+        "sol": 4,
+        "radiusKm": 361.5929422195347,
+        "areaKm2": 410761.53,
+        "speedKmPerSol": 576.1135089363953,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G16",
+        "sol": 4,
+        "lon": -87.15,
+        "lat": -61.35,
+        "areaKm2": 264506.94,
+        "confidence": 75,
+        "member": "G16_041"
+      }
+    },
+    {
+      "id": "31/G16/G16_059",
+      "year": 31,
+      "sol": 12,
+      "centerKm": 538.4625175026556,
+      "radiusKm": 58.15543762453228,
+      "areaRelative": 0.27665082312104344,
+      "circleIoU": 0.07778386912432957,
+      "prediction": {
+        "lon": -115.00340620258555,
+        "lat": -61.830475216777614,
+        "sol": 12,
+        "radiusKm": 330.8425036112863,
+        "areaKm2": 343868.55999999994,
+        "speedKmPerSol": 511.5412535923756,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G16",
+        "sol": 12,
+        "lon": -97.75,
+        "lat": -58.65,
+        "areaKm2": 475383.91,
+        "confidence": 75,
+        "member": "G16_059"
+      }
+    },
+    {
+      "id": "31/G16/G16_087",
+      "year": 31,
+      "sol": 20,
+      "centerKm": 941.1097919644865,
+      "radiusKm": 329.9519041101924,
+      "areaRelative": 0.7782609998192671,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -160.18963879775532,
+        "lat": -66.21765679745803,
+        "sol": 20,
+        "radiusKm": 293.64804467072,
+        "areaKm2": 270896.94000000006,
+        "speedKmPerSol": 149.48195767256763,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G16",
+        "sol": 20,
+        "lon": -122.75,
+        "lat": -63.45,
+        "areaKm2": 1221692.8,
+        "confidence": 75,
+        "member": "G16_087"
+      }
+    },
+    {
+      "id": "31/G17/G17_032",
+      "year": 31,
+      "sol": 22,
+      "centerKm": 195.59203760681135,
+      "radiusKm": 191.90089669935742,
+      "areaRelative": 0.6178599545420305,
+      "circleIoU": 0.3814821281573333,
+      "prediction": {
+        "lon": -45.304973997257605,
+        "lat": -30.480672468166997,
+        "sol": 22,
+        "radiusKm": 310.68741149461215,
+        "areaKm2": 303247.4699999999,
+        "speedKmPerSol": 981.4350562060159,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G17",
+        "sol": 22,
+        "lon": -43.35,
+        "lat": -27.65,
+        "areaKm2": 793550.62,
+        "confidence": 75,
+        "member": "G17_032"
+      }
+    },
+    {
+      "id": "31/G18/G18_013",
+      "year": 31,
+      "sol": 23,
+      "centerKm": 391.3539897434945,
+      "radiusKm": 17.98743485521237,
+      "areaRelative": 0.14999816517392944,
+      "circleIoU": 0.07282304240080312,
+      "prediction": {
+        "lon": -16.82193438461877,
+        "lat": 62.71393021896803,
+        "sol": 23,
+        "radiusKm": 266.50243727426556,
+        "areaKm2": 223127.06000000006,
+        "speedKmPerSol": 225.2901690133939,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G18",
+        "sol": 23,
+        "lon": -2.54999,
+        "lat": 62.15,
+        "areaKm2": 194023.84,
+        "confidence": 75,
+        "member": "G18_013"
+      }
+    },
+    {
+      "id": "31/G18/G18_015",
+      "year": 31,
+      "sol": 26,
+      "centerKm": 396.5547333115262,
+      "radiusKm": 196.0461209656271,
+      "areaRelative": 0.3228886858334085,
+      "circleIoU": 0.5651514756101176,
+      "prediction": {
+        "lon": -27.55870068373497,
+        "lat": 59.5451165733669,
+        "sol": 26,
+        "radiusKm": 910.7320497745361,
+        "areaKm2": 2605740.2,
+        "speedKmPerSol": 147.07570955636416,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 31,
+        "phase": "G18",
+        "sol": 26,
+        "lon": -15.35,
+        "lat": 57.45,
+        "areaKm2": 3848318.8,
+        "confidence": 75,
+        "member": "G18_015"
+      }
+    },
+    {
+      "id": "32/D15/D15_018",
+      "year": 32,
+      "sol": 30,
+      "centerKm": 512.7615549561284,
+      "radiusKm": 364.49080515523025,
+      "areaRelative": 2.9859771273129265,
+      "circleIoU": 0.19648716945078912,
+      "prediction": {
+        "lon": 48.980285024633304,
+        "lat": 57.54099761394263,
+        "sol": 30,
+        "radiusKm": 730.2650375046509,
+        "areaKm2": 1675370.6000000003,
+        "speedKmPerSol": 267.45558801384215,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 30,
+        "lon": 63.75,
+        "lat": 54.75,
+        "areaKm2": 420316.16,
+        "confidence": 75,
+        "member": "D15_018"
+      }
+    },
+    {
+      "id": "32/D15/D15_028",
+      "year": 32,
+      "sol": 3,
+      "centerKm": 174.3994690322,
+      "radiusKm": 72.2460426549278,
+      "areaRelative": 0.20654239620058354,
+      "circleIoU": 0.6779041960601884,
+      "prediction": {
+        "lon": -79.62945318906952,
+        "lat": -63.97137179635876,
+        "sol": 3,
+        "radiusKm": 589.11986336737,
+        "areaKm2": 1090328.1,
+        "speedKmPerSol": 249.39056863322983,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 3,
+        "lon": -73.25,
+        "lat": -65.05,
+        "areaKm2": 1374147.9,
+        "confidence": 75,
+        "member": "D15_028"
+      }
+    },
+    {
+      "id": "32/D15/D15_056",
+      "year": 32,
+      "sol": 21,
+      "centerKm": 347.4067810349344,
+      "radiusKm": 72.25654377956016,
+      "areaRelative": 0.5764329822885957,
+      "circleIoU": 0.2002296293243937,
+      "prediction": {
+        "lon": -164.6997263560794,
+        "lat": -63.8786526460459,
+        "sol": 21,
+        "radiusKm": 354.9937125759723,
+        "areaKm2": 395905.19000000006,
+        "speedKmPerSol": 405.0109710747344,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 21,
+        "lon": -174.15,
+        "lat": -68.35,
+        "areaKm2": 251139.88,
+        "confidence": 75,
+        "member": "D15_056"
+      }
+    },
+    {
+      "id": "32/D15/D15_059",
+      "year": 32,
+      "sol": 19,
+      "centerKm": 513.6235001868339,
+      "radiusKm": 60.05184606856005,
+      "areaRelative": 0.33438351302391806,
+      "circleIoU": 0.02875157705966073,
+      "prediction": {
+        "lon": -33.76671058563784,
+        "lat": -72.60356498675709,
+        "sol": 19,
+        "radiusKm": 266.05675135258866,
+        "areaKm2": 222381.39000000007,
+        "speedKmPerSol": 26.356194779717026,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 19,
+        "lon": -7.75,
+        "lat": -69.95,
+        "areaKm2": 334098.38,
+        "confidence": 75,
+        "member": "D15_059"
+      }
+    },
+    {
+      "id": "32/D15/D15_064",
+      "year": 32,
+      "sol": 25,
+      "centerKm": 213.76009129974295,
+      "radiusKm": 95.80928473106428,
+      "areaRelative": 0.3038584347288155,
+      "circleIoU": 0.6583788855167385,
+      "prediction": {
+        "lon": 42.744188575144335,
+        "lat": -66.66838726774704,
+        "sol": 25,
+        "radiusKm": 771.1588746384185,
+        "areaKm2": 1868261.1999999995,
+        "speedKmPerSol": 466.6261182097499,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 25,
+        "lon": 33.65,
+        "lat": -67.35,
+        "areaKm2": 1432871.2,
+        "confidence": 75,
+        "member": "D15_064"
+      }
+    },
+    {
+      "id": "32/D15/D15_075",
+      "year": 32,
+      "sol": 25,
+      "centerKm": 2099.377628964727,
+      "radiusKm": 196.5182111874077,
+      "areaRelative": 0.8929472686529035,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -121.83124790815589,
+        "lat": -83.47151157948075,
+        "sol": 25,
+        "radiusKm": 95.5671607707222,
+        "areaKm2": 28692.424,
+        "speedKmPerSol": 1828.2078458931262,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 25,
+        "lon": 18.35,
+        "lat": -59.75,
+        "areaKm2": 268021.41,
+        "confidence": 100,
+        "member": "D15_075"
+      }
+    },
+    {
+      "id": "32/D15/D15_080",
+      "year": 32,
+      "sol": 27,
+      "centerKm": 94.5497031186286,
+      "radiusKm": 32.09117490588605,
+      "areaRelative": 0.24965232081765726,
+      "circleIoU": 0.5607667740752668,
+      "prediction": {
+        "lon": -37.924524149381455,
+        "lat": -69.60083753075354,
+        "sol": 27,
+        "radiusKm": 207.80000021457863,
+        "areaKm2": 135656.61,
+        "speedKmPerSol": 57.53788863857591,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 27,
+        "lon": -35.15,
+        "lat": -68.35,
+        "areaKm2": 180791.67,
+        "confidence": 75,
+        "member": "D15_080"
+      }
+    },
+    {
+      "id": "32/D15/D15_085",
+      "year": 32,
+      "sol": 31,
+      "centerKm": 1000.6819376450921,
+      "radiusKm": 186.91461466439193,
+      "areaRelative": 1.7398990991577443,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -74.78177552652966,
+        "lat": -62.057073148407895,
+        "sol": 31,
+        "radiusKm": 472.16544232998604,
+        "areaKm2": 700387.3100000002,
+        "speedKmPerSol": 561.7355712426156,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 31,
+        "lon": -42.05,
+        "lat": -57.45,
+        "areaKm2": 255625.22,
+        "confidence": 75,
+        "member": "D15_085"
+      }
+    },
+    {
+      "id": "32/D15/D15_085",
+      "year": 32,
+      "sol": 32,
+      "centerKm": 298.7694018382505,
+      "radiusKm": 6.317627479327882,
+      "areaRelative": 0.04286597562866483,
+      "circleIoU": 0.22791782746206382,
+      "prediction": {
+        "lon": -17.018665809143954,
+        "lat": -58.840447662783944,
+        "sol": 32,
+        "radiusKm": 285.2508276655941,
+        "areaKm2": 255625.22,
+        "speedKmPerSol": 781.1947409213219,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D15",
+        "sol": 32,
+        "lon": -10.45,
+        "lat": -62.75,
+        "areaKm2": 267073.59,
+        "confidence": 75,
+        "member": "D15_085"
+      }
+    },
+    {
+      "id": "32/D16/D16_001",
+      "year": 32,
+      "sol": 3,
+      "centerKm": 744.4485110288482,
+      "radiusKm": 209.07020700444593,
+      "areaRelative": 0.3837168045107975,
+      "circleIoU": 0.2949201030382623,
+      "prediction": {
+        "lon": 116.54963727319762,
+        "lat": 38.235195080177085,
+        "sol": 3,
+        "radiusKm": 763.5170359258618,
+        "areaKm2": 1831417.4,
+        "speedKmPerSol": 368.99100643172056,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D16",
+        "sol": 3,
+        "lon": 132.35,
+        "lat": 41.75,
+        "areaKm2": 2971714,
+        "confidence": 75,
+        "member": "D16_001"
+      }
+    },
+    {
+      "id": "32/D16/D16_017",
+      "year": 32,
+      "sol": 23,
+      "centerKm": 196.57340456713138,
+      "radiusKm": 78.65420598143953,
+      "areaRelative": 0.14373213686519754,
+      "circleIoU": 0.7651510285714359,
+      "prediction": {
+        "lon": -178.75196212591334,
+        "lat": 58.33536826576522,
+        "sol": 23,
+        "radiusKm": 974.9492296683774,
+        "areaKm2": 2986165.5,
+        "speedKmPerSol": 373.98303020861226,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D16",
+        "sol": 23,
+        "lon": -172.45,
+        "lat": 58.85,
+        "areaKm2": 3487419.8,
+        "confidence": 75,
+        "member": "D16_017"
+      }
+    },
+    {
+      "id": "32/D16/D16_027",
+      "year": 32,
+      "sol": 5,
+      "centerKm": 1030.338391635115,
+      "radiusKm": 130.62765432464073,
+      "areaRelative": 0.5040826872946425,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -122.00410895638629,
+        "lat": -61.26793948714309,
+        "sol": 5,
+        "radiusKm": 311.0012266431812,
+        "areaKm2": 303860.37999999995,
+        "speedKmPerSol": 416.46679016168326,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D16",
+        "sol": 5,
+        "lon": -85.95,
+        "lat": -60.25,
+        "areaKm2": 612723.88,
+        "confidence": 75,
+        "member": "D16_027"
+      }
+    },
+    {
+      "id": "32/D16/D16_053",
+      "year": 32,
+      "sol": 21,
+      "centerKm": 431.8674182840021,
+      "radiusKm": 78.62724531469189,
+      "areaRelative": 1.5335449824917136,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": 175.61660667971785,
+        "lat": -62.802020975954626,
+        "sol": 21,
+        "radiusKm": 211.5083315945027,
+        "areaKm2": 140541.58,
+        "speedKmPerSol": 147.09126799226314,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D16",
+        "sol": 21,
+        "lon": -174.85,
+        "lat": -57.25,
+        "areaKm2": 55472.305,
+        "confidence": 75,
+        "member": "D16_053"
+      }
+    },
+    {
+      "id": "32/D16/D16_053",
+      "year": 32,
+      "sol": 22,
+      "centerKm": 649.3298648003348,
+      "radiusKm": 95.09745296672295,
+      "areaRelative": 0.660266474263116,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -169.85689513019457,
+        "lat": -55.81718569092369,
+        "sol": 22,
+        "radiusKm": 132.8810862798108,
+        "areaKm2": 55472.305,
+        "speedKmPerSol": 183.56059326356302,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D16",
+        "sol": 22,
+        "lon": -150.05,
+        "lat": -57.25,
+        "areaKm2": 163281.81,
+        "confidence": 75,
+        "member": "D16_053"
+      }
+    },
+    {
+      "id": "32/D17/D17_093",
+      "year": 32,
+      "sol": 10,
+      "centerKm": 255.9970995058086,
+      "radiusKm": 26.11457323566043,
+      "areaRelative": 0.13111056167434404,
+      "circleIoU": 0.39721676405434947,
+      "prediction": {
+        "lon": -22.577616880670917,
+        "lat": 57.77216537357063,
+        "sol": 10,
+        "radiusKm": 358.72912924194947,
+        "areaKm2": 404280.83999999997,
+        "speedKmPerSol": 305.4569026874673,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D17",
+        "sol": 10,
+        "lon": -28.35,
+        "lat": 60.95,
+        "areaKm2": 465284.56,
+        "confidence": 75,
+        "member": "D17_093"
+      }
+    },
+    {
+      "id": "32/D17/D17_101",
+      "year": 32,
+      "sol": 24,
+      "centerKm": 94.93415296193874,
+      "radiusKm": 107.1383618165105,
+      "areaRelative": 0.24417163281175913,
+      "circleIoU": 0.8037476290470112,
+      "prediction": {
+        "lon": 122.75695409328978,
+        "lat": 49.13175723058585,
+        "sol": 24,
+        "radiusKm": 1035.3506365481962,
+        "areaKm2": 3367633.200000001,
+        "speedKmPerSol": 395.7167269961051,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D17",
+        "sol": 24,
+        "lon": 121.95,
+        "lat": 50.65,
+        "areaKm2": 2706727.2,
+        "confidence": 75,
+        "member": "D17_101"
+      }
+    },
+    {
+      "id": "32/D17/D17_103",
+      "year": 32,
+      "sol": 30,
+      "centerKm": 938.0375704910308,
+      "radiusKm": 67.34827050165632,
+      "areaRelative": 0.4317565135578664,
+      "circleIoU": 0,
+      "prediction": {
+        "lon": -68.37033435496119,
+        "lat": 59.054579810929,
+        "sol": 30,
+        "radiusKm": 409.98244403097414,
+        "areaKm2": 528056.5,
+        "speedKmPerSol": 138.80871410155743,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D17",
+        "sol": 30,
+        "lon": -39.25,
+        "lat": 55.85,
+        "areaKm2": 368817.25,
+        "confidence": 75,
+        "member": "D17_103"
+      }
+    },
+    {
+      "id": "32/D17/D17_103",
+      "year": 32,
+      "sol": 31,
+      "centerKm": 410.887227182276,
+      "radiusKm": 87.7754843101103,
+      "areaRelative": 0.36628011160577406,
+      "circleIoU": 0.21015734743801615,
+      "prediction": {
+        "lon": -25.1896794232739,
+        "lat": 54.16668256970566,
+        "sol": 31,
+        "radiusKm": 342.6341735293178,
+        "areaKm2": 368817.25,
+        "speedKmPerSol": 486.3669011688317,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D17",
+        "sol": 31,
+        "lon": -31.75,
+        "lat": 48.55,
+        "areaKm2": 581987.81,
+        "confidence": 75,
+        "member": "D17_103"
+      }
+    },
+    {
+      "id": "32/D18/D18_020",
+      "year": 32,
+      "sol": 25,
+      "centerKm": 603.3551210584507,
+      "radiusKm": 79.50321327068758,
+      "areaRelative": 0.35491255920653814,
+      "circleIoU": 0.04248918770512747,
+      "prediction": {
+        "lon": 177.8657400516745,
+        "lat": 57.768554445722856,
+        "sol": 25,
+        "radiusKm": 324.42184437262904,
+        "areaKm2": 330651.1599999999,
+        "speedKmPerSol": 319.46820243534444,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D18",
+        "sol": 25,
+        "lon": -164.75,
+        "lat": 63.45,
+        "areaKm2": 512567.97,
+        "confidence": 75,
+        "member": "D18_020"
+      }
+    },
+    {
+      "id": "32/D18/D18_020",
+      "year": 32,
+      "sol": 26,
+      "centerKm": 601.8695789579779,
+      "radiusKm": 4.162074484998641,
+      "areaRelative": 0.020293950441704515,
+      "circleIoU": 0.08210282744780176,
+      "prediction": {
+        "lon": -149.38367666486954,
+        "lat": 66.88352185055602,
+        "sol": 26,
+        "radiusKm": 403.9250576433166,
+        "areaKm2": 512567.9700000001,
+        "speedKmPerSol": 430.86009908477786,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D18",
+        "sol": 26,
+        "lon": -164.95,
+        "lat": 59.45,
+        "areaKm2": 523185.47,
+        "confidence": 75,
+        "member": "D18_020"
+      }
+    },
+    {
+      "id": "32/D18/D18_028",
+      "year": 32,
+      "sol": 20,
+      "centerKm": 520.2536190733863,
+      "radiusKm": 196.2325973761093,
+      "areaRelative": 0.4736852971244135,
+      "circleIoU": 0.29132005616690787,
+      "prediction": {
+        "lon": -34.54111845899172,
+        "lat": -22.098523158303728,
+        "sol": 20,
+        "radiusKm": 518.5764570096611,
+        "areaKm2": 844841.9400000001,
+        "speedKmPerSol": 406.6890264786147,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D18",
+        "sol": 20,
+        "lon": -37.45,
+        "lat": -13.75,
+        "areaKm2": 1605203,
+        "confidence": 75,
+        "member": "D18_028"
+      }
+    },
+    {
+      "id": "32/D19/D19_004",
+      "year": 32,
+      "sol": 21,
+      "centerKm": 1080.3004490220578,
+      "radiusKm": 138.69916329345529,
+      "areaRelative": 0.3061667651512355,
+      "circleIoU": 0.0969171105808601,
+      "prediction": {
+        "lon": -88.6283440319408,
+        "lat": 65.55981135953233,
+        "sol": 21,
+        "radiusKm": 691.6683114163144,
+        "areaKm2": 1502953.7999999998,
+        "speedKmPerSol": 80.37768238135511,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "D19",
+        "sol": 21,
+        "lon": -43.35,
+        "lat": 65.75,
+        "areaKm2": 2166160,
+        "confidence": 75,
+        "member": "D19_004"
+      }
+    },
+    {
+      "id": "32/F03/F03_011",
+      "year": 32,
+      "sol": 26,
+      "centerKm": 738.0777847721805,
+      "radiusKm": 58.852201233409914,
+      "areaRelative": 0.2230037854433435,
+      "circleIoU": 0.05878207070130074,
+      "prediction": {
+        "lon": 42.749203730214845,
+        "lat": 60.039288660756306,
+        "sol": 26,
+        "radiusKm": 437.68143217334165,
+        "areaKm2": 601819.31,
+        "speedKmPerSol": 316.55792026893806,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F03",
+        "sol": 26,
+        "lon": 68.25,
+        "lat": 63.75,
+        "areaKm2": 774546,
+        "confidence": 75,
+        "member": "F03_011"
+      }
+    },
+    {
+      "id": "32/F03/F03_012",
+      "year": 32,
+      "sol": 26,
+      "centerKm": 174.32855945835178,
+      "radiusKm": 82.98654876650892,
+      "areaRelative": 0.4763024500896168,
+      "circleIoU": 0.369027166831942,
+      "prediction": {
+        "lon": -72.03573502711743,
+        "lat": 78.52470420932116,
+        "sol": 26,
+        "radiusKm": 217.32973820729723,
+        "areaKm2": 148384.38,
+        "speedKmPerSol": 46.890690182300446,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F03",
+        "sol": 26,
+        "lon": -84.45,
+        "lat": 77.15,
+        "areaKm2": 283339.84,
+        "confidence": 75,
+        "member": "F03_012"
+      }
+    },
+    {
+      "id": "32/F03/F03_012",
+      "year": 32,
+      "sol": 27,
+      "centerKm": 62.199219134738506,
+      "radiusKm": 200.1835969202147,
+      "areaRelative": 0.639960782209849,
+      "circleIoU": 0.3600392177901509,
+      "prediction": {
+        "lon": -92.00676756777955,
+        "lat": 76.4311313666168,
+        "sol": 27,
+        "radiusKm": 300.31628697380614,
+        "areaKm2": 283339.8400000001,
+        "speedKmPerSol": 110.55365111340642,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F03",
+        "sol": 27,
+        "lon": -90.45,
+        "lat": 75.45,
+        "areaKm2": 786969.38,
+        "confidence": 75,
+        "member": "F03_012"
+      }
+    },
+    {
+      "id": "32/F03/F03_021",
+      "year": 32,
+      "sol": 4,
+      "centerKm": 377.52866733994904,
+      "radiusKm": 309.2771860863195,
+      "areaRelative": 0.6474431146225219,
+      "circleIoU": 0.3291389840094496,
+      "prediction": {
+        "lon": 67.7977420944004,
+        "lat": -34.60010301488745,
+        "sol": 4,
+        "radiusKm": 452.0486292547415,
+        "areaKm2": 641978.0599999999,
+        "speedKmPerSol": 74.28519568096634,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F03",
+        "sol": 4,
+        "lon": 75.55,
+        "lat": -34.55,
+        "areaKm2": 1820920.5,
+        "confidence": 75,
+        "member": "F03_021"
+      }
+    },
+    {
+      "id": "32/F03/F03_021",
+      "year": 32,
+      "sol": 5,
+      "centerKm": 350.8737018024591,
+      "radiusKm": 63.47465868543418,
+      "areaRelative": 0.19018783565775435,
+      "circleIoU": 0.5293183210174357,
+      "prediction": {
+        "lon": 79.46983419081391,
+        "lat": -33.9672952015459,
+        "sol": 5,
+        "radiusKm": 761.325815341061,
+        "areaKm2": 1820920.5000000002,
+        "speedKmPerSol": 194.71937504832655,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F03",
+        "sol": 5,
+        "lon": 73.65,
+        "lat": -30.65,
+        "areaKm2": 1529943.8,
+        "confidence": 75,
+        "member": "F03_021"
+      }
+    },
+    {
+      "id": "32/F04/F04_005",
+      "year": 32,
+      "sol": 13,
+      "centerKm": 125.77064859746497,
+      "radiusKm": 115.45236810938712,
+      "areaRelative": 1.0932444425629162,
+      "circleIoU": 0.4719078276321075,
+      "prediction": {
+        "lon": -122.65308143674315,
+        "lat": 73.58610107346318,
+        "sol": 13,
+        "radiusKm": 373.8478467069737,
+        "areaKm2": 439075.94,
+        "speedKmPerSol": 186.34214123669628,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F04",
+        "sol": 13,
+        "lon": -119.05,
+        "lat": 71.75,
+        "areaKm2": 209758.56,
+        "confidence": 75,
+        "member": "F04_005"
+      }
+    },
+    {
+      "id": "32/F04/F04_010",
+      "year": 32,
+      "sol": 17,
+      "centerKm": 314.4947484309578,
+      "radiusKm": 380.9323166442476,
+      "areaRelative": 0.7818497202235222,
+      "circleIoU": 0.21815027977647783,
+      "prediction": {
+        "lon": -143.22229881457605,
+        "lat": 75.06852399994357,
+        "sol": 17,
+        "radiusKm": 333.85044184557574,
+        "areaKm2": 350149.7199999999,
+        "speedKmPerSol": 80.09708143855649,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F04",
+        "sol": 17,
+        "lon": -130.35,
+        "lat": 71.25,
+        "areaKm2": 1605084.9,
+        "confidence": 75,
+        "member": "F04_010"
+      }
+    },
+    {
+      "id": "32/F04/F04_013",
+      "year": 32,
+      "sol": 18,
+      "centerKm": 137.21079942852708,
+      "radiusKm": 1.9762132481232015,
+      "areaRelative": 0.010503507270310988,
+      "circleIoU": 0.6264481139381384,
+      "prediction": {
+        "lon": 134.7314328734767,
+        "lat": 74.89107466541985,
+        "sol": 18,
+        "radiusKm": 379.2576173238697,
+        "areaKm2": 451875.18999999994,
+        "speedKmPerSol": 80.56981425026912,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F04",
+        "sol": 18,
+        "lon": 139.85,
+        "lat": 73.05,
+        "areaKm2": 447178.25,
+        "confidence": 75,
+        "member": "F04_013"
+      }
+    },
+    {
+      "id": "32/F04/F04_043",
+      "year": 32,
+      "sol": 13,
+      "centerKm": 804.980364743663,
+      "radiusKm": 367.04778222617153,
+      "areaRelative": 1.3716141639950736,
+      "circleIoU": 0.23990418365834376,
+      "prediction": {
+        "lon": -158.22699978111933,
+        "lat": -48.318816152924796,
+        "sol": 13,
+        "radiusKm": 1046.760108963146,
+        "areaKm2": 3442264.2,
+        "speedKmPerSol": 813.158283414395,
+        "centerErrorKm": 1334.6907590054516,
+        "radiusErrorKm": 450.76485381509247,
+        "source": "FORECAST_FROM_ARCHIVED_ORBITAL_OBSERVATIONS"
+      },
+      "truth": {
+        "year": 32,
+        "phase": "F04",
+        "sol": 13,
+        "lon": -175.25,
+        "lat": -41.85,
+        "areaKm2": 1451443.6,
+        "confidence": 75,
+        "member": "F04_043"
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "31/D06/D06_006",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 8,
+          "lon": 24.55,
+          "lat": 57.85,
+          "areaKm2": 1682146.5,
+          "confidence": 75,
+          "member": "D06_006"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 9,
+          "lon": 74.45,
+          "lat": 51.55,
+          "areaKm2": 2328704.8,
+          "confidence": 75,
+          "member": "D06_006"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 10,
+          "lon": 105.55,
+          "lat": 43.15,
+          "areaKm2": 4245796.0,
+          "confidence": 75,
+          "member": "D06_006"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 11,
+          "lon": 132.25,
+          "lat": 40.85,
+          "areaKm2": 5948763.0,
+          "confidence": 75,
+          "member": "D06_006"
+        }
+      ]
+    },
+    {
+      "id": "31/D06/D06_007",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 9,
+          "lon": -36.75,
+          "lat": 55.75,
+          "areaKm2": 290008.56,
+          "confidence": 75,
+          "member": "D06_007"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 12,
+          "lon": 91.35,
+          "lat": 50.25,
+          "areaKm2": 5265802.5,
+          "confidence": 75,
+          "member": "D06_007"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 13,
+          "lon": 114.05,
+          "lat": 37.25,
+          "areaKm2": 11170611.0,
+          "confidence": 75,
+          "member": "D06_007"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 14,
+          "lon": 124.35,
+          "lat": 28.25,
+          "areaKm2": 18253682.0,
+          "confidence": 75,
+          "member": "D06_007"
+        }
+      ]
+    },
+    {
+      "id": "31/D02/D02_002",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 5,
+          "lon": 90.25,
+          "lat": 75.85,
+          "areaKm2": 19489.104,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 6,
+          "lon": 109.25,
+          "lat": 70.45,
+          "areaKm2": 490014.84,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 10,
+          "lon": 166.45,
+          "lat": 74.35,
+          "areaKm2": 886581.25,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 11,
+          "lon": -107.05,
+          "lat": 76.25,
+          "areaKm2": 502747.12,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 12,
+          "lon": -84.05,
+          "lat": 72.55,
+          "areaKm2": 724238.94,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 13,
+          "lon": -79.25,
+          "lat": 68.25,
+          "areaKm2": 1157855.2,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 14,
+          "lon": -66.45,
+          "lat": 65.55,
+          "areaKm2": 952134.81,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 15,
+          "lon": -60.65,
+          "lat": 63.85,
+          "areaKm2": 1400102.8,
+          "confidence": 75,
+          "member": "D02_002"
+        },
+        {
+          "year": 31,
+          "phase": "D02",
+          "sol": 16,
+          "lon": -59.05,
+          "lat": 62.55,
+          "areaKm2": 560911.75,
+          "confidence": 75,
+          "member": "D02_002"
+        }
+      ]
+    },
+    {
+      "id": "31/D08/D08_041",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 7,
+          "lon": 160.45,
+          "lat": -66.35,
+          "areaKm2": 118253.3,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 8,
+          "lon": 160.75,
+          "lat": -66.35,
+          "areaKm2": 93505.68,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 9,
+          "lon": 158.85,
+          "lat": -66.45,
+          "areaKm2": 361928.41,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 10,
+          "lon": 167.25,
+          "lat": -67.65,
+          "areaKm2": 793664.31,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 11,
+          "lon": 172.25,
+          "lat": -66.95,
+          "areaKm2": 759075.31,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 12,
+          "lon": 166.75,
+          "lat": -67.45,
+          "areaKm2": 980894.94,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 13,
+          "lon": 151.75,
+          "lat": -67.65,
+          "areaKm2": 540078.81,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 14,
+          "lon": 159.55,
+          "lat": -66.05,
+          "areaKm2": 1394471.9,
+          "confidence": 75,
+          "member": "D08_041"
+        },
+        {
+          "year": 31,
+          "phase": "D08",
+          "sol": 15,
+          "lon": 164.25,
+          "lat": -68.95,
+          "areaKm2": 826161.75,
+          "confidence": 75,
+          "member": "D08_041"
+        }
+      ]
+    },
+    {
+      "id": "31/D14/D14_015",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 14,
+          "lon": 177.35,
+          "lat": 52.35,
+          "areaKm2": 1282642.1,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 15,
+          "lon": -136.45,
+          "lat": 57.55,
+          "areaKm2": 2702617.8,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 16,
+          "lon": -67.55,
+          "lat": 55.55,
+          "areaKm2": 4133256,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 17,
+          "lon": -32.15,
+          "lat": 44.45,
+          "areaKm2": 10184180,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 18,
+          "lon": -23.25,
+          "lat": 33.95,
+          "areaKm2": 9543991,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 19,
+          "lon": -12.65,
+          "lat": 34.15,
+          "areaKm2": 9130183,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 20,
+          "lon": -35.75,
+          "lat": 27.15,
+          "areaKm2": 3101911.8,
+          "confidence": 75,
+          "member": "D14_015"
+        },
+        {
+          "year": 31,
+          "phase": "D14",
+          "sol": 22,
+          "lon": -38.85,
+          "lat": 24.85,
+          "areaKm2": 1630503.2,
+          "confidence": 75,
+          "member": "D14_015"
+        }
+      ]
+    },
+    {
+      "id": "31/D04/D04_022",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 26,
+          "lon": -30.55,
+          "lat": 60.35,
+          "areaKm2": 881914.44,
+          "confidence": 75,
+          "member": "D04_022"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 27,
+          "lon": -12.65,
+          "lat": 62.65,
+          "areaKm2": 1658339.1,
+          "confidence": 75,
+          "member": "D04_022"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 28,
+          "lon": 47.45,
+          "lat": 66.45,
+          "areaKm2": 2792643,
+          "confidence": 75,
+          "member": "D04_022"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 29,
+          "lon": 127.85,
+          "lat": 70.85,
+          "areaKm2": 1079952.4,
+          "confidence": 75,
+          "member": "D04_022"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 30,
+          "lon": 149.35,
+          "lat": 64.05,
+          "areaKm2": 3485490.8,
+          "confidence": 75,
+          "member": "D04_022"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 32,
+          "lon": -73.65,
+          "lat": 64.75,
+          "areaKm2": 2327944,
+          "confidence": 75,
+          "member": "D04_022"
+        }
+      ]
+    },
+    {
+      "id": "31/D04/D04_034",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 5,
+          "lon": 102.05,
+          "lat": -50.85,
+          "areaKm2": 679709.69,
+          "confidence": 75,
+          "member": "D04_034"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 6,
+          "lon": 131.25,
+          "lat": -51.45,
+          "areaKm2": 304920.16,
+          "confidence": 75,
+          "member": "D04_034"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 7,
+          "lon": 176.25,
+          "lat": -47.25,
+          "areaKm2": 1492415.9,
+          "confidence": 75,
+          "member": "D04_034"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 9,
+          "lon": -155.25,
+          "lat": -37.65,
+          "areaKm2": 6065404.5,
+          "confidence": 75,
+          "member": "D04_034"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 10,
+          "lon": -106.15,
+          "lat": -45.45,
+          "areaKm2": 1384295.9,
+          "confidence": 75,
+          "member": "D04_034"
+        },
+        {
+          "year": 31,
+          "phase": "D04",
+          "sol": 11,
+          "lon": -82.35,
+          "lat": -46.55,
+          "areaKm2": 235113.83,
+          "confidence": 75,
+          "member": "D04_034"
+        }
+      ]
+    },
+    {
+      "id": "31/D05/D05_023",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D05",
+          "sol": 2,
+          "lon": 44.45,
+          "lat": -52.05,
+          "areaKm2": 184859.19,
+          "confidence": 100,
+          "member": "D05_023"
+        },
+        {
+          "year": 31,
+          "phase": "D05",
+          "sol": 3,
+          "lon": 42.85,
+          "lat": -47.05,
+          "areaKm2": 491915.56,
+          "confidence": 75,
+          "member": "D05_023"
+        },
+        {
+          "year": 31,
+          "phase": "D05",
+          "sol": 4,
+          "lon": 53.75,
+          "lat": -56.55,
+          "areaKm2": 1183532.4,
+          "confidence": 75,
+          "member": "D05_023"
+        },
+        {
+          "year": 31,
+          "phase": "D05",
+          "sol": 6,
+          "lon": 54.15,
+          "lat": -53.45,
+          "areaKm2": 447714.06,
+          "confidence": 75,
+          "member": "D05_023"
+        },
+        {
+          "year": 31,
+          "phase": "D05",
+          "sol": 7,
+          "lon": 60.65,
+          "lat": -55.15,
+          "areaKm2": 561835.81,
+          "confidence": 75,
+          "member": "D05_023"
+        }
+      ]
+    },
+    {
+      "id": "31/D06/D06_009",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 11,
+          "lon": -43.45,
+          "lat": 48.35,
+          "areaKm2": 2517683.8,
+          "confidence": 75,
+          "member": "D06_009"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 12,
+          "lon": -8.14999,
+          "lat": 48.75,
+          "areaKm2": 7880743.5,
+          "confidence": 75,
+          "member": "D06_009"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 14,
+          "lon": 37.65,
+          "lat": 44.45,
+          "areaKm2": 7865647,
+          "confidence": 75,
+          "member": "D06_009"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 16,
+          "lon": -22.65,
+          "lat": 27.05,
+          "areaKm2": 709113.5,
+          "confidence": 75,
+          "member": "D06_009"
+        },
+        {
+          "year": 31,
+          "phase": "D06",
+          "sol": 17,
+          "lon": -26.05,
+          "lat": 25.95,
+          "areaKm2": 304346.22,
+          "confidence": 75,
+          "member": "D06_009"
+        }
+      ]
+    },
+    {
+      "id": "31/D11/D11_033",
+      "observations": [
+        {
+          "year": 31,
+          "phase": "D11",
+          "sol": 25,
+          "lon": -41.35,
+          "lat": -1.24999,
+          "areaKm2": 3196517,
+          "confidence": 75,
+          "member": "D11_033"
+        },
+        {
+          "year": 31,
+          "phase": "D11",
+          "sol": 26,
+          "lon": -48.35,
+          "lat": -13.55,
+          "areaKm2": 4396953,
+          "confidence": 75,
+          "member": "D11_033"
+        },
+        {
+          "year": 31,
+          "phase": "D11",
+          "sol": 27,
+          "lon": -41.75,
+          "lat": -19.35,
+          "areaKm2": 3839974.2,
+          "confidence": 75,
+          "member": "D11_033"
+        },
+        {
+          "year": 31,
+          "phase": "D11",
+          "sol": 28,
+          "lon": -40.45,
+          "lat": -30.05,
+          "areaKm2": 7658804,
+          "confidence": 75,
+          "member": "D11_033"
+        },
+        {
+          "year": 31,
+          "phase": "D11",
+          "sol": 29,
+          "lon": -38.05,
+          "lat": -31.85,
+          "areaKm2": 3451295,
+          "confidence": 75,
+          "member": "D11_033"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Daily mosaics stitch multiple swaths; not instantaneous observations.",
+    "Identity assignment and boundary confidence are subjective.",
+    "Daily regional storms are not second-scale local vortex tracks.",
+    "Testing is conditional on a member remaining identifiable; genesis, disappearance and splits are not predicted.",
+    "Error bounds are training residual quantiles, not guaranteed probabilities."
+  ],
+  "exampleSelection": "Two observed MY31 tracks nearest Jezero, plus eight longest MY31-32 tracks; illustrative selection, all test metrics unchanged."
+}

@@ -1,13 +1,14 @@
+import {edgeEffortMetres} from './energy-model';
 import type {NoahTerrain} from './noah-data';
 import type {TerrainScience} from './science-data';
 import {budgetForTravel,edgeTravelMinutes,hasMobilityData} from './mobility';
 export type Point = {x:number;y:number};
 export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string;science?:TerrainScience;noah?:NoahTerrain;noahError?:string};
-export type Mode = 'shortest'|'exposure'|'mission'|'time';
+export type Mode = 'shortest'|'exposure'|'mission'|'time'|'energy';
 export type Exclusion = Point & {radius:number};
 export type Settings = {maxSlope:number;speed:number;scienceMinutes:number;durationMinutes:number;oxygenMinutes:number;powerMinutes:number;reservePercent:number;loadKg:number;dust:boolean;hazardWeight:number;mobilityModel?:1|2;terrainEffort?:number};
 export const DEFAULTS: Settings={maxSlope:18,speed:.6,scienceMinutes:20,durationMinutes:110,oxygenMinutes:150,powerMinutes:140,reservePercent:25,loadKg:12,dust:false,hazardWeight:8};
-export type Route = {mode:Mode;outbound:number[];inbound:number[];cells:number[];distance:number;gain:number;maxSlope:number;meanSlope:number;exposureDistance:number;unknownThermalDistance:number;travelMinutes:number;totalMinutes:number;oxygenRemaining:number;powerRemaining:number;timeRemaining:number;reserve:number;feasible:boolean;reasons:string[];cost:number};
+export type Route = {mode:Mode;outbound:number[];inbound:number[];cells:number[];distance:number;gain:number;maxSlope:number;meanSlope:number;exposureDistance:number;unknownThermalDistance:number;travelMinutes:number;totalMinutes:number;oxygenRemaining:number;powerRemaining:number;timeRemaining:number;reserve:number;feasible:boolean;reasons:string[];cost:number;effortMetres?:number};
 
 class Heap {
   data:{i:number;f:number}[]=[];
@@ -41,22 +42,22 @@ export function leg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Ex
       let multiplier=1;
       if(mode==='exposure')multiplier+=s.hazardWeight*ex+sl*sl*.035+(t.roughness[j]??0)*.2+uncertainty*.2;
       if(mode==='mission')multiplier+=s.hazardWeight*.55*ex+sl*sl*.012+Math.max(0,dz)/horizontal*2+(t.roughness[j]??0)*.08+uncertainty*.1;
-      const score=g[i]+(mode==='time'?edgeTravelMinutes(t,i,j,s):dist*multiplier);
+      const score=g[i]+(mode==='time'?edgeTravelMinutes(t,i,j,s):mode==='energy'?edgeEffortMetres(t,i,j,s):dist*multiplier);
       if(score<g[j]){g[j]=score;parent[j]=i;heap.push(j,score+heuristic({x,y}));}
     }
   }
   return null;
 }
 export function metrics(t:Terrain,cells:number[],mode:Mode,s:Settings,cost=0):Omit<Route,'outbound'|'inbound'>{
-  let distance=0,gain=0,maxSlope=t.slope[cells[0]]??0,weightedSlope=0,exposureDistance=0,unknownThermalDistance=0,travelMinutes=0;
+  let distance=0,gain=0,maxSlope=t.slope[cells[0]]??0,weightedSlope=0,exposureDistance=0,unknownThermalDistance=0,travelMinutes=0,effortMetres=0;
   for(let n=1;n<cells.length;n++){
     const a=cells[n-1],b=cells[n],p=point(t,a),q=point(t,b),h=Math.hypot(p.x-q.x,p.y-q.y)*t.cellSize,dz=t.elevation[b]!-t.elevation[a]!,d=Math.hypot(h,dz),sl=((t.meanSlope[a]??0)+(t.meanSlope[b]??0))/2;
     distance+=d;gain+=Math.max(0,dz);maxSlope=Math.max(maxSlope,t.slope[a]??0,t.slope[b]??0);weightedSlope+=sl*d;
     exposureDistance+=d*((t.exposure[a]??0)+(t.exposure[b]??0))/2;
     if(t.thermal[a]===null||t.thermal[b]===null)unknownThermalDistance+=d;
-    travelMinutes+=edgeTravelMinutes(t,a,b,s);
+    travelMinutes+=edgeTravelMinutes(t,a,b,s);effortMetres+=edgeEffortMetres(t,a,b,s);
   }
-  return {mode,cells,distance,gain,maxSlope,meanSlope:distance?weightedSlope/distance:(t.meanSlope[cells[0]]??0),exposureDistance,unknownThermalDistance,travelMinutes,...budgetForTravel(travelMinutes,s),cost};
+  return {mode,cells,distance,gain,maxSlope,effortMetres,meanSlope:distance?weightedSlope/distance:(t.meanSlope[cells[0]]??0),exposureDistance,unknownThermalDistance,travelMinutes,...budgetForTravel(travelMinutes,s),cost};
 }
 export function plan(t:Terrain,base:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null):Route|null{
   const a=leg(t,base,target,mode,s,e),b=leg(t,target,base,mode,s,e);if(!a||!b)return null;

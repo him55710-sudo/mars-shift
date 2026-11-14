@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "status": "SIMULATION_ONLY",
+  "clientDate": "2026-11-15",
+  "accelerationNoise": 0.08,
+  "config": {
+    "horizon": 30,
+    "step": 1,
+    "groundWeight": 1.5,
+    "uncertainty": true,
+    "maxExpanded": 20000,
+    "maxSensorAge": 6,
+    "localizationSigma": 1,
+    "policy": "exposure-mpc",
+    "exposureWeight": 35
+  },
+  "selection": [
+    {
+      "config": {
+        "horizon": 30,
+        "step": 1,
+        "groundWeight": 1.5,
+        "uncertainty": true,
+        "maxExpanded": 20000,
+        "maxSensorAge": 6,
+        "localizationSigma": 1,
+        "policy": "exposure-mpc",
+        "exposureWeight": 35
+      },
+      "q": 0.08,
+      "loss": 69.2536672770307,
+      "summary": {
+        "episodes": 72,
+        "exposureSeconds": 6.055555555555555,
+        "exposedEpisodes": 43,
+        "holdSeconds": 4.611111111111111,
+        "unnecessaryHoldSeconds": 3.5,
+        "noActionSeconds": 1.3333333333333333,
+        "returnFeasibleEpisodes": 70,
+        "resourceViolationSeconds": 0.7777777777777778,
+        "constraintViolations": 0,
+        "distanceMetres": 28.516697184868875,
+        "progressMetres": 11.60818716535329,
+        "groundRiskMetres": 10.524558044829435,
+        "worstDecileExposure": 22.78125,
+        "replanMs": {
+          "p95": 13.33089999999902,
+          "max": 28.92710000000079
+        }
+      }
+    },
+    {
+      "config": {
+        "horizon": 30,
+        "step": 1,
+        "groundWeight": 0.5,
+        "uncertainty": true,
+        "maxExpanded": 20000,
+        "maxSensorAge": 6,
+        "localizationSigma": 1,
+        "policy": "exposure-mpc",
+        "exposureWeight": 60
+      },
+      "q": 0.08,
+      "loss": 73.06960262973979,
+      "summary": {
+        "episodes": 72,
+        "exposureSeconds": 6.045138888888889,
+        "exposedEpisodes": 43,
+        "holdSeconds": 4.833333333333333,
+        "unnecessaryHoldSeconds": 3.8333333333333335,
+        "noActionSeconds": 1.3333333333333333,
+        "returnFeasibleEpisodes": 69,
+        "resourceViolationSeconds": 1.1666666666666667,
+        "constraintViolations": 0,
+        "distanceMetres": 28.410687042547018,
+        "progressMetres": 11.40059392696806,
+        "groundRiskMetres": 10.498110283597864,
+        "worstDecileExposure": 22.78125,
+        "replanMs": {
+          "p95": 13.370999999999185,
+          "max": 30.63459999999759
+        }
+      }
+    }
+  ],
+  "selectionSeeds": [
+    2001,
+    2024
+  ],
+  "holdoutSeeds": [
+    4001,
+    4048
+  ],
+  "protocolSHA256": "b5a56b8e63accb5de466c17414f2b3c908e82a493caa3783ef82a4347f120eaf"
+}

@@ -11,7 +11,7 @@ export function tileWindow(pixels:number,eastFraction:number,southFraction:numbe
 }
 /** Inject detail before hazard hatching so hazards stay visible over observed imagery. */
 export function installSurfaceDetail(material:THREE.MeshStandardMaterial){
- const uniforms={uDetailMap:{value:null as THREE.CanvasTexture|null},uDetailOrigin:{value:new THREE.Vector2()},uDetailSpan:{value:1},uDetailEnabled:{value:0},uOpticalClarity:{value:0.2}};
+ const uniforms={uDetailMap:{value:null as THREE.CanvasTexture|null},uDetailOrigin:{value:new THREE.Vector2()},uDetailSpan:{value:1},uDetailEnabled:{value:0},uOpticalClarity:{value:0.0}};
  const prior=material.onBeforeCompile;
  material.onBeforeCompile=(shader,renderer)=>{
   prior.call(material,shader,renderer);Object.assign(shader.uniforms,uniforms);

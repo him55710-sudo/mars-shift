@@ -1,0 +1,420 @@
+/* MARS SHIFT / Flight Deck — authored product tokens, no vendor UI assets. */
+:root{
+ --ms-void:#080d12;--ms-base:#0d141c;--ms-surface:#121d27;--ms-raised:#192733;
+ --ms-text:#edf2f5;--ms-muted:#a8b9c6;--ms-subtle:#8195a6;--ms-line:#2a3b49;
+ --ms-action:#b9d9f5;--ms-on-action:#10212f;--ms-route:#9ce6cb;--ms-warning:#e7b875;--ms-danger:#ffad98;
+ --ms-radius:8px;--ms-radius-lg:16px;--ms-space-1:4px;--ms-space-2:8px;--ms-space-3:12px;--ms-space-4:16px;--ms-space-6:24px;--ms-space-8:32px;
+ --surface:var(--ms-surface);--surface2:var(--ms-raised);--line:var(--ms-line);--muted:var(--ms-muted);--mint:var(--ms-route);--coral:var(--ms-warning);
+ color-scheme:dark;background:var(--ms-void);color:var(--ms-text);font-variant-numeric:tabular-nums;
+}
+:root body{background:var(--ms-void);color:var(--ms-text)}
+:root #root :where(button,a,input,select,summary):focus-visible{outline:2px solid var(--ms-action)!important;outline-offset:4px}
+:root #root :where(button,a){touch-action:manipulation}
+:root #root .app-layout .site-header{height:72px;padding:0 32px;background:var(--ms-void);border-bottom:1px solid var(--ms-line);gap:24px;color:var(--ms-text)}
+:root #root .app-layout .brand{font-size:20px;letter-spacing:1.2px}
+:root #root .app-layout .brand b,:root #root .app-layout .brand-symbol{color:var(--ms-text)}
+:root #root .app-layout .brand small{color:var(--ms-subtle);font-size:8px}
+:root #root .mission-nav{display:flex;gap:8px;align-items:center;height:100%;margin-left:auto}
+:root #root .mission-nav>a,:root #root .mission-more>summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;font:500 12px/1.3 'DM Sans',Arial,sans-serif;color:var(--ms-muted);border-radius:6px;white-space:nowrap;cursor:pointer}
+:root #root .mission-nav>a[aria-current],:root #root .mission-more[open]>summary{color:var(--ms-text);background:var(--ms-raised)}
+:root #root .mission-nav>a[aria-current]:after{display:none}
+:root #root .mission-nav>a:hover,:root #root .mission-more>summary:hover{color:var(--ms-text);background:var(--ms-surface)}
+:root #root .mission-more{position:relative}
+:root #root .mission-more>summary{list-style:none}
+:root #root .mission-more>summary::-webkit-details-marker{display:none}
+:root #root .mission-more-links{position:absolute;z-index:100;right:0;top:calc(100% + 8px);width:224px;padding:8px;background:var(--ms-surface);border:1px solid var(--ms-line);border-radius:var(--ms-radius)}
+:root #root .mission-more-links>a{display:flex;align-items:center;min-height:44px;padding:8px 12px;font-size:13px;color:var(--ms-muted);border-radius:4px}
+:root #root .mission-more-links>a:hover,:root #root .mission-more-links>a[aria-current]{background:var(--ms-raised);color:var(--ms-text)}
+:root #root .app-layout .header-status{font-size:9px;color:var(--ms-subtle)}
+:root #root .app-layout .prototype{border:0;padding:0;margin-left:8px;color:var(--ms-subtle)}
+:root #root .app-layout .status-dot{background:var(--ms-route)}
+:root #root .planner,:root #root .document-page,:root #root .briefing-page{color:var(--ms-text)}
+:root #root .panel{background:var(--ms-base);border-color:var(--ms-line);border-radius:var(--ms-radius)}
+:root #root .panel-heading{font-size:13px;min-height:48px}
+:root #root .page-intro h1{font-size:36px;line-height:1.15;letter-spacing:-1px}
+:root #root .page-intro p{font-size:14px}
+:root #root .planner .primary,:root #root .planner .compute{background:var(--ms-action);color:var(--ms-on-action);min-height:44px;border-radius:6px}
+:root #root .workflow{padding:16px 0;font-size:12px;border-top:0;background:none}
+:root #root .workflow b{color:var(--ms-subtle)}
+:root #root .document-page{max-width:1120px;padding-block:48px}
+:root #root .document-page>h1{font-size:40px}
+:root #root .document-page p{line-height:1.75}
+:root #root .source-table h3{font-size:22px}
+:root #root .source-table p{font-size:14px}
+:root #root .source-class{border:0;background:var(--ms-raised);border-radius:4px;font-size:10px}
+:root #root .briefing-slide{background:var(--ms-base);border-radius:var(--ms-radius-lg);border-color:var(--ms-line)}
+:root #root .slide-lead{color:var(--ms-muted)}
+:root #root .briefing-slide li{color:var(--ms-text)}
+:root #root .hz-page{--hz-bg:var(--ms-base);--hz-line:var(--ms-line);--hz-text:var(--ms-text);--hz-dim:var(--ms-muted);background:var(--ms-void);padding:24px 32px 32px}
+:root #root .hz-toolbar{margin-bottom:16px}
+:root #root .hz-toolbar h1{font-size:28px;letter-spacing:-.8px}
+:root #root .hz-eyebrow{color:var(--ms-subtle);letter-spacing:1.2px;font-size:10px}
+:root #root .hz-workspace{grid-template-columns:minmax(0,1fr) 300px;gap:24px}
+:root #root .hz-viewport{border:0;border-radius:12px;min-height:calc(100dvh - 196px)}
+:root #root .hz-helmet:after{box-shadow:none;border-radius:0}
+:root #root .hz-console{padding:0 0 0 20px;background:none;border:0;border-left:1px solid var(--ms-line);border-radius:0;gap:16px}
+:root #root .hz-console-title{margin-block:0 8px}
+:root #root .hz-sim-badge{font-size:10px;color:var(--ms-warning);border-color:#655136;border-radius:4px}
+:root #root .hz-configuration{border-bottom:1px solid var(--ms-line);padding-bottom:12px}
+:root #root .hz-configuration summary{cursor:pointer;display:flex;flex-direction:column;gap:6px;min-height:48px;list-style:none;font-size:13px;color:var(--ms-text)}
+:root #root .hz-configuration summary:after{content:'Configure +';color:var(--ms-action);font-size:11px}
+:root #root .hz-configuration[open] summary:after{content:'Close −'}
+:root #root .hz-configuration summary small{font-size:12px;color:var(--ms-muted)}
+:root #root .hz-configuration-body{display:grid;gap:16px;padding-block:12px}
+:root #root .hz-console label{font-size:12px;gap:8px}
+:root #root .hz-console input,:root #root .hz-console select{font-size:13px;min-height:44px;background:var(--ms-surface)}
+:root #root .hz-controls button{min-height:48px}
+:root #root .hz-controls .hz-primary{background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
+:root #root .hz-command{background:#0d1820eb;backdrop-filter:none;box-shadow:none;left:24px;top:64px;padding:16px 20px;border-radius:0 8px 8px 0;max-width:320px}
+:root #root .hz-command strong{font-size:34px;letter-spacing:.2px}
+:root #root .hz-command p{font-size:12px;color:#ccd9df}
+:root #root .hz-command>span{font-size:10px;letter-spacing:.8px}
+:root #root .hz-alert{background:#30201eeb}
+:root #root .hz-hud{backdrop-filter:none;background:#0d1820eb;border:0;padding:16px 20px;gap:24px}
+:root #root .hz-hud span{font-size:10px}
+:root #root .hz-hud strong{font-size:22px}
+:root #root .hz-scene-label{font-size:11px}
+:root #root .hz-scene-label>span:last-child{font-size:10px}
+:root #root .hz-actions>div{padding:12px 8px}
+:root #root .hz-actions strong{font-size:12px}
+:root #root .hz-actions div>div>span{font-size:11px}
+:root #root .hz-actions>div>span{font-size:11px}
+:root #root .hz-track dl>div{font-size:12px;margin-block:10px}
+:root #root .hz-note{font-size:11px}
+:root #root .hz-page h2{font-size:13px}
+:root #root .hz-minimap{border:1px solid #77929a80;border-radius:8px}
+:root #root .ms-landing{background:var(--ms-void);color:var(--ms-text)}
+:root #root .ms-nav{max-width:none;padding:0 40px;min-height:80px}
+:root #root .ms-nav-links a{font-size:13px;color:var(--ms-muted)}
+:root #root .ms-brand{font-size:18px}
+:root #root .ms-brand svg{color:var(--ms-text)}
+:root #root .ms-brand>span{color:var(--ms-subtle)}
+:root #root .ms-hero-copy{text-align:left;align-items:flex-start;max-width:1328px;margin:auto;padding:112px 40px 180px}
+:root #root .ms-hero-copy h1{font-size:72px;line-height:1.04;letter-spacing:-3px;max-width:860px;font-weight:500}
+:root #root .ms-hero-copy h1 em{color:var(--ms-text)}
+:root #root .ms-hero-copy>p{font-size:18px;line-height:1.65;max-width:500px;color:var(--ms-muted)}
+:root #root .ms-hero-actions{justify-content:flex-start;margin-top:32px}
+:root #root .ms-pill{background:none;border:0;padding:0;color:var(--ms-warning);letter-spacing:1.5px;font-size:11px}
+:root #root .ms-pill>span{background:var(--ms-warning);box-shadow:none}
+:root #root .ms-button{border-radius:8px;border-color:var(--ms-line);background:var(--ms-surface);min-height:48px}
+:root #root .ms-button-primary{background:var(--ms-action);border-color:var(--ms-action);color:var(--ms-on-action)}
+:root #root .ms-button-primary:hover{background:#d2e7f8}
+:root #root .ms-hero-bottom{font-size:10px}
+:root #root .ms-section{max-width:1328px}
+:root #root .ms-flow article{border:0;border-bottom:1px solid var(--ms-line);border-radius:0;background:none}
+:root #root .ms-flow article>span{border:0;background:none;color:var(--ms-action)}
+:root #root .ms-region-card{border-radius:12px;box-shadow:none}
+:root #root .ms-section h2{font-size:48px;font-weight:500;letter-spacing:-1.5px}
+:root #root .ms-section p{color:var(--ms-muted)}
+@media(max-width:1200px){:root #root .app-layout .header-status{display:none}
+:root #root .mission-nav{gap:2px}
+:root #root .app-layout .site-header{padding-inline:24px}
+:root #root .hz-page{padding-inline:24px}}
+@media(max-width:820px){:root #root .app-layout .site-header{height:auto;min-height:112px;flex-wrap:wrap;padding:16px 20px 8px;gap:8px}
+:root #root .mission-nav{width:100%;height:auto;order:2;justify-content:space-between;margin:0}
+:root #root .mission-nav>a,:root #root .mission-more>summary{font-size:11px;padding:8px;min-height:44px}
+:root #root .mission-more-links{right:0}
+:root #root .hz-page{padding:20px}
+:root #root .hz-workspace{grid-template-columns:1fr}
+:root #root .hz-viewport{min-height:600px}
+:root #root .hz-console{padding:20px 0 0;border-left:0;border-top:1px solid var(--ms-line);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+:root #root .hz-console-title,:root #root .hz-controls,:root #root .hz-configuration,:root #root .hz-section-head,:root #root .hz-actions,:root #root .hz-secondary,:root #root .hz-error{grid-column:1/-1}
+:root #root .hz-hud{left:16px;right:16px;gap:20px}
+:root #root .ms-hero-copy{padding:100px 24px 180px}
+:root #root .ms-hero-copy h1{font-size:56px;letter-spacing:-2px}
+:root #root .ms-nav{padding-inline:24px}}
+@media(max-width:550px){:root #root .app-layout .site-header{padding-inline:16px}
+:root #root .mission-nav{gap:0;justify-content:space-between}
+:root #root .mission-nav>a,:root #root .mission-more>summary{font-size:10px;padding:8px 5px}
+:root #root .mission-more summary{max-width:92px;white-space:normal}
+:root #root .hz-page{padding:20px 16px}
+:root #root .hz-toolbar{align-items:flex-start;flex-direction:column;gap:16px}
+:root #root .hz-toolbar h1{font-size:26px}
+:root #root .hz-view{width:100%}
+:root #root .hz-view button{flex:1;min-height:44px}
+:root #root .hz-viewport{min-height:600px}
+:root #root .hz-command{left:16px;right:16px;top:68px;max-width:none;padding:12px 16px}
+:root #root .hz-command strong{font-size:30px}
+:root #root .hz-hud{display:grid;grid-template-columns:1fr 1fr;bottom:60px;padding:12px;gap:12px}
+:root #root .hz-hud>div:last-child{grid-column:1/-1}
+:root #root .hz-hud span{font-size:9px}
+:root #root .hz-hud strong{font-size:20px}
+:root #root .hz-minimap{width:112px;bottom:225px;right:16px}
+:root #root .hz-minimap>span{font-size:9px}
+:root #root .hz-scene-label{left:16px;right:16px;font-size:10px;flex-wrap:wrap}
+:root #root .hz-scene-label>span:last-child{margin-left:0;width:100%;font-size:9px}
+:root #root .hz-console{display:flex}
+:root #root .ms-nav{padding-inline:20px}
+:root #root .ms-hero-copy{padding:96px 20px 160px}
+:root #root .ms-hero-copy h1{font-size:44px;letter-spacing:-1.8px}
+:root #root .ms-hero-copy>p{font-size:16px;line-height:1.6}
+:root #root .ms-hero-copy>p br{display:none}
+:root #root .ms-hero-actions{align-items:stretch;flex-direction:column;gap:12px}
+:root #root .ms-hero-actions a{justify-content:center}
+:root #root .ms-section h2{font-size:36px}
+:root #root .document-page>h1{font-size:32px}}
+@media(prefers-reduced-motion:reduce){:root #root *,:root #root *:before,:root #root *:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+:root #root .mission-nav{overflow:visible;min-width:0}
+:root #root .crew-layout{background:var(--ms-void)}
+:root #root .crew-app.nightlight{--paper:var(--ms-void);--surface:var(--ms-base);--ink:var(--ms-text);--muted:var(--ms-muted);--line:var(--ms-line);--green:#315148;--danger:var(--ms-danger)}
+:root #root .crew-app.nightlight .crew-bottom{background:#101b24f5;border-color:var(--ms-line);backdrop-filter:none;box-shadow:none}
+:root #root .crew-app.nightlight .crew-phases{background:var(--ms-base)}
+:root #root .crew-app.nightlight .crew-phases li.current{background:#25453e;color:#c8f7e7}
+:root #root .crew-app.nightlight .crew-alert{background:#2b201d;border-color:#925747}
+:root #root .crew-app.nightlight .crew-map-section,:root #root .crew-app.nightlight .crew-next,:root #root .crew-app.nightlight .crew-preflight{border-color:var(--ms-line)}
+:root #root .crew-app.nightlight .crew-strong{background:var(--ms-action);color:var(--ms-on-action)}
+:root #root .eva-workspace,:root #root .terrain-lab,:root #root .atlas-page{background:var(--ms-void);color:var(--ms-text)}
+:root #root .eva-sidebar,:root #root .eva-inspector{background:var(--ms-base);border-color:var(--ms-line);box-shadow:none}
+:root #root .eva-stage,:root #root .eva-scene-wrap{border-radius:12px;border-color:var(--ms-line);box-shadow:none}
+:root #root .eva-topbar h1,:root #root .tl-titlebar h1{font-size:28px;letter-spacing:-.7px}
+:root #root .eva-tabs button,:root #root .eva-modes button{min-height:44px;font-size:12px}
+@media(max-width:550px){
+ :root #root .mission-nav{overflow:visible!important;gap:0}
+ :root #root .mission-nav>a{min-width:0;flex:1;white-space:normal;justify-content:center;text-align:center;font-size:11px;padding:6px 4px;line-height:1.3}
+ :root #root .mission-more{min-width:0;flex:1}
+ :root #root .mission-more>summary{font-size:11px;max-width:none;padding:6px 4px;text-align:center;justify-content:center;white-space:normal}
+ :root #root .mission-more-links{right:0;top:calc(100% + 12px)}
+ :root #root .hz-page{padding-bottom:112px}
+ :root #root .hz-viewport{min-height:480px;height:calc(100dvh - 330px)}
+ :root #root .hz-controls{position:fixed;left:16px;right:16px;bottom:max(12px,env(safe-area-inset-bottom));z-index:30;padding:8px;background:var(--ms-base);border:1px solid var(--ms-line);border-radius:12px}
+ :root #root .hz-hud{bottom:56px}
+ :root #root .hz-minimap{bottom:235px;width:104px}
+}
+
+:root #root .nav-name-compact{display:none}
+@media(max-width:550px){:root #root .mission-nav>a .nav-name{display:none}:root #root .mission-nav>a .nav-name-compact{display:inline}:root #root .mission-nav>a{padding-inline:6px}:root #root .mission-nav{gap:4px}}
+
+:root #root .hz-minimap>summary{display:none}
+@media(max-width:550px){
+ :root #root .hz-minimap{bottom:220px;width:132px;z-index:4;border-color:#718696;background:var(--ms-base)}
+ :root #root .hz-minimap>summary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px;font-size:12px;color:var(--ms-text);cursor:pointer;list-style:none}
+ :root #root .hz-minimap>summary::-webkit-details-marker{display:none}
+ :root #root .hz-minimap[open]{position:fixed;z-index:40;left:24px;right:24px;bottom:100px;top:auto;width:auto;max-height:calc(100dvh - 180px);overflow:auto;background:var(--ms-base);border-color:var(--ms-action)}
+ :root #root .hz-minimap[open]>summary{justify-content:space-between;border-bottom:1px solid var(--ms-line)}
+ :root #root .hz-minimap[open] svg{max-height:400px}
+}
+:root #root .hz-toolbar h1{font-family:var(--title)}
+@media(max-width:550px){
+ :root #root .hz-hud{grid-template-columns:1fr 1fr 1.15fr;gap:8px}
+ :root #root .hz-hud>div:last-child{grid-column:auto}
+ :root #root .hz-hud span{font-size:10px;line-height:1.35;letter-spacing:0;min-height:28px}
+ :root #root .hz-hud strong{font-size:19px}
+ :root #root .hz-hud>div:last-child strong{font-size:15px;white-space:nowrap}
+}
+
+:root #root .ms-reveal{opacity:1;transform:none;transition:none}
+/* Route-wide Flight Deck components: data colors and physical quantities are unchanged. */
+:root #root .destination-page{max-width:1440px;margin:auto;padding:24px 32px 40px;background:var(--ms-void);color:var(--ms-text)}
+:root #root .destination-page>header{padding:0 0 24px;border-bottom:1px solid var(--ms-line)}
+:root #root .destination-page>header button{min-height:44px;font-size:13px;border-radius:6px;color:var(--ms-muted)}
+:root #root .destination-intro{margin:40px 0 32px;text-align:left}
+:root #root .destination-intro h1{font-size:40px;letter-spacing:-1.2px;line-height:1.15;margin-block:12px}
+:root #root .destination-intro p{font-size:16px;color:var(--ms-muted)}
+:root #root .destination-intro>span,:root #root .destination-objective>div>span{color:var(--ms-subtle);font-size:11px;letter-spacing:1.2px}
+:root #root .destination-choices{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+:root #root .destination-choices>button{height:280px;border-radius:12px;box-shadow:none;border:1px solid var(--ms-line);text-align:left}
+:root #root .destination-choices>button.selected{border:2px solid var(--ms-action);box-shadow:none}
+:root #root .destination-top{font-size:11px;padding:16px}
+:root #root .destination-bottom{padding:20px}
+:root #root .destination-bottom h2{font-size:26px;font-weight:500;letter-spacing:-.6px}
+:root #root .destination-bottom>p,:root #root .destination-bottom>div{font-size:12px}
+:root #root .destination-objective{padding-top:32px;margin-top:32px;border-top:1px solid var(--ms-line)}
+:root #root .destination-objective h2{font-size:24px;letter-spacing:-.5px}
+:root #root .destination-objective p{font-size:14px;color:var(--ms-muted);line-height:1.65}
+:root #root .destination-goals{gap:12px}
+:root #root .destination-goals>button{min-height:60px;border-radius:8px;background:var(--ms-base);border-color:var(--ms-line);color:var(--ms-text);font-size:14px}
+:root #root .destination-goals>button[aria-pressed=true]{background:var(--ms-raised);border-color:var(--ms-action);box-shadow:none}
+:root #root .destination-goals small{font-size:12px;color:var(--ms-muted)}
+:root #root .destination-launch{border-color:var(--ms-line)}
+:root #root .destination-launch p{font-size:12px;color:var(--ms-muted)}
+:root #root .destination-launch>button{min-height:52px;background:var(--ms-action);color:var(--ms-on-action);border-radius:8px;box-shadow:none;font-size:14px}
+:root #root .crew-context{min-height:44px}
+:root #root .crew-heading{padding-block:16px}
+:root #root .crew-heading h1{font-size:28px}
+:root #root .crew-app:has(.crew-preflight) .crew-heading p{display:none}
+:root #root .crew-phases{margin-bottom:12px}
+:root #root .crew-phases li{min-height:40px}
+:root #root .crew-vitals{padding-block:14px}
+:root #root .crew-map-canvas{background:var(--ms-base)}
+:root #root .nightlight .crew-map-mode{background:var(--ms-base);border-color:var(--ms-line);color:var(--ms-text)}
+:root #root .nightlight .crew-map-heading>button[aria-pressed=true]{background:var(--ms-raised)}
+:root #root .nightlight .crew-return{background:var(--ms-surface);color:var(--ms-text)}
+:root #root .terrain-lab{--tl-bg:var(--ms-void);--tl-panel:var(--ms-base);--tl-border:var(--ms-line);--tl-text:var(--ms-text);--tl-muted:var(--ms-muted);padding:32px 32px 0;background:var(--ms-void)}
+:root #root .tl-overview{background:transparent;border-inline:0;border-radius:0;border-color:var(--ms-line)}
+:root #root .tl-sidebar,:root #root .tl-inspector>section,:root #root .tl-map-panel,:root #root .tl-profile{background:var(--ms-base);border-color:var(--ms-line);border-radius:8px}
+:root #root .tl-panel-head,:root #root .tl-map-toolbar{border-color:var(--ms-line);background:var(--ms-base)}
+:root #root .tl-layers button{min-height:52px;color:var(--ms-text);border-radius:6px}
+:root #root .tl-layers button.active{background:var(--ms-raised);border-color:var(--ms-action)}
+:root #root .tl-primary{background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
+:root #root .tl-button{min-height:44px;font-size:13px;border-radius:6px}
+:root #root .tl-view-switch button{min-height:44px;font-size:12px}
+:root #root .tl-view-switch button[aria-pressed=true]{background:var(--ms-raised);color:var(--ms-text)}
+:root #root .tl-small,:root #root .tl-source-link{font-size:12px;color:var(--ms-muted);line-height:1.5}
+:root #root .tl-point-values{font-size:13px}
+:root #root .mars-atlas{--ma-panel:#101b25f5;--ma-border:var(--ms-line);--ma-muted:var(--ms-muted);--ma-text:var(--ms-text);background:var(--ms-void)}
+:root #root .ma-explorer,:root #root .ma-position-card,:root #root .ma-coordinate-search,:root #root .ma-mode-switch{background:var(--ma-panel);border-color:var(--ms-line);border-radius:8px;backdrop-filter:none;box-shadow:none}
+:root #root .mars-atlas button{min-height:44px;font-size:12px;border-radius:6px}
+:root #root .ma-primary{background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
+:root #root .ma-title h1{font-size:28px;letter-spacing:-.8px}
+:root #root .ma-title p,:root #root .ma-panel-note{font-size:12px;color:var(--ms-muted)}
+:root #root .ma-places button,:root #root .ma-nearby-places button{font-size:13px}
+:root #root .xr-glass,:root #root .xr-shell .eva-sidebar,:root #root .xr-shell .eva-inspector>section,:root #root .xr-shell .eva-controls-help{background:#101c27f2;border:1px solid var(--ms-line);border-radius:12px;box-shadow:none;backdrop-filter:none;color:var(--ms-text)}
+:root #root .xr-shell .eva-stage-toolbar,:root #root .xr-shell .eva-layers{background:#101c27f2;border-color:var(--ms-line);border-radius:12px;box-shadow:none;backdrop-filter:none}
+:root #root .xr-purpose-chip{background:#101c27e8;border:0;box-shadow:none;backdrop-filter:none}
+:root #root .xr-tool-rail button{min-height:48px;min-width:44px}
+:root #root .xr-shell .eva-sidebar label,:root #root .xr-shell .eva-panel-body{font-size:13px}
+:root #root .xr-shell .eva-small{font-size:12px;line-height:1.55;color:var(--ms-muted)}
+:root #root .xr-shell .eva-primary{background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action);min-height:44px}
+:root #root .xr-shell .eva-result-strip{border-radius:8px;box-shadow:none;background:#101c27ed;border-color:var(--ms-line)}
+:root #root .xr-shell .eva-result-strip span{font-size:10px;line-height:1.35;color:var(--ms-muted)}
+:root #root .xr-shell .eva-result-strip strong{font-size:23px;font-variant-numeric:tabular-nums}
+:root #root .mission-map{--map-border:var(--ms-line);--map-muted:var(--ms-muted)}
+@media(max-width:960px){
+ :root #root .destination-choices{gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ :root #root .destination-choices>button{height:250px}
+}
+@media(max-width:820px){
+ :root #root .terrain-lab{padding:24px 20px 0}
+ :root #root .xr-shell.eva-workspace{height:calc(100dvh - 120px)}
+}
+@media(max-width:550px){
+ :root #root .destination-page{padding:16px 20px 32px}
+ :root #root .destination-intro{margin:32px 0 24px}
+ :root #root .destination-intro h1{font-size:32px}
+ :root #root .destination-choices{grid-template-columns:1fr;gap:16px}
+ :root #root .destination-choices>button{height:224px}
+ :root #root .destination-bottom h2{font-size:24px}
+ :root #root .destination-launch{align-items:stretch;flex-direction:column}
+ :root #root .destination-launch>button{width:100%;justify-content:space-between}
+ :root #root .terrain-lab{padding:24px 16px 0}
+ :root #root .tl-titlebar h1{font-size:26px}
+ :root #root .crew-heading h1{font-size:24px}
+ :root #root .xr-shell .eva-result-strip{width:228px}
+ :root #root .xr-shell .eva-result-strip span{font-size:10px}
+ :root #root .xr-shell .eva-result-strip strong{font-size:18px}
+}
+
+/* Reachable controls retain a full touch target across operational routes. */
+:root #root .brand{min-height:44px}
+:root #root .hz-view button,:root #root .hz-secondary button{min-height:44px;min-width:44px}
+:root #root .hz-controls button{min-width:44px}
+
+:root #root :where(button,select,summary){min-height:44px;min-width:44px}
+
+:root #root .ma-mode-switch button.active{background:var(--ms-action);color:var(--ms-on-action)}
+:root #root .ma-explorer-heading,:root #root .ma-statusbar{background:var(--ms-base);border-color:var(--ms-line)}
+:root #root .ma-base-layers button.active,:root #root .ma-places button.selected,:root #root .ma-panorama-list button.selected{background:var(--ms-raised);border-color:var(--ms-action);color:var(--ms-text)}
+:root #root .ma-camera-tools button{background:var(--ms-surface);border-color:var(--ms-line);color:var(--ms-text)}
+
+@media(max-width:550px){
+ :root #root .hz-scene-label>span:last-child{display:block;line-height:1.4;letter-spacing:.4px}
+ :root #root .hz-minimap>summary{white-space:nowrap}
+}
+
+@media(max-width:820px){
+ :root #root .app-layout .site-header .mission-nav{flex:0 0 100%;width:100%;order:2;height:auto}
+}
+@media(max-width:550px){
+ :root #root .xr-shell .eva-inspector .eva-minimap:not(.expanded){width:128px;max-width:calc(100vw - 100px);overflow:hidden}
+ :root #root .xr-shell .eva-minimap:not(.expanded)>:not(.eva-minimap-head){display:none}
+ :root #root .xr-shell .eva-minimap:not(.expanded) .eva-minimap-head{display:flex;min-height:44px;align-items:center}
+}
+
+@media(max-width:550px){
+ :root #root .xr-shell .eva-minimap-head{gap:6px}
+ :root #root .xr-shell .eva-minimap-head h2{min-width:0;flex:1;margin:0;font-size:10px;overflow-wrap:anywhere}
+ :root #root .xr-shell .eva-minimap-head button{flex:0 0 44px}
+ :root #root .xr-shell .eva-stage-toolbar{width:calc(100% - 24px);min-width:0;max-width:none;gap:2px;padding:4px;bottom:122px}
+ :root #root .xr-shell .eva-modes,:root #root .xr-shell .eva-stage-tools{gap:2px}
+ :root #root .xr-shell .eva-modes button{padding-inline:8px;font-size:11px}
+ :root #root .xr-shell .eva-result-strip{bottom:210px}
+ :root #root .xr-shell .xr-why-trigger{bottom:324px}
+ :root #root .xr-shell .eva-scene-label{bottom:220px;max-width:120px}
+ :root #root .xr-shell .xr-road-trigger{bottom:210px}
+}
+
+@media(max-width:550px){
+ :root #root .xr-shell .eva-scene-label{bottom:270px}
+ :root #root .xr-shell .eva-scene-label>span,:root #root .xr-shell .eva-scene-label>strong,:root #root .xr-shell .eva-scene-label>small{font-size:9px;line-height:1.4}
+}
+
+/* Helmet guidance shares the deck surfaces; terrain remains unobstructed by a decorative bezel. */
+:root #root .helmet-rim{display:none}
+:root #root .helmet-hud{background:none;color:var(--ms-text);font-family:'DM Sans',Arial,sans-serif}
+:root #root .helmet-hud button,:root #root .helmet-hud select,:root #root .helmet-resources,:root #root .helmet-waypoint,:root #root .helmet-dock,:root #root .helmet-route-picker{background:#101c27f2;border-color:var(--ms-line);backdrop-filter:none;box-shadow:none;border-radius:8px}
+:root #root .helmet-hud button[aria-pressed=true]{background:var(--ms-raised);border-color:var(--ms-action)}
+:root #root .helmet-exit{position:absolute;left:calc(4% + 250px);top:4%;width:44px;padding:0}
+:root #root .helmet-footer{white-space:normal;color:var(--ms-muted)}
+:root #root .helmet-footer>span:first-child{min-width:0;white-space:normal;overflow:visible}
+@media(max-width:760px){
+ :root #root .helmet-exit{left:185px;top:24px}
+ :root #root .helmet-hazard-legend{top:64px;bottom:auto;left:20px;right:20px;justify-content:center;font-size:10px}
+ :root #root .helmet-hud .helmet-footer{display:grid;grid-template-columns:minmax(0,1fr) 110px;align-items:center;gap:12px;left:20px;right:20px;bottom:12px}
+ :root #root .helmet-footer>span:first-child{display:block;font-size:9px;line-height:1.4}
+ :root #root .helmet-footer small{font-size:9px;line-height:1.4;white-space:normal}
+ :root #root .helmet-footer>span:nth-child(2){display:none}
+ :root #root .helmet-footer select{width:110px;font-size:11px}
+}
+
+@media(max-width:550px){
+ :root #root .slide-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ :root #root .slide-controls>div{grid-column:1/-1;grid-row:1;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;min-width:0}
+ :root #root .slide-controls>div button{width:100%;min-width:44px;padding:0}
+ :root #root .briefing-slide table{display:block;max-width:100%;overflow-x:auto;font-size:12px}
+ :root #root .briefing-top{flex-direction:column;align-items:stretch;gap:12px}
+ :root #root .briefing-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+ :root #root .briefing-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:12px}
+}
+
+:root #root .ma-point-disclosure{display:none}
+@media(max-width:550px){
+ :root #root .ma-title{top:16px;left:16px;right:16px}
+ :root #root .ma-title h1{font-size:26px;letter-spacing:-.7px}
+ :root #root .ma-title p{display:none}
+ :root #root .ma-mode-switch{top:82px;left:16px;right:auto;display:flex;flex-direction:row;width:auto}
+ :root #root .ma-coordinate-search{top:140px;left:16px;right:16px;width:auto}
+ :root #root .ma-explorer{top:212px;left:16px;right:16px;width:auto;max-height:calc(100% - 300px)}
+ :root #root .ma-explorer.ma-collapsed{height:44px;max-height:44px;overflow:hidden}
+ :root #root .ma-explorer-heading{height:44px;min-height:44px;padding:0 12px}
+ :root #root .ma-camera-tools{top:270px;left:16px;right:16px;display:flex;justify-content:space-between;gap:4px}
+ :root #root .ma-camera-tools>span{display:none}
+ :root #root .ma-camera-tools button{flex:0 0 44px;width:44px}
+ :root #root .ma-position-card{bottom:58px;left:16px;right:16px;padding:12px}
+ :root #root .ma-position-heading>span{flex:1}
+ :root #root .ma-point-disclosure{display:inline-flex;align-items:center;justify-content:center}
+ :root #root .ma-position-card:not(.ma-point-expanded) .ma-point-metrics,:root #root .ma-position-card:not(.ma-point-expanded) .ma-resolution-note{display:none}
+ :root #root .ma-point-expanded{max-height:calc(100% - 280px);overflow:auto;z-index:15}
+ :root #root .ma-coordinate-value{font-size:16px;margin-block:8px 12px}
+ :root #root .ma-position-actions{gap:8px;margin-top:0}
+}
+
+@media(max-width:550px){
+ :root #root .ma-camera-tools{flex-direction:row;align-items:center}
+}
+
+:root #root .slide-controls>div button{background:transparent;color:var(--ms-muted);border-color:var(--ms-line);border-radius:0}
+:root #root .slide-controls>div button[aria-current=step]{background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
+:root #root .app-layout .primary:not(:disabled){background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
+:root #root .app-layout .primary:disabled{background:var(--ms-raised);color:var(--ms-subtle);border-color:var(--ms-line)}
+
+/* Stable contrast for operational text over changing terrain and sky. */
+:root #root .helmet-hud:before{content:'';position:absolute;inset:0 0 auto;height:112px;background:var(--ms-void);border-bottom:1px solid var(--ms-line)}
+:root #root .helmet-objective{background:#0d141cf5;border:1px solid var(--ms-line);border-left:2px solid var(--guidance-color);padding:12px 16px;border-radius:8px;text-shadow:none}
+:root #root .helmet-terrain{background:#0d141cf5;border:1px solid var(--ms-line);padding:12px;border-radius:8px;text-shadow:none}
+@media(max-width:760px){
+ :root #root .helmet-hud:before{height:160px}
+ :root #root .helmet-objective{padding:10px 12px}
+ :root #root .helmet-terrain{padding:10px;max-width:180px;bottom:280px}
+}
+
+@media(max-width:760px){
+ :root #root .helmet-exit{left:auto;right:20px;top:88px;z-index:2}
+}
+
+:root #root .xr-shell .xr-road-trigger{min-height:48px}
+:root #root .ma-bottom-bar{background:var(--ms-base);border-color:var(--ms-line);color:var(--ms-muted)}
+
+@media(max-width:550px){
+ :root #root .xr-shell .eva-inspector{width:132px;overflow:visible;background:none;border:0;box-shadow:none}
+ :root #root .xr-shell .eva-inspector .eva-minimap:not(.expanded){width:100%;max-width:100%}
+}

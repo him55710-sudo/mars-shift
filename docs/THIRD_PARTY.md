@@ -25,3 +25,7 @@ No code was copied from a prior Space Apps winner. Their public project descript
 ## NOAH-H published texture classification
 
 Wright, Barrett, Fawdon, Favaro, Balme, Woods, Karachalios and Gerdes / The Open University, ESA NOAH. **NOAH-H terrain classifications of Jezero Crater, Mars**, version 2, published 2022-11-18. DOI: https://doi.org/10.21954/ou.rd.17121482.v2. License: **CC BY 4.0**. Original native 0.25 m categorical mosaic, original 14 rank codes/colors and sampling provenance are retained. The application redistributes transformed 5 m cell-area fractions with attribution, describes the reprojection/aggregation, and labels its own risk rules separately. Independent local registration error and observation dates are unknown. No original source code was imported. See `NOAH_H.md` and the source metadata in each `noah-terrain.json`.
+
+## Flight Deck interface
+
+The Flight Deck tokens, CSS and MissionNavigation component are original project code under the project MIT license. React/React DOM (MIT), Three.js (MIT), Lucide (ISC) and the existing open-font assets remain in use. No new UI dependency was installed. Apple HIG, shadcn/ui, Radix, Motion and Magic UI informed the review; their source/assets were not copied. Their evaluated licenses and the Apple resource terms are linked in [DESIGN_RESEARCH.md](DESIGN_RESEARCH.md). Competitor interfaces informed task organization only; no competitor code, screenshots or imagery are distributed as app assets.

@@ -1,0 +1,84 @@
+{
+  "meaning": "Static same-endpoint ablation. Candidate index is not measured sinkage or slip probability.",
+  "thermalNativeMetres": 100,
+  "noahNativeMetres": 0.25,
+  "planningMetres": 5,
+  "weight": 1.5,
+  "results": [
+    {
+      "region": "floor",
+      "start": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "baseline": {
+        "distanceMetres": 876.427801034643,
+        "groundIndexMetres": 385.9331597206678,
+        "meanGroundIndex": 0.44034792057607586,
+        "travelMinutes": 33.49103769020255,
+        "maxSlope": 16.24
+      },
+      "groundAware": {
+        "distanceMetres": 876.4583907884711,
+        "groundIndexMetres": 383.7698954762781,
+        "meanGroundIndex": 0.43786436356782976,
+        "travelMinutes": 33.89317985111105,
+        "maxSlope": 13.5
+      }
+    },
+    {
+      "region": "ridge",
+      "start": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "baseline": {
+        "distanceMetres": 876.3716106881361,
+        "groundIndexMetres": 345.0071895407349,
+        "meanGroundIndex": 0.3936768208064518,
+        "travelMinutes": 34.32603657811868,
+        "maxSlope": 17.23
+      },
+      "groundAware": {
+        "distanceMetres": 879.3656599495615,
+        "groundIndexMetres": 334.5456388219086,
+        "meanGroundIndex": 0.3804397352076466,
+        "travelMinutes": 33.07015164876347,
+        "maxSlope": 16.98
+      }
+    },
+    {
+      "region": "noah",
+      "start": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "baseline": {
+        "distanceMetres": 875.705718904899,
+        "groundIndexMetres": 258.43082757905324,
+        "meanGroundIndex": 0.29511149921714586,
+        "travelMinutes": 30.44453072823751,
+        "maxSlope": 10.57
+      },
+      "groundAware": {
+        "distanceMetres": 896.2316372092689,
+        "groundIndexMetres": 240.55505359143237,
+        "meanGroundIndex": 0.268407232688733,
+        "travelMinutes": 30.851322787195393,
+        "maxSlope": 9.09
+      }
+    }
+  ]
+}
