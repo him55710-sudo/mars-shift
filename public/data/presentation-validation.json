@@ -1,12 +1,37 @@
 {
   "slides": 7,
-  "editableTables": 1,
+  "editableTables": 4,
   "tableSlide": 4,
-  "embeddedImages": 4,
-  "sha256": "389bdc9fa702d35ee76435f3cf9b0d00f08185ad922221199d071d93e4c0f0d1",
-  "bytes": 1646004,
-  "validation": "Package integrity, native table presence, font policy, layout geometry and first-party import passed; all seven imported final slides rendered and visually reviewed.",
+  "tableSlides": [
+    2,
+    4,
+    5,
+    6
+  ],
+  "embeddedImages": 3,
+  "sha256": "57e6f3477b72a7bbfbb46361dedf3a0bfa704d714117152b8c6d76d797ed67cd",
+  "bytes": 1502847,
+  "validation": "Package integrity, native table presence, Arial reference font policy, layout geometry and first-party import passed with zero findings or warnings. All seven slides rendered with Artifact Tool and visually reviewed. Final PPTX bytes exactly match the reviewed rendered candidate.",
+  "renderedSlides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "speakerNotes": 7,
   "nativePowerPointExecution": false,
-  "aiDisclosure": "Codex-assisted authoring; scientific imagery and source measurements are real.",
-  "revision": "Crew workflow revision, 2026-11-14"
+  "aiDisclosure": "Codex-assisted authoring. Scientific imagery and source measurements are real. Exa and Consensus supported source research.",
+  "revision": "Scientific engineering upgrade, 2026-11-14",
+  "scienceResultsSha256": "eee2ee89341457045e766cb3fd9eb1a25f354c17c5a4333b353640c654fb888b",
+  "sourceReferenceSha256": "389bdc9fa702d35ee76435f3cf9b0d00f08185ad922221199d071d93e4c0f0d1",
+  "claimBoundary": "Software/file checks and renderer review only. No native PowerPoint execution, flight qualification or validated Mars EVA physiology.",
+  "dataSources": [
+    "/data/science-results.json",
+    "/data/science/terrain-report.json",
+    "/data/ridge/science/terrain-report.json"
+  ],
+  "notes": "Exactly seven slides. Four editable numerical tables on slides 2,4,5,6. Three embedded scientific/app images. All plotted figures come from the executed scientific results, native terrain reports or the verified app screenshot."
 }

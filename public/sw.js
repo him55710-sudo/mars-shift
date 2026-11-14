@@ -1,6 +1,6 @@
 /* Local scientific-map cache. It is not a live telemetry or weather service. */
-const CACHE='mars-shift-crew-20261114-xr-v10';
-const CORE=[...['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin','optical-native.webp','optical-native-meta.json','obstacle-candidates-v2.json','optical-v2-mask.png','optical-v2-meta.json'].map(file=>root+'/'+file)),'/data/optical-benchmark.json','/data/optical-benchmark-v2.json','/data/optical-model-v2.json','/media/mars-global.jpg'];
+const CACHE='mars-shift-crew-20261114-science-v11';
+const CORE=[...['/data','/data/ridge'].flatMap(root=>['terrain.json','manifest.json','optical.webp','slope.png','thermal.png','exposure.png','jezero-native-dem.json','jezero-native-dem.bin','optical-native.webp','optical-native-meta.json','obstacle-candidates-v2.json','optical-v2-mask.png','optical-v2-meta.json','science/terrain-metrics.json','science/terrain-report.json'].map(file=>root+'/'+file)),'/data/optical-benchmark.json','/data/optical-benchmark-v2.json','/data/optical-model-v2.json','/media/mars-global.jpg','/data/science-results.json'];
 async function status(){
  const cache=await caches.open(CACHE);
  const checks=await Promise.all(['/',...CORE].map(url=>cache.match(url)));
@@ -11,7 +11,8 @@ async function status(){
  const manifest=await cache.match('/.vite/manifest.json');
  if(!manifest)return {ready:false,assets:[]};
  const entries=Object.values(await manifest.json());
- const assets=[...new Set([...shellAssets,...entries.flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path)])];
+ const workerMetadata=await cache.match('/__science-workers.json');if(!workerMetadata)return {ready:false,assets:[]};const workers=await workerMetadata.json();
+ const assets=[...new Set([...workers,...shellAssets,...entries.flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path)])];
  const scripts=await Promise.all(assets.map(url=>cache.match(url)));
  return {ready:checks.every(Boolean)&&shellAssets.length>=2&&scripts.every(Boolean),assets};
 }
@@ -31,6 +32,8 @@ self.addEventListener('install',event=>event.waitUntil((async()=>{
  const manifest=await manifestResponse.json();
  const chunks=Object.values(manifest).flatMap(entry=>[entry.file,...(entry.css||[])]).map(path=>'/'+path);
  await cache.addAll([...new Set([...CORE,...assets,...chunks])]);
+ const workers=[];for(const path of chunks.filter(p=>p.endsWith('.js'))){const response=await cache.match(path);if(!response)continue;const source=await response.text();for(const hit of source.matchAll(/assets\/science-worker-[A-Za-z0-9_-]+\.js/g))workers.push('/'+hit[0]);}
+ const uniqueWorkers=[...new Set(workers)];if(!uniqueWorkers.length)throw Error('Scientific worker missing from offline build');await cache.addAll(uniqueWorkers);await cache.put('/__science-workers.json',new Response(JSON.stringify(uniqueWorkers),{headers:{'Content-Type':'application/json'}}));
  /* No automatic page reload: a new worker waits until existing clients close. */
 })()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{

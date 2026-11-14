@@ -11,5 +11,12 @@ export function createMissionStore(t:Terrain,initial?:MissionDraft){
  const commit=(next:MissionSnapshot)=>{snapshot=next;try{localStorage.setItem(missionKey(t),JSON.stringify({version:3,draft:next.draft,calculated:next.calculated,revision:next.revision,pendingAdoption:next.pendingAdoption,previous:next.previous}));}catch{/* Calculations remain available with storage disabled. */}listeners.forEach(fn=>fn());};
  return {getSnapshot:()=>snapshot,subscribe:(fn:()=>void)=>{listeners.add(fn);return()=>listeners.delete(fn);},update:(patch:Partial<MissionDraft>)=>commit({...snapshot,draft:{...snapshot.draft,...patch}}),selectMode:(mode:Mode)=>commit({...snapshot,draft:{...snapshot.draft,mode}}),calculate:()=>commit(calculateMission(t,snapshot.draft,snapshot)),hazard:()=>commit(injectMissionHazard(t,snapshot)),adopt:()=>{if(!missionDirty(snapshot)&&snapshot.reports[snapshot.draft.mode].route)commit({...snapshot,pendingAdoption:false});},reset:()=>commit(calculateMission(t,defaultMission(t))),replace:(d:MissionDraft)=>commit(calculateMission(t,validDraft(t,d),snapshot))};
 }
-const stores=new Map<string,MissionStore>();
-export function useMission(t:Terrain){const store=useMemo(()=>{const key=missionKey(t);if(!stores.has(key))stores.set(key,createMissionStore(t));return stores.get(key)!;},[t]);const state=useSyncExternalStore(store.subscribe,store.getSnapshot);return {state,store,dirty:missionDirty(state)};}
+const stores=new Map<string,{terrain:Terrain;store:MissionStore}>();
+export function missionStoreFor(t:Terrain){
+ const key=missionKey(t),existing=stores.get(key);
+ // A successful retry can supply scientific products after an earlier fallback.
+ // Rebind calculations to the new terrain; restore the validated saved mission.
+ if(!existing||existing.terrain!==t){const store=createMissionStore(t);stores.set(key,{terrain:t,store});return store;}
+ return existing.store;
+}
+export function useMission(t:Terrain){const store=useMemo(()=>missionStoreFor(t),[t]);const state=useSyncExternalStore(store.subscribe,store.getSnapshot);return {state,store,dirty:missionDirty(state)};}

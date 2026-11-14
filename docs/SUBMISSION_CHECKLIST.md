@@ -1,12 +1,12 @@
 # Submission package
 
-Current upgrade: [Unified 3D EVA implementation and validation](EVA_EXPLORER.md) supersedes historical route, UI-language, path and test-count descriptions below. The default page now opens the unified explorer.
+Current scientific upgrade: [computed engineering results](SCIENTIFIC_ENGINEERING_RESULTS.md), [terrain definitions](TERRAIN_METHODS.md), and [method attribution](SCIENTIFIC_REFERENCES.md) supersede historical feature/test descriptions below. The introduction leads to destination selection and the 3D explorer; Science & Safety contains the new numerical maps.
 
 Verified against the supplied Seoul event deck and the live 2026 project form. Deadline: **November 15, 2026, 23:59 KST**. Event guide recommends finishing by 23:55.
 
-## English project summary (117 words)
+## English project summary
 
-MARS SHIFT is an adaptive EVA planning prototype that helps a future Mars crew compare science traverses while preserving a way home. It combines real Jezero HiRISE optical imagery and elevation with THEMIS thermal context. Three complete round-trip routes expose tradeoffs in distance, slope, terrain effort and simulated resource reserves. A clearly labeled new-hazard scenario invalidates an affected plan, calculates an alternative and explains the change. Observed data, terrain heuristics, mission assumptions and unknowns remain distinct. The web application includes source provenance, configurable constraints, an evidence export and a seven-slide demonstration. It reuses NASA’s existing planetary explorer instead of building another 3D globe. This is research software, not certified astronaut navigation or a guarantee of safe return.
+MARS SHIFT connects observed Jezero terrain with a transparent exploration-and-return decision. Two real study regions combine HiRISE elevation and optical imagery with coarse THEMIS thermal context. Native-resolution ruggedness, terrain position and curvature support direction-dependent, graph-based travel estimates. Forward and reverse Dijkstra maps show where a crew can complete science work and return under declared time and simulated resource reserves. The 3D EVA Explorer links these maps to route comparison, optical candidate review and simulated exclusions. Seeded sensitivity reports how often a fixed route meets explicitly sampled assumptions. Every result separates observations, derived geometry, heuristic detections and uncalibrated mission models. Existing NASA and open-source methods are credited; the prototype does not certify astronaut safety or estimate survival probability.
 
 ## Required links
 

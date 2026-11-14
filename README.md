@@ -1,6 +1,18 @@
 # MARS SHIFT
 
-Current release: [destination-first spatial explorer, automatic optical proposals and measured validation](docs/XR_OPTICAL_UPGRADE.md). Open `/` for the new introduction, `/destinations` to choose a science mission, or `/explore` directly.
+Current scientific release: [terrain, directional mobility and return-feasibility results](docs/SCIENTIFIC_ENGINEERING_RESULTS.md). In `/explore`, open **Science & Safety**. Adjust the time/work/payload/reserve assumptions to recompute directed outbound and return cost maps on the actual terrain. The displayed mission route changes only after explicit recalculation. Native morphology, local cost, feasibility and evidence support are visual overlays; seeded fixed-route sensitivity and numerical exports share the same engine.
+
+Reproduce scientific products and both-region experiments:
+
+```sh
+../.venv/Scripts/python scripts/terrain_science.py --check
+../.venv/Scripts/python -m unittest discover -s scripts -p test_terrain_science.py
+pnpm science
+```
+
+See [terrain methods](docs/TERRAIN_METHODS.md), [reference/method status](docs/SCIENTIFIC_REFERENCES.md) and `/data/science-results.json`. Mobility/resource coefficients are declared simulations; feasibility and scenario frequencies are not certified safety or survival probabilities. Standard JPL/SEXTANT/xDEM methods are credited rather than claimed as new inventions.
+
+Previous visual release: [destination-first spatial explorer, automatic optical proposals and measured validation](docs/XR_OPTICAL_UPGRADE.md). Open `/` for the new introduction, `/destinations` to choose a science mission, or `/explore` directly.
 
 **Adaptive EVA Navigator — When Mars changes, your map changes.**
 

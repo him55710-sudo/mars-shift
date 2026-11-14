@@ -1,3 +1,4 @@
+import {edgeTravelMinutes} from './mobility';
 import {blocked,index,leg,metrics,point} from './planner';
 import type {Exclusion,Mode,Point,Route,Settings,Terrain} from './planner';
 export type SearchReport={route:Route|null;candidates:Route[];searched:number;feasibleCount:number;travelLimit:number;method:string;reason:string};
@@ -5,8 +6,7 @@ export const travelLimit=(s:Settings)=>Math.min(s.durationMinutes-s.scienceMinut
 export function edgeValues(t:Terrain,a:number,b:number,mode:Mode,s:Settings){
  const p=point(t,a),q=point(t,b),horizontal=Math.hypot(p.x-q.x,p.y-q.y)*t.cellSize,dz=t.elevation[b]!-t.elevation[a]!,distance=Math.hypot(horizontal,dz),slope=((t.meanSlope[a]??0)+(t.meanSlope[b]??0))/2,exposure=((t.exposure[a]??0)+(t.exposure[b]??0))/2,unknown=t.thermal[b]===null?1:0;
  let factor=1;if(mode==='exposure')factor+=s.hazardWeight*exposure+slope*slope*.035+(t.roughness[b]??0)*.2+unknown*.2;if(mode==='mission')factor+=s.hazardWeight*.55*exposure+slope*slope*.012+Math.max(0,dz)/horizontal*2+(t.roughness[b]??0)*.08+unknown*.1;
- const effort=1+slope*slope*.012+s.loadKg*.015+Math.max(0,dz)/Math.max(horizontal,.01)*2;
- return {cost:distance*factor,effortCost:distance*effort};
+ return {cost:distance*factor,effortCost:edgeTravelMinutes(t,a,b,s)*Math.max(.01,s.speed)*(s.dust?.55:1)*60};
 }
 class Heap{items:{i:number;f:number}[]=[];push(i:number,f:number){let n=this.items.length;this.items.push({i,f});while(n){const parent=(n-1)>>1;if(this.items[parent].f<=f)break;this.items[n]=this.items[parent];n=parent;}this.items[n]={i,f};}pop(){const first=this.items[0],last=this.items.pop()!;if(this.items.length){let n=0;while(n*2+1<this.items.length){let c=n*2+1;if(c+1<this.items.length&&this.items[c+1].f<this.items[c].f)c++;if(this.items[c].f>=last.f)break;this.items[n]=this.items[c];n=c;}this.items[n]=last;}return first;}}
 function alternativeLeg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null,alpha:number){
@@ -29,5 +29,5 @@ export function constrainedPlan(t:Terrain,base:Point,target:Point,mode:Mode,s:Se
  const candidates:Route[]=[];
  for(const a of outbound)for(const b of inbound){const cells=[...a,...b.slice(1)],m=metrics(t,cells,mode,s,costOf(t,cells,mode,s));candidates.push({...m,outbound:a,inbound:b});}
  const feasible=candidates.filter(r=>r.feasible).sort((a,b)=>a.cost-b.cost||a.totalMinutes-b.totalMinutes),route=feasible[0]??null;
- return {route,candidates,searched,feasibleCount:feasible.length,travelLimit:travelLimit(s),method:'5 objective weights per leg; distinct outbound × return pairs; hard budget filter; lowest selected-mode terrain cost among feasible candidates',reason:route?'':!candidates.length?'No traversable round trip under terrain, exclusion and obstacle constraints.':s.dust?'HOLD: reduced visibility requires local verification.':'NO FEASIBLE ROUTE among the searched alternatives under the configured time, oxygen and power limits.'};
+ return {route,candidates,searched,feasibleCount:feasible.length,travelLimit:travelLimit(s),method:'5 objective weights per leg; distinct outbound/return pairs; hard budget filter; lowest selected-mode terrain cost among feasible candidates',reason:route?'':!candidates.length?'No traversable round trip under terrain, exclusion and obstacle constraints.':s.dust?'HOLD: reduced visibility requires local verification.':'NO FEASIBLE ROUTE among the searched alternatives under the configured time, oxygen and power limits.'};
 }

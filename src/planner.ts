@@ -1,8 +1,10 @@
+import type {TerrainScience} from './science-data';
+import {budgetForTravel,edgeTravelMinutes,hasMobilityData} from './mobility';
 export type Point = {x:number;y:number};
-export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string};
+export type Terrain = {width:number;height:number;cellSize:number;bounds:number[];center:number[];crs:string;elevation:(number|null)[];slope:(number|null)[];meanSlope:(number|null)[];roughness:(number|null)[];exposure:(number|null)[];valid:number[];thermal:(number|null)[];thermalRange:number[];obstacleMask?:Uint8Array|number[];assetRoot?:string;science?:TerrainScience};
 export type Mode = 'shortest'|'exposure'|'mission';
 export type Exclusion = Point & {radius:number};
-export type Settings = {maxSlope:number;speed:number;scienceMinutes:number;durationMinutes:number;oxygenMinutes:number;powerMinutes:number;reservePercent:number;loadKg:number;dust:boolean;hazardWeight:number};
+export type Settings = {maxSlope:number;speed:number;scienceMinutes:number;durationMinutes:number;oxygenMinutes:number;powerMinutes:number;reservePercent:number;loadKg:number;dust:boolean;hazardWeight:number;mobilityModel?:1|2;terrainEffort?:number};
 export const DEFAULTS: Settings={maxSlope:18,speed:.6,scienceMinutes:20,durationMinutes:110,oxygenMinutes:150,powerMinutes:140,reservePercent:25,loadKg:12,dust:false,hazardWeight:8};
 export type Route = {mode:Mode;outbound:number[];inbound:number[];cells:number[];distance:number;gain:number;maxSlope:number;meanSlope:number;exposureDistance:number;unknownThermalDistance:number;travelMinutes:number;totalMinutes:number;oxygenRemaining:number;powerRemaining:number;timeRemaining:number;reserve:number;feasible:boolean;reasons:string[];cost:number};
 
@@ -14,7 +16,7 @@ class Heap {
 export const index=(t:Terrain,p:Point)=>p.y*t.width+p.x;
 export const point=(t:Terrain,i:number):Point=>({x:i%t.width,y:Math.floor(i/t.width)});
 export function blocked(t:Terrain,i:number,s:Settings,e:Exclusion|null){
-  if(i<0||i>=t.width*t.height||!t.valid[i]||t.obstacleMask?.[i]||t.slope[i]===null||t.elevation[i]===null||!Number.isFinite(t.slope[i])||!Number.isFinite(t.elevation[i])||t.slope[i]!>s.maxSlope)return true;
+  if(i<0||i>=t.width*t.height||!t.valid[i]||t.obstacleMask?.[i]||t.slope[i]===null||t.elevation[i]===null||!Number.isFinite(t.slope[i])||!Number.isFinite(t.elevation[i])||t.slope[i]!>s.maxSlope||!hasMobilityData(t,i,s))return true;
   const p=point(t,i);return !!e && Math.hypot(p.x-e.x,p.y-e.y)*t.cellSize<=e.radius;
 }
 export function leg(t:Terrain,start:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null):{cells:number[];cost:number}|null{
@@ -51,18 +53,9 @@ export function metrics(t:Terrain,cells:number[],mode:Mode,s:Settings,cost=0):Om
     distance+=d;gain+=Math.max(0,dz);maxSlope=Math.max(maxSlope,t.slope[a]??0,t.slope[b]??0);weightedSlope+=sl*d;
     exposureDistance+=d*((t.exposure[a]??0)+(t.exposure[b]??0))/2;
     if(t.thermal[a]===null||t.thermal[b]===null)unknownThermalDistance+=d;
-    const effort=1+sl*sl*.012+s.loadKg*.015+Math.max(0,dz)/Math.max(h,.01)*2;
-    travelMinutes+=d*effort/(Math.max(.01,s.speed)*(s.dust?.55:1)*60);
+    travelMinutes+=edgeTravelMinutes(t,a,b,s);
   }
-  const totalMinutes=travelMinutes+s.scienceMinutes;
-  const oxygenUse=travelMinutes*(1+s.loadKg*.01)+s.scienceMinutes*.65;
-  const powerUse=travelMinutes*(1+s.loadKg*.005)+s.scienceMinutes*.8;
-  const oxygenRemaining=100*(1-oxygenUse/s.oxygenMinutes),powerRemaining=100*(1-powerUse/s.powerMinutes),timeRemaining=s.durationMinutes-totalMinutes,reserve=Math.min(oxygenRemaining,powerRemaining);
-  const reasons:string[]=[];
-  if(timeRemaining<0)reasons.push('Round trip exceeds mission time budget.');
-  if(reserve<s.reservePercent)reasons.push('Return resource reserve is below the required minimum.');
-  if(s.dust)reasons.push('Reduced visibility: HOLD and verify local obstacle detection before movement.');
-  return {mode,cells,distance,gain,maxSlope,meanSlope:distance?weightedSlope/distance:(t.meanSlope[cells[0]]??0),exposureDistance,unknownThermalDistance,travelMinutes,totalMinutes,oxygenRemaining,powerRemaining,timeRemaining,reserve,feasible:!reasons.length,reasons,cost};
+  return {mode,cells,distance,gain,maxSlope,meanSlope:distance?weightedSlope/distance:(t.meanSlope[cells[0]]??0),exposureDistance,unknownThermalDistance,travelMinutes,...budgetForTravel(travelMinutes,s),cost};
 }
 export function plan(t:Terrain,base:Point,target:Point,mode:Mode,s:Settings,e:Exclusion|null):Route|null{
   const a=leg(t,base,target,mode,s,e),b=leg(t,target,base,mode,s,e);if(!a||!b)return null;
