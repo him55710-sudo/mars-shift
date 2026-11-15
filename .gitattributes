@@ -12,11 +12,11 @@
 /public/sw.js -text whitespace=cr-at-eol
 /scripts/analyze_observed.ts -text
 /src/ObservedNavigator.tsx -text
-/src/RoverScene.tsx -text
+/src/RoverScene.tsx -text whitespace=cr-at-eol
 /src/dust-devil-geometry.ts -text
 /src/escape-metrics.ts -text
 /src/hazard-scene.ts -text whitespace=cr-at-eol
-/src/hazard-xr.ts -text
+/src/hazard-xr.ts -text whitespace=cr-at-eol
 /src/meda-detection.ts -text
 /src/mobility.ts -text
 /src/observed-escape.ts -text
@@ -43,3 +43,9 @@
 /src/encounter-v9.ts -text
 /src/sipp-v9.ts -text
 /scripts/analyze_vortex_v9.ts -text
+
+# v10 frozen regression protocol and engine bytes.
+/public/data/hazards/vortex-v10/** -text whitespace=cr-at-eol
+# Preserve the preregistered source's trailing blank line as part of its hash.
+/src/evacuation-runtime.ts -text whitespace=cr-at-eol,-blank-at-eof
+/scripts/verify_evacuation_v10.ts -text whitespace=cr-at-eol
