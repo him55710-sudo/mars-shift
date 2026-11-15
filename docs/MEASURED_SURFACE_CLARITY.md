@@ -29,3 +29,5 @@ Verified on 2026-11-15:
 - The 80 m zoom limit and the continuous verified regional terrain remain active. A settled local close-view draw measured about 10.5 ms; this is one observation, not a frame-rate guarantee.
 - At a 390×844 viewport, the close view and expanded map work without horizontal overflow. View switching clears stale inspection labels; Escape restores the standard layout. Temporary viewport override was reset.
 - No JavaScript or WebGL errors were reported during the verified local flows.
+
+The subsequently published integrated research release (`70e2c8a`) was merged before publishing this appearance change. Its observed-sand, adaptive-vortex, review, local-map and demo-preparation work is preserved. The combined suite has 391 tests in 55 files: 390 passed in the combined run, and the existing EVA route-freeze test exceeded its 5 s wall-clock limit. Its complete 22-test file then passed alone in 16.15 s. All 391 distinct tests therefore passed. No planner or test timeout was modified.
