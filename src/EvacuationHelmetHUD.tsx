@@ -8,7 +8,7 @@ export function HelmetHUD({resources,sigma,fixes,overview}:{resources:ResourceSt
   <div className="eva11-rim" aria-hidden="true"><div className="eva11-brow"/><div className="eva11-chin"/>
    <svg className="eva11-outline" viewBox="0 0 1000 700" preserveAspectRatio="none"><path d="M30 155 Q55 40 240 30 M760 30 Q945 40 970 155 M30 545 Q55 660 240 670 M760 670 Q945 660 970 545"/><path className="eva11-inner" d="M54 202V250M54 450V498M946 202V250M946 450V498"/></svg>
   </div>
-  <div className="eva11-system"><span className="eva11-status-dot"/> EVA 01 <span>/</span> VISOR LINK <small>OBSERVED TERRAIN · REHEARSAL</small></div>
+  <div className="eva11-system"><span className="eva11-status-dot"/> EVA 01 <span>/</span> VISOR LINK <small>OBSERVED TERRAIN · REHEARSAL <a href="/hazards?ground=training" style={{marginLeft:14,color:'#ffdca6',pointerEvents:'auto'}}>Sand escape ↗</a></small></div>
   <div className="eva11-resources" aria-label="Modeled remaining resources"><div><small>O₂</small><strong>{resources?clock(resources.oxygenSeconds):'—'}</strong></div><div><small>BAT</small><strong>{resources?clock(resources.batterySeconds):'—'}</strong></div></div>
   <div className="eva11-localization"><span>{fixes>=2?'TRACK UPDATING':'ACQUIRING TRACK'}</span><small>VIRTUAL FIX · σ {sigma.toFixed(2)} m</small></div>
   <div className="eva11-centre-mark" aria-hidden="true"><span/><i/><span/></div>

@@ -1,0 +1,38 @@
+{
+  "version": "sand-v38",
+  "currentIndependentTrappingLabels": 0,
+  "precision": null,
+  "recall": null,
+  "claim": "Trapping detection is not validated. Synthetic exclusion tests are software checks only.",
+  "frozenRehearsalCommand": "node scripts/run_sand_rehearsal.mjs --check",
+  "independentLabelRequirements": [
+    "Separate terrain-sand appearance, measured rover slip and measured astronaut sinkage tasks.",
+    "Use before-traversal predictions and independently sourced outcome labels with traceable URLs or dataset IDs.",
+    "Keep adjacent frames, spatially adjacent observations and whole drive episodes in the same split.",
+    "Choose thresholds using development data only; record protocol before opening test outcomes.",
+    "Do not reinterpret NASA AI4Mars terrain classes as measured sinkage or borrowing another model's reported accuracy.",
+    "Report unscored observations and coverage, confusion counts, precision, recall, F1, false-positive rate and average precision.",
+    "Audit temporal alignment, co-registration, uncertainty and source independence externally. JSON declarations are not proof."
+  ],
+  "emptyImportTemplate": {
+    "schema": 1,
+    "task": "rover-slip",
+    "labelProvenance": "independent-observation",
+    "threshold": 0.5,
+    "rows": []
+  },
+  "rowFields": {
+    "id": "unique observation ID",
+    "episode": "drive/location group shared by correlated observations",
+    "split": "development or test",
+    "score": "prediction in [0,1], or null for unknown",
+    "label": "0 or 1 from independent outcomes under a preregistered definition",
+    "source": "traceable independent label source",
+    "beforeTraversal": "true only when predictor inputs precede the outcome"
+  },
+  "references": [
+    "https://ntrs.nasa.gov/citations/20210006223",
+    "https://data.nasa.gov/dataset/ai4mars-a-dataset-for-terrain-aware-autonomous-driving-on-mars",
+    "https://openaccess.thecvf.com/content/CVPR2021W/AI4Space/html/Swan_AI4MARS_A_Dataset_for_Terrain-Aware_Autonomous_Driving_on_Mars_CVPRW_2021_paper.html"
+  ]
+}

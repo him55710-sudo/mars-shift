@@ -8,16 +8,16 @@ import {localMapFrame,localMapPoint} from './local-map-model';
 import './local-surface-map.css';
 
 const EMPTY:RoverObstacle[]=[];
-type Props={terrain:Terrain;grid:RoverGrid;crew:Point;base:Point;target:Point;route?:Route|null;obstacles?:RoverObstacle[];frame?:XRNavigationFrame;sourceLabel?:string;hazards?:boolean;onPick?:(p:Point)=>void};
+type Props={viewBox?:string;terrain:Terrain;grid:RoverGrid;crew:Point;base:Point;target:Point;route?:Route|null;obstacles?:RoverObstacle[];frame?:XRNavigationFrame;sourceLabel?:string;hazards?:boolean;onPick?:(p:Point)=>void};
 function image(t:Terrain,pixels:Uint8Array|Uint8ClampedArray){const canvas=document.createElement('canvas');canvas.width=t.width;canvas.height=t.height;const ctx=canvas.getContext('2d')!,data=ctx.createImageData(t.width,t.height);data.data.set(pixels);ctx.putImageData(data,0,0);return canvas.toDataURL();}
-export default function LocalSurfaceMap({terrain:t,grid,crew,base,target,route,obstacles=EMPTY,frame,sourceLabel,hazards=false,onPick}:Props){
+export default function LocalSurfaceMap({viewBox,terrain:t,grid,crew,base,target,route,obstacles=EMPTY,frame,sourceLabel,hazards=false,onPick}:Props){
  const clip=useId().replaceAll(':',''),projection=localMapFrame(t,frame);
  const dem=useMemo(()=>{const values=t.elevation.filter((v):v is number=>v!==null),lo=Math.min(...values),hi=Math.max(...values),p=new Uint8ClampedArray(t.width*t.height*4);for(let i=0;i<t.valid.length;i++){const v=t.elevation[i],shade=v===null||!t.valid[i]?null:65+100*(v-lo)/Math.max(.1,hi-lo);p.set(shade===null?[13,24,32,255]:[shade+25,shade+10,shade,255],i*4);}return image(t,p);},[t]);
  const overlay=useMemo(()=>image(t,stormDisplayPixels(t,projection?frame:undefined,hazards?roverHazardPixels(grid,t,obstacles):new Uint8Array(t.width*t.height*4))),[t,grid,frame,hazards,obstacles,!!projection]);
  const pointList=(cells:readonly number[])=>cells.map(i=>`${i%t.width+.5},${Math.floor(i/t.width)+.5}`).join(' ');
  const marker=(p:Point,text:string,color:string)=>{const q=localMapPoint(p);return <g><circle cx={q.x} cy={q.y} r="1.3" fill={color} stroke="#0b161e" strokeWidth=".6"/><text x={Math.max(3,Math.min(t.width-24,q.x+3))} y={Math.max(6,q.y-3)}>{text}</text></g>;};
  return <div className={`local-surface-map ${onPick?'local-map-picking':''}`} data-map-frame={t.crs} data-map-time={projection?.time??''}>
-  <svg viewBox={`0 0 ${t.width} ${t.height}`} role="img" aria-label="2D local terrain, red risk areas and the same outbound and return routes" onClick={e=>{if(!onPick)return;const matrix=e.currentTarget.getScreenCTM();if(!matrix)return;const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(matrix.inverse());if(p.x>=0&&p.y>=0&&p.x<t.width&&p.y<t.height)onPick({x:p.x-.5,y:p.y-.5});}}>
+  <svg viewBox={viewBox??`0 0 ${t.width} ${t.height}`} role="img" aria-label="2D local terrain, red risk areas and the same outbound and return routes" onClick={e=>{if(!onPick)return;const matrix=e.currentTarget.getScreenCTM();if(!matrix)return;const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(matrix.inverse());if(p.x>=0&&p.y>=0&&p.x<t.width&&p.y<t.height)onPick({x:p.x-.5,y:p.y-.5});}}>
    <defs><clipPath id={clip}><rect width={t.width} height={t.height}/></clipPath></defs>
    <g clipPath={`url(#${clip})`}><image href={dem} width={t.width} height={t.height}/><image href={overlay} width={t.width} height={t.height}/>
     {route&&<><polyline points={pointList(route.outbound)} stroke="#91f7d4" strokeWidth="1"/><polyline points={pointList(route.inbound)} stroke="#f0f9ff" strokeWidth=".55" strokeDasharray="1.2 1.4"/></>}
