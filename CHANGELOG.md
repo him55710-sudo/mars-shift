@@ -1,3 +1,9 @@
+## Sand display readability / 2026-11-15
+
+- Add local helmet guidance with turn direction, nearby sand buffer distance and uncertainty-aware HOLD states.
+- Improve ground/map route contrast, use a shared sand palette and make helmet guidance reachable from Hub.
+- Fix instrument and touch-control overlap in compact and full-map displays.
+
 ## Sand navigation / 2026-11-15
 
 - Collect registered terrain, optical, texture and thermal-context provenance in a reproducible route audit.

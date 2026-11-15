@@ -9,6 +9,7 @@ const Planet=lazy(()=>import('./PlanetBackdrop'));
 const ICONS={orbit:Orbit,footprints:Footprints,scan:Camera,layers:Layers,globe:Globe2,route:Route,flag:Flag,users:Users,wind:Wind,mountain:Mountain,book:BookOpen,presentation:Presentation,compass:Compass};
 export default function MissionHub({onNavigate,terrain,error,region,onRegion}:{onNavigate:(page:string)=>void;terrain:Terrain|null;error:string;region:string;onRegion:(id:string)=>void}) {
  const [online,setOnline]=useState(navigator.onLine);
+ useEffect(()=>{const scroll=()=>{if(location.hash==='#sand-navigation')document.getElementById('sand-navigation')?.scrollIntoView({block:'start'});};const frame=requestAnimationFrame(scroll);addEventListener('hashchange',scroll);return()=>{cancelAnimationFrame(frame);removeEventListener('hashchange',scroll);};},[]);
  useEffect(()=>{const update=()=>setOnline(navigator.onLine);addEventListener('online',update);addEventListener('offline',update);return()=>{removeEventListener('online',update);removeEventListener('offline',update);};},[]);
  const link=(id:string)=>({href:workspaceHref(id),onClick:(event:React.MouseEvent)=>{if(shouldHandleLink(event)){event.preventDefault();onNavigate(id);}}});
  return <main className="mission-hub" lang="en" id="main-content">
@@ -19,7 +20,7 @@ export default function MissionHub({onNavigate,terrain,error,region,onRegion}:{o
    <div className="hub-planet-caption"><span>04 / SOLAR SYSTEM</span><strong>MARS</strong><span>18.45° N &nbsp; 77.64° E / JEZERO</span></div>
    <div className="hub-orbit-mark" aria-hidden="true">MARS RECONNAISSANCE / FIELD WORKSPACE</div>
   </section>
-  <SandNavigation terrain={terrain} error={error} region={region} onRegion={onRegion} onPlanning={()=>onNavigate('plan')}/>
+  <SandNavigation terrain={terrain} error={error} region={region} onRegion={onRegion} onPlanning={()=>onNavigate('plan')} onSurface={()=>onNavigate('mission')}/>
   <section className="hub-workspace" aria-labelledby="hub-workspace-title"><div className="hub-section-title"><div><span className="hub-eyebrow">YOUR WORKSPACE</span><h2 id="hub-workspace-title">Choose your next step.</h2></div><span className={`hub-connection ${online?'':'is-offline'}`} role="status"><i/>{online?'Online':'Offline · streamed Atlas requires a connection'}</span></div>
    <div className="hub-featured">
     <a {...link('explore')} className="hub-feature hub-feature-surface"><div className="hub-feature-visual"><img src="/data/navcam/observation.png" alt="Recorded NASA Navcam view of the Martian surface"/><span><Footprints size={15}/>SURFACE</span><ArrowUpRight size={20}/></div><div className="hub-feature-copy"><span>01 / EXPLORE</span><h3>Set foot on Mars.</h3><p>Walk recorded rover terrain. Look closer at the surface beneath you.</p><b>Open Surface Explorer <ArrowRight size={15}/></b></div></a>

@@ -1,14 +1,17 @@
 import {evidenceRisk} from './noah-data';
 import * as THREE from 'three';
 import type {Exclusion,Settings,Terrain} from './planner';
+import {blocked} from './planner';
 import {mappedHazard} from './mission-map-model';
+import {sandScreen} from './sand-screening';
 
 export function groundHazardPixels(t:Terrain,s:Settings,e:Exclusion|null){
  const pixels=new Uint8Array(t.width*t.height*4);
- for(let i=0;i<t.width*t.height;i++){if(t.noah&&t.noah.coverage.sampledFraction>0){const h=evidenceRisk(t,t.noah,i,s,e).state;pixels.set(h==='constraint'?[245,89,63,235]:h==='candidate'?[244,173,64,180]:h==='unknown'?[135,145,157,145]:[0,0,0,0],i*4);continue;}const h=mappedHazard(t,i,s,e);pixels.set(h==='excluded'?[245,89,63,235]:h==='steep-proximity'?[244,173,64,180]:h==='unknown'?[135,145,157,145]:[0,0,0,0],i*4);}return pixels;
+ const sand=sandScreen(t),withoutSand={...s,avoidSand:false};
+ for(let i=0;i<t.width*t.height;i++){if(sand.excluded[i]&&!blocked(t,i,withoutSand,e)){pixels.set(sand.candidate[i]?[255,158,53,255]:[242,187,92,220],i*4);continue;}if(t.noah&&t.noah.coverage.sampledFraction>0){const h=evidenceRisk(t,t.noah,i,s,e).state;pixels.set(h==='constraint'?[245,89,63,235]:h==='candidate'?[244,173,64,180]:h==='unknown'?[135,145,157,145]:[0,0,0,0],i*4);continue;}const h=mappedHazard(t,i,s,e);pixels.set(h==='excluded'?[245,89,63,235]:h==='steep-proximity'?[244,173,64,180]:h==='unknown'?[135,145,157,145]:[0,0,0,0],i*4);}return pixels;
 }
 export function installGroundOverlay(material:THREE.MeshStandardMaterial,width:number,height:number){
- const uniforms={uGroundHazards:{value:null as THREE.DataTexture|null},uGroundEnabled:{value:0},uTerrainSize:{value:new THREE.Vector2(width,height)}};
+  const uniforms={uGroundHazards:{value:null as THREE.DataTexture|null},uGroundEnabled:{value:0},uTerrainSize:{value:new THREE.Vector2(width,height)}};
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   shader.vertexShader='varying vec3 vGroundPosition;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvGroundPosition = position;');
@@ -22,12 +25,15 @@ export function installGroundOverlay(material:THREE.MeshStandardMaterial,width:n
     // Thin category boundaries preserve the observed optical texture beneath.
     vec2 edgeStep = vec2(0.6) / uTerrainSize;
     float boundary = max(max(length(hazard - texture2D(uGroundHazards, maskUv + vec2(edgeStep.x,0.0))), length(hazard - texture2D(uGroundHazards, maskUv - vec2(edgeStep.x,0.0)))), max(length(hazard - texture2D(uGroundHazards, maskUv + vec2(0.0,edgeStep.y))), length(hazard - texture2D(uGroundHazards, maskUv - vec2(0.0,edgeStep.y)))));
-    float fade = 1.0 - smoothstep(35.0, 110.0, distance(vGroundPosition, cameraPosition));
-    float intensity = hazard.a * (0.025 + 0.22 * hatch + 0.34 * min(1.0,boundary)) * fade;
+    float fade = 1.0 - smoothstep(60.0, 150.0, distance(vGroundPosition, cameraPosition));
+    float sandEmphasis = step(0.8, hazard.a) * step(0.48, hazard.g);
+    float ordinary = 0.025 + 0.22 * hatch + 0.34 * min(1.0,boundary);
+    float sandEdge = 0.04 + 0.32 * hatch + 0.64 * min(1.0,boundary);
+    float intensity = hazard.a * mix(ordinary, sandEdge, sandEmphasis) * fade;
     diffuseColor.rgb = mix(diffuseColor.rgb, hazard.rgb, intensity);
    }`);
  };
- material.customProgramCacheKey=()=> 'mars-ground-hazard-v2';return uniforms;
+ material.customProgramCacheKey=()=> 'mars-ground-hazard-v3-sand';return uniforms;
 }
 export function routeRibbonMaterial(color:string,inbound=false,boundary=false){
  return new THREE.ShaderMaterial({uniforms:{uColor:{value:new THREE.Color(color)},uInbound:{value:inbound?1:0},uBoundary:{value:boundary?1:0}},vertexShader:'varying vec2 vRibbonUv; varying float vDistance; void main(){vRibbonUv=uv;vec4 mv=modelViewMatrix*vec4(position,1.0);vDistance=length(mv.xyz);gl_Position=projectionMatrix*mv;}',fragmentShader:`uniform vec3 uColor; uniform float uInbound; uniform float uBoundary; varying vec2 vRibbonUv; varying float vDistance;
@@ -35,12 +41,12 @@ export function routeRibbonMaterial(color:string,inbound=false,boundary=false){
   float across=abs(vRibbonUv.x-.5)*2.;
   float aa=max(fwidth(across),.015);
   float edge=1.-smoothstep(.84-aa,1.,across);
-  float core=1.-smoothstep(.09,.09+aa,across);
+  float core=1.-smoothstep(.17,.17+aa,across);
   float phase=mod(vRibbonUv.y,6.);
-  float chevron=1.-smoothstep(.12,.12+max(fwidth(phase),.025),abs(phase-(.75-across*.6)));
+  float chevron=1.-smoothstep(.20,.20+max(fwidth(phase),.025),abs(phase-(.75-across*.6)));
   float dash=uInbound>.5?step(mod(vRibbonUv.y,4.),2.5):1.;
   float fade=1.-smoothstep(65.,140.,vDistance);
-  float alpha=mix(.10+.65*core+.72*chevron,.8,uBoundary)*edge*dash*fade;
+  float alpha=min(.96,mix(.14+.70*core+.85*chevron,.9,uBoundary))*edge*dash*fade;
   gl_FragColor=vec4(mix(uColor,vec3(1.),chevron*.24*(1.-uBoundary)),alpha);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>

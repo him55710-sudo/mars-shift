@@ -1,5 +1,5 @@
 import {useMemo,useState} from 'react';
-import {ArrowRight,ArrowDownToLine,Crosshair,RotateCcw,ShieldCheck,TriangleAlert} from 'lucide-react';
+import {ArrowRight,ArrowDownToLine,ArrowUpRight,Crosshair,Navigation,RotateCcw,ShieldCheck,TriangleAlert} from 'lucide-react';
 import type {Point,Terrain} from './planner';
 import {blocked,index} from './planner';
 import {withObstacles} from './obstacles';
@@ -10,17 +10,17 @@ import {SAND_POLICY,sandRouteAudit,sandScreen} from './sand-screening';
 import {sandOverlay} from './sand-overlay';
 import './sand-navigation.css';
 
-type Props={terrain:Terrain|null;error:string;region:string;onRegion:(id:string)=>void;onPlanning:()=>void};
+type Props={terrain:Terrain|null;error:string;region:string;onRegion:(id:string)=>void;onPlanning:()=>void;onSurface:()=>void};
 const fmt=(n:number,d=0)=>n.toLocaleString('en-US',{maximumFractionDigits:d});
 export default function SandNavigation(p:Props){
  return <section className="sand-navigation" aria-labelledby="sand-title" id="sand-navigation">
   <div className="sand-heading"><div><span className="hub-eyebrow">TERRAIN / ROUTE SCREENING</span><h2 id="sand-title">Route around sand candidates.</h2><p>Published surface textures, with the way out and back in view.</p></div><label>Study region<select value={p.region} onChange={e=>p.onRegion(e.target.value)}>{REGIONS.map(r=><option key={r.id} value={r.id}>{r.name}</option>)}</select></label></div>
-  {p.error?<div className="sand-loading" role="alert"><TriangleAlert/>{p.error}<button onClick={()=>location.reload()}>Retry loading</button></div>:p.terrain&&(p.terrain.assetRoot??'/data')===REGIONS.find(r=>r.id===p.region)?.root?<SandMission terrain={p.terrain} onPlanning={p.onPlanning}/>:<div className="sand-loading" role="status">Loading registered terrain and surface classification…</div>}
+  {p.error?<div className="sand-loading" role="alert"><TriangleAlert/>{p.error}<button onClick={()=>location.reload()}>Retry loading</button></div>:p.terrain&&(p.terrain.assetRoot??'/data')===REGIONS.find(r=>r.id===p.region)?.root?<SandMission terrain={p.terrain} onPlanning={p.onPlanning} onSurface={p.onSurface}/>:<div className="sand-loading" role="status">Loading registered terrain and surface classification…</div>}
  </section>;
 }
-function SandMission({terrain:t,onPlanning}:{terrain:Terrain;onPlanning:()=>void}){
+function SandMission({terrain:t,onPlanning,onSurface}:{terrain:Terrain;onPlanning:()=>void;onSurface:()=>void}){
  const {state,store,dirty}=useMission(t),d=state.draft;
- const [showBaseline,setShowBaseline]=useState(true),[showSand,setShowSand]=useState(true),[placing,setPlacing]=useState(false),[notice,setNotice]=useState('');
+ const [showBaseline,setShowBaseline]=useState(false),[showSand,setShowSand]=useState(true),[placing,setPlacing]=useState(false),[notice,setNotice]=useState('');
  const screen=useMemo(()=>sandScreen(t),[t]),overlay=useMemo(()=>sandOverlay(t),[t]),prepared=useMemo(()=>withObstacles(t,d.annotations),[t,d.annotations]);
  const route=dirty?null:state.reports[d.mode].route,baseline=dirty?null:state.sandBaseline;
  const audit=route?sandRouteAudit(t,route.cells):null,baselineAudit=baseline?sandRouteAudit(t,baseline.cells):null;
@@ -58,6 +58,7 @@ function SandMission({terrain:t,onPlanning}:{terrain:Terrain;onPlanning:()=>void
    {audit&&audit.unknownCells>0&&<p className="sand-warning">{audit.unknownCells} route cells have unknown texture. Soil conditions require verification.</p>}
    {baseline&&baselineAudit&&<p className="sand-comparison">Unscreened shortest: <b>{fmt(baseline.distance)} m</b> round trip · <b>{baselineAudit.excludedCells}</b> mapped exclusion cells crossed.{route&&` Selected route: ${fmt(route.distance-baseline.distance)} m longer.`}</p>}
    {!dirty&&!route&&<p className="sand-warning" role="alert">{state.reports[d.mode].reason} Change the destination or mission limits. Sand exclusions remain active.</p>}
+   <button className="sand-helmet-link" onClick={onSurface}><Navigation size={17}/>Open helmet guidance<ArrowUpRight size={16}/></button>
    <div className="sand-actions"><button className="sand-primary" onClick={onPlanning}>Open shared mission <ArrowRight size={16}/></button><button aria-label="Recalculate sand-screened mission" disabled={!!state.computing} onClick={()=>store.calculate()}><RotateCcw size={17}/></button><button aria-label="Export sand route and evidence" disabled={dirty||!route} onClick={exportMission}><ArrowDownToLine size={17}/></button></div>
    {dirty&&!state.computing&&<button onClick={()=>store.calculate()}>Calculate edited mission</button>}
    {state.pendingAdoption&&<p className="sand-warning">A revised mission is awaiting adoption in Mission Control.</p>}

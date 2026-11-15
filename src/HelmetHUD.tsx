@@ -1,18 +1,17 @@
-import {useEffect,useMemo,useRef,useState} from 'react';
-import {sandOverlay} from './sand-overlay';
+import {useEffect,useRef,useState} from 'react';
+import SandHUD from './SandHUD';
 import type {ReturnEnvelope} from './return-envelope';
 import type {assessRemaining} from './eva-resources';
 import type {SafetyState} from './safety-state';
 import type {PositionFix} from './position-sensor';
 import type {RenderQuality} from './render-quality';
 import {regionInfo} from './regions';
-import {ArrowUpRight,Camera,ChevronDown,CloudFog,Flag,Footprints,Layers,Map,Maximize2,Navigation,Route as RouteIcon,ShieldAlert,X} from 'lucide-react';
+import {ArrowUpRight,Camera,ChevronDown,CloudFog,Flag,Footprints,Layers,Map,Navigation,Route as RouteIcon,ShieldAlert,X} from 'lucide-react';
 import type {Mode,Point,Route,Settings,Terrain} from './planner';
 import type {NativeDEM} from './eva-motion';
 import {heightAt} from './eva-motion';
 import {cellAt} from './terrain-analysis';
 import {ROUTE_OPTIONS} from './mission-map-model';
-import {routeGuidance} from './route-explanation';
 import './surface-hud.css';
 import './helmet-hud.css';
 import {VisorCompass,VisorDock,VisorReticle} from './VisorChrome';
@@ -20,11 +19,9 @@ const f=(v:number|null|undefined,d=0)=>typeof v==='number'&&Number.isFinite(v)?v
 type Props={onModalChange:(open:boolean)=>void;returnAudit?:ReturnEnvelope|null;onExit:()=>void;origin?:Point;base:Point;fix:PositionFix;resources:ReturnType<typeof assessRemaining>;safety:SafetyState;emergency:boolean;onSession:()=>void;quality:RenderQuality;onQuality:(q:RenderQuality)=>void;terrain:Terrain;native:NativeDEM|null;route:Route;crew:Point;yaw:number;walked:number;settings:Settings;goal:string;purpose:string;region:string;thirdPerson:boolean;collision:string;hazards:boolean;onHazards:()=>void;onMap:()=>void;onCamera:()=>void;onTools:()=>void;onRoadView:()=>void;fullDisplay:boolean;storm:boolean;onDisplay:()=>void;onStorm:()=>void;onZoom:(direction:'in'|'out')=>void;routes:{mode:Mode;route:Route|null}[];onRoute:(mode:Mode)=>void};
 export default function HelmetHUD(p:Props){
  const picker=useRef<HTMLElement>(null),[routesOpen,setRoutesOpen]=useState(false),[toolsOpen,setToolsOpen]=useState(false),{terrain:t,route:r}=p;
- const sandImage=useMemo(()=>p.settings.avoidSand?sandOverlay(t):null,[t,p.settings.avoidSand]);
- const g=p.safety.worldAnchors?routeGuidance(t,r.outbound,p.crew):null,heading=((-p.yaw*180/Math.PI)%360+360)%360,idx=cellAt(t,p.crew),color=p.emergency?'#e7b875':'#b3dfd3';
+ const heading=((-p.yaw*180/Math.PI)%360+360)%360,idx=cellAt(t,p.crew),color=p.emergency?'#e7b875':'#b3dfd3';
  useEffect(()=>{p.onModalChange(routesOpen||toolsOpen);return()=>p.onModalChange(false);},[routesOpen,toolsOpen,p.onModalChange]);
  useEffect(()=>{if(!routesOpen&&!toolsOpen)return;const previous=document.activeElement as HTMLElement|null;picker.current?.querySelector<HTMLButtonElement>('button')?.focus();const key=(e:KeyboardEvent)=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();setRoutesOpen(false);setToolsOpen(false);}if(e.key==='Tab'){const b=picker.current?.querySelectorAll<HTMLButtonElement>('button:not(:disabled)');if(!b?.length)return;if(e.shiftKey&&document.activeElement===b[0]){e.preventDefault();b[b.length-1].focus();}else if(!e.shiftKey&&document.activeElement===b[b.length-1]){e.preventDefault();b[0].focus();}}};document.addEventListener('keydown',key,true);return()=>{document.removeEventListener('keydown',key,true);previous?.focus();};},[routesOpen,toolsOpen]);
- const poly=(cells:number[])=>cells.map(i=>`${i%t.width+.5},${Math.floor(i/t.width)+.5}`).join(' ');
  return <div className={`helmet-hud ${p.thirdPerson?'helmet-follow':''} ${p.fullDisplay?'helmet-map-mode':''}`} style={{'--guidance-color':color} as React.CSSProperties}>
 
   <button className="helmet-exit" aria-label="Exit helmet view" title="Return to overview" onClick={p.onExit}><X size={18}/></button>
@@ -34,10 +31,10 @@ export default function HelmetHUD(p:Props){
   <section className="helmet-objective"><span><Flag size={13}/>{p.emergency?'RETURN TO HABITAT':'YOUR DESTINATION'}</span><h1>{p.goal}</h1><p>{p.purpose}</p><div className="helmet-trip"><span><strong>{f(r.distance)}</strong> m round trip</span><span><strong>{f(r.totalMinutes)}</strong> min incl. science</span></div><button aria-expanded={routesOpen} onClick={()=>setRoutesOpen(v=>!v)}><i style={{background:color}}/>{p.emergency?'Emergency return':ROUTE_OPTIONS.find(v=>v.id===r.mode)?.name}<ChevronDown size={14}/></button></section>
   <section className="helmet-resources" aria-label="Current modeled resources"><small>RETURN RESOURCES · SIMULATED</small>{[['O₂',p.resources.oxygenNow],['Power',p.resources.powerNow],['On return',p.resources.reserve]].map(([label,value])=><div key={label}><span>{label}</span><strong>{f(Number(value))}<small>%</small></strong><i><b style={{width:`${Math.max(0,Math.min(100,Number(value)||0))}%`}}/></i></div>)}<button onClick={p.onSession}>{f(p.resources.travelMinutes,1)} min to habitat <ArrowUpRight size={14}/></button></section>
 
-  {!p.fullDisplay&&g&&<div className="helmet-waypoint"><Navigation size={22} style={{transform:`rotate(${g.bearing-heading}deg)`}}/><span><small>NEXT WAYPOINT</small><strong>{f(g.distance)} <em>m</em></strong></span><span>{f(g.bearing)}°<small>{g.offRoute>15?'OFF CORRIDOR':'BEARING'}</small></span></div>}
+  <SandHUD terrain={t} route={r} crew={p.crew} base={p.base} origin={p.origin} heading={heading} settings={p.settings} safety={p.safety} onMap={p.onMap} fullDisplay={p.fullDisplay}/>
   {(p.collision||!p.safety.canMove)&&<div className="helmet-alert" role="status"><ShieldAlert size={16}/><span>{p.collision||p.safety.reason}</span></div>}
   <div className="helmet-terrain"><span>ELEVATION<strong>{f(heightAt(t,p.crew,p.native),1)} <small>m</small></strong></span><span>SLOPE<strong>{f(t.slope[idx],1)}<small>°</small></strong></span><span>TRAVERSED<strong>{f(p.walked,1)} <small>m</small></strong></span><button onClick={p.onRoadView}><Camera size={14}/>Walk rover terrain <ArrowUpRight size={12}/></button></div>
-  {!p.fullDisplay&&<button className="helmet-minimap" aria-label="Expand mission map" onClick={p.onMap}><svg viewBox={`0 0 ${t.width} ${t.height}`} role="img" aria-label="Crew and selected route on actual HiRISE imagery"><image href={(t.assetRoot??'/data')+'/optical.webp'} width={t.width} height={t.height}/><>{sandImage&&<image href={sandImage} width={t.width} height={t.height}/>}</><polyline points={(p.origin?`${p.origin.x+.5},${p.origin.y+.5} `:'')+poly(r.outbound)} fill="none" stroke={color} strokeWidth="2"/><polyline points={poly(r.inbound)} fill="none" stroke="#d6dfdf" strokeWidth="1.5" strokeDasharray="3 3"/><circle cx={p.base.x+.5} cy={p.base.y+.5} r="4" fill="#f2f5f5" stroke="#172025" strokeWidth="1.5"/><circle cx={r.outbound.at(-1)!%t.width+.5} cy={Math.floor(r.outbound.at(-1)!/t.width)+.5} r="4" fill="#b3dfd3" stroke="#172025" strokeWidth="1.5"/><text x={p.base.x+.5} y={p.base.y-6} textAnchor="middle" fontSize="11" fontWeight="600" fill="#f2f5f5" stroke="#172025" strokeWidth="3" paintOrder="stroke">A</text><text x={r.outbound.at(-1)!%t.width+.5} y={Math.floor(r.outbound.at(-1)!/t.width)-6} textAnchor="middle" fontSize="11" fontWeight="600" fill="#f2f5f5" stroke="#172025" strokeWidth="3" paintOrder="stroke">B</text><path d="M0 -7L5 5L0 2L-5 5Z" fill="white" stroke="#152333" strokeWidth="1" transform={`translate(${p.crew.x+.5} ${p.crew.y+.5}) rotate(${heading})`}/></svg><span>N</span><div><Map size={15}/>Your traverse<Maximize2 size={13}/></div></button>}
+
   <VisorDock label="Helmet controls"><button aria-pressed={!p.fullDisplay&&!routesOpen&&!toolsOpen} onClick={()=>{setRoutesOpen(false);setToolsOpen(false);if(p.fullDisplay)p.onDisplay();}}><Footprints size={18}/><span>Visor</span></button><button onClick={p.onMap}><RouteIcon size={18}/><span>Route</span></button><button aria-expanded={toolsOpen} onClick={()=>{setRoutesOpen(false);setToolsOpen(v=>!v);}}><Layers size={18}/><span>Layers</span></button></VisorDock>
   {p.hazards&&<div className="helmet-hazard-legend"><span><i className="excluded"/>Excluded</span><span><i className="candidate"/>Candidate</span><span><i className="unknown"/>Unknown</span></div>}
   <footer className="helmet-footer"><span>HiRISE ≈0.3 m · DEM 1 m · graph 5 m<small>Small obstacles unresolved · lighting simulated</small></span><span>WASD walk · Shift 2× rehearsal · drag to look · M map</span><select aria-label="Rendering quality" value={p.quality} onChange={e=>p.onQuality(e.target.value as RenderQuality)}><option value="auto">Auto quality</option><option value="detail">High detail</option><option value="efficient">Efficiency</option></select></footer>
