@@ -13,7 +13,7 @@ import type {FieldAssessment,FieldPolicy,FieldResult,FieldZone} from './field-na
 import type {FieldOverlay} from './field-scene';
 import './unified-navigation.css';
 
-const SETTINGS:Settings={...DEFAULTS,mobilityModel:2,scienceMinutes:5,durationMinutes:120,oxygenMinutes:160,powerMinutes:150};
+const SETTINGS:Settings={...DEFAULTS,avoidSand:false,mobilityModel:2,scienceMinutes:5,durationMinutes:120,oxygenMinutes:160,powerMinutes:150};
 const POLICIES:{id:FieldPolicy;name:string;description:string}[]=[{id:'shortest',name:'Shortest',description:'Distance baseline'},{id:'balanced',name:'Balanced',description:'Terrain + sand screening'},{id:'cautious',name:'Cautious',description:'Stronger screening penalty'}];
 const fmt=(n:number,d=0)=>n.toLocaleString('en-US',{maximumFractionDigits:d});
 async function json(url:string,signal:AbortSignal){const r=await fetch(url,{signal});if(!r.ok)throw Error(`Could not load ${url.split('/').at(-1)}.`);return r.json();}
@@ -70,6 +70,7 @@ function FieldWorkspace({terrain:t,onNavigate}:{terrain:Terrain;onNavigate:(id:s
     <div className="field-section-title"><Compass size={17}/><h2>Traverse brief</h2><span>01</span></div>
     <div className="field-stop"><span className="field-stop-dot">A</span><div><strong>{exitRehearsal?'Exit rehearsal start':'Habitat / departure'}</strong><small>GRID {start.x} · {start.y}</small></div></div><div className="field-stop"><span className="field-stop-dot target">B</span><div><strong>{exitRehearsal?'Lower-index waypoint':'Science waypoint'}</strong><small>GRID {target.x} · {target.y} → HABITAT RETURN</small></div><button className={placing==='target'?'is-active':''} aria-label="Choose target on map" aria-pressed={placing==='target'} onClick={()=>setPlacing(placing==='target'?null:'target')}><MapPin size={17}/></button></div>
     <label className="field-toggle"><span><Waves size={17}/>Penalize sand candidates</span><input type="checkbox" checked={avoidSand} onChange={e=>{invalidate();setAvoidSand(e.target.checked);}}/></label><p className="field-hint">Routes weigh ripple texture, low thermal inertia and depressed terrain.</p>
+    <label className="field-toggle field-strict"><span><ShieldCheck size={16}/>Exclude mapped ripples + 5 m</span><input type="checkbox" checked={settings.avoidSand===true} onChange={e=>{invalidate();setSettings(v=>({...v,avoidSand:e.target.checked}));}}/></label>
     <label className="field-slider"><span>Slope limit <strong>{settings.maxSlope}°</strong></span><input aria-label="Maximum slope" type="range" min="8" max="28" step="1" value={settings.maxSlope} onChange={e=>{invalidate();setSettings(v=>({...v,maxSlope:+e.target.value}));}}/></label>
 
     <div className="field-section-title field-divider"><TriangleAlert size={17}/><h2>Change the ground</h2><span>02</span></div><button className="field-action" disabled={pending||!active} onClick={drill}><Waves size={17}/><span>Rehearse a sand trap<small>Simulated report on selected route</small></span><ChevronRight size={15}/></button><button className={`field-action ${placing==='report'?'is-active':''}`} aria-pressed={placing==='report'} onClick={()=>setPlacing(placing==='report'?null:'report')}><Crosshair size={17}/><span>Mark an exclusion<small>Choose a 20 m footprint on the map</small></span><Plus size={15}/></button>

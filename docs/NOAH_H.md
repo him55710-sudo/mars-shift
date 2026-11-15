@@ -75,6 +75,9 @@ Four tests cover NoData in the area denominator, deterministic majority ties, re
 
 ## Interface integration after surface v13
 
+**Current routing update:** the display-only behavior below describes the original integration. [Sand navigation](SAND_NAVIGATION.md) now adds an explicit, configurable ripple-cell exclusion policy (enabled for new missions), a 5 m buffer, and Hub/mission/visor overlays. Texture remains a derived candidate, not a measured trap. The older baseline results below remain an unscreened reference.
+
+
 The overlap crop now has a registered native ~0.3 m optical display and 69 display tiles. Acquisition transferred 5,370,428 bytes through the validated range bridge. Native optical NoData is transparent; it is not inpainted. Existing floor/ridge display checks still reproduce unchanged assets.
 
 `prepare_noah_science.py` reuses the existing numerically tested terrain equations without rewriting the two baseline scientific products. Its full derivative raster and planning arrays reproduce under `--check`. Native DEM coverage is 99.9899%; native 3 m morphology aggregates have 98.01% planning coverage. Planning slope median 1.64886°, p95 4.81016°; TRI median 0.07485 m, p95 0.20832 m. These are shape measures, not soil strength. The optical detector cue field is entirely null because no evaluated local model mask has been supplied.

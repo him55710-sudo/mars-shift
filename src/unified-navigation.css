@@ -8,3 +8,5 @@
 .field-index-label{display:flex;justify-content:space-between;font-size:7px;color:#91aab5;margin-top:11px;letter-spacing:.7px}.field-index-label b{font-size:8px;font-weight:400;letter-spacing:0}.field-risk-bar{margin-top:6px}.field-secondary-keys{font-size:8px!important;color:#a2b4bc;padding:6px 0 0 16px}.field-inspector-evidence{border-top:1px solid #ffffff14;padding-top:4px}
 
 @media(max-width:720px){.field-app button{min-height:44px}.field-map-tools button{width:41px;min-height:44px}.field-legend>label{min-height:44px}.field-candidates strong{font-size:10px}.field-inspector{max-height:325px}.field-inspector p{font-size:10px}.field-inspector dl>div{font-size:10px}}
+
+.field-toggle.field-strict{border:0;margin:0 0 13px;padding-top:0;font-size:10px}.field-strict svg{color:#edb85d}@media(max-width:720px){.field-strict{grid-column:1/-1;min-height:40px}}

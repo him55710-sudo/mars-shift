@@ -12,6 +12,7 @@
     "data:hazards": "python scripts/acquire_hazard_data.py",
     "science:hazards": "node scripts/run_hazard_analysis.mjs",
     "science:sand": "node scripts/run_sand_analysis.mjs",
+    "science:sand:navigation": "node scripts/run_sand_navigation.mjs",
     "data:storms": "python scripts/acquire_storm_data.py",
     "data:storm-boundaries": "python scripts/acquire_storm_boundaries.py",
     "science:storms": "node scripts/run_storm_analysis.mjs",
