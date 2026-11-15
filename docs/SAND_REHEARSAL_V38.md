@@ -28,7 +28,7 @@ Schema and collection requirements: `/data/hazards/sand-v38/validation-protocol.
 
 ## Implementation and limits
 
-Routing stays in a Web Worker. A single base support graph is cached per worker; changing a scenario only adds exclusions and reruns the existing route objectives. Camera playback keeps route textures stable and reuses measured-surface collision tests. Stale worker responses cannot enable movement guidance for changed settings. The demo uses guided walking, not a new free-walking physics engine. Mission time and suit reserves remain declared assumptions.
+Routing stays in a Web Worker. A single base support graph is cached per worker; changing a scenario only adds exclusions and reruns the existing route objectives. Camera playback follows the visual 0.6 m/s pace, while mission time consumes the exact direction-dependent edge cost used by the planner. Oxygen and power consumption also carry across replans, preserving one minute of each original reserve. The added replay test matches accumulated modeled time to full outbound-plus-return travel time. Camera playback keeps route textures stable and reuses measured-surface collision tests. Stale worker responses cannot enable movement guidance for changed settings. The demo uses guided walking, not a new free-walking physics engine. Mission time and suit reserves remain declared assumptions.
 
 The existing observed sand screen, recorded Sol 215 replay, review and current briefing routes had been bypassed by a prior App integration; their direct routing is restored without replacing scientific engines or frozen experiments.
 

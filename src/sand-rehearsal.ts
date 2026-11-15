@@ -1,10 +1,25 @@
-import {gridPoint,worldPoint,roverRoutes,ROVER_SETTINGS} from './rover-navigation';
+import {gridPoint,worldPoint,roverRoutes,moveOnRover,ROVER_SETTINGS} from './rover-navigation';
+import {edgeTravelMinutes} from './mobility';
 import type {RoverGrid,RoverTerrain,RoverObstacle} from './rover-navigation';
 import type {Point,Route,Mode} from './planner';
 
 export type SandScenario='clear'|'detour'|'surrounded';
 export const SAND_REHEARSAL_VERSION='sand-rehearsal-v38';
 export const SAND_SETTINGS={...ROVER_SETTINGS,scienceMinutes:0,durationMinutes:3,oxygenMinutes:4,powerMinutes:4,reservePercent:25};
+export function trainingSettings(remainingSeconds:number){
+ const spent=Math.max(0,180-remainingSeconds)/60,oxygenMinutes=Math.max(.001,4-spent*(1+SAND_SETTINGS.loadKg*.01)),powerMinutes=Math.max(.001,4-spent*(1+SAND_SETTINGS.loadKg*.005));
+ // Preserve one minute of each original resource, even after a mid-mission replan.
+ return {...SAND_SETTINGS,durationMinutes:remainingSeconds/60,oxygenMinutes,powerMinutes,reservePercent:100/Math.min(oxygenMinutes,powerMinutes)};
+}
+export function advanceTraining(terrain:RoverTerrain,g:RoverGrid,cells:readonly number[],position:Point,cursor:number,visualSeconds:number){
+ let p=position,budget=SAND_SETTINGS.speed*Math.max(0,Math.min(.05,visualSeconds)),modeledSeconds=0;
+ while(budget>0&&cursor<cells.length){const i=cells[cursor],a=cells[Math.max(0,cursor-1)],q={x:i%g.width,y:Math.floor(i/g.width)},dx=(q.x-p.x)*g.cellSize,dz=(q.y-p.y)*g.cellSize,d=Math.hypot(dx,dz);if(d<.000001){cursor++;continue;}
+  const step=Math.min(budget,d),moved=moveOnRover(terrain,p,dx/d*step,dz/d*step,SAND_SETTINGS),h=Math.hypot((moved.point.x-p.x)*g.cellSize,(moved.point.y-p.y)*g.cellSize),edge=Math.hypot(i%g.width-a%g.width,Math.floor(i/g.width)-Math.floor(a/g.width))*g.cellSize;
+  if(edge)modeledSeconds+=edgeTravelMinutes(terrain,a,i,SAND_SETTINGS)*60*h/edge;
+  p=moved.point;budget-=step;if(moved.reason)return {point:p,cursor,modeledSeconds,reason:moved.reason,done:false};if(step===d)cursor++;
+ }
+ return {point:p,cursor,modeledSeconds,reason:'',done:cursor>=cells.length};
+}
 // Declared fictional training footprints, in the native Sol 477 local metre frame.
 // These are NOT classifications or measurements of the NASA photographs.
 export const TRAINING_PATCHES:RoverObstacle[]=[
@@ -38,7 +53,7 @@ export function routeTrainingAudit(g:RoverGrid,route:Route|null,obstacles:RoverO
  return {exposureMetres,minClearance:Number.isFinite(minClearance)?minClearance:null};
 }
 export function planTraining(base:RoverTerrain,g:RoverGrid,crew:Point,target:Point,obstacles:RoverObstacle[],remainingSeconds=180,mode:Mode='shortest'){
- const began=performance.now(),terrain=maskTrainingTerrain(base,g,obstacles),settings={...SAND_SETTINGS,durationMinutes:remainingSeconds/60},home=gridPoint(g,g.start.x,g.start.z);
+ const began=performance.now(),terrain=maskTrainingTerrain(base,g,obstacles),settings=trainingSettings(remainingSeconds),home=gridPoint(g,g.start.x,g.start.z);
  const before=roverRoutes(base,crew,target,settings,home).shortest??null,options=roverRoutes(terrain,crew,target,settings,home),route=options[mode]??null;
  return {terrain,route,baseline:before,alternatives:Object.values(options).filter((r):r is Route=>!!r),audit:routeTrainingAudit(g,route,obstacles),baselineAudit:routeTrainingAudit(g,before,obstacles),milliseconds:performance.now()-began};
 }
