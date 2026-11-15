@@ -16,6 +16,7 @@ Ancestor checks passed for all eleven local heads: main, dem-separation-v25, enc
 - Navy surfaces, consistent mint actions, restrained borders, shared type roles and readable navigation unify the surrounding UI. Scientific raster ramps, route colors, source imagery, measured geometry and crew daylight mode keep their existing meanings.
 - The hub uses the existing NASA/USGS-derived Mars texture at up to device pixel ratio 2. Its globe renders on texture/size changes; static hub presentation does not continuously redraw the planet. The original introduction keeps its scroll-linked scene. No generated terrain imagery or new UI dependency was introduced.
 - Route and model products remain lazy-loaded. The hub does not request orbital terrain, MEDA recordings or calibrated surface meshes before visitors enter the corresponding view.
+- Static packaging preserves every runtime product, all surface imagery and native GeoTIFF downloads. Unreferenced raw tuning/episode traces remain in source. The linked v5 failure-timeline download is losslessly gzipped, with a byte-for-byte decompression check. A 255 MiB build budget prevents another rejected upload under the host's 256 MiB limit.
 
 ## Validation
 
