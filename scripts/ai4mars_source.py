@@ -10,6 +10,7 @@ import time
 import zipfile
 import zlib
 import struct
+import threading
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import requests
@@ -18,6 +19,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT.parent / 'data-cache' / 'ai4mars-v39'
 URL = 'https://zenodo.org/api/records/15995036/files/ai4mars-dataset-merged-0.6.zip/content'
 SIZE = 16232481989
+BLOCK_LOCKS={}
+BLOCK_GUARD=threading.Lock()
 
 class RemoteZip(io.RawIOBase):
     def __init__(self):
@@ -66,8 +69,18 @@ def member(z, name):
     path = CACHE / 'members' / name
     if path.exists(): return path.read_bytes()
     info=z.getinfo(name)
-    remote=RemoteZip();remote.seek(info.header_offset)
-    raw=remote.read(info.compress_size+4096)
+    if info.compress_size<20000:
+        # Neighboring tiny PNG labels share a verified block to respect server rate limits.
+        start=info.header_offset//256000*256000
+        with BLOCK_GUARD: lock=BLOCK_LOCKS.setdefault(start,threading.Lock())
+        block=CACHE/f'block-{start}.bin'
+        with lock:
+            if not block.exists():
+                remote=RemoteZip();remote.seek(start);block.write_bytes(remote.read(512000))
+            raw=block.read_bytes()[info.header_offset-start:]
+    else:
+        remote=RemoteZip();remote.seek(info.header_offset)
+        raw=remote.read(info.compress_size+4096)
     if raw[:4]!=b'PK\x03\x04': raise ValueError('Invalid member header')
     name_len,extra_len=struct.unpack_from('<HH',raw,26)
     compressed=raw[30+name_len+extra_len:30+name_len+extra_len+info.compress_size]
