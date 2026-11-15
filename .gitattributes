@@ -97,3 +97,6 @@
 /src/noah-data.ts text eol=crlf
 /public/data/**/noah-terrain.json text eol=crlf
 /public/data/**/science/terrain-metrics.json text eol=crlf
+
+# v15 evidence is deterministically generated and checked byte-for-byte.
+/public/data/review-v15/evidence.json -text

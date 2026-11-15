@@ -1,25 +1,25 @@
 # Submission package
 
-Current scientific upgrade: [computed engineering results](SCIENTIFIC_ENGINEERING_RESULTS.md), [terrain definitions](TERRAIN_METHODS.md), and [method attribution](SCIENTIFIC_REFERENCES.md) supersede historical feature/test descriptions below. The introduction leads to destination selection and the 3D explorer; Science & Safety contains the new numerical maps.
+Current review release: [critical judging assessment](JUDGE_REVIEW_V15.md), `/review`, and the current seven-slide `/briefing`. English methods and sources are at `/data/review-v15/methods.md`. Local checks do not verify a published submission.
 
 Verified against the supplied Seoul event deck and the live 2026 project form. Deadline: **November 15, 2026, 23:59 KST**. Event guide recommends finishing by 23:55.
 
 ## English project summary
 
-MARS SHIFT connects observed Jezero terrain with a transparent exploration-and-return decision. Two real study regions combine HiRISE elevation and optical imagery with coarse THEMIS thermal context. Native-resolution ruggedness, terrain position and curvature support direction-dependent, graph-based travel estimates. Forward and reverse Dijkstra maps show where a crew can complete science work and return under declared time and simulated resource reserves. The 3D EVA Explorer links these maps to route comparison, optical candidate review and simulated exclusions. Seeded sensitivity reports how often a fixed route meets explicitly sampled assumptions. Every result separates observations, derived geometry, heuristic detections and uncalibrated mission models. Existing NASA and open-source methods are credited; the prototype does not certify astronaut safety or estimate survival probability.
+MARS SHIFT is a research prototype linking observed Mars terrain to an astronaut's next modeled escape action and return route. A local dust-devil tracker supplies time-dependent forecasts; shared terrain, delay and resource constraints screen HOLD, SIDESTEP, DETOUR and RETURN. A photographed helmet view and map share the computed guidance. Separately, published NOAH-H texture classes screen mapped sand candidates on both trip legs. The evidence page distinguishes one paper-derived observed metric reconstruction from synthetic confirmation and mapped route tests. Current guarded routing reduces mean modeled contact by 10.190% versus Static, but only 0.064% versus the previous integrated model, with unchanged no-contact and return-failure counts. Missing-data and infeasible conditions withhold guidance. Observations, assumptions, failures, source identities and open methods remain inspectable; metre-accurate operational tracking and astronaut safety are not claimed.
 
 ## Required links
 
 - Project demonstration: the published `/briefing` URL (exactly seven slides), or a verified <=30-second video. Choose **one** demo link.
-- A standalone, exactly seven-slide PowerPoint is available at `/downloads/MARS-SHIFT-7-slides.pptx`. The briefing includes a download link. This is an alternative format for the same demonstration, not a second required demo link.
-- Final project: the published planner root URL.
+- The PowerPoint at `/downloads/MARS-SHIFT-7-slides.pptx` is an older archive and does not describe v15. Use the current `/briefing` demonstration.
+- Final project: the published `/review` URL, connecting all current working modes.
 - Both must load without passwords, permissions or registration in a signed-out browser. Owner-private publication is not sufficient; check the final site audience before submitting.
 - NASA data/resources: list Mars Trek and relevant challenge resources plus the actual HiRISE and THEMIS product sources. Distinguish contextual resources from measurements used in calculations.
 - Other resources: source-data license/credit, third-party packages, scientific references and SI/AI assistance.
 
 ## Fields to review
 
-- Project title: MARS SHIFT — Adaptive EVA Navigator.
+- Project title: MARS SHIFT — Hazard-Adaptive Mars EVA XR Navigator.
 - Challenge: Interplanetary Survival Guide: Martian Map.
 - Details: use README and methodology; include the actual measured baseline and explicit limitations.
 - SI/AI use: Codex assisted code, processing scripts, tests, documents and copy; Exa/Consensus assisted research. Source measurements and imagery were not AI generated.

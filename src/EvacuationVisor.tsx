@@ -6,6 +6,8 @@ import {roverTerrain,validateRoverGrid} from './rover-navigation';
 import type {RoverGrid} from './rover-navigation';
 import {VisorCompass,VisorDock,VisorReticle} from './VisorChrome';
 import {BrowserXRAdapter} from './hazard-xr';
+import {matchingGuidance,pendingGuidance} from './guidance-session-v15';
+import type {SessionReply} from './guidance-session-v15';
 import type {XRNavigationFrame} from './hazard-xr';
 import type {EncounterDecision} from './encounter-v7';
 import type {ArmV8,AbruptCase,WindDays} from './encounter-v8';
@@ -34,20 +36,22 @@ export default function EvacuationVisor(){
 function VisorSession({data:b}:{data:Data}){
  const [heading,setHeading]=useState(0),[photoSupport,setPhotoSupport]=useState(true);
  const viewChanged=useCallback((_p:Point,_distance:number,yaw:number)=>setHeading((90-yaw*180/Math.PI+360)%360),[]);
- const [c,setCase]=useState(b.case),[arm,setArm]=useState<ArmV8|'Guarded'>(release.guardPromotion?'Guarded':'MARS SHIFT'),[snapshot,setSnapshot]=useState<Snapshot|null>(null),[playing,setPlaying]=useState(false),[busy,setBusy]=useState(true),[error,setError]=useState(''),[status,setStatus]=useState('Loading observed surface…'),[overview,setOverview]=useState(false),[panel,setPanel]=useState<'scenario'|'layers'|'evidence'|null>(null),[layers,setLayers]=useState(true),[rate,setRate]=useState(1),[restart,setRestart]=useState(0),[command,setCommand]=useState({id:0,action:'reset' as 'in'|'out'|'reset'});
+ const [c,setCase]=useState(b.case),[arm,setArm]=useState<ArmV8|'Guarded'>(release.guardPromotion?'Guarded':'MARS SHIFT'),[reply,setReply]=useState<SessionReply<Snapshot>|null>(null),[playing,setPlaying]=useState(false),[busy,setBusy]=useState(true),[error,setError]=useState(''),[status,setStatus]=useState('Loading observed surface…'),[overview,setOverview]=useState(false),[panel,setPanel]=useState<'scenario'|'layers'|'evidence'|null>(null),[layers,setLayers]=useState(true),[rate,setRate]=useState(1),[restart,setRestart]=useState(0),[command,setCommand]=useState({id:0,action:'reset' as 'in'|'out'|'reset'});
+ const session=useMemo(()=>JSON.stringify({c,arm,restart}),[c,arm,restart]);
+ const snapshot=matchingGuidance(reply,session),previousFrame=useRef<XRNavigationFrame|null>(null);
  const terrain=useMemo(()=>roverTerrain(b.grid,[]),[b.grid]);
  const manifest=useMemo(()=>({...b.manifest,assets:b.manifest.calibratedAssets??b.manifest.detailAssets??b.manifest.assets}),[b.manifest]);
  const source=b.sources.find(s=>s.id===c.source)!;
  const worker=useRef<Worker|null>(null),pending=useRef(false),id=useRef(0),panelRef=useRef<HTMLElement>(null);
  const adapter=useMemo(()=>new BrowserXRAdapter(window),[]);
- useEffect(()=>{const w=new Worker(new URL('./evacuation-worker-v13.ts',import.meta.url),{type:'module'});worker.current=w;pending.current=true;setBusy(true);setPlaying(false);setSnapshot(null);setError('');
-  w.onmessage=({data})=>{if(data.id!==id.current)return;pending.current=false;setBusy(false);if(data.error){setError(data.error);setPlaying(false);}else{setSnapshot(data.snapshot);if(data.snapshot.done)setPlaying(false);}};
-  w.onerror=()=>{setError('The planner stopped. Reset the rehearsal.');setPlaying(false);setBusy(false);pending.current=false;};
+ useEffect(()=>{const w=new Worker(new URL('./evacuation-worker-v13.ts',import.meta.url),{type:'module'});worker.current=w;pending.current=true;setBusy(true);setPlaying(false);setReply(null);setError('');
+  w.onmessage=({data})=>{if(data.id!==id.current)return;pending.current=false;setBusy(false);if(data.error){setReply(null);setError(data.error);setPlaying(false);}else{setReply({session,value:data.snapshot});if(data.snapshot.done)setPlaying(false);}};
+  w.onerror=()=>{setReply(null);setError('The planner stopped. Reset the rehearsal.');setPlaying(false);setBusy(false);pending.current=false;};
   w.postMessage({id:++id.current,type:'init',grid:b.grid,case:c,source,wind:b.wind,arm});return()=>{w.terminate();worker.current=null;};
- },[b.grid,b.wind,c,source,arm,restart]);
+ },[b.grid,b.wind,c,source,arm,restart,session]);
  const step=()=>{if(worker.current&&!pending.current&&!snapshot?.done){pending.current=true;setBusy(true);worker.current.postMessage({id:++id.current,type:'step'});}};
  useEffect(()=>{if(!playing)return;const timer=setInterval(()=>{if(worker.current&&!pending.current){pending.current=true;setBusy(true);worker.current.postMessage({id:++id.current,type:'step'});}},2000/rate);return()=>clearInterval(timer);},[playing,rate]);
- useEffect(()=>{if(snapshot)adapter.publish(snapshot.frame);},[snapshot,adapter]);
+ useEffect(()=>{if(snapshot){previousFrame.current=snapshot.frame;adapter.publish({...snapshot.frame,session} as XRNavigationFrame);}else if(previousFrame.current)adapter.publish(pendingGuidance(previousFrame.current,session,error||undefined));},[snapshot,session,adapter,error]);
  useEffect(()=>()=>adapter.close(),[adapter]);
  useEffect(()=>{if(!panel)return;setPlaying(false);const before=document.activeElement as HTMLElement|null;panelRef.current?.querySelector<HTMLButtonElement>('button')?.focus();const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setPanel(null);};addEventListener('keydown',key);return()=>{removeEventListener('keydown',key);if(before?.isConnected)before.focus();};},[panel]);
  const frame=snapshot?.frame,cell=b.grid.cellSize;
@@ -64,7 +68,7 @@ function VisorSession({data:b}:{data:Data}){
   {snapshot&&<RoverScene photoSupport={photoSupport} manifest={manifest} grid={b.grid} terrain={terrain} settings={snapshot.settings} crew={snapshot.position} target={snapshot.decision.action==='RETURN'||snapshot.returned?snapshot.base:snapshot.target} route={null} alternatives={NONE} obstacles={NONE} hazards={false} overview={overview} thirdPerson={false} pickMode={null} paused controlled hazardRouteStyle="ribbon" command={command} motion={MOTION} onMove={viewChanged} onPick={NOOP} onStatus={setStatus} hazardFrame={displayFrame}/>}
   <div className="evacuation-shade"/><HelmetHUD resources={snapshot?.resources} sigma={frame?.localizationSigma??c.positionSigma} fixes={snapshot?.fixes??0} overview={overview}/>
   <header className="evacuation-top"><div><strong>MARS SHIFT</strong><small>FIRST-PERSON EVA · NASA SURFACE</small></div><button onClick={()=>setPanel('evidence')}>Jezero · Sol 477 <ChevronDown size={15}/><small>Perseverance / Drive 1004</small></button></header>
-  <a className="sand14-entry" href="/hazards?ground=sand">Sand trap navigation ↗</a><VisorCompass heading={heading}/><VisorReticle/>
+  <a className="sand14-entry" href="/review">Evidence & demo ↗</a><VisorCompass heading={heading}/><VisorReticle/>
   <button className="evacuation-views" onClick={()=>setPanel('scenario')}>Rehearsal <ChevronDown size={14}/></button>
   <section className={`evacuation-action ${contactPredicted?'evacuation-caution':''}`} aria-live="polite"><small><i/> {contactPredicted?'CONTACT PREDICTED':snapshot?.fixes?'NEXT MODELED ACTION':'WAITING FOR DETECTION'}</small><h1>{ACTIONS[action]??action}</h1><p>{snapshot?.clock?.predictedContactSeconds?`Predicted contact ${fmt(snapshot.clock.predictedContactSeconds)} s · minimizing exposure`:snapshot?.fixes?'Replans with each delivered observation':'A synthetic dust devil appears at T+10 s'}</p><button onClick={()=>setPanel('scenario')}><i/> {arm==='Guarded'?'Dual-model escape':arm==='MARS SHIFT'?'Legacy adaptive escape':arm} <ChevronDown size={14}/></button></section>
   {!overview&&next&&!snapshot?.done&&action!=='HOLD'&&action!=='NO FEASIBLE ROUTE'&&<div className="evacuation-waypoint"><svg className="eva11-direction" viewBox="-20 -20 40 40" style={{transform:`rotate(${relativeBearing}deg)`}} aria-label={`Waypoint bearing ${Math.round(relativeBearing)} degrees relative to view`}><path d="M0 -15L10 9L0 4L-10 9Z"/></svg><div><small>NEXT WAYPOINT</small><strong>{fmt(distance)} <span>m</span></strong></div></div>}

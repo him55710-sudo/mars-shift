@@ -1,0 +1,21 @@
+
+ RUN  v4.1.12 C:/Users/user/OneDrive/바탕 화면/NASA/mars-shift-review-v15
+
+ ❯ src/eva.test.ts (22 tests | 1 failed) 18541ms
+     × preserves route freeze and the old path until adoption after reload 5008ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/eva.test.ts > shared mission and dynamic revalidation on actual Mars observations > preserves route freeze and the old path until adoption after reload
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/eva.test.ts:41:2
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 44 passed (45)
+      Tests  1 failed | 328 passed (329)
+   Start at  18:38:18
+   Duration  49.85s (transform 2.25s, setup 0ms, import 5.37s, tests 36.26s, environment 4ms)

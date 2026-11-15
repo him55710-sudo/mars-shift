@@ -2,7 +2,7 @@ import {useEffect,useRef} from 'react';
 import {ChevronDown} from 'lucide-react';
 
 const primary=[['explore','Explore'],['plan','Plan a mission'],['terrain','Mars Atlas']] as const;
-const secondary=[['hazards','Weather & hazard rehearsal'],['destinations','Destinations'],['crew','Crew rehearsal'],['terrain-local','Terrain analysis'],['evidence','Evidence & sources'],['briefing','7-slide briefing']] as const;
+const secondary=[['review','Evidence & demo'],['hazards','Dust devil rehearsal'],['destinations','Destinations'],['crew','Crew rehearsal'],['terrain-local','Terrain analysis'],['evidence','Evidence & sources'],['briefing','7-slide briefing']] as const;
 const compact:Record<string,string>={hazards:'Hazards',explore:'Explorer',plan:'Planning',terrain:'Atlas'};
 const path=(id:string)=>id==='plan'?'/planning':id==='terrain-local'?'/terrain/analysis':'/'+id;
 

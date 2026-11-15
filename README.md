@@ -1,3 +1,13 @@
+# MARS SHIFT — current review release (v15)
+
+Open `/review` for current evidence and working demos, `/briefing` for the current seven-slide English presentation, `/hazards` for the photographed helmet rehearsal, and `/hazards?ground=sand&lang=en` for sand screening. [Critical judging review](docs/JUDGE_REVIEW_V15.md) · [English methods and limitations](public/data/review-v15/methods.md).
+
+The current evidence distinguishes one observed metric reconstruction from synthetic confirmation and mapped candidate screening. Static comparison improves mean contact by 10.190%; incremental gain over the previous integrated model is only 0.064%, with unchanged no-contact/return-failure counts. No validated one-metre accuracy or real astronaut safety claim is made. `pnpm review:check` checks the six source results and published totals; `pnpm build` includes that guard.
+
+The entries below are preserved release history. Old percentages and test totals refer to their own protocols, not the latest common-case comparison. The downloadable PowerPoint is an earlier archive; use the current `/briefing`.
+
+## Preserved release history
+
 > Observation/Navcam integration (2026-11-15): see [validation report](docs/OBSERVED_V6_RESULTS.md). `/hazards` now opens recorded MEDA/NASA replay and conditional local escape; archived orbital studies remain accessible.
 
 # MARS SHIFT
