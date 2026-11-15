@@ -1,4 +1,5 @@
 /** Presentation-only locomotion. All displacement still passes through the DEM collision engine. */
+export type VisorPose = {yaw:number;pitch:number;fov:number};
 export type MotionVelocity = {forward:number;right:number};
 export const stoppedMotion = ():MotionVelocity => ({forward:0,right:0});
 export function smoothMotion(velocity:MotionVelocity,input:MotionVelocity,seconds:number,speed:number,boost=false){

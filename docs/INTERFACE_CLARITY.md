@@ -1,5 +1,7 @@
 # Interface clarity pass — 15 November 2026
 
+Historical release notes. The subsequent [unified first-person visor](UNIFIED_VISOR.md) replaces the helmet panel layout and control dock while retaining the endpoint labels and planning-map improvements.
+
 The published spatial-visor and mission-workflow release is preserved. This pass changes presentation, marker rendering and initial camera framing; it does not change terrain products, planning costs, feasibility limits or return calculations.
 
 - Replaced the layered visor CSS with one set of graphite surfaces, consistent 8–10 px corners and one pale mint route accent. Warnings retain a separate caution color and visible text.
