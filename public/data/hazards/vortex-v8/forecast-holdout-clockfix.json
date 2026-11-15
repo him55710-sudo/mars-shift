@@ -1,0 +1,1324 @@
+{
+  "createdAt": "2026-11-15T03:49:31.181Z",
+  "protocolSHA256": "15642859ce8e862e117f5f9f534adee25a55e29a721308d6f62e554412a05d39",
+  "engineSHA256": "9d7c87b037c96afd4c4e32d4339ae93a470a1c18500ab7c1e17518de71f0aa8a",
+  "forecastSHA256": "3d7bf1c149625512c0fafddc54eac0c6ef183a435c5b37c4ec938fd9a8c447be",
+  "kind": "UNSEEN_SYNTHETIC_POSITION_TEST",
+  "selected": "CV_SMOOTH",
+  "scores": [
+    {
+      "model": "IMM",
+      "rmse": 14.033229265631515
+    },
+    {
+      "model": "CV_SMOOTH",
+      "rmse": 14.915600704412565
+    },
+    {
+      "model": "LOCAL7",
+      "rmse": 15.471870771589746
+    },
+    {
+      "model": "CV_RESPONSIVE",
+      "rmse": 17.76434506134881
+    }
+  ],
+  "rows": [
+    {
+      "case": "hol-001",
+      "model": "LOCAL7",
+      "rmse": 4.4442784501535195,
+      "radiusMAE": 0.1717409972365163
+    },
+    {
+      "case": "hol-001",
+      "model": "CV_SMOOTH",
+      "rmse": 2.702303006873739,
+      "radiusMAE": 0.1717409972365163
+    },
+    {
+      "case": "hol-001",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.979281566886298,
+      "radiusMAE": 0.1717409972365163
+    },
+    {
+      "case": "hol-001",
+      "model": "IMM",
+      "rmse": 3.91087947369149,
+      "radiusMAE": 0.1717409972365163
+    },
+    {
+      "case": "hol-002",
+      "model": "LOCAL7",
+      "rmse": 11.164316853821967,
+      "radiusMAE": 0.5150872058253757
+    },
+    {
+      "case": "hol-002",
+      "model": "CV_SMOOTH",
+      "rmse": 11.250181615992778,
+      "radiusMAE": 0.5150872058253757
+    },
+    {
+      "case": "hol-002",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.911764468240989,
+      "radiusMAE": 0.5150872058253757
+    },
+    {
+      "case": "hol-002",
+      "model": "IMM",
+      "rmse": 10.235893495992919,
+      "radiusMAE": 0.5150872058253757
+    },
+    {
+      "case": "hol-003",
+      "model": "LOCAL7",
+      "rmse": 36.9862091676031,
+      "radiusMAE": 1.1978538671357548
+    },
+    {
+      "case": "hol-003",
+      "model": "CV_SMOOTH",
+      "rmse": 34.28042196160828,
+      "radiusMAE": 1.1978538671357548
+    },
+    {
+      "case": "hol-003",
+      "model": "CV_RESPONSIVE",
+      "rmse": 30.68123507970829,
+      "radiusMAE": 1.1978538671357548
+    },
+    {
+      "case": "hol-003",
+      "model": "IMM",
+      "rmse": 33.26352117852881,
+      "radiusMAE": 1.1978538671357548
+    },
+    {
+      "case": "hol-004",
+      "model": "LOCAL7",
+      "rmse": 4.231425266185055,
+      "radiusMAE": 0.14256581453045475
+    },
+    {
+      "case": "hol-004",
+      "model": "CV_SMOOTH",
+      "rmse": 3.312907643691047,
+      "radiusMAE": 0.14256581453045475
+    },
+    {
+      "case": "hol-004",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.01242799560575,
+      "radiusMAE": 0.14256581453045475
+    },
+    {
+      "case": "hol-004",
+      "model": "IMM",
+      "rmse": 3.8666223464223113,
+      "radiusMAE": 0.14256581453045475
+    },
+    {
+      "case": "hol-005",
+      "model": "LOCAL7",
+      "rmse": 11.484933916439806,
+      "radiusMAE": 0.30762397877308495
+    },
+    {
+      "case": "hol-005",
+      "model": "CV_SMOOTH",
+      "rmse": 11.931809162132714,
+      "radiusMAE": 0.30762397877308495
+    },
+    {
+      "case": "hol-005",
+      "model": "CV_RESPONSIVE",
+      "rmse": 17.43175959146758,
+      "radiusMAE": 0.30762397877308495
+    },
+    {
+      "case": "hol-005",
+      "model": "IMM",
+      "rmse": 12.389716736336736,
+      "radiusMAE": 0.30762397877308495
+    },
+    {
+      "case": "hol-006",
+      "model": "LOCAL7",
+      "rmse": 33.11798396584814,
+      "radiusMAE": 1.0976675077980413
+    },
+    {
+      "case": "hol-006",
+      "model": "CV_SMOOTH",
+      "rmse": 30.8376809861092,
+      "radiusMAE": 1.0976675077980413
+    },
+    {
+      "case": "hol-006",
+      "model": "CV_RESPONSIVE",
+      "rmse": 24.245339878585572,
+      "radiusMAE": 1.0976675077980413
+    },
+    {
+      "case": "hol-006",
+      "model": "IMM",
+      "rmse": 24.767297232172577,
+      "radiusMAE": 1.0976675077980413
+    },
+    {
+      "case": "hol-007",
+      "model": "LOCAL7",
+      "rmse": 12.010030833853667,
+      "radiusMAE": 0.13485036656543625
+    },
+    {
+      "case": "hol-007",
+      "model": "CV_SMOOTH",
+      "rmse": 9.833025111211251,
+      "radiusMAE": 0.13485036656543625
+    },
+    {
+      "case": "hol-007",
+      "model": "CV_RESPONSIVE",
+      "rmse": 16.668019539966426,
+      "radiusMAE": 0.13485036656543625
+    },
+    {
+      "case": "hol-007",
+      "model": "IMM",
+      "rmse": 10.021305859346004,
+      "radiusMAE": 0.13485036656543625
+    },
+    {
+      "case": "hol-008",
+      "model": "LOCAL7",
+      "rmse": 11.924042450865416,
+      "radiusMAE": 0.30221535262736016
+    },
+    {
+      "case": "hol-008",
+      "model": "CV_SMOOTH",
+      "rmse": 12.153146415556774,
+      "radiusMAE": 0.30221535262736016
+    },
+    {
+      "case": "hol-008",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.010497293972369,
+      "radiusMAE": 0.30221535262736016
+    },
+    {
+      "case": "hol-008",
+      "model": "IMM",
+      "rmse": 11.60457821184365,
+      "radiusMAE": 0.30221535262736016
+    },
+    {
+      "case": "hol-009",
+      "model": "LOCAL7",
+      "rmse": 34.33977309366736,
+      "radiusMAE": 0.8596787671574994
+    },
+    {
+      "case": "hol-009",
+      "model": "CV_SMOOTH",
+      "rmse": 32.8822472424147,
+      "radiusMAE": 0.8596787671574994
+    },
+    {
+      "case": "hol-009",
+      "model": "CV_RESPONSIVE",
+      "rmse": 24.653295958009473,
+      "radiusMAE": 0.8596787671574994
+    },
+    {
+      "case": "hol-009",
+      "model": "IMM",
+      "rmse": 25.160466161454583,
+      "radiusMAE": 0.8596787671574994
+    },
+    {
+      "case": "hol-010",
+      "model": "LOCAL7",
+      "rmse": 8.74461151876094,
+      "radiusMAE": 0.10592945615447083
+    },
+    {
+      "case": "hol-010",
+      "model": "CV_SMOOTH",
+      "rmse": 9.421468839274418,
+      "radiusMAE": 0.10592945615447083
+    },
+    {
+      "case": "hol-010",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.095892204004734,
+      "radiusMAE": 0.10592945615447083
+    },
+    {
+      "case": "hol-010",
+      "model": "IMM",
+      "rmse": 8.431041817063516,
+      "radiusMAE": 0.10592945615447083
+    },
+    {
+      "case": "hol-011",
+      "model": "LOCAL7",
+      "rmse": 11.988873760894236,
+      "radiusMAE": 0.43306173428736744
+    },
+    {
+      "case": "hol-011",
+      "model": "CV_SMOOTH",
+      "rmse": 11.570060678431625,
+      "radiusMAE": 0.43306173428736744
+    },
+    {
+      "case": "hol-011",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.517553183588484,
+      "radiusMAE": 0.43306173428736744
+    },
+    {
+      "case": "hol-011",
+      "model": "IMM",
+      "rmse": 10.897544791241554,
+      "radiusMAE": 0.43306173428736744
+    },
+    {
+      "case": "hol-012",
+      "model": "LOCAL7",
+      "rmse": 13.449827610674216,
+      "radiusMAE": 2.377752027420367
+    },
+    {
+      "case": "hol-012",
+      "model": "CV_SMOOTH",
+      "rmse": 12.562692072038576,
+      "radiusMAE": 2.377752027420367
+    },
+    {
+      "case": "hol-012",
+      "model": "CV_RESPONSIVE",
+      "rmse": 16.25441766223532,
+      "radiusMAE": 2.377752027420367
+    },
+    {
+      "case": "hol-012",
+      "model": "IMM",
+      "rmse": 13.671694420712203,
+      "radiusMAE": 2.377752027420367
+    },
+    {
+      "case": "hol-013",
+      "model": "LOCAL7",
+      "rmse": 8.848115879662812,
+      "radiusMAE": 0.1295952561249404
+    },
+    {
+      "case": "hol-013",
+      "model": "CV_SMOOTH",
+      "rmse": 9.770654200996619,
+      "radiusMAE": 0.1295952561249404
+    },
+    {
+      "case": "hol-013",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.200597154437416,
+      "radiusMAE": 0.1295952561249404
+    },
+    {
+      "case": "hol-013",
+      "model": "IMM",
+      "rmse": 8.911380249917904,
+      "radiusMAE": 0.1295952561249404
+    },
+    {
+      "case": "hol-014",
+      "model": "LOCAL7",
+      "rmse": 11.59536278638285,
+      "radiusMAE": 0.21437581499987657
+    },
+    {
+      "case": "hol-014",
+      "model": "CV_SMOOTH",
+      "rmse": 11.446168364162244,
+      "radiusMAE": 0.21437581499987657
+    },
+    {
+      "case": "hol-014",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.413410757379642,
+      "radiusMAE": 0.21437581499987657
+    },
+    {
+      "case": "hol-014",
+      "model": "IMM",
+      "rmse": 11.2528098888107,
+      "radiusMAE": 0.21437581499987657
+    },
+    {
+      "case": "hol-015",
+      "model": "LOCAL7",
+      "rmse": 12.351225910042443,
+      "radiusMAE": 1.2663493987201178
+    },
+    {
+      "case": "hol-015",
+      "model": "CV_SMOOTH",
+      "rmse": 11.511493708019982,
+      "radiusMAE": 1.2663493987201178
+    },
+    {
+      "case": "hol-015",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.048611530558532,
+      "radiusMAE": 1.2663493987201178
+    },
+    {
+      "case": "hol-015",
+      "model": "IMM",
+      "rmse": 11.883975812170997,
+      "radiusMAE": 1.2663493987201178
+    },
+    {
+      "case": "hol-016",
+      "model": "LOCAL7",
+      "rmse": 10.771637223234162,
+      "radiusMAE": 0.06773128356277726
+    },
+    {
+      "case": "hol-016",
+      "model": "CV_SMOOTH",
+      "rmse": 11.02458490080217,
+      "radiusMAE": 0.06773128356277726
+    },
+    {
+      "case": "hol-016",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.146834755384427,
+      "radiusMAE": 0.06773128356277726
+    },
+    {
+      "case": "hol-016",
+      "model": "IMM",
+      "rmse": 11.0750721361113,
+      "radiusMAE": 0.06773128356277726
+    },
+    {
+      "case": "hol-017",
+      "model": "LOCAL7",
+      "rmse": 10.685039300754298,
+      "radiusMAE": 0.2520174159082919
+    },
+    {
+      "case": "hol-017",
+      "model": "CV_SMOOTH",
+      "rmse": 10.679708458989246,
+      "radiusMAE": 0.2520174159082919
+    },
+    {
+      "case": "hol-017",
+      "model": "CV_RESPONSIVE",
+      "rmse": 15.648738550058745,
+      "radiusMAE": 0.2520174159082919
+    },
+    {
+      "case": "hol-017",
+      "model": "IMM",
+      "rmse": 11.08531887601325,
+      "radiusMAE": 0.2520174159082919
+    },
+    {
+      "case": "hol-018",
+      "model": "LOCAL7",
+      "rmse": 10.558375497829955,
+      "radiusMAE": 1.0449437058528241
+    },
+    {
+      "case": "hol-018",
+      "model": "CV_SMOOTH",
+      "rmse": 9.930953439720609,
+      "radiusMAE": 1.0449437058528241
+    },
+    {
+      "case": "hol-018",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.551604104870012,
+      "radiusMAE": 1.0449437058528241
+    },
+    {
+      "case": "hol-018",
+      "model": "IMM",
+      "rmse": 11.278479802274456,
+      "radiusMAE": 1.0449437058528241
+    },
+    {
+      "case": "hol-019",
+      "model": "LOCAL7",
+      "rmse": 9.342852509004029,
+      "radiusMAE": 0.12193676527390479
+    },
+    {
+      "case": "hol-019",
+      "model": "CV_SMOOTH",
+      "rmse": 10.189365506863687,
+      "radiusMAE": 0.12193676527390479
+    },
+    {
+      "case": "hol-019",
+      "model": "CV_RESPONSIVE",
+      "rmse": 15.011517720368424,
+      "radiusMAE": 0.12193676527390479
+    },
+    {
+      "case": "hol-019",
+      "model": "IMM",
+      "rmse": 9.882969468069897,
+      "radiusMAE": 0.12193676527390479
+    },
+    {
+      "case": "hol-020",
+      "model": "LOCAL7",
+      "rmse": 10.343270432913343,
+      "radiusMAE": 0.24219270418678968
+    },
+    {
+      "case": "hol-020",
+      "model": "CV_SMOOTH",
+      "rmse": 10.092664571250964,
+      "radiusMAE": 0.24219270418678968
+    },
+    {
+      "case": "hol-020",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.960592175456657,
+      "radiusMAE": 0.24219270418678968
+    },
+    {
+      "case": "hol-020",
+      "model": "IMM",
+      "rmse": 10.481634585381705,
+      "radiusMAE": 0.24219270418678968
+    },
+    {
+      "case": "hol-021",
+      "model": "LOCAL7",
+      "rmse": 35.88418514434595,
+      "radiusMAE": 1.909646021869829
+    },
+    {
+      "case": "hol-021",
+      "model": "CV_SMOOTH",
+      "rmse": 33.64205093049206,
+      "radiusMAE": 1.909646021869829
+    },
+    {
+      "case": "hol-021",
+      "model": "CV_RESPONSIVE",
+      "rmse": 32.28301332994495,
+      "radiusMAE": 1.909646021869829
+    },
+    {
+      "case": "hol-021",
+      "model": "IMM",
+      "rmse": 30.800211511975277,
+      "radiusMAE": 1.909646021869829
+    },
+    {
+      "case": "hol-022",
+      "model": "LOCAL7",
+      "rmse": 9.82370779349205,
+      "radiusMAE": 0.15512988652271953
+    },
+    {
+      "case": "hol-022",
+      "model": "CV_SMOOTH",
+      "rmse": 11.10224377834461,
+      "radiusMAE": 0.15512988652271953
+    },
+    {
+      "case": "hol-022",
+      "model": "CV_RESPONSIVE",
+      "rmse": 17.823412408719356,
+      "radiusMAE": 0.15512988652271953
+    },
+    {
+      "case": "hol-022",
+      "model": "IMM",
+      "rmse": 9.301783643022397,
+      "radiusMAE": 0.15512988652271953
+    },
+    {
+      "case": "hol-023",
+      "model": "LOCAL7",
+      "rmse": 10.207417606044194,
+      "radiusMAE": 0.30799951161604294
+    },
+    {
+      "case": "hol-023",
+      "model": "CV_SMOOTH",
+      "rmse": 10.109430627005079,
+      "radiusMAE": 0.30799951161604294
+    },
+    {
+      "case": "hol-023",
+      "model": "CV_RESPONSIVE",
+      "rmse": 16.53894836531078,
+      "radiusMAE": 0.30799951161604294
+    },
+    {
+      "case": "hol-023",
+      "model": "IMM",
+      "rmse": 10.469536674422633,
+      "radiusMAE": 0.30799951161604294
+    },
+    {
+      "case": "hol-024",
+      "model": "LOCAL7",
+      "rmse": 33.43208797226575,
+      "radiusMAE": 1.1855839825501888
+    },
+    {
+      "case": "hol-024",
+      "model": "CV_SMOOTH",
+      "rmse": 31.358330855351934,
+      "radiusMAE": 1.1855839825501888
+    },
+    {
+      "case": "hol-024",
+      "model": "CV_RESPONSIVE",
+      "rmse": 27.65373942089397,
+      "radiusMAE": 1.1855839825501888
+    },
+    {
+      "case": "hol-024",
+      "model": "IMM",
+      "rmse": 26.959491825910415,
+      "radiusMAE": 1.1855839825501888
+    },
+    {
+      "case": "hol-025",
+      "model": "LOCAL7",
+      "rmse": 9.893281946156577,
+      "radiusMAE": 0.12302222978684758
+    },
+    {
+      "case": "hol-025",
+      "model": "CV_SMOOTH",
+      "rmse": 10.04701188548813,
+      "radiusMAE": 0.12302222978684758
+    },
+    {
+      "case": "hol-025",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.88511288057433,
+      "radiusMAE": 0.12302222978684758
+    },
+    {
+      "case": "hol-025",
+      "model": "IMM",
+      "rmse": 9.830703676396773,
+      "radiusMAE": 0.12302222978684758
+    },
+    {
+      "case": "hol-026",
+      "model": "LOCAL7",
+      "rmse": 9.445964532411423,
+      "radiusMAE": 0.3225956830286104
+    },
+    {
+      "case": "hol-026",
+      "model": "CV_SMOOTH",
+      "rmse": 9.80094084745809,
+      "radiusMAE": 0.3225956830286104
+    },
+    {
+      "case": "hol-026",
+      "model": "CV_RESPONSIVE",
+      "rmse": 17.087675826881295,
+      "radiusMAE": 0.3225956830286104
+    },
+    {
+      "case": "hol-026",
+      "model": "IMM",
+      "rmse": 9.751625982718727,
+      "radiusMAE": 0.3225956830286104
+    },
+    {
+      "case": "hol-027",
+      "model": "LOCAL7",
+      "rmse": 32.59172820293565,
+      "radiusMAE": 0.7236193278019127
+    },
+    {
+      "case": "hol-027",
+      "model": "CV_SMOOTH",
+      "rmse": 30.72206157825668,
+      "radiusMAE": 0.7236193278019127
+    },
+    {
+      "case": "hol-027",
+      "model": "CV_RESPONSIVE",
+      "rmse": 28.032414731756553,
+      "radiusMAE": 0.7236193278019127
+    },
+    {
+      "case": "hol-027",
+      "model": "IMM",
+      "rmse": 27.379728976444756,
+      "radiusMAE": 0.7236193278019127
+    },
+    {
+      "case": "hol-028",
+      "model": "LOCAL7",
+      "rmse": 4.600756059960276,
+      "radiusMAE": 0.1968939390867926
+    },
+    {
+      "case": "hol-028",
+      "model": "CV_SMOOTH",
+      "rmse": 2.9619241770322873,
+      "radiusMAE": 0.1968939390867926
+    },
+    {
+      "case": "hol-028",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.32220887175046,
+      "radiusMAE": 0.1968939390867926
+    },
+    {
+      "case": "hol-028",
+      "model": "IMM",
+      "rmse": 3.2213318407748455,
+      "radiusMAE": 0.1968939390867926
+    },
+    {
+      "case": "hol-029",
+      "model": "LOCAL7",
+      "rmse": 11.555984270905464,
+      "radiusMAE": 0.5044644189162647
+    },
+    {
+      "case": "hol-029",
+      "model": "CV_SMOOTH",
+      "rmse": 11.824226001399145,
+      "radiusMAE": 0.5044644189162647
+    },
+    {
+      "case": "hol-029",
+      "model": "CV_RESPONSIVE",
+      "rmse": 16.054983308235798,
+      "radiusMAE": 0.5044644189162647
+    },
+    {
+      "case": "hol-029",
+      "model": "IMM",
+      "rmse": 11.394552624536995,
+      "radiusMAE": 0.5044644189162647
+    },
+    {
+      "case": "hol-030",
+      "model": "LOCAL7",
+      "rmse": 38.21860065764917,
+      "radiusMAE": 1.6801255244426219
+    },
+    {
+      "case": "hol-030",
+      "model": "CV_SMOOTH",
+      "rmse": 35.73870502778447,
+      "radiusMAE": 1.6801255244426219
+    },
+    {
+      "case": "hol-030",
+      "model": "CV_RESPONSIVE",
+      "rmse": 37.87443216687397,
+      "radiusMAE": 1.6801255244426219
+    },
+    {
+      "case": "hol-030",
+      "model": "IMM",
+      "rmse": 36.185490426891526,
+      "radiusMAE": 1.6801255244426219
+    },
+    {
+      "case": "hol-031",
+      "model": "LOCAL7",
+      "rmse": 4.952597311053343,
+      "radiusMAE": 0.1129970663233041
+    },
+    {
+      "case": "hol-031",
+      "model": "CV_SMOOTH",
+      "rmse": 3.269508451486506,
+      "radiusMAE": 0.1129970663233041
+    },
+    {
+      "case": "hol-031",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.993455043013102,
+      "radiusMAE": 0.1129970663233041
+    },
+    {
+      "case": "hol-031",
+      "model": "IMM",
+      "rmse": 4.9266508758420455,
+      "radiusMAE": 0.1129970663233041
+    },
+    {
+      "case": "hol-032",
+      "model": "LOCAL7",
+      "rmse": 11.171064913161018,
+      "radiusMAE": 0.24004556728060986
+    },
+    {
+      "case": "hol-032",
+      "model": "CV_SMOOTH",
+      "rmse": 11.607909534389476,
+      "radiusMAE": 0.24004556728060986
+    },
+    {
+      "case": "hol-032",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.373268936720438,
+      "radiusMAE": 0.24004556728060986
+    },
+    {
+      "case": "hol-032",
+      "model": "IMM",
+      "rmse": 11.2499955250484,
+      "radiusMAE": 0.24004556728060986
+    },
+    {
+      "case": "hol-033",
+      "model": "LOCAL7",
+      "rmse": 35.66971723948315,
+      "radiusMAE": 1.1255853657875663
+    },
+    {
+      "case": "hol-033",
+      "model": "CV_SMOOTH",
+      "rmse": 33.27766091275222,
+      "radiusMAE": 1.1255853657875663
+    },
+    {
+      "case": "hol-033",
+      "model": "CV_RESPONSIVE",
+      "rmse": 28.707471046728887,
+      "radiusMAE": 1.1255853657875663
+    },
+    {
+      "case": "hol-033",
+      "model": "IMM",
+      "rmse": 29.780629333476263,
+      "radiusMAE": 1.1255853657875663
+    },
+    {
+      "case": "hol-034",
+      "model": "LOCAL7",
+      "rmse": 5.741192114534541,
+      "radiusMAE": 0.17565131912443788
+    },
+    {
+      "case": "hol-034",
+      "model": "CV_SMOOTH",
+      "rmse": 4.032279695652344,
+      "radiusMAE": 0.17565131912443788
+    },
+    {
+      "case": "hol-034",
+      "model": "CV_RESPONSIVE",
+      "rmse": 9.414719082413821,
+      "radiusMAE": 0.17565131912443788
+    },
+    {
+      "case": "hol-034",
+      "model": "IMM",
+      "rmse": 4.816176434103075,
+      "radiusMAE": 0.17565131912443788
+    },
+    {
+      "case": "hol-035",
+      "model": "LOCAL7",
+      "rmse": 11.708649362028137,
+      "radiusMAE": 0.3179073079304984
+    },
+    {
+      "case": "hol-035",
+      "model": "CV_SMOOTH",
+      "rmse": 11.958658199083704,
+      "radiusMAE": 0.3179073079304984
+    },
+    {
+      "case": "hol-035",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.680144768451594,
+      "radiusMAE": 0.3179073079304984
+    },
+    {
+      "case": "hol-035",
+      "model": "IMM",
+      "rmse": 11.717439012230749,
+      "radiusMAE": 0.3179073079304984
+    },
+    {
+      "case": "hol-036",
+      "model": "LOCAL7",
+      "rmse": 33.83117656684085,
+      "radiusMAE": 0.5223124864632194
+    },
+    {
+      "case": "hol-036",
+      "model": "CV_SMOOTH",
+      "rmse": 32.32192658992932,
+      "radiusMAE": 0.5223124864632194
+    },
+    {
+      "case": "hol-036",
+      "model": "CV_RESPONSIVE",
+      "rmse": 26.132858405590138,
+      "radiusMAE": 0.5223124864632194
+    },
+    {
+      "case": "hol-036",
+      "model": "IMM",
+      "rmse": 25.480386063487572,
+      "radiusMAE": 0.5223124864632194
+    },
+    {
+      "case": "hol-037",
+      "model": "LOCAL7",
+      "rmse": 8.728839117083309,
+      "radiusMAE": 0.14478526546231613
+    },
+    {
+      "case": "hol-037",
+      "model": "CV_SMOOTH",
+      "rmse": 9.463241391105118,
+      "radiusMAE": 0.14478526546231613
+    },
+    {
+      "case": "hol-037",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.660413281404075,
+      "radiusMAE": 0.14478526546231613
+    },
+    {
+      "case": "hol-037",
+      "model": "IMM",
+      "rmse": 8.79444999494281,
+      "radiusMAE": 0.14478526546231613
+    },
+    {
+      "case": "hol-038",
+      "model": "LOCAL7",
+      "rmse": 11.88424739464319,
+      "radiusMAE": 0.4618902404510854
+    },
+    {
+      "case": "hol-038",
+      "model": "CV_SMOOTH",
+      "rmse": 11.219629938840852,
+      "radiusMAE": 0.4618902404510854
+    },
+    {
+      "case": "hol-038",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.73059344542282,
+      "radiusMAE": 0.4618902404510854
+    },
+    {
+      "case": "hol-038",
+      "model": "IMM",
+      "rmse": 9.225692132907453,
+      "radiusMAE": 0.4618902404510854
+    },
+    {
+      "case": "hol-039",
+      "model": "LOCAL7",
+      "rmse": 13.845501344838036,
+      "radiusMAE": 1.3521733654786896
+    },
+    {
+      "case": "hol-039",
+      "model": "CV_SMOOTH",
+      "rmse": 12.844414772155746,
+      "radiusMAE": 1.3521733654786896
+    },
+    {
+      "case": "hol-039",
+      "model": "CV_RESPONSIVE",
+      "rmse": 17.708213208261473,
+      "radiusMAE": 1.3521733654786896
+    },
+    {
+      "case": "hol-039",
+      "model": "IMM",
+      "rmse": 14.07832530459915,
+      "radiusMAE": 1.3521733654786896
+    },
+    {
+      "case": "hol-040",
+      "model": "LOCAL7",
+      "rmse": 8.755174233579217,
+      "radiusMAE": 0.08897168784427983
+    },
+    {
+      "case": "hol-040",
+      "model": "CV_SMOOTH",
+      "rmse": 9.557948554854775,
+      "radiusMAE": 0.08897168784427983
+    },
+    {
+      "case": "hol-040",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.987768035432671,
+      "radiusMAE": 0.08897168784427983
+    },
+    {
+      "case": "hol-040",
+      "model": "IMM",
+      "rmse": 8.765196620981865,
+      "radiusMAE": 0.08897168784427983
+    },
+    {
+      "case": "hol-041",
+      "model": "LOCAL7",
+      "rmse": 11.112148567368891,
+      "radiusMAE": 0.3603080637329637
+    },
+    {
+      "case": "hol-041",
+      "model": "CV_SMOOTH",
+      "rmse": 11.471311798610955,
+      "radiusMAE": 0.3603080637329637
+    },
+    {
+      "case": "hol-041",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.675848989301583,
+      "radiusMAE": 0.3603080637329637
+    },
+    {
+      "case": "hol-041",
+      "model": "IMM",
+      "rmse": 11.033544573788355,
+      "radiusMAE": 0.3603080637329637
+    },
+    {
+      "case": "hol-042",
+      "model": "LOCAL7",
+      "rmse": 12.14570829264733,
+      "radiusMAE": 0.6932691113946198
+    },
+    {
+      "case": "hol-042",
+      "model": "CV_SMOOTH",
+      "rmse": 11.337107889506992,
+      "radiusMAE": 0.6932691113946198
+    },
+    {
+      "case": "hol-042",
+      "model": "CV_RESPONSIVE",
+      "rmse": 15.158305401903029,
+      "radiusMAE": 0.6932691113946198
+    },
+    {
+      "case": "hol-042",
+      "model": "IMM",
+      "rmse": 12.881886761573284,
+      "radiusMAE": 0.6932691113946198
+    },
+    {
+      "case": "hol-043",
+      "model": "LOCAL7",
+      "rmse": 9.583420669659176,
+      "radiusMAE": 0.1036310431443093
+    },
+    {
+      "case": "hol-043",
+      "model": "CV_SMOOTH",
+      "rmse": 10.256382735192059,
+      "radiusMAE": 0.1036310431443093
+    },
+    {
+      "case": "hol-043",
+      "model": "CV_RESPONSIVE",
+      "rmse": 15.863749883451712,
+      "radiusMAE": 0.1036310431443093
+    },
+    {
+      "case": "hol-043",
+      "model": "IMM",
+      "rmse": 9.251716850756846,
+      "radiusMAE": 0.1036310431443093
+    },
+    {
+      "case": "hol-044",
+      "model": "LOCAL7",
+      "rmse": 10.278776547704428,
+      "radiusMAE": 0.254441980864777
+    },
+    {
+      "case": "hol-044",
+      "model": "CV_SMOOTH",
+      "rmse": 10.30116903299266,
+      "radiusMAE": 0.254441980864777
+    },
+    {
+      "case": "hol-044",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.919296158705539,
+      "radiusMAE": 0.254441980864777
+    },
+    {
+      "case": "hol-044",
+      "model": "IMM",
+      "rmse": 10.92110322044684,
+      "radiusMAE": 0.254441980864777
+    },
+    {
+      "case": "hol-045",
+      "model": "LOCAL7",
+      "rmse": 10.776181039762996,
+      "radiusMAE": 0.830501199199393
+    },
+    {
+      "case": "hol-045",
+      "model": "CV_SMOOTH",
+      "rmse": 10.061299995700235,
+      "radiusMAE": 0.830501199199393
+    },
+    {
+      "case": "hol-045",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.853865549382855,
+      "radiusMAE": 0.830501199199393
+    },
+    {
+      "case": "hol-045",
+      "model": "IMM",
+      "rmse": 10.691019090596326,
+      "radiusMAE": 0.830501199199393
+    },
+    {
+      "case": "hol-046",
+      "model": "LOCAL7",
+      "rmse": 9.217490113529387,
+      "radiusMAE": 0.1723848965804664
+    },
+    {
+      "case": "hol-046",
+      "model": "CV_SMOOTH",
+      "rmse": 10.327333230438311,
+      "radiusMAE": 0.1723848965804664
+    },
+    {
+      "case": "hol-046",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.229561233151998,
+      "radiusMAE": 0.1723848965804664
+    },
+    {
+      "case": "hol-046",
+      "model": "IMM",
+      "rmse": 9.210168676741747,
+      "radiusMAE": 0.1723848965804664
+    },
+    {
+      "case": "hol-047",
+      "model": "LOCAL7",
+      "rmse": 9.91461936398562,
+      "radiusMAE": 0.37053344543322303
+    },
+    {
+      "case": "hol-047",
+      "model": "CV_SMOOTH",
+      "rmse": 10.041671950368436,
+      "radiusMAE": 0.37053344543322303
+    },
+    {
+      "case": "hol-047",
+      "model": "CV_RESPONSIVE",
+      "rmse": 15.647722498454856,
+      "radiusMAE": 0.37053344543322303
+    },
+    {
+      "case": "hol-047",
+      "model": "IMM",
+      "rmse": 10.669755814346338,
+      "radiusMAE": 0.37053344543322303
+    },
+    {
+      "case": "hol-048",
+      "model": "LOCAL7",
+      "rmse": 35.35523945486406,
+      "radiusMAE": 1.5055074729660012
+    },
+    {
+      "case": "hol-048",
+      "model": "CV_SMOOTH",
+      "rmse": 33.47414029237168,
+      "radiusMAE": 1.5055074729660012
+    },
+    {
+      "case": "hol-048",
+      "model": "CV_RESPONSIVE",
+      "rmse": 32.4990120401341,
+      "radiusMAE": 1.5055074729660012
+    },
+    {
+      "case": "hol-048",
+      "model": "IMM",
+      "rmse": 31.568004502710146,
+      "radiusMAE": 1.5055074729660012
+    },
+    {
+      "case": "hol-049",
+      "model": "LOCAL7",
+      "rmse": 9.670936934559196,
+      "radiusMAE": 0.14365781352428006
+    },
+    {
+      "case": "hol-049",
+      "model": "CV_SMOOTH",
+      "rmse": 10.545459490349636,
+      "radiusMAE": 0.14365781352428006
+    },
+    {
+      "case": "hol-049",
+      "model": "CV_RESPONSIVE",
+      "rmse": 16.415460625753244,
+      "radiusMAE": 0.14365781352428006
+    },
+    {
+      "case": "hol-049",
+      "model": "IMM",
+      "rmse": 8.265388240350818,
+      "radiusMAE": 0.14365781352428006
+    },
+    {
+      "case": "hol-050",
+      "model": "LOCAL7",
+      "rmse": 9.951631275009666,
+      "radiusMAE": 0.2609327884487448
+    },
+    {
+      "case": "hol-050",
+      "model": "CV_SMOOTH",
+      "rmse": 10.07457671600344,
+      "radiusMAE": 0.2609327884487448
+    },
+    {
+      "case": "hol-050",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.308324280265857,
+      "radiusMAE": 0.2609327884487448
+    },
+    {
+      "case": "hol-050",
+      "model": "IMM",
+      "rmse": 10.343812139558851,
+      "radiusMAE": 0.2609327884487448
+    },
+    {
+      "case": "hol-051",
+      "model": "LOCAL7",
+      "rmse": 32.39115598714246,
+      "radiusMAE": 1.0743365328851866
+    },
+    {
+      "case": "hol-051",
+      "model": "CV_SMOOTH",
+      "rmse": 30.607175903236374,
+      "radiusMAE": 1.0743365328851866
+    },
+    {
+      "case": "hol-051",
+      "model": "CV_RESPONSIVE",
+      "rmse": 27.27172036657105,
+      "radiusMAE": 1.0743365328851866
+    },
+    {
+      "case": "hol-051",
+      "model": "IMM",
+      "rmse": 25.84105671945797,
+      "radiusMAE": 1.0743365328851866
+    },
+    {
+      "case": "hol-052",
+      "model": "LOCAL7",
+      "rmse": 11.156546627710926,
+      "radiusMAE": 0.08678768095079253
+    },
+    {
+      "case": "hol-052",
+      "model": "CV_SMOOTH",
+      "rmse": 11.151408365431617,
+      "radiusMAE": 0.08678768095079253
+    },
+    {
+      "case": "hol-052",
+      "model": "CV_RESPONSIVE",
+      "rmse": 16.925195331184668,
+      "radiusMAE": 0.08678768095079253
+    },
+    {
+      "case": "hol-052",
+      "model": "IMM",
+      "rmse": 10.761307661106297,
+      "radiusMAE": 0.08678768095079253
+    },
+    {
+      "case": "hol-053",
+      "model": "LOCAL7",
+      "rmse": 10.487882889406821,
+      "radiusMAE": 0.33395945499919566
+    },
+    {
+      "case": "hol-053",
+      "model": "CV_SMOOTH",
+      "rmse": 10.488684735603366,
+      "radiusMAE": 0.33395945499919566
+    },
+    {
+      "case": "hol-053",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.747933344783373,
+      "radiusMAE": 0.33395945499919566
+    },
+    {
+      "case": "hol-053",
+      "model": "IMM",
+      "rmse": 10.087745745030197,
+      "radiusMAE": 0.33395945499919566
+    },
+    {
+      "case": "hol-054",
+      "model": "LOCAL7",
+      "rmse": 33.115223690492634,
+      "radiusMAE": 1.7968603449846074
+    },
+    {
+      "case": "hol-054",
+      "model": "CV_SMOOTH",
+      "rmse": 31.06107426746951,
+      "radiusMAE": 1.7968603449846074
+    },
+    {
+      "case": "hol-054",
+      "model": "CV_RESPONSIVE",
+      "rmse": 27.370399874626155,
+      "radiusMAE": 1.7968603449846074
+    },
+    {
+      "case": "hol-054",
+      "model": "IMM",
+      "rmse": 28.066269323367575,
+      "radiusMAE": 1.7968603449846074
+    }
+  ]
+}

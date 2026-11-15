@@ -1,0 +1,69 @@
+{
+  "inventory": [
+    {
+      "sol": 57,
+      "samples": 58662,
+      "catalogAll": 4,
+      "catalogAboveThreshold": 3,
+      "eligibleHours": 16.045,
+      "eligibleEvents": 3
+    },
+    {
+      "sol": 215,
+      "samples": 49401,
+      "catalogAll": 14,
+      "catalogAboveThreshold": 3,
+      "eligibleHours": 13.36138888888889,
+      "eligibleEvents": 3
+    }
+  ],
+  "missedPressureDiagnostics": [
+    {
+      "event": {
+        "id": "S2-row-804",
+        "sol": 215,
+        "time": 686014590.0,
+        "amplitude": 0.54,
+        "ltst": "0215 09:29:16",
+        "gaussianFWHM": 6.36
+      },
+      "maximumThresholdMargin": {
+        "time": 686014593.0,
+        "drop": 0.4333179487180132,
+        "threshold": 0.5,
+        "margin": -0.06668205128198679
+      },
+      "scope": "Retrospective trace diagnostic of frozen configuration, not used for selection"
+    },
+    {
+      "event": {
+        "id": "S2-row-814",
+        "sol": 215,
+        "time": 686030890.0,
+        "amplitude": 0.588,
+        "ltst": "0215 13:53:33",
+        "gaussianFWHM": 4.99
+      },
+      "maximumThresholdMargin": {
+        "time": 686030885.0,
+        "drop": 0.5764188034188464,
+        "threshold": 0.5,
+        "margin": 0.07641880341884644
+      },
+      "scope": "Retrospective trace diagnostic of frozen configuration, not used for selection"
+    }
+  ],
+  "zeroFailureIndependentEventExamples": {
+    "3": 0.6315968501359612,
+    "59": 0.049507609888227,
+    "299": 0.009969146792899286
+  },
+  "note": "Exact one-sided 95% binomial bounds are illustrative only; dependent frames and shared-day events are not independent trials.",
+  "artifactHashes": {
+    "protocol.json": "5eed9cd39230354852445175701de26542bb22cb0aae71028ea0bd80d6403821",
+    "image-results.json": "384e3ee45da6386a463463b6f34bfeab09764cb44f2fab5c1771204357fca0aa",
+    "pressure-selection.json": "aa7759900e3acefb1d16dd5cad649ed2276403bb28cc5daf9a32cc8a8d3a7785",
+    "pressure-results.json": "665785b03480b7f9dc2ef019c28c80f79b750219e9d9bcfda3aaf5dc8c9bcc8c",
+    "pressure-input.json": "d55d38c3bb0a79bcee5b6dffa45786eb4e161e41d0890881660ef561f694280d"
+  }
+}

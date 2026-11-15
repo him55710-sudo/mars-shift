@@ -1,0 +1,1970 @@
+{
+  "createdAt": "2026-11-15T05:42:43.953Z",
+  "protocolHash": "5eed9cd39230354852445175701de26542bb22cb0aae71028ea0bd80d6403821",
+  "selected": {
+    "kind": "trend",
+    "window": 30,
+    "floor": 0.5,
+    "consecutive": 2,
+    "mad": 4,
+    "gap": 5
+  },
+  "candidates": [
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.5,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995985,
+          "drop": 0.7792803418802805,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002163,
+          "drop": 0.6340905982906406,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002360,
+          "drop": 0.5950769230770447,
+          "threshold": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002163,
+              "leadToCatalogCentre": 7
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002163,
+              "leadToCatalogCentre": 7
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002163,
+              "leadToCatalogCentre": 7
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        }
+      ],
+      "elapsedMs": 455.30100000000004
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.5,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995986,
+          "drop": 1.2254923076923205,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002164,
+          "drop": 0.7505384615384401,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002361,
+          "drop": 0.657799999999952,
+          "threshold": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        }
+      ],
+      "elapsedMs": 315.2989
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.5,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995984,
+          "drop": 0.7239268626109379,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002161,
+          "drop": 0.5954955570745142,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002360,
+          "drop": 0.6426052631578614,
+          "threshold": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995984,
+              "leadToCatalogCentre": 6
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002161,
+              "leadToCatalogCentre": 9
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995984,
+              "leadToCatalogCentre": 6
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002161,
+              "leadToCatalogCentre": 9
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995984,
+              "leadToCatalogCentre": 6
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002161,
+              "leadToCatalogCentre": 9
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        }
+      ],
+      "elapsedMs": 745.3124999999998
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.5,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995985,
+          "drop": 0.9069135338346541,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002162,
+          "drop": 0.7740246069719205,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002361,
+          "drop": 0.7259229323307181,
+          "threshold": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002162,
+              "leadToCatalogCentre": 8
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002162,
+              "leadToCatalogCentre": 8
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002162,
+              "leadToCatalogCentre": 8
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        }
+      ],
+      "elapsedMs": 763.2682
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.5,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995984,
+          "drop": 0.7639073541205335,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002158,
+          "drop": 0.5549288173970126,
+          "threshold": 0.5011617414785047
+        },
+        {
+          "time": 672002360,
+          "drop": 0.7195129958960251,
+          "threshold": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995984,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-158"
+          ],
+          "unmatched": [
+            {
+              "time": 672002158,
+              "drop": 0.5549288173970126,
+              "threshold": 0.5011617414785047
+            }
+          ],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 0.6666666666666666,
+          "agreementF1": 0.6666666666666666
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995984,
+              "leadToCatalogCentre": 6
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002158,
+              "leadToCatalogCentre": 12
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002360,
+              "leadToCatalogCentre": 0
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995984,
+              "leadToCatalogCentre": 6
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002158,
+              "leadToCatalogCentre": 12
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        }
+      ],
+      "elapsedMs": 1209.2792
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.5,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995985,
+          "drop": 0.9517562149158039,
+          "threshold": 0.5
+        },
+        {
+          "time": 672002159,
+          "drop": 0.6252864757772159,
+          "threshold": 0.525167846256865
+        },
+        {
+          "time": 672002361,
+          "drop": 0.8106636633802964,
+          "threshold": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            }
+          ],
+          "missed": [
+            "S2-row-158"
+          ],
+          "unmatched": [
+            {
+              "time": 672002159,
+              "drop": 0.6252864757772159,
+              "threshold": 0.525167846256865
+            }
+          ],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 0.6666666666666666,
+          "agreementF1": 0.6666666666666666
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002159,
+              "leadToCatalogCentre": 11
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-159",
+              "catalogTime": 672002360,
+              "alertTime": 672002361,
+              "leadToCatalogCentre": -1
+            },
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995985,
+              "leadToCatalogCentre": 5
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002159,
+              "leadToCatalogCentre": 11
+            }
+          ],
+          "missed": [],
+          "unmatched": [],
+          "catalogRecall": 1,
+          "catalogAgreement": 1,
+          "agreementF1": 1
+        }
+      ],
+      "elapsedMs": 1490.5605999999998
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.8,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995987,
+          "drop": 1.7059999999999036,
+          "threshold": 0.8
+        },
+        {
+          "time": 672002166,
+          "drop": 1.030697435897423,
+          "threshold": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002166,
+              "leadToCatalogCentre": 4
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002166,
+              "leadToCatalogCentre": 4
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002166,
+              "leadToCatalogCentre": 4
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        }
+      ],
+      "elapsedMs": 319.19780000000003
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.8,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995988,
+          "drop": 1.8702905982905804,
+          "threshold": 0.8
+        },
+        {
+          "time": 672002167,
+          "drop": 1.1237128205127647,
+          "threshold": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995988,
+              "leadToCatalogCentre": 2
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002167,
+              "leadToCatalogCentre": 3
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995988,
+              "leadToCatalogCentre": 2
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002167,
+              "leadToCatalogCentre": 3
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995988,
+              "leadToCatalogCentre": 2
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002167,
+              "leadToCatalogCentre": 3
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        }
+      ],
+      "elapsedMs": 341.3976
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.8,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995986,
+          "drop": 1.376983424470268,
+          "threshold": 0.8
+        },
+        {
+          "time": 672002164,
+          "drop": 0.9480774094325852,
+          "threshold": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        }
+      ],
+      "elapsedMs": 725.9832000000001
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.8,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995987,
+          "drop": 1.8939666780587459,
+          "threshold": 0.8
+        },
+        {
+          "time": 672002165,
+          "drop": 1.198163704716194,
+          "threshold": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002165,
+              "leadToCatalogCentre": 5
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002165,
+              "leadToCatalogCentre": 5
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002165,
+              "leadToCatalogCentre": 5
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        }
+      ],
+      "elapsedMs": 691.6979000000001
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.8,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995986,
+          "drop": 1.426881645360595,
+          "threshold": 0.8
+        },
+        {
+          "time": 672002163,
+          "drop": 1.047726638048971,
+          "threshold": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002163,
+              "leadToCatalogCentre": 7
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002163,
+              "leadToCatalogCentre": 7
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995986,
+              "leadToCatalogCentre": 4
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002163,
+              "leadToCatalogCentre": 7
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        }
+      ],
+      "elapsedMs": 1179.6255999999994
+    },
+    {
+      "sol": 57,
+      "config": {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.8,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      "samples": 58662,
+      "eligibleHours": 16.045,
+      "eligibleIntervals": [
+        [
+          671954416,
+          671962027
+        ],
+        [
+          671965510,
+          671976822
+        ],
+        [
+          671980306,
+          671984224
+        ],
+        [
+          671987703,
+          671991621
+        ],
+        [
+          671995162,
+          672010004
+        ],
+        [
+          672012732,
+          672017454
+        ],
+        [
+          672024693,
+          672028608
+        ],
+        [
+          672032091,
+          672036006
+        ],
+        [
+          672039489,
+          672043089
+        ]
+      ],
+      "alerts": [
+        {
+          "time": 671995987,
+          "drop": 1.953466248407949,
+          "threshold": 0.8
+        },
+        {
+          "time": 672002164,
+          "drop": 1.2011113731779233,
+          "threshold": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "tolerance": 10,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 30,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        },
+        {
+          "tolerance": 60,
+          "eligibleEvents": 3,
+          "matches": [
+            {
+              "event": "S2-row-157",
+              "catalogTime": 671995990,
+              "alertTime": 671995987,
+              "leadToCatalogCentre": 3
+            },
+            {
+              "event": "S2-row-158",
+              "catalogTime": 672002170,
+              "alertTime": 672002164,
+              "leadToCatalogCentre": 6
+            }
+          ],
+          "missed": [
+            "S2-row-159"
+          ],
+          "unmatched": [],
+          "catalogRecall": 0.6666666666666666,
+          "catalogAgreement": 1,
+          "agreementF1": 0.8
+        }
+      ],
+      "elapsedMs": 1256.7500999999993
+    }
+  ],
+  "legacy": {
+    "sol": 57,
+    "config": {
+      "kind": "median",
+      "window": 30,
+      "floor": 0.8,
+      "consecutive": 3,
+      "mad": 4,
+      "gap": 0
+    },
+    "samples": 58662,
+    "eligibleHours": 16.045,
+    "eligibleIntervals": [
+      [
+        671954416,
+        671962027
+      ],
+      [
+        671965510,
+        671976822
+      ],
+      [
+        671980306,
+        671984224
+      ],
+      [
+        671987703,
+        671991621
+      ],
+      [
+        671995162,
+        672010004
+      ],
+      [
+        672012732,
+        672017454
+      ],
+      [
+        672024693,
+        672028608
+      ],
+      [
+        672032091,
+        672036006
+      ],
+      [
+        672039489,
+        672043089
+      ]
+    ],
+    "alerts": [
+      {
+        "time": 671995987,
+        "drop": 1.9850000000000136,
+        "threshold": 0.8
+      },
+      {
+        "time": 672002164,
+        "drop": 1.07000000000005,
+        "threshold": 0.8
+      },
+      {
+        "time": 672002362,
+        "drop": 0.8700000000000045,
+        "threshold": 0.8
+      }
+    ],
+    "matches": [
+      {
+        "tolerance": 10,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-159",
+            "catalogTime": 672002360,
+            "alertTime": 672002362,
+            "leadToCatalogCentre": -2
+          },
+          {
+            "event": "S2-row-157",
+            "catalogTime": 671995990,
+            "alertTime": 671995987,
+            "leadToCatalogCentre": 3
+          },
+          {
+            "event": "S2-row-158",
+            "catalogTime": 672002170,
+            "alertTime": 672002164,
+            "leadToCatalogCentre": 6
+          }
+        ],
+        "missed": [],
+        "unmatched": [],
+        "catalogRecall": 1,
+        "catalogAgreement": 1,
+        "agreementF1": 1
+      },
+      {
+        "tolerance": 30,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-159",
+            "catalogTime": 672002360,
+            "alertTime": 672002362,
+            "leadToCatalogCentre": -2
+          },
+          {
+            "event": "S2-row-157",
+            "catalogTime": 671995990,
+            "alertTime": 671995987,
+            "leadToCatalogCentre": 3
+          },
+          {
+            "event": "S2-row-158",
+            "catalogTime": 672002170,
+            "alertTime": 672002164,
+            "leadToCatalogCentre": 6
+          }
+        ],
+        "missed": [],
+        "unmatched": [],
+        "catalogRecall": 1,
+        "catalogAgreement": 1,
+        "agreementF1": 1
+      },
+      {
+        "tolerance": 60,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-159",
+            "catalogTime": 672002360,
+            "alertTime": 672002362,
+            "leadToCatalogCentre": -2
+          },
+          {
+            "event": "S2-row-157",
+            "catalogTime": 671995990,
+            "alertTime": 671995987,
+            "leadToCatalogCentre": 3
+          },
+          {
+            "event": "S2-row-158",
+            "catalogTime": 672002170,
+            "alertTime": 672002164,
+            "leadToCatalogCentre": 6
+          }
+        ],
+        "missed": [],
+        "unmatched": [],
+        "catalogRecall": 1,
+        "catalogAgreement": 1,
+        "agreementF1": 1
+      }
+    ],
+    "elapsedMs": 372.6797000000006
+  }
+}

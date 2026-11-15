@@ -1,0 +1,24 @@
+{
+  "frozenAt": "2026-11-15T02:29:02.742830+00:00",
+  "alpha": 0.25,
+  "promote": true,
+  "holdoutOpened": false,
+  "developmentSHA256": "e72346539ab3af5b9785e39f9180277a4ae5329fca3000804aa0821acc4757ca",
+  "engineSHA256": "94f3e3310bc0594d0001523f8234ffc13a0c08223a6640b2941513b3cdb0ae66",
+  "rationale": "Minimum development mean contact subject to no additional return failures; ties by HOLD, distance, then smaller weight.",
+  "results": {
+    "cases": 18,
+    "noContact": 12,
+    "threats": 7,
+    "threatAvoided": 1,
+    "meanContact": 2.5255662789614277,
+    "meanClearance": 9.626785958925025,
+    "meanHold": 18.11111111111111,
+    "meanAvoidableHold": 0,
+    "returnFailures": 0,
+    "budgetViolations": 0,
+    "meanP95Ms": 62.9539944444444,
+    "limitedReplans": 0,
+    "meanDistance": 23.732817101206898
+  }
+}

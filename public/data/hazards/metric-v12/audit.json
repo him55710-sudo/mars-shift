@@ -1,0 +1,9 @@
+{
+  "sourceTimeVerifiedAgainstLabels": true,
+  "protocolHash": "0e0c60eefa43bb25f2e61342e245695e874d6785c3f5391fd1c390f4039244aa",
+  "independentEvents": 1,
+  "coordinateCount": 4,
+  "forecastPairs": 3,
+  "accuracyClaim": "No independent metre accuracy",
+  "calibrationAttempt": "Initial ground-ray reconstruction rejected: author scale marks are not ground-contact points. Original protocol and outputs retained."
+}

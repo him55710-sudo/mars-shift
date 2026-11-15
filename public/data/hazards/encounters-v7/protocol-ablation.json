@@ -1,0 +1,757 @@
+{
+  "version": 7,
+  "frozenAt": "2026-11-15T02:20:58.243767+00:00",
+  "parent": "21cee87",
+  "sources": [
+    {
+      "id": "MEDA57a",
+      "diameter": 9.13,
+      "speed": 1.68,
+      "diameterSigma": 3.1,
+      "speedSigma": 0.52,
+      "source": "Hueso Table S3, published model fit"
+    },
+    {
+      "id": "MEDA57b",
+      "diameter": 18.87,
+      "speed": 1.91,
+      "diameterSigma": 5.58,
+      "speedSigma": 0.57,
+      "source": "Hueso Table S3, published model fit"
+    },
+    {
+      "id": "PIA26074",
+      "diameter": 60,
+      "speed": 5.277777777777778,
+      "diameterSigma": null,
+      "speedSigma": null,
+      "source": "NASA Sol899 approximate published image estimate; sensor noise below is an experimental assumption"
+    }
+  ],
+  "terrains": [
+    {
+      "id": "floor",
+      "path": "floor-terrain.json",
+      "sha256": "1b4d20c4598ae8c93b8ac0b8109a132bb9d64203181e6dc1d230193e55e349f6"
+    },
+    {
+      "id": "ridge",
+      "path": "ridge-terrain.json",
+      "sha256": "fae57b5df7654e0dbad97f6dd467617349cb17214d68ba5e955cec991a90bb2c"
+    }
+  ],
+  "cases": [
+    {
+      "id": "dev-000",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "MEDA57a",
+      "family": "ahead",
+      "distance": 11.565000000000001,
+      "bearing": 0,
+      "heading": 2.9404971842418557,
+      "startOffset": [
+        7,
+        3
+      ],
+      "speed": 0.4,
+      "reaction": 2,
+      "sensorSeed": 170701,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-001",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "MEDA57b",
+      "family": "oblique-left",
+      "distance": 16.435000000000002,
+      "bearing": 0.7698228096860152,
+      "heading": 2.9834955583845226,
+      "startOffset": [
+        -4,
+        5
+      ],
+      "speed": 0.4,
+      "reaction": 2,
+      "sensorSeed": 170738,
+      "truth": "turn",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-002",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "PIA26074",
+      "family": "oblique-right",
+      "distance": 37.0,
+      "bearing": -0.7698278872309194,
+      "heading": 0.28132467873696154,
+      "startOffset": [
+        -4,
+        1
+      ],
+      "speed": 0.6,
+      "reaction": 2,
+      "sensorSeed": 170775,
+      "truth": "growth",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-003",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "MEDA57a",
+      "family": "lateral",
+      "distance": 29.565,
+      "bearing": 1.5445439568104355,
+      "heading": 4.613402743933461,
+      "startOffset": [
+        11,
+        -1
+      ],
+      "speed": 0.6,
+      "reaction": 2,
+      "sensorSeed": 170812,
+      "truth": "linear",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-004",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "MEDA57b",
+      "family": "receding",
+      "distance": 34.435,
+      "bearing": 3.1959056247225073,
+      "heading": 5.788857780518405,
+      "startOffset": [
+        -3,
+        4
+      ],
+      "speed": 0.9,
+      "reaction": 6,
+      "sensorSeed": 170849,
+      "truth": "turn",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-005",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "PIA26074",
+      "family": "inside",
+      "distance": 17.05,
+      "bearing": 0.35,
+      "heading": 2.1496270352856834,
+      "startOffset": [
+        5,
+        -9
+      ],
+      "speed": 0.9,
+      "reaction": 6,
+      "sensorSeed": 170886,
+      "truth": "growth",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-006",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "MEDA57b",
+      "family": "ahead",
+      "distance": 65.435,
+      "bearing": 0,
+      "heading": 4.526188402752505,
+      "startOffset": [
+        -10,
+        11
+      ],
+      "speed": 0.4,
+      "reaction": 6,
+      "sensorSeed": 170923,
+      "truth": "turn",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-007",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "PIA26074",
+      "family": "oblique-left",
+      "distance": 86.0,
+      "bearing": 0.6953256525312111,
+      "heading": 5.856025713656517,
+      "startOffset": [
+        -7,
+        -6
+      ],
+      "speed": 0.4,
+      "reaction": 6,
+      "sensorSeed": 170960,
+      "truth": "growth",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-008",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "MEDA57a",
+      "family": "oblique-right",
+      "distance": 60.565,
+      "bearing": -0.7290936184190048,
+      "heading": 5.497674577566507,
+      "startOffset": [
+        0,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 10,
+      "sensorSeed": 170997,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-009",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "MEDA57b",
+      "family": "lateral",
+      "distance": 16.435000000000002,
+      "bearing": 1.5641322882001296,
+      "heading": 0.500211008115651,
+      "startOffset": [
+        1,
+        5
+      ],
+      "speed": 0.6,
+      "reaction": 10,
+      "sensorSeed": 171034,
+      "truth": "turn",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-010",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "PIA26074",
+      "family": "receding",
+      "distance": 37.0,
+      "bearing": 3.255724879197271,
+      "heading": 3.8968323142160712,
+      "startOffset": [
+        -2,
+        7
+      ],
+      "speed": 0.9,
+      "reaction": 10,
+      "sensorSeed": 171071,
+      "truth": "growth",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-011",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "MEDA57a",
+      "family": "inside",
+      "distance": 3.0607500000000005,
+      "bearing": 0.35,
+      "heading": 5.860864813958938,
+      "startOffset": [
+        -8,
+        -8
+      ],
+      "speed": 0.9,
+      "reaction": 10,
+      "sensorSeed": 171108,
+      "truth": "linear",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-012",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "PIA26074",
+      "family": "ahead",
+      "distance": 55.0,
+      "bearing": 0,
+      "heading": 2.0734565537725476,
+      "startOffset": [
+        -2,
+        1
+      ],
+      "speed": 0.4,
+      "reaction": 2,
+      "sensorSeed": 171145,
+      "truth": "growth",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-013",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "MEDA57a",
+      "family": "oblique-left",
+      "distance": 29.565,
+      "bearing": 0.832404031967827,
+      "heading": 2.1784693657878793,
+      "startOffset": [
+        -2,
+        5
+      ],
+      "speed": 0.4,
+      "reaction": 2,
+      "sensorSeed": 171182,
+      "truth": "linear",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-014",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "MEDA57b",
+      "family": "oblique-right",
+      "distance": 34.435,
+      "bearing": -0.6742172877759972,
+      "heading": 2.163770038117069,
+      "startOffset": [
+        9,
+        5
+      ],
+      "speed": 0.6,
+      "reaction": 2,
+      "sensorSeed": 171219,
+      "truth": "turn",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-015",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "PIA26074",
+      "family": "lateral",
+      "distance": 86.0,
+      "bearing": 1.4925925442000412,
+      "heading": 0.30954466597437436,
+      "startOffset": [
+        3,
+        -12
+      ],
+      "speed": 0.6,
+      "reaction": 2,
+      "sensorSeed": 171256,
+      "truth": "growth",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-016",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "MEDA57a",
+      "family": "receding",
+      "distance": 60.565,
+      "bearing": 3.169121702737886,
+      "heading": 1.1449629170398388,
+      "startOffset": [
+        -10,
+        -2
+      ],
+      "speed": 0.9,
+      "reaction": 6,
+      "sensorSeed": 171293,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-017",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "MEDA57b",
+      "family": "inside",
+      "distance": 5.739250000000001,
+      "bearing": 0.35,
+      "heading": 3.8449573050760466,
+      "startOffset": [
+        -6,
+        -8
+      ],
+      "speed": 0.9,
+      "reaction": 6,
+      "sensorSeed": 171330,
+      "truth": "turn",
+      "turnDegrees": -18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08
+    },
+    {
+      "id": "dev-far-0-0",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "MEDA57a",
+      "family": "ahead-far",
+      "distance": 35.7105,
+      "bearing": 0,
+      "heading": 0.3,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 480931,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 90
+    },
+    {
+      "id": "dev-far-0-1",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "MEDA57a",
+      "family": "ahead-far",
+      "distance": 35.7105,
+      "bearing": 0,
+      "heading": 0.8,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 480942,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 90
+    },
+    {
+      "id": "dev-far-0-2",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "MEDA57a",
+      "family": "ahead-far",
+      "distance": 35.7105,
+      "bearing": 0,
+      "heading": 1.3,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 480953,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 90
+    },
+    {
+      "id": "dev-far-1-0",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "MEDA57b",
+      "family": "ahead-far",
+      "distance": 61.799625,
+      "bearing": 0,
+      "heading": 0.3,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 480984,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 90
+    },
+    {
+      "id": "dev-far-1-1",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "MEDA57b",
+      "family": "ahead-far",
+      "distance": 61.799625,
+      "bearing": 0,
+      "heading": 0.8,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 480995,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 90
+    },
+    {
+      "id": "dev-far-1-2",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "MEDA57b",
+      "family": "ahead-far",
+      "distance": 61.799625,
+      "bearing": 0,
+      "heading": 1.3,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 481006,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 90
+    },
+    {
+      "id": "dev-far-2-0",
+      "split": "ablation",
+      "terrain": "floor",
+      "source": "PIA26074",
+      "family": "ahead-far",
+      "distance": 441.02777777777777,
+      "bearing": 0,
+      "heading": 0.3,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 481037,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 109.43684210526315
+    },
+    {
+      "id": "dev-far-2-1",
+      "split": "ablation",
+      "terrain": "ridge",
+      "source": "PIA26074",
+      "family": "ahead-far",
+      "distance": 441.02777777777777,
+      "bearing": 0,
+      "heading": 0.8,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 481048,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 109.43684210526315
+    },
+    {
+      "id": "dev-far-2-2",
+      "split": "ablation",
+      "terrain": "navcam",
+      "source": "PIA26074",
+      "family": "ahead-far",
+      "distance": 441.02777777777777,
+      "bearing": 0,
+      "heading": 1.3,
+      "startOffset": [
+        3,
+        -5
+      ],
+      "speed": 0.6,
+      "reaction": 6,
+      "sensorSeed": 481059,
+      "truth": "linear",
+      "turnDegrees": 18,
+      "growthMps": 0.035,
+      "positionSigma": 0.75,
+      "diameterSigmaFraction": 0.08,
+      "evaluationUntil": 109.43684210526315
+    }
+  ],
+  "geometry": {
+    "bearingsDegrees": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330
+    ],
+    "distanceRules": [
+      "0.5R",
+      "R",
+      "R+5",
+      "R+15",
+      "R+30",
+      "R+60",
+      "R+100",
+      "R+250"
+    ],
+    "walking": [
+      0.4,
+      0.6,
+      0.9
+    ],
+    "reaction": [
+      2,
+      6,
+      10
+    ],
+    "margin": 1,
+    "headingSamples": 720
+  },
+  "common": {
+    "margin": 1,
+    "replanSeconds": 2,
+    "sensorCadence": 2,
+    "tickSeconds": 0.5,
+    "horizonSeconds": 36,
+    "returnAt": 70,
+    "finishBy": 230,
+    "oxygenSeconds": 520,
+    "batterySeconds": 520,
+    "fixedReserveSeconds": 104,
+    "missionSeconds": 420,
+    "loadKg": 12,
+    "maxSlope": 25
+  },
+  "policySelection": {
+    "candidates": [
+      0,
+      0.25,
+      0.5
+    ],
+    "metric": "Development mean actual continuous contact; reject increases in return failure; tie break extra HOLD then route length. Freeze chosen weight before holdout.",
+    "fallback": "If no policy beats the matched endpoint reference, retain endpoint reference and report failure."
+  },
+  "limitations": [
+    "All 72 placements and virtual position/radius fixes are synthetic, not independent actual observations. Source diameter and drift priors come from observations.",
+    "Raw MEDA weather is not used as a 2D position sensor.",
+    "1 m spacing is not rock-scale traversability or registration accuracy. Missing/steep support is blocked.",
+    "Same actual remaining budgets, delay, observations, execution and terrain apply to all non-oracle arms.",
+    "Free-plane geometry omits resources and terrain and is a separate reference, not pooled with DEM performance.",
+    "Navcam is local north/east; orbital DEM is east/south. They are never overlaid without registration.",
+    "No guarantee, physical injury rate, CFD or calibrated probability is claimed."
+  ],
+  "amendment": {
+    "date": "2026-11-15T02:21:25.953940+00:00",
+    "beforeAnyEvaluation": true,
+    "previousProtocolSHA256": "128f704e0919bc76d63e989e5c9268b73408ed42489927f1b03c12b190e1b2cf",
+    "reason": "Counterbalance family × terrain × source in all 54 holdout cases; initial indexing accidentally confounded bearing with terrain. Preserve original protocol."
+  },
+  "createdAt": "2026-11-15T02:48:15.444491+00:00",
+  "purpose": "Development-only 2x2 ablation. Existing dev18 + 9 far-head-on cases. Select lowest mean contact with no worse return failures; ties keep simpler. Never optimize on validation99.",
+  "variants": [
+    {
+      "arm": "Adaptive",
+      "alpha": 0.25,
+      "trackerWindow": 3,
+      "adaptiveHorizon": false,
+      "variant": "w3-36s"
+    },
+    {
+      "arm": "Adaptive",
+      "alpha": 0.25,
+      "trackerWindow": 3,
+      "adaptiveHorizon": true,
+      "variant": "w3-adaptive"
+    },
+    {
+      "arm": "Adaptive",
+      "alpha": 0.25,
+      "trackerWindow": 7,
+      "adaptiveHorizon": false,
+      "variant": "w7-36s"
+    },
+    {
+      "arm": "Adaptive",
+      "alpha": 0.25,
+      "trackerWindow": 7,
+      "adaptiveHorizon": true,
+      "variant": "w7-adaptive"
+    }
+  ]
+}
