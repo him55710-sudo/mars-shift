@@ -1,0 +1,25 @@
+{
+  "sourceCommit": "76444abbb4faff1b05f46a09b81ca2c24602b333",
+  "visualVersusSource": {
+    "sampledKnownCells": 9446,
+    "medianAbsMetres": 0.0011426577819472206,
+    "p95AbsMetres": 0.004944721629762519,
+    "maxAbsMetres": 0.43686410988265845,
+    "displayMissingCellsMasked": 96,
+    "displayConflictCellsMasked": 3,
+    "limitation": "LoD approximation difference only; not source stereo accuracy"
+  },
+  "conversionChecks": {
+    "assets": 82,
+    "vertices": 710986,
+    "triangleIndices": 4198710,
+    "allAccessorArraysIdentical": true,
+    "allTextureDimensionsIdentical": true
+  },
+  "independentGridChecks": {
+    "sampledKnownCells": 64,
+    "method": "Direct vertical triangle intersections independently recomputed from original source leaves",
+    "maximumHeightDifferenceMetres": 4.790956807720903e-06,
+    "differenceMeaning": "Rounded JSON export consistency, not source measurement accuracy"
+  }
+}

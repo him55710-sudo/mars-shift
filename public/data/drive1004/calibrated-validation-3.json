@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "sourceImageUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709298299_678RASLN0261004NCAM13477_0A0195J01.IMG",
+  "sourceLabelUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709298299_678RASLN0261004NCAM13477_0A0195J01.xml",
+  "sourceImageSha256": "552584f0ebd760664f7d13b5aa0602455ab9e18d45c9c482b9225e212c3babdc",
+  "sourceLabelSha256": "7362b99b907675efe9bd3f9099bfc73516240ad18599ec62d74bd12af35a9ac1",
+  "sourcePixels": [
+    2560,
+    1920
+  ],
+  "model": "Published PDS linearized CAHV in rover-navigation frame; published NASA scene quaternion and original tile transform",
+  "displayMapping": {
+    "blackDN": 100.0,
+    "whiteDN": 1795.0,
+    "radianceScale": 1.33333e-05,
+    "power": 0.45454545454545453,
+    "meaning": "Shared RGB display stretch only; images are not a new radiance measurement."
+  },
+  "tiles": [
+    {
+      "sourceTile": "/data/drive1004/detail-3/33.glb",
+      "output": "/data/drive1004/calibrated-3/33.glb",
+      "cropPixels": [
+        386,
+        67
+      ],
+      "imageCropOriginPixels": [
+        1855,
+        620
+      ],
+      "vertices": 545,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 1.1433055533416336e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/30.glb",
+      "output": "/data/drive1004/calibrated-3/30.glb",
+      "cropPixels": [
+        578,
+        57
+      ],
+      "imageCropOriginPixels": [
+        1710,
+        676
+      ],
+      "vertices": 3795,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 1.7199401554535143e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/32.glb",
+      "output": "/data/drive1004/calibrated-3/32.glb",
+      "cropPixels": [
+        320,
+        68
+      ],
+      "imageCropOriginPixels": [
+        1978,
+        624
+      ],
+      "vertices": 2223,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 9.520821549813263e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/31.glb",
+      "output": "/data/drive1004/calibrated-3/31.glb",
+      "cropPixels": [
+        381,
+        56
+      ],
+      "imageCropOriginPixels": [
+        1605,
+        666
+      ],
+      "vertices": 2143,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 1.1354056596246664e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/23.glb",
+      "output": "/data/drive1004/calibrated-3/23.glb",
+      "cropPixels": [
+        214,
+        41
+      ],
+      "imageCropOriginPixels": [
+        2094,
+        673
+      ],
+      "vertices": 954,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 6.363945885823341e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/22.glb",
+      "output": "/data/drive1004/calibrated-3/22.glb",
+      "cropPixels": [
+        17,
+        9
+      ],
+      "imageCropOriginPixels": [
+        2288,
+        705
+      ],
+      "vertices": 59,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 5.04429863212863e-07
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/21.glb",
+      "output": "/data/drive1004/calibrated-3/21.glb",
+      "cropPixels": [
+        397,
+        43
+      ],
+      "imageCropOriginPixels": [
+        1899,
+        701
+      ],
+      "vertices": 1398,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 1.179235596282524e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/20.glb",
+      "output": "/data/drive1004/calibrated-3/20.glb",
+      "cropPixels": [
+        256,
+        44
+      ],
+      "imageCropOriginPixels": [
+        2049,
+        705
+      ],
+      "vertices": 960,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 7.612190984218614e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/13.glb",
+      "output": "/data/drive1004/calibrated-3/13.glb",
+      "cropPixels": [
+        224,
+        36
+      ],
+      "imageCropOriginPixels": [
+        1481,
+        695
+      ],
+      "vertices": 1116,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 6.666292847512523e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/12.glb",
+      "output": "/data/drive1004/calibrated-3/12.glb",
+      "cropPixels": [
+        355,
+        40
+      ],
+      "imageCropOriginPixels": [
+        1552,
+        710
+      ],
+      "vertices": 1691,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 1.0577257853583433e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/10.glb",
+      "output": "/data/drive1004/calibrated-3/10.glb",
+      "cropPixels": [
+        254,
+        41
+      ],
+      "imageCropOriginPixels": [
+        1443,
+        722
+      ],
+      "vertices": 1325,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 7.5465022746357135e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/11.glb",
+      "output": "/data/drive1004/calibrated-3/11.glb",
+      "cropPixels": [
+        178,
+        41
+      ],
+      "imageCropOriginPixels": [
+        1382,
+        700
+      ],
+      "vertices": 1161,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 5.258264536678325e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/01.glb",
+      "output": "/data/drive1004/calibrated-3/01.glb",
+      "cropPixels": [
+        103,
+        21
+      ],
+      "imageCropOriginPixels": [
+        1515,
+        754
+      ],
+      "vertices": 336,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 3.0196567877283087e-06
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/03.glb",
+      "output": "/data/drive1004/calibrated-3/03.glb",
+      "cropPixels": [
+        757,
+        69
+      ],
+      "imageCropOriginPixels": [
+        1541,
+        723
+      ],
+      "vertices": 5676,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 2.255505341963726e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/02.glb",
+      "output": "/data/drive1004/calibrated-3/02.glb",
+      "cropPixels": [
+        548,
+        109
+      ],
+      "imageCropOriginPixels": [
+        1746,
+        750
+      ],
+      "vertices": 6652,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 1.633138026591041e-05
+    },
+    {
+      "sourceTile": "/data/drive1004/detail-3/00.glb",
+      "output": "/data/drive1004/calibrated-3/00.glb",
+      "cropPixels": [
+        1885,
+        455
+      ],
+      "imageCropOriginPixels": [
+        281,
+        526
+      ],
+      "vertices": 101957,
+      "sourceGeometryUnchanged": true,
+      "maximumVertexReprojectionErrorPixels": 5.617628403342678e-05
+    }
+  ],
+  "limitations": [
+    "No new geometry or source pixels.",
+    "Vertex UV projection follows the published model; no independent ground-control registration is claimed.",
+    "Rasterization interpolates projected UVs across original fine triangles.",
+    "Original NASA meshes and published camera-frame alignment are reused; texture reprojection is not an independent registration survey."
+  ]
+}

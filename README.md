@@ -1,5 +1,7 @@
 # MARS SHIFT
 
+Current surface release: [Navcam close-up geometry and PDS texture reprojection](docs/NAVCAM_DETAIL_RELEASE.md). `/explore?surface=navcam` opens the new close stereo surface. **Mission terrain** restores the orbital mission HUD. Real source geometry and image crops replace the blurred near-field orbital view; the local station remains explicitly separate from the planned route.
+
 Current update: [spatial visor, competitor source review, continuous edge checks and return stress audit](docs/SPATIAL_HUD_UPGRADE.md). Open `/explore` for the revised visor. Reproduce the three-crop edge/return audit with `node scripts/run_spatial_analysis.mjs`.
 
 Flight Deck UI: [design system](DESIGN.md), [visual review and verification](docs/DESIGN_REVIEW.md). Shared navigation, readable field guidance and responsive terrain controls.

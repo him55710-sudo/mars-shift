@@ -1,37 +1,7 @@
-import {useEffect,useRef,useState} from 'react';
-import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-import {ArrowUpRight,Camera,Minus,Plus,RotateCcw,X} from 'lucide-react';
-import './navcam-station.css';
-type Runtime={render:()=>void;zoom:(factor:number)=>void;reset:()=>void;look:(dx:number,dy:number)=>void};
-export default function NavcamStation({onClose,onPanorama}:{onClose:()=>void;onPanorama:()=>void}){
- const host=useRef<HTMLDivElement>(null),runtime=useRef<Runtime|null>(null),[detail,setDetail]=useState<'efficient'|'full'>('efficient'),[mode,setMode]=useState<'eye'|'orbit'>('eye'),[status,setStatus]=useState('Loading the recorded surface…'),[failed,setFailed]=useState(false);
- useEffect(()=>{
-  const el=host.current;if(!el)return;let alive=true,object:THREE.Group|null=null,renderer:THREE.WebGLRenderer;setStatus('Loading the recorded surface…');setFailed(false);
-  try{renderer=new THREE.WebGLRenderer({antialias:true});}catch{setFailed(true);setStatus('WebGL is unavailable. The original Navcam image is shown below.');return;}
-  renderer.setPixelRatio(Math.min(devicePixelRatio,detail==='full'?1.5:1.25));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.setClearColor('#101923');el.append(renderer.domElement);
-  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(68,1,.05,400),controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;controls.minDistance=2;controls.maxDistance=160;controls.enabled=mode==='orbit';let yaw=0,pitch=0,frames=0;
-  const render=()=>{if(!alive)return;renderer.render(scene,camera);el.dataset.triangles=String(renderer.info.render.triangles);el.dataset.drawCalls=String(renderer.info.render.calls);el.dataset.renderCount=String(++frames);};
-  const reset=()=>{if(mode==='eye'){camera.position.set(0,1.7,-.1);camera.rotation.order='YXZ';camera.lookAt(-4.5,.12,6);yaw=camera.rotation.y;pitch=camera.rotation.x;camera.fov=60;}else{camera.position.set(24,31,-20);controls.target.set(-2,-.5,18);camera.fov=48;controls.update();}camera.updateProjectionMatrix();render();};
-  const look=(dx:number,dy:number)=>{if(mode!=='eye')return;yaw-=dx*.003;pitch=THREE.MathUtils.clamp(pitch-dy*.003,-1.45,1.45);camera.rotation.set(pitch,yaw,0,'YXZ');render();};
-  const zoom=(factor:number)=>{if(mode==='eye'){camera.fov=THREE.MathUtils.clamp(camera.fov*factor,25,95);camera.updateProjectionMatrix();}else{camera.position.sub(controls.target).multiplyScalar(factor).clampLength(2,160).add(controls.target);controls.update();}render();};
-  runtime.current={render,zoom,reset,look};controls.addEventListener('change',render);reset();
-  const dispose=(root:THREE.Object3D)=>root.traverse(child=>{if(child instanceof THREE.Mesh){child.geometry.dispose();for(const material of Array.isArray(child.material)?child.material:[child.material]){if(material.map)material.map.dispose();material.dispose();}}});
-  new GLTFLoader().load(`/data/navcam/sol9-navcam-${detail}.glb`,gltf=>{if(!alive){dispose(gltf.scene);return;}object=gltf.scene;object.traverse(child=>{if(child instanceof THREE.Mesh){child.frustumCulled=true;for(const mat of Array.isArray(child.material)?child.material:[child.material])if(mat.map){mat.map.anisotropy=Math.min(16,renderer.capabilities.getMaxAnisotropy());mat.map.needsUpdate=true;}}});scene.add(object);setStatus(detail==='full'?'Original mesh · 415,633 triangles':'Efficient mesh · 103,907 triangles');render();},undefined,()=>{if(alive){setFailed(true);setStatus('The 3D asset could not load. The original Navcam image remains available.');}});
-  let down=false,lastX=0,lastY=0;const pointerdown=(e:PointerEvent)=>{if(mode!=='eye'||e.button!==0)return;down=true;lastX=e.clientX;lastY=e.clientY;renderer.domElement.setPointerCapture(e.pointerId);},pointermove=(e:PointerEvent)=>{if(!down)return;look(e.clientX-lastX,e.clientY-lastY);lastX=e.clientX;lastY=e.clientY;},pointerup=()=>{down=false;},wheel=(e:WheelEvent)=>{if(mode!=='eye')return;e.preventDefault();zoom(Math.exp(e.deltaY*.001));};
-  renderer.domElement.addEventListener('pointerdown',pointerdown);renderer.domElement.addEventListener('pointermove',pointermove);renderer.domElement.addEventListener('pointerup',pointerup);renderer.domElement.addEventListener('pointercancel',pointerup);renderer.domElement.addEventListener('wheel',wheel,{passive:false});
-  const lost=(e:Event)=>{e.preventDefault();setFailed(true);setStatus('3D context lost. The original image is still available.');};renderer.domElement.addEventListener('webglcontextlost',lost);
-  const resize=new ResizeObserver(()=>{const {width,height}=el.getBoundingClientRect();if(!width||!height)return;renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();render();});resize.observe(el);
-  return()=>{alive=false;runtime.current=null;resize.disconnect();controls.dispose();if(object)dispose(object);renderer.dispose();renderer.domElement.remove();};
- },[mode,detail]);
- return <section className="navcam-station" role="dialog" aria-modal="true" aria-label="NASA recorded Navcam terrain station" onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();onClose();}else if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();runtime.current?.look(e.key==='ArrowLeft'?-18:e.key==='ArrowRight'?18:0,e.key==='ArrowUp'?-18:e.key==='ArrowDown'?18:0);}}}>
-  <div ref={host} className="navcam-canvas" role="group" aria-label="Recorded Navcam 3D terrain. Drag to look, scroll to zoom." tabIndex={0}/>
-  {failed&&<img className="navcam-fallback" src="/data/navcam/observation.png" alt="Original NASA Perseverance Sol 9 Navcam surface observation"/>}
-  <header><div><small>NASA / JPL-CALTECH · PERSEVERANCE</small><h1>A closer look at Mars.</h1><p>Navcam stereo surface · Sol 9 · Site 3 / Drive 0</p></div><button aria-label="Close Navcam station" onClick={onClose}><X size={21}/></button></header>
-  <div className="navcam-view-controls"><button aria-pressed={mode==='eye'} onClick={()=>setMode('eye')}>Eye level</button><button aria-pressed={mode==='orbit'} onClick={()=>setMode('orbit')}>Orbit mesh</button><label>Geometry<select aria-label="Navcam geometry quality" value={detail} onChange={e=>setDetail(e.target.value as typeof detail)}><option value="efficient">Efficient · 1.9 MB</option><option value="full">Original · 9.4 MB</option></select></label></div>
-  <aside><span>RECORDED TERRAIN / SEPARATE STATION</span><p>Actual rover stereo geometry and image texture. Dark gaps are unobserved; they have not been filled.</p><p>The 1.7 m eye-level view is illustrative. This station is not registered to your planned study-region route.</p><a href="/data/navcam/manifest.json" target="_blank" rel="noreferrer">Source &amp; processing record <ArrowUpRight size={13}/></a><button onClick={onPanorama}><Camera size={15}/>Open recorded 360° panoramas</button></aside>
-  <div className="navcam-zoom"><button aria-label="Zoom Navcam in" onClick={()=>runtime.current?.zoom(.8)}><Plus size={18}/></button><button aria-label="Zoom Navcam out" onClick={()=>runtime.current?.zoom(1.25)}><Minus size={18}/></button><button aria-label="Reset Navcam view" onClick={()=>runtime.current?.reset()}><RotateCcw size={17}/></button></div>
-  <footer><span role="status">{status}</span><span>Drag to look · scroll to zoom · arrows to look · no invented terrain</span></footer>
- </section>;
+import {lazy,Suspense,useState} from 'react';
+import NavcamSurface from './NavcamSurface';
+const LegacyNavcamStation=lazy(()=>import('./LegacyNavcamStation'));
+export default function NavcamStation(p:{onClose:()=>void;onPanorama:()=>void}){
+ const [archive,setArchive]=useState(false);
+ return archive?<Suspense fallback={<div className="xr-road-loading">Loading recorded archive…</div>}><LegacyNavcamStation onClose={()=>setArchive(false)} onPanorama={p.onPanorama}/></Suspense>:<NavcamSurface onClose={p.onClose} onPanorama={p.onPanorama} onArchive={()=>setArchive(true)}/>;
 }
