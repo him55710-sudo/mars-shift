@@ -1,5 +1,7 @@
 # MARS SHIFT — Flight Deck
 
+Unified workspace update: `/` is the compact Mission Hub, with the existing mission introduction at `/about`. `src/workspace-shell.css` owns the shared navy/mint shell and grouped view menu; `src/mission-hub.css` owns the hub. Scientific encodings and immersive terrain geometry remain separate from shell styling. See [the integration release](docs/UNIFIED_WORKSPACE.md) for source histories and verification.
+
 15 November update: the immersive visor now uses neutral translucent panels, rounded controls and a compact spatial dock at the user’s request. `src/helmet-hud.css` owns visor styling; general deck rules must not override it. See `docs/SPATIAL_HUD_UPGRADE.md` for the reviewed references, source reuse, responsive behavior and validation. The existing instrument-deck conventions below continue to apply to analysis and planning.
 
 Status: implemented and verified for the Flight Deck interface. See `docs/DESIGN_REVIEW.md` for evidence, test conditions and prototype limitations.
