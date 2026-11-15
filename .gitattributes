@@ -37,3 +37,9 @@
 /src/encounter-v8.ts -text
 /src/vortex-forecast-v8.ts -text
 /scripts/analyze_vortex_v8.ts -text
+
+# v9 frozen experiment inputs and source identities.
+/public/data/hazards/vortex-v9/** -text whitespace=cr-at-eol
+/src/encounter-v9.ts -text
+/src/sipp-v9.ts -text
+/scripts/analyze_vortex_v9.ts -text
