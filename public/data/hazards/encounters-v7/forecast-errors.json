@@ -1,0 +1,146 @@
+[
+  {
+    "truth": "linear",
+    "arm": "LegacyAdaptive",
+    "lead": 5,
+    "count": 1404,
+    "positionRMSE": 2.6784165874761605,
+    "radiusMAE": 0.9595507047269479
+  },
+  {
+    "truth": "linear",
+    "arm": "LegacyAdaptive",
+    "lead": 10,
+    "count": 1404,
+    "positionRMSE": 4.5123984899987235,
+    "radiusMAE": 0.9595507047269479
+  },
+  {
+    "truth": "linear",
+    "arm": "LegacyAdaptive",
+    "lead": 20,
+    "count": 1404,
+    "positionRMSE": 8.220162948127747,
+    "radiusMAE": 0.9595507047269479
+  },
+  {
+    "truth": "linear",
+    "arm": "Adaptive:0.25",
+    "lead": 5,
+    "count": 1404,
+    "positionRMSE": 1.2977049749510043,
+    "radiusMAE": 0.9595507047269479
+  },
+  {
+    "truth": "linear",
+    "arm": "Adaptive:0.25",
+    "lead": 10,
+    "count": 1404,
+    "positionRMSE": 1.8959356591772576,
+    "radiusMAE": 0.9595507047269479
+  },
+  {
+    "truth": "linear",
+    "arm": "Adaptive:0.25",
+    "lead": 20,
+    "count": 1404,
+    "positionRMSE": 3.1271674601340345,
+    "radiusMAE": 0.9595507047269479
+  },
+  {
+    "truth": "turn",
+    "arm": "LegacyAdaptive",
+    "lead": 5,
+    "count": 702,
+    "positionRMSE": 2.692440914822806,
+    "radiusMAE": 0.9910082628719317
+  },
+  {
+    "truth": "turn",
+    "arm": "LegacyAdaptive",
+    "lead": 10,
+    "count": 702,
+    "positionRMSE": 4.707608944518441,
+    "radiusMAE": 0.9910082628719317
+  },
+  {
+    "truth": "turn",
+    "arm": "LegacyAdaptive",
+    "lead": 20,
+    "count": 702,
+    "positionRMSE": 9.181007415886018,
+    "radiusMAE": 0.9910082628719317
+  },
+  {
+    "truth": "turn",
+    "arm": "Adaptive:0.25",
+    "lead": 5,
+    "count": 702,
+    "positionRMSE": 1.7374512782749028,
+    "radiusMAE": 0.9910082628719317
+  },
+  {
+    "truth": "turn",
+    "arm": "Adaptive:0.25",
+    "lead": 10,
+    "count": 702,
+    "positionRMSE": 3.0321664724836275,
+    "radiusMAE": 0.9910082628719317
+  },
+  {
+    "truth": "turn",
+    "arm": "Adaptive:0.25",
+    "lead": 20,
+    "count": 702,
+    "positionRMSE": 6.287196516653816,
+    "radiusMAE": 0.9910082628719317
+  },
+  {
+    "truth": "growth",
+    "arm": "LegacyAdaptive",
+    "lead": 5,
+    "count": 702,
+    "positionRMSE": 2.714687805842378,
+    "radiusMAE": 1.021745044676755
+  },
+  {
+    "truth": "growth",
+    "arm": "LegacyAdaptive",
+    "lead": 10,
+    "count": 702,
+    "positionRMSE": 4.578226416345382,
+    "radiusMAE": 1.0470869001688332
+  },
+  {
+    "truth": "growth",
+    "arm": "LegacyAdaptive",
+    "lead": 20,
+    "count": 702,
+    "positionRMSE": 8.342656507746234,
+    "radiusMAE": 1.1398561321825385
+  },
+  {
+    "truth": "growth",
+    "arm": "Adaptive:0.25",
+    "lead": 5,
+    "count": 702,
+    "positionRMSE": 1.250683158085803,
+    "radiusMAE": 1.021745044676755
+  },
+  {
+    "truth": "growth",
+    "arm": "Adaptive:0.25",
+    "lead": 10,
+    "count": 702,
+    "positionRMSE": 1.8252788761583265,
+    "radiusMAE": 1.0470869001688332
+  },
+  {
+    "truth": "growth",
+    "arm": "Adaptive:0.25",
+    "lead": 20,
+    "count": 702,
+    "positionRMSE": 3.005632846291866,
+    "radiusMAE": 1.1398561321825385
+  }
+]

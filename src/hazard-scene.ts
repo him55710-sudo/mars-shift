@@ -5,7 +5,7 @@ import type {Point,Terrain} from './planner';
 export function addHazardScene(group:THREE.Group,t:Terrain,frame:XRNavigationFrame,world:(p:Point,z?:number,offset?:number)=>THREE.Vector3){
  const inside=(p:Point)=>p.x>=0&&p.y>=0&&p.x<t.width&&p.y<t.height;
  const line=(points:THREE.Vector3[],color:string,opacity=1)=>{const g=new THREE.BufferGeometry().setFromPoints(points);group.add(new THREE.LineSegments(g,new THREE.LineBasicMaterial({color,transparent:true,opacity,depthWrite:false})));};
- const forecasts=frame.forecast;
+ const forecasts=frame.forecast.filter(f=>f.valid);
  forecasts.forEach((f,j)=>{
   const center={x:f.x/t.cellSize,y:f.y/t.cellSize};
   for(const [radius,opacity] of [[f.envelope,.65-j*.055],[f.radius,j===0?.95:.18]]){

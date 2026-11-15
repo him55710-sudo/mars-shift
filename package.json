@@ -18,7 +18,9 @@
     "science:hazards:dev": "node scripts/run_hazard_v2.mjs dev --final-round",
     "science:hazards:test": "node scripts/run_hazard_v2.mjs test --final-round",
     "science:navigation": "node scripts/run_navigation_analysis.mjs",
-    "science:rover": "node scripts/run_rover_analysis.mjs"
+    "science:rover": "node scripts/run_rover_analysis.mjs",
+    "science:encounters": "node scripts/run_encounters_v7.mjs",
+    "science:encounters:geometry": "node scripts/run_geometry_v7.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",

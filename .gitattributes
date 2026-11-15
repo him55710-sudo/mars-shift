@@ -9,13 +9,13 @@
 /public/data/hazards/v4-* -text
 /public/data/drive1004/calibrated-validation.json -text
 /public/data/drive1004/navigation-grid.json -text
-/public/sw.js -text
+/public/sw.js -text whitespace=cr-at-eol
 /scripts/analyze_observed.ts -text
 /src/ObservedNavigator.tsx -text
 /src/RoverScene.tsx -text
 /src/dust-devil-geometry.ts -text
 /src/escape-metrics.ts -text
-/src/hazard-scene.ts -text
+/src/hazard-scene.ts -text whitespace=cr-at-eol
 /src/hazard-xr.ts -text
 /src/meda-detection.ts -text
 /src/mobility.ts -text
@@ -26,3 +26,8 @@
 /src/observed-worker.ts -text
 /src/planner.ts -text
 /src/rover-navigation.ts -text
+
+/public/data/hazards/encounters-v7/** -text whitespace=cr-at-eol
+/src/encounter-v7.ts -text
+/docs/source-snapshots/** -text whitespace=cr-at-eol
+/scripts/analyze_encounters_v7.ts -text whitespace=cr-at-eol

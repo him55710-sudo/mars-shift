@@ -2,6 +2,7 @@ import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowDownToLine,ArrowRight,ChevronRight,Eye,FlaskConical,Map,Pause,Play,RotateCcw,ShieldAlert,Wind} from 'lucide-react';
 import TerrainScene,{useSurfaceTexture} from './TerrainScene';
 import ObservedNavigator from './ObservedNavigator';
+import EncounterLab from './EncounterLab';
 import {useNativeDEM} from './use-native-dem';
 import {REGIONS,regionInfo} from './regions';
 import StormWatch from './StormWatch';
@@ -79,5 +80,7 @@ function ArchivedHazardNavigator({terrain:t,region,onRegion}:{terrain:Terrain;re
 
 export default function HazardNavigator(props:{terrain:Terrain;region:string;onRegion:(id:string)=>void}){
  const [archive,setArchive]=useState(()=>new URLSearchParams(location.search).get("archive")==="1");
- return archive?<><button className="obs-return" onClick={()=>setArchive(false)}>← Recorded observations & Navcam escape</button><ArchivedHazardNavigator {...props}/></>:<ObservedNavigator onArchive={()=>setArchive(true)}/>;
+ const [lab,setLab]=useState(()=>!new URLSearchParams(location.search).has("archive"));
+ if(lab)return <EncounterLab onRecorded={()=>setLab(false)} onArchive={()=>{setLab(false);setArchive(true);}}/>;
+ return archive?<><button className="obs-return" onClick={()=>setArchive(false)}>← Recorded observations & Navcam escape</button><ArchivedHazardNavigator {...props}/></>:<><button className="obs-return" onClick={()=>setLab(true)}>← 거리·방향 배치 실험</button><ObservedNavigator onArchive={()=>setArchive(true)}/></>;
 }
