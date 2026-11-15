@@ -5,8 +5,8 @@
     "src/energy-model.ts": "adc1033d53c486eb59bdf6505ea5f045081427bb38b1de55f1518a2748e33e5e",
     "src/emergency-return.ts": "4c17b8ac47ee33f70a8532ba718a3f1ce11eb52104c86f0aa0a914ade840d61a",
     "src/eva-resources.ts": "a811b11ae326b73d96d97d89b0974ad16733b3ea6139ba532f9c2a48f4cd3b93",
-    "src/constrained-planner.ts": "c36abf3b12b43d5f9f8178a84ae782e69696031b3eb25910ba709bebe34faad7",
-    "src/planner.ts": "6380cf4f79ec42f5bbd675e6b90960d5abfec19fea5f674558c6d24adb27e7e4",
+    "src/constrained-planner.ts": "ad1af32517a78574fdca8c46af886fa3ab2adef701aa8fd9ebd7b6846296a914",
+    "src/planner.ts": "f8631dc37cf54a23ab3deb328f892e0a5824262a5f1a878ee437b56128151c49",
     "scripts/analyze_navigation.ts": "d41e2e8e8cb2d609f9259a706dc9027389aeb47252ca6ba262736ef8e188319f"
   },
   "method": "Fixed baseline endpoints. Walk halfway along mission outbound plus a 35% fractional edge, add five modeled work minutes, calculate direct current-position return. Times are one local Node run, not browser FPS. Reuses real 1m DEM with 5m graph; no calibrated physiology.",
@@ -16,7 +16,7 @@
       "sourceHashes": {
         "terrain": "2a9fcde55edf7f41b3ec8ce22985e3db19ae9d369dad0ede4b6ca5737463dd4e",
         "dem": "46806cd4be7296da7f988416054b6e7a4b0aa64d151c99fb18c5f36a0ee14921",
-        "science": "5e3928fb943054ddd239861c4c76a38070d6620f59480fbc3d31a2df097fe454"
+        "science": "ca62073415a4b43da7cd6d807eab78452d107abf7aacfc4ac04f92c17383c449"
       },
       "settings": {
         "maxSlope": 18,
@@ -40,8 +40,8 @@
         "x": 153,
         "y": 43
       },
-      "missionMs": 806.9688,
-      "returnMs": 271.182,
+      "missionMs": 1027.6387,
+      "returnMs": 340.6432,
       "routes": [
         {
           "mode": "shortest",
@@ -104,7 +104,7 @@
       "sourceHashes": {
         "terrain": "ac14342fdcdd6d0b2a2bf56b565e15dffa5bc95b28a2a74b93c8fc179c50d5f5",
         "dem": "86d006ce6d4777d4728fe52eedc100b3965f6dd22390940165fac8016cc9952f",
-        "science": "9f1cf802d5889cd25abf9351fd02e4e041295e0093ff29af52b3bc0e857e0929"
+        "science": "906014e652f0e301c244fbf76955f7dc2a5203aa50afc00daabd5492033e2871"
       },
       "settings": {
         "maxSlope": 18,
@@ -128,8 +128,8 @@
         "x": 153,
         "y": 43
       },
-      "missionMs": 614.9593000000002,
-      "returnMs": 158.84169999999995,
+      "missionMs": 1374.4663,
+      "returnMs": 393.1175000000003,
       "routes": [
         {
           "mode": "shortest",
@@ -192,7 +192,7 @@
       "sourceHashes": {
         "terrain": "9f3cbee784fda2df5fb488d4ecb61afd7ea2080ac543709faa827aeee6d210dc",
         "dem": "2f9f17ba9809166d5ca53f0a1324a4dc4b433b927a9e07912bdd5b3766d5c54a",
-        "science": "82e85234f982f48a197d0525e17a66aaa67fcc9121f0dab6f8f6d0a8a08eaada"
+        "science": "f4b407b184136dbbd1471c1e6e58e9a20d385b4ed412911ceb666e0a541b3e43"
       },
       "settings": {
         "maxSlope": 18,
@@ -216,8 +216,8 @@
         "x": 153,
         "y": 43
       },
-      "missionMs": 433.4721999999997,
-      "returnMs": 259.7573000000002,
+      "missionMs": 1024.9814000000006,
+      "returnMs": 606.2154,
       "routes": [
         {
           "mode": "shortest",

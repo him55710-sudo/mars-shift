@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "runtime": "v24.22.1",
+  "method": "Fixed endpoints in three measured Jezero crops. Five objectives per region; every returned edge rechecked against the shared edge policy. Reverse directed minimum-time costs audit nominal and half-speed return after actual route-prefix travel and destination work. Timings are one local run, not a browser performance guarantee.",
+  "sourceHashes": {
+    "src/planner.ts": "f8631dc37cf54a23ab3deb328f892e0a5824262a5f1a878ee437b56128151c49",
+    "src/constrained-planner.ts": "ad1af32517a78574fdca8c46af886fa3ab2adef701aa8fd9ebd7b6846296a914",
+    "src/return-feasibility.ts": "87a1a874b9934fe1d2b7a466e7717c97ee857a61c267aa323ff37910956a9779",
+    "src/return-envelope.ts": "05678abb04298e53a39269af8e1a0bfe7d8619cef7d9b05e5a6eb46cef5ac41c",
+    "src/traverse-constraints.ts": "a0844f8642ad588455367b97e12e13e43274f989677398d7cee079634507133e",
+    "src/grid-heap.ts": "c27f56bc451b0d24571cac80ccaf7a4147ad0157b97d37a5e94db9ff4a4b86a6",
+    "src/eva-motion.ts": "473a8d6aba9b18d6ddf723157e00433213da1cf638c0cb0a979f364931957503",
+    "scripts/bake_surface_relief.py": "701fa4445d7730e17477eeeff3afff1007a6d3eba0a17a42fdd51fdaf54883a9",
+    "scripts/analyze_spatial.ts": "137240c1a06d49330fc593c3ea1354da5aa43b5481399f7568584975a71afd86"
+  },
+  "regions": [
+    {
+      "region": "floor",
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      },
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "missionMs": 707.4596,
+      "routes": [
+        {
+          "mode": "shortest",
+          "distanceMetres": 1752.8556020692852,
+          "totalMinutes": 84.9233118350019,
+          "reservePercent": 39.415206753498566,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33233,
+              "marginMinutes": 19.03895231594149
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.41288456770782
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "exposure",
+          "distanceMetres": 1991.9239122830884,
+          "totalMinutes": 90.05554076686019,
+          "reservePercent": 35.52937627652014,
+          "edgesChecked": 332,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 333,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 32835,
+              "marginMinutes": 13.9067233840832
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -15.977329278000482
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "mission",
+          "distanceMetres": 1846.0152216003562,
+          "totalMinutes": 86.79728014491468,
+          "reservePercent": 37.99634503313602,
+          "edgesChecked": 282,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 283,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 26666,
+              "marginMinutes": 17.164984006028686
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -14.348503268790154
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "time",
+          "distanceMetres": 1752.8579014540223,
+          "totalMinutes": 84.91409992594187,
+          "reservePercent": 39.422181484644,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 17111,
+              "marginMinutes": 19.048164225001475
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.40827890381864
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "energy",
+          "distanceMetres": 1752.9338409207635,
+          "totalMinutes": 85.06963674759709,
+          "reservePercent": 39.30441789110506,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 28856,
+              "marginMinutes": 18.892627403346275
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.48613935433599
+            },
+            "factor": 2
+          }
+        }
+      ],
+      "relief": {
+        "classification": "DERIVED DISPLAY",
+        "sourceSha256": "46806cd4be7296da7f988416054b6e7a4b0aa64d151c99fb18c5f36a0ee14921",
+        "width": 1000,
+        "height": 1000,
+        "bounds": [
+          4364626.037914526,
+          1093118.6170900527,
+          4365626.037914526,
+          1094118.6170900527
+        ],
+        "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "sunDirectionEastUpSouth": [
+          -48,
+          28,
+          -32
+        ],
+        "reachMetres": 192,
+        "stepMetres": 2,
+        "penumbraMetres": 0.5,
+        "shadowedPixels": 2620,
+        "meaning": "Simulated fixed sunlight occlusion from measured DEM. Crop restricted; no weather, surface observation or subpixel geometry is inferred."
+      }
+    },
+    {
+      "region": "ridge",
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      },
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "missionMs": 473.88599999999997,
+      "routes": [
+        {
+          "mode": "shortest",
+          "distanceMetres": 1752.7432213762706,
+          "totalMinutes": 85.1608316000823,
+          "reservePercent": 39.23537035993768,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33433,
+              "marginMinutes": 18.80143255086109
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.206049380386801
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "exposure",
+          "distanceMetres": 1927.8180025588754,
+          "totalMinutes": 89.26149375602562,
+          "reservePercent": 36.13058329900917,
+          "edgesChecked": 310,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 311,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33433,
+              "marginMinutes": 14.700770394917779
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -15.255683233948666
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "mission",
+          "distanceMetres": 1793.4189380949838,
+          "totalMinutes": 85.79192599984577,
+          "reservePercent": 38.75754174297391,
+          "edgesChecked": 264,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 265,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33432,
+              "marginMinutes": 18.17033815109762
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.520834553096265
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "time",
+          "distanceMetres": 1764.199873690343,
+          "totalMinutes": 85.043632699911,
+          "reservePercent": 39.32410667006738,
+          "edgesChecked": 254,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 255,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 31641,
+              "marginMinutes": 18.91863145103239
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.146811450184856
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "energy",
+          "distanceMetres": 1764.4765305707422,
+          "totalMinutes": 85.33657573261397,
+          "reservePercent": 39.102306945306566,
+          "edgesChecked": 254,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 255,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33432,
+              "marginMinutes": 18.62568841832943
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -13.293727044659818
+            },
+            "factor": 2
+          }
+        }
+      ],
+      "relief": {
+        "classification": "DERIVED DISPLAY",
+        "sourceSha256": "86d006ce6d4777d4728fe52eedc100b3965f6dd22390940165fac8016cc9952f",
+        "width": 1000,
+        "height": 1000,
+        "bounds": [
+          4369772.037914526,
+          1096342.6170900527,
+          4370772.037914526,
+          1097342.6170900527
+        ],
+        "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "sunDirectionEastUpSouth": [
+          -48,
+          28,
+          -32
+        ],
+        "reachMetres": 192,
+        "stepMetres": 2,
+        "penumbraMetres": 0.5,
+        "shadowedPixels": 19993,
+        "meaning": "Simulated fixed sunlight occlusion from measured DEM. Crop restricted; no weather, surface observation or subpixel geometry is inferred."
+      }
+    },
+    {
+      "region": "noah",
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      },
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "missionMs": 376.16430000000014,
+      "routes": [
+        {
+          "mode": "shortest",
+          "distanceMetres": 1751.4114378097947,
+          "totalMinutes": 80.55213341710854,
+          "reservePercent": 42.72481326990353,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33234,
+              "marginMinutes": 23.41013073383485
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -6.528181071108257
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "exposure",
+          "distanceMetres": 1792.4193765933148,
+          "totalMinutes": 81.67224080624325,
+          "reservePercent": 41.87673196098724,
+          "edgesChecked": 264,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 265,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33234,
+              "marginMinutes": 22.290023344700135
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -7.088220330247886
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "mission",
+          "distanceMetres": 1751.4793806673563,
+          "totalMinutes": 80.61030489252622,
+          "reservePercent": 42.68076915280159,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33234,
+              "marginMinutes": 23.351959258417185
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -6.5573249887842096
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "time",
+          "distanceMetres": 1751.4213527839358,
+          "totalMinutes": 80.5178533761142,
+          "reservePercent": 42.75076815808496,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33234,
+              "marginMinutes": 23.444410774829198
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -6.511055741754184
+            },
+            "factor": 2
+          }
+        },
+        {
+          "mode": "energy",
+          "distanceMetres": 1751.4825374159936,
+          "totalMinutes": 80.62435552528393,
+          "reservePercent": 42.67013081657074,
+          "edgesChecked": 250,
+          "edgeViolations": 0,
+          "returnAudit": {
+            "checked": 251,
+            "unsupported": 0,
+            "nominal": {
+              "cell": 33234,
+              "marginMinutes": 23.33790862565947
+            },
+            "slow": {
+              "cell": 8753,
+              "marginMinutes": -6.56435304357808
+            },
+            "factor": 2
+          }
+        }
+      ],
+      "relief": {
+        "classification": "DERIVED DISPLAY",
+        "sourceSha256": "2f9f17ba9809166d5ca53f0a1324a4dc4b433b927a9e07912bdd5b3766d5c54a",
+        "width": 1000,
+        "height": 1000,
+        "bounds": [
+          4360409.037914526,
+          1093711.6170900527,
+          4361409.037914526,
+          1094711.6170900527
+        ],
+        "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "sunDirectionEastUpSouth": [
+          -48,
+          28,
+          -32
+        ],
+        "reachMetres": 192,
+        "stepMetres": 2,
+        "penumbraMetres": 0.5,
+        "shadowedPixels": 269,
+        "meaning": "Simulated fixed sunlight occlusion from measured DEM. Crop restricted; no weather, surface observation or subpixel geometry is inferred."
+      }
+    }
+  ]
+}

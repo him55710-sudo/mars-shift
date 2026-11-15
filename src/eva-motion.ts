@@ -1,4 +1,5 @@
 import {blocked} from './planner';
+import {crossesExclusion,exceedsGrade} from './traverse-constraints';
 import type {Exclusion,Point,Settings,Terrain} from './planner';
 export type NativeDEM={width:number;height:number;cellSize:number;values:Float32Array;bounds:number[];crs:string};
 export function heightAt(t:Terrain,p:Point,native?:NativeDEM|null):number|null{
@@ -13,6 +14,9 @@ export function attemptMove(t:Terrain,from:Point,dxMeters:number,dyMeters:number
  const steps=Math.max(1,Math.ceil(distance/Math.min(1,t.cellSize/3)));let current=from,moved=0;
  for(let n=1;n<=steps;n++){const q={x:from.x+dxMeters/t.cellSize*n/steps,y:from.y+dyMeters/t.cellSize*n/steps};if(q.x<0||q.y<0||q.x>t.width-1||q.y>t.height-1)return {point:current,moved,blocked:true,reason:'End of observed DEM'};const x=Math.round(q.x),y=Math.round(q.y),px=Math.round(current.x),py=Math.round(current.y),i=y*t.width+x;
   if(blocked(t,i,settings,exclusion)||x!==px&&y!==py&&(blocked(t,py*t.width+x,settings,exclusion)||blocked(t,y*t.width+px,settings,exclusion))||heightAt(t,q,native)===null)return {point:current,moved,blocked:true,reason:t.obstacleMask?.[i]?'Buffered obstacle annotation':'NoData, slope limit or simulated exclusion'};
-  moved+=Math.hypot(q.x-current.x,q.y-current.y)*t.cellSize;current=q;
+  const step=Math.hypot(q.x-current.x,q.y-current.y)*t.cellSize;
+  if(crossesExclusion(current,q,t.cellSize,exclusion))return {point:current,moved,blocked:true,reason:'Simulated exclusion boundary'};
+  if(step>1e-8&&exceedsGrade(heightAt(t,current,native),heightAt(t,q,native),step,settings.maxSlope))return {point:current,moved,blocked:true,reason:'Measured DEM grade exceeds slope limit'};
+  moved+=step;current=q;
  }return {point:current,moved,blocked:false,reason:''};
 }
