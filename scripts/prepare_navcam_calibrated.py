@@ -41,7 +41,7 @@ def project(points,matrix,rotation,model):
 
 def inspection_camera(model,rotation,product):
     # Aim into the valid original photo footprint, away from the rover mask.
-    pixel=np.array([3100.,2100.])
+    pixel=np.array([3100.,1800.])
     ray=np.cross(model['H']-pixel[0]*model['A'],model['V']-pixel[1]*model['A'])
     ray*=np.sign(ray@model['A']);ray/=np.linalg.norm(ray)
     display=lambda v:(rotation@v)[[0,2,1]]*np.array([1,-1,1])
