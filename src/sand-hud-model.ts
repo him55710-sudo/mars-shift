@@ -32,5 +32,5 @@ export function sandHUDState(t:Terrain,cells:number[],crew:Point,heading:number,
  if(!avoidSand)return {...base,kind:'caution' as const,title:'Sand avoidance OFF',detail:'Review the route before proceeding',turn:null};
  if(!screen.knownCells||screen.unknown[cell]||cells.slice(Math.max(0,g.index-4),g.index+1).some(i=>screen.unknown[i]))return {...base,kind:'caution' as const,title:'Verify unknown ground',detail:'Texture unavailable nearby · inspect before proceeding',turn:null};
  const title=g.distance<1?'Waypoint reached':Math.abs(turn!)>150?'Turn back to the route':Math.abs(turn!)>35?`Turn ${turn!<0?'left':'right'}`:Math.abs(turn!)>12?`Bear ${turn!<0?'left':'right'}`:'Follow the marked route';
- return {...base,kind:metres<20?'caution' as const:'route' as const,title,detail:metres<20?'Keep outside the amber sand buffer':'Mapped sand avoidance active'};
+ return {...base,kind:metres<20?'caution' as const:'route' as const,title,detail:metres<20?'Keep outside the red sand buffer':'Mapped sand avoidance active'};
 }

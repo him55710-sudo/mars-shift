@@ -43,7 +43,7 @@ describe('readable sand guidance from the crew perspective',()=>{
  });
  it('distinguishes sand core, its buffer and other hard constraints on the actual ground overlay',()=>{
   const t=fixture(),pixels=groundHazardPixels(t,{...DEFAULTS,avoidSand:true},null),core=15*30+16,buffer=15*30+15;
-  expect([...pixels.slice(core*4,core*4+4)]).toEqual([255,158,53,255]);expect([...pixels.slice(buffer*4,buffer*4+4)]).toEqual([242,187,92,220]);
+  expect([...pixels.slice(core*4,core*4+4)]).toEqual([255,64,82,255]);expect([...pixels.slice(buffer*4,buffer*4+4)]).toEqual([255,64,82,220]);
   const steep=fixture();steep.slope[core]=30;expect([...groundHazardPixels(steep,{...DEFAULTS,avoidSand:true},null).slice(core*4,core*4+4)]).toEqual([245,89,63,235]);
  });
 });
