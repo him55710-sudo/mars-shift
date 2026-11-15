@@ -11,6 +11,7 @@ export const WORKSPACES = [
   {id:'crew',page:'crew',href:'/crew',name:'Crew rehearsal',short:'Crew',group:'Mission',description:'Carry your plan through science and return.',icon:'users'},
   {id:'hazards',page:'hazards',href:'/hazards',name:'Weather & hazards',short:'Hazards',group:'Analysis',description:'Replay observations and rehearse changed conditions.',icon:'wind'},
   {id:'terrain-local',page:'terrain-local',href:'/terrain/analysis',name:'Terrain Lab',short:'Terrain Lab',group:'Analysis',description:'Inspect elevation, layers and local profiles.',icon:'mountain'},
+  {id:'review',page:'review',href:'/review',name:'Evidence & demo',short:'Review',group:'Library',description:'Current validation, limits and demo entry points.',icon:'book'},
   {id:'evidence',page:'evidence',href:'/evidence',name:'Evidence & sources',short:'Evidence',group:'Library',description:'Trace observations, models and limitations.',icon:'book'},
   {id:'briefing',page:'briefing',href:'/briefing',name:'Project briefing',short:'Briefing',group:'Library',description:'Seven slides, with a PowerPoint download.',icon:'presentation'},
   {id:'about',page:'about',href:'/about',name:'About the mission',short:'About',group:'Library',description:'The science mission, out and back.',icon:'compass'},

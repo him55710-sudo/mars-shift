@@ -1,0 +1,6967 @@
+{
+  "createdAt": "2026-11-15T07:24:57.170Z",
+  "summary": [
+    {
+      "model": "PERSISTENCE",
+      "origins": 2016,
+      "rmse": 68.0951975777007,
+      "mae": 56.650083486483766,
+      "p95": 130.18811685193666,
+      "coverage": null,
+      "meanMajor": null,
+      "p95Ms": 0.008200000000101682,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 35.52188626672594
+        },
+        {
+          "lead": 5,
+          "rmse": 57.65862607254641
+        },
+        {
+          "lead": 10,
+          "rmse": 96.5636900440239
+        }
+      ]
+    },
+    {
+      "model": "LAST2",
+      "origins": 2016,
+      "rmse": 113.0075236588392,
+      "mae": 42.43235844120428,
+      "p95": 141.72250277938403,
+      "coverage": null,
+      "meanMajor": null,
+      "p95Ms": 0.01169999999990523,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 54.60954128786538
+        },
+        {
+          "lead": 5,
+          "rmse": 94.12860670422832
+        },
+        {
+          "lead": 10,
+          "rmse": 162.6951278027676
+        }
+      ]
+    },
+    {
+      "model": "OLS",
+      "origins": 2016,
+      "rmse": 35.39764831345515,
+      "mae": 24.833731599976645,
+      "p95": 75.56628076071298,
+      "coverage": null,
+      "meanMajor": null,
+      "p95Ms": 0.03669999999999618,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 23.857391035580257
+        },
+        {
+          "lead": 5,
+          "rmse": 31.92467408945692
+        },
+        {
+          "lead": 10,
+          "rmse": 46.58991946361932
+        }
+      ]
+    },
+    {
+      "model": "WEIGHTED_CV",
+      "origins": 2016,
+      "rmse": 38.85925989685202,
+      "mae": 26.682061262674853,
+      "p95": 85.28651933604647,
+      "coverage": null,
+      "meanMajor": null,
+      "p95Ms": 0.035199999999917964,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 27.407252255902492
+        },
+        {
+          "lead": 5,
+          "rmse": 35.47220071330565
+        },
+        {
+          "lead": 10,
+          "rmse": 50.20649100992384
+        }
+      ]
+    },
+    {
+      "model": "CV_SMOOTH_V8",
+      "origins": 2016,
+      "rmse": 30.90477065634993,
+      "mae": 20.75170739374768,
+      "p95": 68.36582539109334,
+      "coverage": null,
+      "meanMajor": null,
+      "p95Ms": 0.1127999999999929,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 20.05054755299056
+        },
+        {
+          "lead": 5,
+          "rmse": 27.451702940845035
+        },
+        {
+          "lead": 10,
+          "rmse": 41.3484473280149
+        }
+      ]
+    },
+    {
+      "model": "IMM_V8",
+      "origins": 2016,
+      "rmse": 29.73998328479172,
+      "mae": 15.86853646714019,
+      "p95": 58.90277421775002,
+      "coverage": null,
+      "meanMajor": null,
+      "p95Ms": 0.24710000000001742,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 17.89862295021449
+        },
+        {
+          "lead": 5,
+          "rmse": 25.506977091506442
+        },
+        {
+          "lead": 10,
+          "rmse": 41.01747473307554
+        }
+      ]
+    },
+    {
+      "model": "IMM_SLOW",
+      "origins": 2016,
+      "rmse": 27.40613449833689,
+      "mae": 14.643404861359967,
+      "p95": 56.39015233946491,
+      "coverage": 0.8804563492063492,
+      "meanMajor": 28.232101240337233,
+      "p95Ms": 0.03100000000000591,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 16.316038039440375
+        },
+        {
+          "lead": 5,
+          "rmse": 23.34068637038832
+        },
+        {
+          "lead": 10,
+          "rmse": 37.977465514137464
+        }
+      ]
+    },
+    {
+      "model": "IMM_FAST",
+      "origins": 2016,
+      "rmse": 30.762541033129796,
+      "mae": 15.675456317626391,
+      "p95": 58.13502209078465,
+      "coverage": 0.9310515873015873,
+      "meanMajor": 36.94747441554186,
+      "p95Ms": 0.025999999999953616,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 18.776699773978823
+        },
+        {
+          "lead": 5,
+          "rmse": 26.543932177456412
+        },
+        {
+          "lead": 10,
+          "rmse": 42.21204807399714
+        }
+      ]
+    },
+    {
+      "model": "IMM_BALANCED",
+      "origins": 2016,
+      "rmse": 29.212462751459803,
+      "mae": 15.08832007264547,
+      "p95": 56.81723338459413,
+      "coverage": 0.9072420634920635,
+      "meanMajor": 30.97361758637756,
+      "p95Ms": 0.02580000000000382,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 17.71293689034486
+        },
+        {
+          "lead": 5,
+          "rmse": 25.09024436886597
+        },
+        {
+          "lead": 10,
+          "rmse": 40.209892367992474
+        }
+      ]
+    },
+    {
+      "model": "IMM_UNROBUST",
+      "origins": 2016,
+      "rmse": 30.961202015492457,
+      "mae": 16.049553955270756,
+      "p95": 59.37089254702675,
+      "coverage": 0.9069113756613757,
+      "meanMajor": 32.78436427915099,
+      "p95Ms": 0.02580000000000382,
+      "byLead": [
+        {
+          "lead": 2,
+          "rmse": 18.682312167787213
+        },
+        {
+          "lead": 5,
+          "rmse": 26.6309974382469
+        },
+        {
+          "lead": 10,
+          "rmse": 42.63272543764755
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 5462.761657226944,
+      "mae": 65.47612558640631
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 2165.6280215735032,
+      "mae": 30.68377581497192
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 0.6004321416602727,
+      "mae": 0.6253652019494468
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 0.41930713134318615,
+      "mae": 0.4897494855380329
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2.255830433618981,
+      "mae": 1.124323755475105
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 73.99885151065207,
+      "mae": 5.335064452501954
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 1.007874728686321,
+      "mae": 0.8430723845102195
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 4.317655777836806,
+      "mae": 1.789025905802561
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 1.7201056790141107,
+      "mae": 1.1214935469678002
+    },
+    {
+      "case": "development-linear-0-0",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 67.79194815349854,
+      "mae": 5.375309627882707
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 628.0991491897455,
+      "mae": 22.682730797921526
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 81.04184755683563,
+      "mae": 7.490697801486671
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 0.21714612606974942,
+      "mae": 0.4121426326925251
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 0.20271201382106624,
+      "mae": 0.39210246440300606
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 0.5556481241169247,
+      "mae": 0.6789100658816957
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 0.8281381586544452,
+      "mae": 0.7961460017466324
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 0.8409500880401954,
+      "mae": 0.8038618296277769
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 3.879657455421765,
+      "mae": 1.618505614692818
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 1.4181193497545703,
+      "mae": 0.9987764955817774
+    },
+    {
+      "case": "development-linear-0-1",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 1.4181193497545703,
+      "mae": 0.9987764955817774
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 3261.38838250009,
+      "mae": 53.48489628138403
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 38.43727756304653,
+      "mae": 4.921517929859529
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 1.7653855349537406,
+      "mae": 1.0142919658366911
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 1.753385255297851,
+      "mae": 0.9904088472059782
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2.1091694106682124,
+      "mae": 1.2154399584376523
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 2.2367921210931305,
+      "mae": 1.2750623514144401
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 2.3363275114609707,
+      "mae": 1.3128961468411882
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 4.6953378905165435,
+      "mae": 1.8706890220082872
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 2.836186046697533,
+      "mae": 1.4690126189418236
+    },
+    {
+      "case": "development-linear-0-2",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 2.836186046697533,
+      "mae": 1.4690126189418236
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 6114.963665512488,
+      "mae": 71.71640892979478
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 20.585351587597874,
+      "mae": 3.2978687120676935
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 0.438179079971528,
+      "mae": 0.5865564713831223
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 0.4203262389771706,
+      "mae": 0.574008864202075
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 0.9438844504285068,
+      "mae": 0.7976225584537145
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 2.245773011773789,
+      "mae": 1.1957834110708272
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 1.3809429345739277,
+      "mae": 1.0249451004367724
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 4.087498399921901,
+      "mae": 1.6468144565818637
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 2.0230106832735983,
+      "mae": 1.1865473513107714
+    },
+    {
+      "case": "development-linear-0-3",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 2.0230106832735983,
+      "mae": 1.1865473513107714
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 9430.636344790873,
+      "mae": 85.81859070475043
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 327.8726652470453,
+      "mae": 12.897237344205017
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 0.13417525998992474,
+      "mae": 0.33166733521691144
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 0.09973573571766146,
+      "mae": 0.2722110676439193
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 0.4380884994061574,
+      "mae": 0.5682117181916317
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 1.178180896458199,
+      "mae": 0.8110812091372737
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 0.516074174893916,
+      "mae": 0.6244723445575142
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 2.1127229267891536,
+      "mae": 1.1686578883308238
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 0.828222597824343,
+      "mae": 0.7665601269065291
+    },
+    {
+      "case": "development-linear-0-4",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 0.828222597824343,
+      "mae": 0.7665601269065291
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 1546.5609326133365,
+      "mae": 35.45885405221797
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 60.18135267690989,
+      "mae": 5.2828328208704995
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 0.08247151849579987,
+      "mae": 0.23642850042493824
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 0.08119123233466595,
+      "mae": 0.23483900160979576
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 0.4690829382072922,
+      "mae": 0.5956316458599502
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 5.175055609568713,
+      "mae": 1.5346702792180078
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 0.5788400016925375,
+      "mae": 0.6433881758110327
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 2.7784174373043538,
+      "mae": 1.3478462532826299
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 1.0065513999054978,
+      "mae": 0.8439155578422985
+    },
+    {
+      "case": "development-linear-0-5",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 1.0065513999054978,
+      "mae": 0.8439155578422985
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 5124.394884890441,
+      "mae": 66.46013371488476
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 11.637932559114365,
+      "mae": 2.8928887790968174
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 0.17576904749306815,
+      "mae": 0.35731270129556325
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 0.16939590393500426,
+      "mae": 0.3342152759449435
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 0.41841220764404863,
+      "mae": 0.5482284068013888
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 0.6307603543821868,
+      "mae": 0.6395502532415027
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 0.6420935616019359,
+      "mae": 0.6694223636582949
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 1.9747950096232991,
+      "mae": 1.176465367977559
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 0.9633049146044643,
+      "mae": 0.8260643890892564
+    },
+    {
+      "case": "development-linear-0-6",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 0.9633049146044643,
+      "mae": 0.8260643890892564
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 9439.481014174537,
+      "mae": 87.75167166201503
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 60.665956021874415,
+      "mae": 4.664944629839184
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 1.8174956188667921,
+      "mae": 0.9534326133824608
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 1.1546044785736946,
+      "mae": 0.7904277780183288
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 4.6492694175588385,
+      "mae": 1.3924049584051315
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 53.926266538065896,
+      "mae": 3.4764097889547476
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 21.226962593887812,
+      "mae": 2.389917396990895
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 21.950687535402086,
+      "mae": 2.9624804492005294
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 18.70454756056434,
+      "mae": 2.4545633606636708
+    },
+    {
+      "case": "development-linear-0-7",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 18.70454756056434,
+      "mae": 2.4545633606636708
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 465.0789714858246,
+      "mae": 19.07071303483229
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 2115.6986082070107,
+      "mae": 35.806642540184576
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 2.3196278841718025,
+      "mae": 0.8604070076390306
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 2.335902002968022,
+      "mae": 0.8556884452582189
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2.6747105147671735,
+      "mae": 1.0992268287183753
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 3.7785287282491797,
+      "mae": 1.4741966646791491
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 1.6969694619739522,
+      "mae": 1.0644744434198599
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 5.0114350059420145,
+      "mae": 1.8815506547895717
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 2.2975410901583926,
+      "mae": 1.2767455666349716
+    },
+    {
+      "case": "development-linear-1-0",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 2.2975410901583926,
+      "mae": 1.2767455666349716
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 2130.146796508462,
+      "mae": 41.85785661585085
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 763.510963454636,
+      "mae": 22.489736497846177
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 1.52929767420311,
+      "mae": 1.0007946236803467
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 1.46778292264699,
+      "mae": 0.9596304609509126
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2.284458795074753,
+      "mae": 1.3356055721406777
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 4.778070009418944,
+      "mae": 1.915259263030883
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 5.140516138997523,
+      "mae": 1.9538640183839269
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 15.495825771124382,
+      "mae": 3.3376145708189013
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 7.432284318269885,
+      "mae": 2.312313581349124
+    },
+    {
+      "case": "development-linear-1-1",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 7.432284318269885,
+      "mae": 2.312313581349124
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 6597.347102921307,
+      "mae": 75.82975911425507
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 685.5950626888377,
+      "mae": 21.113657907755854
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 13.592226408456487,
+      "mae": 2.7251168460700548
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 13.372292245258803,
+      "mae": 2.655099549909801
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 13.16818640771769,
+      "mae": 2.810184899648659
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 29.193299651879343,
+      "mae": 4.599772062547701
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 24.154967996839375,
+      "mae": 4.146134892588909
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 70.12890608790683,
+      "mae": 6.736555721163622
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 35.72804028639165,
+      "mae": 5.010225912393385
+    },
+    {
+      "case": "development-linear-1-2",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 35.72804028639165,
+      "mae": 5.010225912393385
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 9018.637557598731,
+      "mae": 85.81083077662309
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 188.36253712974298,
+      "mae": 10.530255969172792
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 6.7249858240008615,
+      "mae": 2.4151732440999507
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 5.164495266805525,
+      "mae": 2.0644545093947264
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 6.241366479522961,
+      "mae": 2.4007975381542854
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 19.118228665306393,
+      "mae": 3.4232844870955295
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 14.148659630762632,
+      "mae": 3.2846963080422875
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 31.294981578978973,
+      "mae": 4.6053904559477665
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 19.21580553227729,
+      "mae": 3.7414874694442415
+    },
+    {
+      "case": "development-linear-1-3",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 19.21580553227729,
+      "mae": 3.7414874694442415
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 1267.7849702857295,
+      "mae": 31.528352400245677
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 25311.60073203096,
+      "mae": 83.51532531385239
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 1.4957795385976351,
+      "mae": 1.0639315973471333
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 1.3570992332404097,
+      "mae": 1.0240885728661138
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 3.5237721337475723,
+      "mae": 1.38787961877888
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 182.35972221466068,
+      "mae": 4.3946718686916695
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 5.862644286075147,
+      "mae": 1.9479958395347683
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 22.62166094380706,
+      "mae": 3.909780732822106
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 9.393580925019394,
+      "mae": 2.4657110229269463
+    },
+    {
+      "case": "development-linear-1-4",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 334.46017744611777,
+      "mae": 5.877692830812162
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 4163.958170310998,
+      "mae": 57.81560870953407
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 890.7989201111837,
+      "mae": 23.890590765423003
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 4.31297253956306,
+      "mae": 1.604489821824948
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 3.9234524716137416,
+      "mae": 1.5080501364996695
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 5.201776301207037,
+      "mae": 1.8564452007491759
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 37.2024880492164,
+      "mae": 4.992762275172517
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 14.219482596148712,
+      "mae": 3.2115892403929784
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 41.7400918636779,
+      "mae": 5.535518460094136
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 20.96894401555903,
+      "mae": 3.8929267264294607
+    },
+    {
+      "case": "development-linear-1-5",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 20.96894401555903,
+      "mae": 3.8929267264294607
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 9818.848412754713,
+      "mae": 92.11906726476643
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 486.5434606209753,
+      "mae": 16.330949365342324
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 9.437897159989463,
+      "mae": 2.7624258980018666
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 8.493382382684556,
+      "mae": 2.59122141554324
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 12.577897081327684,
+      "mae": 2.956179008397887
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 21.68761265515773,
+      "mae": 4.080226607564508
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 13.929627472584531,
+      "mae": 3.3702827002354705
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 32.81542617525175,
+      "mae": 4.860769879661596
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 18.335516406121155,
+      "mae": 3.8160181803317728
+    },
+    {
+      "case": "development-linear-1-6",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 18.335516406121155,
+      "mae": 3.8160181803317728
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 581.3177668402094,
+      "mae": 21.789991479699292
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 161.70804916406632,
+      "mae": 8.982195229572408
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 6.319072839866198,
+      "mae": 2.2310434845582443
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 6.067516075389076,
+      "mae": 2.181647677024219
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 6.323112395146262,
+      "mae": 2.225825579636746
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 69.42085494255954,
+      "mae": 5.804247022599598
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 19.472212662281546,
+      "mae": 3.5131806309724554
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 56.293662317004824,
+      "mae": 5.698304116008172
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 33.218204472725034,
+      "mae": 4.4121082664771984
+    },
+    {
+      "case": "development-linear-1-7",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 33.218204472725034,
+      "mae": 4.4121082664771984
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 2516.237871393568,
+      "mae": 40.72984763076945
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 440248.15780838067,
+      "mae": 225.59854141576486
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 69.07095989283488,
+      "mae": 5.197842207885897
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 92.72041481484003,
+      "mae": 5.697569296932544
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 97.84836082641642,
+      "mae": 6.0409364966995405
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 1094.7823426471894,
+      "mae": 14.899643178555952
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 194.49585579249347,
+      "mae": 7.633418332945155
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 159.65044468495748,
+      "mae": 8.00544117330055
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 192.5202218978425,
+      "mae": 7.865314022043518
+    },
+    {
+      "case": "development-linear-2-0",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 1515.8740436758626,
+      "mae": 17.198972560242012
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 4522.772547808202,
+      "mae": 60.95571034829704
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 23270.816934800205,
+      "mae": 83.86630774631695
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 36.16497510602551,
+      "mae": 5.185574877795045
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 31.83051904949752,
+      "mae": 4.693096830046763
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 27.297169044956462,
+      "mae": 4.717321502387873
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 139.62073706423482,
+      "mae": 8.213769488504385
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 38.040661152724,
+      "mae": 5.158969646280982
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 51.883040031549335,
+      "mae": 6.17768011965055
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 40.638497162891376,
+      "mae": 5.323022723280608
+    },
+    {
+      "case": "development-linear-2-1",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 206.29843886732291,
+      "mae": 9.623083532792657
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 12221.393002014438,
+      "mae": 103.77985294267624
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 3096.805058680512,
+      "mae": 46.298746740557924
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 1482.925843053632,
+      "mae": 27.545079550542308
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 1640.6404853873103,
+      "mae": 30.914647764875333
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1414.0092387480183,
+      "mae": 28.924294449296436
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 664.8083769133254,
+      "mae": 14.722611700867741
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 315.66028792916603,
+      "mae": 12.659953858378753
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 391.197045169806,
+      "mae": 13.724125207878041
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 343.3879982587476,
+      "mae": 13.017911497803198
+    },
+    {
+      "case": "development-linear-2-2",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 343.70354913955066,
+      "mae": 13.012191934442235
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 1281.213020612304,
+      "mae": 32.5164955041391
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 404.6671598125134,
+      "mae": 15.352321875236623
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 32.532198005393205,
+      "mae": 4.59318773423631
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 32.689385669172985,
+      "mae": 4.647360471912068
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 44.11885380674041,
+      "mae": 5.028960509553476
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 44.27938789613147,
+      "mae": 5.141898972531236
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 29.59824825967852,
+      "mae": 4.125208158911861
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 42.14259417257912,
+      "mae": 5.148723432912341
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 31.289188253625614,
+      "mae": 4.325868141417738
+    },
+    {
+      "case": "development-linear-2-3",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 31.289188253625614,
+      "mae": 4.325868141417738
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 3366.4874046963155,
+      "mae": 50.98906705761425
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 19580.974433195333,
+      "mae": 108.4968600841647
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 23.917509061405283,
+      "mae": 3.310024561954268
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 17.543212045491458,
+      "mae": 3.063218991616641
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 18.941046888919384,
+      "mae": 3.175193050962243
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 101.85481044395728,
+      "mae": 8.069639829004752
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 10.41434337497379,
+      "mae": 2.7625371469459377
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 34.94902858113243,
+      "mae": 4.369499659842483
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 15.620710716675118,
+      "mae": 3.2624866209826986
+    },
+    {
+      "case": "development-linear-2-4",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 85.66551382089546,
+      "mae": 5.935664771694099
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 6851.115220582249,
+      "mae": 74.4141295502131
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 6233.832118134807,
+      "mae": 57.15509731122845
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 24.218562424940313,
+      "mae": 4.135766113786467
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 24.408738486551638,
+      "mae": 4.246492503205254
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 29.512364706661646,
+      "mae": 4.462647128999794
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 41.29833755977546,
+      "mae": 5.429804978912235
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 28.183773079211296,
+      "mae": 4.48723561835162
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 61.97068924768604,
+      "mae": 6.468028693929753
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 39.6658447237895,
+      "mae": 5.157442490922355
+    },
+    {
+      "case": "development-linear-2-5",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 39.6658447237895,
+      "mae": 5.157442490922355
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 809.6900391318169,
+      "mae": 26.42785543936998
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 13748.100409124645,
+      "mae": 74.2330069203061
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 35.407307363129455,
+      "mae": 4.772890672158885
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 31.549986967634915,
+      "mae": 4.620720783162406
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 40.52469870408633,
+      "mae": 4.851466406214139
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 1352.3741428804817,
+      "mae": 16.57537929521103
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 34.96909602210668,
+      "mae": 5.145071156922634
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 162.99182097436682,
+      "mae": 10.334023147576973
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 53.46320589998113,
+      "mae": 6.413684515475268
+    },
+    {
+      "case": "development-linear-2-6",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 1702.6333429680822,
+      "mae": 18.977373561867715
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "PERSISTENCE",
+      "mse": 3154.618359326563,
+      "mae": 50.97446849136413
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "LAST2",
+      "mse": 423.052851176981,
+      "mae": 17.70329389067631
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "OLS",
+      "mse": 72.33165164870938,
+      "mae": 7.582478132995759
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "WEIGHTED_CV",
+      "mse": 75.91790115362082,
+      "mae": 7.8943273730156
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "CV_SMOOTH_V8",
+      "mse": 77.90826383975684,
+      "mae": 7.833001222266108
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "IMM_V8",
+      "mse": 52.878188439357196,
+      "mae": 6.346256148598613
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "IMM_SLOW",
+      "mse": 58.98487629982722,
+      "mae": 6.969353676285305
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "IMM_FAST",
+      "mse": 124.69916390730572,
+      "mae": 9.800522870174339
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "IMM_BALANCED",
+      "mse": 88.53701430792437,
+      "mae": 8.345695108609428
+    },
+    {
+      "case": "development-linear-2-7",
+      "family": "linear",
+      "model": "IMM_UNROBUST",
+      "mse": 88.53701430792437,
+      "mae": 8.345695108609428
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 3620.0020433360296,
+      "mae": 53.6512312648366
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 541.6542824534785,
+      "mae": 17.77278782453957
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 2636.404606469468,
+      "mae": 43.96917176364828
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 4182.922973506926,
+      "mae": 54.95017992849743
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 497.1780382848755,
+      "mae": 14.047761774240682
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 170.16490438159624,
+      "mae": 6.618166488649716
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 172.1727507780353,
+      "mae": 6.604087012583028
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 176.57728352444443,
+      "mae": 6.958699324264873
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 173.43772840144933,
+      "mae": 6.7366112316216284
+    },
+    {
+      "case": "development-turn-0-0",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 173.43772840144933,
+      "mae": 6.7366112316216284
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 7719.515093149126,
+      "mae": 79.89356414267328
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 536.0316533551596,
+      "mae": 17.315978814199422
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 5159.296110625165,
+      "mae": 61.56265502086743
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 8692.713782853265,
+      "mae": 79.01496690837608
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1566.8008313473622,
+      "mae": 27.716266609269688
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 404.0905875942733,
+      "mae": 11.622978425634212
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 409.6688357681484,
+      "mae": 11.259533669316768
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 419.27014061319886,
+      "mae": 11.535878799069911
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 408.7477266445277,
+      "mae": 11.263568444107923
+    },
+    {
+      "case": "development-turn-0-1",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 408.7477266445277,
+      "mae": 11.263568444107923
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 1333.0535585425328,
+      "mae": 34.01875090439203
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 78.76513254234607,
+      "mae": 6.277113045244596
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 779.3232278749098,
+      "mae": 24.10238251452547
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 967.2007612603826,
+      "mae": 26.707453167625065
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 221.74472132223102,
+      "mae": 10.917160363084875
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 85.58502789315706,
+      "mae": 5.549231936716412
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 88.64402691643389,
+      "mae": 5.560873546573664
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 78.52031859416252,
+      "mae": 5.45409142854329
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 82.14953092577262,
+      "mae": 5.430217833436
+    },
+    {
+      "case": "development-turn-0-2",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 82.14953092577262,
+      "mae": 5.430217833436
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 3192.9535592643033,
+      "mae": 51.268830106853336
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 270.975184974922,
+      "mae": 10.256224556884083
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 2007.0954239855826,
+      "mae": 38.531051061355356
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 2743.7245233616363,
+      "mae": 44.96037836461455
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 900.3486227382907,
+      "mae": 22.93419537467336
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 256.10570534291134,
+      "mae": 9.925831609716367
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 254.5059562560094,
+      "mae": 9.688258066069345
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 262.7566534292647,
+      "mae": 9.823722471479599
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 257.8391823339285,
+      "mae": 9.740392004830793
+    },
+    {
+      "case": "development-turn-0-3",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 257.84488649910526,
+      "mae": 9.740566980859587
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 5564.642502262529,
+      "mae": 66.30890804375154
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 887.4554732973828,
+      "mae": 22.290463487678853
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 3592.4289315065594,
+      "mae": 50.63938275696823
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 5327.25898300693,
+      "mae": 62.313755841570504
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1297.1891669334805,
+      "mae": 22.345270064678257
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 386.1369270788975,
+      "mae": 12.046001529497625
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 359.4543297665992,
+      "mae": 10.965202792898397
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 353.01807764298013,
+      "mae": 11.002363146446447
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 343.40908339296783,
+      "mae": 10.737123636688784
+    },
+    {
+      "case": "development-turn-0-4",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 376.69695761674603,
+      "mae": 11.93824365259558
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 461.49836691707344,
+      "mae": 19.410682511219637
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 67.01597047668987,
+      "mae": 6.577645346585112
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 265.97470589724946,
+      "mae": 13.828070447638346
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 277.74463666227774,
+      "mae": 14.163301403039418
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 105.36533198434705,
+      "mae": 6.109003191471273
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 39.79304063558045,
+      "mae": 3.90711733156883
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 40.33059793348059,
+      "mae": 3.9191110981497053
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 41.95858991687802,
+      "mae": 4.114345520106276
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 40.00567760916653,
+      "mae": 4.009398901251489
+    },
+    {
+      "case": "development-turn-0-5",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 40.00567760916653,
+      "mae": 4.009398901251489
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 2826.944114890583,
+      "mae": 48.93501066466706
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 318.77114010834936,
+      "mae": 12.937117230224723
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 1502.4752863458848,
+      "mae": 32.749318751933004
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 1664.1661038117495,
+      "mae": 34.66962998991488
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 779.2620384986277,
+      "mae": 18.21311607527832
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 451.03937021738756,
+      "mae": 13.820753435139943
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 448.15531504301384,
+      "mae": 13.677507169306647
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 372.9649167152824,
+      "mae": 13.008111007262503
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 399.1753599568721,
+      "mae": 13.395238196616809
+    },
+    {
+      "case": "development-turn-0-6",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 399.1753599568721,
+      "mae": 13.395238196616809
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 4651.026960031936,
+      "mae": 61.49808563223933
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 870.520600849517,
+      "mae": 16.31640835765023
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 2679.567702066953,
+      "mae": 44.02178887171116
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 3300.6853916901036,
+      "mae": 49.095559025890424
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1141.5116371763459,
+      "mae": 22.942359312379804
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 923.922117073096,
+      "mae": 16.93219688347526
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 922.8333183073465,
+      "mae": 16.93308187135949
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 915.6793800729027,
+      "mae": 16.902026844832804
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 926.9575519177786,
+      "mae": 16.990910441955954
+    },
+    {
+      "case": "development-turn-0-7",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 926.9576977380348,
+      "mae": 16.99091154497608
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 6220.423962234363,
+      "mae": 70.1993358386086
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 2896.836716171841,
+      "mae": 41.80094103283356
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 4758.654673449382,
+      "mae": 59.58568999715928
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 5695.928943519989,
+      "mae": 65.07987192576964
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1842.1376336168423,
+      "mae": 32.62918013030312
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 361.22019771558945,
+      "mae": 13.559131936604576
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 352.40495847258603,
+      "mae": 11.295933420336974
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 326.15951480726875,
+      "mae": 10.84264439938523
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 335.51651064660746,
+      "mae": 10.932016345941745
+    },
+    {
+      "case": "development-turn-1-0",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 351.81635287823406,
+      "mae": 13.593966127119826
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 889.4173801747456,
+      "mae": 27.063327603241003
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 2721.421199243844,
+      "mae": 29.10441037941445
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 645.2203868707991,
+      "mae": 22.129793455246766
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 658.7206694933777,
+      "mae": 22.36654517417138
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 271.8775347456896,
+      "mae": 12.519309789625039
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 130.5140446078263,
+      "mae": 8.62244259013387
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 93.11940006554136,
+      "mae": 7.123591159740967
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 88.12874320301196,
+      "mae": 7.0843065077163345
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 93.57456157130554,
+      "mae": 7.36234438034393
+    },
+    {
+      "case": "development-turn-1-1",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 85.44402067579593,
+      "mae": 7.007743712537942
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 3506.8938150969016,
+      "mae": 54.98487848591511
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 393.05160631565735,
+      "mae": 16.317762145687794
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 1940.367451628694,
+      "mae": 37.69817212765749
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 2229.0848252705164,
+      "mae": 40.31270281104232
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1138.1251729074404,
+      "mae": 28.20233599719163
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 264.74195660956264,
+      "mae": 11.212652509201813
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 211.9603656964474,
+      "mae": 10.427525408408211
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 202.72964663172345,
+      "mae": 10.148446115692572
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 206.6335924492559,
+      "mae": 10.189079207676
+    },
+    {
+      "case": "development-turn-1-2",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 206.6335924492559,
+      "mae": 10.189079207676
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 6630.119220435338,
+      "mae": 73.85228379201297
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 2559.659255455227,
+      "mae": 30.177044847372883
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 3821.7201470461755,
+      "mae": 53.75077811393794
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 5215.037371071298,
+      "mae": 62.642523714329435
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 3274.994887729513,
+      "mae": 49.59481654664288
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 2825.7089492642363,
+      "mae": 29.895774210426588
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 2239.006720450637,
+      "mae": 28.092360310894673
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 3313.9396508846216,
+      "mae": 31.860584588145667
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 2679.8492399400084,
+      "mae": 29.437776608081016
+    },
+    {
+      "case": "development-turn-1-3",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 2906.6238017857236,
+      "mae": 30.20365627027687
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 322.3168290005683,
+      "mae": 15.82688519816923
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 8610.296139016982,
+      "mae": 62.453822435200244
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 239.77695311533293,
+      "mae": 13.279444840774373
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 246.7103323823926,
+      "mae": 13.490940129476858
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 117.00643917437354,
+      "mae": 7.981157701092136
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 112.97304221213513,
+      "mae": 7.9257720997157035
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 72.27106281581626,
+      "mae": 5.912170396914498
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 58.352988112406685,
+      "mae": 5.661034454243433
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 71.4286894544126,
+      "mae": 6.113350703658195
+    },
+    {
+      "case": "development-turn-1-4",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 96.36456389274066,
+      "mae": 7.329007221969828
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 2016.5990239948667,
+      "mae": 40.629489096712895
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 857.8926095284688,
+      "mae": 24.559107049100614
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 1089.3577826281792,
+      "mae": 28.00410170426296
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 1218.065982148743,
+      "mae": 29.75707650944181
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 703.4206307487359,
+      "mae": 20.84651482520353
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 364.83587462635217,
+      "mae": 12.448622371216123
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 345.2193793579412,
+      "mae": 12.222941876183176
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 302.00883741719883,
+      "mae": 11.555555559462082
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 312.5218392440917,
+      "mae": 11.505766994113785
+    },
+    {
+      "case": "development-turn-1-5",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 312.5221596511072,
+      "mae": 11.505794042452857
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 6816.649594510094,
+      "mae": 77.1706460241317
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 1588.7982978462633,
+      "mae": 32.09935408832922
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 3444.8321665128797,
+      "mae": 49.725276585595054
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 4222.278790181957,
+      "mae": 55.41102549828355
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2839.614435882098,
+      "mae": 44.02424857174437
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 1483.186637808752,
+      "mae": 26.957089100223786
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 1292.6338327506887,
+      "mae": 25.050911592697236
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 1248.5900147196035,
+      "mae": 25.299670178250683
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 1256.3762899511912,
+      "mae": 25.2029509249737
+    },
+    {
+      "case": "development-turn-1-6",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 1256.3765254159043,
+      "mae": 25.20295851375152
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 10357.038461274213,
+      "mae": 92.63988030143332
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 4118.78557855041,
+      "mae": 44.58086833894677
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 2874.7853521810916,
+      "mae": 45.6239107777175
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 4278.621399954269,
+      "mae": 55.091325781221
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 3102.688887846013,
+      "mae": 47.421017090009684
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 5172.665333937358,
+      "mae": 46.9062536060866
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 2246.877645548952,
+      "mae": 31.44589561527441
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 7687.302194342592,
+      "mae": 55.584814399595864
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 6281.9522438380345,
+      "mae": 50.16554957216992
+    },
+    {
+      "case": "development-turn-1-7",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 6524.344100497645,
+      "mae": 50.9719073416799
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 752.0973573421347,
+      "mae": 24.39972157657757
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 44084.12228862811,
+      "mae": 132.67247494656067
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 522.8221239498333,
+      "mae": 20.399279493166674
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 580.6633914542177,
+      "mae": 21.502419102367377
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 365.18950592490194,
+      "mae": 16.418760113421886
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 363.0213335486832,
+      "mae": 15.429145290195166
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 120.16459284989624,
+      "mae": 8.66395112875372
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 128.8844950689103,
+      "mae": 9.399336773680012
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 121.04487745481238,
+      "mae": 8.878366861778762
+    },
+    {
+      "case": "development-turn-2-0",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 371.2312185686136,
+      "mae": 14.884497278106261
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 2628.5021816388244,
+      "mae": 46.526281606138284
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 7188.304521274685,
+      "mae": 65.43571702536582
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 1808.7523686472816,
+      "mae": 37.62749342808817
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 2179.8100304215795,
+      "mae": 41.1710369697673
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1702.0089889850265,
+      "mae": 36.288028307938795
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 318.5818178011506,
+      "mae": 14.073093508863735
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 295.57570341702683,
+      "mae": 13.432439908834304
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 272.5581470944418,
+      "mae": 13.21635057866285
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 284.9849651183865,
+      "mae": 13.189560574610876
+    },
+    {
+      "case": "development-turn-2-1",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 284.9849651183865,
+      "mae": 13.189560574610876
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 6834.971228551408,
+      "mae": 76.63014802171625
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 4969.657266181695,
+      "mae": 56.89017128190752
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 3790.332083319014,
+      "mae": 53.240541424663114
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 4644.053133598251,
+      "mae": 58.61412844800941
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 4160.596561157762,
+      "mae": 56.38044964809795
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 992.7422433001733,
+      "mae": 24.8812943069623
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 966.0907742409696,
+      "mae": 23.885564264432706
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 1018.3195850162908,
+      "mae": 25.44532614624058
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 993.6532808760634,
+      "mae": 24.722684208446054
+    },
+    {
+      "case": "development-turn-2-2",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 993.6532808760634,
+      "mae": 24.722684208446054
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 391.7468591024672,
+      "mae": 18.246802610638568
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 2096.5383132148327,
+      "mae": 31.571101749314224
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 561.6131162794258,
+      "mae": 21.001399405441052
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 549.040039434826,
+      "mae": 20.808167543727347
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 500.62520970692987,
+      "mae": 19.698289336265443
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 1380.130642093963,
+      "mae": 24.11252042390405
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 1441.3521444499133,
+      "mae": 23.651169786142184
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 2100.6818675780896,
+      "mae": 28.89963571237102
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 1723.154861710218,
+      "mae": 26.010590994491196
+    },
+    {
+      "case": "development-turn-2-3",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 1731.1604019437757,
+      "mae": 26.083991863668846
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 1465.6763130725149,
+      "mae": 33.70783011942351
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 58311.70814109744,
+      "mae": 132.8592222387631
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 1014.0560437788338,
+      "mae": 27.13139976403897
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 1048.7568357930725,
+      "mae": 27.637691275063883
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 776.6296668438004,
+      "mae": 22.795210048925334
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 715.4545812194798,
+      "mae": 19.34234879548195
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 422.6418563196176,
+      "mae": 13.65942648373732
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 466.4773176869888,
+      "mae": 14.710982336694189
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 438.13117016910485,
+      "mae": 14.119630681934385
+    },
+    {
+      "case": "development-turn-2-4",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 890.1417621856397,
+      "mae": 20.63663763296826
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 5071.2509199510305,
+      "mae": 64.7446643598227
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 146747.55117694256,
+      "mae": 212.93939193451308
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 2166.200156214062,
+      "mae": 39.42308886590768
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 2335.2269713008172,
+      "mae": 41.03240230353958
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1921.1201275350008,
+      "mae": 37.03610426708154
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 1253.7603599957624,
+      "mae": 22.82335471714426
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 1204.75395406725,
+      "mae": 22.914504159491994
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 1209.4875257938024,
+      "mae": 23.769000732299194
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 1204.7601634038815,
+      "mae": 23.30943537318888
+    },
+    {
+      "case": "development-turn-2-5",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 1879.0067884564244,
+      "mae": 27.39500913568754
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 11148.850233775045,
+      "mae": 98.19248833558106
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 2231.165260313657,
+      "mae": 39.25472340569499
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 4980.946203649447,
+      "mae": 60.148245093951616
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 5527.481844379321,
+      "mae": 63.68173281698889
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 4972.08662008185,
+      "mae": 59.94874561039739
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 2302.660983679596,
+      "mae": 32.58590571068489
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 2363.238510664008,
+      "mae": 32.67813210762899
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 2130.809522349625,
+      "mae": 31.884091744723467
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 2273.9927989641574,
+      "mae": 32.484898085748554
+    },
+    {
+      "case": "development-turn-2-6",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 2273.992323823318,
+      "mae": 32.48489041349051
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "PERSISTENCE",
+      "mse": 1118.101024787674,
+      "mae": 30.46662309127679
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "LAST2",
+      "mse": 600.9060453931568,
+      "mae": 19.712054911375535
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "OLS",
+      "mse": 656.2696522017606,
+      "mae": 23.468247346960904
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "WEIGHTED_CV",
+      "mse": 633.7927827661539,
+      "mae": 22.992994889069212
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "CV_SMOOTH_V8",
+      "mse": 567.7251942073156,
+      "mae": 21.173037910728365
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "IMM_V8",
+      "mse": 418.5770031459792,
+      "mae": 15.088225653476336
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "IMM_SLOW",
+      "mse": 390.74575458354104,
+      "mae": 14.664272771417448
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "IMM_FAST",
+      "mse": 445.15651431508275,
+      "mae": 15.576270924945327
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "IMM_BALANCED",
+      "mse": 417.5888691070237,
+      "mae": 15.015284376682711
+    },
+    {
+      "case": "development-turn-2-7",
+      "family": "turn",
+      "model": "IMM_UNROBUST",
+      "mse": 417.5888691070237,
+      "mae": 15.015284376682711
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 2020.1191170919171,
+      "mae": 40.05296944263374
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 1072.614007738293,
+      "mae": 21.283948867268084
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 707.1396035821078,
+      "mae": 21.512123654534204
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 773.218518376662,
+      "mae": 22.232632096229125
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 483.91949492282737,
+      "mae": 17.530720865352556
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 293.6280955169672,
+      "mae": 11.87458161817471
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 208.32495072576305,
+      "mae": 10.470059824549677
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 225.39001009256143,
+      "mae": 10.755129939347098
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 187.6822364419267,
+      "mae": 9.937243153904635
+    },
+    {
+      "case": "development-weave-0-0",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 355.74456977575664,
+      "mae": 12.451394362634238
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 5070.1025396612995,
+      "mae": 64.84937101461517
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 1950.0459232824282,
+      "mae": 24.219721689388965
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1732.3156825307005,
+      "mae": 37.0711436001883
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1740.254275611937,
+      "mae": 37.44229408183821
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1429.7496944108188,
+      "mae": 31.14518885338231
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 795.9115784809765,
+      "mae": 20.338008691309227
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 624.7749750228131,
+      "mae": 18.85747713670204
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 589.2369555676437,
+      "mae": 18.29778506010316
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 599.6845221993115,
+      "mae": 18.439615820883855
+    },
+    {
+      "case": "development-weave-0-1",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 992.8101666639996,
+      "mae": 21.217132199664707
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 12178.91551608215,
+      "mae": 103.23369781626455
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 1639.5768732917968,
+      "mae": 31.853879713592292
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 3305.303240659946,
+      "mae": 46.61709479967211
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 3935.8279766788332,
+      "mae": 50.79172008375179
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 3497.5433537515974,
+      "mae": 49.01025109360047
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 1675.7471079872787,
+      "mae": 32.266241393144234
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1759.2535088425127,
+      "mae": 33.12506443405113
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1868.995308838517,
+      "mae": 33.910832769895215
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1817.9450470725449,
+      "mae": 33.491766570394354
+    },
+    {
+      "case": "development-weave-0-2",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1817.9410637853177,
+      "mae": 33.49174092831264
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 1534.9396401417862,
+      "mae": 35.64951208553214
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 407.86011078018555,
+      "mae": 16.574896596499528
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 473.6845700374795,
+      "mae": 19.242251991722334
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 467.7762090549454,
+      "mae": 19.17733781668589
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 494.8558024953392,
+      "mae": 18.533583391945182
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 462.71621721717645,
+      "mae": 17.183779476260103
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 462.5102202551289,
+      "mae": 17.172178157562712
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 504.89945442337387,
+      "mae": 17.749105581377293
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 471.70530486099966,
+      "mae": 17.26298979426879
+    },
+    {
+      "case": "development-weave-0-3",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 471.7053704500645,
+      "mae": 17.262989536046614
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 3418.8488035508685,
+      "mae": 52.02638157739312
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 784.2439419904607,
+      "mae": 20.01440637550621
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1126.8984966412895,
+      "mae": 26.54122633963726
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1302.8049853367847,
+      "mae": 28.426311530479868
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1147.2905587466041,
+      "mae": 26.472555852111228
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 523.8736005570972,
+      "mae": 15.817425282926743
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 533.8662104105539,
+      "mae": 16.22367236321436
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 507.36386113288944,
+      "mae": 16.065082724277552
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 516.2539584112927,
+      "mae": 16.289326563833765
+    },
+    {
+      "case": "development-weave-0-4",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 516.2539486177529,
+      "mae": 16.289326266174662
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 8182.304397384533,
+      "mae": 82.00111794666516
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 2565.2784036943585,
+      "mae": 31.215574014659968
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 2776.199263207671,
+      "mae": 47.89472869637555
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 2854.744746410899,
+      "mae": 47.1499182557082
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2331.436727117149,
+      "mae": 41.872994165139865
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 1205.2558897705885,
+      "mae": 24.200066592771755
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1166.636539940396,
+      "mae": 24.455389089272085
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1476.2579312657867,
+      "mae": 25.38922200575143
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1253.369685542372,
+      "mae": 24.506884355331266
+    },
+    {
+      "case": "development-weave-0-5",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1271.9816866323233,
+      "mae": 24.426296472540223
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 1044.4304977821912,
+      "mae": 30.321633749944553
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 162.135165430361,
+      "mae": 10.666206173618628
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 250.77501872643248,
+      "mae": 13.133010041242942
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 260.1530920692827,
+      "mae": 13.309098709446804
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 290.46436665544127,
+      "mae": 14.053342153221275
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 200.43884393146422,
+      "mae": 11.683201996647064
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 202.52263068621062,
+      "mae": 11.770579892187593
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 185.84026827199665,
+      "mae": 11.287263835140982
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 179.80822478263906,
+      "mae": 11.112084037302079
+    },
+    {
+      "case": "development-weave-0-6",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 179.80822478263906,
+      "mae": 11.112084037302079
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 3300.7205287987445,
+      "mae": 52.140290925333176
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 525.0484426321049,
+      "mae": 18.768230753002296
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1109.9721589290352,
+      "mae": 28.96240527555111
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1119.3461647265224,
+      "mae": 28.648126300906114
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1159.2308220432092,
+      "mae": 29.94938968400905
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 552.202887011888,
+      "mae": 18.623061515457408
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 553.2209865830963,
+      "mae": 18.744294749178152
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 574.9922006729166,
+      "mae": 19.055274469597347
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 574.2083748282782,
+      "mae": 19.143442671484888
+    },
+    {
+      "case": "development-weave-0-7",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 574.209414803858,
+      "mae": 19.14347705947728
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 4061.670240170387,
+      "mae": 56.77980057234817
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 6355.538116694098,
+      "mae": 60.96651084773274
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1465.5491934138845,
+      "mae": 30.902127586473245
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1689.8643514115297,
+      "mae": 33.18433304640824
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1496.1022753320678,
+      "mae": 31.903834566428433
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 598.3662399896991,
+      "mae": 19.075932819296142
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 617.7995961357399,
+      "mae": 18.912831345337338
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 639.9443798693184,
+      "mae": 19.333233475834646
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 650.4287755038353,
+      "mae": 19.339733601896917
+    },
+    {
+      "case": "development-weave-1-0",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 693.6454372692973,
+      "mae": 20.6662757241866
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 8921.363668503773,
+      "mae": 85.75615024559669
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 21415.948514074382,
+      "mae": 65.35345394536806
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 2937.0954918578404,
+      "mae": 47.9466255150555
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 2946.412399479291,
+      "mae": 47.75159724565126
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 3246.419905409836,
+      "mae": 50.14160773261652
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 3766.5091775974165,
+      "mae": 38.653177311228276
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1644.7187857713297,
+      "mae": 31.30074524836866
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1752.7495468081358,
+      "mae": 32.15415752009201
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1697.3809748092394,
+      "mae": 31.727326311039402
+    },
+    {
+      "case": "development-weave-1-1",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 3900.2215571262714,
+      "mae": 38.841129019511605
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 1826.0964255968147,
+      "mae": 40.00209846229777
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 1652.888039030199,
+      "mae": 26.78290860470318
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 580.4761547903781,
+      "mae": 19.468496849838612
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 609.8847517378896,
+      "mae": 19.971281741580025
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 560.547897653139,
+      "mae": 19.590136804579164
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 849.4307190519045,
+      "mae": 20.944757000273196
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 926.5569429706753,
+      "mae": 20.9089916321665
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1372.468990503049,
+      "mae": 24.305837509860947
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1112.9920519703937,
+      "mae": 22.58174216478656
+    },
+    {
+      "case": "development-weave-1-2",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1215.5456608931047,
+      "mae": 23.14215629083577
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 4008.930405916504,
+      "mae": 57.854518054774665
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 2778.5719156191076,
+      "mae": 35.7117364898517
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1318.4477802943616,
+      "mae": 30.212856064468898
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1289.5340512040098,
+      "mae": 29.707707410194036
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1395.6336726999214,
+      "mae": 31.765850712504008
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 3050.2812251498312,
+      "mae": 36.542840444793235
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 2973.8500954942724,
+      "mae": 37.124992762219044
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 3605.313278164053,
+      "mae": 38.07911132407079
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 3274.4981803216697,
+      "mae": 37.766146063648605
+    },
+    {
+      "case": "development-weave-1-3",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 3372.483326010741,
+      "mae": 37.40497306836238
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 6294.073262140195,
+      "mae": 70.79289772208169
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 4668.51030269312,
+      "mae": 52.6353253670676
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1743.7539694640075,
+      "mae": 34.09258997684889
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1894.5197796942125,
+      "mae": 35.45879764710509
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1890.8537848123492,
+      "mae": 35.64433443362596
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 1068.4107038226045,
+      "mae": 24.178860009996217
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1084.742913312165,
+      "mae": 24.41111108788009
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1113.7679174720472,
+      "mae": 25.023070687511744
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1112.177439529342,
+      "mae": 24.837275694433707
+    },
+    {
+      "case": "development-weave-1-4",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1112.1774522166513,
+      "mae": 24.837276338534735
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 729.3241532946346,
+      "mae": 24.633380222156624
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 859.5981232791551,
+      "mae": 22.771025166052286
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 290.17098560516143,
+      "mae": 14.929675669205762
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 287.69037534530815,
+      "mae": 14.888320505097665
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 288.33941723622144,
+      "mae": 14.935336781128843
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 142.65897006454642,
+      "mae": 9.883561411859345
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 164.2814780874285,
+      "mae": 11.056844652174771
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 140.53853222236688,
+      "mae": 9.918957598324091
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 140.89482783331127,
+      "mae": 9.95546979561015
+    },
+    {
+      "case": "development-weave-1-5",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 140.89482783331127,
+      "mae": 9.95546979561015
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 3851.0073570284435,
+      "mae": 57.104342962123496
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 994.7414202109782,
+      "mae": 25.934691608650436
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 691.4949500536071,
+      "mae": 21.24074865328314
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 711.2628538285554,
+      "mae": 21.526510931658002
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 739.972091521844,
+      "mae": 22.217207161785556
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 836.8763749485876,
+      "mae": 23.851470039088074
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 629.0720886337062,
+      "mae": 20.795317127328392
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 669.963032784225,
+      "mae": 21.229356473315036
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 691.3262130546096,
+      "mae": 21.521209161635355
+    },
+    {
+      "case": "development-weave-1-6",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 691.3262130546096,
+      "mae": 21.521209161635355
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 8228.695090967223,
+      "mae": 81.65270738470362
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 9815.03070685212,
+      "mae": 65.75138859271189
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1830.8706547740435,
+      "mae": 38.49473710707127
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1858.2867397760938,
+      "mae": 39.11988828105331
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1923.7271416488315,
+      "mae": 39.682533023091835
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 10750.937272126388,
+      "mae": 70.05698481573616
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 9304.387543398956,
+      "mae": 66.10249609225401
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 12188.440768845687,
+      "mae": 73.407362111588
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 10898.6659130661,
+      "mae": 70.2520125286796
+    },
+    {
+      "case": "development-weave-1-7",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 11062.379819830747,
+      "mae": 70.7040297678405
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 6526.943667598216,
+      "mae": 71.50595745009849
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 31937.842174565187,
+      "mae": 133.55034874658543
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 2389.531113722419,
+      "mae": 40.25083222905635
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 2695.0534043514613,
+      "mae": 42.86543697888267
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2334.7736812124494,
+      "mae": 40.03901772820407
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 1178.925069138936,
+      "mae": 26.516258379541178
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1132.7055398416842,
+      "mae": 26.077633761535022
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1146.591585281899,
+      "mae": 26.355897416308185
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1133.291715713412,
+      "mae": 26.17404424339886
+    },
+    {
+      "case": "development-weave-2-0",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1133.291715713412,
+      "mae": 26.17404424339886
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 1151.857693070862,
+      "mae": 30.790847852490046
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 4312.664424627996,
+      "mae": 49.35130455614523
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 287.26858969301003,
+      "mae": 14.745611120436793
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 290.26734658563555,
+      "mae": 14.820903262989521
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 295.7603540473522,
+      "mae": 14.798546377143325
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 285.5077404099661,
+      "mae": 13.844856400350489
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 293.2518474113672,
+      "mae": 14.299295291429782
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 267.21883004715136,
+      "mae": 13.60930600989234
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 267.17445577962303,
+      "mae": 13.679934492451487
+    },
+    {
+      "case": "development-weave-2-1",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 267.17445577962303,
+      "mae": 13.679934492451487
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 4353.050040000071,
+      "mae": 61.53138136630614
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 2307.982587723856,
+      "mae": 41.05749162101482
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 957.9302781334459,
+      "mae": 26.586424838501244
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 984.757969160795,
+      "mae": 26.899710096889045
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 952.2944569662823,
+      "mae": 26.630765412621408
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 1048.6572723185345,
+      "mae": 27.173029125457585
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1071.933924614223,
+      "mae": 27.72837285481221
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1039.701027723306,
+      "mae": 27.074100768585247
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1057.7852018845015,
+      "mae": 27.440606117437532
+    },
+    {
+      "case": "development-weave-2-2",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1057.7852018845015,
+      "mae": 27.440606117437532
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 6495.85187143768,
+      "mae": 72.7167681418128
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 2915.6370290271593,
+      "mae": 40.195153244262144
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 3259.2464764280076,
+      "mae": 48.05795288477139
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 3473.3333027905237,
+      "mae": 48.67385006477834
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 3399.120169585305,
+      "mae": 48.750116255431486
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 2369.5685556322383,
+      "mae": 37.70317313809699
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 2403.4563609514644,
+      "mae": 37.2510873684682
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 2627.1651138696566,
+      "mae": 38.49898520782719
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 2432.0124582185254,
+      "mae": 37.04031873518886
+    },
+    {
+      "case": "development-weave-2-3",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 2468.0998818915036,
+      "mae": 37.78662983818346
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 603.683131780668,
+      "mae": 20.693558635086735
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 45012.88789135449,
+      "mae": 131.64276317472326
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 110.80441345890267,
+      "mae": 9.091555909685317
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 109.30385724177864,
+      "mae": 9.017449152690165
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 107.60283840304257,
+      "mae": 8.848529891929552
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 142.21752558723514,
+      "mae": 9.719323383828256
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 92.00383639652794,
+      "mae": 7.88221745980132
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 99.25213684443791,
+      "mae": 8.125993298966804
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 94.89857743851972,
+      "mae": 7.910715285388542
+    },
+    {
+      "case": "development-weave-2-4",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 129.77522812900756,
+      "mae": 9.236643960138496
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 2260.112202404951,
+      "mae": 42.65108986586253
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 5160.495514788374,
+      "mae": 61.81092727491248
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 928.0474822144631,
+      "mae": 26.28613844355407
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 939.9572833190845,
+      "mae": 26.237640610633278
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 954.0238009621892,
+      "mae": 26.7502037792299
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 702.4524517629527,
+      "mae": 22.092675285280837
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 631.0498340076466,
+      "mae": 20.870733402200738
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 580.4065444618697,
+      "mae": 20.149645146431286
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 586.4685957415177,
+      "mae": 20.27871148172971
+    },
+    {
+      "case": "development-weave-2-5",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 586.4685957415177,
+      "mae": 20.27871148172971
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 7176.995826456504,
+      "mae": 78.75777000021232
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 4069.672147105335,
+      "mae": 54.565624012429815
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 1228.9053508654724,
+      "mae": 30.19018096348467
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 1259.8234140896723,
+      "mae": 30.622492321844
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1219.0983738694604,
+      "mae": 30.234709045159256
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 1867.3938622818014,
+      "mae": 35.70668589634854
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 1867.2806583110325,
+      "mae": 35.64246531412057
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 1881.8020748411097,
+      "mae": 35.91443481365128
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 1875.654190310708,
+      "mae": 35.85355953280898
+    },
+    {
+      "case": "development-weave-2-6",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 1875.654190310708,
+      "mae": 35.85355953280898
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "PERSISTENCE",
+      "mse": 9232.888616043907,
+      "mae": 87.58766233845678
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "LAST2",
+      "mse": 10574.605516689557,
+      "mae": 76.03766467227936
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "OLS",
+      "mse": 5312.2632030086315,
+      "mae": 59.193372968291456
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "WEIGHTED_CV",
+      "mse": 5509.549090138629,
+      "mae": 59.33576275416319
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "CV_SMOOTH_V8",
+      "mse": 5387.955822015076,
+      "mae": 59.10961061883953
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "IMM_V8",
+      "mse": 7338.235914045585,
+      "mae": 65.13292512552638
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "IMM_SLOW",
+      "mse": 7964.007310925877,
+      "mae": 68.8573741301274
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "IMM_FAST",
+      "mse": 9539.296922708529,
+      "mae": 72.63004048644439
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "IMM_BALANCED",
+      "mse": 8643.31574736194,
+      "mae": 70.55507085938896
+    },
+    {
+      "case": "development-weave-2-7",
+      "family": "weave",
+      "model": "IMM_UNROBUST",
+      "mse": 8643.332237545079,
+      "mae": 70.55261604572519
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 1273.258840078363,
+      "mae": 30.811787495480385
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 979.2725067394131,
+      "mae": 16.829606590979893
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 354.9090941436963,
+      "mae": 16.044661554346565
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 418.9907440907072,
+      "mae": 17.22706919804151
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 40.60505074368493,
+      "mae": 5.5067864012588945
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 107.61905863767618,
+      "mae": 5.7013746027531536
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 19.815058652753194,
+      "mae": 3.620798831856013
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 20.86632877540742,
+      "mae": 3.7446715674165056
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 22.220432663606296,
+      "mae": 3.862025057645271
+    },
+    {
+      "case": "development-accelerate-0-0",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 166.158994395807,
+      "mae": 6.368357377322325
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 4303.539161836708,
+      "mae": 57.714159621891
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 183.9891693256667,
+      "mae": 9.800362686851162
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1062.4541760447605,
+      "mae": 27.547611764034595
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 1397.4815570911605,
+      "mae": 30.994484559769745
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 191.4636550493879,
+      "mae": 12.212763374811402
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 87.67083925998388,
+      "mae": 7.418865385806405
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 78.33960556806764,
+      "mae": 7.086549215491967
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 94.83913533968501,
+      "mae": 7.330635334411552
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 87.71960921967468,
+      "mae": 7.137956022589888
+    },
+    {
+      "case": "development-accelerate-0-1",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 87.71960921967468,
+      "mae": 7.137956022589888
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 10838.89897335588,
+      "mae": 93.68106052757369
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 325.5307600667467,
+      "mae": 13.894651365125256
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 2399.9675306287063,
+      "mae": 42.045995194233406
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 3373.6297586084993,
+      "mae": 48.560650665429336
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 648.6373033350526,
+      "mae": 22.924087020508953
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 360.79989196628435,
+      "mae": 14.988598264809236
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 406.93248283660694,
+      "mae": 15.025743815071381
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 465.8197969594793,
+      "mae": 15.321549525689777
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 424.44816557177626,
+      "mae": 14.826428474582492
+    },
+    {
+      "case": "development-accelerate-0-2",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 424.450976356075,
+      "mae": 14.826440214622036
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 623.4584251492341,
+      "mae": 21.74240393852217
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 13.177379387055822,
+      "mae": 3.011078212448193
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 148.72386089955825,
+      "mae": 10.284452324469596
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 146.92378171599967,
+      "mae": 10.206382365782133
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 30.692567400498792,
+      "mae": 4.874035920140344
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 14.075771736616293,
+      "mae": 3.14874581172118
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 13.379856095727035,
+      "mae": 3.055661022195603
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 13.48964241818706,
+      "mae": 3.0583925274641506
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 15.154111037575113,
+      "mae": 3.272351717922338
+    },
+    {
+      "case": "development-accelerate-0-3",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 15.154111037575113,
+      "mae": 3.272351717922338
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 2621.3947156281024,
+      "mae": 44.291064726656906
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 182.0843705070003,
+      "mae": 10.998844399694045
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 600.4382294844429,
+      "mae": 21.11258099098015
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 597.2867780454525,
+      "mae": 20.92329154341188
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 97.57545702368108,
+      "mae": 8.28263960487688
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 51.33538025586137,
+      "mae": 5.509525482583703
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 47.24310516025377,
+      "mae": 5.292158633988501
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 49.55106081003205,
+      "mae": 5.457983524785207
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 51.18981133122529,
+      "mae": 5.456826202576133
+    },
+    {
+      "case": "development-accelerate-0-4",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 51.18981133122529,
+      "mae": 5.456826202576133
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 7094.885730115896,
+      "mae": 74.29363320921647
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 302.68010929421786,
+      "mae": 13.927131411997493
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1500.692944095527,
+      "mae": 33.34034828026548
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 2006.5983926528054,
+      "mae": 37.932314144019564
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 354.5737827436034,
+      "mae": 16.26119074026192
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 155.75766032910929,
+      "mae": 9.939986050556277
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 149.55206913120708,
+      "mae": 9.549423069434496
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 152.930192307372,
+      "mae": 9.497949837680476
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 145.0349498242384,
+      "mae": 9.253728578518533
+    },
+    {
+      "case": "development-accelerate-0-5",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 145.0349498242384,
+      "mae": 9.253728578518533
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 15046.762232792737,
+      "mae": 111.49448706277944
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 307.871764072781,
+      "mae": 14.190010025602465
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 2889.3141269135717,
+      "mae": 47.19569063406848
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 4100.277704398452,
+      "mae": 54.918038949900016
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 954.1544142662472,
+      "mae": 27.675471020240284
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 336.34430970430185,
+      "mae": 15.318658015391248
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 326.96233888833,
+      "mae": 14.809999525282175
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 302.78278006225656,
+      "mae": 14.165958759122274
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 304.347496993176,
+      "mae": 14.277342558791007
+    },
+    {
+      "case": "development-accelerate-0-6",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 304.347496993176,
+      "mae": 14.277342558791007
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 1871.9175769284534,
+      "mae": 38.23471301007651
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 84.75763061202245,
+      "mae": 6.98971556884453
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 364.0785162014805,
+      "mae": 16.642707854586646
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 349.8737547083868,
+      "mae": 16.260871998394567
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 128.88095949972285,
+      "mae": 9.337945157575609
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 82.98313810476488,
+      "mae": 6.894522650310027
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 85.20891055904252,
+      "mae": 6.981553757070138
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 80.90743531170531,
+      "mae": 6.7961080120763535
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 86.3664626972985,
+      "mae": 6.995986472635422
+    },
+    {
+      "case": "development-accelerate-0-7",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 86.36645200404296,
+      "mae": 6.995985334730735
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 3221.157534619417,
+      "mae": 48.67397452219175
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 4865.631891963563,
+      "mae": 51.15943418824498
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 881.0360545960654,
+      "mae": 25.03462947678341
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 1024.5925838061792,
+      "mae": 26.687356360826193
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 297.61778536024605,
+      "mae": 15.378618761321087
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 89.53098642044476,
+      "mae": 7.870782833344926
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 76.28671122877263,
+      "mae": 7.257481008932076
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 72.88936370908132,
+      "mae": 6.921657054506611
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 70.76578057583477,
+      "mae": 6.826774482666357
+    },
+    {
+      "case": "development-accelerate-1-0",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 70.53830815551889,
+      "mae": 6.814187222064625
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 8016.202447512611,
+      "mae": 78.55572479068447
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 1699.0639080021233,
+      "mae": 33.2170143566056
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1885.3551061954358,
+      "mae": 36.551360249279206
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 2405.608944542111,
+      "mae": 40.71604757185583
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1109.5239357004311,
+      "mae": 29.230805044527706
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 234.69957512759413,
+      "mae": 12.943028448294204
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 215.03889091091713,
+      "mae": 12.396732551515235
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 187.66320518181408,
+      "mae": 11.44693230661524
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 191.26504001374272,
+      "mae": 11.610540376847231
+    },
+    {
+      "case": "development-accelerate-1-1",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 191.26504001374272,
+      "mae": 11.610540376847231
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 713.4904015054457,
+      "mae": 24.133347760670237
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 242.75349463461274,
+      "mae": 11.811518923535893
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 152.51302700918987,
+      "mae": 10.805684347071521
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 160.46767933193104,
+      "mae": 11.048907941154752
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 84.46396016667444,
+      "mae": 8.292825854913335
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 46.05469847796423,
+      "mae": 5.6292418858366275
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 44.40920412169792,
+      "mae": 5.5580464960358205
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 45.65984752618008,
+      "mae": 5.531011814909126
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 44.98092080444217,
+      "mae": 5.645003347375601
+    },
+    {
+      "case": "development-accelerate-1-2",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 44.98092080444217,
+      "mae": 5.645003347375601
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 2903.4026689552225,
+      "mae": 48.05168102084507
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 1623.7820767771077,
+      "mae": 24.608979904247892
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 616.1642803847432,
+      "mae": 21.710903941681305
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 709.5398649331944,
+      "mae": 23.061659992166955
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 488.14053433689764,
+      "mae": 19.712641505406893
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 1810.6068303035697,
+      "mae": 25.60700750542808
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 1899.3753582056493,
+      "mae": 26.315222879073772
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 2592.6200167310044,
+      "mae": 29.708126754448024
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 2214.928315859758,
+      "mae": 27.807621040549584
+    },
+    {
+      "case": "development-accelerate-1-3",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 2227.452777096273,
+      "mae": 27.905750238825256
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 5761.769098291365,
+      "mae": 66.06410482224268
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 24787.50804764931,
+      "mae": 83.53157146847651
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1410.9929157435336,
+      "mae": 31.90430042861535
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 1808.8733076531953,
+      "mae": 35.732465306892514
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 767.4487096974641,
+      "mae": 24.379215318896836
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 553.9169173440862,
+      "mae": 15.437846249391987
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 186.4135422684953,
+      "mae": 11.452595739480895
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 178.6822387311196,
+      "mae": 11.22195734049512
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 169.46600162479683,
+      "mae": 10.877213543287295
+    },
+    {
+      "case": "development-accelerate-1-4",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 741.2752588354781,
+      "mae": 16.974365984414163
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 11975.823056210304,
+      "mae": 96.691755063583
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 1226.3566454560898,
+      "mae": 27.586100730741556
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 2583.3227893476587,
+      "mae": 44.11837435073859
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 3590.4594027794114,
+      "mae": 51.423871383857815
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2071.0184919915937,
+      "mae": 40.35399372696738
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 408.13087515990395,
+      "mae": 16.80759025499914
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 374.69371275968695,
+      "mae": 15.764405601813486
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 333.38624022164356,
+      "mae": 14.739047222542705
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 344.7514024427056,
+      "mae": 15.077029698441919
+    },
+    {
+      "case": "development-accelerate-1-5",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 344.7514024427056,
+      "mae": 15.077029698441919
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 1884.160972761492,
+      "mae": 39.08068303952058
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 263.6960612680425,
+      "mae": 12.473677116295576
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 390.3343605857945,
+      "mae": 17.0079060085896
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 432.58856758760186,
+      "mae": 17.799473846226743
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 293.99552770524724,
+      "mae": 15.035493976338698
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 127.42977260061176,
+      "mae": 9.362565693798993
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 128.6716220185124,
+      "mae": 9.411857378263685
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 120.17885307351641,
+      "mae": 9.363688782066578
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 131.6612256210862,
+      "mae": 9.635534170073893
+    },
+    {
+      "case": "development-accelerate-1-6",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 131.6612256210862,
+      "mae": 9.635534170073893
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 3709.757989128777,
+      "mae": 52.75254369900218
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 7585.120971996587,
+      "mae": 52.25965263827175
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 642.8761695222909,
+      "mae": 22.027190819337424
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 679.240163549666,
+      "mae": 22.15711388704737
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 560.7915113599911,
+      "mae": 20.853394540254598
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 9559.049845621692,
+      "mae": 61.576824784515864
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 8313.624037076066,
+      "mae": 57.2340304874724
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 12570.270190117952,
+      "mae": 69.1132122163592
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 10216.556205768245,
+      "mae": 62.816869047271155
+    },
+    {
+      "case": "development-accelerate-1-7",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 10472.563457403594,
+      "mae": 63.579889869800844
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 6318.742579637202,
+      "mae": 68.36034605288962
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 131847.21681106908,
+      "mae": 168.7815585030043
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1698.053499684225,
+      "mae": 35.19947759199423
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 2082.735585256947,
+      "mae": 38.44877603889642
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1232.6909183839532,
+      "mae": 30.931295212077867
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 481.29613981351355,
+      "mae": 17.235298537000975
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 221.64634686223872,
+      "mae": 12.639562036317233
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 201.5800600686737,
+      "mae": 11.842642436639391
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 193.14279969626702,
+      "mae": 11.5879494844937
+    },
+    {
+      "case": "development-accelerate-2-0",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 411.03654654468943,
+      "mae": 15.801670732225388
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 487.4432900933292,
+      "mae": 19.654259166947714
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 5362.644424455521,
+      "mae": 58.05760222828729
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 155.92035860831686,
+      "mae": 11.210527077796772
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 156.0431418492279,
+      "mae": 11.21451215730551
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 118.49988135778209,
+      "mae": 10.016871482181239
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 74.96522203542568,
+      "mae": 7.77132761608947
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 53.61675292912498,
+      "mae": 6.75584424418417
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 69.80976778002456,
+      "mae": 7.682709240544802
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 62.07724688858051,
+      "mae": 7.299357858720122
+    },
+    {
+      "case": "development-accelerate-2-1",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 62.07724688858051,
+      "mae": 7.299357858720122
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 3400.2019143412585,
+      "mae": 52.88265190074848
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 2131.248200545853,
+      "mae": 37.50319618455455
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 850.6952252336033,
+      "mae": 25.42476139721134
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 854.9731897647622,
+      "mae": 25.431299017723997
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 743.45292731776,
+      "mae": 24.245392523537788
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 278.1877187508105,
+      "mae": 15.285306331096981
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 210.16016188006708,
+      "mae": 13.000188279966615
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 217.32550025595825,
+      "mae": 13.100338542738449
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 204.13756620702935,
+      "mae": 12.724213802426672
+    },
+    {
+      "case": "development-accelerate-2-2",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 204.13756620702935,
+      "mae": 12.724213802426672
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 5910.187550111895,
+      "mae": 67.88549266253402
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 309.9812872042423,
+      "mae": 13.11371320255151
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1433.4356628362714,
+      "mae": 33.652237078566
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 1651.8303986567003,
+      "mae": 35.86340853706547
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1506.9126202055115,
+      "mae": 34.726171144177236
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 374.20117060079326,
+      "mae": 15.496457809491435
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 387.12920141895,
+      "mae": 16.56939478428985
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 301.8766660104522,
+      "mae": 14.20513117655726
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 333.2482489773284,
+      "mae": 15.102458118427602
+    },
+    {
+      "case": "development-accelerate-2-3",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 333.2482489773284,
+      "mae": 15.102458118427602
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 9755.797899472474,
+      "mae": 86.18408150272326
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 32226.925757094545,
+      "mae": 144.357741731054
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 2655.3877450705177,
+      "mae": 46.52282142703744
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 3212.852145196367,
+      "mae": 50.497162645247904
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2172.87052805904,
+      "mae": 42.61620455370936
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 453.6716416001571,
+      "mae": 17.809994129595115
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 427.5464145987946,
+      "mae": 17.0582275390596
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 408.9424324242649,
+      "mae": 16.770000757985894
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 418.2908498696549,
+      "mae": 16.866462562418334
+    },
+    {
+      "case": "development-accelerate-2-4",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 539.8341377095619,
+      "mae": 19.661405512019822
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 1416.781641320242,
+      "mae": 33.117852051743796
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 5026.889789737056,
+      "mae": 53.42228777672029
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 356.008048873311,
+      "mae": 17.120716125457115
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 353.2144401731707,
+      "mae": 17.030718362131836
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 285.46927092139356,
+      "mae": 15.457124301918311
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 115.13203141145877,
+      "mae": 8.760572607929644
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 147.92711439561597,
+      "mae": 10.359804017696073
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 119.78727228662339,
+      "mae": 9.125596323543396
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 138.08898665240662,
+      "mae": 9.896912543769858
+    },
+    {
+      "case": "development-accelerate-2-5",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 138.08898665240662,
+      "mae": 9.896912543769858
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 5475.02880083568,
+      "mae": 67.0950266320097
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 4787.249247962646,
+      "mae": 53.22131899180305
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 1315.2316125414939,
+      "mae": 33.13140965540291
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 1342.433435722299,
+      "mae": 33.432586982290225
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 1229.878077296146,
+      "mae": 32.16744642442665
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 917.0090263187429,
+      "mae": 22.426641633248998
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 1038.7743278152839,
+      "mae": 24.72601219555057
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 1334.214743796863,
+      "mae": 26.438349061966964
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 1140.3397160121,
+      "mae": 25.23212495484397
+    },
+    {
+      "case": "development-accelerate-2-6",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 1137.9558795212552,
+      "mae": 25.168035670283384
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "PERSISTENCE",
+      "mse": 12735.557539932532,
+      "mae": 100.1499071654594
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "LAST2",
+      "mse": 1758.2297725681365,
+      "mae": 34.377260162464424
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "OLS",
+      "mse": 2359.522554080385,
+      "mae": 42.59386643629347
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "WEIGHTED_CV",
+      "mse": 2690.4236701614886,
+      "mae": 45.48720974610502
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "CV_SMOOTH_V8",
+      "mse": 2674.7486138972954,
+      "mae": 45.87205306651149
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "IMM_V8",
+      "mse": 1304.854730122109,
+      "mae": 29.94276504649752
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "IMM_SLOW",
+      "mse": 1348.9563031464795,
+      "mae": 30.329961375399034
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "IMM_FAST",
+      "mse": 1343.3734011511492,
+      "mae": 30.029666588810954
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "IMM_BALANCED",
+      "mse": 1335.4236199114944,
+      "mae": 30.04414594198653
+    },
+    {
+      "case": "development-accelerate-2-7",
+      "family": "accelerate",
+      "model": "IMM_UNROBUST",
+      "mse": 1335.4236199114944,
+      "mae": 30.04414594198653
+    }
+  ]
+}

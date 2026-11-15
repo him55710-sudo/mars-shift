@@ -1,0 +1,1379 @@
+{
+  "createdAt": "2026-11-15T06:26:47.289Z",
+  "protocolHash": "0e0c60eefa43bb25f2e61342e245695e874d6785c3f5391fd1c390f4039244aa",
+  "frames": [
+    {
+      "frame": 0,
+      "fix": {
+        "id": "NLG_0215_0686020326_323RAS_N0072050NCAM00522_0A02I4J03",
+        "time": -12.677000045776367,
+        "pixel": [
+          689.8021684915001,
+          141.82198904155845
+        ],
+        "horizontalRange": 110,
+        "rangeSigma": 11,
+        "pixelSigma": 4,
+        "visibleDustWidth": 2,
+        "source": "PUBLISHED_IMAGE_ESTIMATE",
+        "crs": "JEZERO_SITE7_DRIVE2050_LOCAL_NE",
+        "independentAccuracyValidated": false,
+        "north": -106.81492458622057,
+        "east": 26.278734475617547,
+        "azimuth": 166.1785158534683,
+        "sigmaNorth": 10.70453174738303,
+        "sigmaEast": 2.6022136684085804
+      },
+      "source": {
+        "id": "NLG_0215_0686020326_323RAS_N0072050NCAM00522_0A02I4J03",
+        "sclk": 686020326.323,
+        "time": -12.677000045776367,
+        "width": 1280,
+        "height": 240,
+        "camera": {
+          "C": [
+            0.861693,
+            0.803497,
+            -1.97489
+          ],
+          "A": [
+            -0.717582,
+            0.696282,
+            0.0167843
+          ],
+          "H": [
+            -980.499,
+            -79.2232,
+            8.49696
+          ],
+          "V": [
+            -82.5789,
+            76.9909,
+            741.487
+          ],
+          "O": [
+            -0.718572,
+            0.695258,
+            0.0169001
+          ],
+          "R": [
+            0.000002,
+            0.049535,
+            -0.015973
+          ],
+          "E": [
+            -0.003612,
+            0.013016,
+            -0.023961
+          ],
+          "linearity": 0,
+          "rotation": [
+            [
+              0.8829935490504194,
+              -0.4686172776796577,
+              0.026837276230111545
+            ],
+            [
+              0.4627330426643756,
+              0.8786475425934369,
+              0.11771417553159763
+            ],
+            [
+              -0.07874340329141141,
+              -0.0915223631394056,
+              0.992684810744813
+            ]
+          ]
+        },
+        "imageSha256": "d9e3d8da7594e8ec592390a8dc4ac4e625ef13fcd41cf39834645f2b5b7c3127",
+        "labelSha256": "4e95fa81e28728e5117792f9614b3c3e7a00d2635defbd9765b55768919bb88c",
+        "labelUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020326_323RAS_N0072050NCAM00522_0A02I4J03.xml",
+        "imageUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020326_323RAS_N0072050NCAM00522_0A02I4J03.IMG",
+        "utc": "2021-09-27T13:16:06.895Z"
+      },
+      "uncertainty": {
+        "frame": 0,
+        "range95": [
+          87.27581270027319,
+          133.3991786264935
+        ],
+        "radius95": 23.273462273178907
+      },
+      "forecasts": [],
+      "gate": {
+        "usable": false,
+        "reasons": [
+          "RETROSPECTIVE_OR_UNVALIDATED_RANGE",
+          "WRONG_SITE_FRAME",
+          "INSUFFICIENT_CLEARANCE"
+        ]
+      }
+    },
+    {
+      "frame": 1,
+      "fix": {
+        "id": "NLG_0215_0686020330_410RAS_N0072050NCAM00522_0A02I4J03",
+        "time": -8.590000033378601,
+        "pixel": [
+          711.5001377390456,
+          168.72192228608324
+        ],
+        "horizontalRange": 80,
+        "rangeSigma": 8,
+        "pixelSigma": 4,
+        "visibleDustWidth": 11,
+        "source": "PUBLISHED_IMAGE_ESTIMATE",
+        "crs": "JEZERO_SITE7_DRIVE2050_LOCAL_NE",
+        "independentAccuracyValidated": false,
+        "north": -78.08272658075748,
+        "east": 17.40941727096773,
+        "azimuth": 167.43085158940312,
+        "sigmaNorth": 7.828902202590002,
+        "sigmaEast": 1.7037111614395388
+      },
+      "source": {
+        "id": "NLG_0215_0686020330_410RAS_N0072050NCAM00522_0A02I4J03",
+        "sclk": 686020330.41,
+        "time": -8.590000033378601,
+        "width": 1280,
+        "height": 240,
+        "camera": {
+          "C": [
+            0.861693,
+            0.803497,
+            -1.97489
+          ],
+          "A": [
+            -0.717582,
+            0.696282,
+            0.0167843
+          ],
+          "H": [
+            -980.499,
+            -79.2232,
+            8.49696
+          ],
+          "V": [
+            -82.5789,
+            76.9909,
+            741.487
+          ],
+          "O": [
+            -0.718572,
+            0.695258,
+            0.0169001
+          ],
+          "R": [
+            0.000002,
+            0.049535,
+            -0.015973
+          ],
+          "E": [
+            -0.003612,
+            0.013016,
+            -0.023961
+          ],
+          "linearity": 0,
+          "rotation": [
+            [
+              0.8829935490504194,
+              -0.4686172776796577,
+              0.026837276230111545
+            ],
+            [
+              0.4627330426643756,
+              0.8786475425934369,
+              0.11771417553159763
+            ],
+            [
+              -0.07874340329141141,
+              -0.0915223631394056,
+              0.992684810744813
+            ]
+          ]
+        },
+        "imageSha256": "5fdc04838dfba61cfd9f1bb1f75353b3c999afbdc1a2c04fa911fb9db35194e0",
+        "labelSha256": "c9bea059c2c14ba9fe63ff912638c2783043e5dfbd9e2a63bdbc0bd9a2133657",
+        "labelUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020330_410RAS_N0072050NCAM00522_0A02I4J03.xml",
+        "imageUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020330_410RAS_N0072050NCAM00522_0A02I4J03.IMG",
+        "utc": "2021-09-27T13:16:10.983Z"
+      },
+      "uncertainty": {
+        "frame": 1,
+        "range95": [
+          62.3315981772614,
+          97.15948344761819
+        ],
+        "radius95": 17.40834772057845
+      },
+      "forecasts": [
+        {
+          "time": -6.590000033378601,
+          "north": -64.02243887911568,
+          "east": 13.069159293113525,
+          "range": 65.34275479851519,
+          "speed": 7.357471195445935,
+          "towardAzimuth": 342.84511151405195,
+          "visibleDustWidth": 11
+        },
+        {
+          "time": -3.590000033378601,
+          "north": -42.93200732665299,
+          "east": 6.558772326332219,
+          "range": 43.43011337222651,
+          "speed": 7.357471195445935,
+          "towardAzimuth": 342.84511151405195,
+          "visibleDustWidth": 11
+        },
+        {
+          "time": 1.409999966621399,
+          "north": -7.781288072548506,
+          "east": -4.291872618303291,
+          "range": 8.886428677468086,
+          "speed": 7.357471195445935,
+          "towardAzimuth": 342.84511151405195,
+          "visibleDustWidth": 11
+        }
+      ],
+      "gate": {
+        "usable": false,
+        "reasons": [
+          "RETROSPECTIVE_OR_UNVALIDATED_RANGE",
+          "WRONG_SITE_FRAME",
+          "INSUFFICIENT_CLEARANCE"
+        ]
+      }
+    },
+    {
+      "frame": 2,
+      "fix": {
+        "id": "NLG_0215_0686020334_410RAS_N0072050NCAM00522_0A02I4J03",
+        "time": -4.590000033378601,
+        "pixel": [
+          742.9735297464965,
+          181.65532690570018
+        ],
+        "horizontalRange": 55,
+        "rangeSigma": 5.5,
+        "pixelSigma": 4,
+        "visibleDustWidth": 11,
+        "source": "PUBLISHED_IMAGE_ESTIMATE",
+        "crs": "JEZERO_SITE7_DRIVE2050_LOCAL_NE",
+        "independentAccuracyValidated": false,
+        "north": -54.07026087408619,
+        "east": 10.070098758615195,
+        "azimuth": 169.45004680354668,
+        "sigmaNorth": 5.424066447152889,
+        "sigmaEast": 0.962336110912488
+      },
+      "source": {
+        "id": "NLG_0215_0686020334_410RAS_N0072050NCAM00522_0A02I4J03",
+        "sclk": 686020334.41,
+        "time": -4.590000033378601,
+        "width": 1280,
+        "height": 240,
+        "camera": {
+          "C": [
+            0.861693,
+            0.803497,
+            -1.97489
+          ],
+          "A": [
+            -0.717582,
+            0.696282,
+            0.0167843
+          ],
+          "H": [
+            -980.499,
+            -79.2232,
+            8.49696
+          ],
+          "V": [
+            -82.5789,
+            76.9909,
+            741.487
+          ],
+          "O": [
+            -0.718572,
+            0.695258,
+            0.0169001
+          ],
+          "R": [
+            0.000002,
+            0.049535,
+            -0.015973
+          ],
+          "E": [
+            -0.003612,
+            0.013016,
+            -0.023961
+          ],
+          "linearity": 0,
+          "rotation": [
+            [
+              0.8829935490504194,
+              -0.4686172776796577,
+              0.026837276230111545
+            ],
+            [
+              0.4627330426643756,
+              0.8786475425934369,
+              0.11771417553159763
+            ],
+            [
+              -0.07874340329141141,
+              -0.0915223631394056,
+              0.992684810744813
+            ]
+          ]
+        },
+        "imageSha256": "c4eb1252a18df6ac12171f036cdfe6753ee31e34b570fd257fbb0f1a3d74622f",
+        "labelSha256": "4e3bb8fc7df25054d746be9723514b6d27a1fbaa440fffa48095b4c40069ed51",
+        "labelUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020334_410RAS_N0072050NCAM00522_0A02I4J03.xml",
+        "imageUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020334_410RAS_N0072050NCAM00522_0A02I4J03.IMG",
+        "utc": "2021-09-27T13:16:14.983Z"
+      },
+      "uncertainty": {
+        "frame": 2,
+        "range95": [
+          43.0233379753708,
+          66.64810355423094
+        ],
+        "radius95": 11.78775280600991
+      },
+      "forecasts": [
+        {
+          "time": -2.590000033378601,
+          "north": -40.93851985355044,
+          "east": 6.03298858515458,
+          "range": 41.380664072343606,
+          "speed": 6.704422728518826,
+          "towardAzimuth": 342.9352895985127,
+          "visibleDustWidth": 11
+        },
+        {
+          "time": 0.4099999666213989,
+          "north": -21.710759645708798,
+          "east": 0.130718302131287,
+          "range": 21.71115316302314,
+          "speed": 6.704422728518826,
+          "towardAzimuth": 342.9352895985127,
+          "visibleDustWidth": 11
+        },
+        {
+          "time": 5.409999966621399,
+          "north": 10.335507367360606,
+          "east": -9.70639883624087,
+          "range": 14.178747861110427,
+          "speed": 6.704422728518826,
+          "towardAzimuth": 342.9352895985127,
+          "visibleDustWidth": 11
+        }
+      ],
+      "gate": {
+        "usable": false,
+        "reasons": [
+          "RETROSPECTIVE_OR_UNVALIDATED_RANGE",
+          "WRONG_SITE_FRAME",
+          "INSUFFICIENT_CLEARANCE"
+        ]
+      }
+    },
+    {
+      "frame": 3,
+      "fix": {
+        "id": "NLG_0215_0686020338_395RAS_N0072050NCAM00522_0A02I4J03",
+        "time": -0.6050000190734863,
+        "pixel": [
+          750.392623481111,
+          193.27032961537796
+        ],
+        "horizontalRange": 30,
+        "rangeSigma": 3,
+        "pixelSigma": 4,
+        "visibleDustWidth": 11,
+        "source": "PUBLISHED_IMAGE_ESTIMATE",
+        "crs": "JEZERO_SITE7_DRIVE2050_LOCAL_NE",
+        "independentAccuracyValidated": false,
+        "north": -29.46187950098176,
+        "east": 5.656647087244415,
+        "azimuth": 169.13153801190492,
+        "sigmaNorth": 2.9635976103237454,
+        "sigmaEast": 0.5019544983068576
+      },
+      "source": {
+        "id": "NLG_0215_0686020338_395RAS_N0072050NCAM00522_0A02I4J03",
+        "sclk": 686020338.395,
+        "time": -0.6050000190734863,
+        "width": 1280,
+        "height": 240,
+        "camera": {
+          "C": [
+            0.861693,
+            0.803497,
+            -1.97489
+          ],
+          "A": [
+            -0.717582,
+            0.696282,
+            0.0167843
+          ],
+          "H": [
+            -980.499,
+            -79.2232,
+            8.49696
+          ],
+          "V": [
+            -82.5789,
+            76.9909,
+            741.487
+          ],
+          "O": [
+            -0.718572,
+            0.695258,
+            0.0169001
+          ],
+          "R": [
+            0.000002,
+            0.049535,
+            -0.015973
+          ],
+          "E": [
+            -0.003612,
+            0.013016,
+            -0.023961
+          ],
+          "linearity": 0,
+          "rotation": [
+            [
+              0.8829935490504194,
+              -0.4686172776796577,
+              0.026837276230111545
+            ],
+            [
+              0.4627330426643756,
+              0.8786475425934369,
+              0.11771417553159763
+            ],
+            [
+              -0.07874340329141141,
+              -0.0915223631394056,
+              0.992684810744813
+            ]
+          ]
+        },
+        "imageSha256": "bc5f3ac5872fbe2b1fc28b136597262d8ca3b3286e2e28968eaa6556554df790",
+        "labelSha256": "0df2719192d07698528c1d70fdd2494390b716903e6288080b226e9295a413c4",
+        "labelUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020338_395RAS_N0072050NCAM00522_0A02I4J03.xml",
+        "imageUrl": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00215/ids/rdr/ncam/NLG_0215_0686020338_395RAS_N0072050NCAM00522_0A02I4J03.IMG",
+        "utc": "2021-09-27T13:16:18.968Z"
+      },
+      "uncertainty": {
+        "frame": 3,
+        "range95": [
+          23.649804105437546,
+          36.62291858669448
+        ],
+        "radius95": 6.520439802427985
+      },
+      "forecasts": [
+        {
+          "time": 1.3949999809265137,
+          "north": -16.83479012335672,
+          "east": 2.264062346291105,
+          "range": 16.986351485983153,
+          "speed": 6.448294722238634,
+          "towardAzimuth": 346.13212351853787,
+          "visibleDustWidth": 11
+        },
+        {
+          "time": 4.394999980926514,
+          "north": 1.946210315355252,
+          "east": -2.372592260724222,
+          "range": 3.0687014561934274,
+          "speed": 6.448294722238634,
+          "towardAzimuth": 346.13212351853787,
+          "visibleDustWidth": 11
+        },
+        {
+          "time": 9.394999980926514,
+          "north": 33.247877713208524,
+          "east": -10.100349939083097,
+          "range": 34.74821493723676,
+          "speed": 6.448294722238634,
+          "towardAzimuth": 346.13212351853787,
+          "visibleDustWidth": 11
+        }
+      ],
+      "gate": {
+        "usable": false,
+        "reasons": [
+          "RETROSPECTIVE_OR_UNVALIDATED_RANGE",
+          "WRONG_SITE_FRAME",
+          "INSUFFICIENT_CLEARANCE"
+        ]
+      }
+    }
+  ],
+  "forecasts": [
+    {
+      "origin": 1,
+      "target": 2,
+      "model": "PERSISTENCE",
+      "leadSeconds": 4,
+      "time": -4.590000033378601,
+      "north": -78.08272658075748,
+      "east": 17.40941727096773,
+      "range": 80,
+      "speed": 0,
+      "towardAzimuth": null,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 25.109044297619644,
+      "rangeDiscrepancy": 25,
+      "rangeIntervalMiss": 20
+    },
+    {
+      "origin": 1,
+      "target": 2,
+      "model": "LAST2",
+      "leadSeconds": 4,
+      "time": -4.590000033378601,
+      "north": -49.96215117747389,
+      "east": 8.728901315259321,
+      "range": 50.7189340232254,
+      "speed": 7.357471195445936,
+      "towardAzimuth": 342.84511151405195,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 4.32150157485385,
+      "rangeDiscrepancy": -4.281065976774599,
+      "rangeIntervalMiss": 0
+    },
+    {
+      "origin": 1,
+      "target": 2,
+      "model": "OLS",
+      "leadSeconds": 4,
+      "time": -4.590000033378601,
+      "north": -49.96215117747389,
+      "east": 8.728901315259321,
+      "range": 50.7189340232254,
+      "speed": 7.357471195445936,
+      "towardAzimuth": 342.84511151405195,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 4.32150157485385,
+      "rangeDiscrepancy": -4.281065976774599,
+      "rangeIntervalMiss": 0
+    },
+    {
+      "origin": 1,
+      "target": 2,
+      "model": "WEIGHTED_CV",
+      "leadSeconds": 4,
+      "time": -4.590000033378601,
+      "north": -49.96215117747389,
+      "east": 8.728901315259321,
+      "range": 50.7189340232254,
+      "speed": 7.357471195445935,
+      "towardAzimuth": 342.84511151405195,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 4.32150157485385,
+      "rangeDiscrepancy": -4.281065976774599,
+      "rangeIntervalMiss": 0
+    },
+    {
+      "origin": 1,
+      "target": 3,
+      "model": "PERSISTENCE",
+      "leadSeconds": 7.985000014305115,
+      "time": -0.6050000190734863,
+      "north": -78.08272658075748,
+      "east": 17.40941727096773,
+      "range": 80,
+      "speed": 0,
+      "towardAzimuth": null,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 50.02113930875976,
+      "rangeDiscrepancy": 50,
+      "rangeIntervalMiss": 50
+    },
+    {
+      "origin": 1,
+      "target": 3,
+      "model": "LAST2",
+      "leadSeconds": 7.985000014305115,
+      "time": -0.6050000190734863,
+      "north": -21.947027831385597,
+      "east": 0.08093726334087492,
+      "range": 21.947177072967975,
+      "speed": 7.357471195445936,
+      "towardAzimuth": 342.84511151405195,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 9.35743210803085,
+      "rangeDiscrepancy": -8.052822927032025,
+      "rangeIntervalMiss": 8.052822927032025
+    },
+    {
+      "origin": 1,
+      "target": 3,
+      "model": "OLS",
+      "leadSeconds": 7.985000014305115,
+      "time": -0.6050000190734863,
+      "north": -21.947027831385597,
+      "east": 0.08093726334087492,
+      "range": 21.947177072967975,
+      "speed": 7.357471195445936,
+      "towardAzimuth": 342.84511151405195,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 9.35743210803085,
+      "rangeDiscrepancy": -8.052822927032025,
+      "rangeIntervalMiss": 8.052822927032025
+    },
+    {
+      "origin": 1,
+      "target": 3,
+      "model": "WEIGHTED_CV",
+      "leadSeconds": 7.985000014305115,
+      "time": -0.6050000190734863,
+      "north": -21.947027831385597,
+      "east": 0.08093726334087492,
+      "range": 21.947177072967975,
+      "speed": 7.357471195445935,
+      "towardAzimuth": 342.84511151405195,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 9.35743210803085,
+      "rangeDiscrepancy": -8.052822927032025,
+      "rangeIntervalMiss": 8.052822927032025
+    },
+    {
+      "origin": 2,
+      "target": 3,
+      "model": "PERSISTENCE",
+      "leadSeconds": 3.9850000143051147,
+      "time": -0.6050000190734863,
+      "north": -54.07026087408619,
+      "east": 10.070098758615195,
+      "range": 54.999999999999986,
+      "speed": 0,
+      "towardAzimuth": null,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 25.001019768395018,
+      "rangeDiscrepancy": 24.999999999999986,
+      "rangeIntervalMiss": 24.999999999999986
+    },
+    {
+      "origin": 2,
+      "target": 3,
+      "model": "LAST2",
+      "leadSeconds": 3.9850000143051147,
+      "time": -0.6050000190734863,
+      "north": -30.147841827939644,
+      "east": 2.7583026644365347,
+      "range": 30.27376092379513,
+      "speed": 6.277261074404911,
+      "towardAzimuth": 343.00442760659377,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 2.978413118965705,
+      "rangeDiscrepancy": 0.2737609237951304,
+      "rangeIntervalMiss": 0.2737609237951304
+    },
+    {
+      "origin": 2,
+      "target": 3,
+      "model": "OLS",
+      "leadSeconds": 3.9850000143051147,
+      "time": -0.6050000190734863,
+      "north": -27.372669013133347,
+      "east": 1.8522765456212866,
+      "range": 27.435268128888573,
+      "speed": 6.825106570368475,
+      "towardAzimuth": 342.9173245442635,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 4.340280599282223,
+      "rangeDiscrepancy": -2.5647318711114266,
+      "rangeIntervalMiss": 2.5647318711114266
+    },
+    {
+      "origin": 2,
+      "target": 3,
+      "model": "WEIGHTED_CV",
+      "leadSeconds": 3.9850000143051147,
+      "time": -0.6050000190734863,
+      "north": -28.216151757676784,
+      "east": 2.1276530530766173,
+      "range": 28.296256422475974,
+      "speed": 6.704422728518826,
+      "towardAzimuth": 342.9352895985127,
+      "visibleDustWidth": 11,
+      "positionDiscrepancy": 3.742410520457585,
+      "rangeDiscrepancy": -1.7037435775240262,
+      "rangeIntervalMiss": 1.7037435775240262
+    }
+  ],
+  "summaries": [
+    {
+      "model": "PERSISTENCE",
+      "pairs": 3,
+      "positionRMSE": 35.39128646407123,
+      "rangeMAE": 33.33333333333333
+    },
+    {
+      "model": "LAST2",
+      "pairs": 3,
+      "positionRMSE": 6.194294585210328,
+      "rangeMAE": 4.202549942533918
+    },
+    {
+      "model": "OLS",
+      "pairs": 3,
+      "positionRMSE": 6.456907082042109,
+      "rangeMAE": 4.966206924972684
+    },
+    {
+      "model": "WEIGHTED_CV",
+      "pairs": 3,
+      "positionRMSE": 6.330943795398981,
+      "rangeMAE": 4.679210827110217
+    }
+  ],
+  "uncertainty": {
+    "rangeSigmaFraction": 0.1,
+    "positions": [
+      {
+        "frame": 0,
+        "range95": [
+          87.27581270027319,
+          133.3991786264935
+        ],
+        "radius95": 23.273462273178907
+      },
+      {
+        "frame": 1,
+        "range95": [
+          62.3315981772614,
+          97.15948344761819
+        ],
+        "radius95": 17.40834772057845
+      },
+      {
+        "frame": 2,
+        "range95": [
+          43.0233379753708,
+          66.64810355423094
+        ],
+        "radius95": 11.78775280600991
+      },
+      {
+        "frame": 3,
+        "range95": [
+          23.649804105437546,
+          36.62291858669448
+        ],
+        "radius95": 6.520439802427985
+      }
+    ],
+    "forecasts": [
+      {
+        "origin": 1,
+        "target": 2,
+        "model": "PERSISTENCE",
+        "range95": [
+          62.3315981772614,
+          97.15948344761819
+        ],
+        "radius95": 17.40834772057845,
+        "speed95": [
+          0,
+          0
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 2,
+        "model": "LAST2",
+        "range95": [
+          12.746401614022155,
+          89.40249790918703
+        ],
+        "radius95": 38.53383947882137,
+        "speed95": [
+          1.045547489157876,
+          13.809677240150164
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 2,
+        "model": "OLS",
+        "range95": [
+          12.746401614022155,
+          89.40249790918703
+        ],
+        "radius95": 38.53383947882137,
+        "speed95": [
+          1.045547489157876,
+          13.809677240150164
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 2,
+        "model": "WEIGHTED_CV",
+        "range95": [
+          12.746401614022147,
+          89.40249790918703
+        ],
+        "radius95": 38.53383947882135,
+        "speed95": [
+          1.045547489157876,
+          13.809677240150164
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 3,
+        "model": "PERSISTENCE",
+        "range95": [
+          62.3315981772614,
+          97.15948344761819
+        ],
+        "radius95": 17.40834772057845,
+        "speed95": [
+          0,
+          0
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 3,
+        "model": "LAST2",
+        "range95": [
+          4.617879974175053,
+          86.46509026916306
+        ],
+        "radius95": 64.3716382933733,
+        "speed95": [
+          1.045547489157876,
+          13.809677240150164
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 3,
+        "model": "OLS",
+        "range95": [
+          4.617879974175053,
+          86.46509026916306
+        ],
+        "radius95": 64.3716382933733,
+        "speed95": [
+          1.045547489157876,
+          13.809677240150164
+        ]
+      },
+      {
+        "origin": 1,
+        "target": 3,
+        "model": "WEIGHTED_CV",
+        "range95": [
+          4.617879974175056,
+          86.46509026916306
+        ],
+        "radius95": 64.37163829337327,
+        "speed95": [
+          1.045547489157876,
+          13.809677240150164
+        ]
+      },
+      {
+        "origin": 2,
+        "target": 3,
+        "model": "PERSISTENCE",
+        "range95": [
+          43.023337975370794,
+          66.64810355423097
+        ],
+        "radius95": 11.78775280600991,
+        "speed95": [
+          0,
+          0
+        ]
+      },
+      {
+        "origin": 2,
+        "target": 3,
+        "model": "LAST2",
+        "range95": [
+          5.513616378121378,
+          56.032004184400435
+        ],
+        "radius95": 26.44031933210756,
+        "speed95": [
+          1.6740560403631155,
+          11.02855254779492
+        ]
+      },
+      {
+        "origin": 2,
+        "target": 3,
+        "model": "OLS",
+        "range95": [
+          7.262008055078319,
+          48.18859123833036
+        ],
+        "radius95": 20.94783669632974,
+        "speed95": [
+          3.866339794054783,
+          9.935278341930982
+        ]
+      },
+      {
+        "origin": 2,
+        "target": 3,
+        "model": "WEIGHTED_CV",
+        "range95": [
+          8.461208727619562,
+          47.10842749448473
+        ],
+        "radius95": 19.51413352350662,
+        "speed95": [
+          3.895861151749409,
+          9.675756105507194
+        ]
+      }
+    ]
+  },
+  "alternatives": [
+    {
+      "rangeSigmaFraction": 0.05,
+      "positions": [
+        {
+          "frame": 0,
+          "range95": [
+            95.20567935706917,
+            124.87389226850249
+          ],
+          "radius95": 14.822506750705239
+        },
+        {
+          "frame": 1,
+          "range95": [
+            68.60832098637641,
+            90.66584559828605
+          ],
+          "radius95": 11.15190234834172
+        },
+        {
+          "frame": 2,
+          "range95": [
+            47.06136321258522,
+            62.798999316703
+          ],
+          "radius95": 7.842344925121495
+        },
+        {
+          "frame": 3,
+          "range95": [
+            23.649804105437546,
+            36.62291858669448
+          ],
+          "radius95": 6.520439802427985
+        }
+      ],
+      "forecasts": [
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "PERSISTENCE",
+          "range95": [
+            68.6083209863764,
+            90.66584559828604
+          ],
+          "radius95": 11.15190234834172,
+          "speed95": [
+            0,
+            0
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "LAST2",
+          "range95": [
+            31.232685872733725,
+            70.0686758382603
+          ],
+          "radius95": 19.54748261401688,
+          "speed95": [
+            3.939669199551453,
+            10.611905105664027
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "OLS",
+          "range95": [
+            31.232685872733725,
+            70.0686758382603
+          ],
+          "radius95": 19.54748261401688,
+          "speed95": [
+            3.939669199551453,
+            10.611905105664027
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "WEIGHTED_CV",
+          "range95": [
+            31.23268587273371,
+            70.0686758382603
+          ],
+          "radius95": 19.547482614016886,
+          "speed95": [
+            3.939669199551453,
+            10.611905105664027
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "PERSISTENCE",
+          "range95": [
+            68.6083209863764,
+            90.66584559828604
+          ],
+          "radius95": 11.15190234834172,
+          "speed95": [
+            0,
+            0
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "LAST2",
+          "range95": [
+            4.180932422408035,
+            53.92197631037095
+          ],
+          "radius95": 32.267514814321736,
+          "speed95": [
+            3.939669199551453,
+            10.611905105664027
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "OLS",
+          "range95": [
+            4.180932422408035,
+            53.92197631037095
+          ],
+          "radius95": 32.267514814321736,
+          "speed95": [
+            3.939669199551453,
+            10.611905105664027
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "WEIGHTED_CV",
+          "range95": [
+            4.1809324224080315,
+            53.921976310370965
+          ],
+          "radius95": 32.26751481432175,
+          "speed95": [
+            3.939669199551453,
+            10.611905105664027
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "PERSISTENCE",
+          "range95": [
+            47.06136321258522,
+            62.798999316703
+          ],
+          "radius95": 7.842344925121495,
+          "speed95": [
+            0,
+            0
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "LAST2",
+          "range95": [
+            15.982777432475936,
+            44.139918148462854
+          ],
+          "radius95": 14.09930397126106,
+          "speed95": [
+            3.7553912422818376,
+            8.767850163776231
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "OLS",
+          "range95": [
+            16.44013760970648,
+            38.47435903751426
+          ],
+          "radius95": 11.148076213865124,
+          "speed95": [
+            5.1972978345182215,
+            8.497132253920412
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "WEIGHTED_CV",
+          "range95": [
+            17.201710806254987,
+            38.53770142313895
+          ],
+          "radius95": 10.536320471898142,
+          "speed95": [
+            5.187059723188694,
+            8.292199009977315
+          ]
+        }
+      ]
+    },
+    {
+      "rangeSigmaFraction": 0.2,
+      "positions": [
+        {
+          "frame": 0,
+          "range95": [
+            67.52226917530595,
+            153.56907677885894
+          ],
+          "radius95": 42.73940776422895
+        },
+        {
+          "frame": 1,
+          "range95": [
+            47.4864447851016,
+            111.80825664909713
+          ],
+          "radius95": 32.3790047705241
+        },
+        {
+          "frame": 2,
+          "range95": [
+            32.87711126409621,
+            76.23111990501198
+          ],
+          "radius95": 21.812867693144685
+        },
+        {
+          "frame": 3,
+          "range95": [
+            17.8806523761571,
+            42.12356479932425
+          ],
+          "radius95": 12.124118877396382
+        }
+      ],
+      "forecasts": [
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "PERSISTENCE",
+          "range95": [
+            47.4864447851016,
+            111.80825664909716
+          ],
+          "radius95": 32.3790047705241,
+          "speed95": [
+            0,
+            0
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "LAST2",
+          "range95": [
+            3.476496565128084,
+            128.67448937208113
+          ],
+          "radius95": 77.35588930814296,
+          "speed95": [
+            0.8386284065482291,
+            20.266798504556373
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "OLS",
+          "range95": [
+            3.476496565128084,
+            128.67448937208113
+          ],
+          "radius95": 77.35588930814296,
+          "speed95": [
+            0.8386284065482291,
+            20.266798504556373
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 2,
+          "model": "WEIGHTED_CV",
+          "range95": [
+            3.4764965651280915,
+            128.67448937208113
+          ],
+          "radius95": 77.35588930814299,
+          "speed95": [
+            0.8386284065482291,
+            20.26679850455637
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "PERSISTENCE",
+          "range95": [
+            47.4864447851016,
+            111.80825664909716
+          ],
+          "radius95": 32.3790047705241,
+          "speed95": [
+            0,
+            0
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "LAST2",
+          "range95": [
+            5.321316170022673,
+            153.90063067184445
+          ],
+          "radius95": 129.53333145323595,
+          "speed95": [
+            0.8386284065482291,
+            20.266798504556373
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "OLS",
+          "range95": [
+            5.321316170022673,
+            153.90063067184445
+          ],
+          "radius95": 129.53333145323595,
+          "speed95": [
+            0.8386284065482291,
+            20.266798504556373
+          ]
+        },
+        {
+          "origin": 1,
+          "target": 3,
+          "model": "WEIGHTED_CV",
+          "range95": [
+            5.32131617002267,
+            153.90063067184445
+          ],
+          "radius95": 129.53333145323595,
+          "speed95": [
+            0.8386284065482291,
+            20.26679850455637
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "PERSISTENCE",
+          "range95": [
+            32.87711126409621,
+            76.231119905012
+          ],
+          "radius95": 21.812867693144685,
+          "speed95": [
+            0,
+            0
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "LAST2",
+          "range95": [
+            3.335226824788397,
+            81.721728935489
+          ],
+          "radius95": 52.79919479029319,
+          "speed95": [
+            0.7201570014894084,
+            15.725773465359927
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "OLS",
+          "range95": [
+            3.9817325863873516,
+            68.75803684720341
+          ],
+          "radius95": 41.60105676291204,
+          "speed95": [
+            1.2440029429014943,
+            12.891395447866355
+          ]
+        },
+        {
+          "origin": 2,
+          "target": 3,
+          "model": "WEIGHTED_CV",
+          "range95": [
+            3.55225511235276,
+            66.37166582080762
+          ],
+          "radius95": 38.62230973705916,
+          "speed95": [
+            1.4194182544215015,
+            12.465999105805963
+          ]
+        }
+      ]
+    }
+  ],
+  "publishedFit": {
+    "doi": "10.1038/s41467-022-35100-z",
+    "url": "https://www.nature.com/articles/s41467-022-35100-z",
+    "supplementUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9747922/supplementaryFiles",
+    "supplementSha256": "c07b322784e230721be871ddf5e437209a0f418ed7b13594902249b8b2025829",
+    "sourceDataSha256": "cbbe0171a6ab05a265b4ea1077b5215085a32b4adf5546c030535dd792227ecb",
+    "speed": 5.3,
+    "speedSpread": 0.3,
+    "diameter": 25,
+    "diameterSpread": 1.56,
+    "fromAzimuth": 164.3,
+    "azimuthSpread": 1.4,
+    "parameterMeaning": "Retrospective combined model fit; best-four-solution spread is not a calibrated confidence interval; never supplied to causal image forecaster"
+  },
+  "eventCount": 1,
+  "frameCount": 4,
+  "promotion": false,
+  "limitation": "Metric reconstruction from published approximate ranges and calibrated camera rays. Forecast discrepancy is not verified metre-scale accuracy. Future 2/5/10 s HUD points have no measured target beyond the last image."
+}

@@ -1,0 +1,800 @@
+[
+  {
+    "case": "confirm-000",
+    "source": "MEDA57a",
+    "terrain": "floor",
+    "contact": 5.30820998326611,
+    "oracleContact": 5.30820998326611,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -4.848333971948676,
+    "contactIntervals": [
+      [
+        5.952380952380954,
+        11.260590935647064
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-001",
+    "source": "MEDA57a",
+    "terrain": "floor",
+    "contact": 3.279449202415492,
+    "oracleContact": 3.2364224533970276,
+    "minimumReturnMargin": 219.42857142857093,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -0.9575528456106449,
+    "contactIntervals": [
+      [
+        6.560778622689833,
+        9.840227825105325
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-008",
+    "source": "MEDA57a",
+    "terrain": "ridge",
+    "contact": 5.746891847436771,
+    "oracleContact": 5.746891847436771,
+    "minimumReturnMargin": 196.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -5.525259238518511,
+    "contactIntervals": [
+      [
+        5.952380952380956,
+        11.699272799817727
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-009",
+    "source": "MEDA57a",
+    "terrain": "ridge",
+    "contact": 4.41111988868831,
+    "oracleContact": 4.164573140778747,
+    "minimumReturnMargin": 190.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -1.7256159660526997,
+    "contactIntervals": [
+      [
+        6.475870516908049,
+        10.886990405596359
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-016",
+    "source": "MEDA57a",
+    "terrain": "navcam",
+    "contact": 5.9735838341271466,
+    "oracleContact": 5.9735838341271466,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -5.534917596631733,
+    "contactIntervals": [
+      [
+        5.952380952380953,
+        11.9259647865081
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-017",
+    "source": "MEDA57a",
+    "terrain": "navcam",
+    "contact": 4.596581191084901,
+    "oracleContact": 4.503221323815941,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -1.4764809942983141,
+    "contactIntervals": [
+      [
+        6.555739027202517,
+        11.152320218287418
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-018",
+    "source": "MEDA57a",
+    "terrain": "navcam",
+    "contact": 5.139014237250599,
+    "oracleContact": 5.06393393887987,
+    "minimumReturnMargin": 245.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -2.7087249843206003,
+    "contactIntervals": [
+      [
+        20.619672433883608,
+        25.758686671134207
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-020",
+    "source": "MEDA57a",
+    "terrain": "navcam",
+    "contact": 5.837150070254658,
+    "oracleContact": 0,
+    "minimumReturnMargin": 212.92857142857127,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -4.531444661678632,
+    "contactIntervals": [
+      [
+        59.15713049353638,
+        64.99428056379104
+      ]
+    ],
+    "diagnostic": "information-or-policy-gap"
+  },
+  {
+    "case": "confirm-024",
+    "source": "MEDA57b",
+    "terrain": "floor",
+    "contact": 9.037085838409208,
+    "oracleContact": 9.037085838409208,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -9.590465372901884,
+    "contactIntervals": [
+      [
+        5.235602094240839,
+        14.272687932650047
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-025",
+    "source": "MEDA57b",
+    "terrain": "floor",
+    "contact": 7.872699440853433,
+    "oracleContact": 7.872699440853433,
+    "minimumReturnMargin": 219.42857142857093,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -4.067087700333444,
+    "contactIntervals": [
+      [
+        5.540853643235243,
+        13.413553084088676
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-026",
+    "source": "MEDA57b",
+    "terrain": "floor",
+    "contact": 7.338510209986186,
+    "oracleContact": 6.296415244605377,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -4.007717123287167,
+    "contactIntervals": [
+      [
+        19.879524970513085,
+        27.21803518049927
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-032",
+    "source": "MEDA57b",
+    "terrain": "ridge",
+    "contact": 9.611297840330508,
+    "oracleContact": 9.611297840330508,
+    "minimumReturnMargin": 195.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -10.239187040960111,
+    "contactIntervals": [
+      [
+        5.235602094240838,
+        14.846899934571345
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-033",
+    "source": "MEDA57b",
+    "terrain": "ridge",
+    "contact": 8.818937444679957,
+    "oracleContact": 8.818937444679957,
+    "minimumReturnMargin": 190.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -5.258115189260596,
+    "contactIntervals": [
+      [
+        5.540853643235244,
+        14.3597910879152
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-034",
+    "source": "MEDA57b",
+    "terrain": "ridge",
+    "contact": 8.72597178288726,
+    "oracleContact": 8.531400315042873,
+    "minimumReturnMargin": 231.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -6.050387307692604,
+    "contactIntervals": [
+      [
+        18.872202071750884,
+        27.598173854638144
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-036",
+    "source": "MEDA57b",
+    "terrain": "ridge",
+    "contact": 7.2175230056791335,
+    "oracleContact": 0,
+    "minimumReturnMargin": 207.42857142857088,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -3.3245740910940755,
+    "contactIntervals": [
+      [
+        55.64029977498229,
+        62.85782278066142
+      ]
+    ],
+    "diagnostic": "information-or-policy-gap"
+  },
+  {
+    "case": "confirm-040",
+    "source": "MEDA57b",
+    "terrain": "navcam",
+    "contact": 10.049104773431058,
+    "oracleContact": 10.041433891102045,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -10.164953466861423,
+    "contactIntervals": [
+      [
+        5.235602094240839,
+        15.284706867671897
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-041",
+    "source": "MEDA57b",
+    "terrain": "navcam",
+    "contact": 9.34896699089365,
+    "oracleContact": 9.34896699089365,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -4.964951248687124,
+    "contactIntervals": [
+      [
+        5.540853643235243,
+        14.889820634128894
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-042",
+    "source": "MEDA57b",
+    "terrain": "navcam",
+    "contact": 9.61759030811092,
+    "oracleContact": 9.58646515409728,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -8.053982848513222,
+    "contactIntervals": [
+      [
+        17.98204838405035,
+        27.59963869216127
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-044",
+    "source": "MEDA57b",
+    "terrain": "navcam",
+    "contact": 8.847715705523925,
+    "oracleContact": 8.697307947678937,
+    "minimumReturnMargin": 189.42857142857082,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -6.236696631392023,
+    "contactIntervals": [
+      [
+        55.73932932627548,
+        64.5870450317994
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-046",
+    "source": "MEDA57b",
+    "terrain": "navcam",
+    "contact": 9.180265295353195,
+    "oracleContact": 9.312557654331073,
+    "minimumReturnMargin": 115.4285714285705,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -5.122677966806145,
+    "contactIntervals": [
+      [
+        167.18568769055977,
+        176.36595298591297
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-048",
+    "source": "PIA26074",
+    "terrain": "floor",
+    "contact": 11.153116227075941,
+    "oracleContact": 11.153116227075941,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -30.732446343384954,
+    "contactIntervals": [
+      [
+        1.8947368421052628,
+        13.047853069181203
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-049",
+    "source": "PIA26074",
+    "terrain": "floor",
+    "contact": 10.60019841674185,
+    "oracleContact": 10.60019841674185,
+    "minimumReturnMargin": 219.42857142857093,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -20.342428920403076,
+    "contactIntervals": [
+      [
+        1.974923427546226,
+        12.575121844288077
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-050",
+    "source": "PIA26074",
+    "terrain": "floor",
+    "contact": 10.852794680339564,
+    "oracleContact": 10.852794680339564,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -30.091432374411397,
+    "contactIntervals": [
+      [
+        6.621413363183602,
+        17.474208043523166
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-051",
+    "source": "PIA26074",
+    "terrain": "floor",
+    "contact": 8.962739390365947,
+    "oracleContact": 8.962739390365947,
+    "minimumReturnMargin": 219.42857142857093,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -11.99795038046421,
+    "contactIntervals": [
+      [
+        7.19528246583899,
+        16.158021856204936
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-052",
+    "source": "PIA26074",
+    "terrain": "floor",
+    "contact": 10.638384817506871,
+    "oracleContact": 10.638384817506871,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -24.82199748709646,
+    "contactIntervals": [
+      [
+        19.658914087165606,
+        30.297298904672477
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-054",
+    "source": "PIA26074",
+    "terrain": "floor",
+    "contact": 9.22520584431625,
+    "oracleContact": 7.965021867115638,
+    "minimumReturnMargin": 220.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -14.570444780679566,
+    "contactIntervals": [
+      [
+        63.412168321432574,
+        72.63737416574882
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-056",
+    "source": "PIA26074",
+    "terrain": "ridge",
+    "contact": 11.37494050924517,
+    "oracleContact": 11.37494050924517,
+    "minimumReturnMargin": 194.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -30.865538340404512,
+    "contactIntervals": [
+      [
+        1.8947368421052637,
+        13.269677351350433
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-057",
+    "source": "PIA26074",
+    "terrain": "ridge",
+    "contact": 10.852543284456694,
+    "oracleContact": 10.852543284456694,
+    "minimumReturnMargin": 190.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -20.49012029993353,
+    "contactIntervals": [
+      [
+        1.9749234275462277,
+        12.827466712002922
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-058",
+    "source": "PIA26074",
+    "terrain": "ridge",
+    "contact": 11.100052736627315,
+    "oracleContact": 11.132001949515487,
+    "minimumReturnMargin": 195.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -30.566314072734322,
+    "contactIntervals": [
+      [
+        6.6036213319727475,
+        17.703674068600062
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-059",
+    "source": "PIA26074",
+    "terrain": "ridge",
+    "contact": 9.347536876742694,
+    "oracleContact": 9.347536876742694,
+    "minimumReturnMargin": 190.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -13.386897931926672,
+    "contactIntervals": [
+      [
+        7.151898657994438,
+        16.49943553473713
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-060",
+    "source": "PIA26074",
+    "terrain": "ridge",
+    "contact": 11.021724369010773,
+    "oracleContact": 10.965393957150663,
+    "minimumReturnMargin": 223.4285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 12,
+    "firstReturn": 70,
+    "minClearance": -29.31354868324618,
+    "contactIntervals": [
+      [
+        18.72638690238754,
+        29.74811127139831
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-062",
+    "source": "PIA26074",
+    "terrain": "ridge",
+    "contact": 10.972427393862873,
+    "oracleContact": 10.910942241918988,
+    "minimumReturnMargin": 230.9285714285711,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -24.92100354374803,
+    "contactIntervals": [
+      [
+        60.374629604308495,
+        71.34705699817137
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-064",
+    "source": "PIA26074",
+    "terrain": "navcam",
+    "contact": 11.500392555742469,
+    "oracleContact": 11.500392555742469,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -30.943427129630926,
+    "contactIntervals": [
+      [
+        1.8947368421052628,
+        13.39512939784773
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-065",
+    "source": "PIA26074",
+    "terrain": "navcam",
+    "contact": 11.063744981841287,
+    "oracleContact": 11.063744981841287,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -20.426901727126815,
+    "contactIntervals": [
+      [
+        1.974923427546226,
+        13.038668409387514
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-066",
+    "source": "PIA26074",
+    "terrain": "navcam",
+    "contact": 11.387628405631592,
+    "oracleContact": 11.387628405631592,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -30.546541169217157,
+    "contactIntervals": [
+      [
+        6.627628335684109,
+        18.0152567413157
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-067",
+    "source": "PIA26074",
+    "terrain": "navcam",
+    "contact": 9.771148655038502,
+    "oracleContact": 9.771148655038502,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -13.868470819581361,
+    "contactIntervals": [
+      [
+        7.209496023064047,
+        16.98064467810255
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-068",
+    "source": "PIA26074",
+    "terrain": "navcam",
+    "contact": 11.231614330234514,
+    "oracleContact": 11.231614330234514,
+    "minimumReturnMargin": 247.42857142857105,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -28.32630336357222,
+    "contactIntervals": [
+      [
+        18.821867314195533,
+        30.053481644430047
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  },
+  {
+    "case": "confirm-070",
+    "source": "PIA26074",
+    "terrain": "navcam",
+    "contact": 11.165305189310494,
+    "oracleContact": 11.149329809870956,
+    "minimumReturnMargin": 203.42857142857088,
+    "detectTime": 0,
+    "estimateReady": 4,
+    "actionablePlanTime": 4,
+    "firstMovement": 6,
+    "firstReturn": 70,
+    "minClearance": -26.79738305380061,
+    "contactIntervals": [
+      [
+        60.540206242536094,
+        71.70551143184659
+      ]
+    ],
+    "diagnostic": "same-bounded-oracle-also-contact; not proof of impossibility"
+  }
+]

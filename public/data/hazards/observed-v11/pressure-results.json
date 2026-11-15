@@ -1,0 +1,285 @@
+{
+  "createdAt": "2026-11-15T05:45:32.082Z",
+  "protocolHash": "5eed9cd39230354852445175701de26542bb22cb0aae71028ea0bd80d6403821",
+  "selectionHash": "aa7759900e3acefb1d16dd5cad649ed2276403bb28cc5daf9a32cc8a8d3a7785",
+  "legacy": {
+    "sol": 215,
+    "config": {
+      "kind": "median",
+      "window": 30,
+      "floor": 0.8,
+      "consecutive": 3,
+      "mad": 4,
+      "gap": 0
+    },
+    "samples": 49401,
+    "eligibleHours": 13.36138888888889,
+    "eligibleIntervals": [
+      [
+        685980800,
+        685981014
+      ],
+      [
+        685984498,
+        685988411
+      ],
+      [
+        685991896,
+        685995811
+      ],
+      [
+        685999293,
+        686003206
+      ],
+      [
+        686006692,
+        686010607
+      ],
+      [
+        686014090,
+        686018003
+      ],
+      [
+        686020255,
+        686025401
+      ],
+      [
+        686028886,
+        686032799
+      ],
+      [
+        686036284,
+        686040199
+      ],
+      [
+        686043681,
+        686047594
+      ],
+      [
+        686051078,
+        686054991
+      ],
+      [
+        686058476,
+        686062389
+      ],
+      [
+        686065875,
+        686069467
+      ]
+    ],
+    "alerts": [
+      {
+        "time": 686020344,
+        "drop": 1.80499999999995,
+        "threshold": 0.8
+      }
+    ],
+    "matches": [
+      {
+        "tolerance": 10,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-808",
+            "catalogTime": 686020350,
+            "alertTime": 686020344,
+            "leadToCatalogCentre": 6
+          }
+        ],
+        "missed": [
+          "S2-row-804",
+          "S2-row-814"
+        ],
+        "unmatched": [],
+        "catalogRecall": 0.3333333333333333,
+        "catalogAgreement": 1,
+        "agreementF1": 0.5
+      },
+      {
+        "tolerance": 30,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-808",
+            "catalogTime": 686020350,
+            "alertTime": 686020344,
+            "leadToCatalogCentre": 6
+          }
+        ],
+        "missed": [
+          "S2-row-804",
+          "S2-row-814"
+        ],
+        "unmatched": [],
+        "catalogRecall": 0.3333333333333333,
+        "catalogAgreement": 1,
+        "agreementF1": 0.5
+      },
+      {
+        "tolerance": 60,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-808",
+            "catalogTime": 686020350,
+            "alertTime": 686020344,
+            "leadToCatalogCentre": 6
+          }
+        ],
+        "missed": [
+          "S2-row-804",
+          "S2-row-814"
+        ],
+        "unmatched": [],
+        "catalogRecall": 0.3333333333333333,
+        "catalogAgreement": 1,
+        "agreementF1": 0.5
+      }
+    ],
+    "elapsedMs": 442.05370000000005
+  },
+  "candidate": {
+    "sol": 215,
+    "config": {
+      "kind": "trend",
+      "window": 30,
+      "floor": 0.5,
+      "consecutive": 2,
+      "mad": 4,
+      "gap": 5
+    },
+    "samples": 49401,
+    "eligibleHours": 13.36138888888889,
+    "eligibleIntervals": [
+      [
+        685980800,
+        685981014
+      ],
+      [
+        685984498,
+        685988411
+      ],
+      [
+        685991896,
+        685995811
+      ],
+      [
+        685999293,
+        686003206
+      ],
+      [
+        686006692,
+        686010607
+      ],
+      [
+        686014090,
+        686018003
+      ],
+      [
+        686020255,
+        686025401
+      ],
+      [
+        686028886,
+        686032799
+      ],
+      [
+        686036284,
+        686040199
+      ],
+      [
+        686043681,
+        686047594
+      ],
+      [
+        686051078,
+        686054991
+      ],
+      [
+        686058476,
+        686062389
+      ],
+      [
+        686065875,
+        686069467
+      ]
+    ],
+    "alerts": [
+      {
+        "time": 686020343,
+        "drop": 1.4599692307692749,
+        "threshold": 0.5
+      }
+    ],
+    "matches": [
+      {
+        "tolerance": 10,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-808",
+            "catalogTime": 686020350,
+            "alertTime": 686020343,
+            "leadToCatalogCentre": 7
+          }
+        ],
+        "missed": [
+          "S2-row-804",
+          "S2-row-814"
+        ],
+        "unmatched": [],
+        "catalogRecall": 0.3333333333333333,
+        "catalogAgreement": 1,
+        "agreementF1": 0.5
+      },
+      {
+        "tolerance": 30,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-808",
+            "catalogTime": 686020350,
+            "alertTime": 686020343,
+            "leadToCatalogCentre": 7
+          }
+        ],
+        "missed": [
+          "S2-row-804",
+          "S2-row-814"
+        ],
+        "unmatched": [],
+        "catalogRecall": 0.3333333333333333,
+        "catalogAgreement": 1,
+        "agreementF1": 0.5
+      },
+      {
+        "tolerance": 60,
+        "eligibleEvents": 3,
+        "matches": [
+          {
+            "event": "S2-row-808",
+            "catalogTime": 686020350,
+            "alertTime": 686020343,
+            "leadToCatalogCentre": 7
+          }
+        ],
+        "missed": [
+          "S2-row-804",
+          "S2-row-814"
+        ],
+        "unmatched": [],
+        "catalogRecall": 0.3333333333333333,
+        "catalogAgreement": 1,
+        "agreementF1": 0.5
+      }
+    ],
+    "elapsedMs": 342.10940000000005
+  },
+  "gate": {
+    "recallImproves": false,
+    "unmatchedRateDoesNotIncrease": true
+  },
+  "pass": false,
+  "warningReference": "LEAD_TO_RETROSPECTIVE_PRESSURE_CENTRE_NOT_REMOTE_BOUNDARY"
+}

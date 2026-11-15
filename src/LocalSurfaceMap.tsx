@@ -8,9 +8,9 @@ import {localMapFrame,localMapPoint} from './local-map-model';
 import './local-surface-map.css';
 
 const EMPTY:RoverObstacle[]=[];
-type Props={terrain:Terrain;grid:RoverGrid;crew:Point;base:Point;target:Point;route?:Route|null;obstacles?:RoverObstacle[];frame?:XRNavigationFrame;hazards?:boolean;onPick?:(p:Point)=>void};
+type Props={terrain:Terrain;grid:RoverGrid;crew:Point;base:Point;target:Point;route?:Route|null;obstacles?:RoverObstacle[];frame?:XRNavigationFrame;sourceLabel?:string;hazards?:boolean;onPick?:(p:Point)=>void};
 function image(t:Terrain,pixels:Uint8Array|Uint8ClampedArray){const canvas=document.createElement('canvas');canvas.width=t.width;canvas.height=t.height;const ctx=canvas.getContext('2d')!,data=ctx.createImageData(t.width,t.height);data.data.set(pixels);ctx.putImageData(data,0,0);return canvas.toDataURL();}
-export default function LocalSurfaceMap({terrain:t,grid,crew,base,target,route,obstacles=EMPTY,frame,hazards=false,onPick}:Props){
+export default function LocalSurfaceMap({terrain:t,grid,crew,base,target,route,obstacles=EMPTY,frame,sourceLabel,hazards=false,onPick}:Props){
  const clip=useId().replaceAll(':',''),projection=localMapFrame(t,frame);
  const dem=useMemo(()=>{const values=t.elevation.filter((v):v is number=>v!==null),lo=Math.min(...values),hi=Math.max(...values),p=new Uint8ClampedArray(t.width*t.height*4);for(let i=0;i<t.valid.length;i++){const v=t.elevation[i],shade=v===null||!t.valid[i]?null:65+100*(v-lo)/Math.max(.1,hi-lo);p.set(shade===null?[13,24,32,255]:[shade+25,shade+10,shade,255],i*4);}return image(t,p);},[t]);
  const overlay=useMemo(()=>image(t,stormDisplayPixels(t,projection?frame:undefined,hazards?roverHazardPixels(grid,t,obstacles):new Uint8Array(t.width*t.height*4))),[t,grid,frame,hazards,obstacles,!!projection]);
@@ -27,6 +27,6 @@ export default function LocalSurfaceMap({terrain:t,grid,crew,base,target,route,o
    </g>
    <text x={t.width-13} y="9">N ↑</text><path d={`M 6 ${t.height-9} h ${5/t.cellSize}`} stroke="#edf6fa" strokeWidth=".7"/><text x="6" y={t.height-13}>5 m</text>
   </svg>
-  <div className="local-map-key"><span>2D DEM · SOL 477 · LOCAL METRES</span><span><i/>Red: risk area {frame&&<><b>···</b> Pale: forecast</>}</span><span>{frame?'RELOCATED SIMULATION':'REVIEWED / SIMULATED SAND'}</span></div>
+  <div className="local-map-key"><span>2D DEM · SOL 477 · LOCAL METRES</span><span><i/>Red: risk area {frame&&<><b>···</b> Pale: forecast</>}</span><span>{sourceLabel??(frame?'RELOCATED SIMULATION':'REVIEWED / SIMULATED SAND')}</span></div>
  </div>;
 }

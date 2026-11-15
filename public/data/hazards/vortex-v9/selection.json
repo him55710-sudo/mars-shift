@@ -1,0 +1,28 @@
+{
+  "frozenAt": "2026-11-15T04:48:38.194Z",
+  "hashes": {
+    "src/encounter-v9.ts": "6b12ca15d1d67f0568b13a84750087c014e7095f1b3057d1e5eda81a257c0fc1",
+    "src/sipp-v9.ts": "0e38f5cd2995cfa942874cd6facda3ea1faa9daef80564e9be77a155710e48e0",
+    "src/encounter-v8.ts": "25771ae8adce2314d85f08c81d83339858607deae97bc654cb01ed3710a0c7ee",
+    "src/encounter-v7.ts": "4cb5e9e3c1413cf49da8b16a1bec574107adcfd5476fa6f83c92045a012e004d",
+    "src/vortex-forecast-v8.ts": "3d7bf1c149625512c0fafddc54eac0c6ef183a435c5b37c4ec938fd9a8c447be",
+    "scripts/analyze_vortex_v9.ts": "35776fc4dfce04c64912d78b14e4b17f28e4ff006b991d55a7e95a7401b6d923",
+    "public/data/hazards/vortex-v9/protocol.json": "18e5b7e53527aa321bc6810cab4589d3321245d6298fff2918e37b1dbf37cee8",
+    "public/data/hazards/vortex-v8/earth-analog-wind.json": "142ca95a5be6a81cc7e60094219974f453ee849807245632a968e32a7bf456e0",
+    "public/data/hazards/encounters-v7/floor-terrain.json": "1b4d20c4598ae8c93b8ac0b8109a132bb9d64203181e6dc1d230193e55e349f6",
+    "public/data/hazards/encounters-v7/ridge-terrain.json": "fae57b5df7654e0dbad97f6dd467617349cb17214d68ba5e955cec991a90bb2c"
+  },
+  "developmentSHA256": "8878271a145c8c113e3f1c835e3d3173252eedb92ef7dec7affb5b7d3fe86d93",
+  "nominal": {
+    "label": "SIPP-IMM-0",
+    "engine": "sipp",
+    "predictor": "IMM",
+    "sigma": 0
+  },
+  "candidate": {
+    "label": "SIPP-LOCAL7-0.5",
+    "engine": "sipp",
+    "predictor": "LOCAL7",
+    "sigma": 0.5
+  }
+}

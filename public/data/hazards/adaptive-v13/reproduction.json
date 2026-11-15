@@ -1,0 +1,24 @@
+{
+  "verifiedAt": "2026-11-15T07:45:29.856Z",
+  "scratch": "C:\\Users\\user\\AppData\\Local\\Temp\\mars-shift-v13-reproduction-FvEWdP",
+  "checked": [
+    "development",
+    "selection",
+    "confirmation",
+    "observed"
+  ],
+  "excludedFields": [
+    "createdAt",
+    "selectedAt",
+    "p95Ms"
+  ],
+  "originalHashes": {
+    "protocol": "091a785b413e4158199ebfe21222bab26e7782a20b3b186a9b5a5d9095e0f59e",
+    "development": "1e5075a89a5d8afc193bd5f1ceb3eb373f9835dbdebd29c182529d3b417f108b",
+    "selection": "c65fce3ce6697c97315162ff5bca78057ec1de2dc154d885115be911483b411e",
+    "confirmation": "fc93871c8536714b6ca72986e56992218c8056f822ef02f06a4ac21e77eb4d89",
+    "observed": "c640fc11384339995b7875e7d8fe656b12d3f3c59e22a9dd0b892cd55bd4258c"
+  },
+  "originalsUnchanged": true,
+  "scope": "Deterministic forecast replay only; route and wall-clock timings are not rerun by this command."
+}

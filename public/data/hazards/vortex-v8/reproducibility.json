@@ -1,0 +1,10 @@
+[
+  {
+    "set": "holdout",
+    "unchangedNonLateralRuns": 270
+  },
+  {
+    "set": "confirmation",
+    "unchangedNonLateralRuns": 432
+  }
+]
