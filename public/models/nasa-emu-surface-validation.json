@@ -1,0 +1,34 @@
+{
+  "bytes": 3678680,
+  "sha256": "7bb3310e71a3df903aaec1e7e4157289b9330deeab80628cb3e5f0d64e3ceca9",
+  "triangles": 57160,
+  "primitives": 7,
+  "materials": 7,
+  "joints": [
+    "Arm_L",
+    "Arm_R",
+    "CrewRoot",
+    "Forearm_L",
+    "Forearm_R",
+    "Shin_L",
+    "Shin_R",
+    "Thigh_L",
+    "Thigh_R"
+  ],
+  "boundsMetres": {
+    "min": [
+      -0.507727861404419,
+      0.000314549746690318,
+      -0.544133186340332
+    ],
+    "max": [
+      0.5077521204948425,
+      1.8499733209609985,
+      0.4620000123977661
+    ]
+  },
+  "embeddedImages": 1,
+  "finiteVertices": true,
+  "normalizedSkinWeights": true,
+  "scope": "Asset structure, dimensions and rendering contract; not calibrated suit biomechanics"
+}
