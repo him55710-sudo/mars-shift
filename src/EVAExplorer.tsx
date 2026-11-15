@@ -42,7 +42,6 @@ import {PANORAMAS} from './mars-atlas';
 import ObstacleReview from './ObstacleReview';
 import './eva.css';
 import './xr-explorer.css';
-const RoverExplorer=lazy(()=>import('./RoverExplorer'));
 const NavcamStation=lazy(()=>import('./NavcamStation'));
 const SurfacePanorama=lazy(()=>import('./SurfacePanorama'));
 
@@ -50,13 +49,7 @@ const MODES=ROUTE_OPTIONS;
 const fmt=(v:number|null|undefined,d=1)=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
 function save(value:unknown,name:string){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 type Props={terrain:Terrain;manifest:any;region:string;onRegion:(r:string)=>void;launch?:DestinationIntent|null;onLaunchConsumed:()=>void;onDestinations:()=>void;onPlanning:()=>void;onAnalysis:()=>void;onAtlas:()=>void;onCrew:(c:CrewPlan)=>void};
-export default function EVAExplorer(props:Props){
- const [rover,setRover]=useState(()=>!props.launch&&!['navcam','mission'].includes(new URLSearchParams(location.search).get('surface')??''));
- useEffect(()=>{if(props.launch)setRover(false);},[props.launch]);
- const choose=(value:boolean,surface='mission')=>{const url=new URL(location.href);if(value)url.searchParams.delete('surface');else url.searchParams.set('surface',surface);history.replaceState(history.state,'',url);setRover(value);};
- return rover?<Suspense fallback={<div className="rover-loading">Loading recorded rover exploration…</div>}><RoverExplorer onOrbital={()=>choose(false)} onCloseup={()=>choose(false,'navcam')}/></Suspense>:<OrbitalEVAExplorer {...props} onRoverSurface={()=>choose(true)}/>;
-}
-function OrbitalEVAExplorer({terrain:t,manifest,region,onRegion,launch,onLaunchConsumed,onDestinations,onPlanning,onAnalysis,onAtlas,onCrew,onRoverSurface}:Props&{onRoverSurface:()=>void}){
+export default function OrbitalEVAExplorer({terrain:t,manifest,region,onRegion,launch,onLaunchConsumed,onDestinations,onPlanning,onAnalysis,onAtlas,onCrew,onRoverSurface}:Props&{onRoverSurface:()=>void}){
  const {asset:optical,error:opticalError}=useOpticalCandidates(t);
  const [thirdPerson,setThirdPerson]=useState(false);const [quality,setQuality]=useState<RenderQuality>(()=>{try{const q=localStorage.getItem('mars-shift:quality');return q==='detail'||q==='efficient'?q:'auto';}catch{return 'auto';}});useEffect(()=>{try{localStorage.setItem('mars-shift:helmet-camera:v1',thirdPerson?'follow':'helmet');localStorage.setItem('mars-shift:quality',quality);}catch{}},[thirdPerson,quality]);const cameraMemory=useRef<VisorPose|null>(null);const initialSurface=useRef(false),resumeSurface=useRef(true),panoResume=useRef(false),mapActions=useRef({toggle:()=>{}});
   const [navcamOpen,setNavcamOpen]=useState(()=>{const requested=new URLSearchParams(location.search).get('surface');if(requested)return requested==='navcam';return false;}),[hudModal,setHudModal]=useState(false);

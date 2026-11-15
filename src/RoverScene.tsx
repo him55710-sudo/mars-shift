@@ -1,3 +1,4 @@
+import {roverHazardPixels} from './rover-hazard-raster';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
@@ -89,7 +90,12 @@ export default function RoverScene(props:Props){
   const target=worldPoint(g,props.target),h=heightAt(t,props.target);if(h!==null){const ring=new THREE.Mesh(new THREE.TorusGeometry(.38,.035,6,28),new THREE.MeshBasicMaterial({color:'#b3dfd3'}));ring.rotation.x=-Math.PI/2;ring.position.set(target.x,h+.07,target.z);r.overlays.add(ring);const marker=new THREE.Mesh(new THREE.ConeGeometry(.10,.25,12),new THREE.MeshBasicMaterial({color:'#b3dfd3'}));marker.rotation.z=Math.PI;marker.position.set(target.x,h+.9,target.z);r.overlays.add(marker);}
   const label=(point:Point,text:string)=>{const w=worldPoint(g,point),h=heightAt(t,point);if(h===null)return;const canvas=document.createElement('canvas');canvas.width=320;canvas.height=64;const ctx=canvas.getContext('2d')!;ctx.fillStyle='#172025';ctx.beginPath();ctx.roundRect(1,1,318,62,10);ctx.fill();ctx.strokeStyle='#a6bbbf';ctx.lineWidth=2;ctx.stroke();ctx.font='500 28px sans-serif';ctx.fillStyle='#f2f5f5';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(text,160,34);const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map,transparent:true,depthTest:false,sizeAttenuation:false}));sprite.position.set(w.x,h+1.15,w.z);sprite.scale.set(.22,.044,1);sprite.center.set(.5,0);sprite.renderOrder=5;r.overlays.add(sprite);};
   label(props.target,'B · Observation');if(props.overview)label(gridPoint(g,g.start.x,g.start.z),'A · Start / return');
-  const pixels=new Uint8Array(g.width*g.height*4);for(let i=0;i<t.valid.length;i++){const w=worldPoint(g,{x:i%g.width,y:Math.floor(i/g.width)}),excluded=props.obstacles.some(o=>Math.hypot(w.x-o.x,w.z-o.z)<=o.radius+.35);const col=excluded?[248,85,52,255]:!t.valid[i]?[160,172,177,100]:(t.slope[i]??0)>12?[244,181,74,170]:t.obstacleMask?.[i]?[160,172,177,100]:[0,0,0,0];pixels.set(col,i*4);}r.hazardTexture?.dispose();r.hazardTexture=new THREE.DataTexture(pixels,g.width,g.height);r.hazardTexture.needsUpdate=true;r.hazardTexture.colorSpace=THREE.SRGBColorSpace;r.hazardUniforms.uRoverHazards.value=r.hazardTexture;r.hazardUniforms.uRoverEnabled.value=props.hazards?1:0;r.dirty=true;
- },[props.terrain,props.route,props.hazards,props.overview,props.target,props.alternatives,props.obstacles,props.manifest,tileRevision]);
+  r.dirty=true;
+ },[props.terrain,props.route,props.overview,props.target,props.alternatives,props.manifest,tileRevision]);
+ useEffect(()=>{
+  const r=runtime.current;if(!r)return;const {grid:g,terrain:t}=props;
+  const started=performance.now(),pixels=roverHazardPixels(g,t,props.obstacles);if(host.current){host.current.dataset.hazardBuilds=String(Number(host.current.dataset.hazardBuilds??0)+1);host.current.dataset.hazardBuildMs=(performance.now()-started).toFixed(2);}r.hazardTexture?.dispose();r.hazardTexture=new THREE.DataTexture(pixels,g.width,g.height);r.hazardTexture.needsUpdate=true;r.hazardTexture.colorSpace=THREE.SRGBColorSpace;r.hazardUniforms.uRoverHazards.value=r.hazardTexture;r.dirty=true;
+ },[props.grid,props.terrain,props.obstacles,props.manifest]);
+ useEffect(()=>{const r=runtime.current;if(r){r.hazardUniforms.uRoverEnabled.value=props.hazards?1:0;r.dirty=true;}},[props.hazards,props.manifest]);
  return <div ref={host} className="rover-scene" tabIndex={0} role="application" aria-label="Walk on recorded NASA terrain using WASD. Hold Shift for faster rehearsal movement. Drag to look. Scroll to zoom.">{error&&<div className="rover-error" role="alert">{error}<button onClick={()=>location.reload()}>Retry terrain</button></div>}</div>;
 }

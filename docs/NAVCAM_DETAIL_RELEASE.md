@@ -43,7 +43,7 @@ Raw images and source tiles are cached in ignored `.local/` directories and are 
 
 The calibrated pipeline separately verifies unchanged geometry attributes and triangle indices for all 61 retextured tiles. The maximum packed-UV camera reprojection difference is below 0.001 pixel (observed maximum 0.000067 px). An analytic camera checks axes and metric scale. Old-atlas/new-projection luminance correlation is a content diagnostic: median 0.697 and minimum 0.118, with different radiometric mapping and resampling. These values do not establish independent physical registration or subpixel source accuracy.
 
-After integrating the current public rover explorer and unified visor, all 208 tests passed across 22 files with a 15-second per-test limit. TypeScript and the production build passed.
+After integrating the current public rover explorer and unified visor, all 210 tests passed across 23 files with a 15-second per-test limit. TypeScript and the production build passed.
 
 The browser check covers native and efficient detail, centre focus/orbit, viewpoint switching, mission return, source disclosure and phone layout. Automated tests cover analytic-plane interpolation, missing/steep support, bounded camera motion, the real source start and published camera metadata, tile path/frame validation and load ordering.
 

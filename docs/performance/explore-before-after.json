@@ -1,0 +1,1223 @@
+{
+  "baseline": "44fd36e",
+  "method": "Five alternating before/after production-build navigations in the same Chrome tab, local uncompressed static server. Native recorded terrain and first-person visor unchanged. Terrain-ready sampled every 100 ms; payload is decoded resource bytes, not compressed production transfer.",
+  "viewport": {
+    "height": 639,
+    "width": 1536
+  },
+  "runs": [
+    {
+      "side": "before",
+      "run": 1,
+      "readyMs": 2160,
+      "lcpMs": 164,
+      "longTasks": 4,
+      "requests": 87,
+      "decodedBytes": 37677912,
+      "scriptBytes": 1264537,
+      "jsonBytes": 7254896,
+      "errors": [],
+      "cssBytes": 241267,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "after",
+      "run": 1,
+      "readyMs": 2054,
+      "lcpMs": 140,
+      "longTasks": 3,
+      "requests": 84,
+      "decodedBytes": 30485974,
+      "scriptBytes": 1035445,
+      "jsonBytes": 443997,
+      "errors": [],
+      "cssBytes": 88997,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "before",
+      "run": 2,
+      "readyMs": 1959,
+      "lcpMs": 112,
+      "longTasks": 4,
+      "requests": 87,
+      "decodedBytes": 37677912,
+      "scriptBytes": 1264537,
+      "jsonBytes": 7254896,
+      "errors": [],
+      "cssBytes": 241267,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "after",
+      "run": 2,
+      "readyMs": 1768,
+      "lcpMs": 108,
+      "longTasks": 3,
+      "requests": 84,
+      "decodedBytes": 30485974,
+      "scriptBytes": 1035445,
+      "jsonBytes": 443997,
+      "errors": [],
+      "cssBytes": 88997,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "before",
+      "run": 3,
+      "readyMs": 2085,
+      "lcpMs": 140,
+      "longTasks": 4,
+      "requests": 87,
+      "decodedBytes": 37677912,
+      "scriptBytes": 1264537,
+      "jsonBytes": 7254896,
+      "errors": [],
+      "cssBytes": 241267,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "after",
+      "run": 3,
+      "readyMs": 1663,
+      "lcpMs": 112,
+      "longTasks": 3,
+      "requests": 84,
+      "decodedBytes": 30485974,
+      "scriptBytes": 1035445,
+      "jsonBytes": 443997,
+      "errors": [],
+      "cssBytes": 88997,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "before",
+      "run": 4,
+      "readyMs": 1965,
+      "lcpMs": 128,
+      "longTasks": 3,
+      "requests": 87,
+      "decodedBytes": 37677912,
+      "scriptBytes": 1264537,
+      "jsonBytes": 7254896,
+      "errors": [],
+      "cssBytes": 241267,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "after",
+      "run": 4,
+      "readyMs": 1769,
+      "lcpMs": 132,
+      "longTasks": 3,
+      "requests": 84,
+      "decodedBytes": 30485974,
+      "scriptBytes": 1035445,
+      "jsonBytes": 443997,
+      "errors": [],
+      "cssBytes": 88997,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "before",
+      "run": 5,
+      "readyMs": 1967,
+      "lcpMs": 120,
+      "longTasks": 3,
+      "requests": 87,
+      "decodedBytes": 37677912,
+      "scriptBytes": 1264537,
+      "jsonBytes": 7254896,
+      "errors": [],
+      "cssBytes": 241267,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    },
+    {
+      "side": "after",
+      "run": 5,
+      "readyMs": 1869,
+      "lcpMs": 116,
+      "longTasks": 4,
+      "requests": 84,
+      "decodedBytes": 30485974,
+      "scriptBytes": 1035445,
+      "jsonBytes": 443997,
+      "errors": [],
+      "cssBytes": 88997,
+      "terrainReady": "true",
+      "source": "NASA M20 drive 1004"
+    }
+  ],
+  "inventories": {
+    "before": [
+      {
+        "path": "/assets/index-BWHATp_X.js",
+        "bytes": 348355,
+        "transfer": 348655,
+        "ms": 35
+      },
+      {
+        "path": "/assets/index-CS9fdVAC.css",
+        "bytes": 97826,
+        "transfer": 98126,
+        "ms": 45
+      },
+      {
+        "path": "/css2",
+        "bytes": 13148,
+        "transfer": 0,
+        "ms": 2
+      },
+      {
+        "path": "/data/ridge/terrain.json",
+        "bytes": 1437567,
+        "transfer": 1437867,
+        "ms": 21
+      },
+      {
+        "path": "/data/ridge/manifest.json",
+        "bytes": 5773,
+        "transfer": 6073,
+        "ms": 15
+      },
+      {
+        "path": "/data/ridge/noah-terrain.json",
+        "bytes": 767195,
+        "transfer": 767495,
+        "ms": 21
+      },
+      {
+        "path": "/data/ridge/science/terrain-metrics.json",
+        "bytes": 4600364,
+        "transfer": 4600664,
+        "ms": 109
+      },
+      {
+        "path": "/assets/EVAExplorer-VOIRxlwv.js",
+        "bytes": 129269,
+        "transfer": 129569,
+        "ms": 8
+      },
+      {
+        "path": "/assets/TerrainScene-CtID2RC-.js",
+        "bytes": 125724,
+        "transfer": 126024,
+        "ms": 10
+      },
+      {
+        "path": "/assets/three.module-7Mr59-iA.js",
+        "bytes": 594888,
+        "transfer": 595188,
+        "ms": 13
+      },
+      {
+        "path": "/assets/OrbitControls-FQvYnSMl.js",
+        "bytes": 20155,
+        "transfer": 20455,
+        "ms": 15
+      },
+      {
+        "path": "/assets/destinations-Dd0I6xcD.js",
+        "bytes": 947,
+        "transfer": 1247,
+        "ms": 9
+      },
+      {
+        "path": "/assets/use-native-dem-nR2Ovws1.js",
+        "bytes": 2562,
+        "transfer": 2862,
+        "ms": 12
+      },
+      {
+        "path": "/assets/mars-atlas-DHyNdQlo.js",
+        "bytes": 3837,
+        "transfer": 4137,
+        "ms": 14
+      },
+      {
+        "path": "/assets/circle-question-mark-CYom1Ja8.js",
+        "bytes": 244,
+        "transfer": 544,
+        "ms": 11
+      },
+      {
+        "path": "/assets/arrow-down-sfZNDu3m.js",
+        "bytes": 166,
+        "transfer": 466,
+        "ms": 15
+      },
+      {
+        "path": "/assets/EVAExplorer-BiK47BOI.css",
+        "bytes": 124682,
+        "transfer": 124982,
+        "ms": 13
+      },
+      {
+        "path": "/assets/RoverExplorer-D-TbRSNS.js",
+        "bytes": 38390,
+        "transfer": 38690,
+        "ms": 4
+      },
+      {
+        "path": "/assets/RoverExplorer-DBbLtDdb.css",
+        "bytes": 18759,
+        "transfer": 19059,
+        "ms": 4
+      },
+      {
+        "path": "/data/drive1004/manifest.json",
+        "bytes": 120396,
+        "transfer": 120696,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/navigation-grid.json",
+        "bytes": 323601,
+        "transfer": 323901,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/31.glb",
+        "bytes": 105756,
+        "transfer": 106056,
+        "ms": 10
+      },
+      {
+        "path": "/data/drive1004/detail-0/33.glb",
+        "bytes": 160740,
+        "transfer": 161040,
+        "ms": 12
+      },
+      {
+        "path": "/data/drive1004/detail-0/32.glb",
+        "bytes": 214588,
+        "transfer": 214888,
+        "ms": 15
+      },
+      {
+        "path": "/data/drive1004/detail-0/301.glb",
+        "bytes": 192372,
+        "transfer": 192672,
+        "ms": 12
+      },
+      {
+        "path": "/data/drive1004/detail-0/303.glb",
+        "bytes": 152756,
+        "transfer": 153056,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/300.glb",
+        "bytes": 203296,
+        "transfer": 203596,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/detail-0/302.glb",
+        "bytes": 204396,
+        "transfer": 204696,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-0/13.glb",
+        "bytes": 285540,
+        "transfer": 285840,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-0/11.glb",
+        "bytes": 223924,
+        "transfer": 224224,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-0/12.glb",
+        "bytes": 408580,
+        "transfer": 408880,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-0/10.glb",
+        "bytes": 329488,
+        "transfer": 329788,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/22.glb",
+        "bytes": 159104,
+        "transfer": 159404,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-0/23.glb",
+        "bytes": 345680,
+        "transfer": 345980,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-0/21.glb",
+        "bytes": 567392,
+        "transfer": 567692,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/20.glb",
+        "bytes": 804456,
+        "transfer": 804756,
+        "ms": 11
+      },
+      {
+        "path": "/data/drive1004/detail-0/03.glb",
+        "bytes": 481448,
+        "transfer": 481748,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-0/00.glb",
+        "bytes": 229468,
+        "transfer": 229768,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-0/01.glb",
+        "bytes": 404780,
+        "transfer": 405080,
+        "ms": 19
+      },
+      {
+        "path": "/data/drive1004/detail-0/02.glb",
+        "bytes": 691620,
+        "transfer": 691920,
+        "ms": 11
+      },
+      {
+        "path": "/data/drive1004/detail-1/2.glb",
+        "bytes": 30776,
+        "transfer": 31076,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-1/1.glb",
+        "bytes": 18416,
+        "transfer": 18716,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-1/31.glb",
+        "bytes": 19776,
+        "transfer": 20076,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-1/32.glb",
+        "bytes": 22708,
+        "transfer": 23008,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-1/33.glb",
+        "bytes": 36660,
+        "transfer": 36960,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-1/30.glb",
+        "bytes": 75304,
+        "transfer": 75604,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-1/01.glb",
+        "bytes": 40308,
+        "transfer": 40608,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-1/02.glb",
+        "bytes": 72948,
+        "transfer": 73248,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-1/03.glb",
+        "bytes": 212356,
+        "transfer": 212656,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-1/00.glb",
+        "bytes": 6074660,
+        "transfer": 6074960,
+        "ms": 37
+      },
+      {
+        "path": "/data/drive1004/detail-2/32.glb",
+        "bytes": 27296,
+        "transfer": 27596,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/31.glb",
+        "bytes": 43788,
+        "transfer": 44088,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-2/33.glb",
+        "bytes": 22248,
+        "transfer": 22548,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/detail-2/30.glb",
+        "bytes": 75852,
+        "transfer": 76152,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-2/13.glb",
+        "bytes": 60248,
+        "transfer": 60548,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/11.glb",
+        "bytes": 53276,
+        "transfer": 53576,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/detail-2/10.glb",
+        "bytes": 66128,
+        "transfer": 66428,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/12.glb",
+        "bytes": 100448,
+        "transfer": 100748,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/01.glb",
+        "bytes": 51432,
+        "transfer": 51732,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/00.glb",
+        "bytes": 3348,
+        "transfer": 3648,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/03.glb",
+        "bytes": 96956,
+        "transfer": 97256,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-2/02.glb",
+        "bytes": 156200,
+        "transfer": 156500,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-2/23.glb",
+        "bytes": 140276,
+        "transfer": 140576,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-2/22.glb",
+        "bytes": 206696,
+        "transfer": 206996,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/21.glb",
+        "bytes": 284252,
+        "transfer": 284552,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/20.glb",
+        "bytes": 5728536,
+        "transfer": 5728836,
+        "ms": 39
+      },
+      {
+        "path": "/data/drive1004/detail-3/33.glb",
+        "bytes": 30756,
+        "transfer": 31056,
+        "ms": 4
+      },
+      {
+        "path": "/data/drive1004/detail-3/30.glb",
+        "bytes": 172732,
+        "transfer": 173032,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-3/32.glb",
+        "bytes": 105328,
+        "transfer": 105628,
+        "ms": 10
+      },
+      {
+        "path": "/data/drive1004/detail-3/31.glb",
+        "bytes": 101576,
+        "transfer": 101876,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-3/23.glb",
+        "bytes": 45412,
+        "transfer": 45712,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/22.glb",
+        "bytes": 4692,
+        "transfer": 4992,
+        "ms": 3
+      },
+      {
+        "path": "/data/drive1004/detail-3/21.glb",
+        "bytes": 67868,
+        "transfer": 68168,
+        "ms": 4
+      },
+      {
+        "path": "/data/drive1004/detail-3/20.glb",
+        "bytes": 45884,
+        "transfer": 46184,
+        "ms": 3
+      },
+      {
+        "path": "/data/drive1004/detail-3/13.glb",
+        "bytes": 54716,
+        "transfer": 55016,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/12.glb",
+        "bytes": 81584,
+        "transfer": 81884,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/10.glb",
+        "bytes": 65688,
+        "transfer": 65988,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/11.glb",
+        "bytes": 57988,
+        "transfer": 58288,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/01.glb",
+        "bytes": 17688,
+        "transfer": 17988,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-3/03.glb",
+        "bytes": 253284,
+        "transfer": 253584,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/02.glb",
+        "bytes": 303688,
+        "transfer": 303988,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/00.glb",
+        "bytes": 5830108,
+        "transfer": 5830408,
+        "ms": 33
+      },
+      {
+        "path": "/data/drive1004/context-0.glb",
+        "bytes": 153348,
+        "transfer": 153648,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/context-1.glb",
+        "bytes": 496120,
+        "transfer": 496420,
+        "ms": 11
+      },
+      {
+        "path": "/data/drive1004/context-2.glb",
+        "bytes": 201236,
+        "transfer": 201536,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/context-3.glb",
+        "bytes": 444424,
+        "transfer": 444724,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/context-4.glb",
+        "bytes": 483668,
+        "transfer": 483968,
+        "ms": 8
+      }
+    ],
+    "after": [
+      {
+        "path": "/assets/index-Js8jOkby.css",
+        "bytes": 67287,
+        "transfer": 67587,
+        "ms": 28
+      },
+      {
+        "path": "/assets/index-43cx3wBx.js",
+        "bytes": 316755,
+        "transfer": 317055,
+        "ms": 28
+      },
+      {
+        "path": "/css2",
+        "bytes": 13148,
+        "transfer": 0,
+        "ms": 7
+      },
+      {
+        "path": "/assets/RoverExplorer-CcMJlWyr.js",
+        "bytes": 38824,
+        "transfer": 39124,
+        "ms": 9
+      },
+      {
+        "path": "/assets/three.module-CUcq9M_k.js",
+        "bytes": 594888,
+        "transfer": 595188,
+        "ms": 10
+      },
+      {
+        "path": "/assets/ground-overlay-COLwpEBv.js",
+        "bytes": 62153,
+        "transfer": 62453,
+        "ms": 13
+      },
+      {
+        "path": "/assets/OrbitControls-BqMqegDf.js",
+        "bytes": 20160,
+        "transfer": 20460,
+        "ms": 14
+      },
+      {
+        "path": "/assets/VisorChrome-Bl_pajub.js",
+        "bytes": 1485,
+        "transfer": 1785,
+        "ms": 18
+      },
+      {
+        "path": "/assets/VisorChrome-CZRti9-0.css",
+        "bytes": 2951,
+        "transfer": 3251,
+        "ms": 17
+      },
+      {
+        "path": "/assets/shield-alert-DCaP1b7Q.js",
+        "bytes": 354,
+        "transfer": 654,
+        "ms": 24
+      },
+      {
+        "path": "/assets/arrow-left-DbMwWc9q.js",
+        "bytes": 166,
+        "transfer": 466,
+        "ms": 23
+      },
+      {
+        "path": "/assets/arrow-down-BbkHJGkw.js",
+        "bytes": 166,
+        "transfer": 466,
+        "ms": 23
+      },
+      {
+        "path": "/assets/route-Rvh2yXfz.js",
+        "bytes": 250,
+        "transfer": 550,
+        "ms": 23
+      },
+      {
+        "path": "/assets/circle-question-mark-CtmkmtF5.js",
+        "bytes": 244,
+        "transfer": 544,
+        "ms": 23
+      },
+      {
+        "path": "/assets/RoverExplorer-DBbLtDdb.css",
+        "bytes": 18759,
+        "transfer": 19059,
+        "ms": 23
+      },
+      {
+        "path": "/favicon.svg",
+        "bytes": 323,
+        "transfer": 623,
+        "ms": 12
+      },
+      {
+        "path": "/data/drive1004/manifest.json",
+        "bytes": 120396,
+        "transfer": 120696,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/navigation-grid.json",
+        "bytes": 323601,
+        "transfer": 323901,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-0/31.glb",
+        "bytes": 105756,
+        "transfer": 106056,
+        "ms": 15
+      },
+      {
+        "path": "/data/drive1004/detail-0/33.glb",
+        "bytes": 160740,
+        "transfer": 161040,
+        "ms": 16
+      },
+      {
+        "path": "/data/drive1004/detail-0/32.glb",
+        "bytes": 214588,
+        "transfer": 214888,
+        "ms": 17
+      },
+      {
+        "path": "/data/drive1004/detail-0/301.glb",
+        "bytes": 192372,
+        "transfer": 192672,
+        "ms": 18
+      },
+      {
+        "path": "/data/drive1004/detail-0/303.glb",
+        "bytes": 152756,
+        "transfer": 153056,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-0/300.glb",
+        "bytes": 203296,
+        "transfer": 203596,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/302.glb",
+        "bytes": 204396,
+        "transfer": 204696,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/13.glb",
+        "bytes": 285540,
+        "transfer": 285840,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/11.glb",
+        "bytes": 223924,
+        "transfer": 224224,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-0/12.glb",
+        "bytes": 408580,
+        "transfer": 408880,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/10.glb",
+        "bytes": 329488,
+        "transfer": 329788,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-0/22.glb",
+        "bytes": 159104,
+        "transfer": 159404,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/23.glb",
+        "bytes": 345680,
+        "transfer": 345980,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-0/21.glb",
+        "bytes": 567392,
+        "transfer": 567692,
+        "ms": 10
+      },
+      {
+        "path": "/data/drive1004/detail-0/20.glb",
+        "bytes": 804456,
+        "transfer": 804756,
+        "ms": 17
+      },
+      {
+        "path": "/data/drive1004/detail-0/03.glb",
+        "bytes": 481448,
+        "transfer": 481748,
+        "ms": 12
+      },
+      {
+        "path": "/data/drive1004/detail-0/00.glb",
+        "bytes": 229468,
+        "transfer": 229768,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-0/01.glb",
+        "bytes": 404780,
+        "transfer": 405080,
+        "ms": 11
+      },
+      {
+        "path": "/data/drive1004/detail-0/02.glb",
+        "bytes": 691620,
+        "transfer": 691920,
+        "ms": 15
+      },
+      {
+        "path": "/data/drive1004/detail-1/2.glb",
+        "bytes": 30776,
+        "transfer": 31076,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-1/1.glb",
+        "bytes": 18416,
+        "transfer": 18716,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-1/31.glb",
+        "bytes": 19776,
+        "transfer": 20076,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-1/32.glb",
+        "bytes": 22708,
+        "transfer": 23008,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-1/33.glb",
+        "bytes": 36660,
+        "transfer": 36960,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-1/30.glb",
+        "bytes": 75304,
+        "transfer": 75604,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-1/01.glb",
+        "bytes": 40308,
+        "transfer": 40608,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-1/02.glb",
+        "bytes": 72948,
+        "transfer": 73248,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/detail-1/03.glb",
+        "bytes": 212356,
+        "transfer": 212656,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-1/00.glb",
+        "bytes": 6074660,
+        "transfer": 6074960,
+        "ms": 49
+      },
+      {
+        "path": "/data/drive1004/detail-2/32.glb",
+        "bytes": 27296,
+        "transfer": 27596,
+        "ms": 11
+      },
+      {
+        "path": "/data/drive1004/detail-2/31.glb",
+        "bytes": 43788,
+        "transfer": 44088,
+        "ms": 12
+      },
+      {
+        "path": "/data/drive1004/detail-2/33.glb",
+        "bytes": 22248,
+        "transfer": 22548,
+        "ms": 10
+      },
+      {
+        "path": "/data/drive1004/detail-2/30.glb",
+        "bytes": 75852,
+        "transfer": 76152,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-2/13.glb",
+        "bytes": 60248,
+        "transfer": 60548,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/11.glb",
+        "bytes": 53276,
+        "transfer": 53576,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/10.glb",
+        "bytes": 66128,
+        "transfer": 66428,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/12.glb",
+        "bytes": 100448,
+        "transfer": 100748,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/detail-2/01.glb",
+        "bytes": 51432,
+        "transfer": 51732,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-2/00.glb",
+        "bytes": 3348,
+        "transfer": 3648,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/03.glb",
+        "bytes": 96956,
+        "transfer": 97256,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-2/02.glb",
+        "bytes": 156200,
+        "transfer": 156500,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-2/23.glb",
+        "bytes": 140276,
+        "transfer": 140576,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/22.glb",
+        "bytes": 206696,
+        "transfer": 206996,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-2/21.glb",
+        "bytes": 284252,
+        "transfer": 284552,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-2/20.glb",
+        "bytes": 5728536,
+        "transfer": 5728836,
+        "ms": 40
+      },
+      {
+        "path": "/data/drive1004/detail-3/33.glb",
+        "bytes": 30756,
+        "transfer": 31056,
+        "ms": 4
+      },
+      {
+        "path": "/data/drive1004/detail-3/30.glb",
+        "bytes": 172732,
+        "transfer": 173032,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-3/32.glb",
+        "bytes": 105328,
+        "transfer": 105628,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-3/31.glb",
+        "bytes": 101576,
+        "transfer": 101876,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/23.glb",
+        "bytes": 45412,
+        "transfer": 45712,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-3/22.glb",
+        "bytes": 4692,
+        "transfer": 4992,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-3/21.glb",
+        "bytes": 67868,
+        "transfer": 68168,
+        "ms": 4
+      },
+      {
+        "path": "/data/drive1004/detail-3/20.glb",
+        "bytes": 45884,
+        "transfer": 46184,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-3/13.glb",
+        "bytes": 54716,
+        "transfer": 55016,
+        "ms": 7
+      },
+      {
+        "path": "/data/drive1004/detail-3/12.glb",
+        "bytes": 81584,
+        "transfer": 81884,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-3/10.glb",
+        "bytes": 65688,
+        "transfer": 65988,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/11.glb",
+        "bytes": 57988,
+        "transfer": 58288,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-3/01.glb",
+        "bytes": 17688,
+        "transfer": 17988,
+        "ms": 5
+      },
+      {
+        "path": "/data/drive1004/detail-3/03.glb",
+        "bytes": 253284,
+        "transfer": 253584,
+        "ms": 6
+      },
+      {
+        "path": "/data/drive1004/detail-3/02.glb",
+        "bytes": 303688,
+        "transfer": 303988,
+        "ms": 8
+      },
+      {
+        "path": "/data/drive1004/detail-3/00.glb",
+        "bytes": 5830108,
+        "transfer": 5830408,
+        "ms": 45
+      },
+      {
+        "path": "/data/drive1004/context-0.glb",
+        "bytes": 153348,
+        "transfer": 153648,
+        "ms": 12
+      },
+      {
+        "path": "/data/drive1004/context-1.glb",
+        "bytes": 496120,
+        "transfer": 496420,
+        "ms": 14
+      },
+      {
+        "path": "/data/drive1004/context-2.glb",
+        "bytes": 201236,
+        "transfer": 201536,
+        "ms": 10
+      },
+      {
+        "path": "/data/drive1004/context-3.glb",
+        "bytes": 444424,
+        "transfer": 444724,
+        "ms": 9
+      },
+      {
+        "path": "/data/drive1004/context-4.glb",
+        "bytes": 483668,
+        "transfer": 483968,
+        "ms": 10
+      }
+    ]
+  },
+  "summary": {
+    "before": {
+      "runs": 5,
+      "terrainReadyMedianMs": 1967,
+      "terrainReadyRangeMs": [
+        1959,
+        2160
+      ],
+      "scriptBytes": 1264537,
+      "cssBytes": 241267,
+      "jsonBytes": 7254896,
+      "decodedBytes": 37677912,
+      "requests": 87,
+      "requestErrors": 0
+    },
+    "after": {
+      "runs": 5,
+      "terrainReadyMedianMs": 1769,
+      "terrainReadyRangeMs": [
+        1663,
+        2054
+      ],
+      "scriptBytes": 1035445,
+      "cssBytes": 88997,
+      "jsonBytes": 443997,
+      "decodedBytes": 30485974,
+      "requests": 84,
+      "requestErrors": 0
+    }
+  },
+  "timingVerdict": "Inconclusive: ranges overlap; median delta 198 ms is smaller than the 201 ms baseline spread."
+}
