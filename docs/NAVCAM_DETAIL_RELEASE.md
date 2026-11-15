@@ -1,6 +1,6 @@
 # Navcam close surface release
 
-15 November 2026. Open `/explore?surface=navcam` or **Navcam close-up** in the rover explorer. The default rover exploration also uses the new PDS textures in Native detail. **Mission terrain** returns from the close inspection to the orbital route HUD. A destination launched explicitly for mission planning retains that workflow. The original Sol 9 station remains in **Source & coverage → Open Sol 9 archive**.
+15 November 2026. Open `/explore?surface=navcam` or **Layers → Navcam close-up** in the rover explorer. The default rover exploration also uses the new PDS textures in Native detail. **Mission terrain** returns from the close inspection to the orbital route HUD. A destination launched explicitly for mission planning retains that workflow. The original Sol 9 station remains in **Source & coverage → Open Sol 9 archive**.
 
 ## What changed
 
