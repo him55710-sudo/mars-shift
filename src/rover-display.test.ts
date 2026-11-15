@@ -44,7 +44,7 @@ describe('Original photo display with local sand exclusions',()=>{
   for(const cells of [route.outbound,route.inbound])expect(cells.every(i=>!terrain.obstacleMask?.[i])).toBe(true);
   expect(moveOnRover(terrain,start,6,0).distance).toBeLessThan(2.2);
   const pixels=roverHazardPixels(g,terrain,[sand]),p=gridPoint(g,sand.x,sand.z),i=Math.round(p.y)*g.width+Math.round(p.x);
-  expect(Array.from(pixels.slice(i*4,i*4+4))).toEqual([255,166,61,255]);
+  expect(Array.from(pixels.slice(i*4,i*4+4))).toEqual([255,64,82,255]);
  });
  it('keeps actual Drive1004 routing truthful after the explicit sand rehearsal',()=>{
   const start=gridPoint(actual,actual.start.x,actual.start.z),target=gridPoint(actual,actual.target.x,actual.target.z);
