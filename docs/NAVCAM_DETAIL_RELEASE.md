@@ -12,7 +12,7 @@ The orbital 1 m DEM / approximately 0.3 m imagery cannot supply photographic det
 - A single RGB radiance display mapping, anchored to the first image's sampled 0.5/99.7 percentiles and adjusted with each label's scaling factor, is shared across images. The 1/2.2 display power is disclosed in the record; this is visual tone mapping, not a new radiance measurement or colorimetric calibration.
 - Three inspection viewpoints, bounded walking on observed support, centre-ray rock focus, orbit inspection, zoom, and source access. The centre focus uses an actual mesh intersection. Ground detail starts at the published PDS camera centre, aiming into the valid photo footprint. It shows that single observation to avoid overlapping independent scans. Eye level and orbit are illustrative inspection cameras.
 - Nearest ground tiles load first through a three-request queue. SHA-256 is checked before glTF decoding. Original textures use anisotropic filtering; the image illumination is retained with unlit materials and no additional haze or blur pass. The renderer draws on changes, rather than redrawing an idle camera continuously.
-- Native detail transfers about **36.5 MB** of surface assets; the efficient option uses about **10 MB**. Changing view does not reload geometry. Surface GLBs cache on demand for repeat/offline viewing. Initial offline availability of the orbital map does not imply an unseen Navcam station is already cached.
+- Native detail transfers about **36.5 MB** of surface assets; the efficient option uses about **10 MB**. Changing view does not reload geometry. The static build omits superseded original leaf atlases and points `detailAssets` at the calibrated leaves; originals remain in source for reproducible processing. Efficient assets remain available. Surface GLBs cache on demand for repeat/offline viewing. Initial offline availability of the orbital map does not imply an unseen Navcam station is already cached.
 
 ## References actually inspected
 
@@ -33,6 +33,7 @@ The calibrated source directory is the [PDS calibrated Navcam Sol 477 archive](h
 node node_modules/vitest/vitest.mjs run --testTimeout=15000
 node node_modules/typescript/bin/tsc -b
 node node_modules/vite/bin/vite.js build
+node scripts/package_navcam_assets.mjs
 ```
 
 Raw images and source tiles are cached in ignored `.local/` directories and are not shipped to visitors. Processed assets and provenance are versioned, so Python and raw downloads are unnecessary to run the app. The four raw PDS files together are about 207 MB. A repeat build reuses complete cached files and verifies expected byte counts.
