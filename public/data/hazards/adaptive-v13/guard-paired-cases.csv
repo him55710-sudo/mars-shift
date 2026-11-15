@@ -1,0 +1,181 @@
+﻿case,terrain,arm,exposure,minClearance,returned,returnMargin,reserveViolation,elapsed,holds,unnecessaryHolds
+guard-confirmation-0,floor,Static,0,3.5613901079836667,True,54.39999999999918,False,180,36,0
+guard-confirmation-0,floor,MARS SHIFT,0,3.5613901079836667,True,54.39999999999918,False,180,36,0
+guard-confirmation-0,floor,Adaptive,0,4.515511665831215,True,54.39999999999918,False,180,33,0
+guard-confirmation-0,floor,Guarded,0,4.515511665831215,True,54.39999999999918,False,180,33,0
+guard-confirmation-0,floor,Oracle,0,3.5613901079836667,True,54.39999999999918,False,180,36,0
+guard-confirmation-1,floor,Static,12.28663783295963,-7.161542832635241,True,194.39999999999918,False,180,36,0
+guard-confirmation-1,floor,MARS SHIFT,9.325993746237359,-4.939727831015658,True,194.39999999999918,False,180,29,0
+guard-confirmation-1,floor,Adaptive,9.325993746237359,-5.012947114429828,True,194.39999999999918,False,180,30,0
+guard-confirmation-1,floor,Guarded,9.325993746237359,-4.939727831015658,True,194.39999999999918,False,180,30,0
+guard-confirmation-1,floor,Oracle,9.241951088962171,-5.012947114429828,True,194.39999999999918,False,180,29,0
+guard-confirmation-2,floor,Static,0,1.3981575728033562,True,54.39999999999918,False,180,54,0
+guard-confirmation-2,floor,MARS SHIFT,0,4.009166906137247,True,54.39999999999918,False,180,54,0
+guard-confirmation-2,floor,Adaptive,0,6.674205198832133,True,54.39999999999918,False,180,42,0
+guard-confirmation-2,floor,Guarded,0,6.674205198832133,True,54.39999999999918,False,180,42,0
+guard-confirmation-2,floor,Oracle,0,1.3981575728033562,True,54.39999999999918,False,180,54,0
+guard-confirmation-3,floor,Static,0,72.17877880675043,True,194.39999999999918,False,180,54,0
+guard-confirmation-3,floor,MARS SHIFT,0,72.17877880675043,True,194.39999999999918,False,180,53,0
+guard-confirmation-3,floor,Adaptive,0,72.17877880675043,True,194.39999999999918,False,180,52,0
+guard-confirmation-3,floor,Guarded,0,72.17877880675043,True,194.39999999999918,False,180,52,0
+guard-confirmation-3,floor,Oracle,0,72.17877880675043,True,194.39999999999918,False,180,54,0
+guard-confirmation-4,floor,Static,0,4.247644549038944,True,54.39999999999918,False,180,50,0
+guard-confirmation-4,floor,MARS SHIFT,0,4.247644549038944,True,54.39999999999918,False,180,50,0
+guard-confirmation-4,floor,Adaptive,0,4.247644549038944,True,54.39999999999918,False,180,50,0
+guard-confirmation-4,floor,Guarded,0,4.247644549038944,True,54.39999999999918,False,180,50,0
+guard-confirmation-4,floor,Oracle,0,4.247644549038944,True,54.39999999999918,False,180,50,0
+guard-confirmation-5,floor,Static,9.975627672644755,-6.833106276395901,True,194.39999999999918,False,180,54,0
+guard-confirmation-5,floor,MARS SHIFT,9.580251081260208,-6.256067354850218,True,194.39999999999918,False,180,54,0
+guard-confirmation-5,floor,Adaptive,9.580251081260208,-6.256067354850218,True,194.39999999999918,False,180,54,0
+guard-confirmation-5,floor,Guarded,9.580251081260208,-6.256067354850218,True,194.39999999999918,False,180,54,0
+guard-confirmation-5,floor,Oracle,9.580251081260208,-6.256067354850218,True,194.39999999999918,False,180,54,0
+guard-confirmation-6,floor,Static,0,6.399789781244897,True,54.39999999999918,False,180,86,0
+guard-confirmation-6,floor,MARS SHIFT,0,6.399789781244897,True,54.39999999999918,False,180,85,0
+guard-confirmation-6,floor,Adaptive,0,6.399789781244897,True,54.39999999999918,False,180,73,0
+guard-confirmation-6,floor,Guarded,0,7.269188343712032,True,54.39999999999918,False,180,73,0
+guard-confirmation-6,floor,Oracle,0,6.399789781244897,True,54.39999999999918,False,180,86,0
+guard-confirmation-7,floor,Static,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-7,floor,MARS SHIFT,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-7,floor,Adaptive,0,71.57826770302356,True,194.39999999999918,False,180,80,0
+guard-confirmation-7,floor,Guarded,0,71.57826770302356,True,194.39999999999918,False,180,80,0
+guard-confirmation-7,floor,Oracle,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-8,floor,Static,0,3.843370120751918,True,54.39999999999918,False,180,90,0
+guard-confirmation-8,floor,MARS SHIFT,0,3.843370120751918,True,54.39999999999918,False,180,90,0
+guard-confirmation-8,floor,Adaptive,0,3.843370120751918,True,54.39999999999918,False,180,90,0
+guard-confirmation-8,floor,Guarded,0,3.843370120751918,True,54.39999999999918,False,180,90,0
+guard-confirmation-8,floor,Oracle,0,3.843370120751918,True,54.39999999999918,False,180,90,0
+guard-confirmation-9,floor,Static,11.008267426853507,-4.164373138276408,True,194.39999999999918,False,180,36,0
+guard-confirmation-9,floor,MARS SHIFT,9.004945536721547,-4.726380773870199,True,194.39999999999918,False,180,33,0
+guard-confirmation-9,floor,Adaptive,9.004945536721547,-4.726380773870199,True,194.39999999999918,False,180,29,0
+guard-confirmation-9,floor,Guarded,9.004945536721547,-4.726380773870199,True,194.39999999999918,False,180,29,0
+guard-confirmation-9,floor,Oracle,9.134311522814905,-5.615761021994717,True,194.39999999999918,False,180,30,0
+guard-confirmation-10,floor,Static,0,13.340837833667049,True,54.39999999999918,False,180,54,0
+guard-confirmation-10,floor,MARS SHIFT,0,13.340837833667049,True,54.39999999999918,False,180,54,0
+guard-confirmation-10,floor,Adaptive,0,9.542035392057524,True,54.39999999999918,False,180,46,0
+guard-confirmation-10,floor,Guarded,0,10.520630653338113,True,54.39999999999918,False,180,46,0
+guard-confirmation-10,floor,Oracle,0,13.340837833667049,True,54.39999999999918,False,180,54,0
+guard-confirmation-11,floor,Static,0,72.482102860135,True,194.39999999999918,False,180,54,0
+guard-confirmation-11,floor,MARS SHIFT,0,72.482102860135,True,194.39999999999918,False,180,54,0
+guard-confirmation-11,floor,Adaptive,0,72.482102860135,True,194.39999999999918,False,180,54,0
+guard-confirmation-11,floor,Guarded,0,72.482102860135,True,194.39999999999918,False,180,54,0
+guard-confirmation-11,floor,Oracle,0,72.482102860135,True,194.39999999999918,False,180,54,0
+guard-confirmation-12,ridge,Static,0,3.633677176820977,True,54.39999999999918,False,180,32,0
+guard-confirmation-12,ridge,MARS SHIFT,0,4.254905966339254,True,54.39999999999918,False,180,32,0
+guard-confirmation-12,ridge,Adaptive,0,4.520585429052116,True,54.39999999999918,False,180,34,0
+guard-confirmation-12,ridge,Guarded,0,4.520585429052116,True,54.39999999999918,False,180,34,0
+guard-confirmation-12,ridge,Oracle,0,3.633677176820977,True,54.39999999999918,False,180,32,0
+guard-confirmation-13,ridge,Static,11.736536997084109,-7.297930964778806,True,194.39999999999918,False,180,15,0
+guard-confirmation-13,ridge,MARS SHIFT,9.8162380075022,-5.925305863876404,True,194.39999999999918,False,180,26,0
+guard-confirmation-13,ridge,Adaptive,10.035384953110444,-6.115694897772616,True,194.39999999999918,False,180,28,0
+guard-confirmation-13,ridge,Guarded,9.758718470955568,-5.925305863876404,True,194.39999999999918,False,180,28,0
+guard-confirmation-13,ridge,Oracle,9.619346586144196,-6.947231334576044,True,194.39999999999918,False,180,25,0
+guard-confirmation-14,ridge,Static,0,2.282886568987273,True,54.39999999999918,False,180,35,0
+guard-confirmation-14,ridge,MARS SHIFT,0,3.3004899473657714,True,54.39999999999918,False,180,35,0
+guard-confirmation-14,ridge,Adaptive,0,5.945834914751914,True,54.39999999999918,False,180,35,0
+guard-confirmation-14,ridge,Guarded,0,5.945834914751914,True,54.39999999999918,False,180,35,0
+guard-confirmation-14,ridge,Oracle,0,2.282886568987273,True,54.39999999999918,False,180,35,0
+guard-confirmation-15,ridge,Static,0,72.17877880675043,True,194.39999999999918,False,180,47,0
+guard-confirmation-15,ridge,MARS SHIFT,0,72.17877880675043,True,194.39999999999918,False,180,49,0
+guard-confirmation-15,ridge,Adaptive,0,72.17877880675043,True,194.39999999999918,False,180,51,0
+guard-confirmation-15,ridge,Guarded,0,72.17877880675043,True,194.39999999999918,False,180,51,0
+guard-confirmation-15,ridge,Oracle,0,72.17877880675043,True,194.39999999999918,False,180,47,0
+guard-confirmation-16,ridge,Static,0,4.237476890560655,True,54.39999999999918,False,180,49,0
+guard-confirmation-16,ridge,MARS SHIFT,0,4.237476890560655,True,54.39999999999918,False,180,49,0
+guard-confirmation-16,ridge,Adaptive,0,4.237476890560655,True,54.39999999999918,False,180,47,0
+guard-confirmation-16,ridge,Guarded,0,4.237476890560655,True,54.39999999999918,False,180,47,0
+guard-confirmation-16,ridge,Oracle,0,4.237476890560655,True,54.39999999999918,False,180,49,0
+guard-confirmation-17,ridge,Static,9.973954183428368,-6.783035662681423,True,194.39999999999918,False,180,54,0
+guard-confirmation-17,ridge,MARS SHIFT,9.937383159589977,-5.662706961970085,True,194.39999999999918,False,180,56,0
+guard-confirmation-17,ridge,Adaptive,9.937383159589977,-5.662706961970085,True,194.39999999999918,False,180,57,0
+guard-confirmation-17,ridge,Guarded,9.937383159589977,-5.662706961970085,True,194.39999999999918,False,180,57,0
+guard-confirmation-17,ridge,Oracle,9.840059265719113,-6.19910240046091,True,194.39999999999918,False,180,54,0
+guard-confirmation-18,ridge,Static,0,6.399789781244928,True,54.39999999999918,False,180,85,0
+guard-confirmation-18,ridge,MARS SHIFT,0,6.399789781244928,True,54.39999999999918,False,180,83,0
+guard-confirmation-18,ridge,Adaptive,0,7.213602802428601,True,54.39999999999918,False,180,70,0
+guard-confirmation-18,ridge,Guarded,0,8.107405720683424,True,54.39999999999918,False,180,70,0
+guard-confirmation-18,ridge,Oracle,0,6.399789781244928,True,54.39999999999918,False,180,85,0
+guard-confirmation-19,ridge,Static,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-19,ridge,MARS SHIFT,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-19,ridge,Adaptive,0,71.57826770302356,True,194.39999999999918,False,180,85,0
+guard-confirmation-19,ridge,Guarded,0,71.57826770302356,True,194.39999999999918,False,180,85,0
+guard-confirmation-19,ridge,Oracle,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-20,ridge,Static,0,3.8433701207518487,True,54.39999999999918,False,180,90,0
+guard-confirmation-20,ridge,MARS SHIFT,0,3.8433701207518487,True,54.39999999999918,False,180,90,0
+guard-confirmation-20,ridge,Adaptive,0,3.8433701207518487,True,54.39999999999918,False,180,90,0
+guard-confirmation-20,ridge,Guarded,0,3.8433701207518487,True,54.39999999999918,False,180,90,0
+guard-confirmation-20,ridge,Oracle,0,3.8433701207518487,True,54.39999999999918,False,180,90,0
+guard-confirmation-21,ridge,Static,11.565955808837327,-4.457684888753313,True,194.39999999999918,False,180,13,0
+guard-confirmation-21,ridge,MARS SHIFT,9.573033605824307,-4.797034822941504,True,194.39999999999918,False,180,20,0
+guard-confirmation-21,ridge,Adaptive,9.933307060704546,-4.995807610403041,True,194.39999999999918,False,180,19,0
+guard-confirmation-21,ridge,Guarded,9.573033605824307,-4.797034822941504,True,194.39999999999918,False,180,20,0
+guard-confirmation-21,ridge,Oracle,9.50265361428773,-5.41000671276817,True,194.39999999999918,False,180,23,0
+guard-confirmation-22,ridge,Static,0,10.044045802472471,True,54.39999999999918,False,180,35,0
+guard-confirmation-22,ridge,MARS SHIFT,0,10.044045802472471,True,54.39999999999918,False,180,35,0
+guard-confirmation-22,ridge,Adaptive,0,9.852077584762576,True,54.39999999999918,False,180,31,0
+guard-confirmation-22,ridge,Guarded,0,9.852077584762576,True,54.39999999999918,False,180,31,0
+guard-confirmation-22,ridge,Oracle,0,10.044045802472471,True,54.39999999999918,False,180,35,0
+guard-confirmation-23,ridge,Static,0,72.48210286013499,True,194.39999999999918,False,180,35,0
+guard-confirmation-23,ridge,MARS SHIFT,0,72.48210286013499,True,194.39999999999918,False,180,35,0
+guard-confirmation-23,ridge,Adaptive,0,72.48210286013499,True,194.39999999999918,False,180,35,0
+guard-confirmation-23,ridge,Guarded,0,72.48210286013499,True,194.39999999999918,False,180,35,0
+guard-confirmation-23,ridge,Oracle,0,72.48210286013499,True,194.39999999999918,False,180,35,0
+guard-confirmation-24,navcam,Static,0,3.6250924596255443,True,54.39999999999918,False,180,31,0
+guard-confirmation-24,navcam,MARS SHIFT,0,3.6250924596255443,True,54.39999999999918,False,180,31,0
+guard-confirmation-24,navcam,Adaptive,0,3.8588264993982557,True,54.39999999999918,False,180,31,0
+guard-confirmation-24,navcam,Guarded,0,3.8588264993982557,True,54.39999999999918,False,180,31,0
+guard-confirmation-24,navcam,Oracle,0,3.6250924596255443,True,54.39999999999918,False,180,31,0
+guard-confirmation-25,navcam,Static,10.719493009075006,-5.503175108289717,True,194.39999999999918,False,180,16,0
+guard-confirmation-25,navcam,MARS SHIFT,10.40907770341596,-5.503175108289717,True,194.39999999999918,False,180,17,0
+guard-confirmation-25,navcam,Adaptive,10.40907770341596,-5.503175108289717,True,194.39999999999918,False,180,19,0
+guard-confirmation-25,navcam,Guarded,10.40907770341596,-5.503175108289717,True,194.39999999999918,False,180,19,0
+guard-confirmation-25,navcam,Oracle,10.52748465256347,-5.775602488106859,True,194.39999999999918,False,180,18,0
+guard-confirmation-26,navcam,Static,0,8.725592773425756,True,54.39999999999918,False,180,35,0
+guard-confirmation-26,navcam,MARS SHIFT,0,8.725592773425756,True,54.39999999999918,False,180,35,0
+guard-confirmation-26,navcam,Adaptive,0,8.145536315730038,True,54.39999999999918,False,180,34,0
+guard-confirmation-26,navcam,Guarded,0,8.145536315730038,True,54.39999999999918,False,180,34,0
+guard-confirmation-26,navcam,Oracle,0,8.725592773425756,True,54.39999999999918,False,180,35,0
+guard-confirmation-27,navcam,Static,0,72.17877880675044,True,194.39999999999918,False,180,47,0
+guard-confirmation-27,navcam,MARS SHIFT,0,72.17877880675044,True,194.39999999999918,False,180,47,0
+guard-confirmation-27,navcam,Adaptive,0,72.17877880675044,True,194.39999999999918,False,180,48,0
+guard-confirmation-27,navcam,Guarded,0,72.17877880675044,True,194.39999999999918,False,180,48,0
+guard-confirmation-27,navcam,Oracle,0,72.17877880675044,True,194.39999999999918,False,180,47,0
+guard-confirmation-28,navcam,Static,0,3.7763434283788664,True,54.39999999999918,False,180,50,0
+guard-confirmation-28,navcam,MARS SHIFT,0,3.7763434283788664,True,54.39999999999918,False,180,50,0
+guard-confirmation-28,navcam,Adaptive,0,3.9491521714257134,True,54.39999999999918,False,180,52,0
+guard-confirmation-28,navcam,Guarded,0,3.9491521714257134,True,54.39999999999918,False,180,52,0
+guard-confirmation-28,navcam,Oracle,0,3.7763434283788664,True,54.39999999999918,False,180,50,0
+guard-confirmation-29,navcam,Static,11.78568844340409,-6.3181557116427545,True,194.39999999999918,False,180,54,0
+guard-confirmation-29,navcam,MARS SHIFT,10.974264335540717,-6.049904685618623,True,194.39999999999918,False,180,64,0
+guard-confirmation-29,navcam,Adaptive,10.974264335540717,-6.049904685618623,True,194.39999999999918,False,180,65,0
+guard-confirmation-29,navcam,Guarded,10.974264335540717,-6.049904685618623,True,194.39999999999918,False,180,65,0
+guard-confirmation-29,navcam,Oracle,10.974264335540717,-6.049904685618623,True,194.39999999999918,False,180,64,0
+guard-confirmation-30,navcam,Static,0,6.399789781244853,True,54.39999999999918,False,180,85,0
+guard-confirmation-30,navcam,MARS SHIFT,0,6.399789781244853,True,54.39999999999918,False,180,88,0
+guard-confirmation-30,navcam,Adaptive,0,5.903601584685577,True,54.39999999999918,False,180,74,0
+guard-confirmation-30,navcam,Guarded,0,6.399789781244853,True,54.39999999999918,False,180,81,0
+guard-confirmation-30,navcam,Oracle,0,6.399789781244853,True,54.39999999999918,False,180,85,0
+guard-confirmation-31,navcam,Static,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-31,navcam,MARS SHIFT,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-31,navcam,Adaptive,0,71.57826770302356,True,194.39999999999918,False,180,85,0
+guard-confirmation-31,navcam,Guarded,0,71.57826770302356,True,194.39999999999918,False,180,85,0
+guard-confirmation-31,navcam,Oracle,0,71.57826770302356,True,194.39999999999918,False,180,88,0
+guard-confirmation-32,navcam,Static,0,3.8433701207518576,True,54.39999999999918,False,180,90,0
+guard-confirmation-32,navcam,MARS SHIFT,0,3.8433701207518576,True,54.39999999999918,False,180,90,0
+guard-confirmation-32,navcam,Adaptive,0,3.8433701207518576,True,54.39999999999918,False,180,90,0
+guard-confirmation-32,navcam,Guarded,0,3.8433701207518576,True,54.39999999999918,False,180,90,0
+guard-confirmation-32,navcam,Oracle,0,3.8433701207518576,True,54.39999999999918,False,180,90,0
+guard-confirmation-33,navcam,Static,10.357652945458643,-7.065755554724387,True,194.39999999999918,False,180,14,0
+guard-confirmation-33,navcam,MARS SHIFT,10.716193571908772,-6.418284978280881,True,194.39999999999918,False,180,25,0
+guard-confirmation-33,navcam,Adaptive,10.445053107664013,-6.876753991868913,True,194.39999999999918,False,180,16,0
+guard-confirmation-33,navcam,Guarded,10.716193571908772,-6.418284978280881,True,194.39999999999918,False,180,25,0
+guard-confirmation-33,navcam,Oracle,10.357652945458643,-7.065755554724387,True,194.39999999999918,False,180,14,0
+guard-confirmation-34,navcam,Static,0,6.955675215986356,True,54.39999999999918,False,180,33,0
+guard-confirmation-34,navcam,MARS SHIFT,0,6.955675215986356,True,54.39999999999918,False,180,33,0
+guard-confirmation-34,navcam,Adaptive,0,6.384839858701221,True,54.39999999999918,False,180,35,0
+guard-confirmation-34,navcam,Guarded,0,6.4820664663291145,True,54.39999999999918,False,180,31,0
+guard-confirmation-34,navcam,Oracle,0,6.955675215986356,True,54.39999999999918,False,180,33,0
+guard-confirmation-35,navcam,Static,0,72.48210286013499,True,194.39999999999918,False,180,21,0
+guard-confirmation-35,navcam,MARS SHIFT,0,72.48210286013499,True,194.39999999999918,False,180,21,0
+guard-confirmation-35,navcam,Adaptive,0,72.48210286013499,True,194.39999999999918,False,180,21,0
+guard-confirmation-35,navcam,Guarded,0,72.48210286013499,True,194.39999999999918,False,180,21,0
+guard-confirmation-35,navcam,Oracle,0,72.48210286013499,True,194.39999999999918,False,180,21,0

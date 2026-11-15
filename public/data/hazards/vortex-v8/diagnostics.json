@@ -1,0 +1,120 @@
+{
+  "holdout": {
+    "paired": {
+      "Static": {
+        "meanContactDifference": -0.056679555844086335,
+        "wins": 6,
+        "losses": 3,
+        "ties": 45
+      },
+      "Radial": {
+        "meanContactDifference": -0.15063532983127534,
+        "wins": 8,
+        "losses": 1,
+        "ties": 45
+      },
+      "Lateral": {
+        "meanContactDifference": -0.04456574191949945,
+        "wins": 6,
+        "losses": 4,
+        "ties": 44
+      },
+      "Nominal": {
+        "meanContactDifference": 0.012744084960033188,
+        "wins": 0,
+        "losses": 3,
+        "ties": 51
+      },
+      "Oracle": {
+        "meanContactDifference": 0.04525754431781426,
+        "wins": 0,
+        "losses": 8,
+        "ties": 46
+      }
+    },
+    "family": {
+      "gust": {
+        "Static": 3.1276223461958526,
+        "Nominal": 3.10500065879305,
+        "MARS SHIFT": 3.136966948898672,
+        "Oracle": 3.056929165297854
+      },
+      "oscillate": {
+        "Static": 1.5503724036465238,
+        "Nominal": 1.4740477104641299,
+        "MARS SHIFT": 1.4803136752386075,
+        "Oracle": 1.4262367210699578
+      },
+      "wind": {
+        "Static": 2.834205821163762,
+        "Nominal": 2.7248812793366004,
+        "MARS SHIFT": 2.7248812793366004,
+        "Oracle": 2.723223384152625
+      }
+    },
+    "failedDespiteOracleAvoidance": 0,
+    "failures": 15,
+    "failureContactBeforeMovement": 46.22224556866497,
+    "plannerP95Ms": 3.4919600000011988,
+    "plannerMaxMs": 34.72950000000128
+  },
+  "confirmation": {
+    "paired": {
+      "Static": {
+        "meanContactDifference": -1.100548593329821,
+        "wins": 26,
+        "losses": 6,
+        "ties": 40
+      },
+      "Radial": {
+        "meanContactDifference": -0.48050405026764076,
+        "wins": 24,
+        "losses": 3,
+        "ties": 45
+      },
+      "Lateral": {
+        "meanContactDifference": -0.5781062667115977,
+        "wins": 26,
+        "losses": 3,
+        "ties": 43
+      },
+      "Nominal": {
+        "meanContactDifference": -0.2794488639172626,
+        "wins": 21,
+        "losses": 5,
+        "ties": 46
+      },
+      "Oracle": {
+        "meanContactDifference": 1.8125111360578348,
+        "wins": 0,
+        "losses": 25,
+        "ties": 47
+      }
+    },
+    "family": {
+      "gust": {
+        "Static": 5.102461496614359,
+        "Nominal": 3.489948745896146,
+        "MARS SHIFT": 3.3201431808278143,
+        "Oracle": 1.0358598306537534
+      },
+      "oscillate": {
+        "Static": 3.828138932668861,
+        "Nominal": 3.6815583056545162,
+        "MARS SHIFT": 3.128686202267642,
+        "Oracle": 0
+      },
+      "wind": {
+        "Static": 0.8444385895335008,
+        "Nominal": 0.14023277902838358,
+        "MARS SHIFT": 0.024563855731801826,
+        "Oracle": 0
+      }
+    },
+    "failedDespiteOracleAvoidance": 20,
+    "failures": 25,
+    "failureContactBeforeMovement": 0.3212274793279022,
+    "plannerP95Ms": 3.778449999999247,
+    "plannerMaxMs": 22.15100000000166
+  }
+}

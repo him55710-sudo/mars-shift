@@ -1,0 +1,17 @@
+{
+  "selected": "IMM_SLOW",
+  "config": {
+    "q": [
+      0.001,
+      0.04,
+      1.44
+    ],
+    "switchSeconds": 30,
+    "robustNIS": 25,
+    "initialVelocitySigma": 10
+  },
+  "covarianceScale": 2.248844784832718,
+  "selectedAt": "2026-11-15T07:24:57.379Z",
+  "protocolHash": "091a785b413e4158199ebfe21222bab26e7782a20b3b186a9b5a5d9095e0f59e",
+  "reason": "Lowest development mean squared Euclidean forecast error pooled over all horizons/cases. No confirmation feedback."
+}

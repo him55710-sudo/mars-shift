@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc -b && vite build && node scripts/package_navcam_assets.mjs && node scripts/package_static_assets.mjs && node scripts/verify_rover_display.mjs",
+    "build": "node scripts/review_v15.mjs --check && tsc -b && vite build && node scripts/package_navcam_assets.mjs && node scripts/package_static_assets.mjs && node scripts/verify_rover_display.mjs",
+    "review:check": "node scripts/review_v15.mjs --check",
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1",
     "science": "node scripts/run_science_analysis.mjs",
@@ -19,7 +20,10 @@
     "science:hazards:dev": "node scripts/run_hazard_v2.mjs dev --final-round",
     "science:hazards:test": "node scripts/run_hazard_v2.mjs test --final-round",
     "science:navigation": "node scripts/run_navigation_analysis.mjs",
-    "science:rover": "node scripts/run_rover_analysis.mjs"
+    "science:rover": "node scripts/run_rover_analysis.mjs",
+    "science:encounters": "node scripts/run_encounters_v7.mjs",
+    "science:encounters:geometry": "node scripts/run_geometry_v7.mjs",
+    "science:vortex": "node scripts/run_vortex_v8.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",

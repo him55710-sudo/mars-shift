@@ -1,0 +1,38 @@
+{
+  "frozenAt": "2026-11-15T02:51:50.402251+00:00",
+  "developmentSHA256": "3a6984aba89eb597e7b4399e5d4ff9a674550dacadc01b767035357b9b41359d",
+  "chosen": "w7-36s",
+  "alpha": 0.25,
+  "trackerWindow": 7,
+  "adaptiveHorizon": false,
+  "reason": "Minimum development mean contact without extra return failures; reject expanded horizon. Predictor improvement is shared with Endpoint for a matched information comparison.",
+  "confirmationOpened": false,
+  "arms": [
+    {
+      "arm": "Static",
+      "alpha": 0,
+      "trackerWindow": 7
+    },
+    {
+      "arm": "Endpoint",
+      "alpha": 0,
+      "trackerWindow": 7
+    },
+    {
+      "arm": "Adaptive",
+      "alpha": 0.25,
+      "trackerWindow": 3,
+      "variant": "LegacyAdaptive"
+    },
+    {
+      "arm": "Adaptive",
+      "alpha": 0.25,
+      "trackerWindow": 7
+    },
+    {
+      "arm": "Oracle",
+      "alpha": 0,
+      "trackerWindow": 7
+    }
+  ]
+}

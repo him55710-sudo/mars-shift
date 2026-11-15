@@ -1,0 +1,49 @@
+{
+  "frozenAt": "2026-11-15T06:23:56.125Z",
+  "event": "Perseverance Sol 215 / 2021-09-27",
+  "purpose": "Retrospective metric geometry reconstruction and short rolling forecasts. One event; no independent surveyed centre trajectory. No automatic online localization validation.",
+  "calibration": "CAHVORE type 2 with PDS subframe/downsampling already included in H,V. ROVER_NAV to SITE north/east/down quaternion. Three published feature ranges fit local planar along-view profile; cross-slope assumed zero. Wheel-track band is withheld.",
+  "annotations": "Digitized published visible-cloud scale marks. RANSAC only maps figure pixels to PDS pixels. Pixel sigma 4 is a sensitivity assumption, not annotation validation.",
+  "reference": "Published approximate cloud ranges 110,80,50–60,30 m used only for agreement evaluation. Not independent 2D truth. Table 1 fitted speed and vortex diameter never enter reconstruction or forecast.",
+  "models": [
+    "PERSISTENCE",
+    "LAST2",
+    "OLS"
+  ],
+  "forecasts": "Every available one/two frame ahead pair after two fixes, identical times and inputs; no parameter selection.",
+  "geometryBaseline": "Flat local z=0 ground vs fixed calibrated terrain profile. No retuning after evaluation.",
+  "uncertainty": {
+    "seed": 2151201,
+    "samples": 1200,
+    "pixelSigma": 4,
+    "rangeSigma": "max(1 m, 5% of control range)",
+    "localTerrainSigma": 0.25,
+    "meaning": "Monte Carlo sensitivity only, not calibrated 95% coverage. Shared calibration draw across all frames, independent annotation/terrain errors.",
+    "alternatives": [
+      {
+        "pixel": 2,
+        "terrain": 0.1
+      },
+      {
+        "pixel": 8,
+        "terrain": 0.5
+      }
+    ]
+  },
+  "checks": [
+    "withheld wheel-track-band range",
+    "leave-one-control-out sensitivity",
+    "rolling future reconstruction discrepancy",
+    "future published-range agreement",
+    "ground height/pixel sensitivity",
+    "numeric camera and stereo regressions"
+  ],
+  "promotion": "Metric-looking coordinates alone never enable navigation. Independent metric truth, matching CRS, fresh observations and uncertainty below available clearance are required.",
+  "hashes": {
+    "public/data/hazards/metric-v12/inputs.json": "9c567d434f45f61c24cc1e3239f124041c5fb91d35ab5e71d5aa4ae8f609a2d2",
+    "src/metric-vortex-v12.ts": "56ae6d58893514eff227a693060caf2060b22825b31ef618131e7ce09c1351d6",
+    "src/vendor/nasa-cahvore.js": "2a55aa33163d5ff6853262cbdd199632e18e0376df463ef2bef0978b933e4a78",
+    "scripts/analyze_metric_v12.ts": "19f0d428f564c88b35e870eabec88f1af8c975b44baa8674a87fcd53942feedd",
+    "scripts/prepare_metric_v12.py": "9a7ae3caf98f2d5a22298789900691f9c0f2299c919496899a183bb56fdf5829"
+  }
+}

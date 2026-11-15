@@ -1,0 +1,107 @@
+{
+  "record": 7930642,
+  "doi": "10.5281/zenodo.7930642",
+  "title": "Dust devils in Makgadikgadi Salt Pans analogue (central Botswana) observed with the Martian radiometer MEDA-RDS",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "files": [
+    {
+      "file": "Figure13a.txt",
+      "bytes": 420610,
+      "sha256": "1472ba5e3923586ce57fd2a1dcfeba727efd0670afe755f49860b645bffb6b94",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure13a.txt/content"
+    },
+    {
+      "file": "Figure15b.txt",
+      "bytes": 451,
+      "sha256": "bfdffc007a4f2eadec9bc231dcee4cfc21d09a26b0fe52d061699c5eac1d0e39",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure15b.txt/content"
+    },
+    {
+      "file": "Figure6b.txt",
+      "bytes": 1262041,
+      "sha256": "200027d35f4a0e77bc8aadff7742dd6a15da5d0dd903f50837b0dfe7b8a8fa24",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure6b.txt/content"
+    },
+    {
+      "file": "Figure4_Day2.txt",
+      "bytes": 570313,
+      "sha256": "a0836d752362d034bd3a21c9f82e0a51b7b088657e719ea117dce55071d5a446",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure4_Day2.txt/content"
+    },
+    {
+      "file": "Figure4_Day4.txt",
+      "bytes": 872790,
+      "sha256": "83ac08673a6a704c9382359b30d7610c0066d5d3a45787287ab0f303185df125",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure4_Day4.txt/content"
+    },
+    {
+      "file": "Figure11c.txt",
+      "bytes": 1262035,
+      "sha256": "2e5536197906de55b06867883331322078ee826d8823834b80e5c0fcc5f53f36",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure11c.txt/content"
+    },
+    {
+      "file": "Figure6a.txt",
+      "bytes": 65972,
+      "sha256": "3b30f5fbdd68d6eed5457af9ccf14a5caa1102bf8ea9229387f592c7b8a9f6df",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure6a.txt/content"
+    },
+    {
+      "file": "Figure4_Day6.txt",
+      "bytes": 974122,
+      "sha256": "86808306277595eedc3e3f90670d3f3251cd7485356e955de4c3ef1fa7e5dae1",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure4_Day6.txt/content"
+    },
+    {
+      "file": "Figure4_Day3.txt",
+      "bytes": 515384,
+      "sha256": "d58be3a5b29fbef2f6ed20d6c8d8c5d1121a79ffc130ae596b55d1769efad838",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure4_Day3.txt/content"
+    },
+    {
+      "file": "Figure2b.txt",
+      "bytes": 20567,
+      "sha256": "d2d6a38d38d3b37eca3e409a3cce821698442e953a010c74e1eada86e07edd81",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure2b.txt/content"
+    },
+    {
+      "file": "Figure4_Day5.txt",
+      "bytes": 1023122,
+      "sha256": "dd44515d6ad906c69928ea2b4577445f3a487e69fb425ba847c9ad163e6c8c75",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure4_Day5.txt/content"
+    },
+    {
+      "file": "Figure2a.txt",
+      "bytes": 13775,
+      "sha256": "d54043bdc9d98cc8052913e00ebd852ce99e82cdd02459affa0add003398c09f",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure2a.txt/content"
+    },
+    {
+      "file": "Figure4_Day1.txt",
+      "bytes": 481868,
+      "sha256": "1425d1c2c693840ac9e75488d243b1c61b8fec9c3184582389bcc1d2c3d2264b",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure4_Day1.txt/content"
+    },
+    {
+      "file": "Figure10b.txt",
+      "bytes": 1204510,
+      "sha256": "4f6f36868377c5e01e5117d2a62803fad08075916e81d5ed690e9b2d45023ef0",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure10b.txt/content"
+    },
+    {
+      "file": "Figure10a.txt",
+      "bytes": 192516,
+      "sha256": "07cea0c33169bce4682412fcbd083f901dd576a7e5229d05f5d8c1174efe1320",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure10a.txt/content"
+    },
+    {
+      "file": "Figure13b.txt",
+      "bytes": 1165228,
+      "sha256": "a971ac97d066a1c7a814ec1f6c48a649ece4b7efc0e339f8e4a4916f241d0319",
+      "url": "https://zenodo.org/api/records/7930642/files/Figure13b.txt/content"
+    }
+  ],
+  "limitation": "Terrestrial field campaign, not a Martian dust-devil ground-truth trajectory dataset"
+}

@@ -1,3 +1,17 @@
+# MARS SHIFT — integrated Mission Hub
+
+The integrated release preserves the published terrain focus controls, shared 2D/3D risk views, local sand exclusions, adaptive vortex rehearsal, and v15 evidence review. See [integration and release checks](docs/INTEGRATED_RELEASE.md). Native calibrated photo meshes and embedded textures are unchanged.
+
+## Current review release (v15)
+
+Open `/review` for current evidence and working demos, `/briefing` for the current seven-slide English presentation, `/hazards` for the photographed helmet rehearsal, and `/hazards?ground=sand&lang=en` for sand screening. [Critical judging review](docs/JUDGE_REVIEW_V15.md) · [English methods and limitations](public/data/review-v15/methods.md).
+
+The current evidence distinguishes one observed metric reconstruction from synthetic confirmation and mapped candidate screening. Static comparison improves mean contact by 10.190%; incremental gain over the previous integrated model is only 0.064%, with unchanged no-contact/return-failure counts. No validated one-metre accuracy or real astronaut safety claim is made. `pnpm review:check` checks the six source results and published totals; `pnpm build` includes that guard.
+
+The entries below are preserved release history. Old percentages and test totals refer to their own protocols, not the latest common-case comparison. The downloadable PowerPoint is an earlier archive; use the current `/briefing`.
+
+## Preserved release history
+
 > Observation/Navcam integration (2026-11-15): see [validation report](docs/OBSERVED_V6_RESULTS.md). `/hazards` now opens recorded MEDA/NASA replay and conditional local escape; archived orbital studies remain accessible.
 
 # MARS SHIFT
@@ -144,3 +158,7 @@ Codex assisted with code, preprocessing, tests, documentation and interface copy
 ### Observed rover surface
 
 The main [EVA Explorer](https://mars-shift.vercel.app/explore) now opens an integrated NASA/JPL-Caltech Perseverance Drive 1004 walking scene. Explore, choose a destination, compare local round trips, and review exclusions on the same geometry. Orbital missions remain in the site selector. See [the observed-surface release and measured limitations](docs/OBSERVED_SURFACE_RELEASE.md), [asset provenance](docs/DRIVE1004_ASSETS.md), and `pnpm science:rover`.
+
+## Abrupt dust-devil research (v8)
+
+The `/hazards` lab now includes abrupt birth, delayed virtual detection, causal forecast selection, continuous contact evaluation, and matched return budgets. [Results and limitations](docs/VORTEX_V8_RESULTS.md), [verification](docs/VORTEX_V8_VERIFICATION.md). Current artifacts are under `public/data/hazards/vortex-v8/final/`; old runs are retained. Use `?lab=v7` for the previous lab. The new Earth analog wind dataset is explicitly separate from actual Mars imagery and from synthetic relocated vortex paths.

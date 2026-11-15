@@ -1,0 +1,30 @@
+{
+  "image": [
+    {
+      "event": "PIA26074",
+      "baselineRMSE": 1.9780248601045956,
+      "candidateRMSE": 2.936620882289533
+    },
+    {
+      "event": "PIA26528",
+      "baselineRMSE": 11.453469319028219,
+      "candidateRMSE": 9.224288999976444
+    },
+    {
+      "event": "PIA24039",
+      "baselineRMSE": 23.393895454533663,
+      "candidateRMSE": 23.945711895163697
+    }
+  ],
+  "pressure": {
+    "sol": 215,
+    "events": 3,
+    "legacyDetected": 1,
+    "candidateDetected": 1,
+    "legacyUnmatched": 0,
+    "candidateUnmatched": 0,
+    "hours": 13.36138888888889
+  },
+  "imagePass": false,
+  "pressurePass": false
+}
