@@ -1,5 +1,6 @@
 export const WORKSPACES = [
   {id:'home',page:'home',href:'/',name:'Mission Hub',short:'Hub',group:'Overview',description:'Your starting point for Mars.',icon:'orbit'},
+  {id:'navigate',page:'navigate',href:'/navigate',name:'Field Navigation',short:'Navigate',group:'Mission',description:'DEM, ground candidates and sand-aware routes in one view.',icon:'route'},
   {id:'explore',page:'explore',href:'/explore',name:'Surface Explorer',short:'Explore',group:'Explore',description:'Walk recorded Perseverance terrain.',icon:'footprints'},
   {id:'navcam',page:'explore',href:'/explore?surface=navcam',name:'Navcam close-up',short:'Navcam',group:'Explore',description:'Inspect the calibrated camera footprint.',icon:'scan'},
   {id:'dem',page:'explore',href:'/explore?analysis=separation',name:'Surface & features',short:'Features',group:'Explore',description:'Separate measured relief and raised candidates.',icon:'layers'},
