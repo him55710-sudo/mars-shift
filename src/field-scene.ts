@@ -4,6 +4,7 @@ import {heightAt} from './eva-motion';
 import type {NativeDEM} from './eva-motion';
 import type {Terrain} from './planner';
 import type {FieldZone} from './field-navigation';
+import {FIELD_COLORS} from './field-navigation';
 
 export type FieldOverlay={markerNumbers?:Record<string,number>;pixels:Uint8Array;paths:{cells:number[];color:string;dashed?:boolean;flow?:boolean}[];markers:FieldZone[];selectedId:string|null;revision:number;animate:boolean};
 
@@ -11,18 +12,18 @@ export type FieldOverlay={markerNumbers?:Record<string,number>;pixels:Uint8Array
 export function createFieldScene(t:Terrain,native:NativeDEM|null,min:number,overlay:FieldOverlay){
  const group=new THREE.Group(),animated:THREE.ShaderMaterial[]=[];
  for(const path of overlay.paths){
-  const data=groundRibbon(t,native,path.cells,min,path.flow?8:5);
+  const data=groundRibbon(t,native,path.cells,min,path.flow?4:2.5);
   for(let i=1;i<data.positions.length;i+=3)data.positions[i]+=.7;
   const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(data.positions,3));geometry.setAttribute('uv',new THREE.BufferAttribute(data.uv,2));geometry.setIndex(new THREE.BufferAttribute(data.indices,1));
   const material=new THREE.ShaderMaterial({uniforms:{uColor:{value:new THREE.Color(path.color)},uTime:{value:0},uFlow:{value:path.flow?1:0},uDashed:{value:path.dashed?1:0}},vertexShader:'varying vec2 vUv; varying float vCameraDistance; void main(){vUv=uv;vec4 mv=modelViewMatrix*vec4(position,1.);vCameraDistance=length(mv.xyz);gl_Position=projectionMatrix*mv;}',fragmentShader:`uniform vec3 uColor; uniform float uTime; uniform float uFlow; uniform float uDashed; varying vec2 vUv; varying float vCameraDistance;
    void main(){float edge=1.-smoothstep(.76,1.,abs(vUv.x-.5)*2.);float phase=mod(vUv.y-uTime*12.,22.);float arrow=1.-smoothstep(1.,2.5,abs(phase-(5.-abs(vUv.x-.5)*7.)));float dash=mix(1.,step(mod(vUv.y,12.),7.),uDashed);gl_FragColor=vec4(mix(uColor,vec3(1.),arrow*uFlow*.7),edge*dash*mix(.65,.95,uFlow)*smoothstep(120.,420.,vCameraDistance));
    #include <tonemapping_fragment>
    #include <colorspace_fragment>
-  }`,transparent:true,depthTest:false,depthWrite:false,side:THREE.DoubleSide});
+  }`,transparent:true,depthTest:true,depthWrite:false,side:THREE.DoubleSide});
   const mesh=new THREE.Mesh(geometry,material);mesh.renderOrder=5;group.add(mesh);if(path.flow)animated.push(material);
  }
  for(const [number,zone] of overlay.markers.entries()){
-  const color=zone.source!=='derived'?'#f17a82':zone.kind==='trap'?'#ec864a':zone.kind==='sand'?'#edb85d':'#e87879';
+  const color=zone.source!=='derived'?'#f17a82':FIELD_COLORS[zone.kind];
   const centre=heightAt(t,zone.point,native);if(centre===null)continue;
   const radius=zone.source==='derived'?Math.min(22,Math.max(7,Math.sqrt(zone.area/Math.PI))):zone.radius;
   const points:THREE.Vector3[]=[];
