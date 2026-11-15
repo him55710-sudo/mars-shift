@@ -2,3 +2,27 @@
 # Preserve their original bytes across Windows and Linux checkouts.
 /public/data/optical-model-v2.json -text
 /scripts/detect_optical.py -text
+
+# Recorded replay and frozen experimental hashes include literal source bytes.
+/public/data/hazards/observed-v6/** -text
+/public/data/hazards/escape-v5/** -text
+/public/data/hazards/v4-* -text
+/public/data/drive1004/calibrated-validation.json -text
+/public/data/drive1004/navigation-grid.json -text
+/public/sw.js -text
+/scripts/analyze_observed.ts -text
+/src/ObservedNavigator.tsx -text
+/src/RoverScene.tsx -text
+/src/dust-devil-geometry.ts -text
+/src/escape-metrics.ts -text
+/src/hazard-scene.ts -text
+/src/hazard-xr.ts -text
+/src/meda-detection.ts -text
+/src/mobility.ts -text
+/src/observed-escape.ts -text
+/src/observed-navigator.css -text
+/src/observed-replay.ts -text
+/src/observed-session.ts -text
+/src/observed-worker.ts -text
+/src/planner.ts -text
+/src/rover-navigation.ts -text

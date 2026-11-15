@@ -1,3 +1,5 @@
+> Observation/Navcam integration (2026-11-15): see [validation report](docs/OBSERVED_V6_RESULTS.md). `/hazards` now opens recorded MEDA/NASA replay and conditional local escape; archived orbital studies remain accessible.
+
 # MARS SHIFT
 
 Current terrain evidence: [DEM and raised-feature separation](docs/DEM_FEATURE_SEPARATION.md). Open `/explore?analysis=separation` or **Terrain** to compare registered source imagery, a metric DEM, separated raised candidates and isolated source-mesh patches. Candidate review can add a conservative exclusion to the existing route graph.

@@ -1,0 +1,4075 @@
+{
+  "selected": {
+    "window": 3,
+    "radiusMode": "last",
+    "processNoise": 0.08
+  },
+  "developmentEvent": "PIA26074",
+  "heldoutEvents": [
+    "PIA26528",
+    "PIA24039"
+  ],
+  "selection": [
+    {
+      "config": {
+        "window": 3,
+        "radiusMode": "last",
+        "processNoise": 0.08
+      },
+      "loss": 1.9511023219657044,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 1.7354160474559006,
+        "apparentWidthMAEpx": 0.43137254901960786,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 0.8029921654258612,
+            "apparentWidthMAEpx": 0.2777777777777778,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 1.6242664741234039,
+            "apparentWidthMAEpx": 0.47058823529411764,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.4639737897419285,
+            "apparentWidthMAEpx": 0.5625,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.696091585020099,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -2.116770845016049,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.0171648541092964,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.9776068376996818,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.40332991790910455,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.8208638947216969,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9528100433365125,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.0556779919613746,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 1.4947200051921072,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.02171260399904895,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.1262183974532718,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.014502250890700452,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.32503319979593925,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7299910252897917,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.7820600599413865,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.021110398727159918,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7453610173799916,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.5446449674770975,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.8105955036903651,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.6553532651917067,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.401050277288846,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.5064408042157993,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.8059689908346854,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.26646413055789253,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.04903852844120138,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.949615659018832,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.065738301770125,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9050735464987838,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.009182480270283,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.328448965083339,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.7749008767707437,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.6251204634337455,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.375542304232681,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.3588545591572938,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.5819871204215588,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 3.6955056600621674,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.7103072881640173,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.108474296197187,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 1.7032903463777984,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.17614585219973833,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.13900970460804274,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.176258082788536,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.12357302773170886,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.8089694667048661,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -3.096073810621533,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.9432851643402955,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -3.2739070185187984,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.7374848666612479,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 3,
+        "radiusMode": "median",
+        "processNoise": 0.08
+      },
+      "loss": 2.000121929808842,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 1.7354160474559006,
+        "apparentWidthMAEpx": 0.5294117647058824,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 0.8029921654258612,
+            "apparentWidthMAEpx": 0.3888888888888889,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 1.6242664741234039,
+            "apparentWidthMAEpx": 0.5882352941176471,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.4639737897419285,
+            "apparentWidthMAEpx": 0.625,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.696091585020099,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -2.116770845016049,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.0171648541092964,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.9776068376996818,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.40332991790910455,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.8208638947216969,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9528100433365125,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.0556779919613746,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 1.4947200051921072,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.02171260399904895,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.1262183974532718,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.014502250890700452,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.32503319979593925,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7299910252897917,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.7820600599413865,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.021110398727159918,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7453610173799916,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.5446449674770975,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.8105955036903651,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.6553532651917067,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.401050277288846,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.5064408042157993,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.8059689908346854,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.26646413055789253,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.04903852844120138,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.949615659018832,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.065738301770125,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9050735464987838,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.009182480270283,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.328448965083339,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.7749008767707437,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.6251204634337455,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.375542304232681,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.3588545591572938,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.5819871204215588,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 3.6955056600621674,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.7103072881640173,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.108474296197187,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 1.7032903463777984,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.17614585219973833,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.13900970460804274,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.176258082788536,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.12357302773170886,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.8089694667048661,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -3.096073810621533,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.9432851643402955,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -3.2739070185187984,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.7374848666612479,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 3,
+        "radiusMode": "linear",
+        "processNoise": 0.08
+      },
+      "loss": 2.1023731979473683,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 1.7354160474559006,
+        "apparentWidthMAEpx": 0.7339143009829351,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 0.8029921654258612,
+            "apparentWidthMAEpx": 0.4647831192226244,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 1.6242664741234039,
+            "apparentWidthMAEpx": 0.7740906933905392,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.4639737897419285,
+            "apparentWidthMAEpx": 0.9939994635302052,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.696091585020099,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -2.116770845016049,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.0171648541092964,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.9776068376996818,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.40332991790910455,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.8208638947216969,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9528100433365125,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.0556779919613746,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 1.4947200051921072,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.02171260399904895,
+            "widthErrorPx": 1.1585093167701848,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.1262183974532718,
+            "widthErrorPx": 1.54062111801242,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.014502250890700452,
+            "widthErrorPx": 0.9227329192546563,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.32503319979593925,
+            "widthErrorPx": 0.2577319587628857,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7299910252897917,
+            "widthErrorPx": -0.7422680412371143,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.7820600599413865,
+            "widthErrorPx": -0.7422680412371143,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.021110398727159918,
+            "widthErrorPx": -1.4628571428571449,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7453610173799916,
+            "widthErrorPx": -1.7704347826086972,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.5446449674770975,
+            "widthErrorPx": -2.07801242236025,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.8105955036903651,
+            "widthErrorPx": 0.15850931677018476,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.6553532651917067,
+            "widthErrorPx": 0.5406211180124201,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.401050277288846,
+            "widthErrorPx": 0.9227329192546563,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.5064408042157993,
+            "widthErrorPx": 0.5896585365853673,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.8059689908346854,
+            "widthErrorPx": 1.0037073170731716,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.26646413055789253,
+            "widthErrorPx": 1.4177560975609769,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.04903852844120138,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.949615659018832,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.065738301770125,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9050735464987838,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.009182480270283,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.328448965083339,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.7749008767707437,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.6251204634337455,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.375542304232681,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.3588545591572938,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.5819871204215588,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 3.6955056600621674,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.7103072881640173,
+            "widthErrorPx": 0.23850931677018217,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.108474296197187,
+            "widthErrorPx": 0.7006211180124184,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 1.7032903463777984,
+            "widthErrorPx": 2.162732919254654,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.17614585219973833,
+            "widthErrorPx": 0.6696585365853638,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.13900970460804274,
+            "widthErrorPx": 2.163707317073169,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.176258082788536,
+            "widthErrorPx": 2.6577560975609735,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.12357302773170886,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.8089694667048661,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -3.096073810621533,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.9432851643402955,
+            "widthErrorPx": -0.28780487804878074,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -3.2739070185187984,
+            "widthErrorPx": -0.6975609756097558,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.7374848666612479,
+            "widthErrorPx": -0.5428571428571454,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 5,
+        "radiusMode": "last",
+        "processNoise": 0.08
+      },
+      "loss": 2.2786989951472205,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 2.0630127206374165,
+        "apparentWidthMAEpx": 0.43137254901960786,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 1.1514339785274825,
+            "apparentWidthMAEpx": 0.2777777777777778,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 1.9946723500948864,
+            "apparentWidthMAEpx": 0.47058823529411764,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.8012774954563398,
+            "apparentWidthMAEpx": 0.5625,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6149423238001646,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9869320270639719,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8386364794250767,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.494978168024204,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.2236941556252532,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.944221039829472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.024297614413626434,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.3749439637774685,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.43801147736269286,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.009396541544788306,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.08767021360029048,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.060489473052825815,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.17377258995520606,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.061171558661953895,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.6985406817890407,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.1263332708525695,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9415800682447752,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8318601970812551,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.0355506398117313,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9841514808699685,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.8336915725240033,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.9378009542097061,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.4868409115539407,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.1968478220024963,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6714699132907072,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.16600367508488034,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 0.5550080752946087,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.6315314642173462,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.598419715256341,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 3.780465517336893,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.2815265103340607,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.4179797194789217,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 5.454635182759716,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.268566207617937,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.995691095863208,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 5.613201962484823,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.8879954950997444,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.9262891339111547,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.161231814870007,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9504886841466487,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.608373385934783,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 0.1918735619507288,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.46135726533862,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.310936798308603,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.437792711435918,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.9769773930020165,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -3.323371094520894,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.7106847511234946,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 5,
+        "radiusMode": "median",
+        "processNoise": 0.08
+      },
+      "loss": 2.3277186029903576,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 2.0630127206374165,
+        "apparentWidthMAEpx": 0.5294117647058824,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 1.1514339785274825,
+            "apparentWidthMAEpx": 0.5,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 1.9946723500948864,
+            "apparentWidthMAEpx": 0.5294117647058824,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.8012774954563398,
+            "apparentWidthMAEpx": 0.5625,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6149423238001646,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9869320270639719,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8386364794250767,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.494978168024204,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.2236941556252532,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.944221039829472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.024297614413626434,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.3749439637774685,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.43801147736269286,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.009396541544788306,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.08767021360029048,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.060489473052825815,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.17377258995520606,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.061171558661953895,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.6985406817890407,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.1263332708525695,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9415800682447752,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8318601970812551,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.0355506398117313,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9841514808699685,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.8336915725240033,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.9378009542097061,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.4868409115539407,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.1968478220024963,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6714699132907072,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.16600367508488034,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 0.5550080752946087,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.6315314642173462,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.598419715256341,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 3.780465517336893,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.2815265103340607,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.4179797194789217,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 5.454635182759716,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.268566207617937,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.995691095863208,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 5.613201962484823,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.8879954950997444,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.9262891339111547,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.161231814870007,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9504886841466487,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.608373385934783,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 0.1918735619507288,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.46135726533862,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.310936798308603,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.437792711435918,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.9769773930020165,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -3.323371094520894,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.7106847511234946,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 5,
+        "radiusMode": "linear",
+        "processNoise": 0.08
+      },
+      "loss": 2.358944144472172,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 2.0630127206374165,
+        "apparentWidthMAEpx": 0.5918628476695114,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 1.1514339785274825,
+            "apparentWidthMAEpx": 0.4620822131891757,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 1.9946723500948864,
+            "apparentWidthMAEpx": 0.6500337989541224,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.8012774954563398,
+            "apparentWidthMAEpx": 0.6760594257199897,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6149423238001646,
+            "widthErrorPx": -8.881784197001252e-16,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9869320270639719,
+            "widthErrorPx": -1.7763568394002505e-15,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8386364794250767,
+            "widthErrorPx": -1.0000000000000027,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.494978168024204,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.2236941556252532,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.944221039829472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.024297614413626434,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.3749439637774685,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.43801147736269286,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.009396541544788306,
+            "widthErrorPx": 0.6802721088435364,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.08767021360029048,
+            "widthErrorPx": 0.8503401360544203,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.060489473052825815,
+            "widthErrorPx": 0.020408163265304147,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.17377258995520606,
+            "widthErrorPx": 0.38226299694189425,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.061171558661953895,
+            "widthErrorPx": -0.5412844036697262,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.6985406817890407,
+            "widthErrorPx": -0.46483180428134663,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.1263332708525695,
+            "widthErrorPx": -0.8520710059171597,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9415800682447752,
+            "widthErrorPx": -0.8520710059171597,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8318601970812551,
+            "widthErrorPx": -0.8520710059171597,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.0355506398117313,
+            "widthErrorPx": -0.39618049054484583,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9841514808699685,
+            "widthErrorPx": -0.3025650627223424,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.8336915725240033,
+            "widthErrorPx": -0.20894963489983898,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.9378009542097061,
+            "widthErrorPx": -0.12801338702086973,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.4868409115539407,
+            "widthErrorPx": -0.010354023950222668,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.1968478220024963,
+            "widthErrorPx": 0.10730533912042439,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6714699132907072,
+            "widthErrorPx": 0.5052804827869934,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.16600367508488034,
+            "widthErrorPx": 0.8138801261829602,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 0.5550080752946087,
+            "widthErrorPx": 1.122479769578927,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.6315314642173462,
+            "widthErrorPx": 0.4556962025316409,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.598419715256341,
+            "widthErrorPx": 0.6835443037974631,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 3.780465517336893,
+            "widthErrorPx": -0.08860759493671466,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.2815265103340607,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.4179797194789217,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 5.454635182759716,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.268566207617937,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.995691095863208,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 5.613201962484823,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.8879954950997444,
+            "widthErrorPx": -0.31972789115646005,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.9262891339111547,
+            "widthErrorPx": -0.1496598639455744,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.161231814870007,
+            "widthErrorPx": 1.0204081632653113,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9504886841466487,
+            "widthErrorPx": 0.23617332965330284,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 1.608373385934783,
+            "widthErrorPx": 1.522791448164588,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 0.1918735619507288,
+            "widthErrorPx": 1.809409566675873,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.46135726533862,
+            "widthErrorPx": 1.5052804827869979,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.310936798308603,
+            "widthErrorPx": 1.8138801261829656,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.437792711435918,
+            "widthErrorPx": 2.1224797695789333,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.9769773930020165,
+            "widthErrorPx": 0.5102040816326552,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -3.323371094520894,
+            "widthErrorPx": 0.5102040816326561,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.7106847511234946,
+            "widthErrorPx": -0.34631737758880554,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 7,
+        "radiusMode": "last",
+        "processNoise": 0.08
+      },
+      "loss": 2.4837642852904525,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 2.2680780107806484,
+        "apparentWidthMAEpx": 0.43137254901960786,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 1.4248787550465973,
+            "apparentWidthMAEpx": 0.2777777777777778,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 2.1991234971955684,
+            "apparentWidthMAEpx": 0.47058823529411764,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.995763570895,
+            "apparentWidthMAEpx": 0.5625,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6149423238001646,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9869320270639719,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8386364794250767,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.494978168024204,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.2236941556252532,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.944221039829472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.22704204360923086,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7340006180959335,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.9047851279767656,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6042623074619087,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7507208840987687,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.1424059025338238,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.23417104709551495,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.5040279788181579,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.4209961196985432,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.10655964873353696,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9105526001769704,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.789578883064678,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.8079698252910248,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.661681820611193,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.4163330665271587,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.2396716134328472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9209836090636827,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.7632625577988392,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.2560833092499024,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9800347924998505,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.4884407635761363,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.05469025069021427,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.7865190182396873,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.733505336830717,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9376401381817914,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.9395576843111257,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.841677484576394,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.596426481098206,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 4.462305891807432,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 6.218571280893002,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.952278267200427,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 4.421569988175293,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 6.0875107512976,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.3577072472976397,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.5817169523941175,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.7313421317184066,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.6799256690213724,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.39209602449614067,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.250295469509183,
+            "widthErrorPx": 1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.1345492375033928,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -2.145828679756846,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.8908996513056309,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 7,
+        "radiusMode": "median",
+        "processNoise": 0.08
+      },
+      "loss": 2.5033721284277073,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 2.2680780107806484,
+        "apparentWidthMAEpx": 0.47058823529411764,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 1.4248787550465973,
+            "apparentWidthMAEpx": 0.3888888888888889,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 2.1991234971955684,
+            "apparentWidthMAEpx": 0.47058823529411764,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.995763570895,
+            "apparentWidthMAEpx": 0.5625,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6149423238001646,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9869320270639719,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8386364794250767,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.494978168024204,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.2236941556252532,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.944221039829472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.22704204360923086,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7340006180959335,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.9047851279767656,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6042623074619087,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7507208840987687,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.1424059025338238,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.23417104709551495,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.5040279788181579,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.4209961196985432,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.10655964873353696,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9105526001769704,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.789578883064678,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.8079698252910248,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.661681820611193,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.4163330665271587,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.2396716134328472,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9209836090636827,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.7632625577988392,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.2560833092499024,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9800347924998505,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.4884407635761363,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.05469025069021427,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.7865190182396873,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.733505336830717,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9376401381817914,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.9395576843111257,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.841677484576394,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.596426481098206,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 4.462305891807432,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 6.218571280893002,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.952278267200427,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 4.421569988175293,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 6.0875107512976,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.3577072472976397,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.5817169523941175,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.7313421317184066,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.6799256690213724,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.39209602449614067,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.250295469509183,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.1345492375033928,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -2.145828679756846,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.8908996513056309,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    },
+    {
+      "config": {
+        "window": 7,
+        "radiusMode": "linear",
+        "processNoise": 0.08
+      },
+      "loss": 2.5037916800795186,
+      "result": {
+        "event": "PIA26074",
+        "method": "robust",
+        "cadenceSeconds": 4,
+        "cadenceKind": "PUBLISHED",
+        "samples": 51,
+        "positionRMSEpx": 2.2680780107806484,
+        "apparentWidthMAEpx": 0.4714273385977407,
+        "directionSignAccuracy": 1,
+        "byLead": [
+          {
+            "leadSeconds": 4,
+            "samples": 18,
+            "positionRMSEpx": 1.4248787550465973,
+            "apparentWidthMAEpx": 0.411660769764583,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 8,
+            "samples": 17,
+            "positionRMSEpx": 2.1991234971955684,
+            "apparentWidthMAEpx": 0.5000548065662571,
+            "directionSignAccuracy": 1
+          },
+          {
+            "leadSeconds": 12,
+            "samples": 16,
+            "positionRMSEpx": 2.995763570895,
+            "apparentWidthMAEpx": 0.5082480438184943,
+            "directionSignAccuracy": 1
+          }
+        ],
+        "rows": [
+          {
+            "origin": 8,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.3138847729518375,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.928827096751661,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 8,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.3949822319008263,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6149423238001646,
+            "widthErrorPx": -8.881784197001252e-16,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9869320270639719,
+            "widthErrorPx": -1.7763568394002505e-15,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 12,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.8386364794250767,
+            "widthErrorPx": -1.0000000000000027,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.494978168024204,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.2236941556252532,
+            "widthErrorPx": -1,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 16,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.944221039829472,
+            "widthErrorPx": 0,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.22704204360923086,
+            "widthErrorPx": -0.9999999999999982,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7340006180959335,
+            "widthErrorPx": 1.7763568394002505e-15,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 20,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.9047851279767656,
+            "widthErrorPx": 1.7763568394002505e-15,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.6042623074619087,
+            "widthErrorPx": 0.46242774566473877,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.7507208840987687,
+            "widthErrorPx": 0.5491329479768767,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 24,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.1424059025338238,
+            "widthErrorPx": -0.3641618497109853,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.23417104709551495,
+            "widthErrorPx": 0.3260869565217366,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.5040279788181579,
+            "widthErrorPx": -0.6195652173913073,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 28,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.4209961196985432,
+            "widthErrorPx": -0.5652173913043512,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.10655964873353696,
+            "widthErrorPx": -0.790136411332635,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9105526001769704,
+            "widthErrorPx": -0.7639034627492141,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 32,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.789578883064678,
+            "widthErrorPx": -0.7376705141657931,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -0.8079698252910248,
+            "widthErrorPx": -0.4060755549785835,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.661681820611193,
+            "widthErrorPx": -0.3152018694015366,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 36,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -2.4163330665271587,
+            "widthErrorPx": -0.2243281838244897,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.2396716134328472,
+            "widthErrorPx": -0.08557998811389567,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -1.9209836090636827,
+            "widthErrorPx": 0.050569992976383205,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 40,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -1.7632625577988392,
+            "widthErrorPx": 0.18671997406666208,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.2560833092499024,
+            "widthErrorPx": 0.11802286482850288,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -0.9800347924998505,
+            "widthErrorPx": 0.2693342299932624,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 44,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.4884407635761363,
+            "widthErrorPx": 0.4206455951580219,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.05469025069021427,
+            "widthErrorPx": 0.16799642387872726,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.7865190182396873,
+            "widthErrorPx": 0.29600530999822716,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 48,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.733505336830717,
+            "widthErrorPx": -0.5759858038822729,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 0.9376401381817914,
+            "widthErrorPx": 0.4612440660917674,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 2.9395576843111257,
+            "widthErrorPx": -0.3455589220220183,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 52,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 4.841677484576394,
+            "widthErrorPx": -0.15236191013580402,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.596426481098206,
+            "widthErrorPx": -0.6583629893238552,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 4.462305891807432,
+            "widthErrorPx": -0.5302491103202973,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 56,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 6.218571280893002,
+            "widthErrorPx": -0.40213523131673945,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.952278267200427,
+            "widthErrorPx": -0.5375722543352648,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 4.421569988175293,
+            "widthErrorPx": -0.45086705202312594,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 60,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 6.0875107512976,
+            "widthErrorPx": 0.6358381502890129,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 2.3577072472976397,
+            "widthErrorPx": -0.10105907872910613,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 3.5817169523941175,
+            "widthErrorPx": 1.0597167283399251,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 64,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": 2.7313421317184066,
+            "widthErrorPx": 1.2204925354089564,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": 1.6799256690213724,
+            "widthErrorPx": 1.2325505009032707,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": 0.39209602449614067,
+            "widthErrorPx": 1.439481031368043,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 68,
+            "lead": 12,
+            "steps": 3,
+            "positionErrorPx": -0.250295469509183,
+            "widthErrorPx": 1.6464115618328155,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.1345492375033928,
+            "widthErrorPx": 0.7203132676357544,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 72,
+            "lead": 8,
+            "steps": 2,
+            "positionErrorPx": -2.145828679756846,
+            "widthErrorPx": 0.8113458370661499,
+            "directionCorrect": 1
+          },
+          {
+            "origin": 76,
+            "lead": 4,
+            "steps": 1,
+            "positionErrorPx": -1.8908996513056309,
+            "widthErrorPx": 0.3424657534246567,
+            "directionCorrect": 1
+          }
+        ]
+      }
+    }
+  ],
+  "sourceSHA256": "f9a235e82404644679423c84d8734e60579a2f47c74d28b2545a3a94f1a97aa5",
+  "protocolSHA256": "50eb80758ad9a970efe358d2c0111a14d57cf8621b1f56671a423758970ab6ec"
+}

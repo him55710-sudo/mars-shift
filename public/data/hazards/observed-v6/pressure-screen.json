@@ -1,0 +1,50 @@
+{
+  "kind": "CAUSAL_POINT_SENSOR_DIAGNOSTIC",
+  "parameters": {
+    "baselineSeconds": 30,
+    "minSamples": 20,
+    "floorPa": 0.8,
+    "madMultiplier": 4,
+    "consecutive": 3,
+    "maxGapSeconds": 1.1
+  },
+  "results": [
+    {
+      "event": "57a",
+      "detections": [
+        {
+          "time": -3,
+          "dropPa": 1.9850000000000136,
+          "thresholdPa": 0.8
+        }
+      ],
+      "windowMinimumTime": 0,
+      "firstCandidateLeadToWindowMinimum": 3
+    },
+    {
+      "event": "57b",
+      "detections": [
+        {
+          "time": -10,
+          "dropPa": 1.07000000000005,
+          "thresholdPa": 0.8
+        }
+      ],
+      "windowMinimumTime": 0,
+      "firstCandidateLeadToWindowMinimum": 10
+    },
+    {
+      "event": "215",
+      "detections": [
+        {
+          "time": -1,
+          "dropPa": 1.80499999999995,
+          "thresholdPa": 0.8
+        }
+      ],
+      "windowMinimumTime": 0,
+      "firstCandidateLeadToWindowMinimum": 1
+    }
+  ],
+  "limitation": "Lead to window pressure minimum, NOT warning to the front boundary. Curated event windows cannot estimate false alarms or missed-event rates. No position or heading is inferred."
+}

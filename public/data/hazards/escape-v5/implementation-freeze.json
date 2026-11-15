@@ -1,0 +1,36 @@
+{
+  "manifestSHA256": "4b6ab0692b43ddc1cf7e57d16e56636d0339c75477229f3b007e466b7acc85a1",
+  "protocolSHA256": "1220e7501871766fc2e7fdb748b931bdb8c26f0aaa5c18f9f160d4cd002d084d",
+  "files": {
+    "src/hazard-mpc.ts": "8e967ee991118d01a8490a12a82ba5e639cda26de37c20d11c6f5b34c47c7241",
+    "src/hazard-planner.ts": "a0ba97616451b61c3cfbaf161b59cb09f007ad43ccd186dabc23547143ca4343",
+    "src/escape-metrics.ts": "ab4ef155ff05b8c3159c5eb0a4a675baf19c2186138d0a573e73fa8e4cfbc767",
+    "src/dust-devil-geometry.ts": "56bb54c23e8308aebbf8224654a679211739de0f213187f107e29bf8dfe61730",
+    "src/local-return.ts": "09ea919149c4ebb505cdcec9e2e94340cb995f8d842fcf074812c01ae7a9ad6c",
+    "src/local-dust-tracker.ts": "3667b2d11f8ed4be20ab8cad43ad1f8b2c6e2201e615c4de3501531630d08d05",
+    "src/hazard-tracker.ts": "fc7fe1c8ea91dc62495715cd66a8d40dcccb350075442045eb25197694e54aca",
+    "src/planner.ts": "76a8d2795aad94b3803c28f81b166fdfc4fac04a36bfbe47ca89bc736799563a",
+    "src/mobility.ts": "464db8031ea8052da148ce9f578b5725d4e4f4d0bdb4f5cdd9f53b42aee89d17",
+    "scripts/analyze_escape_v5.ts": "c36f4b337f7f09744f45d8554728176a1ef3acef9508638730cd51c65aa0181a"
+  },
+  "config": {
+    "horizon": 30,
+    "step": 1,
+    "groundWeight": 1.5,
+    "uncertainty": true,
+    "maxExpanded": 20000,
+    "maxSensorAge": 6,
+    "localizationSigma": 1,
+    "policy": "local-matched",
+    "exposureWeight": 35,
+    "coastSeconds": 16,
+    "localTracker": {
+      "window": 5,
+      "radiusMode": "last",
+      "processNoise": 0.08
+    },
+    "uncertaintyWeight": 0.5,
+    "continuousContact": true
+  },
+  "selectedBottleneck": "Estimation vs perfect-information gap with common 6 s latency. Reduce short-window velocity noise using five causal fixes (no added startup latency); retain candidate bank, horizon and weights. Exact candidate contact scoring separately audited."
+}

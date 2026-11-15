@@ -1,0 +1,122 @@
+{
+  "searchResultsReviewed": 25,
+  "workstreams": 3,
+  "uniqueUrls": 23,
+  "entries": [
+    {
+      "title": "Physical characterization of dust devils at Jezero crater from Mars2020/MEDA data",
+      "url": "https://doi.org/10.5194/epsc2022-230",
+      "workstream": "dust-research-physical"
+    },
+    {
+      "title": "Seasonal variation of vortex and dust devil activity on Jezero and physical characterization of selected events",
+      "url": "https://doi.org/10.5194/egusphere-egu22-6027",
+      "workstream": "dust-research-physical"
+    },
+    {
+      "title": "Observations from the High Resolution Imaging Science Experiment (HiRISE): Martian dust devils in Gusev and Russell craters",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009je003498",
+      "workstream": "dust-research-physical"
+    },
+    {
+      "title": "Active dust devils in Gusev crater, Mars: Observations from the Mars Exploration Rover Spirit",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2006JE002743",
+      "workstream": "dust-research-physical"
+    },
+    {
+      "title": "Field Measurements of Terrestrial and Martian Dust Devils Jim Murphy 1, Kathryn Steakley 1, Matt Balme 2, Gregoire Deprez , Francesca",
+      "url": "https://oro.open.ac.uk/47498/1/REVISED-08Aug-Revr1Rev2.pdf",
+      "workstream": "dust-research-physical"
+    },
+    {
+      "title": "Table 1 Derived vortex parameters for the dust devil at 11.02 LTST on September 27, 2021",
+      "url": "https://www.nature.com/articles/s41467-022-35100-z/tables/1",
+      "workstream": "dust-research-sensing"
+    },
+    {
+      "title": "N/A",
+      "url": "http://www.nature.com/articles/s41467-022-35100-z.pdf",
+      "workstream": "dust-research-sensing"
+    },
+    {
+      "title": "Experiencing a Dust Devil",
+      "url": "https://science.nasa.gov/missions/mars-2020-perseverance/experiencing-a-dust-devil/",
+      "workstream": "dust-research-sensing"
+    },
+    {
+      "title": "Martian Wind and turbulence heard by the SuperCam microphone on the perseverance rover",
+      "url": "https://doi.org/10.1121/10.0018841",
+      "workstream": "dust-research-sensing"
+    },
+    {
+      "title": "Convective vortices and dust devils detected and characterized by Mars 2020",
+      "url": "https://doi.org/10.1002/essoar.10512158.1",
+      "workstream": "dust-research-sensing"
+    },
+    {
+      "title": "Walking on Mars",
+      "url": "https://doi.org/10.1038/31374",
+      "workstream": "dust-research-mobility"
+    },
+    {
+      "title": "Motion Planning in Dynamic Environments Using Velocity Obstacles",
+      "url": "https://doi.org/10.1177/027836499801700706",
+      "workstream": "dust-research-mobility"
+    },
+    {
+      "title": "Human locomotion and workload for simulated lunar and Martian environments - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11541642/",
+      "workstream": "dust-research-mobility"
+    },
+    {
+      "title": "Human locomotion and energetics in simulated partial gravity",
+      "url": "http://hdl.handle.net/1721.1/13172",
+      "workstream": "dust-research-mobility"
+    },
+    {
+      "title": "The JSC Scientific and Technical Information Center is providing you the article you requested",
+      "url": "https://ntrs.nasa.gov/api/citations/20110003409/downloads/Norcross%20et%20al%202010%2C%20Metabolic%20costs%20%26%20biomech%20of%20inclined%20ambulation%20%26%20exploration%20tasks%20in%20a%20planet%20suit.pdf",
+      "workstream": "dust-research-mobility"
+    },
+    {
+      "title": "Catalog of pressure drops, vortices and dust devils on Jezero crater, Mars, Ls=6-213 plus Large Eddy Simulation Movie",
+      "url": "https://doi.org/10.5281/zenodo.7315862",
+      "workstream": "dust-followup-0"
+    },
+    {
+      "title": "Vortices and Dust Devils at Jezero crater after one year of measurements with MEDA on Mars 202",
+      "url": "https://doi.org/10.5194/egusphere-egu23-6062",
+      "workstream": "dust-followup-0"
+    },
+    {
+      "title": "Convective vortices and dust devils detected and characterized by Mars 2020",
+      "url": "https://doi.org/10.48577/jpl.ujrhqs",
+      "workstream": "dust-followup-0"
+    },
+    {
+      "title": "Convective Vortices and Dust Devils Detected and Characterized by Mars 2020 (Journal Article) | OSTI.GOV",
+      "url": "https://www.osti.gov/biblio/1924114",
+      "workstream": "dust-followup-0"
+    },
+    {
+      "title": "The sound of a Martian dust devil | Nature Communications",
+      "url": "https://www.nature.com/articles/s41467-022-35100-z",
+      "workstream": "dust-followup-1"
+    },
+    {
+      "title": "Fig. 2: Acoustic and multi-instrument recording of the direct dust devil encounter. | Nature Communications",
+      "url": "https://www.nature.com/articles/s41467-022-35100-z/figures/2",
+      "workstream": "dust-followup-1"
+    },
+    {
+      "title": "Murdochetal_SupplementaryInformation_R2++",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-022-35100-z/MediaObjects/41467_2022_35100_MOESM1_ESM.pdf",
+      "workstream": "dust-followup-1"
+    },
+    {
+      "title": "Peer Review File",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-022-35100-z/MediaObjects/41467_2022_35100_MOESM2_ESM.pdf",
+      "workstream": "dust-followup-1"
+    }
+  ]
+}

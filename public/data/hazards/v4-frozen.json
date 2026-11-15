@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 4,
+  "status": "SIMULATION_ONLY",
+  "config": {
+    "horizon": 30,
+    "step": 1,
+    "groundWeight": 1.5,
+    "uncertainty": true,
+    "maxExpanded": 20000,
+    "maxSensorAge": 6,
+    "localizationSigma": 1,
+    "policy": "local-matched",
+    "exposureWeight": 35,
+    "coastSeconds": 16,
+    "localTracker": {
+      "window": 3,
+      "radiusMode": "last",
+      "processNoise": 0.08
+    },
+    "uncertaintyWeight": 0.5
+  },
+  "accelerationNoise": 0.08,
+  "selection": [
+    {
+      "config": {
+        "horizon": 30,
+        "step": 1,
+        "groundWeight": 1.5,
+        "uncertainty": true,
+        "maxExpanded": 20000,
+        "maxSensorAge": 6,
+        "localizationSigma": 1,
+        "policy": "local-matched",
+        "exposureWeight": 35,
+        "coastSeconds": 16,
+        "localTracker": {
+          "window": 3,
+          "radiusMode": "last",
+          "processNoise": 0.08
+        },
+        "uncertaintyWeight": 0.5
+      },
+      "summary": {
+        "episodes": 72,
+        "exposureSeconds": 1.0069444444444444,
+        "exposedEpisodes": 34,
+        "penetrationMetreSeconds": 4.335497566024518,
+        "holdSeconds": 2.6666666666666665,
+        "unnecessaryHoldSeconds": 1.9722222222222223,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 72,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 26.880481084284447,
+        "groundRiskMetres": 10.446361882167437,
+        "progressMetres": 18.061612493474268,
+        "reentries": 0,
+        "firstExitSeconds": 16.610294117647058,
+        "exitSamples": 34,
+        "replanMs": {
+          "p95": 26.280500000008033,
+          "max": 96.7777999999962
+        }
+      },
+      "loss": 1.1055555555555556
+    },
+    {
+      "config": {
+        "horizon": 30,
+        "step": 1,
+        "groundWeight": 1.5,
+        "uncertainty": true,
+        "maxExpanded": 20000,
+        "maxSensorAge": 6,
+        "localizationSigma": 1,
+        "policy": "local-matched",
+        "exposureWeight": 35,
+        "coastSeconds": 16,
+        "localTracker": {
+          "window": 3,
+          "radiusMode": "last",
+          "processNoise": 0.08
+        },
+        "uncertaintyWeight": 0.15
+      },
+      "summary": {
+        "episodes": 72,
+        "exposureSeconds": 1.15625,
+        "exposedEpisodes": 39,
+        "penetrationMetreSeconds": 4.817110016112611,
+        "holdSeconds": 2.4722222222222223,
+        "unnecessaryHoldSeconds": 1.5833333333333333,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 72,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 26.995185446440885,
+        "groundRiskMetres": 10.460656343633808,
+        "progressMetres": 18.595012810188525,
+        "reentries": 0,
+        "firstExitSeconds": 17.903846153846153,
+        "exitSamples": 39,
+        "replanMs": {
+          "p95": 39.525799999999435,
+          "max": 141.44049999999697
+        }
+      },
+      "loss": 1.2354166666666666
+    }
+  ],
+  "developmentSeeds": [
+    8101,
+    8124
+  ],
+  "heldoutSeeds": [
+    9101,
+    9190
+  ],
+  "resources": "SAME controller, candidate bank, fixed reserve, consumption, continuous return connectors, 2-second commitment checks at 0.25 s in ALL arms",
+  "protocolSHA256": "50eb80758ad9a970efe358d2c0111a14d57cf8621b1f56671a423758970ab6ec",
+  "sourcesSHA256": "f9a235e82404644679423c84d8734e60579a2f47c74d28b2545a3a94f1a97aa5"
+}

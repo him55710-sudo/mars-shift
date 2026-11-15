@@ -1,0 +1,142 @@
+{
+  "frozenAt": "2026-11-15T01:56:03.891800+00:00",
+  "cases": [
+    {
+      "id": "N00",
+      "event": "57a",
+      "heading": 0.37,
+      "warning": 10,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": -1,
+      "truthSpeedSigma": 1
+    },
+    {
+      "id": "N01",
+      "event": "57a",
+      "heading": 0.37,
+      "warning": 25,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": 1,
+      "truthSpeedSigma": -1
+    },
+    {
+      "id": "N02",
+      "event": "57a",
+      "heading": 1.94,
+      "warning": 10,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": 1,
+      "truthSpeedSigma": 1
+    },
+    {
+      "id": "N03",
+      "event": "57a",
+      "heading": 1.94,
+      "warning": 25,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": -1,
+      "truthSpeedSigma": -1
+    },
+    {
+      "id": "N04",
+      "event": "57a",
+      "heading": 4.51,
+      "warning": 10,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": -1,
+      "truthSpeedSigma": 1
+    },
+    {
+      "id": "N05",
+      "event": "57a",
+      "heading": 4.51,
+      "warning": 25,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": 1,
+      "truthSpeedSigma": -1
+    },
+    {
+      "id": "N06",
+      "event": "57b",
+      "heading": 0.37,
+      "warning": 10,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": 1,
+      "truthSpeedSigma": 1
+    },
+    {
+      "id": "N07",
+      "event": "57b",
+      "heading": 0.37,
+      "warning": 25,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": -1,
+      "truthSpeedSigma": -1
+    },
+    {
+      "id": "N08",
+      "event": "57b",
+      "heading": 1.94,
+      "warning": 10,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": -1,
+      "truthSpeedSigma": 1
+    },
+    {
+      "id": "N09",
+      "event": "57b",
+      "heading": 1.94,
+      "warning": 25,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": 1,
+      "truthSpeedSigma": -1
+    },
+    {
+      "id": "N10",
+      "event": "57b",
+      "heading": 4.51,
+      "warning": 10,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": 1,
+      "truthSpeedSigma": 1
+    },
+    {
+      "id": "N11",
+      "event": "57b",
+      "heading": 4.51,
+      "warning": 25,
+      "walkingSpeed": 0.6,
+      "truthSizeSigma": -1,
+      "truthSpeedSigma": -1
+    }
+  ],
+  "conditions": {
+    "reactionSeconds": 6,
+    "marginMetres": 1,
+    "replanSeconds": 2,
+    "horizonSeconds": 30,
+    "oxygenSeconds": 300,
+    "batterySeconds": 300,
+    "fixedReserveSeconds": 60,
+    "missionSeconds": 240,
+    "returnGoalAtSeconds": 50,
+    "finishLimitSeconds": 120,
+    "contact": "Continuous piecewise-linear disk intersection; physical-fit radius plus 1 m margin",
+    "warning": "Initial stationary nominal front boundary arrival",
+    "heading": "Assumed local north toward east"
+  },
+  "models": {
+    "Baseline": "Same feasible trajectory bank, minimizes mission distance with identical constraints",
+    "Dynamic": "Nominal conditional contact first, then mission distance",
+    "MARS_SHIFT": "Worst contact across nominal and four \u00b11 sigma diameter/speed corners, then nominal contact and mission distance"
+  },
+  "limitations": [
+    "12 synthetic relocations using 2 already published MEDA fits; not 12 independent observations.",
+    "All models use retrospective fitted parameters; no real-time 2D position tracking is validated.",
+    "Truth perturbations are fixed sensitivity cases, not newly observed future trajectories.",
+    "Local Navcam footprint is bounded; not registered to orbital DEM, NOAH or thermal inertia.",
+    "Actual return completion is measured in the simulated local graph; no injury or safety probability.",
+    "The 3 movies/63 frames were used previously; native-cadence re-evaluation is not a new independent holdout.",
+    "Sol 215 instrument window is newly imported, but its published fit is already known and its invalid radius sigma excludes it from navigation."
+  ]
+}
