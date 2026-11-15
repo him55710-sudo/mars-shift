@@ -1,4 +1,6 @@
 import EvacuationVisor from './EvacuationVisor';
+import {lazy,Suspense} from 'react';
+const MetricVortexReplay=lazy(()=>import('./MetricVortexReplay'));
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowDownToLine,ArrowRight,ChevronRight,Eye,FlaskConical,Map,Pause,Play,RotateCcw,ShieldAlert,Wind} from 'lucide-react';
 import TerrainScene,{useSurfaceTexture} from './TerrainScene';
@@ -83,6 +85,7 @@ export default function HazardNavigator(props:{terrain:Terrain;region:string;onR
  const [archive,setArchive]=useState(()=>new URLSearchParams(location.search).get("archive")==="1");
  const [lab,setLab]=useState(()=>!new URLSearchParams(location.search).has("archive"));
  const [v8,setV8]=useState(()=>new URLSearchParams(location.search).get('lab')!=='v7');
+ if(new URLSearchParams(location.search).get('metric')==='sol215')return <Suspense fallback={<p>Loading recorded metric observations…</p>}><MetricVortexReplay/></Suspense>;
  if(!new URLSearchParams(location.search).has('lab')&&!new URLSearchParams(location.search).has('archive'))return <EvacuationVisor/>;
  if(lab)return <EncounterLab key={String(v8)} v8={v8} v9={new URLSearchParams(location.search).get('lab')==='v9'} onPrevious={()=>{if(new URLSearchParams(location.search).get('lab')==='v9')location.href='/hazards';else setV8(v=>!v);}} onRecorded={()=>setLab(false)} onArchive={()=>{setLab(false);setArchive(true);}}/>;
  return archive?<><button className="obs-return" onClick={()=>setArchive(false)}>← Recorded observations & Navcam escape</button><ArchivedHazardNavigator {...props}/></>:<><button className="obs-return" onClick={()=>setLab(true)}>← 거리·방향 배치 실험</button><ObservedNavigator onArchive={()=>setArchive(true)}/></>;

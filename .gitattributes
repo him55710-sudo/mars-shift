@@ -59,3 +59,17 @@
 /src/local-dust-tracker.ts text eol=crlf
 /src/hazard-tracker.ts text eol=crlf
 /public/data/hazards/local-observations.json text eol=crlf
+
+# v12 literal experimental source and data bytes.
+/public/data/hazards/metric-v12/** -text whitespace=cr-at-eol
+/src/metric-vortex-v12.ts -text
+/src/ranged-tracker-v12.ts -text
+/src/vendor/nasa-cahvore.js -text
+/scripts/prepare_metric_v12.py -text
+/scripts/analyze_metric_v12.ts -text
+/scripts/analyze_ranged_v12.ts -text
+
+# Do not reformat upstream PDS labels or vendored license/code bytes.
+/public/data/hazards/metric-v12/*.xml -text whitespace=cr-at-eol,-blank-at-eol
+/src/vendor/nasa-cahvore.js -text whitespace=cr-at-eol,-blank-at-eof
+/src/vendor/NASA-CAMERA-LICENSE.txt -text whitespace=cr-at-eol,-blank-at-eof

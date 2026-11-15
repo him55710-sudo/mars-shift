@@ -1,0 +1,20 @@
+{
+  "files": {
+    "paper.xml": "417ff73f751a14b67eddb5403542809195be5c990a8c35318aae1c724bfa7c5e",
+    "supplementary.zip": "f2778f2b547550ea929c7737bd4daa9d2295306606855f903b1472c7dc164497",
+    "41467_2022_35100_MOESM1_ESM.pdf": "c07b322784e230721be871ddf5e437209a0f418ed7b13594902249b8b2025829",
+    "41467_2022_35100_MOESM2_ESM.pdf": "d3ed4dbf1c107508bcc8e110eab0205135e16d0a39b95b31f47a6f2e72e08f7f",
+    "41467_2022_35100_MOESM3_ESM.xlsx": "cbbe0171a6ab05a265b4ea1077b5215085a32b4adf5546c030535dd792227ecb"
+  },
+  "registration": {
+    "registration-0.json": "6d57bde686f15159634a14c12a21673afe96a3637be3e456376222a8fe7f1af3",
+    "registration-1.json": "8219f1447b513547f102659527e0b38a0a68dd34b078fe997d292d0603d437af",
+    "registration-2.json": "0dccff9f30413964deeae77cc74adb6496983dfd0315f0a3d56cad897b4632ac",
+    "registration-3.json": "beec2245902cec2d32518781df99c04fd5e592b0c30e907ae73d0160661663dc"
+  },
+  "excluded": [
+    "paper.html",
+    "supplement.pdf"
+  ],
+  "excludedReason": "Small HTML responses, not the requested scientific content; never used."
+}
