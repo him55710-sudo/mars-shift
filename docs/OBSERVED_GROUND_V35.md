@@ -25,11 +25,11 @@ These are sample-coverage figures, not a continuous surface accuracy guarantee. 
 
 ## Verification
 
-- `pnpm test`: 55 files, 388 tests passed. Added actual-data coverage, swept movement along both route legs, metre-registration/NoData masking, and invalidation checks. The new raster test checks every pixel with aggregate assertions to avoid hundreds of thousands of assertion allocations. Existing science checks were not weakened.
+- `pnpm test`: 55 files, 388 tests passed. Added actual-data coverage, swept movement along both route legs, metre-registration/NoData masking, and invalidation checks. The new raster test checks every pixel with aggregate assertions to avoid hundreds of thousands of assertion allocations. Existing science assertions were not changed. After merging the concurrent orbital-clarity release, the suite contains 395 checks; shared-host CPU contention exceeded the default five-second limit in four existing numerical tests. The integrated run uses a 20-second per-test timeout, `pnpm test --testTimeout=20000` passed all 395 tests in 56 files (72.39 seconds), with all assertions retained.
 - `pnpm build`: TypeScript, Vite, static packaging and native-asset checks. All 66 calibrated assets / 1,045,833 source triangles retain their SHA-256 identities.
 - Browser: native ground loaded; Shift+W moved 1.10 m without crossing the configured support constraint; inserting a simulated obstacle updated the route from 19 to 25 outbound cells after walking, with 49 warning cells. Removing the test obstacle restored the route.
 - Browser: 390x844 layout has no horizontal overflow; mobile provenance stays below controls. Layer switching does not change crew position or the navigation graph.
-- Local five-second camera rotation: 58.94 fps at 1280x800, DPR 1, with photo context enabled; 59.35 fps at 713x667, DPR 1.25, before enabling that context. These are local rehearsal measurements, not a minimum FPS guarantee for other hardware or network conditions. Idle rendering remains event-driven.
+- Local five-second camera rotation: 59.87 fps at 1280x800, DPR 1, with photo context enabled; 59.35 fps at 713x667, DPR 1.25, before enabling that context. These are local rehearsal measurements, not a minimum FPS guarantee for other hardware or network conditions. Idle rendering remains event-driven.
 
 ## Sources and limits
 
