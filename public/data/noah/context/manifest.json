@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "width": 256,
+  "height": 256,
+  "cellSize": 93.75,
+  "bounds": [
+    4348909.037914526,
+    1082211.6170900527,
+    4372909.037914526,
+    1106211.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "focusBounds": [
+    4360409.037914526,
+    1093711.6170900527,
+    4361409.037914526,
+    1094711.6170900527
+  ],
+  "dataType": "float32",
+  "byteOrder": "little-endian",
+  "verticalUnits": "metres",
+  "layout": "pixel centres; rows north to south",
+  "binary": "dem.bin",
+  "image": "optical.webp",
+  "binarySha256": "320519b884ced8e7ff39f81ffac843e7ce6ed1846a18485973548de4d5d4b371",
+  "imageSha256": "529ebe600d9ba85dd841edd10dbde26a2bc7c973665f6992fdd038fdd4278f12",
+  "demSource": {
+    "url": "https://planetarymaps.usgs.gov/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+    "credit": "NASA MRO CTX / USGS Mars 2020 Science Investigation DEM Mosaic",
+    "nativeResolutionMetres": [
+      20.0,
+      20.0
+    ],
+    "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "sourceSha256": "ba7f706ea1b5d63a562f28a7dcf7a7f3c79bce7f048e6974b57e8a33c30d1ba2",
+    "sourceBytes": 90345300,
+    "publishedSourceChecksumVerified": false
+  },
+  "opticalSource": {
+    "bounds": [
+      4348909.037914526,
+      1082211.6170900527,
+      4372909.037914526,
+      1106211.6170900527
+    ],
+    "credit": "Source: NASA/JPL/MSSS/Caltech Murray Lab/Esri",
+    "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "imageResolutionMetres": 23.4375,
+    "processing": "Observed CTX tile mosaic reprojected to the original planning CRS; bilinear resampling, no generated texture",
+    "service": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer",
+    "sourceCRS": "GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"D_Mars_2000_Sphere\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190.0,0.0]],PRIMEM[\"Reference_Meridian\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+    "tileLevel": 10,
+    "tileResolutionDegrees": 0.00034332275390625,
+    "tiles": [
+      {
+        "bytes": 115250,
+        "sha256": "6073ef3188a1155f26533901d25a81c2266e1a5ca9b9719ef70d1a1284b489f2",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/405/1464"
+      },
+      {
+        "bytes": 109047,
+        "sha256": "13feb3f2c18f7cd4266fbf3e396ade1ba930c9b54078c089cf073719050fb93c",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/405/1465"
+      },
+      {
+        "bytes": 95348,
+        "sha256": "ae51cfa4c2820b26146a191555581d8ff3f0cb18c5bb4e556b6a8ceb7454d63b",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/405/1466"
+      },
+      {
+        "bytes": 104356,
+        "sha256": "b559825544aca49d8cb447653921a7cd759b3f7878d08990b803ec37fe6fa4d8",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/406/1464"
+      },
+      {
+        "bytes": 99243,
+        "sha256": "16db94aa5e17b2137dad9cb621f4a3dc2cae3a264c5206acace41331656bd653",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/406/1465"
+      },
+      {
+        "bytes": 95891,
+        "sha256": "0c6c0e7ee6650c4fac0f1c4e5e706a62494d0ceb891ffdc349c0d253c4531cce",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/406/1466"
+      },
+      {
+        "bytes": 94293,
+        "sha256": "183d050f0dc8fe54b4ab91166c10d0c08d600ba6a78c1e8fc481cfc80563056a",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/407/1464"
+      },
+      {
+        "bytes": 95228,
+        "sha256": "0b6a0b8f8053291738d15cd82dfdafd2e00026fc6b4c42634bf5117cfc7e48f0",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/407/1465"
+      },
+      {
+        "bytes": 98790,
+        "sha256": "df14cd0a956eae82ae4c00fe4f32eae46b3db1e50ddde649c6acccf4f6b0cc09",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/407/1466"
+      },
+      {
+        "bytes": 98432,
+        "sha256": "96c90e5e8608dd48c65c54a3c97ab4d0b6acdf97660c12324bff33e171004740",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/408/1464"
+      },
+      {
+        "bytes": 98646,
+        "sha256": "e77dfb4610788c0b290b3916fb3bcc09260996936abc9bcca354c074fe3ba1bc",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/408/1465"
+      },
+      {
+        "bytes": 94797,
+        "sha256": "470c763670ca6b86a38239f1ce0d637dc9e516801b761246ed9b9ee7025caeb9",
+        "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/10/408/1466"
+      }
+    ]
+  },
+  "validFraction": 1.0,
+  "elevationRange": [
+    -2704.568115234375,
+    -2041.7879638671875
+  ],
+  "near": {
+    "width": 201,
+    "height": 201,
+    "cellSize": 19.90049751243781,
+    "bounds": [
+      4358909.037914526,
+      1092211.6170900527,
+      4362909.037914526,
+      1096211.6170900527
+    ],
+    "binarySha256": "e7872239f1ec9cb9834afc212cda46eefdeebbaec2ac2dc901300d0b1eb60f67",
+    "imageSha256": "0e7099706f4cb959c701c07446e2d480757ed2d5867c4455cb0a7a13467d0076",
+    "opticalSource": {
+      "service": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer",
+      "tileLevel": 12,
+      "tileResolutionDegrees": 8.58306884765625e-05,
+      "sourceCRS": "GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"D_Mars_2000_Sphere\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190.0,0.0]],PRIMEM[\"Reference_Meridian\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+      "tiles": [
+        {
+          "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/12/1627/5860",
+          "sha256": "dcd6c96413f795fd54b7091a0fc97727a44e82d73db372760e5b0f350fcec91c",
+          "bytes": 83101
+        },
+        {
+          "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/12/1627/5861",
+          "sha256": "57ef854a7b56dd6f195100a6502791a710c09df92b84e628fac68d189eb49bd8",
+          "bytes": 95371
+        },
+        {
+          "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/12/1628/5860",
+          "sha256": "19f54bcd94c26d6a376d276f0d077f002e527f5e8f5a9341ad75a20d390704fa",
+          "bytes": 84116
+        },
+        {
+          "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/12/1628/5861",
+          "sha256": "b6d35d2752384ded57fa16b5093e175c23124deb5b9956af8cbc8f83b127a880",
+          "bytes": 93985
+        }
+      ],
+      "bounds": [
+        4358909.037914526,
+        1092211.6170900527,
+        4362909.037914526,
+        1096211.6170900527
+      ],
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "imageResolutionMetres": 3.90625,
+      "credit": "Source: NASA/JPL/MSSS/Caltech Murray Lab/Esri",
+      "processing": "Observed CTX tile mosaic reprojected to the original planning CRS; bilinear resampling, no generated texture",
+      "displayNormalization": {
+        "percentiles": [
+          1,
+          99
+        ],
+        "low": 121.0,
+        "high": 141.0,
+        "purpose": "Display contrast only; no generated detail or routing changes"
+      }
+    }
+  },
+  "purpose": "Display-only regional context; excluded from planning, risk detection and resource calculations. Original 1 km native DEM and constraints remain authoritative.",
+  "displayTransition": "The browser joins the exact native edge to the regional raster with a 200 m display transition; no physical observations or planning values are changed."
+}
