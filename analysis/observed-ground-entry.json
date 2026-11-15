@@ -1,0 +1,50 @@
+{
+  "source": "NASA-AMMOS/3DTilesSampleData Drive1004",
+  "samplingMetres": 0.25,
+  "before": {
+    "point": {
+      "x": 1.375,
+      "z": 5.375
+    },
+    "known": 405,
+    "total": 441,
+    "fraction": 0.9183673469387755,
+    "clearance": 0.75
+  },
+  "after": {
+    "point": {
+      "x": -2.625,
+      "z": 7.875
+    },
+    "known": 441,
+    "total": 441,
+    "fraction": 1,
+    "clearance": 3.48209706929603
+  },
+  "target": {
+    "x": -6.375,
+    "z": 10.375
+  },
+  "routes": {
+    "shortest": {
+      "roundTripMetres": 10.543001252827239,
+      "totalMinutes": 2.8463071208765296,
+      "maxSlopeDegrees": 18.57682
+    },
+    "exposure": {
+      "roundTripMetres": 10.546722597826458,
+      "totalMinutes": 2.779230409958685,
+      "maxSlopeDegrees": 17.21845
+    },
+    "time": {
+      "roundTripMetres": 10.546722597826458,
+      "totalMinutes": 2.779230409958685,
+      "maxSlopeDegrees": 17.21845
+    }
+  },
+  "limits": [
+    "Coverage means a finite sample in the existing conservative grid, not independently verified surface accuracy.",
+    "Entry selection changes only exploration defaults. Navigation geometry, constraints and recorded scenarios are unchanged.",
+    "Only original NASA triangles receive the walking overlay. No navigation infill; optional photo context uses explicitly estimated depth."
+  ]
+}

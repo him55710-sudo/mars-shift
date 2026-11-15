@@ -54,3 +54,13 @@
 @media(max-height:550px){.rover-mission{top:110px;bottom:auto}.rover-guidance{bottom:150px}.rover-instruments{bottom:112px}.rover-minimap{width:110px;height:110px;bottom:125px}.rover-panel{top:100px;max-height:calc(100dvh - 190px)}}
 
 .rover-explorer .rover-sand-near{font-size:9px;letter-spacing:.02em;line-height:1.5;color:#ff9ea8;max-width:220px;white-space:normal;margin-top:6px;text-shadow:0 1px 4px #000}.rover-sand-audit{color:#ffb1ba;border-left:2px solid #ff4052;padding-left:10px}
+
+/* Keep observation provenance readable below the mobile controls. */
+@media(max-width:650px){
+ :root #root .rover-explorer .rover-footer{height:44px;flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
+ .rover-footer>span:first-child{flex:1;min-width:0;line-height:1.3}
+ .rover-footer>span:first-child small{display:block;font-size:inherit}
+ .rover-footer>button{flex-shrink:0}
+ .rover-explorer .visor-dock{bottom:52px}
+ .rover-instruments{bottom:122px}
+}
