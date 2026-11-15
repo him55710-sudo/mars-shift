@@ -31,3 +31,9 @@
 /src/encounter-v7.ts -text
 /docs/source-snapshots/** -text whitespace=cr-at-eol
 /scripts/analyze_encounters_v7.ts -text whitespace=cr-at-eol
+
+# v8 input and experiment hashes are literal bytes.
+/public/data/hazards/vortex-v8/** -text whitespace=cr-at-eol
+/src/encounter-v8.ts -text
+/src/vortex-forecast-v8.ts -text
+/scripts/analyze_vortex_v8.ts -text

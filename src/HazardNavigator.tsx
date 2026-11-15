@@ -81,6 +81,7 @@ function ArchivedHazardNavigator({terrain:t,region,onRegion}:{terrain:Terrain;re
 export default function HazardNavigator(props:{terrain:Terrain;region:string;onRegion:(id:string)=>void}){
  const [archive,setArchive]=useState(()=>new URLSearchParams(location.search).get("archive")==="1");
  const [lab,setLab]=useState(()=>!new URLSearchParams(location.search).has("archive"));
- if(lab)return <EncounterLab onRecorded={()=>setLab(false)} onArchive={()=>{setLab(false);setArchive(true);}}/>;
+ const [v8,setV8]=useState(()=>new URLSearchParams(location.search).get('lab')!=='v7');
+ if(lab)return <EncounterLab key={String(v8)} v8={v8} onPrevious={()=>setV8(v=>!v)} onRecorded={()=>setLab(false)} onArchive={()=>{setLab(false);setArchive(true);}}/>;
  return archive?<><button className="obs-return" onClick={()=>setArchive(false)}>← Recorded observations & Navcam escape</button><ArchivedHazardNavigator {...props}/></>:<><button className="obs-return" onClick={()=>setLab(true)}>← 거리·방향 배치 실험</button><ObservedNavigator onArchive={()=>setArchive(true)}/></>;
 }

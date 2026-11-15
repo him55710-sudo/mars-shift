@@ -2,6 +2,8 @@
 
 # MARS SHIFT
 
+Current terrain evidence: [DEM and raised-feature separation](docs/DEM_FEATURE_SEPARATION.md). Open `/explore?analysis=separation` or **Terrain** to compare registered source imagery, a metric DEM, separated raised candidates and isolated source-mesh patches. Candidate review can add a conservative exclusion to the existing route graph.
+
 Current surface release: [Navcam close-up geometry and PDS texture reprojection](docs/NAVCAM_DETAIL_RELEASE.md). `/explore?surface=navcam` opens the new close stereo surface. **Mission terrain** restores the orbital mission HUD. Real source geometry and image crops replace the blurred near-field orbital view; the local station remains explicitly separate from the planned route.
 
 Current update: [spatial visor, competitor source review, continuous edge checks and return stress audit](docs/SPATIAL_HUD_UPGRADE.md). Open `/explore` for the revised visor. Reproduce the three-crop edge/return audit with `node scripts/run_spatial_analysis.mjs`.
@@ -138,3 +140,7 @@ Codex assisted with code, preprocessing, tests, documentation and interface copy
 ### Observed rover surface
 
 The main [EVA Explorer](https://mars-shift.vercel.app/explore) now opens an integrated NASA/JPL-Caltech Perseverance Drive 1004 walking scene. Explore, choose a destination, compare local round trips, and review exclusions on the same geometry. Orbital missions remain in the site selector. See [the observed-surface release and measured limitations](docs/OBSERVED_SURFACE_RELEASE.md), [asset provenance](docs/DRIVE1004_ASSETS.md), and `pnpm science:rover`.
+
+## Abrupt dust-devil research (v8)
+
+The `/hazards` lab now includes abrupt birth, delayed virtual detection, causal forecast selection, continuous contact evaluation, and matched return budgets. [Results and limitations](docs/VORTEX_V8_RESULTS.md), [verification](docs/VORTEX_V8_VERIFICATION.md). Current artifacts are under `public/data/hazards/vortex-v8/final/`; old runs are retained. Use `?lab=v7` for the previous lab. The new Earth analog wind dataset is explicitly separate from actual Mars imagery and from synthetic relocated vortex paths.

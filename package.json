@@ -20,7 +20,8 @@
     "science:navigation": "node scripts/run_navigation_analysis.mjs",
     "science:rover": "node scripts/run_rover_analysis.mjs",
     "science:encounters": "node scripts/run_encounters_v7.mjs",
-    "science:encounters:geometry": "node scripts/run_geometry_v7.mjs"
+    "science:encounters:geometry": "node scripts/run_geometry_v7.mjs",
+    "science:vortex": "node scripts/run_vortex_v8.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",

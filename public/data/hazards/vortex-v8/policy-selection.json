@@ -1,0 +1,7 @@
+{
+  "selectedBeforeHoldout": true,
+  "alpha": 0.1,
+  "predictor": "CV_SMOOTH",
+  "developmentSHA256": "aac357f5df410db9f2b34367a34015e686564179124134a6789fda19a81b92ee",
+  "protocolSHA256": "15642859ce8e862e117f5f9f534adee25a55e29a721308d6f62e554412a05d39"
+}
