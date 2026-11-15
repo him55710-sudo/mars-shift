@@ -37,3 +37,11 @@ Primary sources reviewed:
 - [NASA/JPL slip prediction with thermal inertia](https://ntrs.nasa.gov/citations/20210006223): method cited; no slip model reproduced.
 - [NASA AI4Mars](https://data.nasa.gov/dataset/ai4mars-a-dataset-for-terrain-aware-autonomous-driving-on-mars): independent terrain-label resource, not imported trapping ground truth.
 - [AI4Mars original paper](https://openaccess.thecvf.com/content/CVPR2021W/AI4Space/html/Swan_AI4MARS_A_Dataset_for_Terrain-Aware_Autonomous_Driving_on_Mars_CVPRW_2021_paper.html): task and label limitations referenced.
+
+## Verification, 2026-11-15
+
+- Full suite: 58 files, 405 tests passed (`pnpm test --testTimeout=20000`). The longer timeout accommodates simultaneous local research jobs; assertions were unchanged.
+- Production build passed; 66 NASA photo assets / 1,045,833 original triangles / all source hashes retained.
+- All 18 rehearsal outcomes reproduce with `--check`, including paths and source hash. Both feasible legs pass the same swept-support checks used by walking.
+- Browser: trigger, continuous guided outbound walk, checkpoint, original-base return, reset, surrounded HOLD, route map, hazard toggle, mobile 390×844, restored NOAH-H screen, and empty independent-label import verified.
+- Desktop rotation benchmark: 1280×800, DPR 1.25, 299 rendered frames / 5.0155 s = 59.62 FPS, 26 draw calls, 792,183 visible triangles. This is one local-device rendering sample, not a cross-device frame-rate guarantee or scientific accuracy metric. No console errors in the checked new rehearsal tab.
