@@ -49,3 +49,13 @@
 # Preserve the preregistered source's trailing blank line as part of its hash.
 /src/evacuation-runtime.ts -text whitespace=cr-at-eol,-blank-at-eof
 /scripts/verify_evacuation_v10.ts -text whitespace=cr-at-eol
+
+# v11 records literal input/source hashes; retain the recorded working-tree bytes.
+/public/data/hazards/observed-v11/** -text whitespace=cr-at-eol
+/src/observed-validation-v11.ts -text
+/scripts/validate_observed_v11.ts -text
+/scripts/prepare_observed_v11.py -text
+# These existing normalized Git files were CRLF inputs to the v11 replay.
+/src/local-dust-tracker.ts text eol=crlf
+/src/hazard-tracker.ts text eol=crlf
+/public/data/hazards/local-observations.json text eol=crlf
