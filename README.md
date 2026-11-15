@@ -2,6 +2,8 @@
 
 # MARS SHIFT
 
+Mission Hub now includes [sand-candidate avoidance](docs/SAND_NAVIGATION.md): registered texture candidates, buffered exclusions, shared outbound/return paths, an unscreened comparator, coverage warnings and route evidence export. Open `/#sand-navigation`; new sessions use the actual NOAH-H overlap region. Zero mapped crossings is not a physical safety certification.
+
 **Unified workspace:** `/` now opens Mission Hub, with all fourteen views in one directory and a shared **All views** menu. Calibrated Navcam inspection, surface feature separation, recorded MEDA replay, local hazard rehearsal, mission planning and crew handoff are integrated. The original introduction is at `/about`. See [integration, routes and verification](docs/UNIFIED_WORKSPACE.md).
 
 Current terrain evidence: [DEM and raised-feature separation](docs/DEM_FEATURE_SEPARATION.md). Open `/explore?analysis=separation` or **Terrain** to compare registered source imagery, a metric DEM, separated raised candidates and isolated source-mesh patches. Candidate review can add a conservative exclusion to the existing route graph.

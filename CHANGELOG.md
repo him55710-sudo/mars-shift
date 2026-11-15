@@ -1,3 +1,9 @@
+## Sand navigation / 2026-11-15
+
+- Collect registered terrain, optical, texture and thermal-context provenance in a reproducible route audit.
+- Add shared buffered sand-candidate exclusions to mission planning, return checks and EVA movement.
+- Show candidate map, outbound/return paths, baseline comparison and evidence export in Mission Hub.
+
 # Changelog
 
 ## Unified workspace — 2026-11-15

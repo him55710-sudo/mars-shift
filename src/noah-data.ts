@@ -30,15 +30,15 @@ export function noahEvidence(n:NoahTerrain|undefined,index:number){
 }
 
 export type EvidenceRisk={state:'constraint'|'candidate'|'lower'|'unknown';reasons:string[];routingImpact:string};
-/** Transparent display rule. Classification alone never creates a hard obstacle. */
+/** Display rule; optional sand exclusions are applied by the shared graph first. */
 export function evidenceRisk(t:Terrain,n:NoahTerrain|undefined,i:number,s:Settings,e:Exclusion|null):EvidenceRisk{
  if(!t.valid[i]||t.elevation[i]===null||t.slope[i]===null||!Number.isFinite(t.elevation[i])||!Number.isFinite(t.slope[i])||!hasMobilityData(t,i,s))return {state:'unknown',reasons:['DEM, slope or mobility support missing'],routingImpact:'Blocked by terrain coverage policy'};
- if(blocked(t,i,s,e))return {state:'constraint',reasons:['Configured slope, mobility support or exclusion constraint'],routingImpact:'Blocked by the existing routing graph'};
+ if(blocked(t,i,s,e))return {state:'constraint',reasons:['Configured slope, mobility support, sand screening or exclusion constraint'],routingImpact:'Blocked by the shared routing graph'};
  const evidence=noahEvidence(n,i),reasons:string[]=[];
  if(t.exposure[i])reasons.push('Derived steep-slope proximity');
  if((evidence.boulderFieldAreaFraction??0)>=.25)reasons.push('At least 25% published boulder-field texture');
  if((evidence.rippleAreaFraction??0)>=.25)reasons.push('At least 25% published ripple texture; soil support unmeasured');
- if(reasons.length)return {state:'candidate',reasons,routingImpact:'Classification is contextual only; confirm an obstacle buffer to exclude it'};
+ if(reasons.length)return {state:'candidate',reasons,routingImpact:'Contextual texture candidate; enable sand avoidance for ripple exclusions or confirm an obstacle buffer'};
  if(evidence.coverage<.95)return {state:'unknown',reasons:['Less than 95% classification sample coverage'],routingImpact:'Current routing uses DEM constraints; classification uncertainty is not a measured obstacle'};
  return {state:'lower',reasons:['No selected constraint or texture-candidate rule triggered'],routingImpact:'Relatively lower under displayed rules; unresolved obstacles and soil strength remain unknown'};
 }
