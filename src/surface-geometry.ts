@@ -7,7 +7,7 @@ export function surfaceAxis(count:number,focus:number,detailed:boolean|'inspect'
  const points=new Set<number>([0,count-1]),centre=Math.round(focus/32)*32;
  const add=(lo:number,hi:number,step:number)=>{for(let i=Math.max(0,Math.ceil(lo/step)*step);i<=Math.min(count-1,hi);i+=step)points.add(i);};
  add(0,count-1,detailed===true?32:4);
- if(detailed){add(centre-256,centre+256,8);add(centre-96,centre+96,2);add(centre-32,centre+32,1);}
+ if(detailed){add(centre-256,centre+256,8);add(centre-(detailed==='inspect'?192:96),centre+(detailed==='inspect'?192:96),2);add(centre-(detailed==='inspect'?96:32),centre+(detailed==='inspect'?96:32),1);}
  return [...points].sort((a,b)=>a-b);
 }
 const masks=new WeakMap<object,{width:number;values:Uint32Array}>();
@@ -45,6 +45,24 @@ export function nativeNormalPixels(native:NativeDEM){
   const dx=neighbours.every(Number.isFinite)?(neighbours[1]-neighbours[0])/((x1-x0)*cell||1):0,dz=neighbours.every(Number.isFinite)?(neighbours[3]-neighbours[2])/((y1-y0)*cell||1):0,length=Math.hypot(dx,1,dz);
   pixels.set([Math.round((-.5*dx/length+.5)*255),Math.round((.5/length+.5)*255),Math.round((-.5*dz/length+.5)*255),255],i);
  }return pixels;
+}
+
+/** Screen-width route strokes still follow measured terrain between planning cells.
+ * Lateral separation is a display offset only; the graph path is never smoothed.
+ * NoData splits the stroke instead of bridging missing ground.
+ */
+export function measuredRouteSegments(t:Terrain,native:NativeDEM|null,cells:number[],min:number,lateral=0){
+ const segments:number[][]=[];let current:number[]=[];
+ const flush=()=>{if(current.length>=6)segments.push(current);current=[];};
+ for(let k=1;k<cells.length;k++){
+  const a={x:cells[k-1]%t.width,y:Math.floor(cells[k-1]/t.width)},b={x:cells[k]%t.width,y:Math.floor(cells[k]/t.width)},dx=b.x-a.x,dy=b.y-a.y,length=Math.hypot(dx,dy);
+  if(!length)continue;const steps=Math.max(1,Math.ceil(length*t.cellSize)),sx=-dy/length*lateral/t.cellSize,sy=dx/length*lateral/t.cellSize;
+  for(let n=0;n<=steps;n++){
+   const p={x:a.x+dx*n/steps+sx,y:a.y+dy*n/steps+sy},height=heightAt(t,p,native);
+   if(height===null){flush();continue;}
+   current.push((p.x+.5-t.width/2)*t.cellSize,height-min+.3,(p.y+.5-t.height/2)*t.cellSize);
+  }
+ }flush();return segments;
 }
 
 /** Resample the actual polyline, without smoothing a route across excluded cells. */

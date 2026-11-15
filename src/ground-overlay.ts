@@ -12,11 +12,11 @@ export function groundHazardPixels(t:Terrain,s:Settings,e:Exclusion|null){
  for(let i=0;i<t.width*t.height;i++){if(sand.excluded[i]&&!blocked(t,i,withoutSand,e)){pixels.set(sand.candidate[i]?riskPixel():riskPixel(220),i*4);continue;}if(t.noah&&t.noah.coverage.sampledFraction>0){const h=evidenceRisk(t,t.noah,i,s,e).state;pixels.set(h==='constraint'?[245,89,63,235]:h==='candidate'?[244,173,64,180]:h==='unknown'?[135,145,157,145]:[0,0,0,0],i*4);continue;}const h=mappedHazard(t,i,s,e);pixels.set(h==='excluded'?[245,89,63,235]:h==='steep-proximity'?[244,173,64,180]:h==='unknown'?[135,145,157,145]:[0,0,0,0],i*4);}return pixels;
 }
 export function installGroundOverlay(material:THREE.MeshStandardMaterial,width:number,height:number){
- const uniforms={uGroundHazards:{value:null as THREE.DataTexture|null},uGroundEnabled:{value:0},uGroundOverview:{value:0},uRegionalMap:{value:null as THREE.Texture|null},uRegionalEnabled:{value:0},uRegionalOrigin:{value:new THREE.Vector2()},uRegionalSize:{value:new THREE.Vector2()},uTerrainSize:{value:new THREE.Vector2(width,height)}};
+ const uniforms={uGroundHazards:{value:null as THREE.DataTexture|null},uGroundEnabled:{value:0},uGroundOverview:{value:0},uGroundInspection:{value:0},uRegionalMap:{value:null as THREE.Texture|null},uRegionalEnabled:{value:0},uRegionalOrigin:{value:new THREE.Vector2()},uRegionalSize:{value:new THREE.Vector2()},uTerrainSize:{value:new THREE.Vector2(width,height)}};
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   shader.vertexShader='varying vec3 vGroundPosition;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvGroundPosition = position;');
-  shader.fragmentShader='varying vec3 vGroundPosition;\nuniform sampler2D uGroundHazards;\nuniform float uGroundEnabled;\nuniform float uGroundOverview;\nuniform vec2 uTerrainSize;\nuniform sampler2D uRegionalMap;\nuniform float uRegionalEnabled;\nuniform vec2 uRegionalOrigin;\nuniform vec2 uRegionalSize;\n'+shader.fragmentShader.replace('#include <map_fragment>',`#include <map_fragment>
+  shader.fragmentShader='varying vec3 vGroundPosition;\nuniform sampler2D uGroundHazards;\nuniform float uGroundEnabled;\nuniform float uGroundOverview;\nuniform float uGroundInspection;\nuniform vec2 uTerrainSize;\nuniform sampler2D uRegionalMap;\nuniform float uRegionalEnabled;\nuniform vec2 uRegionalOrigin;\nuniform vec2 uRegionalSize;\n'+shader.fragmentShader.replace('#include <map_fragment>',`#include <map_fragment>
    if(uRegionalEnabled>.5){
     float insideEdge=min(uTerrainSize.x*.5-abs(vGroundPosition.x),uTerrainSize.y*.5-abs(vGroundPosition.z));
     float contextBlend=1.-smoothstep(0.,90.,insideEdge);
@@ -37,10 +37,25 @@ export function installGroundOverlay(material:THREE.MeshStandardMaterial,width:n
     float ordinary = mix(0.025,0.25,uGroundOverview) + 0.22 * hatch + 0.34 * min(1.0,boundary);
     float sandEdge = mix(0.04,0.30,uGroundOverview) + 0.32 * hatch + 0.64 * min(1.0,boundary);
     float intensity = hazard.a * mix(ordinary, sandEdge, sandEmphasis) * mix(fade,1.0,uGroundOverview);
+    if(uGroundOverview>.5){
+     float sand=step(.95,hazard.r)*(1.-step(.35,hazard.g));
+     float trap=sand*step(.84,hazard.a);
+     float phase=(vGroundPosition.x+vGroundPosition.z)/mix(9.,3.,uGroundInspection);
+     float aa=max(fwidth(phase),.008);
+     float stripe=(1.-smoothstep(.06,.06+aa,abs(fract(phase)-.5)))*(1.-smoothstep(.2,.6,aa));
+     float crossPhase=(vGroundPosition.x-vGroundPosition.z)/mix(9.,3.,uGroundInspection);
+     float crossStripe=(1.-smoothstep(.06,.06+aa,abs(fract(crossPhase)-.5)))*trap;
+     float ink=max(stripe,crossStripe);
+     float edge=clamp(boundary*2.,0.,1.);
+     // Close views retain the image inside the footprint; edge and hatch carry the warning.
+     float candidate=mix(.10,.035,uGroundInspection)+.48*ink+.75*edge;
+     float context=.035+.12*stripe+.32*edge;
+     intensity=hazard.a*mix(context,candidate,sand);
+    }
     diffuseColor.rgb = mix(diffuseColor.rgb, hazard.rgb, intensity);
    }`);
  };
-material.customProgramCacheKey=()=> 'mars-ground-hazard-v6-continuous-red';return uniforms;
+material.customProgramCacheKey=()=> 'mars-ground-hazard-v7-patterned-red';return uniforms;
 }
 export function routeRibbonMaterial(color:string,inbound=false,boundary=false){
  return new THREE.ShaderMaterial({uniforms:{uColor:{value:new THREE.Color(color)},uInbound:{value:inbound?1:0},uBoundary:{value:boundary?1:0}},vertexShader:'varying vec2 vRibbonUv; varying float vDistance; void main(){vRibbonUv=uv;vec4 mv=modelViewMatrix*vec4(position,1.0);vDistance=length(mv.xyz);gl_Position=projectionMatrix*mv;}',fragmentShader:`uniform vec3 uColor; uniform float uInbound; uniform float uBoundary; varying vec2 vRibbonUv; varying float vDistance;

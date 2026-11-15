@@ -10,7 +10,7 @@ export type FieldZone={id:string;kind:FieldKind;source:'derived'|'reviewed'|'sim
 export type FieldAssessment={width:number;height:number;cellSize:number;bounds:number[];crs:string;risk:Float32Array;support:Float32Array;ripples:Float32Array;depression:Float32Array;sand:Uint8Array;trap:Uint8Array;rocks:Uint8Array;zones:FieldZone[];knownCells:number;sandCells:number;trapCells:number;rockCells:number;method:string};
 export type FieldRoute={policy:FieldPolicy;route:Route;riskMetres:number;trapMetres:number;unknownMetres:number;meanIndex:number;expanded:number};
 export type FieldResult={revision:number;plans:Partial<Record<FieldPolicy,FieldRoute|null>>;elapsedMs:number;start:Point;target:Point};
-export const FIELD_COLORS={route:'#8debd4',baseline:'#aebcc8',sand:RISK_RED,trap:'#e82d43',rock:'#e87879',unknown:'#8092a4',dem:'#81bdcf'};
+export const FIELD_COLORS={route:'#8debd4',baseline:'#aebcc8',sand:RISK_RED,trap:'#e82d43',rock:'#d9b46e',unknown:'#8092a4',dem:'#81bdcf'};
 const clip=(v:number)=>Math.max(0,Math.min(1,v));
 
 /** Screening evidence in this exact orbital grid, never a slip/sinkage probability. */
@@ -91,6 +91,6 @@ export function lowerRiskWaypoint(t:Terrain,a:FieldAssessment,start:Point,base:P
 export function fieldPixels(t:Terrain,a:FieldAssessment,s:Settings,zones:FieldZone[],layers:{sand:boolean;rocks:boolean;unknown:boolean}){
  const prepared=fieldTerrain(t,zones),pixels=new Uint8Array(t.width*t.height*4);
  for(let i=0;i<a.risk.length;i++){
-  const color=!t.valid[i]?[108,127,143,170]:blocked(prepared,i,s,null)?[229,103,111,195]:layers.sand&&a.trap[i]?riskPixel(225):layers.sand&&a.sand[i]?riskPixel(185):layers.rocks&&a.rocks[i]?[224,126,138,130]:layers.unknown&&a.support[i]<.999?[118,138,158,130]:[0,0,0,0];pixels.set(color,i*4);
+  const color=!t.valid[i]?[108,127,143,170]:blocked(prepared,i,s,null)?[229,103,111,195]:layers.sand&&a.trap[i]?riskPixel(225):layers.sand&&a.sand[i]?riskPixel(185):layers.rocks&&a.rocks[i]?[217,180,110,110]:layers.unknown&&a.support[i]<.999?[118,138,158,130]:[0,0,0,0];pixels.set(color,i*4);
  }return pixels;
 }
