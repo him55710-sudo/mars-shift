@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import type {Terrain} from './planner';
+import type {Point,Terrain} from './planner';
 import {heightAt} from './eva-motion';
 import type {NativeDEM} from './eva-motion';
 import type {RegionalContext} from './regional-terrain';
@@ -26,5 +26,5 @@ export function createRegionalScene(t:Terrain,native:NativeDEM|null,c:RegionalCo
   for(const dd of [d,d+4]){const x=sx*(wx-(axis===0?dd:0)),z=sz*(wz-(axis===1?dd:0)),h=heightAt(t,{x:(x+t.width*t.cellSize/2)/t.cellSize-.5,y:(z+t.height*t.cellSize/2)/t.cellSize-.5},native);corners.push(x,(h??min)-min+1,z);}
  }
  const cornerGeometry=new THREE.BufferGeometry();cornerGeometry.setAttribute('position',new THREE.Float32BufferAttribute(corners,3));const cornerMaterial=new THREE.LineBasicMaterial({color:'#c0d8cd',transparent:true,opacity:.65,depthTest:false,depthWrite:false}),marks=new THREE.LineSegments(cornerGeometry,cornerMaterial);marks.renderOrder=4;group.add(marks);
- return {group,mesh,texture:nearTexture??texture,textureBounds:c.meta.near?.bounds??c.meta.bounds,triangles:data.indices.length/3,dispose:()=>{geometry.dispose();material.dispose();texture.dispose();nearTexture?.dispose();cornerGeometry.dispose();cornerMaterial.dispose();}};
+ return {group,mesh,update:(focus?:Point)=>{const next=regionalGeometry(t,native,c,min,focus),g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(next.positions,3));g.setAttribute('uv',new THREE.BufferAttribute(next.uv,2));g.setIndex(new THREE.BufferAttribute(next.indices,1));g.computeVertexNormals();g.computeBoundingSphere();mesh.geometry.dispose();mesh.geometry=g;return next.indices.length/3;},texture:nearTexture??texture,textureBounds:c.meta.near?.bounds??c.meta.bounds,triangles:data.indices.length/3,dispose:()=>{mesh.geometry.dispose();material.dispose();texture.dispose();nearTexture?.dispose();cornerGeometry.dispose();cornerMaterial.dispose();}};
 }

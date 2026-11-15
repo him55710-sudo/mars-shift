@@ -1,4 +1,4 @@
-import type {Terrain} from './planner';
+import type {Point,Terrain} from './planner';
 import type {NativeDEM} from './eva-motion';
 import {heightAt} from './eva-motion';
 import {surfaceAxis} from './surface-geometry';
@@ -34,10 +34,10 @@ export function regionalHeight(t:Terrain,c:RegionalDEM,x:number,z:number):number
 /** A conforming outer ring shares every orbital DEM boundary vertex exactly.
  * The 200 m transition is display interpolation, never a planning observation.
  */
-export function regionalGeometry(t:Terrain,native:NativeDEM|null,c:RegionalDEM,min:number){
+export function regionalGeometry(t:Terrain,native:NativeDEM|null,c:RegionalDEM,min:number,focus?:Point){
  const width=t.width*t.cellSize,height=t.height*t.cellSize,cell=native?.cellSize??t.cellSize;
- const axis=(n:number)=>native?surfaceAxis(n,0,false):Array.from({length:n},(_,i)=>i);
- const xs=axis(native?.width??t.width).map(i=>(i+.5)*cell-width/2),zs=axis(native?.height??t.height).map(i=>(i+.5)*cell-height/2);
+ const axis=(n:number,f:number)=>native?surfaceAxis(n,(f+.5)*t.cellSize/cell-.5,focus?'inspect':false):Array.from({length:n},(_,i)=>i);
+ const xs=axis(native?.width??t.width,focus?.x??0).map(i=>(i+.5)*cell-width/2),zs=axis(native?.height??t.height,focus?.y??0).map(i=>(i+.5)*cell-height/2);
  const left=xs[0],right=xs.at(-1)!,top=zs[0],bottom=zs.at(-1)!;
  const edge=[...xs.map(x=>({x,z:top})),...zs.slice(1).map(z=>({x:right,z})),...xs.slice(0,-1).reverse().map(x=>({x,z:bottom})),...zs.slice(1,-1).reverse().map(z=>({x:left,z}))];
  const cx=(t.bounds[0]+t.bounds[2])/2,cy=(t.bounds[1]+t.bounds[3])/2,b=c.meta.bounds;

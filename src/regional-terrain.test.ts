@@ -6,6 +6,7 @@ import type {RegionalDEM} from './regional-terrain';
 import type {Terrain} from './planner';
 import type {NativeDEM} from './eva-motion';
 import {heightAt} from './eva-motion';
+import {surfaceAxis} from './surface-geometry';
 import terrain from '../public/data/noah/terrain.json';
 import metadata from '../public/data/noah/context/manifest.json';
 const t=terrain as Terrain;
@@ -18,6 +19,7 @@ const nativeBytes=readFileSync(new URL('../public/data/noah/jezero-native-dem.bi
 const native:NativeDEM={width:1000,height:1000,cellSize:1,crs:t.crs,bounds:t.bounds,values:new Float32Array(nativeBytes.buffer.slice(nativeBytes.byteOffset,nativeBytes.byteOffset+nativeBytes.byteLength))};
 
 describe('continuous regional terrain',()=>{
+ it('keeps the regional seam on the same native samples during close inspection',()=>{const focus={x:92,y:88},g=regionalGeometry(t,native,context,0,focus),xs=surfaceAxis(1000,(focus.x+.5)*5-.5,'inspect'),ys=surfaceAxis(1000,(focus.y+.5)*5-.5,'inspect');expect(g.boundaryCount).toBe(xs.length*2+ys.length*2-4);for(let i=0;i<g.boundaryCount;i++){const x=g.positions[i*3],z=g.positions[i*3+2],observed=native.values[Math.round(z+499.5)*1000+Math.round(x+499.5)];if(Number.isFinite(observed))expect(g.positions[i*3+1]).toBeCloseTo(observed,3);}});
  it('uses verified observed context in the unchanged study projection',()=>{expect(()=>assertRegionalRegistration(t,metadata,bytes.byteLength)).not.toThrow();expect(createHash('sha256').update(bytes).digest('hex')).toBe(metadata.binarySha256);expect(metadata.demSource.nativeResolutionMetres).toEqual([20,20]);expect(metadata.bounds[2]-metadata.bounds[0]).toBe(24000);expect(values.every(Number.isFinite)).toBe(true);});
  it('rejects a shifted footprint, incorrect units or truncated binary before display',()=>{expect(()=>assertRegionalRegistration(t,{...metadata,focusBounds:t.bounds.map((n,i)=>i===0?n+1:n)},bytes.byteLength)).toThrow();expect(()=>assertRegionalRegistration(t,{...metadata,crs:'Earth'},bytes.byteLength)).toThrow();expect(()=>assertRegionalRegistration(t,{...metadata,verticalUnits:'feet'},bytes.byteLength)).toThrow();expect(()=>assertRegionalRegistration(t,metadata,bytes.byteLength-4)).toThrow();});
  it('shares the exact native DEM perimeter, rather than lowering a skirt around the cutout',()=>{
