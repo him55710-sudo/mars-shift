@@ -45,3 +45,5 @@ Primary sources reviewed:
 - All 18 rehearsal outcomes reproduce with `--check`, including paths and source hash. Both feasible legs pass the same swept-support checks used by walking.
 - Browser: trigger, continuous guided outbound walk, checkpoint, original-base return, reset, surrounded HOLD, route map, hazard toggle, mobile 390×844, restored NOAH-H screen, and empty independent-label import verified.
 - Desktop rotation benchmark: 1280×800, DPR 1.25, 299 rendered frames / 5.0155 s = 59.62 FPS, 26 draw calls, 792,183 visible triangles. This is one local-device rendering sample, not a cross-device frame-rate guarantee or scientific accuracy metric. No console errors in the checked new rehearsal tab.
+
+Final rerun after the time-accounting correction: 405 of 406 passed in the full run; one pre-existing EVA test hit its own 15 s limit under concurrent research load. Its complete 22-test file passed on isolated rerun with unchanged assertions (63.88 s total). The new playback/resource-conservation check passed. Browser replay consumed 51.6 modeled seconds for the 11.42 m round trip, leaving 128 s displayed from the original 180 s budget.
