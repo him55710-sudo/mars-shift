@@ -6,6 +6,7 @@ import {DEFAULTS,blocked,edgeBlocked,index,nearestAllowed} from './planner';
 import type {Terrain} from './planner';
 import {validateNoah} from './noah-data';
 import {validateScience} from './science-data';
+import {sandRouteAudit} from './sand-screening';
 
 function fixture(w=22,h=16):Terrain {const n=w*h;return {width:w,height:h,cellSize:5,bounds:[0,0,w*5,h*5],center:[0,0],crs:'test',elevation:Array(n).fill(0),slope:Array(n).fill(0),meanSlope:Array(n).fill(0),roughness:Array(n).fill(0),exposure:Array(n).fill(0),valid:Array(n).fill(1),thermal:Array(n).fill(300),thermalRange:[300,300]};}
 const zone:FieldZone={id:'test',kind:'trap',source:'reviewed',point:{x:11,y:8},radius:10,area:Math.PI*100,index:.8,cells:[],label:'Test',detail:'Test operator exclusion'};
@@ -22,6 +23,12 @@ describe('integrated ground navigation',()=>{
 });
 
 describe('registered Jezero evidence',()=>{
+ it('honors the shared explicit ripple buffer policy in every displayed route',()=>{
+  const load=(p:string)=>JSON.parse(readFileSync(new URL('../public/data/noah/'+p,import.meta.url),'utf8'));
+  const t=load('terrain.json') as Terrain;t.noah=validateNoah(t,load('noah-terrain.json'));t.science=validateScience(t,load('science/terrain-metrics.json'));
+  const a=assessField(t),s={...DEFAULTS,avoidSand:true,mobilityModel:2 as const,scienceMinutes:5,durationMinutes:120,oxygenMinutes:160,powerMinutes:150},base=nearestAllowed(t,{x:32,y:168},s),target=nearestAllowed(t,{x:153,y:43},s);
+  for(const policy of ['shortest','balanced','cautious'] as const){const p=fieldPlan(t,a,base,target,base,s,policy,true)!;expect(p?.route.feasible).toBe(true);expect(sandRouteAudit(t,p.route.cells).excludedCells).toBe(0);}
+ },20000);
  it('derives candidates from actual source layers and validates every returned graph edge',()=>{
   const load=(p:string)=>JSON.parse(readFileSync(new URL('../public/data/noah/'+p,import.meta.url),'utf8'));
   const t=load('terrain.json') as Terrain;t.noah=validateNoah(t,load('noah-terrain.json'));t.science=validateScience(t,load('science/terrain-metrics.json'));
