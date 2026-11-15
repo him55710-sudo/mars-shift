@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "extractionId": "bc98984412f7f780b11c5b24017b6e14f7702b33098245065fdf67c338c795dd",
+  "exportSha256": "d682bedde65e223ace15729cab87277bfa0bc8451654458dc6933fde596127e6",
+  "sourceTriangles": 988527,
+  "directTriangleChecks": {
+    "samples": 80,
+    "includesAllCandidatePeaks": true,
+    "maximumExportHeightDifferenceMetres": 4.78285205285367e-05,
+    "meaning": "Four-decimal export consistency, not stereo measurement accuracy."
+  },
+  "analyticInclineAndHoleDiagnostic": {
+    "grid": [
+      101,
+      101
+    ],
+    "cellMetres": 0.1,
+    "planeGradient": [
+      0.35,
+      0.25
+    ],
+    "gaussianSigmaCells": 5,
+    "sameAssessedCells": 9092,
+    "gaussianMaximumAbsoluteBiasMetres": 0.0695412186344257,
+    "robustPlaneMaximumAbsoluteBiasMetres": 8.260059303211165e-13,
+    "gaussianPositiveResidualOver15cm": 0,
+    "robustPlanePositiveResidualOver15cm": 0,
+    "meaning": "Analytic shape diagnostic only; not field precision/recall or Mars obstacle ground truth."
+  },
+  "summary": {
+    "sourceTriangles": 988527,
+    "observedCells": 65530,
+    "conflictCells": 6053,
+    "knownCells": 59477,
+    "assessedCells": 44032,
+    "unassessedObservedCells": 15445,
+    "featureCells": 910,
+    "featureCount": 16
+  },
+  "limitations": [
+    "0.10 m is the raster sampling interval, not measurement accuracy.",
+    "Ground reference and candidates are model-derived; source stereo and registration errors are unquantified.",
+    "Missing and conflicting observations remain masked. An unflagged cell is not verified safe ground.",
+    "Candidate footprints are 2.5D raster regions, not instance-segmented watertight rocks.",
+    "These local coordinates are separate from the orbital HiRISE mission frame."
+  ]
+}

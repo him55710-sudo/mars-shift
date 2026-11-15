@@ -1,5 +1,7 @@
 # MARS SHIFT
 
+Current terrain evidence: [DEM and raised-feature separation](docs/DEM_FEATURE_SEPARATION.md). Open `/explore?analysis=separation` or **Terrain** to compare registered source imagery, a metric DEM, separated raised candidates and isolated source-mesh patches. Candidate review can add a conservative exclusion to the existing route graph.
+
 Current surface release: [Navcam close-up geometry and PDS texture reprojection](docs/NAVCAM_DETAIL_RELEASE.md). `/explore?surface=navcam` opens the new close stereo surface. **Mission terrain** restores the orbital mission HUD. Real source geometry and image crops replace the blurred near-field orbital view; the local station remains explicitly separate from the planned route.
 
 Current update: [spatial visor, competitor source review, continuous edge checks and return stress audit](docs/SPATIAL_HUD_UPGRADE.md). Open `/explore` for the revised visor. Reproduce the three-crop edge/return audit with `node scripts/run_spatial_analysis.mjs`.
