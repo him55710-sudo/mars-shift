@@ -3,10 +3,10 @@ import type {NativeDEM} from './eva-motion';
 import {heightAt} from './eva-motion';
 
 /** One conforming nonuniform grid: shared axes avoid cracks between detail levels. */
-export function surfaceAxis(count:number,focus:number,detailed:boolean){
+export function surfaceAxis(count:number,focus:number,detailed:boolean|'inspect'){
  const points=new Set<number>([0,count-1]),centre=Math.round(focus/32)*32;
  const add=(lo:number,hi:number,step:number)=>{for(let i=Math.max(0,Math.ceil(lo/step)*step);i<=Math.min(count-1,hi);i+=step)points.add(i);};
- add(0,count-1,detailed?32:4);
+ add(0,count-1,detailed===true?32:4);
  if(detailed){add(centre-256,centre+256,8);add(centre-96,centre+96,2);add(centre-32,centre+32,1);}
  return [...points].sort((a,b)=>a-b);
 }
@@ -20,7 +20,7 @@ function invalidPrefix(key:object,width:number,height:number,invalid:(i:number)=
 function containsInvalid(mask:{width:number;values:Uint32Array},x0:number,y0:number,x1:number,y1:number){
  const {width:w,values:v}=mask;return v[(y1+1)*w+x1+1]-v[y0*w+x1+1]-v[(y1+1)*w+x0]+v[y0*w+x0]>0;
 }
-export function surfaceGeometry(t:Terrain,native:NativeDEM|null,focus:Point,detailed:boolean,min:number,exaggeration=1){
+export function surfaceGeometry(t:Terrain,native:NativeDEM|null,focus:Point,detailed:boolean|'inspect',min:number,exaggeration=1){
  const source=native?.values??t.elevation,w=native?.width??t.width,h=native?.height??t.height,cell=native?.cellSize??t.cellSize;
  const xs=native?surfaceAxis(w,(focus.x+.5)*t.cellSize/cell-.5,detailed):Array.from({length:w},(_,i)=>i),ys=native?surfaceAxis(h,(focus.y+.5)*t.cellSize/cell-.5,detailed):Array.from({length:h},(_,i)=>i),nx=xs.length,ny=ys.length;
  const positions=new Float32Array(nx*ny*3),uv=new Float32Array(nx*ny*2),heights=new Float32Array(nx*ny),indices:number[]=[];
