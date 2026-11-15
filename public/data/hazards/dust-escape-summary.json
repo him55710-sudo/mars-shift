@@ -1,0 +1,204 @@
+{
+  "scope": "LOCAL_DUST_DEVIL_ONLY",
+  "provenance": "EXPLORATORY_COUNTERFACTUAL_KNOWN_EVENTS_NEW_GEOMETRY",
+  "independentNewEvents": 0,
+  "verifiedCatalogEvents": 22,
+  "factorialCases": 7200,
+  "terrainEpisodes": 198,
+  "conditionalAvoidance": {
+    "5": {
+      "Baseline": {
+        "threateningCases": 15,
+        "avoided": 0,
+        "meanExposure": 19.79231598387986,
+        "oracleFeasible": 0,
+        "returnFailures": 0
+      },
+      "Dynamic": {
+        "threateningCases": 15,
+        "avoided": 0,
+        "meanExposure": 13.828619521026068,
+        "oracleFeasible": 0,
+        "returnFailures": 0
+      },
+      "MARS SHIFT": {
+        "threateningCases": 15,
+        "avoided": 0,
+        "meanExposure": 13.42788565238809,
+        "oracleFeasible": 0,
+        "returnFailures": 0
+      }
+    },
+    "20": {
+      "Baseline": {
+        "threateningCases": 15,
+        "avoided": 0,
+        "meanExposure": 20.01504772246135,
+        "oracleFeasible": 8,
+        "returnFailures": 0
+      },
+      "Dynamic": {
+        "threateningCases": 15,
+        "avoided": 1,
+        "meanExposure": 12.37701051148702,
+        "oracleFeasible": 8,
+        "returnFailures": 0
+      },
+      "MARS SHIFT": {
+        "threateningCases": 15,
+        "avoided": 2,
+        "meanExposure": 11.154955177504636,
+        "oracleFeasible": 8,
+        "returnFailures": 0
+      }
+    },
+    "40": {
+      "Baseline": {
+        "threateningCases": 15,
+        "avoided": 0,
+        "meanExposure": 20.1128291009373,
+        "oracleFeasible": 14,
+        "returnFailures": 0
+      },
+      "Dynamic": {
+        "threateningCases": 15,
+        "avoided": 4,
+        "meanExposure": 10.972713049317067,
+        "oracleFeasible": 14,
+        "returnFailures": 0
+      },
+      "MARS SHIFT": {
+        "threateningCases": 15,
+        "avoided": 6,
+        "meanExposure": 8.61980313584179,
+        "oracleFeasible": 14,
+        "returnFailures": 0
+      }
+    }
+  },
+  "confusion": [
+    {
+      "horizon": 5,
+      "method": "nominal",
+      "TP": 63,
+      "FN": 11,
+      "FP": 28,
+      "TN": 1616,
+      "falseNegativeRate": 0.14864864864864866,
+      "falsePositiveRate": 0.0170316301703163,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 30,
+      "missedOrUnavailable": 41,
+      "allOutsideDanger": 104
+    },
+    {
+      "horizon": 5,
+      "method": "envelope",
+      "TP": 74,
+      "FN": 0,
+      "FP": 347,
+      "TN": 1297,
+      "falseNegativeRate": 0,
+      "falsePositiveRate": 0.2110705596107056,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 30,
+      "missedOrUnavailable": 30,
+      "allOutsideDanger": 104
+    },
+    {
+      "horizon": 10,
+      "method": "nominal",
+      "TP": 116,
+      "FN": 18,
+      "FP": 46,
+      "TN": 1538,
+      "falseNegativeRate": 0.13432835820895522,
+      "falsePositiveRate": 0.02904040404040404,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 45,
+      "missedOrUnavailable": 63,
+      "allOutsideDanger": 179
+    },
+    {
+      "horizon": 10,
+      "method": "envelope",
+      "TP": 134,
+      "FN": 0,
+      "FP": 512,
+      "TN": 1072,
+      "falseNegativeRate": 0,
+      "falsePositiveRate": 0.32323232323232326,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 45,
+      "missedOrUnavailable": 45,
+      "allOutsideDanger": 179
+    },
+    {
+      "horizon": 20,
+      "method": "nominal",
+      "TP": 214,
+      "FN": 40,
+      "FP": 55,
+      "TN": 1409,
+      "falseNegativeRate": 0.15748031496062992,
+      "falsePositiveRate": 0.03756830601092896,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 75,
+      "missedOrUnavailable": 115,
+      "allOutsideDanger": 329
+    },
+    {
+      "horizon": 20,
+      "method": "envelope",
+      "TP": 254,
+      "FN": 0,
+      "FP": 728,
+      "TN": 736,
+      "falseNegativeRate": 0,
+      "falsePositiveRate": 0.4972677595628415,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 75,
+      "missedOrUnavailable": 75,
+      "allOutsideDanger": 329
+    },
+    {
+      "horizon": 30,
+      "method": "nominal",
+      "TP": 268,
+      "FN": 61,
+      "FP": 70,
+      "TN": 1319,
+      "falseNegativeRate": 0.18541033434650456,
+      "falsePositiveRate": 0.0503959683225342,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 90,
+      "missedOrUnavailable": 151,
+      "allOutsideDanger": 419
+    },
+    {
+      "horizon": 30,
+      "method": "envelope",
+      "TP": 329,
+      "FN": 0,
+      "FP": 865,
+      "TN": 524,
+      "falseNegativeRate": 0,
+      "falsePositiveRate": 0.6227501799856011,
+      "insideExcluded": 358,
+      "unavailable": 198,
+      "unavailableDanger": 90,
+      "missedOrUnavailable": 90,
+      "allOutsideDanger": 419
+    }
+  ],
+  "geometryPaddingMetres": 2,
+  "terrainPaddingMetres": 1,
+  "configModified": false
+}

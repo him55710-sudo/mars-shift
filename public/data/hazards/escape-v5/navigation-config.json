@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 5,
+  "status": "EXPERIMENTAL_SIMULATION_ONLY",
+  "config": {
+    "horizon": 30,
+    "step": 1,
+    "groundWeight": 1.5,
+    "uncertainty": true,
+    "maxExpanded": 20000,
+    "maxSensorAge": 6,
+    "localizationSigma": 1,
+    "policy": "local-matched",
+    "exposureWeight": 35,
+    "coastSeconds": 16,
+    "localTracker": {
+      "window": 5,
+      "radiusMode": "last",
+      "processNoise": 0.08
+    },
+    "uncertaintyWeight": 0.5,
+    "continuousContact": true
+  },
+  "accelerationNoise": 0.08,
+  "validation": "/data/hazards/escape-v5/holdout-summary.json"
+}

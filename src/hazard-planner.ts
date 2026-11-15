@@ -7,14 +7,15 @@ import {sandRiskMap} from './sand-risk';
 import {forecast,sweptVortexCollision} from './hazard-tracker';
 import type {VortexTrack} from './hazard-tracker';
 import {exposureMPC} from './hazard-mpc';
+import type {LocalTrackerConfig} from './local-dust-tracker';
 
 export type HazardModel='Baseline'|'Dynamic'|'MARS SHIFT';
 export type EscapeAction='HOLD'|'SIDESTEP'|'DETOUR'|'RETURN';
 export type TimedPoint=Point&{time:number};
 export type ResourceState={oxygenSeconds:number;batterySeconds:number;missionSeconds:number;reserveFraction:number;oxygenReserveSeconds?:number;batteryReserveSeconds?:number};
-export type HazardConfig={horizon:number;step:number;groundWeight:number;uncertainty:boolean;maxExpanded:number;maxSensorAge:number;localizationSigma:number;policy?:'legacy'|'exposure-mpc';exposureWeight?:number;responsiveTracking?:boolean;coastSeconds?:number};
+export type HazardConfig={horizon:number;step:number;groundWeight:number;uncertainty:boolean;maxExpanded:number;maxSensorAge:number;localizationSigma:number;policy?:'legacy'|'exposure-mpc'|'local-matched';exposureWeight?:number;responsiveTracking?:boolean;coastSeconds?:number;localTracker?:LocalTrackerConfig;uncertaintyWeight?:number;continuousContact?:boolean};
 export const HAZARD_DEFAULTS:HazardConfig={horizon:30,step:1,groundWeight:1.5,uncertainty:true,maxExpanded:20000,maxSensorAge:6,localizationSigma:1};
-export type EscapeCandidate={action:EscapeAction;path:TimedPoint[];feasible:boolean;reason:string;score:number;distance:number;groundExposure:number;returnSeconds:number;expanded:number;budgetSafe:boolean;predictedExposure?:number;riskIntegral?:number;returnMargin?:number};
+export type EscapeCandidate={action:EscapeAction;path:TimedPoint[];feasible:boolean;reason:string;score:number;distance:number;groundExposure:number;returnSeconds:number;expanded:number;budgetSafe:boolean;predictedExposure?:number;riskIntegral?:number;returnMargin?:number;predictedMinClearance?:number};
 export type EscapeDecision={time:number;model:HazardModel;status:'MODELED_ACTION'|'EXPOSURE_MINIMIZING'|'NO_VERIFIED_ACTION'|'SENSOR_STALE'|'SEARCH_LIMIT';action:EscapeAction|null;chosen:EscapeCandidate|null;candidates:EscapeCandidate[];latencyMs:number;forecast:ReturnType<typeof forecast>[];reason:string};
 export type HazardContext={terrain:Terrain;settings:Settings;base:Point;ground:ReturnType<typeof sandRiskMap>;returnSeconds:Float64Array;returnNext:Int32Array};
 export function prepareHazardContext(terrain:Terrain,settings:Settings,base:Point):HazardContext {
@@ -85,6 +86,13 @@ function waypoint(c:HazardContext,start:Point,target:Point,seconds:number){
 export function decideEscape(c:HazardContext,start:Point,missionTarget:Point,now:number,track:VortexTrack,resources:ResourceState,model:HazardModel='MARS SHIFT',config:HazardConfig=HAZARD_DEFAULTS):EscapeDecision {
  const began=performance.now(),finish=(extra:Omit<EscapeDecision,'time'|'model'|'latencyMs'|'forecast'>):EscapeDecision=>({time:now,model,latencyMs:performance.now()-began,forecast:Array.from({length:7},(_,i)=>forecast(track,now+i*config.horizon/6,model==='MARS SHIFT',config.localizationSigma)),...extra});
  if(![now,start.x,start.y,config.horizon,config.step,config.localizationSigma,resources.oxygenSeconds,resources.batterySeconds,resources.missionSeconds].every(Number.isFinite)||config.horizon<=0||config.horizon>45||config.step<=0||config.step>config.horizon||config.localizationSigma<0)return finish({status:'NO_VERIFIED_ACTION',action:null,chosen:null,candidates:[],reason:'Invalid model inputs'});
+ if(track.source==='OBSERVED_IMAGE_DERIVED')return finish({status:'NO_VERIFIED_ACTION',action:null,chosen:null,candidates:[],reason:'Image-plane pixels have no verified ground range/registration. Metre-based escape guidance is unavailable.'});
+ if(config.policy==='local-matched'){
+  if(config.localizationSigma>5||track.observations<3||now<track.time||now-track.lastObservation>Math.min(16,config.coastSeconds??16))return finish({status:'SENSOR_STALE',action:null,chosen:null,candidates:[],reason:'Insufficient local fixes or localization. Movement is not verified.'});
+  const result=exposureMPC(c,start,missionTarget,now,track,resources,config,model);
+  if(now-track.lastObservation>config.maxSensorAge&&result.chosen){result.status='EXPOSURE_MINIMIZING';result.reason='SENSOR GAP: uncertainty is growing. '+result.reason;}
+  return finish(result);
+ }
  if(model==='Baseline'){
   const p={x:Math.round(start.x),y:Math.round(start.y)},route=leg(c.terrain,p,missionTarget,'shortest',c.settings,null),path:TimedPoint[]=[{...start,time:now}];let length=0,groundExposure=0;
   if(!route||!staticSegmentSafe(c.terrain,c.settings,start,p))return finish({status:'NO_VERIFIED_ACTION',action:null,chosen:null,candidates:[],reason:'Static A* found no traversable path'});

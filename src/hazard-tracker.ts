@@ -1,8 +1,9 @@
 /** Local tangent coordinates: x east, y south, metres; timestamps are simulation seconds.
  * A point weather station is NOT a position sensor. Inputs below are simulated optical/range fixes. */
 export type AxisState = {p:number;v:number;pp:number;pv:number;vv:number};
-export type VortexObservation = {time:number;x:number;y:number;radius:number;positionSigma:number;radiusSigma:number;source:'SIMULATED_SENSOR'};
-export type VortexTrack = {time:number;lastObservation:number;x:AxisState;y:AxisState;r:AxisState;accelerationNoise:number;radiusNoise:number;observations:number;rejected:number;source:'SIMULATED_SENSOR';pendingManeuver?:VortexObservation;reacquisitions?:number};
+export type ObservationSource='SIMULATED_SENSOR'|'OBSERVED_IMAGE_DERIVED';
+export type VortexObservation = {time:number;x:number;y:number;radius:number;positionSigma:number;radiusSigma:number;source:ObservationSource};
+export type VortexTrack = {time:number;lastObservation:number;x:AxisState;y:AxisState;r:AxisState;accelerationNoise:number;radiusNoise:number;observations:number;rejected:number;source:ObservationSource;pendingManeuver?:VortexObservation;reacquisitions?:number};
 export type Forecast = {time:number;x:number;y:number;radius:number;position95:number;radius95:number;envelope:number;vx:number;vy:number;age:number;valid:boolean};
 const initial=(p:number,sigma:number,velocity=0):AxisState=>({p,v:velocity,pp:sigma*sigma,pv:0,vv:9});
 function predict(a:AxisState,dt:number,q:number):AxisState {
@@ -13,7 +14,7 @@ function correct(a:AxisState,z:number,sigma:number):AxisState {
  // Scalar Joseph update: preserves positive semidefiniteness under roundoff.
  return {p:a.p+kp*e,v:a.v+kv*e,pp:(1-kp)**2*a.pp+kp*kp*variance,pv:(1-kp)*(a.pv-kv*a.pp)+kp*kv*variance,vv:a.vv-2*kv*a.pv+kv*kv*(a.pp+variance)};
 }
-export function validObservation(o:VortexObservation){return o.source==='SIMULATED_SENSOR'&&[o.time,o.x,o.y,o.radius,o.positionSigma,o.radiusSigma].every(Number.isFinite)&&o.radius>0&&o.positionSigma>0&&o.radiusSigma>0;}
+export function validObservation(o:VortexObservation){return ['SIMULATED_SENSOR','OBSERVED_IMAGE_DERIVED'].includes(o.source)&&[o.time,o.x,o.y,o.radius,o.positionSigma,o.radiusSigma].every(Number.isFinite)&&o.radius>0&&o.positionSigma>0&&o.radiusSigma>0;}
 export function startTrack(o:VortexObservation,accelerationNoise=.25):VortexTrack {
  if(!validObservation(o)||!Number.isFinite(accelerationNoise)||accelerationNoise<=0)throw Error('Invalid vortex observation or process noise');
  return {time:o.time,lastObservation:o.time,x:initial(o.x,o.positionSigma),y:initial(o.y,o.positionSigma),r:{...initial(o.radius,o.radiusSigma),vv:.04},accelerationNoise,radiusNoise:.05,observations:1,rejected:0,source:o.source};

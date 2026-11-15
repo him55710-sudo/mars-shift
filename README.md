@@ -1,3 +1,5 @@
+> Observation/Navcam integration (2026-11-15): see [validation report](docs/OBSERVED_V6_RESULTS.md). `/hazards` now opens recorded MEDA/NASA replay and conditional local escape; archived orbital studies remain accessible.
+
 # MARS SHIFT
 
 Current surface release: [Navcam close-up geometry and PDS texture reprojection](docs/NAVCAM_DETAIL_RELEASE.md). `/explore?surface=navcam` opens the new close stereo surface. **Mission terrain** restores the orbital mission HUD. Real source geometry and image crops replace the blurred near-field orbital view; the local station remains explicitly separate from the planned route.

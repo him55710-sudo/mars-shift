@@ -11,7 +11,7 @@ export const SCENARIOS:ScenarioKind[]=['crossing','approach','passing','turning'
 export const NOVEL_SCENARIOS:ScenarioKind[]=['accelerating','oblique','inside','sensor-gap','broad-front','noisy','reversal','drift-turn'];
 export const FINAL_SCENARIOS:ScenarioKind[]=[...NOVEL_SCENARIOS,'stop-start','radius-pulse'];
 export type TruthPoint={time:number;x:number;y:number;radius:number};
-export type HazardScenario={seed:number;kind:ScenarioKind;start:Point;target:Point;base:Point;truth:TruthPoint[];observations:VortexObservation[];settings:Settings;resources:ResourceState;catalogEvent:string;terrainEffect:'ASSUMED_CONTOUR_DEFLECTION';background:WeatherEvidence['background'];duration:number};
+export type HazardScenario={seed:number;kind:ScenarioKind;start:Point;target:Point;base:Point;truth:TruthPoint[];observations:VortexObservation[];settings:Settings;resources:ResourceState;catalogEvent:string;terrainEffect:'ASSUMED_CONTOUR_DEFLECTION'|'NO_TERRAIN_WIND_CORRECTION';background:WeatherEvidence['background'];duration:number};
 export function seededRandom(seed:number){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
 function gaussian(rng:()=>number){return Math.sqrt(-2*Math.log(Math.max(1e-12,rng())))*Math.cos(2*Math.PI*rng());}
 /** Cheap precomputable field. This terrain deflection is an ASSUMPTION, not CFD output. */

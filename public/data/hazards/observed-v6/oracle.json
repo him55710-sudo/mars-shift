@@ -1,0 +1,91 @@
+{
+  "kind": "POST_RESULT_DIAGNOSTIC_NO_POLICY_CHANGE",
+  "protocol": {
+    "frozenAt": "2026-11-15T02:00:55.906802+00:00",
+    "kind": "Post-result diagnostic, not independent holdout",
+    "conditions": "Identical 12 cases, grid, speed, delay, budgets, endpoint bank, mission target and return time as protocol.json. Only fitted radius/speed are replaced with evaluation-truth values and sigmas zeroed.",
+    "purpose": "Determine how much contact remains with exact synthetic trajectory information. No retuning after results.",
+    "limitation": "Bounded candidate bank; not a global optimum or physical impossibility proof."
+  },
+  "rows": [
+    {
+      "case": "N00",
+      "contact": 3.4167250638748072,
+      "minClearance": -3.375970349465854,
+      "returnComplete": true
+    },
+    {
+      "case": "N01",
+      "contact": 6.559503852361317,
+      "minClearance": -1.46930573316323,
+      "returnComplete": true
+    },
+    {
+      "case": "N02",
+      "contact": 6.436022680220242,
+      "minClearance": -7.0247817799650605,
+      "returnComplete": true
+    },
+    {
+      "case": "N03",
+      "contact": 0,
+      "minClearance": 0.48890158536817285,
+      "returnComplete": true
+    },
+    {
+      "case": "N04",
+      "contact": 3.530990396842123,
+      "minClearance": -3.4575331346198355,
+      "returnComplete": true
+    },
+    {
+      "case": "N05",
+      "contact": 8.258899651496698,
+      "minClearance": -2.442384003723327,
+      "returnComplete": true
+    },
+    {
+      "case": "N06",
+      "contact": 10.211678213961127,
+      "minClearance": -12.333030552142613,
+      "returnComplete": true
+    },
+    {
+      "case": "N07",
+      "contact": 6.2526375363083915,
+      "minClearance": -1.5358104517356033,
+      "returnComplete": true
+    },
+    {
+      "case": "N08",
+      "contact": 5.98687797069508,
+      "minClearance": -7.554781779965061,
+      "returnComplete": true
+    },
+    {
+      "case": "N09",
+      "contact": 14.822363543782743,
+      "minClearance": -12.910613508281058,
+      "returnComplete": true
+    },
+    {
+      "case": "N10",
+      "contact": 10.147968895932664,
+      "minClearance": -12.418843104007038,
+      "returnComplete": true
+    },
+    {
+      "case": "N11",
+      "contact": 8.0553603602267,
+      "minClearance": -2.840369395665874,
+      "returnComplete": true
+    }
+  ],
+  "summary": {
+    "cases": 12,
+    "noContact": 1,
+    "meanContact": 6.973252347141824,
+    "returnCompleted": 12
+  },
+  "scriptSHA256": "b97e8b93d6e2f9e545bdeba730e775231a99b75281fed1bf48576112d83bcb21"
+}

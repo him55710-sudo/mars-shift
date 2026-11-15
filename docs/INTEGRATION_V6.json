@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-15T02:08:46.569165+00:00",
+  "branch": "codex/observed-replay-v6",
+  "visualBase": "7a643b7",
+  "originalResearchWorkspace": "../mars-shift (untouched)",
+  "checks": {
+    "vitest": "242 passed / 29 files",
+    "typescript": "passed",
+    "vite": "passed",
+    "navcamPackaging": "passed",
+    "diffCheck": "passed",
+    "v4v5PreservedByteForByte": true,
+    "frozenEvaluationSourceHashesMatch": true,
+    "browser": [
+      "Actual Sol 215 passage selected; causal pressure candidate T-1 s displayed",
+      "NASA movie frame 5 at 20 s with native 4 s cadence",
+      "Nominal front arrival 18 s at initialization",
+      "Scenario stepping through 18 s; Mission Control / Helmet XR synchronized",
+      "Modeled return completed at T+96 s in an interactive run"
+    ]
+  },
+  "hashes": {
+    "src/ObservedNavigator.tsx": "4baa764b5004558c5097eacc73203aa83e49616bbcf1e1c09fcab6d2ddc6d53d",
+    "src/observed-navigator.css": "56a6e21ed21aead7bad9eaf6699e9bbbd9d7ad0a4ab91db81f8d281580800d68",
+    "src/observed-replay.ts": "33106d13bafbbb9535ac67f5ae8e13d3c1f145d0da15635fdc518a9f026c06f5",
+    "src/observed-escape.ts": "4bcf28c5cff7c86f13cf985ae1b37f1d8d5d7de59764c1be52e634a81946dfef",
+    "src/observed-session.ts": "b3f478adba68c8cdbbe4647439337d6f101a5a64b7c9e28cee7a908f994391b1",
+    "src/observed-worker.ts": "e8d5b074503dbcea95164b655a20ed895b16a6e94696e656bf8d100afc51126d",
+    "src/meda-detection.ts": "d3b8e937926e650177725cca6faf490ad4276086dca4f128a83f7c2a373e4d34",
+    "src/RoverScene.tsx": "f1611f3a85f6f48696bfbe640340870520d3fa03cb45ed26c9e07ced9840feaf",
+    "src/hazard-scene.ts": "744f6fa62379677e015a88cd09e608d971847812d65dea3b30b824a66f314812",
+    "src/hazard-xr.ts": "c41a4fa70e794508312b0daf634d1c627ecf65c22a715f07f66a2d852bf50a18",
+    "public/sw.js": "a237b6194f963f9fc4aad61e6b6cc8929fcc2b4db6bf3963d226026f7a74af46",
+    "public/data/drive1004/calibrated-validation.json": "150b77103f76d2c54c444ced1cbd41872041ec4a2a1524600015bc10e163f69e"
+  },
+  "screenshots": [
+    "../../research/observed-v6-recordings.jpg",
+    "../../research/observed-v6-xr.jpg",
+    "../../research/observed-v6-map.jpg"
+  ],
+  "preview": "http://127.0.0.1:5191/hazards",
+  "published": false
+}

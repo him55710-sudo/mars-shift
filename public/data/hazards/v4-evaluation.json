@@ -1,0 +1,1226 @@
+{
+  "schemaVersion": 4,
+  "meaning": "New catalog-conditioned and observed-image-shape counterfactuals. No observed astronaut trajectory or surveyed 2D vortex truth. Fair resources in all arms.",
+  "frozen": {
+    "schemaVersion": 4,
+    "status": "SIMULATION_ONLY",
+    "config": {
+      "horizon": 30,
+      "step": 1,
+      "groundWeight": 1.5,
+      "uncertainty": true,
+      "maxExpanded": 20000,
+      "maxSensorAge": 6,
+      "localizationSigma": 1,
+      "policy": "local-matched",
+      "exposureWeight": 35,
+      "coastSeconds": 16,
+      "localTracker": {
+        "window": 3,
+        "radiusMode": "last",
+        "processNoise": 0.08
+      },
+      "uncertaintyWeight": 0.5
+    },
+    "accelerationNoise": 0.08,
+    "selection": [
+      {
+        "config": {
+          "horizon": 30,
+          "step": 1,
+          "groundWeight": 1.5,
+          "uncertainty": true,
+          "maxExpanded": 20000,
+          "maxSensorAge": 6,
+          "localizationSigma": 1,
+          "policy": "local-matched",
+          "exposureWeight": 35,
+          "coastSeconds": 16,
+          "localTracker": {
+            "window": 3,
+            "radiusMode": "last",
+            "processNoise": 0.08
+          },
+          "uncertaintyWeight": 0.5
+        },
+        "summary": {
+          "episodes": 72,
+          "exposureSeconds": 1.0069444444444444,
+          "exposedEpisodes": 34,
+          "penetrationMetreSeconds": 4.335497566024518,
+          "holdSeconds": 2.6666666666666665,
+          "unnecessaryHoldSeconds": 1.9722222222222223,
+          "noActionSeconds": 0,
+          "returnFeasibleEpisodes": 72,
+          "initialReturnFailures": 0,
+          "resourceViolationSeconds": 0,
+          "constraintViolations": 0,
+          "distanceMetres": 26.880481084284447,
+          "groundRiskMetres": 10.446361882167437,
+          "progressMetres": 18.061612493474268,
+          "reentries": 0,
+          "firstExitSeconds": 16.610294117647058,
+          "exitSamples": 34,
+          "replanMs": {
+            "p95": 26.280500000008033,
+            "max": 96.7777999999962
+          }
+        },
+        "loss": 1.1055555555555556
+      },
+      {
+        "config": {
+          "horizon": 30,
+          "step": 1,
+          "groundWeight": 1.5,
+          "uncertainty": true,
+          "maxExpanded": 20000,
+          "maxSensorAge": 6,
+          "localizationSigma": 1,
+          "policy": "local-matched",
+          "exposureWeight": 35,
+          "coastSeconds": 16,
+          "localTracker": {
+            "window": 3,
+            "radiusMode": "last",
+            "processNoise": 0.08
+          },
+          "uncertaintyWeight": 0.15
+        },
+        "summary": {
+          "episodes": 72,
+          "exposureSeconds": 1.15625,
+          "exposedEpisodes": 39,
+          "penetrationMetreSeconds": 4.817110016112611,
+          "holdSeconds": 2.4722222222222223,
+          "unnecessaryHoldSeconds": 1.5833333333333333,
+          "noActionSeconds": 0,
+          "returnFeasibleEpisodes": 72,
+          "initialReturnFailures": 0,
+          "resourceViolationSeconds": 0,
+          "constraintViolations": 0,
+          "distanceMetres": 26.995185446440885,
+          "groundRiskMetres": 10.460656343633808,
+          "progressMetres": 18.595012810188525,
+          "reentries": 0,
+          "firstExitSeconds": 17.903846153846153,
+          "exitSamples": 39,
+          "replanMs": {
+            "p95": 39.525799999999435,
+            "max": 141.44049999999697
+          }
+        },
+        "loss": 1.2354166666666666
+      }
+    ],
+    "developmentSeeds": [
+      8101,
+      8124
+    ],
+    "heldoutSeeds": [
+      9101,
+      9190
+    ],
+    "resources": "SAME controller, candidate bank, fixed reserve, consumption, continuous return connectors, 2-second commitment checks at 0.25 s in ALL arms",
+    "protocolSHA256": "50eb80758ad9a970efe358d2c0111a14d57cf8621b1f56671a423758970ab6ec",
+    "sourcesSHA256": "f9a235e82404644679423c84d8734e60579a2f47c74d28b2545a3a94f1a97aa5"
+  },
+  "byModel": {
+    "Baseline": {
+      "episodes": 270,
+      "exposureSeconds": 4.595370370370371,
+      "exposedEpisodes": 204,
+      "penetrationMetreSeconds": 62.237021316253205,
+      "holdSeconds": 1.3111111111111111,
+      "unnecessaryHoldSeconds": 1.162962962962963,
+      "noActionSeconds": 0,
+      "returnFeasibleEpisodes": 270,
+      "initialReturnFailures": 0,
+      "resourceViolationSeconds": 0,
+      "constraintViolations": 0,
+      "distanceMetres": 27.484593606678207,
+      "groundRiskMetres": 10.317419117607319,
+      "progressMetres": 22.89511120495937,
+      "reentries": 5,
+      "firstExitSeconds": 20.142156862745097,
+      "exitSamples": 204,
+      "replanMs": {
+        "p95": 26.945000000006985,
+        "max": 261.9464000000007
+      }
+    },
+    "Dynamic": {
+      "episodes": 270,
+      "exposureSeconds": 3.501851851851852,
+      "exposedEpisodes": 196,
+      "penetrationMetreSeconds": 35.89094172776462,
+      "holdSeconds": 2.2814814814814817,
+      "unnecessaryHoldSeconds": 0.6666666666666666,
+      "noActionSeconds": 0,
+      "returnFeasibleEpisodes": 270,
+      "initialReturnFailures": 0,
+      "resourceViolationSeconds": 0,
+      "constraintViolations": 0,
+      "distanceMetres": 27.21875019217295,
+      "groundRiskMetres": 10.20955996891571,
+      "progressMetres": 18.82676868929241,
+      "reentries": 19,
+      "firstExitSeconds": 18.303571428571427,
+      "exitSamples": 196,
+      "replanMs": {
+        "p95": 27.678500000001804,
+        "max": 260.5326000000059
+      }
+    },
+    "MARS SHIFT": {
+      "episodes": 270,
+      "exposureSeconds": 2.7453703703703702,
+      "exposedEpisodes": 170,
+      "penetrationMetreSeconds": 31.904175200821314,
+      "holdSeconds": 2.4814814814814814,
+      "unnecessaryHoldSeconds": 0.8592592592592593,
+      "noActionSeconds": 0,
+      "returnFeasibleEpisodes": 270,
+      "initialReturnFailures": 0,
+      "resourceViolationSeconds": 0,
+      "constraintViolations": 0,
+      "distanceMetres": 27.122423192066588,
+      "groundRiskMetres": 10.201429864925618,
+      "progressMetres": 16.741879641050346,
+      "reentries": 8,
+      "firstExitSeconds": 17.511764705882353,
+      "exitSamples": 170,
+      "replanMs": {
+        "p95": 27.809500000003027,
+        "max": 167.3806999999979
+      }
+    }
+  },
+  "contrasts": {
+    "Baseline": {
+      "meanSeconds": -1.8499999999999994,
+      "seedClusterBootstrap95": [
+        -3.1953703703703713,
+        -0.7629629629629628
+      ]
+    },
+    "Dynamic": {
+      "meanSeconds": -0.7564814814814814,
+      "seedClusterBootstrap95": [
+        -1.4527777777777775,
+        -0.2157407407407408
+      ]
+    }
+  },
+  "byScenario": {
+    "crossing": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 2.361111111111111,
+        "exposedEpisodes": 25,
+        "penetrationMetreSeconds": 14.304946355500382,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.732010393043417,
+        "groundRiskMetres": 10.335198390748069,
+        "progressMetres": 26.860351111029704,
+        "reentries": 0,
+        "firstExitSeconds": 23.99,
+        "exitSamples": 25,
+        "replanMs": {
+          "p95": 21.432199999981094,
+          "max": 46.3012999999919
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 0.7962962962962963,
+        "exposedEpisodes": 22,
+        "penetrationMetreSeconds": 1.1040819046098156,
+        "holdSeconds": 1.7037037037037037,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 26.622440130002946,
+        "groundRiskMetres": 9.946216467392041,
+        "progressMetres": 20.362035753290186,
+        "reentries": 0,
+        "firstExitSeconds": 23.420454545454547,
+        "exitSamples": 22,
+        "replanMs": {
+          "p95": 23.219100000016624,
+          "max": 83.79000000000815
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 0.24074074074074073,
+        "exposedEpisodes": 9,
+        "penetrationMetreSeconds": 0.31702916335977094,
+        "holdSeconds": 1.4074074074074074,
+        "unnecessaryHoldSeconds": 0.7407407407407407,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.073697736001524,
+        "groundRiskMetres": 10.145171401116242,
+        "progressMetres": 19.040656918934513,
+        "reentries": 0,
+        "firstExitSeconds": 23.72222222222222,
+        "exitSamples": 9,
+        "replanMs": {
+          "p95": 25.151899999997113,
+          "max": 61.043800000014016
+        }
+      }
+    },
+    "inside": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 1.9444444444444444,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 43.11372282371517,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.33170822311939,
+        "groundRiskMetres": 10.452135521248836,
+        "progressMetres": 27.338620573055135,
+        "reentries": 0,
+        "firstExitSeconds": 2.1944444444444446,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 26.77230000000054,
+          "max": 58.85120000000461
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 1.9444444444444444,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 43.11372282371517,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.33170822311939,
+        "groundRiskMetres": 10.452135521248836,
+        "progressMetres": 27.338620573055135,
+        "reentries": 0,
+        "firstExitSeconds": 2.1944444444444446,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 32.56170000000566,
+          "max": 179.7791000000143
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 1.9444444444444444,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 43.0007816002917,
+        "holdSeconds": 0.6666666666666666,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.890241744273403,
+        "groundRiskMetres": 10.277502055393406,
+        "progressMetres": 27.00766833751122,
+        "reentries": 0,
+        "firstExitSeconds": 2.1944444444444446,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 29.661999999982072,
+          "max": 69.57279999996535
+        }
+      }
+    },
+    "passing": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 0,
+        "exposedEpisodes": 0,
+        "penetrationMetreSeconds": 0,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.666511485321124,
+        "groundRiskMetres": 10.553359395445879,
+        "progressMetres": 26.73402504162471,
+        "reentries": 0,
+        "firstExitSeconds": 0,
+        "exitSamples": 0,
+        "replanMs": {
+          "p95": 28.368699999991804,
+          "max": 54.75850000000355
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 0,
+        "exposedEpisodes": 0,
+        "penetrationMetreSeconds": 0,
+        "holdSeconds": 0.14814814814814814,
+        "unnecessaryHoldSeconds": 0.14814814814814814,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.59836818460715,
+        "groundRiskMetres": 10.531456230364848,
+        "progressMetres": 26.666085106178524,
+        "reentries": 0,
+        "firstExitSeconds": 0,
+        "exitSamples": 0,
+        "replanMs": {
+          "p95": 26.069199999968987,
+          "max": 54.32520000000659
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 0,
+        "exposedEpisodes": 0,
+        "penetrationMetreSeconds": 0,
+        "holdSeconds": 0.8888888888888888,
+        "unnecessaryHoldSeconds": 0.8888888888888888,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.10072156564872,
+        "groundRiskMetres": 10.26197447311365,
+        "progressMetres": 25.776649833471676,
+        "reentries": 0,
+        "firstExitSeconds": 0,
+        "exitSamples": 0,
+        "replanMs": {
+          "p95": 28.141199999998207,
+          "max": 65.68390000000363
+        }
+      }
+    },
+    "growing": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 4.37037037037037,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 103.11439636961302,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.0383726810726,
+        "groundRiskMetres": 11.037527326970597,
+        "progressMetres": 27.24638508698034,
+        "reentries": 0,
+        "firstExitSeconds": 25.305555555555557,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 26.702399999980116,
+          "max": 261.9464000000007
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 3.712962962962963,
+        "exposedEpisodes": 26,
+        "penetrationMetreSeconds": 77.65939517664846,
+        "holdSeconds": 2.4444444444444446,
+        "unnecessaryHoldSeconds": 0.14814814814814814,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.225903781368917,
+        "groundRiskMetres": 10.716808369722823,
+        "progressMetres": 19.962496802276906,
+        "reentries": 0,
+        "firstExitSeconds": 24.73076923076923,
+        "exitSamples": 26,
+        "replanMs": {
+          "p95": 33.818599999998696,
+          "max": 169.34269999999378
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 3.5925925925925926,
+        "exposedEpisodes": 24,
+        "penetrationMetreSeconds": 75.69994388572695,
+        "holdSeconds": 2.2222222222222223,
+        "unnecessaryHoldSeconds": 0.14814814814814814,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.27729022576025,
+        "groundRiskMetres": 10.727141438656357,
+        "progressMetres": 19.494297199258217,
+        "reentries": 0,
+        "firstExitSeconds": 24.8125,
+        "exitSamples": 24,
+        "replanMs": {
+          "p95": 27.382599999953527,
+          "max": 114.60220000000845
+        }
+      }
+    },
+    "sensor-gap": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 1.2407407407407407,
+        "exposedEpisodes": 22,
+        "penetrationMetreSeconds": 6.939078940249518,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.58192959014069,
+        "groundRiskMetres": 10.606144402643727,
+        "progressMetres": 27.990328595352985,
+        "reentries": 0,
+        "firstExitSeconds": 22.579545454545453,
+        "exitSamples": 22,
+        "replanMs": {
+          "p95": 28.372199999997974,
+          "max": 127.76269999996293
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 0.8518518518518519,
+        "exposedEpisodes": 20,
+        "penetrationMetreSeconds": 2.0507933466350914,
+        "holdSeconds": 0.5185185185185185,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.520610788704854,
+        "groundRiskMetres": 10.57940848587182,
+        "progressMetres": 24.032289871610164,
+        "reentries": 0,
+        "firstExitSeconds": 21.225,
+        "exitSamples": 20,
+        "replanMs": {
+          "p95": 25.59189999999944,
+          "max": 63.94680000000517
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 0.6481481481481481,
+        "exposedEpisodes": 15,
+        "penetrationMetreSeconds": 1.673104557558032,
+        "holdSeconds": 0.5185185185185185,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.572233947563486,
+        "groundRiskMetres": 10.603113038331356,
+        "progressMetres": 23.241427295718633,
+        "reentries": 0,
+        "firstExitSeconds": 19.116666666666667,
+        "exitSamples": 15,
+        "replanMs": {
+          "p95": 25.726400000043213,
+          "max": 80.04099999999744
+        }
+      }
+    },
+    "low-reserve": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 5.148148148148148,
+        "exposedEpisodes": 21,
+        "penetrationMetreSeconds": 142.56137061917255,
+        "holdSeconds": 13.11111111111111,
+        "unnecessaryHoldSeconds": 11.62962962962963,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 19.249873831555867,
+        "groundRiskMetres": 7.557866202613139,
+        "progressMetres": -18.95771213108671,
+        "reentries": 0,
+        "firstExitSeconds": 27.214285714285715,
+        "exitSamples": 21,
+        "replanMs": {
+          "p95": 28.226499999989755,
+          "max": 109.31560000000172
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 4.574074074074074,
+        "exposedEpisodes": 20,
+        "penetrationMetreSeconds": 124.16214019273117,
+        "holdSeconds": 13.185185185185185,
+        "unnecessaryHoldSeconds": 5.407407407407407,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 20.325588856182588,
+        "groundRiskMetres": 8.00176643153133,
+        "progressMetres": -17.497626903896585,
+        "reentries": 0,
+        "firstExitSeconds": 27.2875,
+        "exitSamples": 20,
+        "replanMs": {
+          "p95": 27.878000000026077,
+          "max": 260.5326000000059
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 4.4907407407407405,
+        "exposedEpisodes": 18,
+        "penetrationMetreSeconds": 124.31464364191285,
+        "holdSeconds": 12.962962962962964,
+        "unnecessaryHoldSeconds": 5.037037037037037,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 20.430995645313097,
+        "groundRiskMetres": 8.059560567042784,
+        "progressMetres": -17.368462671671313,
+        "reentries": 0,
+        "firstExitSeconds": 28.26388888888889,
+        "exitSamples": 18,
+        "replanMs": {
+          "p95": 27.793599999975413,
+          "max": 50.259900000000016
+        }
+      }
+    },
+    "turning": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 1.1296296296296295,
+        "exposedEpisodes": 15,
+        "penetrationMetreSeconds": 7.135109121235325,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.851787217604418,
+        "groundRiskMetres": 10.547692149714802,
+        "progressMetres": 26.990432163623414,
+        "reentries": 0,
+        "firstExitSeconds": 19.383333333333333,
+        "exitSamples": 15,
+        "replanMs": {
+          "p95": 28.70299999999952,
+          "max": 85.28610000000117
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 0.8888888888888888,
+        "exposedEpisodes": 16,
+        "penetrationMetreSeconds": 2.328031224657021,
+        "holdSeconds": 2.3703703703703702,
+        "unnecessaryHoldSeconds": 0.5925925925925926,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 26.868043104149578,
+        "groundRiskMetres": 10.223789585882862,
+        "progressMetres": 21.55370160005641,
+        "reentries": 0,
+        "firstExitSeconds": 20.84375,
+        "exitSamples": 16,
+        "replanMs": {
+          "p95": 29.982200000000375,
+          "max": 140.7146000000066
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 0.9629629629629629,
+        "exposedEpisodes": 17,
+        "penetrationMetreSeconds": 2.496011871743633,
+        "holdSeconds": 3.037037037037037,
+        "unnecessaryHoldSeconds": 0.9629629629629629,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 26.47550015308398,
+        "groundRiskMetres": 10.117819248146535,
+        "progressMetres": 20.62801492079098,
+        "reentries": 0,
+        "firstExitSeconds": 22.323529411764707,
+        "exitSamples": 17,
+        "replanMs": {
+          "p95": 33.52020000000084,
+          "max": 95.89599999997881
+        }
+      }
+    },
+    "oblique": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 24.537037037037038,
+        "exposedEpisodes": 24,
+        "penetrationMetreSeconds": 293.6233020695741,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 29.535793914731034,
+        "groundRiskMetres": 10.601581492937086,
+        "progressMetres": 28.39823138707411,
+        "reentries": 5,
+        "firstExitSeconds": 38.71875,
+        "exitSamples": 24,
+        "replanMs": {
+          "p95": 27.292900000000373,
+          "max": 118.2496000000101
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 17.97222222222222,
+        "exposedEpisodes": 24,
+        "penetrationMetreSeconds": 104.27730872087213,
+        "holdSeconds": 1.9259259259259258,
+        "unnecessaryHoldSeconds": 0.14814814814814814,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.83472071761803,
+        "groundRiskMetres": 10.281789447835603,
+        "progressMetres": 14.242024902565667,
+        "reentries": 19,
+        "firstExitSeconds": 28.40625,
+        "exitSamples": 24,
+        "replanMs": {
+          "p95": 25.09309999999823,
+          "max": 81.46549999999843
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 11.657407407407407,
+        "exposedEpisodes": 19,
+        "penetrationMetreSeconds": 68.04759154456934,
+        "holdSeconds": 1.8518518518518519,
+        "unnecessaryHoldSeconds": 0.07407407407407407,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.544011159368967,
+        "groundRiskMetres": 10.48056641103275,
+        "progressMetres": 8.334759668754138,
+        "reentries": 8,
+        "firstExitSeconds": 29.407894736842106,
+        "exitSamples": 19,
+        "replanMs": {
+          "p95": 27.820100000011735,
+          "max": 167.3806999999979
+        }
+      }
+    },
+    "radius-pulse": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 3.990740740740741,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 3.368676803360886,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.827050319266547,
+        "groundRiskMetres": 10.47556514882398,
+        "progressMetres": 28.212964015067627,
+        "reentries": 0,
+        "firstExitSeconds": 4.2407407407407405,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 27.7841999999946,
+          "max": 215.5835999999981
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 3.6944444444444446,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 2.3940881027314873,
+        "holdSeconds": 0.07407407407407407,
+        "unnecessaryHoldSeconds": 0.07407407407407407,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.935024787882792,
+        "groundRiskMetres": 10.447625940496554,
+        "progressMetres": 26.60775577673251,
+        "reentries": 0,
+        "firstExitSeconds": 3.9444444444444446,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 27.06930000000284,
+          "max": 173.27089999999953
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 3.4074074074074074,
+        "exposedEpisodes": 27,
+        "penetrationMetreSeconds": 2.1421062086317835,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 29.44082728090529,
+        "groundRiskMetres": 10.642381673586645,
+        "progressMetres": 17.73567714517732,
+        "reentries": 0,
+        "firstExitSeconds": 3.6574074074074074,
+        "exitSamples": 27,
+        "replanMs": {
+          "p95": 27.558799999998882,
+          "max": 134.08690000000206
+        }
+      }
+    },
+    "large-vortex": {
+      "Baseline": {
+        "episodes": 27,
+        "exposureSeconds": 1.2314814814814814,
+        "exposedEpisodes": 16,
+        "penetrationMetreSeconds": 8.209610060111206,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 29.030898410926966,
+        "groundRiskMetres": 11.007121144926977,
+        "progressMetres": 28.137486206872282,
+        "reentries": 0,
+        "firstExitSeconds": 22.75,
+        "exitSamples": 16,
+        "replanMs": {
+          "p95": 24.805300000007264,
+          "max": 69.14969999999812
+        }
+      },
+      "Dynamic": {
+        "episodes": 27,
+        "exposureSeconds": 0.5833333333333334,
+        "exposedEpisodes": 14,
+        "penetrationMetreSeconds": 1.8198557850461257,
+        "holdSeconds": 0.4444444444444444,
+        "unnecessaryHoldSeconds": 0.14814814814814814,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.925093348093487,
+        "groundRiskMetres": 10.914603208810354,
+        "progressMetres": 25.00030341105517,
+        "reentries": 0,
+        "firstExitSeconds": 19.857142857142858,
+        "exitSamples": 14,
+        "replanMs": {
+          "p95": 25.42620000001625,
+          "max": 46.49749999999767
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 27,
+        "exposureSeconds": 0.5092592592592593,
+        "exposedEpisodes": 14,
+        "penetrationMetreSeconds": 1.350539534419192,
+        "holdSeconds": 1.2592592592592593,
+        "unnecessaryHoldSeconds": 0.7407407407407407,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 27,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 28.4187124627474,
+        "groundRiskMetres": 10.699068342836393,
+        "progressMetres": 23.528107762558147,
+        "reentries": 0,
+        "firstExitSeconds": 19.732142857142858,
+        "exitSamples": 14,
+        "replanMs": {
+          "p95": 26.425300000002608,
+          "max": 64.78669999999693
+        }
+      }
+    }
+  },
+  "byDiameter": {
+    "<=20": {
+      "Baseline": {
+        "episodes": 42,
+        "exposureSeconds": 2.6845238095238093,
+        "exposedEpisodes": 36,
+        "penetrationMetreSeconds": 2.439053422947633,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 42,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 24.732195528682663,
+        "groundRiskMetres": 9.179103483756418,
+        "progressMetres": 21.82159098876412,
+        "reentries": 0,
+        "firstExitSeconds": 7.291666666666667,
+        "exitSamples": 36,
+        "replanMs": {
+          "p95": 26.32699999999022,
+          "max": 215.5835999999981
+        }
+      },
+      "Dynamic": {
+        "episodes": 42,
+        "exposureSeconds": 2.482142857142857,
+        "exposedEpisodes": 35,
+        "penetrationMetreSeconds": 1.7257903796173968,
+        "holdSeconds": 0.2857142857142857,
+        "unnecessaryHoldSeconds": 0.2857142857142857,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 42,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 24.691131934371885,
+        "groundRiskMetres": 9.10865003980722,
+        "progressMetres": 20.64898972942573,
+        "reentries": 0,
+        "firstExitSeconds": 6.485714285714286,
+        "exitSamples": 35,
+        "replanMs": {
+          "p95": 26.12589999998454,
+          "max": 173.27089999999953
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 42,
+        "exposureSeconds": 2.2738095238095237,
+        "exposedEpisodes": 35,
+        "penetrationMetreSeconds": 1.4670149732712618,
+        "holdSeconds": 0.2857142857142857,
+        "unnecessaryHoldSeconds": 0.19047619047619047,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 42,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 24.97932428492651,
+        "groundRiskMetres": 9.203707068673314,
+        "progressMetres": 14.808283960410009,
+        "reentries": 0,
+        "firstExitSeconds": 6.235714285714286,
+        "exitSamples": 35,
+        "replanMs": {
+          "p95": 27.144700000004377,
+          "max": 134.08690000000206
+        }
+      }
+    },
+    "20-100": {
+      "Baseline": {
+        "episodes": 210,
+        "exposureSeconds": 4.413095238095238,
+        "exposedEpisodes": 150,
+        "penetrationMetreSeconds": 47.30170769609765,
+        "holdSeconds": 0.9333333333333333,
+        "unnecessaryHoldSeconds": 0.9333333333333333,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 210,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.45831407083603,
+        "groundRiskMetres": 10.318652009360841,
+        "progressMetres": 23.325785873657487,
+        "reentries": 5,
+        "firstExitSeconds": 22.298333333333332,
+        "exitSamples": 150,
+        "replanMs": {
+          "p95": 27.064000000002125,
+          "max": 127.76269999996293
+        }
+      },
+      "Dynamic": {
+        "episodes": 210,
+        "exposureSeconds": 3.158333333333333,
+        "exposedEpisodes": 146,
+        "penetrationMetreSeconds": 17.34975967324607,
+        "holdSeconds": 2.238095238095238,
+        "unnecessaryHoldSeconds": 0.41904761904761906,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 210,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 27.006277877791376,
+        "groundRiskMetres": 10.13283520219085,
+        "progressMetres": 18.703799954049487,
+        "reentries": 19,
+        "firstExitSeconds": 20.23972602739726,
+        "exitSamples": 146,
+        "replanMs": {
+          "p95": 27.793499999999767,
+          "max": 260.5326000000059
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 210,
+        "exposureSeconds": 2.232142857142857,
+        "exposedEpisodes": 120,
+        "penetrationMetreSeconds": 12.328929241952371,
+        "holdSeconds": 2.4285714285714284,
+        "unnecessaryHoldSeconds": 0.6190476190476191,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 210,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 26.87572030900441,
+        "groundRiskMetres": 10.119357235599752,
+        "progressMetres": 17.33786875339858,
+        "reentries": 8,
+        "firstExitSeconds": 19.614583333333332,
+        "exitSamples": 120,
+        "replanMs": {
+          "p95": 28.06180000002496,
+          "max": 167.3806999999979
+        }
+      }
+    },
+    "100-280": {
+      "Baseline": {
+        "episodes": 18,
+        "exposureSeconds": 11.180555555555555,
+        "exposedEpisodes": 18,
+        "penetrationMetreSeconds": 376.01093863578086,
+        "holdSeconds": 8.777777777777779,
+        "unnecessaryHoldSeconds": 6.555555555555555,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 18,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 34.21345037349341,
+        "groundRiskMetres": 12.959105192801553,
+        "progressMetres": 20.375453907936883,
+        "reentries": 0,
+        "firstExitSeconds": 27.875,
+        "exitSamples": 18,
+        "replanMs": {
+          "p95": 29.256200000003446,
+          "max": 261.9464000000007
+        }
+      },
+      "Dynamic": {
+        "episodes": 18,
+        "exposureSeconds": 9.88888888888889,
+        "exposedEpisodes": 15,
+        "penetrationMetreSeconds": 331.9234188428251,
+        "holdSeconds": 7.444444444444445,
+        "unnecessaryHoldSeconds": 4.444444444444445,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 18,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 35.59536979482755,
+        "groundRiskMetres": 13.67347208195883,
+        "progressMetres": 16.009554840148837,
+        "reentries": 0,
+        "firstExitSeconds": 27.033333333333335,
+        "exitSamples": 15,
+        "replanMs": {
+          "p95": 30.22139999998035,
+          "max": 169.34269999999378
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 18,
+        "exposureSeconds": 9.833333333333334,
+        "exposedEpisodes": 15,
+        "penetrationMetreSeconds": 331.3020852519093,
+        "holdSeconds": 8.222222222222221,
+        "unnecessaryHoldSeconds": 5.222222222222222,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 18,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 35.00118761111916,
+        "groundRiskMetres": 13.486963731649343,
+        "progressMetres": 14.300396585148494,
+        "reentries": 0,
+        "firstExitSeconds": 27,
+        "exitSamples": 15,
+        "replanMs": {
+          "p95": 25.193399999989197,
+          "max": 54.976000000024214
+        }
+      }
+    },
+    ">280": {
+      "Baseline": {
+        "episodes": 0,
+        "exposureSeconds": 0,
+        "exposedEpisodes": 0,
+        "penetrationMetreSeconds": 0,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 0,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 0,
+        "groundRiskMetres": 0,
+        "progressMetres": 0,
+        "reentries": 0,
+        "firstExitSeconds": 0,
+        "exitSamples": 0,
+        "replanMs": {
+          "p95": 0,
+          "max": null
+        }
+      },
+      "Dynamic": {
+        "episodes": 0,
+        "exposureSeconds": 0,
+        "exposedEpisodes": 0,
+        "penetrationMetreSeconds": 0,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 0,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 0,
+        "groundRiskMetres": 0,
+        "progressMetres": 0,
+        "reentries": 0,
+        "firstExitSeconds": 0,
+        "exitSamples": 0,
+        "replanMs": {
+          "p95": 0,
+          "max": null
+        }
+      },
+      "MARS SHIFT": {
+        "episodes": 0,
+        "exposureSeconds": 0,
+        "exposedEpisodes": 0,
+        "penetrationMetreSeconds": 0,
+        "holdSeconds": 0,
+        "unnecessaryHoldSeconds": 0,
+        "noActionSeconds": 0,
+        "returnFeasibleEpisodes": 0,
+        "initialReturnFailures": 0,
+        "resourceViolationSeconds": 0,
+        "constraintViolations": 0,
+        "distanceMetres": 0,
+        "groundRiskMetres": 0,
+        "progressMetres": 0,
+        "reentries": 0,
+        "firstExitSeconds": 0,
+        "exitSamples": 0,
+        "replanMs": {
+          "p95": 0,
+          "max": null
+        }
+      }
+    }
+  },
+  "targets": {
+    "lowerExposureThanStatic": true,
+    "lowerExposureThanDynamic": true,
+    "noMoreReturnFailures": true,
+    "zeroTerrainViolations": true
+  },
+  "sourceHashes": {
+    "src/local-return.ts": "09ea919149c4ebb505cdcec9e2e94340cb995f8d842fcf074812c01ae7a9ad6c",
+    "src/local-dust-simulation.ts": "c56e31edf67978f2a4c6007fbdd6a7036a6f5ffd50a3a814a43bb6d4240cae36",
+    "src/hazard-mpc.ts": "a85445b6f00d825749323a39526a842caf55c8448e3817c66488f2996270da1e",
+    "src/local-dust-tracker.ts": "3667b2d11f8ed4be20ab8cad43ad1f8b2c6e2201e615c4de3501531630d08d05",
+    "src/hazard-planner.ts": "56cdc6ad8a09546d8996b9c573f3dbd009907282846952b20888ec20614cdf26"
+  }
+}

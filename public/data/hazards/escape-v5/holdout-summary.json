@@ -1,0 +1,684 @@
+{
+  "scope": "SYNTHETIC_COUNTERFACTUAL_SIMULATION",
+  "manifestSHA256": "4b6ab0692b43ddc1cf7e57d16e56636d0339c75477229f3b007e466b7acc85a1",
+  "protocolSHA256": "1220e7501871766fc2e7fdb748b931bdb8c26f0aaa5c18f9f160d4cd002d084d",
+  "implementationSHA256": "44674d328e4af9fa360ee58655c6873502952e5d9ec10a62cf32a7c26ad16249",
+  "summary": {
+    "Baseline": {
+      "episodes": 36,
+      "noContact": 9,
+      "threatening": 23,
+      "threateningNoContact": 0,
+      "nearMissContact": 2,
+      "meanExposure": 9.913654781520428,
+      "meanMinClearance": -3.6108580563192487,
+      "worstMinClearance": -35.4860863393507,
+      "returnFailures": 0,
+      "terrainViolations": 0,
+      "minReturnMargin": 50.24451666778863,
+      "contactTradeoffs": 0,
+      "meanHoldSeconds": 9.11111111111111,
+      "prediction": {
+        "5": {
+          "windows": 1397,
+          "positionRMSE": 4.616654372233915,
+          "radiusMAE": 0.43836557133357834
+        },
+        "10": {
+          "windows": 1325,
+          "positionRMSE": 7.283544392695524,
+          "radiusMAE": 0.4834150570432722
+        },
+        "20": {
+          "windows": 1145,
+          "positionRMSE": 13.079751845096146,
+          "radiusMAE": 0.614570901124461
+        },
+        "30": {
+          "windows": 965,
+          "positionRMSE": 19.540033268750232,
+          "radiusMAE": 0.7751307918561163
+        }
+      },
+      "replanMs": {
+        "p50": 10.899499999999534,
+        "p95": 26.200099999987287,
+        "max": 91.09500000000116
+      }
+    },
+    "Dynamic": {
+      "episodes": 36,
+      "noContact": 12,
+      "threatening": 23,
+      "threateningNoContact": 2,
+      "nearMissContact": 1,
+      "meanExposure": 5.8364874814556735,
+      "meanMinClearance": -1.6825367465859589,
+      "worstMinClearance": -34.74188918726369,
+      "returnFailures": 0,
+      "terrainViolations": 0,
+      "minReturnMargin": 37.901830053618994,
+      "contactTradeoffs": 0,
+      "meanHoldSeconds": 6.888888888888889,
+      "prediction": {
+        "5": {
+          "windows": 1397,
+          "positionRMSE": 4.616654372233915,
+          "radiusMAE": 0.43836557133357834
+        },
+        "10": {
+          "windows": 1325,
+          "positionRMSE": 7.283544392695524,
+          "radiusMAE": 0.4834150570432722
+        },
+        "20": {
+          "windows": 1145,
+          "positionRMSE": 13.079751845096146,
+          "radiusMAE": 0.614570901124461
+        },
+        "30": {
+          "windows": 965,
+          "positionRMSE": 19.540033268750232,
+          "radiusMAE": 0.7751307918561163
+        }
+      },
+      "replanMs": {
+        "p50": 10.91830000000482,
+        "p95": 26.89539999999397,
+        "max": 83.65929999999935
+      }
+    },
+    "MARS-v4": {
+      "episodes": 36,
+      "noContact": 18,
+      "threatening": 23,
+      "threateningNoContact": 7,
+      "nearMissContact": 0,
+      "meanExposure": 3.8717026654424163,
+      "meanMinClearance": 1.6579789023674385,
+      "worstMinClearance": -35.64720821697739,
+      "returnFailures": 0,
+      "terrainViolations": 0,
+      "minReturnMargin": 20.058930675050817,
+      "contactTradeoffs": 0,
+      "meanHoldSeconds": 11.055555555555555,
+      "prediction": {
+        "5": {
+          "windows": 1397,
+          "positionRMSE": 4.616654372233915,
+          "radiusMAE": 0.43836557133357834
+        },
+        "10": {
+          "windows": 1325,
+          "positionRMSE": 7.283544392695524,
+          "radiusMAE": 0.4834150570432722
+        },
+        "20": {
+          "windows": 1145,
+          "positionRMSE": 13.079751845096146,
+          "radiusMAE": 0.614570901124461
+        },
+        "30": {
+          "windows": 965,
+          "positionRMSE": 19.540033268750232,
+          "radiusMAE": 0.7751307918561163
+        }
+      },
+      "replanMs": {
+        "p50": 10.998700000000099,
+        "p95": 24.437299999997776,
+        "max": 71.68900000001304
+      }
+    },
+    "Dynamic-v5-tracker": {
+      "episodes": 36,
+      "noContact": 13,
+      "threatening": 23,
+      "threateningNoContact": 3,
+      "nearMissContact": 1,
+      "meanExposure": 5.144514262301383,
+      "meanMinClearance": -0.7836727786084233,
+      "worstMinClearance": -35.70549115256972,
+      "returnFailures": 0,
+      "terrainViolations": 0,
+      "minReturnMargin": 39.66882715514669,
+      "contactTradeoffs": 0,
+      "meanHoldSeconds": 7.333333333333333,
+      "prediction": {
+        "5": {
+          "windows": 1397,
+          "positionRMSE": 2.920953197845771,
+          "radiusMAE": 0.43836557133357834
+        },
+        "10": {
+          "windows": 1325,
+          "positionRMSE": 4.58098227516808,
+          "radiusMAE": 0.4834150570432722
+        },
+        "20": {
+          "windows": 1145,
+          "positionRMSE": 8.695186847111836,
+          "radiusMAE": 0.614570901124461
+        },
+        "30": {
+          "windows": 965,
+          "positionRMSE": 13.945974681772075,
+          "radiusMAE": 0.7751307918561163
+        }
+      },
+      "replanMs": {
+        "p50": 19.81600000000617,
+        "p95": 36.95200000000477,
+        "max": 109.08079999999609
+      }
+    },
+    "MARS-v5": {
+      "episodes": 36,
+      "noContact": 18,
+      "threatening": 23,
+      "threateningNoContact": 7,
+      "nearMissContact": 0,
+      "meanExposure": 4.035003670155309,
+      "meanMinClearance": 2.275917979263144,
+      "worstMinClearance": -35.70549115256972,
+      "returnFailures": 0,
+      "terrainViolations": 0,
+      "minReturnMargin": 22.72516247240172,
+      "contactTradeoffs": 0,
+      "meanHoldSeconds": 10.277777777777779,
+      "prediction": {
+        "5": {
+          "windows": 1397,
+          "positionRMSE": 2.920953197845771,
+          "radiusMAE": 0.43836557133357834
+        },
+        "10": {
+          "windows": 1325,
+          "positionRMSE": 4.58098227516808,
+          "radiusMAE": 0.4834150570432722
+        },
+        "20": {
+          "windows": 1145,
+          "positionRMSE": 8.695186847111836,
+          "radiusMAE": 0.614570901124461
+        },
+        "30": {
+          "windows": 965,
+          "positionRMSE": 13.945974681772075,
+          "radiusMAE": 0.7751307918561163
+        }
+      },
+      "replanMs": {
+        "p50": 19.024399999994785,
+        "p95": 32.91680000000633,
+        "max": 72.83420000001206
+      }
+    },
+    "DEM-full-information-v5": {
+      "episodes": 36,
+      "noContact": 21,
+      "threatening": 23,
+      "threateningNoContact": 10,
+      "nearMissContact": 0,
+      "meanExposure": 3.1200465386588,
+      "meanMinClearance": 1.096972192733877,
+      "worstMinClearance": -35.668564710628026,
+      "returnFailures": 0,
+      "terrainViolations": 0,
+      "minReturnMargin": 39.67088754380168,
+      "contactTradeoffs": 0,
+      "meanHoldSeconds": 8,
+      "prediction": {
+        "5": {
+          "windows": 1505,
+          "positionRMSE": 0,
+          "radiusMAE": 0
+        },
+        "10": {
+          "windows": 1433,
+          "positionRMSE": 0,
+          "radiusMAE": 0
+        },
+        "20": {
+          "windows": 1253,
+          "positionRMSE": 0,
+          "radiusMAE": 0
+        },
+        "30": {
+          "windows": 1073,
+          "positionRMSE": 0,
+          "radiusMAE": 0
+        }
+      },
+      "replanMs": {
+        "p50": 22.923500000004424,
+        "p95": 59.86329999999907,
+        "max": 123.54850000000442
+      }
+    }
+  },
+  "subgroups": {
+    "floor": {
+      "Baseline": {
+        "cases": 18,
+        "noContact": 2,
+        "meanExposure": 11.245587628280134
+      },
+      "Dynamic": {
+        "cases": 18,
+        "noContact": 2,
+        "meanExposure": 7.119264630770587
+      },
+      "MARS-v4": {
+        "cases": 18,
+        "noContact": 7,
+        "meanExposure": 4.271798585374472
+      },
+      "Dynamic-v5-tracker": {
+        "cases": 18,
+        "noContact": 3,
+        "meanExposure": 6.045418974993707
+      },
+      "MARS-v5": {
+        "cases": 18,
+        "noContact": 6,
+        "meanExposure": 4.902654232470373
+      },
+      "DEM-full-information-v5": {
+        "cases": 18,
+        "noContact": 9,
+        "meanExposure": 3.4103257239683993
+      }
+    },
+    "ridge": {
+      "Baseline": {
+        "cases": 18,
+        "noContact": 7,
+        "meanExposure": 8.581721934760724
+      },
+      "Dynamic": {
+        "cases": 18,
+        "noContact": 10,
+        "meanExposure": 4.55371033214076
+      },
+      "MARS-v4": {
+        "cases": 18,
+        "noContact": 11,
+        "meanExposure": 3.47160674551036
+      },
+      "Dynamic-v5-tracker": {
+        "cases": 18,
+        "noContact": 10,
+        "meanExposure": 4.243609549609062
+      },
+      "MARS-v5": {
+        "cases": 18,
+        "noContact": 12,
+        "meanExposure": 3.167353107840243
+      },
+      "DEM-full-information-v5": {
+        "cases": 18,
+        "noContact": 12,
+        "meanExposure": 2.829767353349202
+      }
+    },
+    "turning": {
+      "Baseline": {
+        "cases": 12,
+        "noContact": 5,
+        "meanExposure": 5.894895190112578
+      },
+      "Dynamic": {
+        "cases": 12,
+        "noContact": 6,
+        "meanExposure": 4.130681864843377
+      },
+      "MARS-v4": {
+        "cases": 12,
+        "noContact": 7,
+        "meanExposure": 3.7675930849402257
+      },
+      "Dynamic-v5-tracker": {
+        "cases": 12,
+        "noContact": 6,
+        "meanExposure": 3.9489191653465503
+      },
+      "MARS-v5": {
+        "cases": 12,
+        "noContact": 7,
+        "meanExposure": 3.876524220934369
+      },
+      "DEM-full-information-v5": {
+        "cases": 12,
+        "noContact": 8,
+        "meanExposure": 2.708698763630146
+      }
+    },
+    "growing": {
+      "Baseline": {
+        "cases": 12,
+        "noContact": 4,
+        "meanExposure": 13.33642925181251
+      },
+      "Dynamic": {
+        "cases": 12,
+        "noContact": 5,
+        "meanExposure": 5.468077242653859
+      },
+      "MARS-v4": {
+        "cases": 12,
+        "noContact": 10,
+        "meanExposure": 0.28410270870888327
+      },
+      "Dynamic-v5-tracker": {
+        "cases": 12,
+        "noContact": 6,
+        "meanExposure": 4.344408132925962
+      },
+      "MARS-v5": {
+        "cases": 12,
+        "noContact": 9,
+        "meanExposure": 1.5374665502737026
+      },
+      "DEM-full-information-v5": {
+        "cases": 12,
+        "noContact": 11,
+        "meanExposure": 0.23595424399300682
+      }
+    },
+    "initially-inside": {
+      "Baseline": {
+        "cases": 2,
+        "noContact": 0,
+        "meanExposure": 2.4758625907990295
+      },
+      "Dynamic": {
+        "cases": 2,
+        "noContact": 0,
+        "meanExposure": 2.4758625907990295
+      },
+      "MARS-v4": {
+        "cases": 2,
+        "noContact": 0,
+        "meanExposure": 2.4758625907990295
+      },
+      "Dynamic-v5-tracker": {
+        "cases": 2,
+        "noContact": 0,
+        "meanExposure": 2.4758625907990295
+      },
+      "MARS-v5": {
+        "cases": 2,
+        "noContact": 0,
+        "meanExposure": 2.4758625907990295
+      },
+      "DEM-full-information-v5": {
+        "cases": 2,
+        "noContact": 0,
+        "meanExposure": 2.4758625907990295
+      }
+    },
+    "straight-constant": {
+      "Baseline": {
+        "cases": 12,
+        "noContact": 0,
+        "meanExposure": 10.509639902636199
+      },
+      "Dynamic": {
+        "cases": 12,
+        "noContact": 1,
+        "meanExposure": 7.9107033368697826
+      },
+      "MARS-v4": {
+        "cases": 12,
+        "noContact": 1,
+        "meanExposure": 7.56341220267814
+      },
+      "Dynamic-v5-tracker": {
+        "cases": 12,
+        "noContact": 1,
+        "meanExposure": 7.140215488631639
+      },
+      "MARS-v5": {
+        "cases": 12,
+        "noContact": 2,
+        "meanExposure": 6.691020239257853
+      },
+      "DEM-full-information-v5": {
+        "cases": 12,
+        "noContact": 2,
+        "meanExposure": 6.415486608353248
+      }
+    }
+  },
+  "pairedChange": [
+    {
+      "id": "holdout-01",
+      "exposureDelta": 0.419154748898416,
+      "clearanceDelta": -0.020422796062904647,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-02",
+      "exposureDelta": -1.1408735213664603,
+      "clearanceDelta": 3.360617602284721,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-03",
+      "exposureDelta": 0.0,
+      "clearanceDelta": 0.0,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-04",
+      "exposureDelta": 0,
+      "clearanceDelta": 2.0133171652351702,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-05",
+      "exposureDelta": 0.5011123434507176,
+      "clearanceDelta": -1.3043667038552211,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-06",
+      "exposureDelta": 0,
+      "clearanceDelta": -3.9232940073840936,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-07",
+      "exposureDelta": -1.644652872062501,
+      "clearanceDelta": 5.132404294912384,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-08",
+      "exposureDelta": -5.28984916069151,
+      "clearanceDelta": 8.101418026214212,
+      "avoidanceGain": 1
+    },
+    {
+      "id": "holdout-09",
+      "exposureDelta": 0,
+      "clearanceDelta": 0.11582243948610049,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-10",
+      "exposureDelta": 1.7753481623208707,
+      "clearanceDelta": -2.369207669428726,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-11",
+      "exposureDelta": 0.0,
+      "clearanceDelta": 0.0,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-12",
+      "exposureDelta": 0,
+      "clearanceDelta": -0.6598535971390032,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-13",
+      "exposureDelta": -0.6555620046759856,
+      "clearanceDelta": 3.702244161342861,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-14",
+      "exposureDelta": -0.9240458650920758,
+      "clearanceDelta": 4.424403414410735,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-15",
+      "exposureDelta": 15.520704343010458,
+      "clearanceDelta": -5.533194339450887,
+      "avoidanceGain": -1
+    },
+    {
+      "id": "holdout-16",
+      "exposureDelta": 0,
+      "clearanceDelta": -0.8469595300007668,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-17",
+      "exposureDelta": 0,
+      "clearanceDelta": -0.46855634651336686,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-18",
+      "exposureDelta": 0,
+      "clearanceDelta": 1.1224379649418523,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-19",
+      "exposureDelta": 0.00025401390300139326,
+      "clearanceDelta": -0.05828293559233089,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-20",
+      "exposureDelta": -0.1962841390128709,
+      "clearanceDelta": 1.5100968981650889,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-21",
+      "exposureDelta": -0.48033824423262494,
+      "clearanceDelta": 0.0968924622450697,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-22",
+      "exposureDelta": 0,
+      "clearanceDelta": -0.009802168577216719,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-23",
+      "exposureDelta": 0,
+      "clearanceDelta": 4.503279147595194,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-24",
+      "exposureDelta": 0,
+      "clearanceDelta": 0.3960087379618802,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-25",
+      "exposureDelta": 0.0924331902609481,
+      "clearanceDelta": -2.1655745659838974,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-26",
+      "exposureDelta": 0,
+      "clearanceDelta": 3.4758820751034154,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-27",
+      "exposureDelta": 0,
+      "clearanceDelta": -1.0175602571081162,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-28",
+      "exposureDelta": 0.2991390457799419,
+      "clearanceDelta": -0.4339629505854603,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-29",
+      "exposureDelta": 0,
+      "clearanceDelta": 0.010722962382260448,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-30",
+      "exposureDelta": 0,
+      "clearanceDelta": 0.0,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-31",
+      "exposureDelta": -1.1292779512043865,
+      "clearanceDelta": 2.1605241408244034,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-32",
+      "exposureDelta": 0.0,
+      "clearanceDelta": 0.0,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-33",
+      "exposureDelta": 0,
+      "clearanceDelta": 2.203394723499139,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-34",
+      "exposureDelta": 0,
+      "clearanceDelta": -0.8291644067331987,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-35",
+      "exposureDelta": -1.2684259196218193,
+      "clearanceDelta": 1.5506925315107978,
+      "avoidanceGain": 0
+    },
+    {
+      "id": "holdout-36",
+      "exposureDelta": 0,
+      "clearanceDelta": -1.9941497054546904,
+      "avoidanceGain": 0
+    }
+  ],
+  "independentNewObservedEvents": 0,
+  "disjointHoldoutScenarios": 36,
+  "historicalHashesVerified": true,
+  "definition": {
+    "warning": "STATIONARY_FRONT_BOUNDARY_ENTRY; actual entry is separately reported for growth/turn",
+    "paddingMetres": 1,
+    "contact": "strict interior positive duration > 1e-8 s",
+    "detectionSeconds": 0,
+    "estimateReadySeconds": 4,
+    "firstActionEligibleSeconds": 6,
+    "return": "static return budget feasibility, not executed hazard-free arrival at base"
+  }
+}

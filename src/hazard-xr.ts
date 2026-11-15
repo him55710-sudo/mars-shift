@@ -3,7 +3,7 @@ import type {Point,Terrain} from './planner';
 import type {Forecast} from './hazard-tracker';
 /** Transport-neutral contract for browser WebXR or a future native OpenXR bridge.
  * No head-pose, optical registration or hardware certification is claimed. */
-export type XRNavigationFrame={schemaVersion:1;revision:number;timestamp:number;coordinates:'GRID_EAST_SOUTH_METRES';crs:string;bounds:number[];cellSize:number;origin:Point;action:string;anchorsEnabled:boolean;route:({x:number;y:number;time:number})[];forecast:Forecast[];source:'SIMULATION';localizationSigma:number;warning:string|null};
+export type XRNavigationFrame={schemaVersion:1;revision:number;timestamp:number;coordinates:'GRID_EAST_SOUTH_METRES'|'GRID_NORTH_EAST_METRES';crs:string;bounds:number[];cellSize:number;origin:Point;action:string;anchorsEnabled:boolean;route:({x:number;y:number;time:number})[];forecast:Forecast[];source:'SIMULATION';localizationSigma:number;warning:string|null;evidence?:{kind:'OBSERVATION_CONSTRAINED_RELOCATION';event:string;heading:'ASSUMED';position:'NOT_OBSERVED';terrain:'NAVCAM_SOL477'};routeEvaluation?:{contactMethod:'CONTINUOUS'|'LEGACY_SAMPLED';predictedContactSeconds:number|null;predictedMinClearanceMetres:number|null;returnMarginSeconds:number|null;warningTimeReference:'STATIONARY_ENVELOPE_FRONT_ENTRY'}};
 export interface XRNavigationAdapter {publish(frame:XRNavigationFrame):void;close():void;}
 /** Earliest conservative envelope entry between forecast samples, not just at sample endpoints. */
 export function approachSeconds(forecasts:Forecast[],positionMetres:Point,now:number):number|null {
@@ -14,7 +14,7 @@ export function approachSeconds(forecasts:Forecast[],positionMetres:Point,now:nu
 }
 export function makeXRFrame(t:Terrain,position:Point,decision:EscapeDecision,revision:number,localizationSigma=1):XRNavigationFrame {
  const anchorsEnabled=(decision.status==='MODELED_ACTION'||decision.status==='EXPOSURE_MINIMIZING')&&localizationSigma<=5;
- return {schemaVersion:1,revision,timestamp:decision.time,coordinates:'GRID_EAST_SOUTH_METRES',crs:t.crs,bounds:t.bounds,cellSize:t.cellSize,origin:position,action:decision.action??'NO VERIFIED ACTION',anchorsEnabled,route:anchorsEnabled?(decision.chosen?.path??[]).map(p=>({x:p.x*t.cellSize,y:p.y*t.cellSize,time:p.time})):[],forecast:decision.forecast,source:'SIMULATION',localizationSigma,warning:anchorsEnabled?null:decision.reason};
+ return {schemaVersion:1,revision,timestamp:decision.time,coordinates:'GRID_EAST_SOUTH_METRES',crs:t.crs,bounds:t.bounds,cellSize:t.cellSize,origin:position,action:decision.action??'NO VERIFIED ACTION',anchorsEnabled,route:anchorsEnabled?(decision.chosen?.path??[]).map(p=>({x:p.x*t.cellSize,y:p.y*t.cellSize,time:p.time})):[],forecast:decision.forecast,source:'SIMULATION',localizationSigma,warning:anchorsEnabled&&decision.status!=='EXPOSURE_MINIMIZING'?null:decision.reason,routeEvaluation:{contactMethod:decision.chosen?.predictedMinClearance!==undefined?'CONTINUOUS':'LEGACY_SAMPLED',predictedContactSeconds:decision.chosen?.predictedExposure??null,predictedMinClearanceMetres:decision.chosen?.predictedMinClearance??null,returnMarginSeconds:decision.chosen?.returnMargin??null,warningTimeReference:'STATIONARY_ENVELOPE_FRONT_ENTRY'}};
 }
 /** Browser host can subscribe without coupling the planner to a headset renderer. */
 export class BrowserXRAdapter implements XRNavigationAdapter {
