@@ -472,3 +472,77 @@
  :root #root .planner .map-legend .line-key{grid-column:1/-1;margin:0;font-size:10px;padding:4px 0}
 }
 @media(max-width:760px){:root #root .planner .page-intro h1{font-size:27px}:root #root .planner .workflow{gap:12px}:root #root .mission-verdict dd{font-size:22px}}
+/* Mobile field work: keep the next action and its map above the fixed controls. */
+@media(max-width:550px){
+ :root #root .crew-layout:has(.crew-app.in-field) .site-header{height:52px;min-height:52px;padding:4px 14px;flex-wrap:nowrap;gap:0}
+ :root #root .crew-layout:has(.crew-app.in-field) .site-header .brand{display:none}
+ :root #root .crew-layout:has(.crew-app.in-field) .mission-nav{width:100%;height:44px;order:initial;margin:0;gap:4px}
+ :root #root .crew-app.in-field .crew-context{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;gap:4px 8px;padding:4px 0 6px;min-height:0}
+ :root #root .crew-app.in-field .crew-context>span:first-child{font-size:9px;gap:4px;min-width:0}
+ :root #root .crew-app.in-field .crew-cache-status{font-size:9px;line-height:1.35;max-width:118px;white-space:normal;margin:0;grid-column:2;grid-row:1}
+ :root #root .crew-app.in-field .crew-context>button{grid-column:3;grid-row:1;min-height:44px;width:44px;margin:0;padding:8px}
+ :root #root .crew-app.in-field .crew-context .crew-display-name{display:none}
+ :root #root .crew-app.in-field .crew-simulation{grid-column:1/-1;grid-row:2;order:initial;font-size:9px;line-height:1.4;padding:3px 0}
+ :root #root .crew-app.in-field .crew-heading{padding:7px 0;gap:10px;align-items:center}
+ :root #root .crew-app.in-field .crew-heading h1{font-size:20px;line-height:1.2;letter-spacing:-.4px;margin:3px 0}
+ :root #root .crew-app.in-field .crew-simclock strong{font-size:23px}
+ :root #root .crew-app.in-field .crew-simclock span{font-size:8px}
+ :root #root .crew-app.in-field .crew-phases{margin-bottom:7px}
+ :root #root .crew-app.in-field .crew-phases li{min-height:30px;font-size:10px;padding:5px 6px;gap:4px}
+ :root #root .crew-app.in-field .crew-vitals{padding:8px 0;margin-bottom:10px;gap:8px}
+ :root #root .crew-app.in-field .crew-vitals>div>span{font-size:11px;line-height:1.3}
+ :root #root .crew-app.in-field .crew-vitals strong{font-size:27px;line-height:1.2;margin:3px 0}
+ :root #root .crew-app.in-field .crew-vitals p{font-size:10px;line-height:1.35;margin:3px 0 0}
+ :root #root .crew-app.in-field .crew-grid{gap:10px}
+ :root #root .crew-app.in-field .crew-next{padding:10px 12px;grid-template-columns:1.2fr 1fr;gap:2px 10px}
+ :root #root .crew-app.in-field .crew-next>.crew-kicker{font-size:9px;grid-column:1;grid-row:1}
+ :root #root .crew-app.in-field .crew-next-vector{padding:4px 0;gap:9px;grid-row:2/4}
+ :root #root .crew-app.in-field .crew-next-vector>strong{font-size:35px}
+ :root #root .crew-app.in-field .crew-next-vector b{font-size:17px}
+ :root #root .crew-app.in-field .crew-next h2{font-size:15px;line-height:1.3;margin:2px 0;grid-column:2;grid-row:1/3}
+ :root #root .crew-app.in-field .crew-next>p:not(.crew-local-note){font-size:11px;line-height:1.35;margin:4px 0;grid-column:2;grid-row:3}
+ :root #root .crew-app.in-field .crew-map-heading{padding:7px 10px;min-height:44px}
+ :root #root .crew-app.in-field .crew-map-heading>button{font-size:10px;min-height:44px;line-height:1.3}
+ :root #root .crew-app.in-field .crew-map-key{font-size:9px;padding:7px 10px}
+ :root #root .crew-app.is-held .crew-alert{padding:14px}
+ :root #root .crew-app.is-held .crew-alert h2{font-size:23px}
+ :root #root .crew-app.is-held .crew-check{min-height:48px;font-size:13px}
+}
+@media(max-width:550px) and (max-height:740px){
+ :root #root .crew-app.in-field .crew-phases{display:none}
+ :root #root .crew-app.in-field .crew-heading h1{font-size:18px}
+ :root #root .crew-app.in-field .crew-vitals p{font-size:9px}
+ :root #root .crew-app.in-field .crew-context>span:first-child{font-size:8px}
+}
+:root #root .crew-modal{overscroll-behavior:contain}
+:root #root .crew-modal-backdrop{overscroll-behavior:contain}
+@media(max-width:650px){
+ :root #root .rover-explorer:not(.rover-panel-open) .rover-mission{top:145px;left:18px;right:18px;width:auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px}
+ :root #root .rover-explorer:not(.rover-panel-open) .rover-mission .rover-eyebrow{grid-column:1;font-size:9px}
+ :root #root .rover-explorer:not(.rover-panel-open) .rover-mission h1{grid-column:1;font-size:18px;line-height:1.25;margin:3px 0}
+ :root #root .rover-explorer:not(.rover-panel-open) .rover-mission p{grid-column:1;font-size:11px;line-height:1.4;margin:0}
+ :root #root .rover-explorer:not(.rover-panel-open) .rover-mission .rover-route-summary{grid-column:2;grid-row:1/4;align-self:center;min-height:44px;font-size:11px;padding:9px 10px;gap:6px;max-width:140px;margin:0}
+}
+@media(max-width:550px){
+ :root #root .crew-app.in-field .crew-map-canvas{width:100%;height:clamp(160px,calc(100dvh - 690px),220px);min-height:160px;aspect-ratio:auto}
+ :root #root .crew-app.in-field .crew-map-canvas>svg{width:100%;height:100%}
+ :root #root .crew-app.in-field .crew-map-tools{top:8px;right:8px;left:auto;flex-direction:row;gap:4px}
+ :root #root .crew-app.in-field .crew-map-tools>button{width:44px;height:44px;min-height:44px}
+ :root #root .crew-app.in-field .crew-map-mode{max-width:calc(100% - 160px);white-space:normal;font-size:8px;line-height:1.3}
+}
+@media(max-width:550px) and (max-height:740px){
+ :root #root .crew-app.is-held .crew-alert{padding:12px}
+ :root #root .crew-app.is-held .crew-alert h2{font-size:21px;margin-block:8px}
+ :root #root .crew-app.is-held .crew-alert>p{margin-block:8px;font-size:12px;line-height:1.45}
+ :root #root .crew-app.is-held .crew-verification{margin-top:12px;padding-top:10px}
+}
+@media(max-width:550px){
+ :root #root .crew-app.in-field .crew-science{padding:12px}
+ :root #root .crew-app.in-field .crew-science h2{font-size:20px;line-height:1.25;margin:6px 0 8px;letter-spacing:-.3px}
+ :root #root .crew-app.in-field .crew-science .crew-time-window{font-size:12px;line-height:1.4;margin:8px 0;padding:6px 0}
+ :root #root .crew-app.in-field .crew-science .crew-time-window strong{display:inline;font-size:26px;line-height:1.2;margin-right:4px}
+ :root #root .crew-app.in-field .crew-science .crew-check{font-size:13px;line-height:1.4;min-height:44px;margin:4px 0;gap:9px}
+ :root #root .crew-app.in-field .crew-science .crew-local-note{font-size:10px;line-height:1.4;margin:8px 0 0}
+ :root #root .crew-app.in-field:has(.crew-science) .crew-vitals>div:not(:first-child)>p{display:none}
+}
+@media(max-width:360px){:root #root .rover-explorer:not(.rover-panel-open) .rover-mission{top:132px}}
