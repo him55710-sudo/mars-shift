@@ -11,3 +11,6 @@
 @media(max-width:800px){.app-layout:has(.hz-page) .site-header{max-width:100%;min-width:0}.app-layout:has(.hz-page) .site-header nav{width:100%;max-width:100%;min-width:0;overflow-x:auto;gap:18px;scrollbar-width:none}.app-layout:has(.hz-page) .site-header nav a{flex-shrink:0;white-space:nowrap}}
 
 .hz-evidence>div,.hz-storm>div{min-width:0}.hz-table-wrap{max-width:100%}
+
+/* Keep the next action primary; evidence expands on request. */
+.hz-progressive{border-top:1px solid #c9dfd42b;margin-top:16px;padding-top:4px}.hz-progressive>summary{min-height:44px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:12px;color:#dbe8e0;list-style:none}.hz-progressive>summary::after{content:"+";font-size:18px;color:#9cc8b8}.hz-progressive[open]>summary::after{content:"−"}.hz-progressive>summary:focus-visible{outline:2px solid #b4efd6;outline-offset:3px}.hz-progressive .hz-section-head{margin-top:5px}.hz-track.hz-progressive{padding:4px 0 0;background:none;border-radius:0}

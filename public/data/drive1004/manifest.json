@@ -1,0 +1,3746 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "76444abbb4faff1b05f46a09b81ca2c24602b333",
+  "validation": "/data/drive1004/validation.json",
+  "mediaUsageUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "id": "perseverance-drive-1004-sol477",
+  "title": "Perseverance \u00b7 Jezero / Drive 1004",
+  "credit": "Courtesy NASA/JPL-Caltech",
+  "sourceUrl": "https://github.com/NASA-AMMOS/3DTilesSampleData/tree/master/m20-drive-1004",
+  "usagePolicyUrl": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+  "grid": "/data/drive1004/navigation-grid.json",
+  "assets": [
+    {
+      "url": "/data/drive1004/observation-0/3.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.3866001479087373,
+          0.8666185134887687,
+          0.4338595533134004
+        ],
+        [
+          6.1450716360131565,
+          1.6553443664550773,
+          3.0022954767076655
+        ]
+      ],
+      "triangles": 6267,
+      "bytes": 192156,
+      "sha256": "158bd1fead3c9ae701187502292b766857ef56950f0bf168f4d93026914a39dd",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "3.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/3.b3dm",
+      "sourceSha256": "1e7c21ffdab737757c878a7dbd8ea00daa3fdc40131403583643df814523700c",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-0/1.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.8637226813931704,
+          0.9076188796997062,
+          -2.389438226667682
+        ],
+        [
+          4.444222469707086,
+          1.5814851516723625,
+          0.7108706912797196
+        ]
+      ],
+      "triangles": 18219,
+      "bytes": 436752,
+      "sha256": "a36812398702e7db5f13d6251e55d180b677cbbfb5a3a824337bf819e4a9d173",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "1.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/1.b3dm",
+      "sourceSha256": "6e517a8c3df5c5ae76e3ea700d3700ba214a8afc21cd4b126bd964fca5e2d5df",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-0/2.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          1.4478520216381412,
+          0.24502026977538982,
+          0.7108706912797196
+        ],
+        [
+          3.799647170169308,
+          0.9848941558837883,
+          2.3153735839816427
+        ]
+      ],
+      "triangles": 28665,
+      "bytes": 682652,
+      "sha256": "da93226d1aa5e50246344533f0aa93b6590802f636b075c9cd5dd4221572e027",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "2.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/2.b3dm",
+      "sourceSha256": "7ba54dba52037c75b6d61507bde13876a75f291b55c33ec3d82b2c472c538420",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-0/0.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          1.8804388282468096,
+          0.4830516571044914,
+          -1.282802891779589
+        ],
+        [
+          3.3866001479087373,
+          1.0209668869018547,
+          1.0467090991790187
+        ]
+      ],
+      "triangles": 17549,
+      "bytes": 441232,
+      "sha256": "66d7d579a9c521a83434d47946ad5701488699e4386cee3f6646c3f1d8452472",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "0.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/0.b3dm",
+      "sourceSha256": "6aececf0d3d6ab1a0fcf6cbfc3557af3025f861c460331e49161e2d5b9eca6e0",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-1/2.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          14.811024179187783,
+          1.3655780548095695,
+          34.75931575122877
+        ],
+        [
+          21.521231482358644,
+          3.0742782348632804,
+          44.76719658466408
+        ]
+      ],
+      "triangles": 934,
+      "bytes": 30776,
+      "sha256": "1b225729a71681ca2eed21591114a62ce9af0a01ede8ca93ad675a130e7ca64c",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "2.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/2.b3dm",
+      "sourceSha256": "0aaa8dc86bd28eac515688014be615f288bd23ff0509c2ecf6f25a7233bd36fd",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-1/1.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          22.011949701704324,
+          2.847578405761718,
+          29.009168675970887
+        ],
+        [
+          31.3437646154252,
+          4.679857611083984,
+          40.241601582064945
+        ]
+      ],
+      "triangles": 544,
+      "bytes": 18416,
+      "sha256": "12041386ce4970db1fec03ced3fe54617cb088aa7a381f6fd00ec62598b6cea1",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "1.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/1.b3dm",
+      "sourceSha256": "2e2c245ed2036eb28b4cd18efe53aff2addc575d1d7c481d11168ccb71ff5897",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-1/3.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          19.191458775004747,
+          2.0230954879760734,
+          37.314324956298876
+        ],
+        [
+          40.816730289433764,
+          7.552963613891601,
+          78.59154998289246
+        ]
+      ],
+      "triangles": 1810,
+      "bytes": 62308,
+      "sha256": "95ebfc969b1324e61b90341ca8dd06709e0c0f1e76147ae739c98005c0228a62",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "3.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/3.b3dm",
+      "sourceSha256": "8b4f5772010e2ea62381868795e4eb3c3f23d5c361f9116347e0b8f186f60965",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-1/0.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          0.46876358116779215,
+          -0.11856806335449299,
+          -2.2515071522106
+        ],
+        [
+          24.36171294742583,
+          4.7085860961914054,
+          36.73702649600371
+        ]
+      ],
+      "triangles": 82700,
+      "bytes": 1859340,
+      "sha256": "c62ef8630b549e8ac8f09b3b5109b96aef5c0c88afa6ef859a6dfe1677385e5b",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "0.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/0.b3dm",
+      "sourceSha256": "03b4b5feec506c2147a4897b9fadebccdffe12d1ec3e78c003da21b906758470",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-2/3.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -37.11423397650427,
+          -5.435766816711427,
+          55.890273241346605
+        ],
+        [
+          12.045427122298733,
+          1.914574026489257,
+          110.90804080248488
+        ]
+      ],
+      "triangles": 2678,
+      "bytes": 83840,
+      "sha256": "4df6ef8e3a9beccd080e6a9aa70c712e40b0bbb10a24984ba4aad8f3c58fc66b",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "3.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/3.b3dm",
+      "sourceSha256": "9f5c1a1635d013e2fe95006e11be1b17be886fb6853d45e692e2873c1c1929e4",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-2/1.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          11.65412336588929,
+          0.5358260864257804,
+          56.22707382319321
+        ],
+        [
+          67.47786054896812,
+          12.969530462646484,
+          110.03806423430173
+        ]
+      ],
+      "triangles": 2787,
+      "bytes": 86288,
+      "sha256": "e2f813286068fe0e428d34fbb2aa7259f0bdbac444f3955b47e1c98edf428777",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "1.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/1.b3dm",
+      "sourceSha256": "3396ee8b5c223cefe8aaf6e3690bc79ae5821be5cc3f3c5f6089204a5877f16b",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-2/0.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          12.045427122298733,
+          0.3476299041748039,
+          15.85915587381804
+        ],
+        [
+          45.203317225467,
+          7.211798071289062,
+          56.4752966106564
+        ]
+      ],
+      "triangles": 5649,
+      "bytes": 163884,
+      "sha256": "f5ab56450c2d4a91425317943c87e13e2d20d61f08e05404e559c7bf60cd34d1",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "0.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/0.b3dm",
+      "sourceSha256": "a825e1343b5b0cc90d121fde92234583931230899266330aa234630e61f3be3a",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-2/2.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -43.46087414068316,
+          -5.0042387252807625,
+          1.380691924162349
+        ],
+        [
+          12.347741358895664,
+          1.7627662414550773,
+          56.22707382319321
+        ]
+      ],
+      "triangles": 82171,
+      "bytes": 1888116,
+      "sha256": "291bbcd6adc77d13d3af4a54ac499bbce345a47c034b471413c04d2629fe5387",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "2.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/2.b3dm",
+      "sourceSha256": "ea986244d740e0b5626bd446930081e56862b9a4315229bf32b79851e90cb67c",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-3/3.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          29.690068665720176,
+          5.834164022827148,
+          58.83849781479337
+        ],
+        [
+          83.86707102893651,
+          19.26615369262695,
+          112.80575476239645
+        ]
+      ],
+      "triangles": 7042,
+      "bytes": 163940,
+      "sha256": "447ae830d9a9b8ca647fbc6c124e096b840ef44f129a2536e6ee50edeb76a92e",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "3.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/3.b3dm",
+      "sourceSha256": "a72a2d03e030a85aeee089a14aad9a99b1f434f8c9f13df77645fc4074fa5814",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-3/2.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          18.617016487351577,
+          2.1219753021240226,
+          50.60146016274365
+        ],
+        [
+          38.87691637266197,
+          6.845350622558593,
+          81.5307385706119
+        ]
+      ],
+      "triangles": 1551,
+      "bytes": 51324,
+      "sha256": "3518ac71bbc5b15768c343a83b1b12cd6eb29805106597f814d3b3a09e5685d2",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "2.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/2.b3dm",
+      "sourceSha256": "4a4b450337b037fd81e3bf0f7ffe3183cefed67af24e9ef469c8a22664054b5d",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-3/1.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          38.905517572981,
+          6.751016973876952,
+          36.90888508662427
+        ],
+        [
+          94.59174190756524,
+          22.093710302734372,
+          77.09268067178499
+        ]
+      ],
+      "triangles": 3400,
+      "bytes": 86312,
+      "sha256": "03711f54922648acf4c4ae4c1f71a98aed634a77d8502bfac248a35a2cc9c504",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "1.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/1.b3dm",
+      "sourceSha256": "c146781f4a0367ce5e337b6d3da5e9922cef6cb72dbb75f5cc1a9446ab2be12f",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/observation-3/0.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          5.18741793715995,
+          0.2281850570678703,
+          -3.915039512318689
+        ],
+        [
+          46.794101021050025,
+          8.421177267456054,
+          58.83849781479337
+        ]
+      ],
+      "triangles": 91771,
+      "bytes": 1982852,
+      "sha256": "6257c895a68a13631c758a139d4f43cc67ad348024926daf63b07dfce0d073b6",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "0.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/0.b3dm",
+      "sourceSha256": "3bd61b9048cebeaa029f2ba0bb3bce58aaf9896b604858622de945da07a6432c",
+      "visualLod": "NASA tileset first child hierarchy level"
+    },
+    {
+      "url": "/data/drive1004/context-0.glb",
+      "transform": [
+        -0.9543319758060881,
+        0.0,
+        0.29874818820211807,
+        0.0,
+        -0.29874818820211807,
+        0.0,
+        -0.9543319758060881,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        77.97264778966716,
+        -13.5431,
+        -31.036993440431583,
+        1.0
+      ],
+      "bounds": [
+        [
+          -102.15727417930786,
+          -13.331923992013932,
+          -50.37899934050346
+        ],
+        [
+          -0.0274433636685103,
+          -0.20663225708007893,
+          64.98839870518438
+        ]
+      ],
+      "triangles": 2367,
+      "bytes": 153348,
+      "sha256": "081c9c158a6c7fd3b5a385dd21d6a08eb1597ba96335230fcb3c715ba22bc820",
+      "sourceProduct": "NLF_0477_0709297668M065RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297668M065RAS_N0261004NCAM03477_0A0195J02/root.b3dm",
+      "sourceSha256": "af0712601b8061311340706db8c6ef15d51bd61652a6924767a7d3b1d87e3964",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-1.glb",
+      "transform": [
+        -0.5752914325834093,
+        0.0,
+        -0.8179485115801169,
+        0.0,
+        0.8179485115801169,
+        0.0,
+        -0.5752914325834093,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        54.334825658876625,
+        -13.5431,
+        64.87881759963678,
+        1.0
+      ],
+      "bounds": [
+        [
+          -84.08176564289259,
+          -10.701969028091431,
+          -101.54120688037243
+        ],
+        [
+          1.9158007360602838,
+          2.6422103637695304,
+          0.9032966115146905
+        ]
+      ],
+      "triangles": 14064,
+      "bytes": 496120,
+      "sha256": "c3bea2c1cc43f8850919a7e5165f4da5b3d967f16e0dd932fd056dac5e27fdeb",
+      "sourceProduct": "NLF_0477_0709297838M897RAS_N0261004NCAM02477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297838M897RAS_N0261004NCAM02477_0A0195J02/root.b3dm",
+      "sourceSha256": "27ca5f97a474f4fe7115bc4a35512b51ebce28ff778b9e8c9c5fb7c482e3b780",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-2.glb",
+      "transform": [
+        0.5957759393701344,
+        0.0,
+        -0.803150689514511,
+        0.0,
+        0.803150689514511,
+        0.0,
+        0.5957759393701344,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -43.45568505815803,
+        -13.5431,
+        72.52964929339257,
+        1.0
+      ],
+      "bounds": [
+        [
+          -20.74492500758418,
+          -1.8066631561279305,
+          -85.20318216472194
+        ],
+        [
+          9.891462191351366,
+          4.6764510864257804,
+          0.863202504666603
+        ]
+      ],
+      "triangles": 3637,
+      "bytes": 201236,
+      "sha256": "a39b46b7ad846ba8c26b19bd8cf067b8577e6e211d409794772931c813e9b192",
+      "sourceProduct": "NLF_0477_0709298005M099RAS_N0261004NCAM02477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298005M099RAS_N0261004NCAM02477_0A0195J02/root.b3dm",
+      "sourceSha256": "a42d381e7d2bb8ab083580df6f87f950194d7691f4d254b5bfa249ff548f378a",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-3.glb",
+      "transform": [
+        0.6466834354449875,
+        0.0,
+        -0.762758503276803,
+        0.0,
+        0.762758503276803,
+        0.0,
+        0.6466834354449875,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -48.0177959927633,
+        -13.5431,
+        69.55816013435333,
+        1.0
+      ],
+      "bounds": [
+        [
+          -10.356270591503723,
+          -0.5681864028930672,
+          -75.67156556882435
+        ],
+        [
+          14.249712031163817,
+          9.010855078125,
+          0.13049326661173666
+        ]
+      ],
+      "triangles": 13499,
+      "bytes": 444424,
+      "sha256": "370234786919e5fd4fa6ec688267ae1d38aba24aad6ecc28c93c443d6b86cde3",
+      "sourceProduct": "NLF_0477_0709298187M680RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298187M680RAS_N0261004NCAM13477_0A0195J02/root.b3dm",
+      "sourceSha256": "5e18d11a733aca3abfd1a605b6a9a3469c8e00bbdf71180c8f6a078cae3f103c",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-4.glb",
+      "transform": [
+        -0.07053974049741697,
+        0.0,
+        0.9975089698897736,
+        0.0,
+        -0.9975089698897736,
+        0.0,
+        -0.07053974049741697,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -1.0781719905275509,
+        -13.5431,
+        -83.4422492461363,
+        1.0
+      ],
+      "bounds": [
+        [
+          -40.95905429096352,
+          -5.249677301025391,
+          15.956413873410568
+        ],
+        [
+          66.54406878629801,
+          14.279840826416015,
+          110.92239249398102
+        ]
+      ],
+      "triangles": 23739,
+      "bytes": 483668,
+      "sha256": "391587a0856335a1fce4d4c138f2537aa0dadb790c704d82b8020622693cdda4",
+      "sourceProduct": "NLF_0477_0709298393M010RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298393M010RAS_N0261004NCAM13477_0A0195J02/root.b3dm",
+      "sourceSha256": "36575c5c8bc08ee1631304d431986957a2523704f47895c4150c00926718da2a",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    }
+  ],
+  "observations": [
+    {
+      "product": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sceneUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02_scene.json",
+      "tilesetUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02_tileset.json",
+      "sourceLeafTiles": 19,
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ]
+    },
+    {
+      "product": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sceneUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02_scene.json",
+      "tilesetUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02_tileset.json",
+      "sourceLeafTiles": 10,
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ]
+    },
+    {
+      "product": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sceneUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02_scene.json",
+      "tilesetUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02_tileset.json",
+      "sourceLeafTiles": 16,
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ]
+    },
+    {
+      "product": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sceneUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02_scene.json",
+      "tilesetUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02_tileset.json",
+      "sourceLeafTiles": 16,
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ]
+    }
+  ],
+  "frame": {
+    "name": "sitedrive_0261004, displayed with NASA example Rx(+pi/2)",
+    "units": "metres",
+    "axes": [
+      "north",
+      "up",
+      "east"
+    ],
+    "transformOrder": "Rx(+pi/2) * site-frame translation * tileset root transform. Apply asset.transform once; GLB positions are original source positions.",
+    "registrationToOrbitalMission": null
+  },
+  "bounds": [
+    [
+      -102.15727417930786,
+      -13.331923992013932,
+      -101.54120688037243
+    ],
+    [
+      94.59174190756524,
+      22.093710302734372,
+      112.80575476239645
+    ]
+  ],
+  "start": {
+    "x": 1.375,
+    "z": 5.375
+  },
+  "target": {
+    "x": -7.375,
+    "z": 16.875
+  },
+  "processing": {
+    "geometry": "Original NASA first-child meshes plus original root-LoD surrounding context; no added or moved vertices; b3dm repacked as glTF",
+    "imageEncoding": "JPEG quality95 4:4:4; original pixel dimensions; no sharpening",
+    "displayTriangles": 411043,
+    "displayBytes": 10008984,
+    "displayDrawCalls": 21,
+    "navigationSourceTriangles": 988527
+  },
+  "limitations": [
+    "Observed finite wedges only; no synthetic ground beyond coverage.",
+    "Local graph belongs to this station and is not a registration of existing NOAH-H routes.",
+    "NASA-provided stereo and inter-observation alignment are reused but not independently survey-validated.",
+    "0.25m grid sampling and geometric slope are prototype proxies, not calibrated EVA traversability or certified safety.",
+    "Source mesh uncertainties and unseen sub-grid obstacles remain unresolved.",
+    "Rendered NASA LoD is coarser than the source triangles used for the navigation raster."
+  ],
+  "detailAssets": [
+    {
+      "url": "/data/drive1004/detail-0/31.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          4.397109644944251,
+          1.3204606765747062,
+          0.43402019894755384
+        ],
+        [
+          5.284428993021635,
+          1.5380424255371086,
+          1.853331461519275
+        ]
+      ],
+      "triangles": 3690,
+      "bytes": 105756,
+      "sha256": "318055c4bbdc33dc75f98d236733b17f2451e2ae8bb803388ff6893acb7c26ec",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "31.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/31.b3dm",
+      "sourceSha256": "2a5a43c0edb66c1af373968862c1cda99ce3e0ae44d60f1169df7d3d49a27c19",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/33.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          4.766248513767096,
+          1.2736753219604484,
+          1.717429126005218
+        ],
+        [
+          6.1450716360131565,
+          1.6553443664550773,
+          3.0022954767076655
+        ]
+      ],
+      "triangles": 5133,
+      "bytes": 160740,
+      "sha256": "994ff5f2b6a31dbba76234a5d1225735b5ec0ebc8b5b8d683e73cc75d2db5f00",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "33.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/33.b3dm",
+      "sourceSha256": "6f75982f0840664c4cec14f065b612b98c072c735fb3a6e3ef6fc4509e5afd73",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/32.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.7557390167315816,
+          0.8755735153198234,
+          1.853331461519275
+        ],
+        [
+          4.98162616386287,
+          1.3302062744140617,
+          2.6745424695950213
+        ]
+      ],
+      "triangles": 6291,
+      "bytes": 214588,
+      "sha256": "0cffe469179a061c33b869b3cf3a48406b7e78b7fc07064577179b0dc69b2d4c",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "32.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/32.b3dm",
+      "sourceSha256": "1102b5e591711e68ae9bc999f87620b4eb2422ed25d3f887ec96b662269bd275",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/301.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.891858586329647,
+          1.130715727233886,
+          0.445846040208675
+        ],
+        [
+          4.581679018871625,
+          1.4831289047241203,
+          1.282099878035769
+        ]
+      ],
+      "triangles": 6593,
+      "bytes": 192372,
+      "sha256": "5ea9fa244b310c70236f14e327db188736d34c37a0ee29a4d4107f664daf960a",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "301.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/301.b3dm",
+      "sourceSha256": "4a475ab5b70497c3952527ce2bee642964d2817416ebd079cc3e36c7e7ecbfc9",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/303.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          4.076427960257021,
+          1.1267913574218742,
+          1.1495885202450289
+        ],
+        [
+          4.766248513767096,
+          1.4328511947631828,
+          1.9858428193100153
+        ]
+      ],
+      "triangles": 4663,
+      "bytes": 152756,
+      "sha256": "f1944a238134ce684713ccf76e26059fb59be54c2521449649a606817844bacc",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "303.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/303.b3dm",
+      "sourceSha256": "e29b7bdacc9baf57c7090e4059e769b60b7900b02551c1ac074e1692b507dd37",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/300.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.3866001479087373,
+          0.8954566711425773,
+          0.5783573979994152
+        ],
+        [
+          4.076427960257021,
+          1.175494551086425,
+          1.4146131713160734
+        ]
+      ],
+      "triangles": 6820,
+      "bytes": 203296,
+      "sha256": "a49b4be8c83b8568ed400dad5ca48b373a07a3ef0b41bceb01e067c2d0e34875",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "300.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/300.b3dm",
+      "sourceSha256": "4db7c5786f1930dfd62ef47ddec5fd70d91aaabc467316df1c3e05d3a28c0a80",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/302.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.5711695218361115,
+          0.8720830673217765,
+          1.282099878035769
+        ],
+        [
+          4.260997455152491,
+          1.168067335510253,
+          2.1183561125903196
+        ]
+      ],
+      "triangles": 6688,
+      "bytes": 204396,
+      "sha256": "84381a204ef436507e8e4b9c3f773744ba33eeb57b1a20904164ea2ac5014ef2",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "302.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/302.b3dm",
+      "sourceSha256": "6edff84e70400bc421f3b76180f94dec54681bbb9873d37ecacf80e8b3d622ee",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/13.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.5666959832564515,
+          1.1545404190063469,
+          -0.9254631455844731
+        ],
+        [
+          4.444222469707086,
+          1.4931462997436515,
+          0.5668238156630778
+        ]
+      ],
+      "triangles": 11485,
+      "bytes": 285540,
+      "sha256": "c4711c1b05088517ae788634418fba0f3a6425b307a3d25ae9f2f941230e0ee2",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "13.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/13.b3dm",
+      "sourceSha256": "3ec68382491561e5183494a8867f7ae4ef031ea8cecf0757e1738b515817eeae",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/11.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.2625674267600147,
+          1.2140306228637687,
+          -2.389438226667682
+        ],
+        [
+          3.8900348165431495,
+          1.5820039505004875,
+          -0.8406616056475222
+        ]
+      ],
+      "triangles": 8419,
+      "bytes": 223924,
+      "sha256": "e6e7745e92d57825eb56db6ed55f3dd9a364a8849119bc4d3c96e085a3cb2c04",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "11.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/11.b3dm",
+      "sourceSha256": "f823d4912f1fa2f2f3ee0a4101f62de20a0c79fe923a3ab8a40b6734821e1e15",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/12.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          3.017461279085893,
+          0.9206155532836906,
+          -0.8406616056475222
+        ],
+        [
+          3.935834852079296,
+          1.2865308517456047,
+          0.7108706912797196
+        ]
+      ],
+      "triangles": 17113,
+      "bytes": 408580,
+      "sha256": "2efb030a5093e66b64d677dd017bfabbab132cd634de6e5d21ebee2e7358918a",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "12.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/12.b3dm",
+      "sourceSha256": "1fb85d305f2357b6682da9da564fa1bcc7a7dfa9cdcc727caeba9502a691cc21",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/10.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.8637226813931704,
+          0.9105600112915031,
+          -2.00026994176784
+        ],
+        [
+          3.5666959832564515,
+          1.409548162841796,
+          -0.6966147300308805
+        ]
+      ],
+      "triangles": 11785,
+      "bytes": 329488,
+      "sha256": "d7748bff3ee3c09b2b0fa541e8927c1cedcf4bb54e1b7770bdd4b0f28cd3ccf7",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "10.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/10.b3dm",
+      "sourceSha256": "7d33021b98388bd9d1f91e59cc20eea5da901b07b156344b0ccf1722ffce8ef5",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/22.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          1.9595961544322194,
+          0.386375784301757,
+          1.770093620659683
+        ],
+        [
+          2.652435012683341,
+          0.6281398529052726,
+          2.0719639967905863
+        ]
+      ],
+      "triangles": 4993,
+      "bytes": 159104,
+      "sha256": "b63f4346abf4c82a76394cd7c4818da3b826828ad6a5187a7ec46193c8698db1",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "22.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/22.b3dm",
+      "sourceSha256": "69b07e2453d4f67040416013b529d63c0717c24a7c8075a9e5fd8b0029d00a46",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/23.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.585610363361866,
+          0.5994580978393547,
+          1.4983218529542235
+        ],
+        [
+          3.799647170169308,
+          0.8983482116699211,
+          2.3153735839816427
+        ]
+      ],
+      "triangles": 12555,
+      "bytes": 345680,
+      "sha256": "f8a14103485bd9d257ef81526756d91d24c4f72c6bd1f7b7040aa311ee184881",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "23.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/23.b3dm",
+      "sourceSha256": "874aec58963d738580020d2aca6feb19e8a6496a333423172619ee97b309f503",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/21.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.3760906508732376,
+          0.5561488861083976,
+          0.7108706912797196
+        ],
+        [
+          3.5931236590390228,
+          0.9848941558837883,
+          1.7625606952606176
+        ]
+      ],
+      "triangles": 22228,
+      "bytes": 567392,
+      "sha256": "6461e13983ae3224a4d6de2d7293749907c79f3c3919dc8880d19b0995e9596a",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "21.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/21.b3dm",
+      "sourceSha256": "35ba8a95e83b95da762318006c097eaab0f5cb39856d21d00e6e6dc6656982d7",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/20.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          1.4478130669012899,
+          0.24869096221923748,
+          0.9758953423507641
+        ],
+        [
+          2.5779297933763132,
+          0.6003278488159172,
+          1.9544394416104147
+        ]
+      ],
+      "triangles": 33726,
+      "bytes": 804456,
+      "sha256": "4aa2eae73fbf411990ed21df660fcfba723b05d203016e468e34df086a9264c5",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "20.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/20.b3dm",
+      "sourceSha256": "1460fb1a669af4c75ac975ba639ab48b4f58f50791703a701bef04807fcc7284",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/03.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.4278877355915682,
+          0.6739534133911125,
+          -0.2859663308688809
+        ],
+        [
+          3.3866001479087373,
+          1.0210765594482414,
+          0.8937434876325483
+        ]
+      ],
+      "triangles": 19417,
+      "bytes": 481448,
+      "sha256": "16b4d6b631863fd2868b512a9a8e8886cf94b37c9d69214440e68edffab113ea",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "03.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/03.b3dm",
+      "sourceSha256": "3442d6bbaa2c7e31a6f69c18a8ff459d7140f370d771c810a8b00881c302eb07",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/00.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.000906902608932,
+          0.5928605789184562,
+          -0.6005755020469259
+        ],
+        [
+          2.4278877355915682,
+          0.7537683242797844,
+          0.008890020915366392
+        ]
+      ],
+      "triangles": 7662,
+      "bytes": 229468,
+      "sha256": "ec0962b3ec143a13d92e601713f32311c14b8c3094aa25cd56b40867d47fb3b8",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "00.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/00.b3dm",
+      "sourceSha256": "84301986a82d997bb644ba647ef7263c0f35c8c6fcd710da593f508351b1b886",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/01.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          2.294629236704452,
+          0.6889337295532219,
+          -1.282802891779589
+        ],
+        [
+          3.125161354166906,
+          0.9567588562011711,
+          -0.10309353451605219
+        ]
+      ],
+      "triangles": 16489,
+      "bytes": 404780,
+      "sha256": "e138e58a7733a29ff35afdab67c1b59a86551d5d943ca8a7a62b7eb26c13fb93",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "01.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/01.b3dm",
+      "sourceSha256": "26f8948ae067b60e90deb72f237db39b5e6319c3dbec996a08f404213f044c77",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-0/02.glb",
+      "transform": [
+        0.9672859715285858,
+        0.0,
+        -0.2536884886706531,
+        0.0,
+        0.2536884886706531,
+        0.0,
+        0.9672859715285858,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -78.88217797214396,
+        -13.5431,
+        29.46141316200122,
+        1.0
+      ],
+      "bounds": [
+        [
+          1.880360805016437,
+          0.483294844055175,
+          -0.10309353451605219
+        ],
+        [
+          2.6893265293333997,
+          0.8049415344238273,
+          1.0466742603667925
+        ]
+      ],
+      "triangles": 28530,
+      "bytes": 691620,
+      "sha256": "bb06f120150c7ffda158cff91066743aa94664a57980a8a747ec19899b4ef707",
+      "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+      "sourceTile": "02.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/02.b3dm",
+      "sourceSha256": "22ca45dc7b71a56157a8cb5b9153253159583904ac713cf0cca7f925d11a5722",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/2.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          14.811024179187783,
+          1.3655780548095695,
+          34.75931575122877
+        ],
+        [
+          21.521231482358644,
+          3.0742782348632804,
+          44.76719658466408
+        ]
+      ],
+      "triangles": 934,
+      "bytes": 30776,
+      "sha256": "1b225729a71681ca2eed21591114a62ce9af0a01ede8ca93ad675a130e7ca64c",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "2.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/2.b3dm",
+      "sourceSha256": "0aaa8dc86bd28eac515688014be615f288bd23ff0509c2ecf6f25a7233bd36fd",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/1.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          22.011949701704324,
+          2.847578405761718,
+          29.009168675970887
+        ],
+        [
+          31.3437646154252,
+          4.679857611083984,
+          40.241601582064945
+        ]
+      ],
+      "triangles": 544,
+      "bytes": 18416,
+      "sha256": "12041386ce4970db1fec03ced3fe54617cb088aa7a381f6fd00ec62598b6cea1",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "1.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/1.b3dm",
+      "sourceSha256": "2e2c245ed2036eb28b4cd18efe53aff2addc575d1d7c481d11168ccb71ff5897",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/31.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          31.28204666531164,
+          4.692026495361327,
+          49.12699206575701
+        ],
+        [
+          36.66960376741643,
+          6.118282675170898,
+          59.61200837869792
+        ]
+      ],
+      "triangles": 564,
+      "bytes": 19776,
+      "sha256": "1dadee38c445dea219c42bd0ac29032b2ce3d6ba8fee88a27a2ec2ebe3f2856e",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "31.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/31.b3dm",
+      "sourceSha256": "72d2d587e30755f546960ded6737c102b486d1479e906b81ec70185aba0dfb23",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/32.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          24.87479533420921,
+          3.057791113281249,
+          55.70082914013274
+        ],
+        [
+          31.28204666531164,
+          4.719992041015624,
+          63.75021909655193
+        ]
+      ],
+      "triangles": 678,
+      "bytes": 22708,
+      "sha256": "c23e4083faa8c11927cecca26be911250fca2186065e7627b42e979db858ecfd",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "32.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/32.b3dm",
+      "sourceSha256": "5ac44e0a23bb4b52e938ebaea0f0ac530d1aa8319fa6b1c43329fc0f5e066628",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/33.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          29.31739439648409,
+          4.046951651000976,
+          57.825484960054595
+        ],
+        [
+          40.816730289433764,
+          7.552963613891601,
+          78.59154998289246
+        ]
+      ],
+      "triangles": 1200,
+      "bytes": 36660,
+      "sha256": "cbc461f17544c595e9fe98424b98bf566a50b52ade61c455b3584151e06ec7e1",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "33.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/33.b3dm",
+      "sourceSha256": "5b65ce23968ffa229c0de6b3a11b1dd8a0379a4bd7f219e38cbb65395ff855a4",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/30.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          19.191458775004747,
+          2.057961820983886,
+          37.314324956298876
+        ],
+        [
+          34.16648222080565,
+          5.379812597656249,
+          57.825484960054595
+        ]
+      ],
+      "triangles": 2318,
+      "bytes": 75304,
+      "sha256": "f19273d55e7d6624da2fa8a9f8cfff01fb8342ed191a9d2ba1aabcddbfa4ad78",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "30.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/30.b3dm",
+      "sourceSha256": "f64b54643540d5988ccd5e07a0fd1db5e62a6ee28122121a21e21d1b5e87066d",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/01.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          12.212687183992216,
+          1.7406419509887687,
+          12.631955803109403
+        ],
+        [
+          18.183630175508625,
+          3.3701938385009758,
+          18.273330938101967
+        ]
+      ],
+      "triangles": 1330,
+      "bytes": 40308,
+      "sha256": "446a9e0cad3a0f0ca8696ce5a8002f35989702ed95cb99218923f1ca97ef1691",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "01.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/01.b3dm",
+      "sourceSha256": "c48738dd9a009e5f01d4377bd719a04707c8f0e97c14ad8ed6c2bc87755c7d10",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/02.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          7.322199239213063,
+          0.31281793060302654,
+          14.771911210149394
+        ],
+        [
+          12.212687183992216,
+          1.768782019042968,
+          23.462367704779513
+        ]
+      ],
+      "triangles": 2544,
+      "bytes": 72948,
+      "sha256": "810d407e14c9d59debf4111a2b3098b71c208c623878a4fba98d07d980cf87a8",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "02.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/02.b3dm",
+      "sourceSha256": "e0d19b9bfd3a3800f3191b9208d1c26fb807839f1fdb0ccc1399e9ff6e1885ab",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/03.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          9.835430194252169,
+          0.4444917434692375,
+          16.293355731609783
+        ],
+        [
+          24.41684856799968,
+          3.841169714355468,
+          36.7449220952893
+        ]
+      ],
+      "triangles": 7769,
+      "bytes": 212356,
+      "sha256": "c91f87e8aa40300e21c49a390fc34095d8d87adb9c9320047f935aa2015d1c81",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "03.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/03.b3dm",
+      "sourceSha256": "1be33e35ce8dd9c8de0f44c9e8d39f75bdc6c64c06c7dc8df74ece3441e3aa94",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-1/00.glb",
+      "transform": [
+        0.949175214709032,
+        0.0,
+        0.31474817200750027,
+        0.0,
+        -0.31474817200750027,
+        0.0,
+        0.949175214709032,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -81.79349719342196,
+        -13.5431,
+        -18.446660479538853,
+        1.0
+      ],
+      "bounds": [
+        [
+          0.4660952472344633,
+          -0.11896097717285237,
+          -2.2515071522106
+        ],
+        [
+          13.426813845355952,
+          4.7085860961914054,
+          16.293355731609783
+        ]
+      ],
+      "triangles": 217031,
+      "bytes": 6074660,
+      "sha256": "cdffff6ca2160dfdac05479d39a9686c3a3053c0749d67758d4a5ef7bde604f9",
+      "sourceProduct": "NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "00.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/00.b3dm",
+      "sourceSha256": "635bf85cb0ebdadda160df34b35631ac6234016a6a7dac91bdadb3eec35476e2",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/32.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -34.90016731489154,
+          -4.554340959167481,
+          55.889967816923885
+        ],
+        [
+          -13.474532019930077,
+          -2.7839704757690438,
+          83.40999109591165
+        ]
+      ],
+      "triangles": 852,
+      "bytes": 27296,
+      "sha256": "4d7c6314cdf011ef5feaac40bdde328202a231793aa62de7c808547209c7b46c",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "32.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/32.b3dm",
+      "sourceSha256": "d13d2c66ad1dfd8377862b765f3c6ace48ace983c296d76361f6134b5c360e01",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/31.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -13.775765284520347,
+          -2.9675775772094735,
+          83.40999109591165
+        ],
+        [
+          11.840507338382096,
+          1.914574026489257,
+          110.90804080248488
+        ]
+      ],
+      "triangles": 1335,
+      "bytes": 43788,
+      "sha256": "34d3cb3d013da0142e3bb3baec62e818bb4b3e33b8c65d3667f772f5ccfa9851",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "31.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/31.b3dm",
+      "sourceSha256": "84d038a1d740f6bdbe3029ea49b12e05ecc52bbc66c4d39983c3df087217cee1",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/33.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -39.10120208361137,
+          -5.744920373535157,
+          83.31818606651295
+        ],
+        [
+          -13.607640241098732,
+          -2.500479341125489,
+          108.50755607182235
+        ]
+      ],
+      "triangles": 669,
+      "bytes": 22248,
+      "sha256": "86764fe263061288010fc3454d46da5e2784c9091dd6c3ab9c91122629ca0d0c",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "33.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/33.b3dm",
+      "sourceSha256": "efbe1b1bc20d3d689f2e0ddc9bbbf8e21eba900d28cbdf0d450be7c24d03c57a",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/30.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -13.607640241098732,
+          -2.9655615097045906,
+          56.07048843133303
+        ],
+        [
+          12.045427122298733,
+          1.1368716949462883,
+          83.60049809464705
+        ]
+      ],
+      "triangles": 2593,
+      "bytes": 75852,
+      "sha256": "e69ebcfeb806ea452d7ee55b5bb7c877528d125d56b33e28a35f246624042983",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "30.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/30.b3dm",
+      "sourceSha256": "4834c25d4aefe09778268778556df6d94441f906181f9cc45c7c46fe648a4822",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/13.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          11.65412336588929,
+          1.0264295333862297,
+          83.12219423614285
+        ],
+        [
+          39.671198632720476,
+          7.4646381134033195,
+          110.03806423430173
+        ]
+      ],
+      "triangles": 1856,
+      "bytes": 60248,
+      "sha256": "99d71dba4ee27bd21d8c1ab0f8b6ba9d93fd2b01bd097dd57be707415ef28643",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "13.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/13.b3dm",
+      "sourceSha256": "2c161cd8dd7b8c8b921b888245676ea7c9dcf9fe50ed8e85848a36f9a0ba6461",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/11.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          39.51999939380834,
+          6.502334951782226,
+          83.33051035506047
+        ],
+        [
+          67.47786054896812,
+          12.969530462646484,
+          103.52788142952237
+        ]
+      ],
+      "triangles": 1311,
+      "bytes": 53276,
+      "sha256": "4039910c5c06455920ad5a482fe32de9f2ef4e3f93c1a79f1ac52e29c5d1f303",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "11.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/11.b3dm",
+      "sourceSha256": "7a3f1ca22b57f7dec8b8ffbc92b333f1a0c48e11e30c324248efaf5db5b92b59",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/10.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          39.671198632720476,
+          6.064855932617187,
+          56.43538994211083
+        ],
+        [
+          65.75932337793589,
+          12.491957067871093,
+          83.52580827732861
+        ]
+      ],
+      "triangles": 1993,
+      "bytes": 66128,
+      "sha256": "ccd617c305e89e1eca683e09f559525157587562b2e6e114347fb20024448bac",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "10.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/10.b3dm",
+      "sourceSha256": "274367e0dd889781a9ac4461adee89018875f890dd340158866011a6e4373587",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/12.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          11.844087961776495,
+          0.5348352188110344,
+          56.22707382319321
+        ],
+        [
+          39.872537793242714,
+          6.602335333251952,
+          83.33051035506047
+        ]
+      ],
+      "triangles": 3370,
+      "bytes": 100448,
+      "sha256": "4d7498342fc30ce32c827bdb459217b8879646e2bd0201fca0cc7c9417cda89c",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "12.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/12.b3dm",
+      "sourceSha256": "2ea20fea57153fb3d79fff4f0620a6109d5244795fbb55b259cbd1aed1fee9b7",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/01.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          28.624371220235275,
+          3.26394116821289,
+          36.16724996542354
+        ],
+        [
+          45.203317225467,
+          7.211798071289062,
+          56.4752966106564
+        ]
+      ],
+      "triangles": 1507,
+      "bytes": 51432,
+      "sha256": "2135b26783876d969ea2bb6fd37c39d54f4bf050aa7cd9ecc0949ea2e0043973",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "01.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/01.b3dm",
+      "sourceSha256": "c379d7a0ee05624b01cc89f1eb89d26773e53db11212d835534a65f3892bc06b",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/00.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          28.775500153418015,
+          4.0840839141845695,
+          35.678088939916165
+        ],
+        [
+          29.155147679269312,
+          4.238243460083007,
+          36.17006853410852
+        ]
+      ],
+      "triangles": 39,
+      "bytes": 3348,
+      "sha256": "f0952800f6b71cd6992d19914a793f8343e143c8a2677cf739d0f5bd057309a4",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "00.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/00.b3dm",
+      "sourceSha256": "1fc4437a1946661740eac5983695a496079557de79663f4c8bec82775ab78102",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/03.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          12.045427122298733,
+          0.37858426513671795,
+          36.04311484850564
+        ],
+        [
+          28.725879100655625,
+          3.7248233551025383,
+          56.351185209785726
+        ]
+      ],
+      "triangles": 3007,
+      "bytes": 96956,
+      "sha256": "5436d72fcfcf82d21d780dd417c46735deb58af4dd9492aaa2f79c7215f3703e",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "03.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/03.b3dm",
+      "sourceSha256": "f4853420e1dd5f15ac558c63f542bd053e44ed3928d107f3bb28c97b484a3c0d",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/02.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          12.196525957090419,
+          0.7580379241943351,
+          15.85915587381804
+        ],
+        [
+          28.77913177845039,
+          4.181766867065429,
+          36.16320565683816
+        ]
+      ],
+      "triangles": 5518,
+      "bytes": 156200,
+      "sha256": "6d148867f0fd5e3d6c089f8bbbfcc0e67db48eb0ed63ef198ea2b5e0b34c0709",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "02.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/02.b3dm",
+      "sourceSha256": "7dcf5b780d0f226ae994bc7f26edb89a0e8e36c0d963d31ace867044030d6478",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/23.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -43.46087414068316,
+          -4.948480249023438,
+          28.499526360646172
+        ],
+        [
+          -15.576763764728616,
+          -2.69215071258545,
+          55.99983426898065
+        ]
+      ],
+      "triangles": 5622,
+      "bytes": 140276,
+      "sha256": "4b5e225654683b6e551fc81c022664772b8b58f7a3c3d1ab0efd031e7efc891a",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "23.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/23.b3dm",
+      "sourceSha256": "bbe7db6d0c44d2f6e4f31c28200a7657a278733ad23f1ee0698819ce196d4dd5",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/22.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -35.053842903487045,
+          -4.125395417785645,
+          13.22089227889633
+        ],
+        [
+          -15.461295085437605,
+          -2.2704817062377938,
+          28.645333432821786
+        ]
+      ],
+      "triangles": 7490,
+      "bytes": 206696,
+      "sha256": "fbbb362a2ee7e84f5c65cab512457d30f90224c0760b16156932a44a70e1809f",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "22.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/22.b3dm",
+      "sourceSha256": "d3e8577d103347a626f7e07256e03fdfde1ed816e6e07cf47acef17b0059582b",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/21.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -15.743583897260589,
+          -2.9669862991333016,
+          28.645333432821786
+        ],
+        [
+          12.250346906215366,
+          0.9627422088623039,
+          56.22707382319321
+        ]
+      ],
+      "triangles": 11646,
+      "bytes": 284252,
+      "sha256": "bd761064efc8533e46c53951b7434df32b6020d98016b008b4fcef7f121bb8e1",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "21.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/21.b3dm",
+      "sourceSha256": "898d1c9c871635a1837963b600ad46f614ba87331bad7705b923b02ab63df2c6",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-2/20.glb",
+      "transform": [
+        -0.007485875355706426,
+        0.0,
+        0.9999719804425314,
+        0.0,
+        -0.9999719804425314,
+        0.0,
+        -0.007485875355706426,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -6.373575225358934,
+        -13.5431,
+        -83.16550770803791,
+        1.0
+      ],
+      "bounds": [
+        [
+          -15.576763764728616,
+          -3.1723171478271492,
+          1.378805878140696
+        ],
+        [
+          12.347624791882108,
+          1.7627662414550773,
+          28.853649551739394
+        ]
+      ],
+      "triangles": 203648,
+      "bytes": 5728536,
+      "sha256": "e7d5ea41b665846b5046a28fd1bccea1b65e622b4dd3df23493f91a8b5a51e34",
+      "sourceProduct": "NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "20.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/20.b3dm",
+      "sourceSha256": "cf368a9c3f8547530d6dd51ec2d686e6440cc94fe5abae86e52f5432f124e26f",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/33.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          43.83306402364258,
+          11.641882299804687,
+          90.20176177641166
+        ],
+        [
+          67.81668339175378,
+          17.055183767700193,
+          112.80575476239645
+        ]
+      ],
+      "triangles": 952,
+      "bytes": 30756,
+      "sha256": "b105c1f0c850b8b36102b666f30a6a27fb2b485b3d8a149c987173028b3877ea",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "33.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/33.b3dm",
+      "sourceSha256": "802d6a4f08096b1ba82c8ebf498074a29ec2ffb420968502db612381b235df03",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/30.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          29.877735482052046,
+          5.834352850341796,
+          58.83849781479337
+        ],
+        [
+          61.38630136996527,
+          12.362226843261718,
+          90.20176177641166
+        ]
+      ],
+      "triangles": 7114,
+      "bytes": 172732,
+      "sha256": "176685216a99b5afc9753f4572e41bf83868874cb036816c768157d4133aa560",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "30.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/30.b3dm",
+      "sourceSha256": "d5cc658fd1f53ad2a70f365a6b0c09e1c27937c41ae51d427dc61cbc18063c1f",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/32.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          29.692572726727676,
+          6.024572729492187,
+          81.0746674779319
+        ],
+        [
+          52.358519279036315,
+          13.27038419189453,
+          111.20065913625302
+        ]
+      ],
+      "triangles": 4333,
+      "bytes": 105328,
+      "sha256": "2b1ca3844be8d46381cd54ef92b6168f4dcf86534e2111cdc89810378ea5807d",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "32.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/32.b3dm",
+      "sourceSha256": "5098bce3f5fe32c6937513ecb70c75a7a39cbe3c30857a74819b541fce587f3c",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/31.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          52.358519279036315,
+          11.564894079589843,
+          67.96559211327315
+        ],
+        [
+          83.86707102893651,
+          19.26615369262695,
+          96.47770494691068
+        ]
+      ],
+      "triangles": 4091,
+      "bytes": 101576,
+      "sha256": "d9a3ef34869e1e483f0a40fffbe3574875cb232ac38c3295ec5bd85c58bf4466",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "31.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/31.b3dm",
+      "sourceSha256": "e5a4f0b9cc917a80d114c9d70ccdb6a9191af138ab32522d4ca70b86a344743f",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/23.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          23.975527262072717,
+          3.7068485015869133,
+          66.06541719412046
+        ],
+        [
+          34.29904479110634,
+          6.3075240844726554,
+          81.5307385706119
+        ]
+      ],
+      "triangles": 1629,
+      "bytes": 45412,
+      "sha256": "64b285588e79f4de093ee18f86175e7b89088fc7abc61c0582308b4cdf808335",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "23.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/23.b3dm",
+      "sourceSha256": "599a801980b2c141439fe41958382c1cf660d544cb538f93f81a11bc8b1e2ead",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/22.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          23.771399611489045,
+          3.6879867309570304,
+          65.91044380010018
+        ],
+        [
+          24.153111824743462,
+          3.8288348907470695,
+          66.50282257512414
+        ]
+      ],
+      "triangles": 87,
+      "bytes": 4692,
+      "sha256": "8a4da4440176fde3beb5580117a17ce13440ad48feaf02da98e2b5442c100324",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "22.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/22.b3dm",
+      "sourceSha256": "abf42328fc7e8f8a2f30d3bc092a845fdca0858706517bf1231f375552ae7e6a",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/21.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          24.153111824743462,
+          3.7058986419677726,
+          54.71929593258538
+        ],
+        [
+          38.905517572981,
+          6.845350622558593,
+          70.18461907632845
+        ]
+      ],
+      "triangles": 2437,
+      "bytes": 67868,
+      "sha256": "bf88cc4fcc8d0bd5a55382a4ba6a79b5a86dec053cafba2c8e31339452292b64",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "21.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/21.b3dm",
+      "sourceSha256": "602107b91f638fdbce8070a2c82cbbfa6c96a3443c33d027407bfe75a545660d",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/20.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          18.613637502242213,
+          2.172222494506835,
+          50.60008831040945
+        ],
+        [
+          28.75958460661812,
+          4.242834448242187,
+          66.06541719412046
+        ]
+      ],
+      "triangles": 1642,
+      "bytes": 45884,
+      "sha256": "a8b5c8c3e84492bae0dbf02b8b3b020a5697951bf6a120f8ea1a925dd2940b51",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "20.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/20.b3dm",
+      "sourceSha256": "4cf8adb27d75a8412c3bff2a303f45e964665aa0ebd8710219c8402ba176fed4",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/13.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          63.56809367566676,
+          12.919647573852538,
+          56.64580272583066
+        ],
+        [
+          92.59877446943706,
+          21.512949346923826,
+          77.09268067178499
+        ]
+      ],
+      "triangles": 2130,
+      "bytes": 54716,
+      "sha256": "602bfc035674dddbbd4ad2a0804c456fabf5ba1c72280c3b3487373a6663a324",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "13.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/13.b3dm",
+      "sourceSha256": "a0148e0601ea24474fbd7ea9bf97aefd154212b323b02eb92a85fd3c6e9ae12a",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/12.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          38.905517572981,
+          6.747686743164062,
+          46.63291083712156
+        ],
+        [
+          68.52350556519578,
+          14.02336728515625,
+          68.85138970350248
+        ]
+      ],
+      "triangles": 2976,
+      "bytes": 81584,
+      "sha256": "e81d7a120182ee0473468e3bb46942bfbbf9fa14eefea68bb60ebaa00325d456",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "12.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/12.b3dm",
+      "sourceSha256": "d0c5482103b7c9d8d9951849478c652ff2de6d60c735a449567b11b6a0231610",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/10.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          43.86092946251003,
+          7.709017156982421,
+          36.784973661234616
+        ],
+        [
+          72.27904245203659,
+          14.633863806152343,
+          56.64580272583066
+        ]
+      ],
+      "triangles": 2354,
+      "bytes": 65688,
+      "sha256": "d600f6ddc71de52859ce866eb4cdfdfbcdba2563dbd47cc7104ed8867c58d612",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "10.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/10.b3dm",
+      "sourceSha256": "cfb58e31e15c07a68571d6f07afd3bfcb36d40ee05fc9e7ab60136bca0c93302",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/11.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          68.52350556519578,
+          13.923366903686523,
+          47.395606547981416
+        ],
+        [
+          94.59174190756524,
+          22.093710302734372,
+          66.42025060694702
+        ]
+      ],
+      "triangles": 2280,
+      "bytes": 57988,
+      "sha256": "6e62e5f76d26def5d0bd98f3a0955dec3f81b002f572620a0cf1a93b48221af3",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "11.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/11.b3dm",
+      "sourceSha256": "8227f5f91c3edfcdd14412ae31242789fd9406f73f28fbdeda77604d90c22b63",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/01.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          33.22014891187132,
+          5.599594473266601,
+          29.793022759750475
+        ],
+        [
+          43.22846138049201,
+          7.83832967224121,
+          34.63577187151651
+        ]
+      ],
+      "triangles": 551,
+      "bytes": 17688,
+      "sha256": "06a8fc48f8e8bb942dea2956b17c3d146c5ac7a2d18b0995d0f9c7794cc6ea66",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "01.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/01.b3dm",
+      "sourceSha256": "d8f5b2b8785f7554640c851c18cf6ff850a297774c8fcb2a25fb16c43d642ee2",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/03.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          16.27599925876642,
+          1.6519664520263664,
+          27.054736162724513
+        ],
+        [
+          46.79433217837507,
+          8.421177267456054,
+          58.83849781479337
+        ]
+      ],
+      "triangles": 10207,
+      "bytes": 253284,
+      "sha256": "3454c1de92f5e4a2dd48fea697a41e8ca1feb25bae50c1f623008a8fe577dcd9",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "03.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/03.b3dm",
+      "sourceSha256": "896e0eb9183911868982c9a3b89ec531bd83ed579dce9ed68bc02575f83da802",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/02.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          8.91461327763659,
+          0.2405151123046867,
+          21.15476954891189
+        ],
+        [
+          23.08182218708697,
+          3.6764587158203117,
+          43.818037692064124
+        ]
+      ],
+      "triangles": 12199,
+      "bytes": 303688,
+      "sha256": "06a5697489700e16513d9f70dc59fa46b1399ab229d00c283303d1711eee7523",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "02.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/02.b3dm",
+      "sourceSha256": "e44ccacaa6cdf33bec133780cb7c91c0a9040a12f69530da5526084b85cf2c85",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/detail-3/00.glb",
+      "transform": [
+        0.9265488206171081,
+        0.0,
+        0.3761745379648198,
+        0.0,
+        -0.3761745379648198,
+        0.0,
+        0.9265488206171081,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -80.36721940202686,
+        -13.5431,
+        -23.783283322430382,
+        1.0
+      ],
+      "bounds": [
+        [
+          5.184154366696831,
+          0.2284444564819328,
+          -3.9148812206975094
+        ],
+        [
+          22.493605392871316,
+          6.850298284912109,
+          26.27393296684684
+        ]
+      ],
+      "triangles": 211897,
+      "bytes": 5830108,
+      "sha256": "c1a6021b52c1003284581f628875ff039632ce080bd178430de8fca94186aa07",
+      "sourceProduct": "NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "00.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/00.b3dm",
+      "sourceSha256": "fa1fe9250aa20e169bdd29705ab8fd37767b4d73c5ebc739dd82300f4491b5d1",
+      "visualLod": "NASA finest available original leaf mesh and texture"
+    },
+    {
+      "url": "/data/drive1004/context-0.glb",
+      "transform": [
+        -0.9543319758060881,
+        0.0,
+        0.29874818820211807,
+        0.0,
+        -0.29874818820211807,
+        0.0,
+        -0.9543319758060881,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        77.97264778966716,
+        -13.5431,
+        -31.036993440431583,
+        1.0
+      ],
+      "bounds": [
+        [
+          -102.15727417930786,
+          -13.331923992013932,
+          -50.37899934050346
+        ],
+        [
+          -0.0274433636685103,
+          -0.20663225708007893,
+          64.98839870518438
+        ]
+      ],
+      "triangles": 2367,
+      "bytes": 153348,
+      "sha256": "081c9c158a6c7fd3b5a385dd21d6a08eb1597ba96335230fcb3c715ba22bc820",
+      "sourceProduct": "NLF_0477_0709297668M065RAS_N0261004NCAM03477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297668M065RAS_N0261004NCAM03477_0A0195J02/root.b3dm",
+      "sourceSha256": "af0712601b8061311340706db8c6ef15d51bd61652a6924767a7d3b1d87e3964",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-1.glb",
+      "transform": [
+        -0.5752914325834093,
+        0.0,
+        -0.8179485115801169,
+        0.0,
+        0.8179485115801169,
+        0.0,
+        -0.5752914325834093,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        54.334825658876625,
+        -13.5431,
+        64.87881759963678,
+        1.0
+      ],
+      "bounds": [
+        [
+          -84.08176564289259,
+          -10.701969028091431,
+          -101.54120688037243
+        ],
+        [
+          1.9158007360602838,
+          2.6422103637695304,
+          0.9032966115146905
+        ]
+      ],
+      "triangles": 14064,
+      "bytes": 496120,
+      "sha256": "c3bea2c1cc43f8850919a7e5165f4da5b3d967f16e0dd932fd056dac5e27fdeb",
+      "sourceProduct": "NLF_0477_0709297838M897RAS_N0261004NCAM02477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297838M897RAS_N0261004NCAM02477_0A0195J02/root.b3dm",
+      "sourceSha256": "27ca5f97a474f4fe7115bc4a35512b51ebce28ff778b9e8c9c5fb7c482e3b780",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-2.glb",
+      "transform": [
+        0.5957759393701344,
+        0.0,
+        -0.803150689514511,
+        0.0,
+        0.803150689514511,
+        0.0,
+        0.5957759393701344,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -43.45568505815803,
+        -13.5431,
+        72.52964929339257,
+        1.0
+      ],
+      "bounds": [
+        [
+          -20.74492500758418,
+          -1.8066631561279305,
+          -85.20318216472194
+        ],
+        [
+          9.891462191351366,
+          4.6764510864257804,
+          0.863202504666603
+        ]
+      ],
+      "triangles": 3637,
+      "bytes": 201236,
+      "sha256": "a39b46b7ad846ba8c26b19bd8cf067b8577e6e211d409794772931c813e9b192",
+      "sourceProduct": "NLF_0477_0709298005M099RAS_N0261004NCAM02477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298005M099RAS_N0261004NCAM02477_0A0195J02/root.b3dm",
+      "sourceSha256": "a42d381e7d2bb8ab083580df6f87f950194d7691f4d254b5bfa249ff548f378a",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-3.glb",
+      "transform": [
+        0.6466834354449875,
+        0.0,
+        -0.762758503276803,
+        0.0,
+        0.762758503276803,
+        0.0,
+        0.6466834354449875,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -48.0177959927633,
+        -13.5431,
+        69.55816013435333,
+        1.0
+      ],
+      "bounds": [
+        [
+          -10.356270591503723,
+          -0.5681864028930672,
+          -75.67156556882435
+        ],
+        [
+          14.249712031163817,
+          9.010855078125,
+          0.13049326661173666
+        ]
+      ],
+      "triangles": 13499,
+      "bytes": 444424,
+      "sha256": "370234786919e5fd4fa6ec688267ae1d38aba24aad6ecc28c93c443d6b86cde3",
+      "sourceProduct": "NLF_0477_0709298187M680RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298187M680RAS_N0261004NCAM13477_0A0195J02/root.b3dm",
+      "sourceSha256": "5e18d11a733aca3abfd1a605b6a9a3469c8e00bbdf71180c8f6a078cae3f103c",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    },
+    {
+      "url": "/data/drive1004/context-4.glb",
+      "transform": [
+        -0.07053974049741697,
+        0.0,
+        0.9975089698897736,
+        0.0,
+        -0.9975089698897736,
+        0.0,
+        -0.07053974049741697,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -1.0781719905275509,
+        -13.5431,
+        -83.4422492461363,
+        1.0
+      ],
+      "bounds": [
+        [
+          -40.95905429096352,
+          -5.249677301025391,
+          15.956413873410568
+        ],
+        [
+          66.54406878629801,
+          14.279840826416015,
+          110.92239249398102
+        ]
+      ],
+      "triangles": 23739,
+      "bytes": 483668,
+      "sha256": "391587a0856335a1fce4d4c138f2537aa0dadb790c704d82b8020622693cdda4",
+      "sourceProduct": "NLF_0477_0709298393M010RAS_N0261004NCAM13477_0A0195J02",
+      "sourceTile": "root.b3dm",
+      "sourceUrl": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298393M010RAS_N0261004NCAM13477_0A0195J02/root.b3dm",
+      "sourceSha256": "36575c5c8bc08ee1631304d431986957a2523704f47895c4150c00926718da2a",
+      "visualLod": "NASA original root hierarchy, visual context only",
+      "contextOnly": true
+    }
+  ],
+  "detailProcessing": {
+    "geometry": "Original NASA finest available leaf meshes for the walking sector plus original root-LoD surrounding context",
+    "imageEncoding": "JPEG95 4:4:4, native tile pixel dimensions; no enlargement or sharpening",
+    "triangles": 1045833,
+    "bytes": 28904064,
+    "drawCalls": 66,
+    "textureNote": "Leaf atlases retain the NASA sample tile pixel dimensions; tighter ground footprints improve local detail relative to first-child LoD. They are not full-resolution raw Navcam images."
+  }
+}

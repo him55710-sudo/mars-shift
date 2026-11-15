@@ -72,7 +72,7 @@ function createFallbackAstronaut() {
 /** NASA EMU geometry with an explicitly illustrative walk rig.
  * Loading is deferred for orbit-only maps; disposal also handles late responses.
  */
-export function createAstronautAvatar(loadDetailed=true):AstronautAvatar {
+export function createAstronautAvatar(loadDetailed=true,assetUrl='/models/nasa-emu-web.glb'):AstronautAvatar {
  const group=new THREE.Group();group.name='NASA EMU / illustrative EVA rehearsal';
  group.userData={classification:'NASA-derived visual asset with illustrative walking',assetStatus:'deferred',source:'NASA / Michael D. Carbajal',forward:'local -Z',units:'metres'};
  let disposed=false,started=false,model:THREE.Group|null=null,fallback:ReturnType<typeof createFallbackAstronaut>|null=null,phase=0,moving=false,walkBlend=0,poseReady=false;
@@ -107,7 +107,7 @@ export function createAstronautAvatar(loadDetailed=true):AstronautAvatar {
   model.position.y=Number.isFinite(lowest)?THREE.MathUtils.clamp(-lowest,-.08,.12):0;
   return changed||oldBlend!==walkBlend;
  };
- const load=()=>{if(started||disposed)return ready;started=true;group.userData.assetStatus='loading';fallback=createFallbackAstronaut();group.add(fallback.group);new GLTFLoader().load('/models/nasa-emu-web.glb',gltf=>{if(disposed){release(gltf.scene);finish();return;}if(fallback){release(fallback.group);fallback=null;}model=gltf.scene;model.traverse(child=>{if(child instanceof THREE.Bone)bones.set(child.name,{bone:child,rest:child.quaternion.clone()});if(child instanceof THREE.Mesh){child.castShadow=true;child.receiveShadow=false;(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>{if(material instanceof THREE.MeshStandardMaterial){material.envMapIntensity=material.name.includes('visor')?1.15:.55;material.needsUpdate=true;}});}});group.add(model);model.updateWorldMatrix(true,true);
+ const load=()=>{if(started||disposed)return ready;started=true;group.userData.assetStatus='loading';fallback=createFallbackAstronaut();group.add(fallback.group);new GLTFLoader().load(assetUrl,gltf=>{if(disposed){release(gltf.scene);finish();return;}if(fallback){release(fallback.group);fallback=null;}model=gltf.scene;model.traverse(child=>{if(child instanceof THREE.Bone)bones.set(child.name,{bone:child,rest:child.quaternion.clone()});if(child instanceof THREE.Mesh){child.castShadow=true;child.receiveShadow=false;(Array.isArray(child.material)?child.material:[child.material]).forEach(material=>{if(material instanceof THREE.MeshStandardMaterial){material.envMapIntensity=material.name.includes('visor')?1.15:.55;material.needsUpdate=true;}});}});group.add(model);model.updateWorldMatrix(true,true);
   // Bind four representative neutral sole points per boot once at load time.
   // Eight anchors are cheap enough to follow each skinned pose without walking
   // all vertices every frame.
