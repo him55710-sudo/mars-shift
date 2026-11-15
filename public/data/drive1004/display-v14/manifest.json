@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "DISPLAY_ONLY_INTERPOLATED_DEPTH",
+  "meaning": "Original PDS photos on bounded linear height interpolation, drawn behind original stereo meshes. Not observed depth, soil classification, or traversable support. Never used by planner or ray picking.",
+  "navigationGridSha256": "cb15cbf547da5823e117a4405e64ecdaddaed177819d0be637f921271811f518",
+  "surfaceEvidenceSha256": "d682bedde65e223ace15729cab87277bfa0bc8451654458dc6933fde596127e6",
+  "manifestSha256": "e183d3be4a2c1fc097db7ec6ba579d6df23bace99fcd5a0ee208a794ed889e01",
+  "generatorSha256": "aef823899273360bee588510a03793ad7edaee5ebfef3fcdd5aff482a2e019d9",
+  "spacingMetres": 0.2,
+  "maximumDistanceToHeightSampleMetres": 3,
+  "measuredSamples": 14870,
+  "interpolatedSamples": 13565,
+  "verticalDisplayOffsetMetres": -0.04,
+  "triangles": 55794,
+  "bytes": 4375836,
+  "sha256": "df429117be5f4257ddd5cc55dd6a3d8eb81034278657843c0d12928a7b962de3",
+  "sources": [
+    {
+      "image": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709296508_723RASLN0261004NCAM00701_0A0085J01.IMG",
+      "imageSha256": "5ca4a8e993bed95a28f945539a7cf5a89cc8b368a4cc35a05fdd380ed3df947d",
+      "label": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709296508_723RASLN0261004NCAM00701_0A0085J01.xml",
+      "labelSha256": "45c451a6fa63329095948d811680bcef1fd2dfbe622194f3ac57ba8935b4157f",
+      "scene": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02/NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02_scene.json",
+      "sceneSha256": "8b7ce1ee5adb31d9e39c68dc5202c8e1d1997845bbb35cefcd014deb7931c2b9"
+    },
+    {
+      "image": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709297328_366RASLN0261004NCAM03477_0A0195J01.IMG",
+      "imageSha256": "d80709e7f92299e4bea62ee979ee884cbeaa9780dccec502484c215e56b12199",
+      "label": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709297328_366RASLN0261004NCAM03477_0A0195J01.xml",
+      "labelSha256": "bdf43957bca76e0d5a4262fea4544f02b13b4be58e8037220764913daab87b80",
+      "scene": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02/NLF_0477_0709297328M366RAS_N0261004NCAM03477_0A0195J02_scene.json",
+      "sceneSha256": "663d0a2126f1d9039c4c4de352fc6934d59259cb4086b3de5a179dda5d689e89"
+    },
+    {
+      "image": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709297503_102RASLN0261004NCAM03477_0A0195J01.IMG",
+      "imageSha256": "83af4ccd41f3ff62a667c7aea0773964bd489d1a7ea75372a1e3b12202f94211",
+      "label": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709297503_102RASLN0261004NCAM03477_0A0195J01.xml",
+      "labelSha256": "d1fbf5112581dade740d870a96d8a885149ff797462631c8a59bdd9cb1b9faca",
+      "scene": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02/NLF_0477_0709297503M102RAS_N0261004NCAM03477_0A0195J02_scene.json",
+      "sceneSha256": "e7e21783ae0c14876f32d53c99a343d87a3405ec3e7b53a10a5d9eb9f4947e66"
+    },
+    {
+      "image": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709298299_678RASLN0261004NCAM13477_0A0195J01.IMG",
+      "imageSha256": "552584f0ebd760664f7d13b5aa0602455ab9e18d45c9c482b9225e212c3babdc",
+      "label": "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_navcam_ops_calibrated/data/sol/00477/ids/rdr/ncam/NLF_0477_0709298299_678RASLN0261004NCAM13477_0A0195J01.xml",
+      "labelSha256": "7362b99b907675efe9bd3f9099bfc73516240ad18599ec62d74bd12af35a9ac1",
+      "scene": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/76444abbb4faff1b05f46a09b81ca2c24602b333/m20-drive-1004/tilesets/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02/NLF_0477_0709298299M678RAS_N0261004NCAM13477_0A0195J02_scene.json",
+      "sceneSha256": "7d707b326f1cd704fcba1811691feb075cb79e6a5c748073ba41f3a1bf8ff3e5"
+    }
+  ]
+}

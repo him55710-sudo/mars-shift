@@ -1,0 +1,708 @@
+{
+  "frozenAt": "2026-11-15T08:34:05.243Z",
+  "scope": "26 scenario definitions using existing orbital observations; 24 endpoint/resource combinations plus two missing-coverage controls. Not independent ground-truth trap incidents.",
+  "cases": [
+    {
+      "id": "registered-0",
+      "root": "public/data/noah",
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-1",
+      "root": "public/data/noah",
+      "base": {
+        "x": 24,
+        "y": 164
+      },
+      "target": {
+        "x": 112,
+        "y": 170
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 60,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-2",
+      "root": "public/data/noah",
+      "base": {
+        "x": 134,
+        "y": 178
+      },
+      "target": {
+        "x": 158,
+        "y": 75
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-3",
+      "root": "public/data/noah",
+      "base": {
+        "x": 63,
+        "y": 41
+      },
+      "target": {
+        "x": 184,
+        "y": 44
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 150,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-4",
+      "root": "public/data/noah",
+      "base": {
+        "x": 50,
+        "y": 108
+      },
+      "target": {
+        "x": 143,
+        "y": 30
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 20,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-5",
+      "root": "public/data/noah",
+      "base": {
+        "x": 138,
+        "y": 68
+      },
+      "target": {
+        "x": 70,
+        "y": 167
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 60,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-6",
+      "root": "public/data/noah",
+      "base": {
+        "x": 178,
+        "y": 12
+      },
+      "target": {
+        "x": 135,
+        "y": 175
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-7",
+      "root": "public/data/noah",
+      "base": {
+        "x": 24,
+        "y": 80
+      },
+      "target": {
+        "x": 72,
+        "y": 43
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 150,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-8",
+      "root": "public/data/noah",
+      "base": {
+        "x": 111,
+        "y": 118
+      },
+      "target": {
+        "x": 143,
+        "y": 106
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 20,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-9",
+      "root": "public/data/noah",
+      "base": {
+        "x": 131,
+        "y": 114
+      },
+      "target": {
+        "x": 150,
+        "y": 147
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 60,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-10",
+      "root": "public/data/noah",
+      "base": {
+        "x": 55,
+        "y": 84
+      },
+      "target": {
+        "x": 24,
+        "y": 77
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-11",
+      "root": "public/data/noah",
+      "base": {
+        "x": 51,
+        "y": 59
+      },
+      "target": {
+        "x": 184,
+        "y": 84
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 150,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-12",
+      "root": "public/data/noah",
+      "base": {
+        "x": 29,
+        "y": 16
+      },
+      "target": {
+        "x": 92,
+        "y": 26
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 20,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-13",
+      "root": "public/data/noah",
+      "base": {
+        "x": 134,
+        "y": 148
+      },
+      "target": {
+        "x": 112,
+        "y": 12
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 60,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-14",
+      "root": "public/data/noah",
+      "base": {
+        "x": 125,
+        "y": 140
+      },
+      "target": {
+        "x": 153,
+        "y": 50
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-15",
+      "root": "public/data/noah",
+      "base": {
+        "x": 146,
+        "y": 91
+      },
+      "target": {
+        "x": 119,
+        "y": 85
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 150,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-16",
+      "root": "public/data/noah",
+      "base": {
+        "x": 179,
+        "y": 43
+      },
+      "target": {
+        "x": 43,
+        "y": 180
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 20,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-17",
+      "root": "public/data/noah",
+      "base": {
+        "x": 58,
+        "y": 126
+      },
+      "target": {
+        "x": 171,
+        "y": 103
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 60,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-18",
+      "root": "public/data/noah",
+      "base": {
+        "x": 138,
+        "y": 173
+      },
+      "target": {
+        "x": 39,
+        "y": 156
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-19",
+      "root": "public/data/noah",
+      "base": {
+        "x": 75,
+        "y": 181
+      },
+      "target": {
+        "x": 137,
+        "y": 54
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 150,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-20",
+      "root": "public/data/noah",
+      "base": {
+        "x": 35,
+        "y": 18
+      },
+      "target": {
+        "x": 71,
+        "y": 127
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 20,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-21",
+      "root": "public/data/noah",
+      "base": {
+        "x": 100,
+        "y": 38
+      },
+      "target": {
+        "x": 154,
+        "y": 142
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.4,
+        "scienceMinutes": 20,
+        "durationMinutes": 60,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-22",
+      "root": "public/data/noah",
+      "base": {
+        "x": 100,
+        "y": 169
+      },
+      "target": {
+        "x": 64,
+        "y": 85
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "registered-23",
+      "root": "public/data/noah",
+      "base": {
+        "x": 54,
+        "y": 146
+      },
+      "target": {
+        "x": 142,
+        "y": 100
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.9,
+        "scienceMinutes": 20,
+        "durationMinutes": 150,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "missing-coverage-data",
+      "root": "public/data",
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    },
+    {
+      "id": "missing-coverage-ridge",
+      "root": "public/data/ridge",
+      "base": {
+        "x": 32,
+        "y": 168
+      },
+      "target": {
+        "x": 153,
+        "y": 43
+      },
+      "settings": {
+        "maxSlope": 18,
+        "speed": 0.6,
+        "scienceMinutes": 20,
+        "durationMinutes": 110,
+        "oxygenMinutes": 150,
+        "powerMinutes": 140,
+        "reservePercent": 25,
+        "loadKg": 12,
+        "dust": false,
+        "hazardWeight": 8,
+        "mobilityModel": 2,
+        "terrainEffort": 0.3
+      }
+    }
+  ],
+  "arms": [
+    "UNSCREENED",
+    "COVERAGE_ONLY",
+    "SAND_0M",
+    "SAND_5M",
+    "SAND_10M"
+  ],
+  "policy": "NOAH-H mosaic ripple fraction >=25% with >=95% classification coverage. Exclude unknown in all arms except UNSCREENED. Buffer measured from full cell footprints with outward raster rounding.",
+  "checks": "Every returned screened route must have zero candidate, buffered and unknown cells; both legs and all budgets checked by same planner. Report infeasible cases. No detection accuracy or real incident reduction claim.",
+  "hashes": {
+    "src/sand-traps-v14.ts": "6f20446d309f9408a6328ca31ee656135dfbab6e0c33fd2c69139e1ad96b4b34",
+    "src/planner.ts": "bdbdae0024140f04457d6731714f0571126702f229a172ff53c88f1651d96472",
+    "src/constrained-planner.ts": "1fc43613305984fa638cae627985e3e1c81e8c505012d65385f45d35ce1d2f90",
+    "src/mobility.ts": "49bc6c765fc135cb81127746930369379e03dd71cc3b7369ab05790eec39d37a",
+    "src/noah-data.ts": "6d8211a0301808e26dcbc0b593b4f1cf8222f2fd8afc0f6745684028977108fc",
+    "scripts/evaluate_sand_v14.ts": "b38a9429476f0e08cd8574c19cb5acebc30f762462dd817ce3180041f0f52cc0",
+    "public/data/terrain.json": "2a9fcde55edf7f41b3ec8ce22985e3db19ae9d369dad0ede4b6ca5737463dd4e",
+    "public/data/noah-terrain.json": "9345676ebee8edf9578b6394b97d1c2112a46ea21508a1558785e48a39162aa8",
+    "public/data/science/terrain-metrics.json": "ca62073415a4b43da7cd6d807eab78452d107abf7aacfc4ac04f92c17383c449",
+    "public/data/noah/terrain.json": "9f3cbee784fda2df5fb488d4ecb61afd7ea2080ac543709faa827aeee6d210dc",
+    "public/data/noah/noah-terrain.json": "9d67db0bcd3daaa08bd361d64d5ddbfc780d9575a4022ec792eaab58e5dd28ca",
+    "public/data/noah/science/terrain-metrics.json": "f4b407b184136dbbd1471c1e6e58e9a20d385b4ed412911ceb666e0a541b3e43",
+    "public/data/ridge/terrain.json": "ac14342fdcdd6d0b2a2bf56b565e15dffa5bc95b28a2a74b93c8fc179c50d5f5",
+    "public/data/ridge/noah-terrain.json": "6b606a1b419760510bf3e830d15c0ac7d35031f9879ff83e776eceb7db2b68aa",
+    "public/data/ridge/science/terrain-metrics.json": "906014e652f0e301c244fbf76955f7dc2a5203aa50afc00daabd5492033e2871"
+  }
+}

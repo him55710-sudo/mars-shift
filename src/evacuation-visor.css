@@ -9,3 +9,4 @@
 @media(max-height:660px) and (min-width:651px){.evacuation-action{top:165px}.evacuation-action h1{font-size:23px!important}.evacuation-waypoint{top:54%}.evacuation-play{bottom:150px}}
 
 .evacuation-caution>small{color:#ffe1b8}.evacuation-caution>small i{background:#ffb877}.evacuation-play button:disabled{opacity:.45;cursor:default}
+.sand14-entry{position:absolute;top:112px;left:185px;z-index:5;color:#ffe1aa!important;font-size:11px;padding:11px 14px;background:#152723c9;border:1px solid #d6c39b66;border-radius:9px;text-decoration:none}.sand14-entry:hover{background:#273b30}@media(max-width:600px){.sand14-entry{left:145px;top:108px;font-size:10px;padding:10px}.evacuation-foot>span:first-child{max-width:140px;font-size:6px}}

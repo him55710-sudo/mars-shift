@@ -1,0 +1,26 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {DEFAULTS,nearestAllowed} from '../src/planner';
+import {validateNoah} from '../src/noah-data';
+import {validateScience} from '../src/science-data';
+import {mapSandTraps,sandTerrain,sandAudit} from '../src/sand-traps-v14';
+import {constrainedPlan} from '../src/constrained-planner';
+const OUT='public/data/hazards/sand-v14/';mkdirSync(OUT,{recursive:true});
+const read=(p:string)=>JSON.parse(readFileSync(p,'utf8')),sha=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex'),save=(name:string,data:unknown)=>writeFileSync(OUT+name,JSON.stringify(data,null,2),{flag:'wx'});
+const inputs=['src/sand-traps-v14.ts','src/planner.ts','src/constrained-planner.ts','src/mobility.ts','src/noah-data.ts','scripts/evaluate_sand_v14.ts',...['','noah/','ridge/'].flatMap(r=>['terrain.json','noah-terrain.json','science/terrain-metrics.json'].map(f=>'public/data/'+r+f))];
+const load=(root:string)=>{const t=read(root+'/terrain.json');return {...t,science:validateScience(t,read(root+'/science/terrain-metrics.json')),noah:validateNoah(t,read(root+'/noah-terrain.json'))};};
+if(process.argv[2]==='freeze'){
+ let seed=141511;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};const t=load('public/data/noah');
+ const cases=Array.from({length:24},(_,k)=>{const settings={...DEFAULTS,mobilityModel:2,terrainEffort:.3,durationMinutes:k===0?110:[20,60,110,150][k%4],speed:k===0?.6:[.4,.6,.9][k%3]};return {id:'registered-'+k,root:'public/data/noah',base:nearestAllowed(t,k?{x:10+Math.floor(random()*180),y:10+Math.floor(random()*180)}:{x:32,y:168},settings),target:nearestAllowed(t,k?{x:10+Math.floor(random()*180),y:10+Math.floor(random()*180)}:{x:153,y:43},settings),settings};});
+ for(const root of ['public/data','public/data/ridge']){const t=load(root);cases.push({id:'missing-coverage-'+root.split('/').at(-1),root,base:nearestAllowed(t,{x:32,y:168},DEFAULTS),target:nearestAllowed(t,{x:153,y:43},DEFAULTS),settings:{...DEFAULTS,mobilityModel:2,terrainEffort:.3}});}
+ save('protocol.json',{frozenAt:new Date().toISOString(),scope:'26 scenario definitions using existing orbital observations; 24 endpoint/resource combinations plus two missing-coverage controls. Not independent ground-truth trap incidents.',cases,arms:['UNSCREENED','COVERAGE_ONLY','SAND_0M','SAND_5M','SAND_10M'],policy:'NOAH-H mosaic ripple fraction >=25% with >=95% classification coverage. Exclude unknown in all arms except UNSCREENED. Buffer measured from full cell footprints with outward raster rounding.',checks:'Every returned screened route must have zero candidate, buffered and unknown cells; both legs and all budgets checked by same planner. Report infeasible cases. No detection accuracy or real incident reduction claim.',hashes:Object.fromEntries(inputs.map(p=>[p,sha(p)]))});console.log('Frozen 26 cases × 5 arms before outcomes.');process.exit(0);
+}
+if(process.argv[2]!=='evaluate'||existsSync(OUT+'results.json'))throw Error('Use freeze then evaluate. Results are never overwritten.');
+const protocol=read(OUT+'protocol.json');for(const [p,h]of Object.entries(protocol.hashes))if(sha(p)!==h)throw Error('Frozen input changed: '+p);
+const terrains=new Map<string,ReturnType<typeof load>>(),rows:any[]=[];
+for(const c of protocol.cases){if(!terrains.has(c.root))terrains.set(c.root,load(c.root));const t=terrains.get(c.root)!;for(const arm of protocol.arms){const radius=arm==='SAND_10M'?10:arm==='SAND_0M'?0:5,map=mapSandTraps(t,radius),effective=arm==='UNSCREENED'?t:arm==='COVERAGE_ONLY'?{...t,obstacleMask:Uint8Array.from(map.unknown,(v,i)=>Number(!!v||!!t.obstacleMask?.[i]))}:sandTerrain(t,map);const start=performance.now(),report=constrainedPlan(effective,c.base,c.target,'shortest',c.settings,null),ms=performance.now()-start,r=report.route,audit=r?sandAudit(map,r.cells):null;
+ if(arm.startsWith('SAND_')&&audit&&(audit.core||audit.buffer||audit.unknown))throw Error('Screened route crossed an exclusion');
+ rows.push({case:c.id,region:c.root,arm,feasible:!!r,reason:report.reason,distance:r?.distance??null,totalMinutes:r?.totalMinutes??null,reserve:r?.reserve??null,audit,milliseconds:ms,outbound:r?.outbound??[],inbound:r?.inbound??[]});}console.log(c.id+' complete');}
+const summary=protocol.arms.map((arm:string)=>{const a=rows.filter(r=>r.arm===arm),f=a.filter(r=>r.feasible),times=a.map(r=>r.milliseconds).sort((a,b)=>a-b);return {arm,cases:a.length,feasible:f.length,infeasible:a.length-f.length,coreCrossings:f.reduce((s,r)=>s+r.audit.core,0),bufferCrossings:f.reduce((s,r)=>s+r.audit.buffer,0),unknownCrossings:f.reduce((s,r)=>s+r.audit.unknown,0),p95Ms:times[Math.floor(times.length*.95)]};});
+const paired=protocol.cases.map((c:any)=>{const a=rows.find(r=>r.case===c.id&&r.arm==='COVERAGE_ONLY'),b=rows.find(r=>r.case===c.id&&r.arm==='SAND_5M');return {case:c.id,bothFeasible:a.feasible&&b.feasible,distanceAdded:a.feasible&&b.feasible?b.distance-a.distance:null,coverageOnlyBufferCrossings:a.audit?.buffer??null,screenedBufferCrossings:b.audit?.buffer??null};});
+save('results.json',{createdAt:new Date().toISOString(),protocolHash:sha(OUT+'protocol.json'),summary,paired,rows,independentSoilFailureLabels:0,measuredSinkageAccuracy:null});console.log(JSON.stringify(summary,null,2));

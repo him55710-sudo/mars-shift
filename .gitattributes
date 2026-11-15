@@ -84,3 +84,16 @@
 /scripts/evaluate_escape_v13.ts -text whitespace=cr-at-eol
 /scripts/evaluate_guard_v13.ts -text whitespace=cr-at-eol
 /scripts/benchmark_adaptive_v13.ts -text whitespace=cr-at-eol
+
+# v14 frozen experiment and display-only asset identities.
+/public/data/hazards/sand-v14/** -text whitespace=cr-at-eol
+/public/data/drive1004/display-v14/** -text whitespace=cr-at-eol
+/src/sand-traps-v14.ts -text whitespace=cr-at-eol
+/scripts/evaluate_sand_v14.ts -text whitespace=cr-at-eol
+/scripts/prepare_display_support_v14.py -text whitespace=cr-at-eol
+# Existing normalized files were read with CRLF when the protocol was frozen.
+# Explicit checkout EOL preserves that identity without changing their Git data.
+/src/constrained-planner.ts text eol=crlf
+/src/noah-data.ts text eol=crlf
+/public/data/**/noah-terrain.json text eol=crlf
+/public/data/**/science/terrain-metrics.json text eol=crlf
