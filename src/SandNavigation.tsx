@@ -58,7 +58,7 @@ function SandMission({terrain:t,onPlanning,onSurface}:{terrain:Terrain;onPlannin
    {audit&&audit.unknownCells>0&&<p className="sand-warning">{audit.unknownCells} route cells have unknown texture. Soil conditions require verification.</p>}
    {baseline&&baselineAudit&&<p className="sand-comparison">Unscreened shortest: <b>{fmt(baseline.distance)} m</b> round trip · <b>{baselineAudit.excludedCells}</b> mapped exclusion cells crossed.{route&&` Selected route: ${fmt(route.distance-baseline.distance)} m longer.`}</p>}
    {!dirty&&!route&&<p className="sand-warning" role="alert">{state.reports[d.mode].reason} Change the destination or mission limits. Sand exclusions remain active.</p>}
-   <button className="sand-helmet-link" onClick={onSurface}><Navigation size={17}/>Open helmet guidance<ArrowUpRight size={16}/></button>
+   <button className="sand-helmet-link" onClick={onSurface}><Navigation size={17}/><span>Open high-detail rover visor<small>Sol 477 · separate local surface route</small></span><ArrowUpRight size={16}/></button>
    <div className="sand-actions"><button className="sand-primary" onClick={onPlanning}>Open shared mission <ArrowRight size={16}/></button><button aria-label="Recalculate sand-screened mission" disabled={!!state.computing} onClick={()=>store.calculate()}><RotateCcw size={17}/></button><button aria-label="Export sand route and evidence" disabled={dirty||!route} onClick={exportMission}><ArrowDownToLine size={17}/></button></div>
    {dirty&&!state.computing&&<button onClick={()=>store.calculate()}>Calculate edited mission</button>}
    {state.pendingAdoption&&<p className="sand-warning">A revised mission is awaiting adoption in Mission Control.</p>}

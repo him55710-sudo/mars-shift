@@ -4,7 +4,7 @@ import type {Mode,Point,Route,Settings,Terrain} from './planner';
 import {heightAt} from './eva-motion';
 
 export type RoverGrid={width:number;height:number;cellSize:number;origin:number[];elevation:(number|null)[];slope:(number|null)[];start:{x:number;z:number};target:{x:number;z:number}};
-export type RoverObstacle={id:string;x:number;z:number;radius:number;kind:'reviewed'|'simulated';sourceFeatureId?:number;sourceFeatureVersion?:string};
+export type RoverObstacle={id:string;x:number;z:number;radius:number;kind:'reviewed'|'simulated';material?:'sand';sourceFeatureId?:number;sourceFeatureVersion?:string};
 export type RoverTerrain=Terrain&{edgeBlocked:Uint16Array};
 export const ROVER_SETTINGS:Settings={...DEFAULTS,maxSlope:25,speed:.6,scienceMinutes:2,durationMinutes:20,oxygenMinutes:30,powerMinutes:30,reservePercent:25,loadKg:12};
 export const worldPoint=(g:RoverGrid,p:Point)=>({x:g.origin[0]+(p.x+.5)*g.cellSize,z:g.origin[1]+(p.y+.5)*g.cellSize});
