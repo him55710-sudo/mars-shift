@@ -1,0 +1,46 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Extravehicular%20Mobility%20Unit/Extravehicular%20Mobility%20Unit.glb",
+  "sourcePage": "https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/",
+  "credit": "NASA / Michael D. Carbajal",
+  "sourceSha256": "4dd79f1f8e02ab39bc15d87a7bbeda1f437e1103ab7661f7797340e0c114f372",
+  "sourceBytes": 3448904,
+  "originalTriangles": 343455,
+  "webTriangles": 57160,
+  "webVertices": 29122,
+  "webBytes": 3678680,
+  "webSha256": "7bb3310e71a3df903aaec1e7e4157289b9330deeab80628cb3e5f0d64e3ceca9",
+  "materials": 7,
+  "bones": 9,
+  "heightMetres": 1.85,
+  "forward": "glTF local -Z",
+  "ground": "neutral sole at glTF local y=0",
+  "blenderVersion": "5.2.2 LTS",
+  "bakedOcclusion": {
+    "method": "12 deterministic hemisphere rays per vertex on illustrative suit geometry",
+    "radiusMetres": 0.14,
+    "output": "glTF COLOR_0; zero texture bytes",
+    "scope": "character display only"
+  },
+  "materialDetail": {
+    "kind": "Author-created illustrative woven fabric normal map, not measured NASA fabric",
+    "texturePixels": [
+      256,
+      256
+    ],
+    "normalStrength": 0.42,
+    "repeatFactor": 26,
+    "normalMapBytes": 6705
+  },
+  "adaptation": [
+    "Removed redundant nested visor layers and unioned overlapping legacy shells at 4.5 mm shell-union scale with a higher polygon budget",
+    "Reduced polygons without adding terrain or physical suit claims",
+    "Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS cover, seams, recessed panel, latches and hoses for a surface-rehearsal silhouette",
+    "Added repeating fine fabric normals and material sheen plus metal visor coat; character-only display detail",
+    "Added illustrative 9-bone skin for a procedural walk and vertex-baked geometric occlusion; no calibrated suit physiology",
+    "Explicit pressure-suit material on trimmed rear cover faces; no interior visor or hardware material leaks",
+    "Closed illustrative rear pressure shell after historical frame trimming",
+    "Illustrative closed rear helmet shell and collar cover fill the display-only frame-trim opening"
+  ],
+  "terms": "NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification",
+  "usagePolicyUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+}

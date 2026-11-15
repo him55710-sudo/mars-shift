@@ -1,0 +1,327 @@
+"""Reproduce a compact, articulated visual EMU asset in Blender 5.2.
+
+Run Blender --background --factory-startup --python scripts/prepare_nasa_surface_crew.py.
+The NASA source is downloaded as data into the adjacent research directory.
+No scripts or executables are downloaded. The walking rig is illustrative.
+"""
+from pathlib import Path
+import hashlib
+import json
+import math
+import urllib.request
+import bpy
+from mathutils import Vector
+
+ROOT = Path(__file__).resolve().parents[1]
+WORK = ROOT.parent / 'research' / 'realism'
+OUT = ROOT / 'public' / 'models'
+SOURCE = WORK / 'nasa-emu-original.glb'
+URL = 'https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Extravehicular%20Mobility%20Unit/Extravehicular%20Mobility%20Unit.glb'
+WORK.mkdir(parents=True, exist_ok=True)
+OUT.mkdir(parents=True, exist_ok=True)
+if not SOURCE.exists():
+    urllib.request.urlretrieve(URL, SOURCE)
+
+bpy.ops.wm.read_factory_settings(use_empty=True)
+bpy.ops.import_scene.gltf(filepath=str(SOURCE))
+mesh = next(o for o in bpy.data.objects if o.type == 'MESH')
+bpy.ops.object.select_all(action='DESELECT')
+mesh.select_set(True)
+bpy.context.view_layer.objects.active = mesh
+bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+print('CREW_STAGE imported',flush=True)
+original_triangles = sum(len(p.vertices)-2 for p in mesh.data.polygons)
+
+# Four nested visor layers share essentially coincident surfaces in the original.
+# Keep the complete outer visor and helmet, discard redundant interior highlights.
+import bmesh
+bm = bmesh.new()
+bm.from_mesh(mesh.data)
+bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.material_index in {17,18,23,24}], context='FACES')
+bm.to_mesh(mesh.data)
+bm.free()
+
+def material(name, color, roughness, metalness=0):
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    bsdf = next(n for n in m.node_tree.nodes if n.type == 'BSDF_PRINCIPLED')
+    bsdf.inputs['Base Color'].default_value = (*color,1)
+    bsdf.inputs['Roughness'].default_value = roughness
+    bsdf.inputs['Metallic'].default_value = metalness
+    m.diffuse_color = (*color,1)
+    return m
+
+mats = [material('Pressure suit / unbranded',(.57,.55,.49),.88),
+        material('Life support pack',(.47,.48,.44),.76),
+        material('Connectors and seals',(.034,.045,.052),.82,.08),
+        material('Hardware',(.25,.28,.30),.29,.76),
+        material('Safety bands',(.50,.055,.025),.69),
+        material('Gold visor',(.62,.39,.12),.10,.94),
+        material('Hose couplings',(.34,.27,.17),.40,.72)]
+mapping = {0:0,1:3,2:0,3:1,4:2,5:1,6:1,7:3,8:2,9:4,10:0,11:3,12:6,13:5,14:3,15:6,16:5,18:5,19:3,20:0,21:0,22:5}
+indices = [mapping.get(p.material_index,0) for p in mesh.data.polygons]
+mesh.data.materials.clear()
+for m in mats: mesh.data.materials.append(m)
+for p,i in zip(mesh.data.polygons,indices): p.material_index=i
+
+# Preserve source geometry, normalized for the illustration; Blender +Y becomes
+# glTF -Z, and Blender +Z becomes glTF +Y. The source chest faces Blender +Y.
+low = min(v.co.z for v in mesh.data.vertices)
+high = max(v.co.z for v in mesh.data.vertices)
+scale = 1.85/(high-low)
+for v in mesh.data.vertices:
+    v.co = Vector(((v.co.x-.015)*scale,(v.co.y+.105)*scale,(v.co.z-low)*scale))
+# The historical source contains overlapping suit shells. Voxel union removes
+# hidden shells before reduction, preventing coplanar fragments and z-fighting.
+from mathutils.bvhtree import BVHTree
+source_tree=BVHTree.FromPolygons([v.co.copy() for v in mesh.data.vertices],[list(p.vertices) for p in mesh.data.polygons],all_triangles=True)
+source_materials=[p.material_index for p in mesh.data.polygons]
+mesh.data.remesh_voxel_size=.0045
+bpy.ops.object.voxel_remesh()
+dec = mesh.modifiers.new('Web surface reduction','DECIMATE')
+dec.ratio = min(1.0,90000/sum(len(p.vertices)-2 for p in mesh.data.polygons))
+dec.use_collapse_triangulate=True
+bpy.ops.object.modifier_apply(modifier=dec.name)
+for p in mesh.data.polygons:
+    center=sum((mesh.data.vertices[i].co for i in p.vertices),Vector())/len(p.vertices)
+    hit=source_tree.find_nearest(center)
+    p.material_index=source_materials[hit[2]] if hit and hit[2] is not None else 0
+    p.use_smooth=True
+# A compact PLSS illustration replaces the space-only maneuvering frame.
+# It is asset geometry, never an observed or engineered NASA Mars suit claim.
+from mathutils import Matrix
+# Remove the original space maneuvering frame behind the pressure suit.
+# The cut is capped after source-shell union; the head silhouette remains above a
+# separately constructed compact illustrative surface-rehearsal pack.
+bm=bmesh.new();bm.from_mesh(mesh.data)
+cut=bmesh.ops.bisect_plane(bm,geom=list(bm.verts)+list(bm.edges)+list(bm.faces),dist=1e-6,plane_co=(0,-.12,0),plane_no=(0,-1,0),clear_outer=True,clear_inner=False)
+extras=[f for f in bm.faces if f.calc_center_median().z>1.5 and abs(f.calc_center_median().x)>.24 or f.calc_center_median().z<.9 and abs(f.calc_center_median().x)>.30]
+bmesh.ops.delete(bm,geom=extras,context='FACES')
+caps=bmesh.ops.holes_fill(bm,edges=[e for e in cut['geom_cut'] if isinstance(e,bmesh.types.BMEdge) and e.is_valid and e.is_boundary],sides=0)
+for face in caps['faces']: face.material_index=0; face.smooth=False
+bmesh.ops.triangulate(bm,faces=list(bm.faces))
+existing=set(bm.verts)
+def box(center,dimensions,material_index,bevel):
+    before=set(bm.faces)
+    result=bmesh.ops.create_cube(bm,size=1,matrix=Matrix.Translation(Vector(center))@Matrix.Diagonal((*dimensions,1)))
+    edges=list({e for v in result['verts'] for e in v.link_edges})
+    if bevel:bmesh.ops.bevel(bm,geom=edges,offset=bevel,segments=3,affect='EDGES')
+    for f in set(bm.faces)-before:f.material_index=material_index;f.smooth=False
+# An illustrative padded cover, recessed equipment panel and service hardware.
+# This is a visual interpretation, not a NASA Mars-suit engineering drawing.
+box((0,-.267,1.12),(.485,.275,.63),1,.035)
+box((0,-.410,1.12),(.422,.014,.55),2,.014)
+box((0,-.424,1.12),(.402,.023,.527),0,.028)
+box((0,-.441,1.18),(.22,.012,.31),3,.016)
+box((0,-.450,1.18),(.19,.012,.275),2,.012)
+# Inset seams and two low-profile perimeter reinforcement channels.
+for side in [-1,1]:
+    box((side*.173,-.443,1.13),(.022,.019,.45),1,.008)
+    box((side*.222,-.280,1.12),(.03,.13,.53),0,.012)
+    box((side*.194,-.449,1.32),(.039,.017,.038),3,.004)
+    box((side*.194,-.449,.94),(.039,.017,.038),3,.004)
+    box((side*.18,-.128,1.14),(.04,.027,.57),2,.008)
+box((0,-.452,1.36),(.31,.013,.025),4,.005)
+box((0,-.448,.89),(.29,.017,.044),3,.006)
+for z in [1.085,1.105,1.125,1.145]:
+    box((0,-.458,z),(.128,.008,.005),3,.002)
+
+def tube(points,radius,material_index,sides=8):
+    before=set(bm.faces)
+    rings=[]
+    for n,p in enumerate(points):
+        tangent=Vector(points[min(n+1,len(points)-1)])-Vector(points[max(n-1,0)])
+        tangent.normalize()
+        reference=Vector((0,0,1)) if abs(tangent.z)<.9 else Vector((1,0,0))
+        u=tangent.cross(reference).normalized();v=tangent.cross(u).normalized()
+        rings.append([bm.verts.new(Vector(p)+radius*(math.cos(k*2*math.pi/sides)*u+math.sin(k*2*math.pi/sides)*v)) for k in range(sides)])
+    for a,b in zip(rings[:-1],rings[1:]):
+        for k in range(sides):bm.faces.new((a[k],a[(k+1)%sides],b[(k+1)%sides],b[k]))
+    bm.faces.new(tuple(reversed(rings[0])));bm.faces.new(tuple(rings[-1]))
+    for f in set(bm.faces)-before:f.material_index=material_index;f.smooth=True
+
+for side in [-1,1]:
+    # The visible arc communicates a tether/umbilical, not a real pressure circuit.
+    points=[]
+    for k in range(17):
+        u=k/16
+        points.append((side*(.185+.12*math.sin(u*math.pi)),-.34+.48*u,.90-.14*math.sin(u*math.pi)))
+    tube(points,.017,2)
+    for u in [0,.96]:
+        q=points[round(u*16)]
+        box(q,(.052,.048,.044),6,.009)
+# A closed rear pressure shell restores the helmet where the historical
+# maneuvering-frame trim opened the rear shell. Illustrative cover only.
+old_verts=set(bm.verts);old_faces=set(bm.faces)
+part=bmesh.ops.create_uvsphere(bm,u_segments=32,v_segments=16,radius=1,matrix=Matrix.Translation(Vector((0,-.105,1.65)))@Matrix.Diagonal((.198,.173,.195,1)))
+front=[f for f in set(bm.faces)-old_faces if f.calc_center_median().y>-.105]
+bmesh.ops.delete(bm,geom=front,context='FACES')
+for face in set(bm.faces)-old_faces: face.material_index=0;face.smooth=True
+# Remove isolated front-pole vertices created by the half-shell trim.
+bmesh.ops.delete(bm,geom=[v for v in set(bm.verts)-old_verts if not v.link_faces],context='VERTS')
+
+box((0,-.15,1.46),(.39,.09,.18),0,.025)
+
+# Low-profile external helmet hardware retains the original helmet silhouette.
+box((0,-.135,1.69),(.105,.018,.038),2,.009)
+box((0,-.148,1.69),(.06,.009,.014),3,.003)
+bmesh.ops.triangulate(bm,faces=list(bm.faces))
+bm.verts.index_update();pack_indices={v.index for v in bm.verts if v not in existing};bm.to_mesh(mesh.data);bm.free()
+print('CREW_STAGE geometry complete',flush=True)
+mesh.name = 'NASA EMU / adapted visual crew'
+mesh.data.validate(verbose=True,clean_customdata=False)
+for uv in list(mesh.data.uv_layers):mesh.data.uv_layers.remove(uv)
+
+# Smart UVs provide a compact, deterministic material-only fabric detail layer.
+# No photographic or geographic data are changed. These are illustrative cloth
+# microstructure normals, not NASA measured suit fabric.
+bpy.context.view_layer.objects.active=mesh
+bpy.ops.object.select_all(action='DESELECT');mesh.select_set(True)
+bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT')
+bpy.ops.uv.smart_project(angle_limit=1.15192,island_margin=.02)
+bpy.ops.object.mode_set(mode='OBJECT')
+# Increase repeating material UV density to textile scale. The maps tile exactly.
+for uv in mesh.data.uv_layers.active.data: uv.uv *= 26.0
+import numpy as np
+size=256
+v,u=np.mgrid[0:size,0:size]/size
+# Fine orthogonal woven yarn plus a smaller diagonal fibre component.
+f=2*math.pi*16
+h=.55*np.sin(f*u)*(.65+.35*np.cos(f*v))+.55*np.sin(f*v)*(.65+.35*np.cos(f*u))
+dx=.11*np.cos(f*u)*(.65+.35*np.cos(f*v))-.07*np.sin(f*v)*np.sin(f*u)
+dy=.11*np.cos(f*v)*(.65+.35*np.cos(f*u))-.07*np.sin(f*u)*np.sin(f*v)
+z=np.ones_like(dx)
+norm=np.sqrt(dx*dx+dy*dy+z*z)
+pix=np.ones((size,size,4),dtype=np.float32)
+pix[:,:,0]=.5+.5*dx/norm;pix[:,:,1]=.5+.5*dy/norm;pix[:,:,2]=.5+.5*z/norm
+normal=bpy.data.images.new('Illustrative pressure-suit fabric normals',width=size,height=size,alpha=True)
+normal.colorspace_settings.name='Non-Color';normal.pixels.foreach_set(pix.reshape(-1))
+normal.filepath_raw=str(WORK/'surface-fabric-normal.png');normal.file_format='PNG';normal.save();normal.pack()
+for m in mats[:2]:
+    bsdf=next(n for n in m.node_tree.nodes if n.type=='BSDF_PRINCIPLED')
+    tex=m.node_tree.nodes.new('ShaderNodeTexImage');tex.image=normal;tex.extension='REPEAT'
+    node=m.node_tree.nodes.new('ShaderNodeNormalMap');node.inputs['Strength'].default_value=.42
+    m.node_tree.links.new(tex.outputs['Color'],node.inputs['Color']);m.node_tree.links.new(node.outputs['Normal'],bsdf.inputs['Normal'])
+    bsdf.inputs['Sheen Weight'].default_value=.15
+visor=next(n for n in mats[5].node_tree.nodes if n.type=='BSDF_PRINCIPLED')
+visor.inputs['Coat Weight'].default_value=.35
+visor.inputs['Coat Roughness'].default_value=.08
+
+# Bake local geometric occlusion into vertex colors: no runtime AO pass, no image
+# decoder or added draw calls. The deterministic hemisphere probes only this
+# illustrative suit mesh. They do not affect Mars observations or navigation.
+mesh.data.update()
+occlusion_tree=BVHTree.FromPolygons([v.co.copy() for v in mesh.data.vertices],[list(p.vertices) for p in mesh.data.polygons],all_triangles=True)
+colors=mesh.data.color_attributes.new(name='CrewOcclusion',type='FLOAT_COLOR',domain='POINT')
+probes=12
+# Cache normals before writing attributes: incremental color writes otherwise
+# invalidate Blender's mesh normal cache on every iteration.
+vertex_samples=[(vertex.co.copy(),vertex.normal.normalized()) for vertex in mesh.data.vertices]
+vertex_colors=[]
+for coordinate,normal in vertex_samples:
+    reference=Vector((0,0,1)) if abs(normal.z)<.9 else Vector((1,0,0))
+    u=normal.cross(reference).normalized();v=normal.cross(u).normalized()
+    origin=coordinate+normal*.0015
+    covered=0.0
+    for k in range(probes):
+        z=(k+.5)/probes;r=math.sqrt(1-z*z);angle=k*2.399963229728653
+        direction=normal*z+u*(r*math.cos(angle))+v*(r*math.sin(angle))
+        hit=occlusion_tree.ray_cast(origin,direction,.14)
+        if hit[0] is not None:covered+=1-min(1,hit[3]/.14)
+    shade=1-.57*covered/probes
+    vertex_colors.extend((shade,shade,shade,1))
+colors.data.foreach_set('color',vertex_colors)
+
+print('CREW_STAGE occlusion complete',flush=True)
+# ShaderNodeVertexColor reproduces the same bake in the editable Blender preview.
+# Export uses glTF COLOR_0 and the unchanged material base colors.
+preview_links=[]
+for m in mats:
+    bsdf=next(n for n in m.node_tree.nodes if n.type=='BSDF_PRINCIPLED')
+    tint=bsdf.inputs['Base Color'].default_value[:]
+    node=m.node_tree.nodes.new('ShaderNodeVertexColor');node.layer_name='CrewOcclusion'
+    multiply=m.node_tree.nodes.new('ShaderNodeMixRGB');multiply.blend_type='MULTIPLY'
+    multiply.inputs[0].default_value=1;multiply.inputs[2].default_value=tint
+    m.node_tree.links.new(node.outputs['Color'],multiply.inputs[1])
+    m.node_tree.links.new(multiply.outputs['Color'],bsdf.inputs['Base Color'])
+    preview_links.append((m,bsdf,multiply,tint))
+
+# A small skin keeps knees and shoulders continuous rather than splitting the
+# detailed suit into disconnected primitives. Joint locations are visual fits,
+# not a human biomechanics or NASA suit mobility model.
+armature = bpy.data.armatures.new('Illustrative EVA walk skeleton')
+rig = bpy.data.objects.new('EVA_visual_rig',armature)
+bpy.context.collection.objects.link(rig)
+bpy.context.view_layer.objects.active=rig
+mesh.select_set(False);rig.select_set(True)
+bpy.ops.object.mode_set(mode='EDIT')
+def bone(name,head,tail,parent=None):
+    b=armature.edit_bones.new(name);b.head=head;b.tail=tail
+    if parent: b.parent=armature.edit_bones[parent]
+    return b
+bone('CrewRoot',(0,0,.92),(0,0,1.35))
+for side,x in [('L',.135),('R',-.135)]:
+    bone('Thigh_'+side,(x,0,.89),(x,0,.46),'CrewRoot')
+    bone('Shin_'+side,(x,0,.46),(x,0,.08),'Thigh_'+side)
+    ax=.31 if side=='L' else -.31
+    bone('Arm_'+side,(ax,0,1.42),(ax*1.17,.035,1.12),'CrewRoot')
+    bone('Forearm_'+side,(ax*1.17,.035,1.12),(ax*1.21,.12,.94),'Arm_'+side)
+bpy.ops.object.mode_set(mode='OBJECT')
+groups={b.name:mesh.vertex_groups.new(name=b.name) for b in armature.bones}
+for v in mesh.data.vertices:
+    x,y,z=v.co
+    side='L' if x>=0 else 'R'
+    weights={'CrewRoot':1.0}
+    # Rear life-support hardware stays attached to the torso.
+    if v.index in pack_indices:
+        weights={'CrewRoot':1.0}
+    elif z<.91:
+        leg=max(0,min(1,(.94-z)/.12))
+        lower=max(0,min(1,(.54-z)/.16))
+        weights={'CrewRoot':1-leg,'Thigh_'+side:leg*(1-lower),'Shin_'+side:leg*lower}
+    elif abs(x)>.255 and .76<z<1.57:
+        arm=max(0,min(1,(abs(x)-.255)/.09))*max(0,min(1,(1.57-z)/.15))
+        fore=max(0,min(1,(1.19-z)/.18))
+        weights={'CrewRoot':1-arm,'Arm_'+side:arm*(1-fore),'Forearm_'+side:arm*fore}
+    for name,w in weights.items():
+        if w>1e-6:groups[name].add([v.index],w,'REPLACE')
+modifier=mesh.modifiers.new('Illustrative skin','ARMATURE');modifier.object=rig
+mesh.parent=rig
+rig['classification']='Illustrative procedural walking; not validated suit biomechanics'
+rig['source']='NASA / Michael D. Carbajal, EMU 3D Resources'
+mesh['source_url']=URL
+
+print('CREW_STAGE skin complete',flush=True)
+target=OUT/'nasa-emu-surface.glb'
+bpy.ops.object.select_all(action='DESELECT');mesh.select_set(True);rig.select_set(True)
+bpy.context.view_layer.objects.active=mesh
+# glTF's base factor * COLOR_0 is the portable equivalent of the preview node.
+# Exporter cannot infer this MixRGB graph reliably, so use explicit vertex color.
+for m,bsdf,multiply,tint in preview_links:
+    for link in list(bsdf.inputs['Base Color'].links):m.node_tree.links.remove(link)
+    bsdf.inputs['Base Color'].default_value=tint
+bpy.ops.export_scene.gltf(filepath=str(target),use_selection=True,export_format='GLB',export_animations=False,export_yup=True,export_apply=False,export_vertex_color='NAME',export_vertex_color_name='CrewOcclusion',export_all_vertex_colors=False)
+for m,bsdf,multiply,tint in preview_links:m.node_tree.links.new(multiply.outputs['Color'],bsdf.inputs['Base Color'])
+triangles=sum(len(p.vertices)-2 for p in mesh.data.polygons)
+metadata={'sourceUrl':URL,'sourcePage':'https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/','credit':'NASA / Michael D. Carbajal','sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'sourceBytes':SOURCE.stat().st_size,'originalTriangles':original_triangles,'webTriangles':triangles,'webVertices':len(mesh.data.vertices),'webBytes':target.stat().st_size,'webSha256':hashlib.sha256(target.read_bytes()).hexdigest(),'materials':len(mats),'bones':len(armature.bones),'heightMetres':1.85,'forward':'glTF local -Z','ground':'neutral sole at glTF local y=0','blenderVersion':bpy.app.version_string,'bakedOcclusion':{'method':'12 deterministic hemisphere rays per vertex on illustrative suit geometry','radiusMetres':.14,'output':'glTF COLOR_0; zero texture bytes','scope':'character display only'},'materialDetail':{'kind':'Author-created illustrative woven fabric normal map, not measured NASA fabric','texturePixels':[256,256],'normalStrength':.42,'repeatFactor':26,'normalMapBytes':(WORK/'surface-fabric-normal.png').stat().st_size},'adaptation':['Removed redundant nested visor layers and unioned overlapping legacy shells at 4.5 mm shell-union scale with a higher polygon budget','Reduced polygons without adding terrain or physical suit claims','Consolidated materials, removed branded texture patches and replaced the space-only maneuvering frame with a compact beveled illustrative PLSS cover, seams, recessed panel, latches and hoses for a surface-rehearsal silhouette','Illustrative closed rear helmet shell and collar cover fill the display-only frame-trim opening','Added repeating fine fabric normals and material sheen plus metal visor coat; character-only display detail',
+        'Added illustrative 9-bone skin for a procedural walk and vertex-baked geometric occlusion; no calibrated suit physiology'],'terms':'NASA Images and Media Usage Guidelines; research/educational illustration, no endorsement or flight qualification'}
+(OUT/'nasa-emu-surface.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8')
+
+# Keep editable source outside the application bundle, plus one compact preview.
+deliver=ROOT.parent/'deliverables';deliver.mkdir(exist_ok=True)
+bpy.ops.wm.save_as_mainfile(filepath=str(deliver/'MARS-SHIFT-NASA-EMU-surface-v20.blend'))
+for name in ['Camera','Light']:
+    if name in bpy.data.objects:bpy.data.objects.remove(bpy.data.objects[name],do_unlink=True)
+scene=bpy.context.scene
+scene.render.resolution_x=640;scene.render.resolution_y=640;scene.render.resolution_percentage=100
+scene.render.engine='CYCLES';scene.cycles.samples=24
+scene.world=bpy.data.worlds.new('Neutral asset preview world');scene.world.color=(.13,.15,.18)
+def area(name,location,energy,size):
+    d=bpy.data.lights.new(name,'AREA');d.energy=energy;d.shape='DISK';d.size=size
+    o=bpy.data.objects.new(name,d);scene.collection.objects.link(o);o.location=location;o.rotation_euler=(Vector((0,0,1))-o.location).to_track_quat('-Z','Y').to_euler()
+area('Warm key',(2,3,4),500,4);area('Cool rim',(-2,-2,3),350,3)
+camera_data=bpy.data.cameras.new('Crew preview camera');camera=bpy.data.objects.new('Crew preview camera',camera_data);scene.collection.objects.link(camera)
+camera.location=(2.7,3.8,2.2);camera.rotation_euler=(Vector((0,-.1,.98))-camera.location).to_track_quat('-Z','Y').to_euler();camera_data.type='ORTHO';camera_data.ortho_scale=2.25;scene.camera=camera
+scene.render.image_settings.file_format='PNG';scene.render.filepath=str(WORK/'nasa-emu-surface-v20-preview.png');bpy.ops.render.render(write_still=True)
+camera.location=(-2.7,-3.8,2.2);camera.rotation_euler=(Vector((0,-.1,.98))-camera.location).to_track_quat('-Z','Y').to_euler();scene.render.filepath=str(WORK/'nasa-emu-surface-v20-back-preview.png');bpy.ops.render.render(write_still=True)
+print('CREW_ASSET_REPORT',json.dumps(metadata))

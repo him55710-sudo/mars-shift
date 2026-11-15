@@ -1,6 +1,6 @@
 # Navcam close surface release
 
-15 November 2026. Open `/explore?surface=navcam`. The close stereo surface is now the first view for a new explorer visit. **Mission terrain** returns to the existing route HUD; the chosen surface mode is remembered. A destination launched explicitly for mission planning retains that workflow. The original Sol 9 station remains in **Source & coverage → Open Sol 9 archive**.
+15 November 2026. Open `/explore?surface=navcam` or **Navcam close-up** in the rover explorer. The default rover exploration also uses the new PDS textures in Native detail. **Mission terrain** returns from the close inspection to the orbital route HUD. A destination launched explicitly for mission planning retains that workflow. The original Sol 9 station remains in **Source & coverage → Open Sol 9 archive**.
 
 ## What changed
 
@@ -10,7 +10,7 @@ The orbital 1 m DEM / approximately 0.3 m imagery cannot supply photographic det
 - **61 fine tiles** retextured from four PDS linearized radiance images: one **5120×3840** and three **2560×1920** products. These are actual source pixels, not an upscaled copy of the old 512-pixel tile atlases.
 - Published PDS **CAHV C/A/H/V**, the NASA scene quaternion, and the original tile transform project the source image into each mesh. Geometry attributes and indices remain identical. Only texture coordinates and image bindings change.
 - A single RGB radiance display mapping, anchored to the first image's sampled 0.5/99.7 percentiles and adjusted with each label's scaling factor, is shared across images. The 1/2.2 display power is disclosed in the record; this is visual tone mapping, not a new radiance measurement or colorimetric calibration.
-- Three inspection viewpoints, bounded walking on observed support, centre-ray rock focus, orbit inspection, zoom, and source access. The centre focus uses an actual mesh intersection. The close camera is illustrative, not a recovered rover camera pose.
+- Three inspection viewpoints, bounded walking on observed support, centre-ray rock focus, orbit inspection, zoom, and source access. The centre focus uses an actual mesh intersection. Ground detail starts at the published PDS camera centre, aiming into the valid photo footprint. It shows that single observation to avoid overlapping independent scans. Eye level and orbit are illustrative inspection cameras.
 - Nearest ground tiles load first through a three-request queue. SHA-256 is checked before glTF decoding. Original textures use anisotropic filtering; the image illumination is retained with unlit materials and no additional haze or blur pass. The renderer draws on changes, rather than redrawing an idle camera continuously.
 - Native detail transfers about **36.5 MB** of surface assets; the efficient option uses about **10 MB**. Changing view does not reload geometry. Surface GLBs cache on demand for repeat/offline viewing. Initial offline availability of the orbital map does not imply an unseen Navcam station is already cached.
 
@@ -43,6 +43,8 @@ Raw images and source tiles are cached in ignored `.local/` directories and are 
 
 The calibrated pipeline separately verifies unchanged geometry attributes and triangle indices for all 61 retextured tiles. The maximum packed-UV camera reprojection difference is below 0.001 pixel (observed maximum 0.000067 px). An analytic camera checks axes and metric scale. Old-atlas/new-projection luminance correlation is a content diagnostic: median 0.697 and minimum 0.118, with different radiometric mapping and resampling. These values do not establish independent physical registration or subpixel source accuracy.
 
-The browser check covers native and efficient detail, centre focus/orbit, viewpoint switching, mission return, source disclosure and phone layout. Automated tests cover analytic-plane interpolation, missing/steep support, bounded camera motion, the real source start and close camera, tile path/frame validation and load ordering.
+After integrating the current public rover explorer, 202 tests were exercised. One existing mission-reload test exceeded the 5-second limit during concurrent work; all 22 tests in that file passed on a separate run. TypeScript and the production build passed.
+
+The browser check covers native and efficient detail, centre focus/orbit, viewpoint switching, mission return, source disclosure and phone layout. Automated tests cover analytic-plane interpolation, missing/steep support, bounded camera motion, the real source start and published camera metadata, tile path/frame validation and load ordering.
 
 The stereo wedges still contain occlusions, finite boundaries, inter-observation seams and missing ground. They remain visible. The new source photograph does not create geometry below the original mesh sampling. The local camera-support grid is an inspection aid, not an EVA traversability certification or the global mission route. The source frame is not registered to the orbital study regions; no mission path is draped onto unrelated rover observations.

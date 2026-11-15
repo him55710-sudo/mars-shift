@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "source": "NASA Mars2020 Drive1004 Sol477",
+  "frame": "Site026 local x north, y up, z east; metres",
+  "gridSpacingMetres": 0.25,
+  "knownCells": 9443,
+  "conservativeTraversableCells": 2695,
+  "settings": {
+    "maxSlope": 25,
+    "speed": 0.6,
+    "scienceMinutes": 2,
+    "durationMinutes": 20,
+    "oxygenMinutes": 30,
+    "powerMinutes": 30,
+    "reservePercent": 25,
+    "loadKg": 12,
+    "dust": false,
+    "hazardWeight": 8
+  },
+  "base": {
+    "x": 1.375,
+    "z": 5.375
+  },
+  "target": {
+    "x": -7.375,
+    "z": 16.875
+  },
+  "routes": {
+    "shortest": {
+      "distanceMetres": 31.770049910189258,
+      "travelMinutes": 2.816016933674071,
+      "workMinutes": 2,
+      "totalMinutes": 4.816016933674071,
+      "maxSlopeDegrees": 24.94256,
+      "outboundCells": 51,
+      "inboundCells": 51,
+      "feasible": true
+    },
+    "exposure": {
+      "distanceMetres": 33.51735761098579,
+      "travelMinutes": 2.4823402475117233,
+      "workMinutes": 2,
+      "totalMinutes": 4.482340247511724,
+      "maxSlopeDegrees": 16.77442,
+      "outboundCells": 57,
+      "inboundCells": 57,
+      "feasible": true
+    },
+    "time": {
+      "distanceMetres": 33.22588683608513,
+      "travelMinutes": 2.480773009751199,
+      "workMinutes": 2,
+      "totalMinutes": 4.480773009751199,
+      "maxSlopeDegrees": 16.77442,
+      "outboundCells": 56,
+      "inboundCells": 56,
+      "feasible": true
+    }
+  },
+  "simulatedObstacle": {
+    "id": "reproducible-test-event",
+    "x": -4.125,
+    "z": 11.375,
+    "radius": 0.65,
+    "kind": "simulated"
+  },
+  "afterSimulatedObstacle": {
+    "shortest": null,
+    "exposure": null,
+    "time": null
+  },
+  "limitations": [
+    "Graph spacing is not observational accuracy.",
+    "No stereo error raster or field-verified obstacle labels.",
+    "Walking and route edges use the same swept footprint/support/grade checks.",
+    "Only these declared local objectives are searched; no global EVA safety or physiological claim."
+  ]
+}

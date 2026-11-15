@@ -2,7 +2,7 @@
 
 Same CAHV projection as the published camera definition; no generated pixels or
 geometry. The first observation covers the close rock/ground inspection preset.
-Remaining observations keep the original NASA tile atlases.
+All four fine observations use native PDS source crops.
 """
 import argparse
 import copy
@@ -37,6 +37,15 @@ def project(points,matrix,rotation,model):
     ned=world[:,[0,2,1]]*np.array([1,1,-1])
     d=ned@rotation-model['C'];depth=d@model['A']
     return np.column_stack((d@model['H']/depth,d@model['V']/depth)),depth
+
+
+def inspection_camera(model,rotation,product):
+    # Aim into the valid original photo footprint, away from the rover mask.
+    pixel=np.array([3100.,2100.])
+    ray=np.cross(model['H']-pixel[0]*model['A'],model['V']-pixel[1]*model['A'])
+    ray*=np.sign(ray@model['A']);ray/=np.linalg.norm(ray)
+    display=lambda v:(rotation@v)[[0,2,1]]*np.array([1,-1,1])
+    return {'position':display(model['C']).tolist(),'direction':display(ray).tolist(),'imageSamplePixels':pixel.tolist(),'verticalFovDegrees':32,'sourceProduct':product,'meaning':'Published PDS camera centre in the display local frame; an inspection aim into the valid calibrated photo footprint.'}
 
 
 def download(name,expected=None):
@@ -109,6 +118,7 @@ def main(observation_index=0):
     rgb=np.rint(np.power(rgb,1/2.2)*255).astype(np.uint8);photo=Image.fromarray(rgb)
     frame=next(f for f in scene['frames']if f['id']==image['frame_id'])
     rotation=Rotation.from_quat([frame['rotation'][v]for v in ['x','y','z','w']]).as_matrix()
+    if observation_index==0:manifest['inspectionCamera']=inspection_camera(model,rotation,product)
     records=[];assets=[]
     existing={(a['sourceProduct'],a['sourceTile']):a for a in manifest.get('calibratedAssets',manifest['detailAssets'])}
     for asset in manifest['detailAssets']:

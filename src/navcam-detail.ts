@@ -1,11 +1,13 @@
 export type SurfacePosition={x:number;z:number};
 export type NavcamGrid={width:number;height:number;cellSize:number;origin:number[];elevation:(number|null)[];slope:(number|null)[];start:SurfacePosition;target:SurfacePosition};
 export type NavcamTile={url:string;transform:number[];bounds:number[][];triangles:number;bytes:number;sha256:string;sourceProduct:string;contextOnly?:boolean};
-export type NavcamManifest={schemaVersion:number;title:string;credit:string;sourceCommit:string;sourceUrl:string;usagePolicyUrl:string;grid:string;start:SurfacePosition;target:SurfacePosition;assets:NavcamTile[];detailAssets:NavcamTile[];calibratedAssets?:NavcamTile[];calibratedProcessing?:{triangles:number;bytes:number;tilesRetextured:number};detailProcessing:{triangles:number;bytes:number};frame:{registrationToOrbitalMission:null}};
+export type RecordedCamera={position:number[];direction:number[];imageSamplePixels:number[];verticalFovDegrees:number;sourceProduct:string};
+export type NavcamManifest={inspectionCamera?:RecordedCamera;schemaVersion:number;title:string;credit:string;sourceCommit:string;sourceUrl:string;usagePolicyUrl:string;grid:string;start:SurfacePosition;target:SurfacePosition;assets:NavcamTile[];detailAssets:NavcamTile[];calibratedAssets?:NavcamTile[];calibratedProcessing?:{triangles:number;bytes:number;tilesRetextured:number};detailProcessing:{triangles:number;bytes:number};frame:{registrationToOrbitalMission:null}};
 export type SurfaceView='eye'|'detail'|'orbit';
 export function validateNavcamManifest(value:unknown):NavcamManifest{
  const m=value as NavcamManifest;
  if(!m||m.schemaVersion!==1||!Array.isArray(m.detailAssets)||!m.detailAssets.length||!Array.isArray(m.assets)||!m.assets.length||m.grid!=='/data/drive1004/navigation-grid.json'||m.frame?.registrationToOrbitalMission!==null)throw Error('Recorded terrain manifest is invalid.');
+ if(m.inspectionCamera&&(![m.inspectionCamera.position,m.inspectionCamera.direction].every(v=>Array.isArray(v)&&v.length===3&&v.every(Number.isFinite))||Math.abs(Math.hypot(...m.inspectionCamera.direction)-1)>.001||!Number.isFinite(m.inspectionCamera.verticalFovDegrees)||m.inspectionCamera.verticalFovDegrees<20||m.inspectionCamera.verticalFovDegrees>85||!m.assets.some(a=>a.sourceProduct===m.inspectionCamera!.sourceProduct)))throw Error('Recorded camera is invalid.');
  for(const a of [...m.assets,...m.detailAssets,...(m.calibratedAssets??[])])if(!/^\/data\/drive1004\/[a-zA-Z0-9/.-]+\.glb$/.test(a.url)||a.url.includes('..')||!Array.isArray(a.transform)||a.transform.length!==16||!a.transform.every(Number.isFinite)||a.bounds?.length!==2||a.bounds.some(v=>v.length!==3||!v.every(Number.isFinite))||!Number.isInteger(a.triangles)||a.triangles<=0||!Number.isFinite(a.bytes)||a.bytes<=0||!/^[a-f0-9]{64}$/.test(a.sha256))throw Error('Recorded terrain tile metadata is invalid.');
  return m;
 }

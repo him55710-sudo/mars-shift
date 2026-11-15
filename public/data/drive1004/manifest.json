@@ -6479,5 +6479,24 @@
       ]
     ],
     "validation": "/data/drive1004/calibrated-validation.json"
+  },
+  "inspectionCamera": {
+    "position": [
+      0.3409548497686638,
+      1.969001754396886,
+      0.5522187919785164
+    ],
+    "direction": [
+      0.8180839023144143,
+      -0.5724652008299814,
+      0.05497565472742098
+    ],
+    "imageSamplePixels": [
+      3100.0,
+      2100.0
+    ],
+    "verticalFovDegrees": 32,
+    "sourceProduct": "NLF_0477_0709296508M723RAS_N0261004NCAM00701_0A0085J02",
+    "meaning": "Published PDS camera centre in the display local frame; an inspection aim into the valid calibrated photo footprint."
   }
 }
