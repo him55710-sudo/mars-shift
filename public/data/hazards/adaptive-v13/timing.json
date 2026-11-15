@@ -1,0 +1,27 @@
+{
+  "createdAt": "2026-11-15T07:31:04.502Z",
+  "scope": "Synthetic 512-fix stream, 4 repeats; update + 2/5/10s queries. Different trackers, not output-identical. Machine-local CPU timing, no network/render/planner.",
+  "summary": [
+    {
+      "name": "V8_IMM_REPLAY",
+      "queries": 1920,
+      "medianMs": 0.5065999999999917,
+      "p95Ms": 1.0989999999999895,
+      "totalMs": 1038.9406999999983
+    },
+    {
+      "name": "V13_INCREMENTAL",
+      "queries": 1920,
+      "medianMs": 0.026800000000008595,
+      "p95Ms": 0.07099999999999795,
+      "totalMs": 65.95039999999877
+    }
+  ],
+  "checksum": 8030351.1549532665,
+  "hashes": {
+    "src/adaptive-tracker-v13.ts": "92ec48b8bfa7f1bba347323e646648939da26f9c56956951bc2f6ae02e80ab9a",
+    "src/vortex-forecast-v8.ts": "3d7bf1c149625512c0fafddc54eac0c6ef183a435c5b37c4ec938fd9a8c447be",
+    "scripts/benchmark_adaptive_v13.ts": "ba5b65c4acbe84fc4c20f16efb2e4c972a283fbe1b5ba1d0bf4dc9e0f9f5678d",
+    "public/data/hazards/adaptive-v13/selection.json": "c65fce3ce6697c97315162ff5bca78057ec1de2dc154d885115be911483b411e"
+  }
+}

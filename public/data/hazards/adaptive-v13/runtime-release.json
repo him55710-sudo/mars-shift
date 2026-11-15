@@ -1,0 +1,15 @@
+{
+  "config": {
+    "q": [
+      0.001,
+      0.04,
+      1.44
+    ],
+    "switchSeconds": 30,
+    "robustNIS": 25,
+    "initialVelocitySigma": 10
+  },
+  "covarianceScale": 2.248844784832718,
+  "guardPromotion": true,
+  "sourceProtocol": "ba0bef5a21c8b6585f575f9b33a638dbe435092d6e49e7a07d14cb9d02647efb"
+}

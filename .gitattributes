@@ -73,3 +73,14 @@
 /public/data/hazards/metric-v12/*.xml -text whitespace=cr-at-eol,-blank-at-eol
 /src/vendor/nasa-cahvore.js -text whitespace=cr-at-eol,-blank-at-eof
 /src/vendor/NASA-CAMERA-LICENSE.txt -text whitespace=cr-at-eol,-blank-at-eof
+
+# v13 frozen scientific inputs, engines and evaluation programs.
+/public/data/hazards/adaptive-v13/** -text whitespace=cr-at-eol
+/src/adaptive-tracker-v13.ts -text whitespace=cr-at-eol
+/src/adaptive-escape-v13.ts -text whitespace=cr-at-eol
+/src/evacuation-runtime-v13.ts -text whitespace=cr-at-eol,-blank-at-eof
+/src/guarded-escape-v13.ts -text whitespace=cr-at-eol
+/scripts/evaluate_adaptive_v13.ts -text whitespace=cr-at-eol
+/scripts/evaluate_escape_v13.ts -text whitespace=cr-at-eol
+/scripts/evaluate_guard_v13.ts -text whitespace=cr-at-eol
+/scripts/benchmark_adaptive_v13.ts -text whitespace=cr-at-eol
