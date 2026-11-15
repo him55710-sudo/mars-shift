@@ -22,14 +22,25 @@ export function installSurfaceDetail(material:THREE.MeshStandardMaterial){
     vec2 detailUv=(opticalUv-uDetailOrigin)/uDetailSpan;
     float border=min(min(detailUv.x,detailUv.y),min(1.0-detailUv.x,1.0-detailUv.y));
     float weight=smoothstep(0.0,0.12,border);
-    vec4 detail=texture2D(uDetailMap,vec2(detailUv.x,1.0-detailUv.y));
-    // Bounded display contrast only: no sharpening-generated geometry or observations.
-    vec3 observed=clamp((detail.rgb-vec3(0.18))*(1.0+uOpticalClarity)+vec3(0.18),0.0,1.0);
+    vec2 uv=clamp(vec2(detailUv.x,1.0-detailUv.y),vec2(0.5/1024.),vec2(1.-0.5/1024.));
+    vec4 detail=texture2D(uDetailMap,uv);
+    vec3 observed=detail.rgb;
+    if(uOpticalClarity>.001){
+    vec2 texel=vec2(1./1024.);
+    vec3 a=texture2D(uDetailMap,clamp(uv+vec2(texel.x,0.),texel*.5,1.-texel*.5)).rgb;
+    vec3 b=texture2D(uDetailMap,clamp(uv-vec2(texel.x,0.),texel*.5,1.-texel*.5)).rgb;
+    vec3 c=texture2D(uDetailMap,clamp(uv+vec2(0.,texel.y),texel*.5,1.-texel*.5)).rgb;
+    vec3 d=texture2D(uDetailMap,clamp(uv-vec2(0.,texel.y),texel*.5,1.-texel*.5)).rgb;
+    // Limited unsharp contrast from adjacent observed pixels. No added texture or displacement.
+    vec3 highPass=clamp(detail.rgb-(a+b+c+d)*.25,vec3(-.025),vec3(.025));
+    vec3 sharp=clamp(detail.rgb+highPass*uOpticalClarity*4.,0.,1.);
+    observed=clamp((sharp-vec3(.18))*(1.+uOpticalClarity)+vec3(.18),0.,1.);
+    }
     diffuseColor.rgb=mix(diffuseColor.rgb,diffuse*observed,weight*detail.a);
    }
    #endif`);
  };
- material.customProgramCacheKey=()=> 'mars-ground-detail-v2';return uniforms;
+ material.customProgramCacheKey=()=> 'mars-ground-detail-v3-observed-clarity';return uniforms;
 }
 
 /** Four resident images and a 4 MB atlas; never fetch the whole native display image. */
