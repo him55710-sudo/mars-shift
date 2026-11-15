@@ -461,3 +461,5 @@
  :root #root .planner .intro-actions{flex-direction:row;width:100%}
  :root #root .planner .intro-actions button{flex:1;justify-content:center;min-height:44px;font-size:11px}
 }
+
+:root #root .ms-home-links{display:flex;flex-wrap:wrap;gap:0 24px;align-items:center}

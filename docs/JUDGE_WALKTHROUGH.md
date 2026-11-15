@@ -42,3 +42,7 @@ Phone checks at CSS 390 × 844: the new primary action is visible on home; plann
 [Before planning](judge-evidence/before-planning-desktop.jpg) · [After planning](judge-evidence/after-planning-desktop.jpg) · [Before change review](judge-evidence/before-change-review.jpg) · [After change review](judge-evidence/after-change-review.jpg) · [Completed mission](judge-evidence/completed-mission-desktop.jpg) · [Phone home](judge-evidence/after-home-mobile.jpg) · [Phone planning](judge-evidence/after-planning-mobile.jpg).
 
 The publication workflow runs the existing Vitest suite and TypeScript/Vite build on an isolated checkout containing only this UI change and the published v17 engines. Separate, unfinished dust-research edits in the shared workspace are preserved and excluded. No UI dependencies are added. Scientific assumptions, route algorithms and evidence classifications are not rewritten.
+
+## Additional failure and release check
+
+On NOAH-H, reducing the mission duration to 20 minutes first replaced summary metrics with dashes and disabled departure. After recalculation the summary said **Revise before departure**, with no feasible trip and departure still disabled. Restoring 110 minutes recovered the normal calculation. The isolated release passed **181 tests in 18 files** and a TypeScript/Vite build. The offline cache version is advanced for the new shell; no forced reload is introduced.
