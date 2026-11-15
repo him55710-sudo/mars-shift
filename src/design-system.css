@@ -432,3 +432,43 @@
 }
 
 :root #root .ms-home-links{display:flex;flex-wrap:wrap;gap:0 24px;align-items:center}
+
+/* Restrained operational hierarchy; raster legends keep their scientific scales. */
+:root{--ms-action:#d9e5e4;--ms-on-action:#152724;--ms-route:#b3dfd3;--ms-raised:#1d292e;--ms-muted:#bac7cc}
+:root #root .planner{max-width:1600px;margin-inline:auto;padding-top:28px}
+:root #root .planner .page-intro{margin-bottom:20px}
+:root #root .planner .page-intro h1{font-size:30px}
+:root #root .planner .workflow{margin-bottom:20px;gap:20px;color:var(--ms-muted)}
+:root #root .mission-verdict{padding-block:16px;margin-bottom:20px}
+:root #root .mission-verdict>div>strong{font-size:19px}
+:root #root .mission-verdict dd{font-size:22px}
+:root #root .map-text.marker-label{font-size:20px;font-weight:500;fill:#f2f5f5;stroke:none;letter-spacing:0}
+:root #root .route-swatch{background:#81969d!important}
+:root #root .route-option.selected .route-swatch{background:var(--ms-route)!important}
+:root #root .route-option{border-radius:6px}
+:root #root .route-option.selected{border-color:#6e9d92;background:#b3dfd30d}
+:root #root .route-option .route-label{color:var(--ms-text)}
+:root #root .mission-map[aria-modal=true] .map-route-title>i{background:#81969d}
+:root #root .mission-map[aria-modal=true] .map-route-cards>button.selected .map-route-title>i{background:var(--ms-route)}
+:root #root .mission-map[aria-modal=true] .map-route-cards>button{border-color:var(--ms-line);border-radius:8px}
+:root #root .mission-map[aria-modal=true] .map-route-cards>button.selected{border-color:#6e9d92;background:#b3dfd30d}
+:root #root .mission-map[aria-modal=true] .map-endpoints i{background:var(--ms-raised);color:var(--ms-text)}
+:root #root .mission-map[aria-modal=true] .map-profile{border-radius:8px;box-shadow:none}
+:root #root .mission-map[aria-modal=true] .map-camera-tools{display:block;border-radius:8px}
+:root #root .mission-map[aria-modal=true] .map-camera-tools>summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px;font-size:11px;list-style:none;cursor:pointer}
+:root #root .mission-map[aria-modal=true] .map-camera-tools>summary::-webkit-details-marker{display:none}
+:root #root .mission-map[aria-modal=true] .map-camera-tools[open]>button{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;border-top:1px solid var(--ms-line)}
+:root #root .mission-map[aria-modal=true] .map-view-toggle button{min-height:44px}
+:root #root .planner .map-caption-kicker{display:none}
+:root #root .planner .map-caption strong{font-size:18px;line-height:1.3}
+:root #root .planner .map-caption>span:last-child{font-size:10px;line-height:1.5}
+:root #root .planner .map-target{background:var(--ms-surface);color:var(--ms-text);border-color:var(--ms-line)}
+:root #root .planner .target-waypoint{color:var(--ms-text);border-color:var(--ms-line)}
+@media(max-width:760px){
+ :root #root .planner .map-caption strong{font-size:16px}
+ :root #root .planner .map-caption>span:last-child{font-size:9px}
+ :root #root .planner .map-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:8px}
+ :root #root .planner .map-legend>button{min-height:44px;line-height:1.4;font-size:10px}
+ :root #root .planner .map-legend .line-key{grid-column:1/-1;margin:0;font-size:10px;padding:4px 0}
+}
+@media(max-width:760px){:root #root .planner .page-intro h1{font-size:27px}:root #root .planner .workflow{gap:12px}:root #root .mission-verdict dd{font-size:22px}}
