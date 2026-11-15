@@ -100,3 +100,10 @@
 
 # v15 evidence is deterministically generated and checked byte-for-byte.
 /public/data/review-v15/evidence.json -text
+# Preserve the preregistered evaluation and its literal source hashes across platforms.
+/public/data/hazards/reactive-v16/** -text
+/src/reactive-evaluation-v16.ts -text
+/scripts/reactive_fixtures_v16.ts -text
+/scripts/evaluate_reactive_v16.ts -text
+/scripts/freeze_reactive_v16.ts -text
+/scripts/run_reactive_v16.mjs -text

@@ -1,0 +1,2525 @@
+{
+  "meaning": "Static fixture and coordinate preparation only; no policy scores or outcomes evaluated.",
+  "rows": [
+    {
+      "case": "hol-001",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 59
+    },
+    {
+      "case": "hol-002",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "hol-003",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "hol-004",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 75
+    },
+    {
+      "case": "hol-005",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "hol-006",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "hol-007",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 200
+    },
+    {
+      "case": "hol-008",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 136
+    },
+    {
+      "case": "hol-009",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "hol-010",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "hol-011",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "hol-012",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 59
+    },
+    {
+      "case": "hol-013",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "hol-014",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "hol-015",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 75
+    },
+    {
+      "case": "hol-016",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 136
+    },
+    {
+      "case": "hol-017",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "hol-018",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 200
+    },
+    {
+      "case": "hol-019",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "hol-020",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 59
+    },
+    {
+      "case": "hol-021",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "hol-022",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "hol-023",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 75
+    },
+    {
+      "case": "hol-024",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "hol-025",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "hol-026",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 200
+    },
+    {
+      "case": "hol-027",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 136
+    },
+    {
+      "case": "hol-028",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 59
+    },
+    {
+      "case": "hol-029",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "hol-030",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "hol-031",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 75
+    },
+    {
+      "case": "hol-032",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "hol-033",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "hol-034",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 200
+    },
+    {
+      "case": "hol-035",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 136
+    },
+    {
+      "case": "hol-036",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "hol-037",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "hol-038",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "hol-039",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 59
+    },
+    {
+      "case": "hol-040",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "hol-041",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "hol-042",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 75
+    },
+    {
+      "case": "hol-043",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 136
+    },
+    {
+      "case": "hol-044",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "hol-045",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 200
+    },
+    {
+      "case": "hol-046",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "hol-047",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 59
+    },
+    {
+      "case": "hol-048",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "hol-049",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "hol-050",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 75
+    },
+    {
+      "case": "hol-051",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 35
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "hol-052",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "hol-053",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 200
+    },
+    {
+      "case": "hol-054",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 38,
+        "y": 38
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 136
+    },
+    {
+      "case": "fresh-floor-000",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 39,
+        "y": 38
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 26
+    },
+    {
+      "case": "fresh-floor-001",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 38,
+        "y": 43
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 19
+    },
+    {
+      "case": "fresh-floor-002",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 39,
+        "y": 43
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 11
+    },
+    {
+      "case": "fresh-floor-003",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 36
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "fresh-floor-004",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 39,
+        "y": 42
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 13
+    },
+    {
+      "case": "fresh-floor-005",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 41,
+        "y": 39
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 7
+    },
+    {
+      "case": "fresh-floor-006",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 42,
+        "y": 40
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 19
+    },
+    {
+      "case": "fresh-floor-007",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 38,
+        "y": 36
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 34
+    },
+    {
+      "case": "fresh-floor-008",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 36,
+        "y": 42
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 16
+    },
+    {
+      "case": "fresh-floor-009",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 37
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 42
+    },
+    {
+      "case": "fresh-floor-010",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 44
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 28
+    },
+    {
+      "case": "fresh-floor-011",
+      "terrain": "floor",
+      "allowed": 6241,
+      "initial": {
+        "x": 40,
+        "y": 44
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 14
+    },
+    {
+      "case": "fresh-ridge-012",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 38,
+        "y": 42
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 37
+    },
+    {
+      "case": "fresh-ridge-013",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 43,
+        "y": 39
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 30
+    },
+    {
+      "case": "fresh-ridge-014",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 44,
+        "y": 37
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 30
+    },
+    {
+      "case": "fresh-ridge-015",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 41,
+        "y": 43
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 42
+    },
+    {
+      "case": "fresh-ridge-016",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 41,
+        "y": 43
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 28
+    },
+    {
+      "case": "fresh-ridge-017",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 44,
+        "y": 39
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 27
+    },
+    {
+      "case": "fresh-ridge-018",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 37,
+        "y": 42
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 51
+    },
+    {
+      "case": "fresh-ridge-019",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 42,
+        "y": 40
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 17
+    },
+    {
+      "case": "fresh-ridge-020",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 37,
+        "y": 38
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 17
+    },
+    {
+      "case": "fresh-ridge-021",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 44,
+        "y": 42
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 68
+    },
+    {
+      "case": "fresh-ridge-022",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 38,
+        "y": 40
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 15
+    },
+    {
+      "case": "fresh-ridge-023",
+      "terrain": "ridge",
+      "allowed": 6241,
+      "initial": {
+        "x": 39,
+        "y": 43
+      },
+      "base": {
+        "x": 40,
+        "y": 40
+      },
+      "target": {
+        "x": 55,
+        "y": 34
+      },
+      "cellSize": 1,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 20
+    },
+    {
+      "case": "fresh-navcam-024",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 39,
+        "y": 49
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 93
+    },
+    {
+      "case": "fresh-navcam-025",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 28,
+        "y": 40
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 43
+    },
+    {
+      "case": "fresh-navcam-026",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 29,
+        "y": 29
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 84
+    },
+    {
+      "case": "fresh-navcam-027",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 38,
+        "y": 39
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 9
+    },
+    {
+      "case": "fresh-navcam-028",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 26,
+        "y": 25
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 121
+    },
+    {
+      "case": "fresh-navcam-029",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 38
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 9
+    },
+    {
+      "case": "fresh-navcam-030",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 26,
+        "y": 25
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 179
+    },
+    {
+      "case": "fresh-navcam-031",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 29,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 117
+    },
+    {
+      "case": "fresh-navcam-032",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 34,
+        "y": 28
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 97
+    },
+    {
+      "case": "fresh-navcam-033",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 32,
+        "y": 38
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 32
+    },
+    {
+      "case": "fresh-navcam-034",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 28,
+        "y": 25
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 120
+    },
+    {
+      "case": "fresh-navcam-035",
+      "terrain": "navcam",
+      "allowed": 2392,
+      "initial": {
+        "x": 41,
+        "y": 51
+      },
+      "base": {
+        "x": 37,
+        "y": 37
+      },
+      "target": {
+        "x": 2,
+        "y": 83
+      },
+      "cellSize": 0.25,
+      "crs": "LOCAL:NASA-M20-SITE026-NORTH-UP-EAST-METRES",
+      "connectedReturn": 51
+    },
+    {
+      "case": "compound-noah-1-000",
+      "terrain": "noah-1",
+      "allowed": 232,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-1-001",
+      "terrain": "noah-1",
+      "allowed": 232,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-1-002",
+      "terrain": "noah-1",
+      "allowed": 232,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-1-003",
+      "terrain": "noah-1",
+      "allowed": 232,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-1-004",
+      "terrain": "noah-1",
+      "allowed": 232,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-1-005",
+      "terrain": "noah-1",
+      "allowed": 232,
+      "initial": {
+        "x": 13,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 15
+    },
+    {
+      "case": "compound-noah-2-006",
+      "terrain": "noah-2",
+      "allowed": 306,
+      "initial": {
+        "x": 11,
+        "y": 11
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 65
+    },
+    {
+      "case": "compound-noah-2-007",
+      "terrain": "noah-2",
+      "allowed": 306,
+      "initial": {
+        "x": 11,
+        "y": 13
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 38
+    },
+    {
+      "case": "compound-noah-2-008",
+      "terrain": "noah-2",
+      "allowed": 306,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-2-009",
+      "terrain": "noah-2",
+      "allowed": 306,
+      "initial": {
+        "x": 13,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 40
+    },
+    {
+      "case": "compound-noah-2-010",
+      "terrain": "noah-2",
+      "allowed": 306,
+      "initial": {
+        "x": 12,
+        "y": 11
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 31
+    },
+    {
+      "case": "compound-noah-2-011",
+      "terrain": "noah-2",
+      "allowed": 306,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 15,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-3-012",
+      "terrain": "noah-3",
+      "allowed": 249,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-3-013",
+      "terrain": "noah-3",
+      "allowed": 249,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-3-014",
+      "terrain": "noah-3",
+      "allowed": 249,
+      "initial": {
+        "x": 12,
+        "y": 13
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 15
+    },
+    {
+      "case": "compound-noah-3-015",
+      "terrain": "noah-3",
+      "allowed": 249,
+      "initial": {
+        "x": 13,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 32
+    },
+    {
+      "case": "compound-noah-3-016",
+      "terrain": "noah-3",
+      "allowed": 249,
+      "initial": {
+        "x": 13,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 22
+    },
+    {
+      "case": "compound-noah-3-017",
+      "terrain": "noah-3",
+      "allowed": 249,
+      "initial": {
+        "x": 13,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 15
+    },
+    {
+      "case": "compound-noah-4-018",
+      "terrain": "noah-4",
+      "allowed": 292,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 13
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-4-019",
+      "terrain": "noah-4",
+      "allowed": 292,
+      "initial": {
+        "x": 12,
+        "y": 11
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 13
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 22
+    },
+    {
+      "case": "compound-noah-4-020",
+      "terrain": "noah-4",
+      "allowed": 292,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 13
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-4-021",
+      "terrain": "noah-4",
+      "allowed": 292,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 13
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-4-022",
+      "terrain": "noah-4",
+      "allowed": 292,
+      "initial": {
+        "x": 12,
+        "y": 12
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 13
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-4-023",
+      "terrain": "noah-4",
+      "allowed": 292,
+      "initial": {
+        "x": 11,
+        "y": 13
+      },
+      "base": {
+        "x": 12,
+        "y": 12
+      },
+      "target": {
+        "x": 13,
+        "y": 13
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 22
+    },
+    {
+      "case": "compound-noah-5-024",
+      "terrain": "noah-5",
+      "allowed": 380,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 10,
+        "y": 10
+      },
+      "target": {
+        "x": 13,
+        "y": 9
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 77
+    },
+    {
+      "case": "compound-noah-5-025",
+      "terrain": "noah-5",
+      "allowed": 380,
+      "initial": {
+        "x": 10,
+        "y": 10
+      },
+      "base": {
+        "x": 10,
+        "y": 10
+      },
+      "target": {
+        "x": 13,
+        "y": 9
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-5-026",
+      "terrain": "noah-5",
+      "allowed": 380,
+      "initial": {
+        "x": 9,
+        "y": 9
+      },
+      "base": {
+        "x": 10,
+        "y": 10
+      },
+      "target": {
+        "x": 13,
+        "y": 9
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 22
+    },
+    {
+      "case": "compound-noah-5-027",
+      "terrain": "noah-5",
+      "allowed": 380,
+      "initial": {
+        "x": 10,
+        "y": 10
+      },
+      "base": {
+        "x": 10,
+        "y": 10
+      },
+      "target": {
+        "x": 13,
+        "y": 9
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-5-028",
+      "terrain": "noah-5",
+      "allowed": 380,
+      "initial": {
+        "x": 10,
+        "y": 10
+      },
+      "base": {
+        "x": 10,
+        "y": 10
+      },
+      "target": {
+        "x": 13,
+        "y": 9
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-5-029",
+      "terrain": "noah-5",
+      "allowed": 380,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 10,
+        "y": 10
+      },
+      "target": {
+        "x": 13,
+        "y": 9
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 35
+    },
+    {
+      "case": "compound-noah-6-030",
+      "terrain": "noah-6",
+      "allowed": 212,
+      "initial": {
+        "x": 8,
+        "y": 12
+      },
+      "base": {
+        "x": 9,
+        "y": 11
+      },
+      "target": {
+        "x": 9,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 64
+    },
+    {
+      "case": "compound-noah-6-031",
+      "terrain": "noah-6",
+      "allowed": 212,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 9,
+        "y": 11
+      },
+      "target": {
+        "x": 9,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-6-032",
+      "terrain": "noah-6",
+      "allowed": 212,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 9,
+        "y": 11
+      },
+      "target": {
+        "x": 9,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-6-033",
+      "terrain": "noah-6",
+      "allowed": 212,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 9,
+        "y": 11
+      },
+      "target": {
+        "x": 9,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-6-034",
+      "terrain": "noah-6",
+      "allowed": 212,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 9,
+        "y": 11
+      },
+      "target": {
+        "x": 9,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    },
+    {
+      "case": "compound-noah-6-035",
+      "terrain": "noah-6",
+      "allowed": 212,
+      "initial": {
+        "x": 9,
+        "y": 11
+      },
+      "base": {
+        "x": 9,
+        "y": 11
+      },
+      "target": {
+        "x": 9,
+        "y": 11
+      },
+      "cellSize": 5,
+      "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "connectedReturn": 0
+    }
+  ]
+}
