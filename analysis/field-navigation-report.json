@@ -1,0 +1,108 @@
+{
+  "method": "NOAH-H ripple fraction + THEMIS thermal screening + negative DEM TPI. 0.55 ripple + 0.20 normalized low thermal inertia + 0.25 depression. Candidate screening only; no calibrated entrapment probability.",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "cellSize": 5,
+    "bounds": [
+      4360409.037914526,
+      1093711.6170900527,
+      4361409.037914526,
+      1094711.6170900527
+    ],
+    "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]"
+  },
+  "completeInputCells": 33100,
+  "rippleCells": 2188,
+  "depressedRippleCells": 5,
+  "depressedRippleRegions": 2,
+  "boulderTextureCells": 7531,
+  "settings": {
+    "maxSlope": 18,
+    "speed": 0.6,
+    "scienceMinutes": 5,
+    "durationMinutes": 120,
+    "oxygenMinutes": 160,
+    "powerMinutes": 150,
+    "reservePercent": 25,
+    "loadKg": 12,
+    "dust": false,
+    "hazardWeight": 8,
+    "mobilityModel": 2
+  },
+  "base": {
+    "x": 32,
+    "y": 168
+  },
+  "target": {
+    "x": 153,
+    "y": 43
+  },
+  "routes": {
+    "shortest": {
+      "distanceMetres": 1751.4114378097947,
+      "totalMinutes": 65.55213341710854,
+      "reservePercent": 54.54315905190996,
+      "integratedScreeningIndexMetres": 249.5135196442448,
+      "meanIndex": 0.14246425155032147,
+      "trapExposureMetres": 0,
+      "incompleteInputMetres": 0,
+      "feasible": true,
+      "expanded": 1857
+    },
+    "balanced": {
+      "distanceMetres": 1839.3113807422908,
+      "totalMinutes": 68.68728859337746,
+      "reservePercent": 52.327649394013264,
+      "integratedScreeningIndexMetres": 183.57953219897607,
+      "meanIndex": 0.09980883830821995,
+      "trapExposureMetres": 0,
+      "incompleteInputMetres": 0,
+      "feasible": true,
+      "expanded": 35263
+    },
+    "cautious": {
+      "distanceMetres": 1839.304816309049,
+      "totalMinutes": 68.59985625185345,
+      "reservePercent": 52.389434915356894,
+      "integratedScreeningIndexMetres": 183.72215440822944,
+      "meanIndex": 0.09988673589019709,
+      "trapExposureMetres": 0,
+      "incompleteInputMetres": 0,
+      "feasible": true,
+      "expanded": 45004
+    }
+  },
+  "screeningReductionPercent": 26.425015982812116,
+  "drill": {
+    "zone": {
+      "id": "reproducible-drill",
+      "kind": "trap",
+      "source": "simulated",
+      "point": {
+        "x": 86,
+        "y": 96
+      },
+      "radius": 20,
+      "area": 1256.6370614359173,
+      "index": 0,
+      "cells": [],
+      "label": "Simulated exclusion",
+      "detail": "Reproducible operator report"
+    },
+    "previousDistance": 1839.3113807422908,
+    "detour": {
+      "distanceMetres": 1845.1325202830883,
+      "totalMinutes": 68.66558367027079,
+      "reservePercent": 52.3429875396753,
+      "integratedScreeningIndexMetres": 184.43979298766902,
+      "meanIndex": 0.09996018766141061,
+      "trapExposureMetres": 0,
+      "incompleteInputMetres": 0,
+      "feasible": true,
+      "expanded": 35358
+    },
+    "pathChanged": true
+  },
+  "limitations": "Static, uncalibrated terrain screening; no measured soil strength or confirmed entrapment. Every returned edge was checked against the declared graph constraints."
+}

@@ -12,7 +12,7 @@ export default function MissionNavigation({current,onNavigate,compact=false}:{cu
   if(!shouldHandleLink(event))return;event.preventDefault();if(menu.current)menu.current.open=false;onNavigate(w.id);
  }});
  return <nav className={`mission-nav ${compact?'mission-nav-compact':''}`} aria-label="Main navigation">
-  {!compact&&['home','explore','plan','terrain'].map(id=>WORKSPACES.find(w=>w.id===id)!).map(w=><a key={w.id} {...link(w)}><span className="nav-name">{w.name}</span><span className="nav-name-compact">{w.short}</span></a>)}
+  {!compact&&['home','navigate','explore','terrain'].map(id=>WORKSPACES.find(w=>w.id===id)!).map(w=><a key={w.id} {...link(w)}><span className="nav-name">{w.name}</span><span className="nav-name-compact">{w.short}</span></a>)}
   <details ref={menu} className="mission-more" onKeyDown={event=>{if(event.key==='Escape'&&menu.current?.open){event.stopPropagation();menu.current.open=false;menu.current.querySelector('summary')?.focus();}}}>
    <summary><Grid2X2 size={15}/><span>All views</span><ChevronDown size={13}/></summary>
    <div className="mission-more-links">

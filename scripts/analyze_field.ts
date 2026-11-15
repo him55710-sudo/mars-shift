@@ -1,0 +1,17 @@
+import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+import {assessField,fieldPlan,fieldTerrain} from '../src/field-navigation';
+import type {FieldZone} from '../src/field-navigation';
+import {DEFAULTS,edgeBlocked,nearestAllowed,point} from '../src/planner';
+import type {Terrain} from '../src/planner';
+import {validateNoah} from '../src/noah-data';
+import {validateScience} from '../src/science-data';
+const load=(p:string)=>JSON.parse(readFileSync('public/data/noah/'+p,'utf8'));
+const t=load('terrain.json') as Terrain;t.noah=validateNoah(t,load('noah-terrain.json'));t.science=validateScience(t,load('science/terrain-metrics.json'));
+const a=assessField(t),settings={...DEFAULTS,mobilityModel:2 as const,scienceMinutes:5,durationMinutes:120,oxygenMinutes:160,powerMinutes:150},base=nearestAllowed(t,{x:32,y:168},settings),target=nearestAllowed(t,{x:153,y:43},settings);
+const routes=Object.fromEntries((['shortest','balanced','cautious'] as const).map(policy=>{const p=fieldPlan(t,a,base,target,base,settings,policy,true)!;if(!p?.route.feasible)throw Error('Baseline route is unavailable or outside modeled budgets.');for(let k=1;k<p.route.cells.length;k++)if(edgeBlocked(t,p.route.cells[k-1],p.route.cells[k],settings,null))throw Error('Route crossed a hard constraint.');return [policy,p];}));
+const location=point(t,routes.balanced.route.outbound[Math.floor(routes.balanced.route.outbound.length*.52)]),z:FieldZone={id:'reproducible-drill',kind:'trap',source:'simulated',point:location,radius:20,area:Math.PI*400,index:0,cells:[],label:'Simulated exclusion',detail:'Reproducible operator report'};
+const masked=fieldTerrain(t,[z]),detour=fieldPlan(masked,a,base,target,base,settings,'balanced',true)!;
+if(!detour?.route.feasible)throw Error('Drill did not produce a feasible round trip.');for(let k=1;k<detour.route.cells.length;k++)if(edgeBlocked(masked,detour.route.cells[k-1],detour.route.cells[k],settings,null))throw Error('Detour crossed a hard constraint.');
+const summary=(p:typeof routes.balanced)=>({distanceMetres:p.route.distance,totalMinutes:p.route.totalMinutes,reservePercent:p.route.reserve,integratedScreeningIndexMetres:p.riskMetres,meanIndex:p.meanIndex,trapExposureMetres:p.trapMetres,incompleteInputMetres:p.unknownMetres,feasible:p.route.feasible,expanded:p.expanded});
+const report={method:a.method,grid:{width:t.width,height:t.height,cellSize:t.cellSize,bounds:t.bounds,crs:t.crs},completeInputCells:a.knownCells,rippleCells:a.sandCells,depressedRippleCells:a.trapCells,depressedRippleRegions:a.zones.filter(z=>z.kind==='trap').length,boulderTextureCells:a.rockCells,settings,base,target,routes:Object.fromEntries(Object.entries(routes).map(([key,value])=>[key,summary(value)])),screeningReductionPercent:100*(1-routes.balanced.riskMetres/routes.shortest.riskMetres),drill:{zone:z,previousDistance:routes.balanced.route.distance,detour:summary(detour),pathChanged:JSON.stringify(routes.balanced.route.outbound)!==JSON.stringify(detour.route.outbound)},limitations:'Static, uncalibrated terrain screening; no measured soil strength or confirmed entrapment. Every returned edge was checked against the declared graph constraints.'};
+mkdirSync('analysis',{recursive:true});writeFileSync('analysis/field-navigation-report.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
