@@ -72,6 +72,7 @@ def scored(model,label):
     return a,y,s
 def prepare():
     with archive() as z:
+        OUT.mkdir(parents=True,exist_ok=True);(OUT/'protocol.json').write_bytes(PROTOCOL.read_bytes())
         splits=make_splits(z);write(CACHE/'splits.json',splits);write(OUT/'splits.json',splits)
         jobs=sorted(set(n for k in ['train','calibration','test'] for l in splits[k] for n in [l,image_name(l)]))
         def download(n):
@@ -159,8 +160,32 @@ def test(check=False):
         print('PASS: complete held-out report and examples reproduce',flush=True)
     else:write(OUT/'report.json',report)
     print(json.dumps({k:report[k] for k in ['testImages','labeledLatticePixels','metrics','imageBootstrap95']},indent=2),flush=True)
+def check_counts():
+    report=read_json(OUT/'report.json');hashes=read_json(OUT/'source-hashes.json');lock=read_json(OUT/'model-lock.json');total=np.zeros(4,dtype=np.int64)
+    if report['modelSHA256']!=sha((CACHE/'model.joblib').read_bytes()) or report['protocolSHA256']!=sha(PROTOCOL.read_bytes()):raise ValueError('Model/protocol changed')
+    for row in report['rows']:
+        for name in [row['labelMember'],row['imageMember']]:
+            if sha((CACHE/'members'/name).read_bytes())!=hashes[name]:raise ValueError('Official source changed: '+name)
+        y=label_array(CACHE/'members'/row['labelMember'])[4::8,4::8]
+        with np.load(CACHE/(row['id']+'.npz')) as saved:
+            if not np.array_equal(saved['y'],y):raise ValueError('Cached labels differ from official expert labels')
+            known=y!=255;c=counts(y[known]==2,saved['score'][known]>=lock['threshold'])
+        if c!=row['counts']:raise ValueError('Per-image confusion mismatch')
+        total+=c
+    if metrics(total)!=report['metrics']:raise ValueError('Aggregate confusion mismatch')
+    print('PASS: 322 official image/label source hashes, cached prediction tabulation, per-image and aggregate counts reproduce. Use --test or --check to rerun full model inference.',flush=True)
+def audit_routes():
+    report=read_json(OUT/'report.json');rows=[]
+    for row in report['rows']:
+        with np.load(CACHE/(row['id']+'.npz')) as s:r=route_audit(s['y'],s['score'],report['threshold'])
+        rows.append({'id':row['id'],'audit':r})
+    summary={'testImages':len(rows),'noExpertLatticeLabels':sum(x['audit'] is None for x in rows),'coveragePathExists':sum(x['audit'] is not None and x['audit']['baseline'] is not None for x in rows),'predictedPathExists':sum(x['audit'] is not None and x['audit']['predicted'] is not None for x in rows),'expertSandReferencePathExists':sum(x['audit'] is not None and x['audit']['expertReference'] is not None for x in rows),'predictedPathsCrossingExpertSand':sum(x['audit'] is not None and x['audit']['predicted'] is not None and x['audit']['predicted']['expertSandCells']>0 for x in rows),'modelHoldsDespiteExpertReferencePath':sum(x['audit'] is not None and x['audit']['predicted'] is None and x['audit']['expertReference'] is not None for x in rows)}
+    value={'schema':1,'analysis':'Post-hoc descriptive routing audit; no model, threshold, endpoints or buffers changed after test. Not a new independent model-selection experiment.','modelSHA256':report['modelSHA256'],'summary':summary,'rows':rows}
+    write(OUT/'routing-audit.json',value);print(json.dumps(summary),flush=True)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--prepare',action='store_true');p.add_argument('--fit',action='store_true');p.add_argument('--test',action='store_true');p.add_argument('--check',action='store_true');args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--prepare',action='store_true');p.add_argument('--fit',action='store_true');p.add_argument('--test',action='store_true');p.add_argument('--check',action='store_true');p.add_argument('--check-counts',action='store_true');p.add_argument('--route-audit',action='store_true');args=p.parse_args()
     if args.prepare:prepare()
     if args.fit:fit()
     if args.test or args.check:test(args.check)
+    if args.check_counts:check_counts()
+    if args.route_audit:audit_routes()

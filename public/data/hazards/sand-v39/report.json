@@ -1,0 +1,6927 @@
+{
+  "schema": 1,
+  "task": "terrain-sand-appearance",
+  "model": "MARS SHIFT texture RF v39 (new experimental baseline)",
+  "source": "https://zenodo.org/records/15995036",
+  "protocolSHA256": "9a65868d91ff1a693fa1803431a73c76a0856ced9ae5d8d25c5197e1d47e0351",
+  "modelSHA256": "a2a8066392271d49b75cbe6663d6046f9795d2dbe5722c29b0a9375e2a78494e",
+  "threshold": 0.4,
+  "trainImages": 128,
+  "calibrationImages": 32,
+  "testImages": 322,
+  "testSiteDriveGroups": 89,
+  "labeledLatticePixels": 1827103,
+  "sampledLatticePixels": 5275648,
+  "labelCoverage": 0.3463276928256017,
+  "stride": 8,
+  "metrics": {
+    "tp": 427643,
+    "fp": 133539,
+    "tn": 1214801,
+    "fn": 51120,
+    "precision": 0.7620397660651981,
+    "recall": 0.8932248314928263,
+    "f1": 0.8224338787147397,
+    "f2": 0.863494726265773,
+    "falsePositiveRate": 0.09903955975495794,
+    "missRate": 0.1067751685071737,
+    "iou": 0.6984184275079944
+  },
+  "imageBootstrap95": {
+    "precision": [
+      0.6822267739747241,
+      0.8270822885518956
+    ],
+    "recall": [
+      0.8529852546387936,
+      0.9317325178575392
+    ],
+    "falsePositiveRate": [
+      0.07410982051637753,
+      0.12521328033094908
+    ],
+    "missRate": [
+      0.06826748214246083,
+      0.1470147453612064
+    ],
+    "iou": [
+      0.6237193904202691,
+      0.7616841875152699
+    ]
+  },
+  "baselines": {
+    "threshold0.5": {
+      "tp": 413446,
+      "fp": 106858,
+      "tn": 1241482,
+      "fn": 65317,
+      "precision": 0.7946239121744211,
+      "recall": 0.8635713286114424,
+      "f1": 0.8276642107085911,
+      "f2": 0.8488409908038086,
+      "falsePositiveRate": 0.07925152409629618,
+      "missRate": 0.1364286713885576,
+      "iou": 0.705995857388994
+    },
+    "alwaysSand": {
+      "tp": 478763,
+      "fp": 1348340,
+      "tn": 0,
+      "fn": 0,
+      "precision": 0.26203394116259454,
+      "recall": 1.0,
+      "f1": 0.41525656738075845,
+      "f2": 0.6396888958367571,
+      "falsePositiveRate": 1.0,
+      "missRate": 0.0,
+      "iou": 0.26203394116259454
+    },
+    "neverSand": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 1348340,
+      "fn": 478763,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0,
+      "falsePositiveRate": 0.0,
+      "missRate": 1.0,
+      "iou": 0.0
+    }
+  },
+  "rows": [
+    {
+      "id": "NLB_436384140EDR_F0211362NCAM00279M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436384140EDR_F0211362NCAM00279M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436384140EDR_F0211362NCAM00279M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493998256EDR_F0491876NCAM00257M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493998256EDR_F0491876NCAM00257M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493998256EDR_F0491876NCAM00257M1.JPG",
+      "counts": [
+        175,
+        34,
+        36,
+        5
+      ],
+      "fixedHalfCounts": [
+        168,
+        24,
+        46,
+        12
+      ],
+      "known": 250,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528892751EDR_F0581248NCAM00346M1_merged",
+      "group": "0581248",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528892751EDR_F0581248NCAM00346M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528892751EDR_F0581248NCAM00346M1.JPG",
+      "counts": [
+        123,
+        20,
+        1422,
+        11
+      ],
+      "fixedHalfCounts": [
+        111,
+        2,
+        1440,
+        23
+      ],
+      "known": 1576,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552677960EDR_F0642088NCAM00354M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552677960EDR_F0642088NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552677960EDR_F0642088NCAM00354M1.JPG",
+      "counts": [
+        7130,
+        0,
+        0,
+        1694
+      ],
+      "fixedHalfCounts": [
+        6410,
+        0,
+        0,
+        2414
+      ],
+      "known": 8824,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_428295522EDR_F0100474NCAM00385M1_merged",
+      "group": "0100474",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_428295522EDR_F0100474NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_428295522EDR_F0100474NCAM00385M1.JPG",
+      "counts": [
+        0,
+        207,
+        14287,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        87,
+        14407,
+        0
+      ],
+      "known": 14494,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558364829EDR_F0660000NCAM00253M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558364829EDR_F0660000NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558364829EDR_F0660000NCAM00253M1.JPG",
+      "counts": [
+        0,
+        74,
+        6863,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        20,
+        6917,
+        0
+      ],
+      "known": 6937,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565811572EDR_F0671016NCAM00261M1_merged",
+      "group": "0671016",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565811572EDR_F0671016NCAM00261M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565811572EDR_F0671016NCAM00261M1.JPG",
+      "counts": [
+        0,
+        18,
+        6722,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        14,
+        6726,
+        0
+      ],
+      "known": 6740,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613584057EDR_F0760568NCAM00281M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613584057EDR_F0760568NCAM00281M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613584057EDR_F0760568NCAM00281M1.JPG",
+      "counts": [
+        0,
+        6638,
+        2701,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        6011,
+        3328,
+        0
+      ],
+      "known": 9339,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556764110EDR_F0651642NCAM07753M1_merged",
+      "group": "0651642",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556764110EDR_F0651642NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556764110EDR_F0651642NCAM07753M1.JPG",
+      "counts": [
+        1182,
+        3,
+        33,
+        6
+      ],
+      "fixedHalfCounts": [
+        1150,
+        0,
+        36,
+        38
+      ],
+      "known": 1224,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448279148EDR_F0300484NCAM00353M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448279148EDR_F0300484NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448279148EDR_F0300484NCAM00353M1.JPG",
+      "counts": [
+        0,
+        0,
+        10839,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        10839,
+        0
+      ],
+      "known": 10839,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542730580EDR_F0612232NCAM00282M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542730580EDR_F0612232NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542730580EDR_F0612232NCAM00282M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463803954EDR_F0411768NCAM00382M1_merged",
+      "group": "0411768",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463803954EDR_F0411768NCAM00382M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463803954EDR_F0411768NCAM00382M1.JPG",
+      "counts": [
+        3449,
+        0,
+        0,
+        754
+      ],
+      "fixedHalfCounts": [
+        3355,
+        0,
+        0,
+        848
+      ],
+      "known": 4203,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439226140EDR_F0240000NCAM00350M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439226140EDR_F0240000NCAM00350M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439226140EDR_F0240000NCAM00350M1.JPG",
+      "counts": [
+        0,
+        0,
+        11194,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        11194,
+        0
+      ],
+      "known": 11194,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577089308EDR_F0691828NCAM00379M1_merged",
+      "group": "0691828",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577089308EDR_F0691828NCAM00379M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577089308EDR_F0691828NCAM00379M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570072657EDR_F0672848NCAM00385M1_merged",
+      "group": "0672848",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570072657EDR_F0672848NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570072657EDR_F0672848NCAM00385M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558364090EDR_F0660000NCAM00252M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558364090EDR_F0660000NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558364090EDR_F0660000NCAM00252M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552665174EDR_F0641980NCAM00320M1_merged",
+      "group": "0641980",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552665174EDR_F0641980NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552665174EDR_F0641980NCAM00320M1.JPG",
+      "counts": [
+        5459,
+        1,
+        1261,
+        24
+      ],
+      "fixedHalfCounts": [
+        5433,
+        0,
+        1262,
+        50
+      ],
+      "known": 6745,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078554EDR_F0681626NCAM00354M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078554EDR_F0681626NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078554EDR_F0681626NCAM00354M1.JPG",
+      "counts": [
+        0,
+        45,
+        3680,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        15,
+        3710,
+        0
+      ],
+      "known": 3725,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078028EDR_F0681626NCAM00256M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078028EDR_F0681626NCAM00256M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078028EDR_F0681626NCAM00256M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_427503571EDR_F0080610NCAM00253M1_merged",
+      "group": "0080610",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_427503571EDR_F0080610NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_427503571EDR_F0080610NCAM00253M1.JPG",
+      "counts": [
+        0,
+        3864,
+        543,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3426,
+        981,
+        0
+      ],
+      "known": 4407,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602657189EDR_F0732688NCAM00382M1_merged",
+      "group": "0732688",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602657189EDR_F0732688NCAM00382M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602657189EDR_F0732688NCAM00382M1.JPG",
+      "counts": [
+        0,
+        2471,
+        4667,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1877,
+        5261,
+        0
+      ],
+      "known": 7138,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453780853EDR_F0320478NCAM00281M1_merged",
+      "group": "0320478",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453780853EDR_F0320478NCAM00281M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453780853EDR_F0320478NCAM00281M1.JPG",
+      "counts": [
+        0,
+        0,
+        11686,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        11686,
+        0
+      ],
+      "known": 11686,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577095146EDR_F0691858NCAM00376M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577095146EDR_F0691858NCAM00376M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577095146EDR_F0691858NCAM00376M1.JPG",
+      "counts": [
+        7092,
+        0,
+        0,
+        1145
+      ],
+      "fixedHalfCounts": [
+        6550,
+        0,
+        0,
+        1687
+      ],
+      "known": 8237,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448279926EDR_F0300484NCAM00250M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448279926EDR_F0300484NCAM00250M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448279926EDR_F0300484NCAM00250M1.JPG",
+      "counts": [
+        0,
+        93,
+        10194,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        59,
+        10228,
+        0
+      ],
+      "known": 10287,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_543351716EDR_F0613076NCAM00286M1_merged",
+      "group": "0613076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_543351716EDR_F0613076NCAM00286M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_543351716EDR_F0613076NCAM00286M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442600301EDR_F0250312NCAM00282M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442600301EDR_F0250312NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442600301EDR_F0250312NCAM00282M1.JPG",
+      "counts": [
+        0,
+        149,
+        3047,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        69,
+        3127,
+        0
+      ],
+      "known": 3196,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_436383872EDR_F0211362NCAM00354M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436383872EDR_F0211362NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436383872EDR_F0211362NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        2017,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        2017,
+        0
+      ],
+      "known": 2017,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_436380021EDR_F0211362NCAM00278M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436380021EDR_F0211362NCAM00278M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436380021EDR_F0211362NCAM00278M1.JPG",
+      "counts": [
+        0,
+        38,
+        5389,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        18,
+        5409,
+        0
+      ],
+      "known": 5427,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_454577843EDR_F0330660NCAM00292M1_merged",
+      "group": "0330660",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_454577843EDR_F0330660NCAM00292M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_454577843EDR_F0330660NCAM00292M1.JPG",
+      "counts": [
+        0,
+        2943,
+        9032,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        2429,
+        9546,
+        0
+      ],
+      "known": 11975,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_541043499EDR_F0611140NCAM00346M1_merged",
+      "group": "0611140",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_541043499EDR_F0611140NCAM00346M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_541043499EDR_F0611140NCAM00346M1.JPG",
+      "counts": [
+        7400,
+        0,
+        0,
+        99
+      ],
+      "fixedHalfCounts": [
+        7334,
+        0,
+        0,
+        165
+      ],
+      "known": 7499,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570074258EDR_F0672884NCAM00285M1_merged",
+      "group": "0672884",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570074258EDR_F0672884NCAM00285M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570074258EDR_F0672884NCAM00285M1.JPG",
+      "counts": [
+        0,
+        5627,
+        12,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        5618,
+        21,
+        0
+      ],
+      "known": 5639,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570074144EDR_F0672884NCAM00285M1_merged",
+      "group": "0672884",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570074144EDR_F0672884NCAM00285M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570074144EDR_F0672884NCAM00285M1.JPG",
+      "counts": [
+        0,
+        1,
+        933,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        934,
+        0
+      ],
+      "known": 934,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502516765EDR_F0511430NCAM00419M1_merged",
+      "group": "0511430",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502516765EDR_F0511430NCAM00419M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502516765EDR_F0511430NCAM00419M1.JPG",
+      "counts": [
+        8910,
+        0,
+        783,
+        307
+      ],
+      "fixedHalfCounts": [
+        8805,
+        0,
+        783,
+        412
+      ],
+      "known": 10000,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448279363EDR_F0300484NCAM00299M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448279363EDR_F0300484NCAM00299M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448279363EDR_F0300484NCAM00299M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664491EDR_F0490294NCAM00354M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664491EDR_F0490294NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664491EDR_F0490294NCAM00354M1.JPG",
+      "counts": [
+        0,
+        426,
+        5924,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        256,
+        6094,
+        0
+      ],
+      "known": 6350,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542734199EDR_F0612232NCAM00654M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542734199EDR_F0612232NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542734199EDR_F0612232NCAM00654M1.JPG",
+      "counts": [
+        10893,
+        0,
+        0,
+        121
+      ],
+      "fixedHalfCounts": [
+        10775,
+        0,
+        0,
+        239
+      ],
+      "known": 11014,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502517193EDR_F0511430NCAM09842M1_merged",
+      "group": "0511430",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502517193EDR_F0511430NCAM09842M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502517193EDR_F0511430NCAM09842M1.JPG",
+      "counts": [
+        4511,
+        0,
+        1772,
+        133
+      ],
+      "fixedHalfCounts": [
+        4397,
+        0,
+        1772,
+        247
+      ],
+      "known": 6416,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_541049316EDR_F0611140NCAM12753M1_merged",
+      "group": "0611140",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_541049316EDR_F0611140NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_541049316EDR_F0611140NCAM12753M1.JPG",
+      "counts": [
+        8424,
+        0,
+        0,
+        12
+      ],
+      "fixedHalfCounts": [
+        8395,
+        0,
+        0,
+        41
+      ],
+      "known": 8436,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602664993EDR_F0732958NCAM00272M1_merged",
+      "group": "0732958",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602664993EDR_F0732958NCAM00272M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602664993EDR_F0732958NCAM00272M1.JPG",
+      "counts": [
+        0,
+        1206,
+        2522,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        914,
+        2814,
+        0
+      ],
+      "known": 3728,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443659348EDR_F0251082NCAM00470M1_merged",
+      "group": "0251082",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443659348EDR_F0251082NCAM00470M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443659348EDR_F0251082NCAM00470M1.JPG",
+      "counts": [
+        0,
+        134,
+        5995,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        50,
+        6079,
+        0
+      ],
+      "known": 6129,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443669122EDR_F0251238NCAM00352M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443669122EDR_F0251238NCAM00352M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443669122EDR_F0251238NCAM00352M1.JPG",
+      "counts": [
+        0,
+        10,
+        8691,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        2,
+        8699,
+        0
+      ],
+      "known": 8701,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560311785EDR_F0661112NCAM00273M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560311785EDR_F0661112NCAM00273M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560311785EDR_F0661112NCAM00273M1.JPG",
+      "counts": [
+        0,
+        214,
+        4037,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        106,
+        4145,
+        0
+      ],
+      "known": 4251,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107562EDR_F0410748NCAM00354M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107562EDR_F0410748NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107562EDR_F0410748NCAM00354M1.JPG",
+      "counts": [
+        0,
+        110,
+        4953,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        44,
+        5019,
+        0
+      ],
+      "known": 5063,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442598077EDR_F0250312NCAM00281M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442598077EDR_F0250312NCAM00281M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442598077EDR_F0250312NCAM00281M1.JPG",
+      "counts": [
+        0,
+        269,
+        239,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        162,
+        346,
+        0
+      ],
+      "known": 508,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602651352EDR_F0732676NCAM00207M1_merged",
+      "group": "0732676",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602651352EDR_F0732676NCAM00207M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602651352EDR_F0732676NCAM00207M1.JPG",
+      "counts": [
+        0,
+        581,
+        6641,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        260,
+        6962,
+        0
+      ],
+      "known": 7222,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505898372EDR_F0521162NCAM12753M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505898372EDR_F0521162NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505898372EDR_F0521162NCAM12753M1.JPG",
+      "counts": [
+        450,
+        80,
+        2763,
+        1102
+      ],
+      "fixedHalfCounts": [
+        332,
+        27,
+        2816,
+        1220
+      ],
+      "known": 4395,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_512555058EDR_F0532644NCAM00264M1_merged",
+      "group": "0532644",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_512555058EDR_F0532644NCAM00264M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_512555058EDR_F0532644NCAM00264M1.JPG",
+      "counts": [
+        2395,
+        0,
+        2125,
+        304
+      ],
+      "fixedHalfCounts": [
+        2221,
+        0,
+        2125,
+        478
+      ],
+      "known": 4824,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_431511862EDR_F0150000NCAM00354M1_merged",
+      "group": "0150000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_431511862EDR_F0150000NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_431511862EDR_F0150000NCAM00354M1.JPG",
+      "counts": [
+        0,
+        25,
+        13437,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        6,
+        13456,
+        0
+      ],
+      "known": 13462,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565811686EDR_F0671016NCAM00261M1_merged",
+      "group": "0671016",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565811686EDR_F0671016NCAM00261M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565811686EDR_F0671016NCAM00261M1.JPG",
+      "counts": [
+        0,
+        3043,
+        382,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        2922,
+        503,
+        0
+      ],
+      "known": 3425,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443663198EDR_F0251238NCAM00353M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443663198EDR_F0251238NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443663198EDR_F0251238NCAM00353M1.JPG",
+      "counts": [
+        0,
+        0,
+        9982,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        9982,
+        0
+      ],
+      "known": 9982,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560312189EDR_F0661112NCAM00354M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560312189EDR_F0661112NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560312189EDR_F0661112NCAM00354M1.JPG",
+      "counts": [
+        0,
+        3,
+        7223,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        7226,
+        0
+      ],
+      "known": 7226,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_459291152EDR_F0391552NCAM00252M1_merged",
+      "group": "0391552",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_459291152EDR_F0391552NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_459291152EDR_F0391552NCAM00252M1.JPG",
+      "counts": [
+        0,
+        197,
+        2827,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        95,
+        2929,
+        0
+      ],
+      "known": 3024,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_527820910EDR_F0580000NCAM00654M1_merged",
+      "group": "0580000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_527820910EDR_F0580000NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_527820910EDR_F0580000NCAM00654M1.JPG",
+      "counts": [
+        660,
+        0,
+        1922,
+        69
+      ],
+      "fixedHalfCounts": [
+        609,
+        0,
+        1922,
+        120
+      ],
+      "known": 2651,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453781583EDR_F0320478NCAM00282M1_merged",
+      "group": "0320478",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453781583EDR_F0320478NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453781583EDR_F0320478NCAM00282M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442600447EDR_F0250312NCAM00282M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442600447EDR_F0250312NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442600447EDR_F0250312NCAM00282M1.JPG",
+      "counts": [
+        0,
+        768,
+        160,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        605,
+        323,
+        0
+      ],
+      "known": 928,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149600EDR_F0570774NCAM07753M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149600EDR_F0570774NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149600EDR_F0570774NCAM07753M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502516974EDR_F0511430NCAM09842M1_merged",
+      "group": "0511430",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502516974EDR_F0511430NCAM09842M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502516974EDR_F0511430NCAM09842M1.JPG",
+      "counts": [
+        9308,
+        0,
+        549,
+        75
+      ],
+      "fixedHalfCounts": [
+        9280,
+        0,
+        549,
+        103
+      ],
+      "known": 9932,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_520359112EDR_F0550940NCAM00654M1_merged",
+      "group": "0550940",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_520359112EDR_F0550940NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_520359112EDR_F0550940NCAM00654M1.JPG",
+      "counts": [
+        76,
+        286,
+        2864,
+        0
+      ],
+      "fixedHalfCounts": [
+        72,
+        192,
+        2958,
+        4
+      ],
+      "known": 3226,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149485EDR_F0570774NCAM07753M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149485EDR_F0570774NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149485EDR_F0570774NCAM07753M1.JPG",
+      "counts": [
+        219,
+        0,
+        1404,
+        2
+      ],
+      "fixedHalfCounts": [
+        212,
+        0,
+        1404,
+        9
+      ],
+      "known": 1625,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602665055EDR_F0732958NCAM00272M1_merged",
+      "group": "0732958",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602665055EDR_F0732958NCAM00272M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602665055EDR_F0732958NCAM00272M1.JPG",
+      "counts": [
+        0,
+        2283,
+        2933,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1982,
+        3234,
+        0
+      ],
+      "known": 5216,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492665102EDR_F0490294NCAM00295M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492665102EDR_F0490294NCAM00295M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492665102EDR_F0490294NCAM00295M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457072755EDR_F0371542NCAM00274M1_merged",
+      "group": "0371542",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457072755EDR_F0371542NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457072755EDR_F0371542NCAM00274M1.JPG",
+      "counts": [
+        0,
+        571,
+        3829,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        446,
+        3954,
+        0
+      ],
+      "known": 4400,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457153056EDR_F0380000NCAM00354M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457153056EDR_F0380000NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457153056EDR_F0380000NCAM00354M1.JPG",
+      "counts": [
+        8006,
+        0,
+        0,
+        2481
+      ],
+      "fixedHalfCounts": [
+        7575,
+        0,
+        0,
+        2912
+      ],
+      "known": 10487,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_431511807EDR_F0150000NCAM00291M1_merged",
+      "group": "0150000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_431511807EDR_F0150000NCAM00291M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_431511807EDR_F0150000NCAM00291M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_459278092EDR_F0391396NCAM00207M1_merged",
+      "group": "0391396",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_459278092EDR_F0391396NCAM00207M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_459278092EDR_F0391396NCAM00207M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570073400EDR_F0672884NCAM00284M1_merged",
+      "group": "0672884",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570073400EDR_F0672884NCAM00284M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570073400EDR_F0672884NCAM00284M1.JPG",
+      "counts": [
+        0,
+        4876,
+        3980,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        4095,
+        4761,
+        0
+      ],
+      "known": 8856,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664901EDR_F0490294NCAM00295M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664901EDR_F0490294NCAM00295M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664901EDR_F0490294NCAM00295M1.JPG",
+      "counts": [
+        0,
+        7,
+        602,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        609,
+        0
+      ],
+      "known": 609,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_454577808EDR_F0330660NCAM00350M1_merged",
+      "group": "0330660",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_454577808EDR_F0330660NCAM00350M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_454577808EDR_F0330660NCAM00350M1.JPG",
+      "counts": [
+        0,
+        377,
+        8938,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        231,
+        9084,
+        0
+      ],
+      "known": 9315,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_512555867EDR_F0532644NCAM07753M1_merged",
+      "group": "0532644",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_512555867EDR_F0532644NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_512555867EDR_F0532644NCAM07753M1.JPG",
+      "counts": [
+        104,
+        99,
+        3061,
+        15
+      ],
+      "fixedHalfCounts": [
+        95,
+        47,
+        3113,
+        24
+      ],
+      "known": 3279,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565022931EDR_F0670216NCAM00252M1_merged",
+      "group": "0670216",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565022931EDR_F0670216NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565022931EDR_F0670216NCAM00252M1.JPG",
+      "counts": [
+        0,
+        24,
+        13281,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        14,
+        13291,
+        0
+      ],
+      "known": 13305,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442591818EDR_F0250254NCAM00470M1_merged",
+      "group": "0250254",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442591818EDR_F0250254NCAM00470M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442591818EDR_F0250254NCAM00470M1.JPG",
+      "counts": [
+        0,
+        10,
+        1142,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3,
+        1149,
+        0
+      ],
+      "known": 1152,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_455642480EDR_F0340774NCAM00252M1_merged",
+      "group": "0340774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_455642480EDR_F0340774NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_455642480EDR_F0340774NCAM00252M1.JPG",
+      "counts": [
+        0,
+        5382,
+        4767,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        4955,
+        5194,
+        0
+      ],
+      "known": 10149,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560302217EDR_F0660952NCAM00320M1_merged",
+      "group": "0660952",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560302217EDR_F0660952NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560302217EDR_F0660952NCAM00320M1.JPG",
+      "counts": [
+        0,
+        549,
+        2047,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        340,
+        2256,
+        0
+      ],
+      "known": 2596,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565367106EDR_F0670650NCAM00353M1_merged",
+      "group": "0670650",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565367106EDR_F0670650NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565367106EDR_F0670650NCAM00353M1.JPG",
+      "counts": [
+        0,
+        0,
+        1418,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        1418,
+        0
+      ],
+      "known": 1418,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_537938493EDR_F0601266NCAM00653M1_merged",
+      "group": "0601266",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_537938493EDR_F0601266NCAM00653M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_537938493EDR_F0601266NCAM00653M1.JPG",
+      "counts": [
+        4570,
+        30,
+        2071,
+        1
+      ],
+      "fixedHalfCounts": [
+        4560,
+        18,
+        2083,
+        11
+      ],
+      "known": 6672,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_436384203EDR_F0211362NCAM00279M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436384203EDR_F0211362NCAM00279M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436384203EDR_F0211362NCAM00279M1.JPG",
+      "counts": [
+        0,
+        2,
+        873,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        875,
+        0
+      ],
+      "known": 875,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078090EDR_F0681626NCAM00256M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078090EDR_F0681626NCAM00256M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078090EDR_F0681626NCAM00256M1.JPG",
+      "counts": [
+        0,
+        94,
+        92,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        68,
+        118,
+        0
+      ],
+      "known": 186,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463813296EDR_F0420000NCAM06094M1_merged",
+      "group": "0420000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463813296EDR_F0420000NCAM06094M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463813296EDR_F0420000NCAM06094M1.JPG",
+      "counts": [
+        0,
+        164,
+        11615,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        47,
+        11732,
+        0
+      ],
+      "known": 11779,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107249EDR_F0410748NCAM00274M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107249EDR_F0410748NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107249EDR_F0410748NCAM00274M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_543357548EDR_F0613076NCAM00287M1_merged",
+      "group": "0613076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_543357548EDR_F0613076NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_543357548EDR_F0613076NCAM00287M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439225843EDR_F0240000NCAM00267M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439225843EDR_F0240000NCAM00267M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439225843EDR_F0240000NCAM00267M1.JPG",
+      "counts": [
+        0,
+        109,
+        3619,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        85,
+        3643,
+        0
+      ],
+      "known": 3728,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565373417EDR_F0670650NCAM12753M1_merged",
+      "group": "0670650",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565373417EDR_F0670650NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565373417EDR_F0670650NCAM12753M1.JPG",
+      "counts": [
+        0,
+        0,
+        4445,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        4445,
+        0
+      ],
+      "known": 4445,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565023199EDR_F0670216NCAM00312M1_merged",
+      "group": "0670216",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565023199EDR_F0670216NCAM00312M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565023199EDR_F0670216NCAM00312M1.JPG",
+      "counts": [
+        0,
+        0,
+        8488,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        8488,
+        0
+      ],
+      "known": 8488,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457153643EDR_F0380000NCAM00276M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457153643EDR_F0380000NCAM00276M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457153643EDR_F0380000NCAM00276M1.JPG",
+      "counts": [
+        5360,
+        205,
+        650,
+        0
+      ],
+      "fixedHalfCounts": [
+        5358,
+        125,
+        730,
+        2
+      ],
+      "known": 6215,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448279299EDR_F0300484NCAM00299M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448279299EDR_F0300484NCAM00299M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448279299EDR_F0300484NCAM00299M1.JPG",
+      "counts": [
+        0,
+        3,
+        6403,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        6406,
+        0
+      ],
+      "known": 6406,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463814255EDR_F0420000NCAM00278M1_merged",
+      "group": "0420000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463814255EDR_F0420000NCAM00278M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463814255EDR_F0420000NCAM00278M1.JPG",
+      "counts": [
+        0,
+        63,
+        5283,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        36,
+        5310,
+        0
+      ],
+      "known": 5346,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457072541EDR_F0371542NCAM00274M1_merged",
+      "group": "0371542",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457072541EDR_F0371542NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457072541EDR_F0371542NCAM00274M1.JPG",
+      "counts": [
+        0,
+        384,
+        2975,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        272,
+        3087,
+        0
+      ],
+      "known": 3359,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613583763EDR_F0760568NCAM00354M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613583763EDR_F0760568NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613583763EDR_F0760568NCAM00354M1.JPG",
+      "counts": [
+        0,
+        4,
+        13987,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1,
+        13990,
+        0
+      ],
+      "known": 13991,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502517100EDR_F0511430NCAM09842M1_merged",
+      "group": "0511430",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502517100EDR_F0511430NCAM09842M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502517100EDR_F0511430NCAM09842M1.JPG",
+      "counts": [
+        11142,
+        0,
+        0,
+        1079
+      ],
+      "fixedHalfCounts": [
+        10635,
+        0,
+        0,
+        1586
+      ],
+      "known": 12221,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556756244EDR_F0651642NCAM00285M1_merged",
+      "group": "0651642",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556756244EDR_F0651642NCAM00285M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556756244EDR_F0651642NCAM00285M1.JPG",
+      "counts": [
+        3746,
+        3,
+        646,
+        39
+      ],
+      "fixedHalfCounts": [
+        3725,
+        0,
+        649,
+        60
+      ],
+      "known": 4434,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_409036068EDR_F0051606NCAM00348M1_merged",
+      "group": "0051606",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_409036068EDR_F0051606NCAM00348M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_409036068EDR_F0051606NCAM00348M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_431511171EDR_F0150000NCAM00290M1_merged",
+      "group": "0150000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_431511171EDR_F0150000NCAM00290M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_431511171EDR_F0150000NCAM00290M1.JPG",
+      "counts": [
+        0,
+        589,
+        5229,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        427,
+        5391,
+        0
+      ],
+      "known": 5818,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448280142EDR_F0300484NCAM00250M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448280142EDR_F0300484NCAM00250M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448280142EDR_F0300484NCAM00250M1.JPG",
+      "counts": [
+        0,
+        1683,
+        3660,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1438,
+        3905,
+        0
+      ],
+      "known": 5343,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602664684EDR_F0732958NCAM00312M1_merged",
+      "group": "0732958",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602664684EDR_F0732958NCAM00312M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602664684EDR_F0732958NCAM00312M1.JPG",
+      "counts": [
+        0,
+        1064,
+        13616,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        738,
+        13942,
+        0
+      ],
+      "known": 14680,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_512555804EDR_F0532644NCAM07753M1_merged",
+      "group": "0532644",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_512555804EDR_F0532644NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_512555804EDR_F0532644NCAM07753M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502516548EDR_F0511430NCAM00353M1_merged",
+      "group": "0511430",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502516548EDR_F0511430NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502516548EDR_F0511430NCAM00353M1.JPG",
+      "counts": [
+        11084,
+        0,
+        0,
+        289
+      ],
+      "fixedHalfCounts": [
+        11043,
+        0,
+        0,
+        330
+      ],
+      "known": 11373,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439225957EDR_F0240000NCAM00267M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439225957EDR_F0240000NCAM00267M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439225957EDR_F0240000NCAM00267M1.JPG",
+      "counts": [
+        0,
+        1543,
+        454,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1368,
+        629,
+        0
+      ],
+      "known": 1997,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_527821074EDR_F0580000NCAM07753M1_merged",
+      "group": "0580000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_527821074EDR_F0580000NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_527821074EDR_F0580000NCAM07753M1.JPG",
+      "counts": [
+        170,
+        0,
+        0,
+        83
+      ],
+      "fixedHalfCounts": [
+        116,
+        0,
+        0,
+        137
+      ],
+      "known": 253,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_541040424EDR_F0610954NCAM00305M1_merged",
+      "group": "0610954",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_541040424EDR_F0610954NCAM00305M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_541040424EDR_F0610954NCAM00305M1.JPG",
+      "counts": [
+        1698,
+        625,
+        2791,
+        690
+      ],
+      "fixedHalfCounts": [
+        1391,
+        382,
+        3034,
+        997
+      ],
+      "known": 5804,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500661727EDR_F0503076NCAM07753M1_merged",
+      "group": "0503076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500661727EDR_F0503076NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500661727EDR_F0503076NCAM07753M1.JPG",
+      "counts": [
+        0,
+        13,
+        10214,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        8,
+        10219,
+        0
+      ],
+      "known": 10227,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_454577689EDR_F0330660NCAM00350M1_merged",
+      "group": "0330660",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_454577689EDR_F0330660NCAM00350M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_454577689EDR_F0330660NCAM00350M1.JPG",
+      "counts": [
+        0,
+        0,
+        13783,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        13783,
+        0
+      ],
+      "known": 13783,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560311842EDR_F0661112NCAM00273M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560311842EDR_F0661112NCAM00273M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560311842EDR_F0661112NCAM00273M1.JPG",
+      "counts": [
+        0,
+        48,
+        5899,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        16,
+        5931,
+        0
+      ],
+      "known": 5947,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453781647EDR_F0320478NCAM00282M1_merged",
+      "group": "0320478",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453781647EDR_F0320478NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453781647EDR_F0320478NCAM00282M1.JPG",
+      "counts": [
+        0,
+        78,
+        12331,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        23,
+        12386,
+        0
+      ],
+      "known": 12409,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602664101EDR_F0732958NCAM00375M1_merged",
+      "group": "0732958",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602664101EDR_F0732958NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602664101EDR_F0732958NCAM00375M1.JPG",
+      "counts": [
+        0,
+        1401,
+        9046,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        894,
+        9553,
+        0
+      ],
+      "known": 10447,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613584326EDR_F0760568NCAM00281M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613584326EDR_F0760568NCAM00281M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613584326EDR_F0760568NCAM00281M1.JPG",
+      "counts": [
+        100,
+        5146,
+        1497,
+        0
+      ],
+      "fixedHalfCounts": [
+        100,
+        4984,
+        1659,
+        0
+      ],
+      "known": 6743,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_541042107EDR_F0611086NCAM00385M1_merged",
+      "group": "0611086",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_541042107EDR_F0611086NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_541042107EDR_F0611086NCAM00385M1.JPG",
+      "counts": [
+        10143,
+        0,
+        0,
+        91
+      ],
+      "fixedHalfCounts": [
+        10085,
+        0,
+        0,
+        149
+      ],
+      "known": 10234,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_537932733EDR_F0600888NCAM00320M1_merged",
+      "group": "0600888",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_537932733EDR_F0600888NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_537932733EDR_F0600888NCAM00320M1.JPG",
+      "counts": [
+        3824,
+        65,
+        372,
+        207
+      ],
+      "fixedHalfCounts": [
+        3697,
+        23,
+        414,
+        334
+      ],
+      "known": 4468,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_454577912EDR_F0330660NCAM00292M1_merged",
+      "group": "0330660",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_454577912EDR_F0330660NCAM00292M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_454577912EDR_F0330660NCAM00292M1.JPG",
+      "counts": [
+        0,
+        98,
+        9362,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        52,
+        9408,
+        0
+      ],
+      "known": 9460,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149367EDR_F0570774NCAM00654M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149367EDR_F0570774NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149367EDR_F0570774NCAM00654M1.JPG",
+      "counts": [
+        220,
+        232,
+        3460,
+        0
+      ],
+      "fixedHalfCounts": [
+        218,
+        116,
+        3576,
+        2
+      ],
+      "known": 3912,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_428304547EDR_F0100508NCAM05114M1_merged",
+      "group": "0100508",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_428304547EDR_F0100508NCAM05114M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_428304547EDR_F0100508NCAM05114M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_459291220EDR_F0391552NCAM00252M1_merged",
+      "group": "0391552",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_459291220EDR_F0391552NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_459291220EDR_F0391552NCAM00252M1.JPG",
+      "counts": [
+        0,
+        929,
+        7399,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        699,
+        7629,
+        0
+      ],
+      "known": 8328,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457064954EDR_F0371542NCAM00354M1_merged",
+      "group": "0371542",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457064954EDR_F0371542NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457064954EDR_F0371542NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577090699EDR_F0691858NCAM00287M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577090699EDR_F0691858NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577090699EDR_F0691858NCAM00287M1.JPG",
+      "counts": [
+        5080,
+        0,
+        227,
+        0
+      ],
+      "fixedHalfCounts": [
+        5078,
+        0,
+        227,
+        2
+      ],
+      "known": 5307,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_455642442EDR_F0340774NCAM00252M1_merged",
+      "group": "0340774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_455642442EDR_F0340774NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_455642442EDR_F0340774NCAM00252M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_428304492EDR_F0100508NCAM05114M1_merged",
+      "group": "0100508",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_428304492EDR_F0100508NCAM05114M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_428304492EDR_F0100508NCAM05114M1.JPG",
+      "counts": [
+        0,
+        357,
+        5156,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        184,
+        5329,
+        0
+      ],
+      "known": 5513,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528875763EDR_F0581002NCAM00207M1_merged",
+      "group": "0581002",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528875763EDR_F0581002NCAM00207M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528875763EDR_F0581002NCAM00207M1.JPG",
+      "counts": [
+        289,
+        150,
+        3008,
+        5
+      ],
+      "fixedHalfCounts": [
+        286,
+        77,
+        3081,
+        8
+      ],
+      "known": 3452,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558363908EDR_F0660000NCAM00375M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558363908EDR_F0660000NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558363908EDR_F0660000NCAM00375M1.JPG",
+      "counts": [
+        0,
+        2621,
+        6008,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1599,
+        7030,
+        0
+      ],
+      "known": 8629,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_409037112EDR_F0051662NCAM05703M1_merged",
+      "group": "0051662",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_409037112EDR_F0051662NCAM05703M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_409037112EDR_F0051662NCAM05703M1.JPG",
+      "counts": [
+        0,
+        554,
+        5030,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        422,
+        5162,
+        0
+      ],
+      "known": 5584,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_527820942EDR_F0580000NCAM00654M1_merged",
+      "group": "0580000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_527820942EDR_F0580000NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_527820942EDR_F0580000NCAM00654M1.JPG",
+      "counts": [
+        1660,
+        2,
+        2809,
+        250
+      ],
+      "fixedHalfCounts": [
+        1516,
+        0,
+        2811,
+        394
+      ],
+      "known": 4721,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542734078EDR_F0612232NCAM00654M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542734078EDR_F0612232NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542734078EDR_F0612232NCAM00654M1.JPG",
+      "counts": [
+        8752,
+        0,
+        0,
+        209
+      ],
+      "fixedHalfCounts": [
+        8693,
+        0,
+        0,
+        268
+      ],
+      "known": 8961,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558364034EDR_F0660000NCAM00252M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558364034EDR_F0660000NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558364034EDR_F0660000NCAM00252M1.JPG",
+      "counts": [
+        0,
+        60,
+        13456,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        20,
+        13496,
+        0
+      ],
+      "known": 13516,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505898763EDR_F0521162NCAM00353M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505898763EDR_F0521162NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505898763EDR_F0521162NCAM00353M1.JPG",
+      "counts": [
+        3433,
+        0,
+        542,
+        2691
+      ],
+      "fixedHalfCounts": [
+        2679,
+        0,
+        542,
+        3445
+      ],
+      "known": 6666,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500661664EDR_F0503076NCAM07753M1_merged",
+      "group": "0503076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500661664EDR_F0503076NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500661664EDR_F0503076NCAM07753M1.JPG",
+      "counts": [
+        0,
+        434,
+        7619,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        126,
+        7927,
+        0
+      ],
+      "known": 8053,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565365464EDR_F0670550NCAM00385M1_merged",
+      "group": "0670550",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565365464EDR_F0670550NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565365464EDR_F0670550NCAM00385M1.JPG",
+      "counts": [
+        0,
+        12,
+        9592,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1,
+        9603,
+        0
+      ],
+      "known": 9604,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439226019EDR_F0240000NCAM00267M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439226019EDR_F0240000NCAM00267M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439226019EDR_F0240000NCAM00267M1.JPG",
+      "counts": [
+        0,
+        0,
+        726,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        726,
+        0
+      ],
+      "known": 726,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565810401EDR_F0670962NCAM00386M1_merged",
+      "group": "0670962",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565810401EDR_F0670962NCAM00386M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565810401EDR_F0670962NCAM00386M1.JPG",
+      "counts": [
+        0,
+        224,
+        15540,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        122,
+        15642,
+        0
+      ],
+      "known": 15764,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493998022EDR_F0491876NCAM00257M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493998022EDR_F0491876NCAM00257M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493998022EDR_F0491876NCAM00257M1.JPG",
+      "counts": [
+        472,
+        12,
+        3180,
+        42
+      ],
+      "fixedHalfCounts": [
+        447,
+        2,
+        3190,
+        67
+      ],
+      "known": 3706,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453781520EDR_F0320478NCAM00282M1_merged",
+      "group": "0320478",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453781520EDR_F0320478NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453781520EDR_F0320478NCAM00282M1.JPG",
+      "counts": [
+        0,
+        1420,
+        1379,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1219,
+        1580,
+        0
+      ],
+      "known": 2799,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442600208EDR_F0250312NCAM00282M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442600208EDR_F0250312NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442600208EDR_F0250312NCAM00282M1.JPG",
+      "counts": [
+        0,
+        84,
+        4203,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        28,
+        4259,
+        0
+      ],
+      "known": 4287,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556764172EDR_F0651642NCAM07753M1_merged",
+      "group": "0651642",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556764172EDR_F0651642NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556764172EDR_F0651642NCAM07753M1.JPG",
+      "counts": [
+        2225,
+        3,
+        437,
+        159
+      ],
+      "fixedHalfCounts": [
+        2124,
+        0,
+        440,
+        260
+      ],
+      "known": 2824,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570074025EDR_F0672884NCAM00285M1_merged",
+      "group": "0672884",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570074025EDR_F0672884NCAM00285M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570074025EDR_F0672884NCAM00285M1.JPG",
+      "counts": [
+        0,
+        623,
+        5963,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        565,
+        6021,
+        0
+      ],
+      "known": 6586,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500656502EDR_F0503076NCAM00353M1_merged",
+      "group": "0503076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500656502EDR_F0503076NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500656502EDR_F0503076NCAM00353M1.JPG",
+      "counts": [
+        0,
+        50,
+        2014,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        36,
+        2028,
+        0
+      ],
+      "known": 2064,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500661565EDR_F0503076NCAM00354M1_merged",
+      "group": "0503076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500661565EDR_F0503076NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500661565EDR_F0503076NCAM00354M1.JPG",
+      "counts": [
+        0,
+        255,
+        1340,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        228,
+        1367,
+        0
+      ],
+      "known": 1595,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500655478EDR_F0503000NCAM00385M1_merged",
+      "group": "0503000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500655478EDR_F0503000NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500655478EDR_F0503000NCAM00385M1.JPG",
+      "counts": [
+        0,
+        1,
+        7073,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        7074,
+        0
+      ],
+      "known": 7074,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078665EDR_F0681626NCAM07753M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078665EDR_F0681626NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078665EDR_F0681626NCAM07753M1.JPG",
+      "counts": [
+        0,
+        53,
+        5733,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        19,
+        5767,
+        0
+      ],
+      "known": 5786,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552682049EDR_F0642088NCAM07753M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552682049EDR_F0642088NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552682049EDR_F0642088NCAM07753M1.JPG",
+      "counts": [
+        12755,
+        0,
+        0,
+        57
+      ],
+      "fixedHalfCounts": [
+        12679,
+        0,
+        0,
+        133
+      ],
+      "known": 12812,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552677513EDR_F0642088NCAM00255M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552677513EDR_F0642088NCAM00255M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552677513EDR_F0642088NCAM00255M1.JPG",
+      "counts": [
+        2597,
+        24,
+        61,
+        1
+      ],
+      "fixedHalfCounts": [
+        2594,
+        8,
+        77,
+        4
+      ],
+      "known": 2683,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439225164EDR_F0240000NCAM05113M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439225164EDR_F0240000NCAM05113M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439225164EDR_F0240000NCAM05113M1.JPG",
+      "counts": [
+        0,
+        0,
+        6047,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        6047,
+        0
+      ],
+      "known": 6047,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_455642594EDR_F0340774NCAM00252M1_merged",
+      "group": "0340774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_455642594EDR_F0340774NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_455642594EDR_F0340774NCAM00252M1.JPG",
+      "counts": [
+        0,
+        3696,
+        21,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3658,
+        59,
+        0
+      ],
+      "known": 3717,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565022734EDR_F0670216NCAM00375M1_merged",
+      "group": "0670216",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565022734EDR_F0670216NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565022734EDR_F0670216NCAM00375M1.JPG",
+      "counts": [
+        0,
+        119,
+        3708,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        57,
+        3770,
+        0
+      ],
+      "known": 3827,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613582793EDR_F0760556NCAM00385M1_merged",
+      "group": "0760556",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613582793EDR_F0760556NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613582793EDR_F0760556NCAM00385M1.JPG",
+      "counts": [
+        0,
+        97,
+        14207,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        49,
+        14255,
+        0
+      ],
+      "known": 14304,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_427501146EDR_F0080590NCAM00385M1_merged",
+      "group": "0080590",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_427501146EDR_F0080590NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_427501146EDR_F0080590NCAM00385M1.JPG",
+      "counts": [
+        0,
+        0,
+        13805,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        13805,
+        0
+      ],
+      "known": 13805,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542734110EDR_F0612232NCAM00654M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542734110EDR_F0612232NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542734110EDR_F0612232NCAM00654M1.JPG",
+      "counts": [
+        12834,
+        0,
+        0,
+        215
+      ],
+      "fixedHalfCounts": [
+        12795,
+        0,
+        0,
+        254
+      ],
+      "known": 13049,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_459291038EDR_F0391552NCAM00252M1_merged",
+      "group": "0391552",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_459291038EDR_F0391552NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_459291038EDR_F0391552NCAM00252M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_548047620EDR_F0630346NCAM00320M1_merged",
+      "group": "0630346",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_548047620EDR_F0630346NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_548047620EDR_F0630346NCAM00320M1.JPG",
+      "counts": [
+        839,
+        573,
+        4588,
+        8
+      ],
+      "fixedHalfCounts": [
+        821,
+        364,
+        4797,
+        26
+      ],
+      "known": 6008,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565373114EDR_F0670650NCAM12753M1_merged",
+      "group": "0670650",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565373114EDR_F0670650NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565373114EDR_F0670650NCAM12753M1.JPG",
+      "counts": [
+        0,
+        534,
+        8487,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        382,
+        8639,
+        0
+      ],
+      "known": 9021,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463814438EDR_F0420000NCAM00278M1_merged",
+      "group": "0420000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463814438EDR_F0420000NCAM00278M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463814438EDR_F0420000NCAM00278M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107626EDR_F0410748NCAM00354M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107626EDR_F0410748NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107626EDR_F0410748NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        6816,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        6816,
+        0
+      ],
+      "known": 6816,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577080310EDR_F0691768NCAM00320M1_merged",
+      "group": "0691768",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577080310EDR_F0691768NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577080310EDR_F0691768NCAM00320M1.JPG",
+      "counts": [
+        0,
+        1496,
+        5846,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1013,
+        6329,
+        0
+      ],
+      "known": 7342,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443668744EDR_F0251238NCAM00292M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443668744EDR_F0251238NCAM00292M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443668744EDR_F0251238NCAM00292M1.JPG",
+      "counts": [
+        0,
+        781,
+        2778,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        174,
+        3385,
+        0
+      ],
+      "known": 3559,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_601414568EDR_F0731482NCAM00253M1_merged",
+      "group": "0731482",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_601414568EDR_F0731482NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_601414568EDR_F0731482NCAM00253M1.JPG",
+      "counts": [
+        0,
+        1,
+        7743,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        7744,
+        0
+      ],
+      "known": 7744,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552677608EDR_F0642088NCAM00255M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552677608EDR_F0642088NCAM00255M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552677608EDR_F0642088NCAM00255M1.JPG",
+      "counts": [
+        13350,
+        0,
+        0,
+        1502
+      ],
+      "fixedHalfCounts": [
+        12723,
+        0,
+        0,
+        2129
+      ],
+      "known": 14852,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565811345EDR_F0671016NCAM00261M1_merged",
+      "group": "0671016",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565811345EDR_F0671016NCAM00261M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565811345EDR_F0671016NCAM00261M1.JPG",
+      "counts": [
+        0,
+        5955,
+        826,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        5628,
+        1153,
+        0
+      ],
+      "known": 6781,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_548058260EDR_F0630766NCAM00375M1_merged",
+      "group": "0630766",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_548058260EDR_F0630766NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_548058260EDR_F0630766NCAM00375M1.JPG",
+      "counts": [
+        825,
+        86,
+        1620,
+        89
+      ],
+      "fixedHalfCounts": [
+        820,
+        69,
+        1637,
+        94
+      ],
+      "known": 2620,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556763962EDR_F0651642NCAM07753M1_merged",
+      "group": "0651642",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556763962EDR_F0651642NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556763962EDR_F0651642NCAM07753M1.JPG",
+      "counts": [
+        9048,
+        0,
+        484,
+        224
+      ],
+      "fixedHalfCounts": [
+        8872,
+        0,
+        484,
+        400
+      ],
+      "known": 9756,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558365006EDR_F0660000NCAM00253M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558365006EDR_F0660000NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558365006EDR_F0660000NCAM00253M1.JPG",
+      "counts": [
+        0,
+        0,
+        2969,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        2969,
+        0
+      ],
+      "known": 2969,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_537938609EDR_F0601266NCAM07753M1_merged",
+      "group": "0601266",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_537938609EDR_F0601266NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_537938609EDR_F0601266NCAM07753M1.JPG",
+      "counts": [
+        1626,
+        2,
+        254,
+        0
+      ],
+      "fixedHalfCounts": [
+        1622,
+        0,
+        256,
+        4
+      ],
+      "known": 1882,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_459290932EDR_F0391552NCAM00354M1_merged",
+      "group": "0391552",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_459290932EDR_F0391552NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_459290932EDR_F0391552NCAM00354M1.JPG",
+      "counts": [
+        0,
+        34,
+        5622,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        8,
+        5648,
+        0
+      ],
+      "known": 5656,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613583192EDR_F0760568NCAM00375M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613583192EDR_F0760568NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613583192EDR_F0760568NCAM00375M1.JPG",
+      "counts": [
+        0,
+        51,
+        9208,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        10,
+        9249,
+        0
+      ],
+      "known": 9259,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505891855EDR_F0521112NCAM00319M1_merged",
+      "group": "0521112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505891855EDR_F0521112NCAM00319M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505891855EDR_F0521112NCAM00319M1.JPG",
+      "counts": [
+        2231,
+        0,
+        0,
+        3631
+      ],
+      "fixedHalfCounts": [
+        1126,
+        0,
+        0,
+        4736
+      ],
+      "known": 5862,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457153706EDR_F0380000NCAM00276M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457153706EDR_F0380000NCAM00276M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457153706EDR_F0380000NCAM00276M1.JPG",
+      "counts": [
+        5894,
+        99,
+        753,
+        41
+      ],
+      "fixedHalfCounts": [
+        5793,
+        74,
+        778,
+        142
+      ],
+      "known": 6787,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493998141EDR_F0491876NCAM00257M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493998141EDR_F0491876NCAM00257M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493998141EDR_F0491876NCAM00257M1.JPG",
+      "counts": [
+        819,
+        6,
+        312,
+        13
+      ],
+      "fixedHalfCounts": [
+        804,
+        1,
+        317,
+        28
+      ],
+      "known": 1150,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_462743799EDR_F0410322NCAM00271M1_merged",
+      "group": "0410322",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_462743799EDR_F0410322NCAM00271M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_462743799EDR_F0410322NCAM00271M1.JPG",
+      "counts": [
+        0,
+        0,
+        3089,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        3089,
+        0
+      ],
+      "known": 3089,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439226061EDR_F0240000NCAM00350M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439226061EDR_F0240000NCAM00350M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439226061EDR_F0240000NCAM00350M1.JPG",
+      "counts": [
+        0,
+        0,
+        1473,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        1473,
+        0
+      ],
+      "known": 1473,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_548057490EDR_F0630724NCAM00385M1_merged",
+      "group": "0630724",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_548057490EDR_F0630724NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_548057490EDR_F0630724NCAM00385M1.JPG",
+      "counts": [
+        355,
+        30,
+        3724,
+        5
+      ],
+      "fixedHalfCounts": [
+        344,
+        7,
+        3747,
+        16
+      ],
+      "known": 4114,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_520359399EDR_F0550940NCAM07753M1_merged",
+      "group": "0550940",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_520359399EDR_F0550940NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_520359399EDR_F0550940NCAM07753M1.JPG",
+      "counts": [
+        0,
+        0,
+        404,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        404,
+        0
+      ],
+      "known": 404,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565023322EDR_F0670216NCAM00253M1_merged",
+      "group": "0670216",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565023322EDR_F0670216NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565023322EDR_F0670216NCAM00253M1.JPG",
+      "counts": [
+        0,
+        2204,
+        10150,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1551,
+        10803,
+        0
+      ],
+      "known": 12354,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493997775EDR_F0491876NCAM00256M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493997775EDR_F0491876NCAM00256M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493997775EDR_F0491876NCAM00256M1.JPG",
+      "counts": [
+        692,
+        384,
+        1494,
+        1
+      ],
+      "fixedHalfCounts": [
+        692,
+        283,
+        1595,
+        1
+      ],
+      "known": 2571,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664625EDR_F0490294NCAM00354M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664625EDR_F0490294NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664625EDR_F0490294NCAM00354M1.JPG",
+      "counts": [
+        178,
+        86,
+        2786,
+        0
+      ],
+      "fixedHalfCounts": [
+        177,
+        50,
+        2822,
+        1
+      ],
+      "known": 3050,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149027EDR_F0570774NCAM00287M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149027EDR_F0570774NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149027EDR_F0570774NCAM00287M1.JPG",
+      "counts": [
+        0,
+        10,
+        3561,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        4,
+        3567,
+        0
+      ],
+      "known": 3571,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_504390796EDR_F0520004NCAM00354M1_merged",
+      "group": "0520004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_504390796EDR_F0520004NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_504390796EDR_F0520004NCAM00354M1.JPG",
+      "counts": [
+        217,
+        75,
+        5111,
+        720
+      ],
+      "fixedHalfCounts": [
+        137,
+        32,
+        5154,
+        800
+      ],
+      "known": 6123,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442593301EDR_F0250312NCAM00353M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442593301EDR_F0250312NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442593301EDR_F0250312NCAM00353M1.JPG",
+      "counts": [
+        0,
+        285,
+        6414,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        135,
+        6564,
+        0
+      ],
+      "known": 6699,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_504391195EDR_F0520004NCAM07753M1_merged",
+      "group": "0520004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_504391195EDR_F0520004NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_504391195EDR_F0520004NCAM07753M1.JPG",
+      "counts": [
+        1428,
+        225,
+        3061,
+        6154
+      ],
+      "fixedHalfCounts": [
+        1068,
+        77,
+        3209,
+        6514
+      ],
+      "known": 10868,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664554EDR_F0490294NCAM00354M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664554EDR_F0490294NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664554EDR_F0490294NCAM00354M1.JPG",
+      "counts": [
+        964,
+        82,
+        1690,
+        2
+      ],
+      "fixedHalfCounts": [
+        961,
+        35,
+        1737,
+        5
+      ],
+      "known": 2738,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453776957EDR_F0320204NCAM00498M1_merged",
+      "group": "0320204",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453776957EDR_F0320204NCAM00498M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453776957EDR_F0320204NCAM00498M1.JPG",
+      "counts": [
+        293,
+        160,
+        12079,
+        40
+      ],
+      "fixedHalfCounts": [
+        263,
+        91,
+        12148,
+        70
+      ],
+      "known": 12572,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_409036860EDR_F0051662NCAM00346M1_merged",
+      "group": "0051662",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_409036860EDR_F0051662NCAM00346M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_409036860EDR_F0051662NCAM00346M1.JPG",
+      "counts": [
+        73,
+        62,
+        1270,
+        6
+      ],
+      "fixedHalfCounts": [
+        68,
+        43,
+        1289,
+        11
+      ],
+      "known": 1411,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565022803EDR_F0670216NCAM00252M1_merged",
+      "group": "0670216",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565022803EDR_F0670216NCAM00252M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565022803EDR_F0670216NCAM00252M1.JPG",
+      "counts": [
+        818,
+        1582,
+        1438,
+        22
+      ],
+      "fixedHalfCounts": [
+        802,
+        1391,
+        1629,
+        38
+      ],
+      "known": 3860,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463814148EDR_F0420000NCAM00354M1_merged",
+      "group": "0420000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463814148EDR_F0420000NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463814148EDR_F0420000NCAM00354M1.JPG",
+      "counts": [
+        0,
+        4,
+        14199,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        14203,
+        0
+      ],
+      "known": 14203,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_520359279EDR_F0550940NCAM07753M1_merged",
+      "group": "0550940",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_520359279EDR_F0550940NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_520359279EDR_F0550940NCAM07753M1.JPG",
+      "counts": [
+        141,
+        8,
+        3129,
+        0
+      ],
+      "fixedHalfCounts": [
+        141,
+        1,
+        3136,
+        0
+      ],
+      "known": 3278,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_541049254EDR_F0611140NCAM12753M1_merged",
+      "group": "0611140",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_541049254EDR_F0611140NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_541049254EDR_F0611140NCAM12753M1.JPG",
+      "counts": [
+        525,
+        0,
+        52,
+        186
+      ],
+      "fixedHalfCounts": [
+        411,
+        0,
+        52,
+        300
+      ],
+      "known": 763,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664724EDR_F0490294NCAM00296M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664724EDR_F0490294NCAM00296M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664724EDR_F0490294NCAM00296M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442598204EDR_F0250312NCAM00281M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442598204EDR_F0250312NCAM00281M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442598204EDR_F0250312NCAM00281M1.JPG",
+      "counts": [
+        60,
+        137,
+        6865,
+        21
+      ],
+      "fixedHalfCounts": [
+        46,
+        54,
+        6948,
+        35
+      ],
+      "known": 7083,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149717EDR_F0570774NCAM07753M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149717EDR_F0570774NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149717EDR_F0570774NCAM07753M1.JPG",
+      "counts": [
+        121,
+        179,
+        2239,
+        2
+      ],
+      "fixedHalfCounts": [
+        119,
+        135,
+        2283,
+        4
+      ],
+      "known": 2541,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_548063838EDR_F0630766NCAM07753M1_merged",
+      "group": "0630766",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_548063838EDR_F0630766NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_548063838EDR_F0630766NCAM07753M1.JPG",
+      "counts": [
+        0,
+        0,
+        802,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        802,
+        0
+      ],
+      "known": 802,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556418003EDR_F0651174NCAM00320M1_merged",
+      "group": "0651174",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556418003EDR_F0651174NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556418003EDR_F0651174NCAM00320M1.JPG",
+      "counts": [
+        5291,
+        2,
+        565,
+        112
+      ],
+      "fixedHalfCounts": [
+        5260,
+        0,
+        567,
+        143
+      ],
+      "known": 5970,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_504390285EDR_F0520004NCAM00353M1_merged",
+      "group": "0520004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_504390285EDR_F0520004NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_504390285EDR_F0520004NCAM00353M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613583373EDR_F0760568NCAM00280M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613583373EDR_F0760568NCAM00280M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613583373EDR_F0760568NCAM00280M1.JPG",
+      "counts": [
+        0,
+        5158,
+        7242,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        4423,
+        7977,
+        0
+      ],
+      "known": 12400,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_409036993EDR_F0051662NCAM05703M1_merged",
+      "group": "0051662",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_409036993EDR_F0051662NCAM05703M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_409036993EDR_F0051662NCAM05703M1.JPG",
+      "counts": [
+        0,
+        10,
+        2297,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        2,
+        2305,
+        0
+      ],
+      "known": 2307,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664235EDR_F0490294NCAM00294M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664235EDR_F0490294NCAM00294M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664235EDR_F0490294NCAM00294M1.JPG",
+      "counts": [
+        0,
+        440,
+        1472,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        335,
+        1577,
+        0
+      ],
+      "known": 1912,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664291EDR_F0490294NCAM00294M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664291EDR_F0490294NCAM00294M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664291EDR_F0490294NCAM00294M1.JPG",
+      "counts": [
+        0,
+        13,
+        339,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        7,
+        345,
+        0
+      ],
+      "known": 352,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560316500EDR_F0661112NCAM00274M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560316500EDR_F0661112NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560316500EDR_F0661112NCAM00274M1.JPG",
+      "counts": [
+        0,
+        85,
+        10403,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        44,
+        10444,
+        0
+      ],
+      "known": 10488,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_512555645EDR_F0532644NCAM00354M1_merged",
+      "group": "0532644",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_512555645EDR_F0532644NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_512555645EDR_F0532644NCAM00354M1.JPG",
+      "counts": [
+        1154,
+        0,
+        0,
+        676
+      ],
+      "fixedHalfCounts": [
+        881,
+        0,
+        0,
+        949
+      ],
+      "known": 1830,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500661784EDR_F0503076NCAM07753M1_merged",
+      "group": "0503076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500661784EDR_F0503076NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500661784EDR_F0503076NCAM07753M1.JPG",
+      "counts": [
+        0,
+        5,
+        8356,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1,
+        8360,
+        0
+      ],
+      "known": 8361,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602664242EDR_F0732958NCAM00271M1_merged",
+      "group": "0732958",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602664242EDR_F0732958NCAM00271M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602664242EDR_F0732958NCAM00271M1.JPG",
+      "counts": [
+        0,
+        536,
+        8065,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        311,
+        8290,
+        0
+      ],
+      "known": 8601,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_512555120EDR_F0532644NCAM00264M1_merged",
+      "group": "0532644",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_512555120EDR_F0532644NCAM00264M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_512555120EDR_F0532644NCAM00264M1.JPG",
+      "counts": [
+        0,
+        344,
+        1637,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        186,
+        1795,
+        0
+      ],
+      "known": 1981,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_436383928EDR_F0211362NCAM00354M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436383928EDR_F0211362NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436383928EDR_F0211362NCAM00354M1.JPG",
+      "counts": [
+        0,
+        7,
+        3624,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1,
+        3630,
+        0
+      ],
+      "known": 3631,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565812047EDR_F0671016NCAM00312M1_merged",
+      "group": "0671016",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565812047EDR_F0671016NCAM00312M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565812047EDR_F0671016NCAM00312M1.JPG",
+      "counts": [
+        0,
+        259,
+        11530,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        175,
+        11614,
+        0
+      ],
+      "known": 11789,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542734362EDR_F0612232NCAM00283M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542734362EDR_F0612232NCAM00283M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542734362EDR_F0612232NCAM00283M1.JPG",
+      "counts": [
+        9080,
+        0,
+        0,
+        11
+      ],
+      "fixedHalfCounts": [
+        9058,
+        0,
+        0,
+        33
+      ],
+      "known": 9091,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565016252EDR_F0670180NCAM00385M1_merged",
+      "group": "0670180",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565016252EDR_F0670180NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565016252EDR_F0670180NCAM00385M1.JPG",
+      "counts": [
+        0,
+        860,
+        6639,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        566,
+        6933,
+        0
+      ],
+      "known": 7499,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558364943EDR_F0660000NCAM00253M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558364943EDR_F0660000NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558364943EDR_F0660000NCAM00253M1.JPG",
+      "counts": [
+        0,
+        5,
+        208,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1,
+        212,
+        0
+      ],
+      "known": 213,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448278207EDR_F0300432NCAM00380M1_merged",
+      "group": "0300432",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448278207EDR_F0300432NCAM00380M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448278207EDR_F0300432NCAM00380M1.JPG",
+      "counts": [
+        0,
+        50,
+        13658,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        6,
+        13702,
+        0
+      ],
+      "known": 13708,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528893540EDR_F0581248NCAM00654M1_merged",
+      "group": "0581248",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528893540EDR_F0581248NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528893540EDR_F0581248NCAM00654M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149424EDR_F0570774NCAM00654M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149424EDR_F0570774NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149424EDR_F0570774NCAM00654M1.JPG",
+      "counts": [
+        337,
+        236,
+        2963,
+        4
+      ],
+      "fixedHalfCounts": [
+        332,
+        140,
+        3059,
+        9
+      ],
+      "known": 3540,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_462744927EDR_F0410322NCAM00272M1_merged",
+      "group": "0410322",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_462744927EDR_F0410322NCAM00272M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_462744927EDR_F0410322NCAM00272M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525149336EDR_F0570774NCAM00654M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525149336EDR_F0570774NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525149336EDR_F0570774NCAM00654M1.JPG",
+      "counts": [
+        0,
+        109,
+        2314,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        38,
+        2385,
+        0
+      ],
+      "known": 2423,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560311891EDR_F0661112NCAM00273M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560311891EDR_F0661112NCAM00273M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560311891EDR_F0661112NCAM00273M1.JPG",
+      "counts": [
+        0,
+        278,
+        4767,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        130,
+        4915,
+        0
+      ],
+      "known": 5045,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_541043637EDR_F0611140NCAM00653M1_merged",
+      "group": "0611140",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_541043637EDR_F0611140NCAM00653M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_541043637EDR_F0611140NCAM00653M1.JPG",
+      "counts": [
+        6710,
+        157,
+        2217,
+        84
+      ],
+      "fixedHalfCounts": [
+        6599,
+        99,
+        2275,
+        195
+      ],
+      "known": 9168,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107797EDR_F0410748NCAM07753M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107797EDR_F0410748NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107797EDR_F0410748NCAM07753M1.JPG",
+      "counts": [
+        0,
+        92,
+        6194,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        28,
+        6258,
+        0
+      ],
+      "known": 6286,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_436384026EDR_F0211362NCAM00279M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436384026EDR_F0211362NCAM00279M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436384026EDR_F0211362NCAM00279M1.JPG",
+      "counts": [
+        0,
+        73,
+        10181,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        18,
+        10236,
+        0
+      ],
+      "known": 10254,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_431511659EDR_F0150000NCAM00291M1_merged",
+      "group": "0150000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_431511659EDR_F0150000NCAM00291M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_431511659EDR_F0150000NCAM00291M1.JPG",
+      "counts": [
+        0,
+        882,
+        11413,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        524,
+        11771,
+        0
+      ],
+      "known": 12295,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570073321EDR_F0672884NCAM00375M1_merged",
+      "group": "0672884",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570073321EDR_F0672884NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570073321EDR_F0672884NCAM00375M1.JPG",
+      "counts": [
+        0,
+        266,
+        9011,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        186,
+        9091,
+        0
+      ],
+      "known": 9277,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078440EDR_F0681626NCAM00354M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078440EDR_F0681626NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078440EDR_F0681626NCAM00354M1.JPG",
+      "counts": [
+        0,
+        304,
+        9784,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        230,
+        9858,
+        0
+      ],
+      "known": 10088,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_601415225EDR_F0731482NCAM00254M1_merged",
+      "group": "0731482",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_601415225EDR_F0731482NCAM00254M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_601415225EDR_F0731482NCAM00254M1.JPG",
+      "counts": [
+        0,
+        1895,
+        3442,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1517,
+        3820,
+        0
+      ],
+      "known": 5337,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565373904EDR_F0670650CCAM15903M1_merged",
+      "group": "0670650",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565373904EDR_F0670650CCAM15903M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565373904EDR_F0670650CCAM15903M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560311677EDR_F0661112NCAM00353M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560311677EDR_F0661112NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560311677EDR_F0661112NCAM00353M1.JPG",
+      "counts": [
+        0,
+        19,
+        3645,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        5,
+        3659,
+        0
+      ],
+      "known": 3664,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_504390846EDR_F0520004NCAM00354M1_merged",
+      "group": "0520004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_504390846EDR_F0520004NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_504390846EDR_F0520004NCAM00354M1.JPG",
+      "counts": [
+        363,
+        96,
+        3047,
+        616
+      ],
+      "fixedHalfCounts": [
+        233,
+        31,
+        3112,
+        746
+      ],
+      "known": 4122,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502515217EDR_F0511406NCAM00418M1_merged",
+      "group": "0511406",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502515217EDR_F0511406NCAM00418M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502515217EDR_F0511406NCAM00418M1.JPG",
+      "counts": [
+        4799,
+        0,
+        837,
+        941
+      ],
+      "fixedHalfCounts": [
+        4389,
+        0,
+        837,
+        1351
+      ],
+      "known": 6577,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_543357370EDR_F0613076NCAM00287M1_merged",
+      "group": "0613076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_543357370EDR_F0613076NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_543357370EDR_F0613076NCAM00287M1.JPG",
+      "counts": [
+        8604,
+        0,
+        0,
+        96
+      ],
+      "fixedHalfCounts": [
+        8506,
+        0,
+        0,
+        194
+      ],
+      "known": 8700,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_431511237EDR_F0150000NCAM00290M1_merged",
+      "group": "0150000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_431511237EDR_F0150000NCAM00290M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_431511237EDR_F0150000NCAM00290M1.JPG",
+      "counts": [
+        0,
+        362,
+        8188,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        271,
+        8279,
+        0
+      ],
+      "known": 8550,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_502512171EDR_F0511298NCAM00320M1_merged",
+      "group": "0511298",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_502512171EDR_F0511298NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_502512171EDR_F0511298NCAM00320M1.JPG",
+      "counts": [
+        8342,
+        0,
+        0,
+        596
+      ],
+      "fixedHalfCounts": [
+        8102,
+        0,
+        0,
+        836
+      ],
+      "known": 8938,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577090635EDR_F0691858NCAM00287M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577090635EDR_F0691858NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577090635EDR_F0691858NCAM00287M1.JPG",
+      "counts": [
+        1615,
+        17,
+        175,
+        22
+      ],
+      "fixedHalfCounts": [
+        1580,
+        1,
+        191,
+        57
+      ],
+      "known": 1829,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442600416EDR_F0250312NCAM00282M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442600416EDR_F0250312NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442600416EDR_F0250312NCAM00282M1.JPG",
+      "counts": [
+        66,
+        123,
+        334,
+        0
+      ],
+      "fixedHalfCounts": [
+        66,
+        96,
+        361,
+        0
+      ],
+      "known": 523,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_527821213EDR_F0580000NCAM07753M1_merged",
+      "group": "0580000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_527821213EDR_F0580000NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_527821213EDR_F0580000NCAM07753M1.JPG",
+      "counts": [
+        40,
+        60,
+        752,
+        5
+      ],
+      "fixedHalfCounts": [
+        30,
+        20,
+        792,
+        15
+      ],
+      "known": 857,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552676131EDR_F0642004NCAM00385M1_merged",
+      "group": "0642004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552676131EDR_F0642004NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552676131EDR_F0642004NCAM00385M1.JPG",
+      "counts": [
+        13921,
+        0,
+        0,
+        1216
+      ],
+      "fixedHalfCounts": [
+        13577,
+        0,
+        0,
+        1560
+      ],
+      "known": 15137,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_601414440EDR_F0731482NCAM00375M1_merged",
+      "group": "0731482",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_601414440EDR_F0731482NCAM00375M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_601414440EDR_F0731482NCAM00375M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493996330EDR_F0491846NCAM00385M1_merged",
+      "group": "0491846",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493996330EDR_F0491846NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493996330EDR_F0491846NCAM00385M1.JPG",
+      "counts": [
+        3035,
+        24,
+        2438,
+        84
+      ],
+      "fixedHalfCounts": [
+        2993,
+        8,
+        2454,
+        126
+      ],
+      "known": 5581,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493996945EDR_F0491876NCAM00353M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493996945EDR_F0491876NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493996945EDR_F0491876NCAM00353M1.JPG",
+      "counts": [
+        1067,
+        1083,
+        2554,
+        23
+      ],
+      "fixedHalfCounts": [
+        1036,
+        809,
+        2828,
+        54
+      ],
+      "known": 4727,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560316739EDR_F0661112NCAM00274M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560316739EDR_F0661112NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560316739EDR_F0661112NCAM00274M1.JPG",
+      "counts": [
+        0,
+        579,
+        2508,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        355,
+        2732,
+        0
+      ],
+      "known": 3087,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457152554EDR_F0380000NCAM00275M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457152554EDR_F0380000NCAM00275M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457152554EDR_F0380000NCAM00275M1.JPG",
+      "counts": [
+        10268,
+        78,
+        680,
+        55
+      ],
+      "fixedHalfCounts": [
+        10253,
+        36,
+        722,
+        70
+      ],
+      "known": 11081,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528893599EDR_F0581248NCAM00654M1_merged",
+      "group": "0581248",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528893599EDR_F0581248NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528893599EDR_F0581248NCAM00654M1.JPG",
+      "counts": [
+        0,
+        43,
+        5054,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        8,
+        5089,
+        0
+      ],
+      "known": 5097,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560310464EDR_F0661030NCAM00385M1_merged",
+      "group": "0661030",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560310464EDR_F0661030NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560310464EDR_F0661030NCAM00385M1.JPG",
+      "counts": [
+        0,
+        900,
+        8972,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        542,
+        9330,
+        0
+      ],
+      "known": 9872,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505898562EDR_F0521162NCAM12753M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505898562EDR_F0521162NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505898562EDR_F0521162NCAM12753M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453780775EDR_F0320478NCAM00353M1_merged",
+      "group": "0320478",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453780775EDR_F0320478NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453780775EDR_F0320478NCAM00353M1.JPG",
+      "counts": [
+        0,
+        295,
+        10868,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        212,
+        10951,
+        0
+      ],
+      "known": 11163,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_601421002EDR_F0731482CCAM05295M1_merged",
+      "group": "0731482",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_601421002EDR_F0731482CCAM05295M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_601421002EDR_F0731482CCAM05295M1.JPG",
+      "counts": [
+        0,
+        22,
+        9149,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        8,
+        9163,
+        0
+      ],
+      "known": 9171,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_525148881EDR_F0570774NCAM00353M1_merged",
+      "group": "0570774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_525148881EDR_F0570774NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_525148881EDR_F0570774NCAM00353M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107836EDR_F0410748NCAM07753M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107836EDR_F0410748NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107836EDR_F0410748NCAM07753M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_548058358EDR_F0630766NCAM00273M1_merged",
+      "group": "0630766",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_548058358EDR_F0630766NCAM00273M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_548058358EDR_F0630766NCAM00273M1.JPG",
+      "counts": [
+        1194,
+        0,
+        1432,
+        97
+      ],
+      "fixedHalfCounts": [
+        1122,
+        0,
+        1432,
+        169
+      ],
+      "known": 2723,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_409036116EDR_F0051606NCAM00348M1_merged",
+      "group": "0051606",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_409036116EDR_F0051606NCAM00348M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_409036116EDR_F0051606NCAM00348M1.JPG",
+      "counts": [
+        0,
+        1256,
+        6492,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        779,
+        6969,
+        0
+      ],
+      "known": 7748,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505898310EDR_F0521162NCAM12753M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505898310EDR_F0521162NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505898310EDR_F0521162NCAM12753M1.JPG",
+      "counts": [
+        187,
+        166,
+        1950,
+        168
+      ],
+      "fixedHalfCounts": [
+        126,
+        56,
+        2060,
+        229
+      ],
+      "known": 2471,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_428304609EDR_F0100508NCAM05114M1_merged",
+      "group": "0100508",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_428304609EDR_F0100508NCAM05114M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_428304609EDR_F0100508NCAM05114M1.JPG",
+      "counts": [
+        0,
+        416,
+        10886,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        261,
+        11041,
+        0
+      ],
+      "known": 11302,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_543357433EDR_F0613076NCAM00287M1_merged",
+      "group": "0613076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_543357433EDR_F0613076NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_543357433EDR_F0613076NCAM00287M1.JPG",
+      "counts": [
+        4413,
+        0,
+        0,
+        219
+      ],
+      "fixedHalfCounts": [
+        4376,
+        0,
+        0,
+        256
+      ],
+      "known": 4632,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528892900EDR_F0581248NCAM00262M1_merged",
+      "group": "0581248",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528892900EDR_F0581248NCAM00262M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528892900EDR_F0581248NCAM00262M1.JPG",
+      "counts": [
+        0,
+        16,
+        3644,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        5,
+        3655,
+        0
+      ],
+      "known": 3660,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_431505395EDR_F0141388NCAM00385M1_merged",
+      "group": "0141388",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_431505395EDR_F0141388NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_431505395EDR_F0141388NCAM00385M1.JPG",
+      "counts": [
+        0,
+        0,
+        11533,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        11533,
+        0
+      ],
+      "known": 11533,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505898711EDR_F0521162NCAM12753M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505898711EDR_F0521162NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505898711EDR_F0521162NCAM12753M1.JPG",
+      "counts": [
+        2042,
+        3,
+        782,
+        2430
+      ],
+      "fixedHalfCounts": [
+        1461,
+        0,
+        785,
+        3011
+      ],
+      "known": 5257,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_520358689EDR_F0550940NCAM00299M1_merged",
+      "group": "0550940",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_520358689EDR_F0550940NCAM00299M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_520358689EDR_F0550940NCAM00299M1.JPG",
+      "counts": [
+        0,
+        11,
+        1721,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        7,
+        1725,
+        0
+      ],
+      "known": 1732,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574071379EDR_F0681556NCAM00379M1_merged",
+      "group": "0681556",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574071379EDR_F0681556NCAM00379M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574071379EDR_F0681556NCAM00379M1.JPG",
+      "counts": [
+        0,
+        0,
+        7291,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        7291,
+        0
+      ],
+      "known": 7291,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556756606EDR_F0651642NCAM00312M1_merged",
+      "group": "0651642",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556756606EDR_F0651642NCAM00312M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556756606EDR_F0651642NCAM00312M1.JPG",
+      "counts": [
+        9861,
+        48,
+        880,
+        19
+      ],
+      "fixedHalfCounts": [
+        9845,
+        32,
+        896,
+        35
+      ],
+      "known": 10808,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493997715EDR_F0491876NCAM00256M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493997715EDR_F0491876NCAM00256M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493997715EDR_F0491876NCAM00256M1.JPG",
+      "counts": [
+        2759,
+        0,
+        1176,
+        152
+      ],
+      "fixedHalfCounts": [
+        2684,
+        0,
+        1176,
+        227
+      ],
+      "known": 4087,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442592358EDR_F0250272NCAM00385M1_merged",
+      "group": "0250272",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442592358EDR_F0250272NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442592358EDR_F0250272NCAM00385M1.JPG",
+      "counts": [
+        0,
+        142,
+        8267,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        45,
+        8364,
+        0
+      ],
+      "known": 8409,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107697EDR_F0410748NCAM00354M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107697EDR_F0410748NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107697EDR_F0410748NCAM00354M1.JPG",
+      "counts": [
+        0,
+        177,
+        5349,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        63,
+        5463,
+        0
+      ],
+      "known": 5526,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443663326EDR_F0251238NCAM00289M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443663326EDR_F0251238NCAM00289M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443663326EDR_F0251238NCAM00289M1.JPG",
+      "counts": [
+        0,
+        0,
+        10209,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        10209,
+        0
+      ],
+      "known": 10209,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542733799EDR_F0612232NCAM00353M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542733799EDR_F0612232NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542733799EDR_F0612232NCAM00353M1.JPG",
+      "counts": [
+        7973,
+        17,
+        211,
+        283
+      ],
+      "fixedHalfCounts": [
+        7739,
+        1,
+        227,
+        517
+      ],
+      "known": 8484,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_556756308EDR_F0651642NCAM00285M1_merged",
+      "group": "0651642",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_556756308EDR_F0651642NCAM00285M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_556756308EDR_F0651642NCAM00285M1.JPG",
+      "counts": [
+        6228,
+        22,
+        1253,
+        48
+      ],
+      "fixedHalfCounts": [
+        6205,
+        13,
+        1262,
+        71
+      ],
+      "known": 7551,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_442600163EDR_F0250312NCAM00350M1_merged",
+      "group": "0250312",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_442600163EDR_F0250312NCAM00350M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_442600163EDR_F0250312NCAM00350M1.JPG",
+      "counts": [
+        0,
+        1,
+        9529,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        9530,
+        0
+      ],
+      "known": 9530,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439225105EDR_F0240000NCAM00346M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439225105EDR_F0240000NCAM00346M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439225105EDR_F0240000NCAM00346M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443668921EDR_F0251238NCAM00292M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443668921EDR_F0251238NCAM00292M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443668921EDR_F0251238NCAM00292M1.JPG",
+      "counts": [
+        0,
+        3949,
+        756,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3668,
+        1037,
+        0
+      ],
+      "known": 4705,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_527820640EDR_F0580000NCAM00253M1_merged",
+      "group": "0580000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_527820640EDR_F0580000NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_527820640EDR_F0580000NCAM00253M1.JPG",
+      "counts": [
+        182,
+        0,
+        5534,
+        58
+      ],
+      "fixedHalfCounts": [
+        125,
+        0,
+        5534,
+        115
+      ],
+      "known": 5774,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457152468EDR_F0380000NCAM00346M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457152468EDR_F0380000NCAM00346M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457152468EDR_F0380000NCAM00346M1.JPG",
+      "counts": [
+        5582,
+        0,
+        0,
+        34
+      ],
+      "fixedHalfCounts": [
+        5545,
+        0,
+        0,
+        71
+      ],
+      "known": 5616,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457065016EDR_F0371542NCAM00354M1_merged",
+      "group": "0371542",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457065016EDR_F0371542NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457065016EDR_F0371542NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        10581,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        10581,
+        0
+      ],
+      "known": 10581,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577090763EDR_F0691858NCAM00287M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577090763EDR_F0691858NCAM00287M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577090763EDR_F0691858NCAM00287M1.JPG",
+      "counts": [
+        2242,
+        181,
+        2690,
+        6
+      ],
+      "fixedHalfCounts": [
+        2230,
+        130,
+        2741,
+        18
+      ],
+      "known": 5119,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443668806EDR_F0251238NCAM00292M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443668806EDR_F0251238NCAM00292M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443668806EDR_F0251238NCAM00292M1.JPG",
+      "counts": [
+        0,
+        1332,
+        3687,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        832,
+        4187,
+        0
+      ],
+      "known": 5019,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463099226EDR_F0410712NCAM00385M1_merged",
+      "group": "0410712",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463099226EDR_F0410712NCAM00385M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463099226EDR_F0410712NCAM00385M1.JPG",
+      "counts": [
+        0,
+        49,
+        7537,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        25,
+        7561,
+        0
+      ],
+      "known": 7586,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613564331EDR_F0760274NCAM00320M1_merged",
+      "group": "0760274",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613564331EDR_F0760274NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613564331EDR_F0760274NCAM00320M1.JPG",
+      "counts": [
+        0,
+        16,
+        6294,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        5,
+        6305,
+        0
+      ],
+      "known": 6310,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505898434EDR_F0521162NCAM12753M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505898434EDR_F0521162NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505898434EDR_F0521162NCAM12753M1.JPG",
+      "counts": [
+        7898,
+        0,
+        0,
+        3774
+      ],
+      "fixedHalfCounts": [
+        7076,
+        0,
+        0,
+        4596
+      ],
+      "known": 11672,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_520359057EDR_F0550940NCAM00654M1_merged",
+      "group": "0550940",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_520359057EDR_F0550940NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_520359057EDR_F0550940NCAM00654M1.JPG",
+      "counts": [
+        427,
+        418,
+        1440,
+        11
+      ],
+      "fixedHalfCounts": [
+        414,
+        307,
+        1551,
+        24
+      ],
+      "known": 2296,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_520358799EDR_F0550940NCAM00299M1_merged",
+      "group": "0550940",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_520358799EDR_F0550940NCAM00299M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_520358799EDR_F0550940NCAM00299M1.JPG",
+      "counts": [
+        0,
+        276,
+        9135,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        156,
+        9255,
+        0
+      ],
+      "known": 9411,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_558365068EDR_F0660000NCAM00253M1_merged",
+      "group": "0660000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_558365068EDR_F0660000NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_558365068EDR_F0660000NCAM00253M1.JPG",
+      "counts": [
+        0,
+        494,
+        8388,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        376,
+        8506,
+        0
+      ],
+      "known": 8882,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577090148EDR_F0691858NCAM00286M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577090148EDR_F0691858NCAM00286M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577090148EDR_F0691858NCAM00286M1.JPG",
+      "counts": [
+        0,
+        113,
+        355,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        60,
+        408,
+        0
+      ],
+      "known": 468,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107188EDR_F0410748NCAM00274M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107188EDR_F0410748NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107188EDR_F0410748NCAM00274M1.JPG",
+      "counts": [
+        955,
+        1,
+        1269,
+        1532
+      ],
+      "fixedHalfCounts": [
+        778,
+        0,
+        1270,
+        1709
+      ],
+      "known": 3757,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_500661494EDR_F0503076NCAM00354M1_merged",
+      "group": "0503076",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_500661494EDR_F0503076NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_500661494EDR_F0503076NCAM00354M1.JPG",
+      "counts": [
+        0,
+        355,
+        7616,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        276,
+        7695,
+        0
+      ],
+      "known": 7971,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565366137EDR_F0670604NCAM00257M1_merged",
+      "group": "0670604",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565366137EDR_F0670604NCAM00257M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565366137EDR_F0670604NCAM00257M1.JPG",
+      "counts": [
+        0,
+        242,
+        3926,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        204,
+        3964,
+        0
+      ],
+      "known": 4168,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577090437EDR_F0691858NCAM00312M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577090437EDR_F0691858NCAM00312M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577090437EDR_F0691858NCAM00312M1.JPG",
+      "counts": [
+        5699,
+        0,
+        0,
+        31
+      ],
+      "fixedHalfCounts": [
+        5663,
+        0,
+        0,
+        67
+      ],
+      "known": 5730,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493997895EDR_F0491876NCAM00354M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493997895EDR_F0491876NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493997895EDR_F0491876NCAM00354M1.JPG",
+      "counts": [
+        596,
+        421,
+        4799,
+        0
+      ],
+      "fixedHalfCounts": [
+        594,
+        186,
+        5034,
+        2
+      ],
+      "known": 5816,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_462744982EDR_F0410322NCAM00272M1_merged",
+      "group": "0410322",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_462744982EDR_F0410322NCAM00272M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_462744982EDR_F0410322NCAM00272M1.JPG",
+      "counts": [
+        0,
+        35,
+        6767,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        6,
+        6796,
+        0
+      ],
+      "known": 6802,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_560316562EDR_F0661112NCAM00274M1_merged",
+      "group": "0661112",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_560316562EDR_F0661112NCAM00274M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_560316562EDR_F0661112NCAM00274M1.JPG",
+      "counts": [
+        0,
+        470,
+        7706,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        180,
+        7996,
+        0
+      ],
+      "known": 8176,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443663262EDR_F0251238NCAM00289M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443663262EDR_F0251238NCAM00289M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443663262EDR_F0251238NCAM00289M1.JPG",
+      "counts": [
+        0,
+        295,
+        4001,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        206,
+        4090,
+        0
+      ],
+      "known": 4296,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577089970EDR_F0691858NCAM00286M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577089970EDR_F0691858NCAM00286M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577089970EDR_F0691858NCAM00286M1.JPG",
+      "counts": [
+        435,
+        311,
+        5441,
+        3
+      ],
+      "fixedHalfCounts": [
+        430,
+        217,
+        5535,
+        8
+      ],
+      "known": 6190,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457064543EDR_F0371542NCAM00273M1_merged",
+      "group": "0371542",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457064543EDR_F0371542NCAM00273M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457064543EDR_F0371542NCAM00273M1.JPG",
+      "counts": [
+        44,
+        204,
+        3937,
+        51
+      ],
+      "fixedHalfCounts": [
+        37,
+        118,
+        4023,
+        58
+      ],
+      "known": 4236,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457065086EDR_F0371542NCAM00354M1_merged",
+      "group": "0371542",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457065086EDR_F0371542NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457065086EDR_F0371542NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        4872,
+        107
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        4872,
+        107
+      ],
+      "known": 4979,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_453777056EDR_F0320204NCAM00497M1_merged",
+      "group": "0320204",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_453777056EDR_F0320204NCAM00497M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_453777056EDR_F0320204NCAM00497M1.JPG",
+      "counts": [
+        0,
+        836,
+        14294,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        555,
+        14575,
+        0
+      ],
+      "known": 15130,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552682173EDR_F0642088NCAM07753M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552682173EDR_F0642088NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552682173EDR_F0642088NCAM07753M1.JPG",
+      "counts": [
+        1714,
+        8,
+        183,
+        452
+      ],
+      "fixedHalfCounts": [
+        1651,
+        2,
+        189,
+        515
+      ],
+      "known": 2357,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_601414993EDR_F0731482NCAM00254M1_merged",
+      "group": "0731482",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_601414993EDR_F0731482NCAM00254M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_601414993EDR_F0731482NCAM00254M1.JPG",
+      "counts": [
+        0,
+        728,
+        6612,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        538,
+        6802,
+        0
+      ],
+      "known": 7340,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574061102EDR_F0681232NCAM00320M1_merged",
+      "group": "0681232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574061102EDR_F0681232NCAM00320M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574061102EDR_F0681232NCAM00320M1.JPG",
+      "counts": [
+        0,
+        77,
+        1583,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        33,
+        1627,
+        0
+      ],
+      "known": 1660,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_570073456EDR_F0672884NCAM00284M1_merged",
+      "group": "0672884",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_570073456EDR_F0672884NCAM00284M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_570073456EDR_F0672884NCAM00284M1.JPG",
+      "counts": [
+        0,
+        463,
+        5577,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        292,
+        5748,
+        0
+      ],
+      "known": 6040,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_436380133EDR_F0211362NCAM00278M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436380133EDR_F0211362NCAM00278M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436380133EDR_F0211362NCAM00278M1.JPG",
+      "counts": [
+        0,
+        0,
+        2040,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        2040,
+        0
+      ],
+      "known": 2040,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_493997974EDR_F0491876NCAM00354M1_merged",
+      "group": "0491876",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_493997974EDR_F0491876NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_493997974EDR_F0491876NCAM00354M1.JPG",
+      "counts": [
+        1494,
+        357,
+        787,
+        50
+      ],
+      "fixedHalfCounts": [
+        1476,
+        135,
+        1009,
+        68
+      ],
+      "known": 2688,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_462744768EDR_F0410322NCAM00354M1_merged",
+      "group": "0410322",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_462744768EDR_F0410322NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_462744768EDR_F0410322NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574072088EDR_F0681616NCAM00257M1_merged",
+      "group": "0681616",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574072088EDR_F0681616NCAM00257M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574072088EDR_F0681616NCAM00257M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542730497EDR_F0612232NCAM00282M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542730497EDR_F0612232NCAM00282M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542730497EDR_F0612232NCAM00282M1.JPG",
+      "counts": [
+        6961,
+        0,
+        0,
+        17
+      ],
+      "fixedHalfCounts": [
+        6901,
+        0,
+        0,
+        77
+      ],
+      "known": 6978,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448279988EDR_F0300484NCAM00250M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448279988EDR_F0300484NCAM00250M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448279988EDR_F0300484NCAM00250M1.JPG",
+      "counts": [
+        0,
+        2030,
+        9310,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1508,
+        9832,
+        0
+      ],
+      "known": 11340,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_439225290EDR_F0240000NCAM05113M1_merged",
+      "group": "0240000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_439225290EDR_F0240000NCAM05113M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_439225290EDR_F0240000NCAM05113M1.JPG",
+      "counts": [
+        0,
+        18,
+        515,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        5,
+        528,
+        0
+      ],
+      "known": 533,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613583877EDR_F0760568NCAM00354M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613583877EDR_F0760568NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613583877EDR_F0760568NCAM00354M1.JPG",
+      "counts": [
+        0,
+        9,
+        9737,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        9746,
+        0
+      ],
+      "known": 9746,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_454576834EDR_F0330660NCAM00291M1_merged",
+      "group": "0330660",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_454576834EDR_F0330660NCAM00291M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_454576834EDR_F0330660NCAM00291M1.JPG",
+      "counts": [
+        0,
+        1017,
+        4984,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        861,
+        5140,
+        0
+      ],
+      "known": 6001,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565373298EDR_F0670650NCAM12753M1_merged",
+      "group": "0670650",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565373298EDR_F0670650NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565373298EDR_F0670650NCAM12753M1.JPG",
+      "counts": [
+        0,
+        2183,
+        155,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        2087,
+        251,
+        0
+      ],
+      "known": 2338,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_443669058EDR_F0251238NCAM00352M1_merged",
+      "group": "0251238",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_443669058EDR_F0251238NCAM00352M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_443669058EDR_F0251238NCAM00352M1.JPG",
+      "counts": [
+        0,
+        2,
+        12007,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        12009,
+        0
+      ],
+      "known": 12009,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457153156EDR_F0380000NCAM00354M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457153156EDR_F0380000NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457153156EDR_F0380000NCAM00354M1.JPG",
+      "counts": [
+        7093,
+        0,
+        0,
+        365
+      ],
+      "fixedHalfCounts": [
+        6949,
+        0,
+        0,
+        509
+      ],
+      "known": 7458,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_427503509EDR_F0080610NCAM00253M1_merged",
+      "group": "0080610",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_427503509EDR_F0080610NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_427503509EDR_F0080610NCAM00253M1.JPG",
+      "counts": [
+        0,
+        4297,
+        1429,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3748,
+        1978,
+        0
+      ],
+      "known": 5726,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542738036EDR_F0612232CCAM15903M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542738036EDR_F0612232CCAM15903M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542738036EDR_F0612232CCAM15903M1.JPG",
+      "counts": [
+        11603,
+        0,
+        0,
+        281
+      ],
+      "fixedHalfCounts": [
+        11477,
+        0,
+        0,
+        407
+      ],
+      "known": 11884,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463814218EDR_F0420000NCAM00354M1_merged",
+      "group": "0420000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463814218EDR_F0420000NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463814218EDR_F0420000NCAM00354M1.JPG",
+      "counts": [
+        0,
+        15,
+        9514,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3,
+        9526,
+        0
+      ],
+      "known": 9529,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463813170EDR_F0420000NCAM06094M1_merged",
+      "group": "0420000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463813170EDR_F0420000NCAM06094M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463813170EDR_F0420000NCAM06094M1.JPG",
+      "counts": [
+        3020,
+        718,
+        1847,
+        1
+      ],
+      "fixedHalfCounts": [
+        3018,
+        506,
+        2059,
+        3
+      ],
+      "known": 5586,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_527821275EDR_F0580000NCAM07753M1_merged",
+      "group": "0580000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_527821275EDR_F0580000NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_527821275EDR_F0580000NCAM07753M1.JPG",
+      "counts": [
+        0,
+        0,
+        1175,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        1175,
+        0
+      ],
+      "known": 1175,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_455641497EDR_F0340774NCAM00251M1_merged",
+      "group": "0340774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_455641497EDR_F0340774NCAM00251M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_455641497EDR_F0340774NCAM00251M1.JPG",
+      "counts": [
+        0,
+        1095,
+        11505,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        966,
+        11634,
+        0
+      ],
+      "known": 12600,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552678040EDR_F0642088NCAM00354M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552678040EDR_F0642088NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552678040EDR_F0642088NCAM00354M1.JPG",
+      "counts": [
+        7703,
+        0,
+        0,
+        68
+      ],
+      "fixedHalfCounts": [
+        7667,
+        0,
+        0,
+        104
+      ],
+      "known": 7771,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_552677384EDR_F0642088NCAM00376M1_merged",
+      "group": "0642088",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_552677384EDR_F0642088NCAM00376M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_552677384EDR_F0642088NCAM00376M1.JPG",
+      "counts": [
+        5694,
+        0,
+        0,
+        96
+      ],
+      "fixedHalfCounts": [
+        5629,
+        0,
+        0,
+        161
+      ],
+      "known": 5790,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_463107949EDR_F0410748NCAM07753M1_merged",
+      "group": "0410748",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_463107949EDR_F0410748NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_463107949EDR_F0410748NCAM07753M1.JPG",
+      "counts": [
+        0,
+        542,
+        3047,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        348,
+        3241,
+        0
+      ],
+      "known": 3589,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565811189EDR_F0671016NCAM00353M1_merged",
+      "group": "0671016",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565811189EDR_F0671016NCAM00353M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565811189EDR_F0671016NCAM00353M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_457153024EDR_F0380000NCAM00354M1_merged",
+      "group": "0380000",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_457153024EDR_F0380000NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_457153024EDR_F0380000NCAM00354M1.JPG",
+      "counts": [
+        2808,
+        0,
+        0,
+        3687
+      ],
+      "fixedHalfCounts": [
+        2274,
+        0,
+        0,
+        4221
+      ],
+      "known": 6495,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528893088EDR_F0581248NCAM07753M1_merged",
+      "group": "0581248",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528893088EDR_F0581248NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528893088EDR_F0581248NCAM07753M1.JPG",
+      "counts": [
+        0,
+        256,
+        1990,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        124,
+        2122,
+        0
+      ],
+      "known": 2246,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_455642279EDR_F0340774NCAM00354M1_merged",
+      "group": "0340774",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_455642279EDR_F0340774NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_455642279EDR_F0340774NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_613583340EDR_F0760568NCAM00280M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613583340EDR_F0760568NCAM00280M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613583340EDR_F0760568NCAM00280M1.JPG",
+      "counts": [
+        0,
+        386,
+        14660,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        311,
+        14735,
+        0
+      ],
+      "known": 15046,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_505900047EDR_F0521162NCAM00352M1_merged",
+      "group": "0521162",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_505900047EDR_F0521162NCAM00352M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_505900047EDR_F0521162NCAM00352M1.JPG",
+      "counts": [
+        9177,
+        0,
+        0,
+        5097
+      ],
+      "fixedHalfCounts": [
+        7990,
+        0,
+        0,
+        6284
+      ],
+      "known": 14274,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_528893506EDR_F0581248NCAM00654M1_merged",
+      "group": "0581248",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_528893506EDR_F0581248NCAM00654M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_528893506EDR_F0581248NCAM00654M1.JPG",
+      "counts": [
+        484,
+        150,
+        3481,
+        22
+      ],
+      "fixedHalfCounts": [
+        457,
+        81,
+        3550,
+        49
+      ],
+      "known": 4137,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_577090033EDR_F0691858NCAM00286M1_merged",
+      "group": "0691858",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_577090033EDR_F0691858NCAM00286M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_577090033EDR_F0691858NCAM00286M1.JPG",
+      "counts": [
+        0,
+        29,
+        3088,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        9,
+        3108,
+        0
+      ],
+      "known": 3117,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_448279809EDR_F0300484NCAM00354M1_merged",
+      "group": "0300484",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_448279809EDR_F0300484NCAM00354M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_448279809EDR_F0300484NCAM00354M1.JPG",
+      "counts": [
+        0,
+        0,
+        14684,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        14684,
+        0
+      ],
+      "known": 14684,
+      "sampled": 16384
+    },
+    {
+      "id": "NLA_602664178EDR_F0732958NCAM00271M1_merged",
+      "group": "0732958",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLA_602664178EDR_F0732958NCAM00271M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLA_602664178EDR_F0732958NCAM00271M1.JPG",
+      "counts": [
+        0,
+        1859,
+        3198,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        1626,
+        3431,
+        0
+      ],
+      "known": 5057,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_504391382EDR_F0520004NCAM07753M1_merged",
+      "group": "0520004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_504391382EDR_F0520004NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_504391382EDR_F0520004NCAM07753M1.JPG",
+      "counts": [
+        1859,
+        556,
+        1292,
+        271
+      ],
+      "fixedHalfCounts": [
+        1729,
+        318,
+        1530,
+        401
+      ],
+      "known": 3978,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565023592EDR_F0670216NCAM00253M1_merged",
+      "group": "0670216",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565023592EDR_F0670216NCAM00253M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565023592EDR_F0670216NCAM00253M1.JPG",
+      "counts": [
+        0,
+        3843,
+        619,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        3578,
+        884,
+        0
+      ],
+      "known": 4462,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078735EDR_F0681626NCAM07753M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078735EDR_F0681626NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078735EDR_F0681626NCAM07753M1.JPG",
+      "counts": [
+        0,
+        31,
+        797,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        17,
+        811,
+        0
+      ],
+      "known": 828,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_542734240EDR_F0612232NCAM00283M1_merged",
+      "group": "0612232",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_542734240EDR_F0612232NCAM00283M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_542734240EDR_F0612232NCAM00283M1.JPG",
+      "counts": [
+        6007,
+        0,
+        0,
+        15
+      ],
+      "fixedHalfCounts": [
+        5975,
+        0,
+        0,
+        47
+      ],
+      "known": 6022,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_492664173EDR_F0490294NCAM00294M1_merged",
+      "group": "0490294",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_492664173EDR_F0490294NCAM00294M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_492664173EDR_F0490294NCAM00294M1.JPG",
+      "counts": [
+        0,
+        173,
+        837,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        95,
+        915,
+        0
+      ],
+      "known": 1010,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_574078155EDR_F0681626NCAM00256M1_merged",
+      "group": "0681626",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_574078155EDR_F0681626NCAM00256M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_574078155EDR_F0681626NCAM00256M1.JPG",
+      "counts": [
+        0,
+        344,
+        1634,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        253,
+        1725,
+        0
+      ],
+      "known": 1978,
+      "sampled": 16384
+    },
+    {
+      "id": "NLB_565373360EDR_F0670650NCAM12753M1_merged",
+      "group": "0670650",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_565373360EDR_F0670650NCAM12753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_565373360EDR_F0670650NCAM12753M1.JPG",
+      "counts": [
+        0,
+        0,
+        3131,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        3131,
+        0
+      ],
+      "known": 3131,
+      "sampled": 16384
+    }
+  ],
+  "examples": [
+    {
+      "selection": "first-hash",
+      "id": "NLB_436384140EDR_F0211362NCAM00279M1_merged",
+      "group": "0211362",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_436384140EDR_F0211362NCAM00279M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_436384140EDR_F0211362NCAM00279M1.JPG",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "known": 0,
+      "sampled": 16384,
+      "overlay": "first-hash.jpg",
+      "routeAudit": null
+    },
+    {
+      "selection": "largest-false-positive-count",
+      "id": "NLB_613584057EDR_F0760568NCAM00281M1_merged",
+      "group": "0760568",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_613584057EDR_F0760568NCAM00281M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_613584057EDR_F0760568NCAM00281M1.JPG",
+      "counts": [
+        0,
+        6638,
+        2701,
+        0
+      ],
+      "fixedHalfCounts": [
+        0,
+        6011,
+        3328,
+        0
+      ],
+      "known": 9339,
+      "sampled": 16384,
+      "overlay": "largest-false-positive-count.jpg",
+      "routeAudit": {
+        "width": 128,
+        "height": 128,
+        "coordinateSystem": "image-lattice; 8 native pixels per step, no ground metres",
+        "coverage": "expert annotation availability used as common domain; not a deployed coverage estimator",
+        "start": 16064,
+        "target": 5879,
+        "baseline": {
+          "cells": 136,
+          "expertSandCells": 0,
+          "path": [
+            16064,
+            15936,
+            15808,
+            15680,
+            15552,
+            15424,
+            15296,
+            15168,
+            15040,
+            14912,
+            14784,
+            14656,
+            14528,
+            14400,
+            14272,
+            14144,
+            14016,
+            13888,
+            13760,
+            13632,
+            13504,
+            13376,
+            13248,
+            13120,
+            12992,
+            12864,
+            12736,
+            12608,
+            12480,
+            12352,
+            12224,
+            12096,
+            11968,
+            11840,
+            11712,
+            11584,
+            11456,
+            11328,
+            11200,
+            11072,
+            10944,
+            10816,
+            10688,
+            10560,
+            10432,
+            10304,
+            10176,
+            10048,
+            9920,
+            9792,
+            9664,
+            9536,
+            9408,
+            9280,
+            9152,
+            9024,
+            8896,
+            8768,
+            8640,
+            8512,
+            8384,
+            8256,
+            8128,
+            8000,
+            7872,
+            7744,
+            7616,
+            7488,
+            7360,
+            7232,
+            7104,
+            6976,
+            6848,
+            6720,
+            6592,
+            6593,
+            6594,
+            6595,
+            6596,
+            6597,
+            6469,
+            6470,
+            6471,
+            6472,
+            6473,
+            6474,
+            6475,
+            6476,
+            6477,
+            6349,
+            6350,
+            6351,
+            6352,
+            6353,
+            6354,
+            6355,
+            6356,
+            6357,
+            6358,
+            6359,
+            6360,
+            6361,
+            6362,
+            6363,
+            6235,
+            6236,
+            6237,
+            6238,
+            6239,
+            6111,
+            6112,
+            6113,
+            6114,
+            6115,
+            6116,
+            6117,
+            6118,
+            6119,
+            5991,
+            5992,
+            5993,
+            5994,
+            5995,
+            5996,
+            5997,
+            5998,
+            5999,
+            6000,
+            6001,
+            6002,
+            6003,
+            6004,
+            6005,
+            6006,
+            6007,
+            5879
+          ]
+        },
+        "predicted": null,
+        "expertReference": {
+          "cells": 136,
+          "expertSandCells": 0,
+          "path": [
+            16064,
+            15936,
+            15808,
+            15680,
+            15552,
+            15424,
+            15296,
+            15168,
+            15040,
+            14912,
+            14784,
+            14656,
+            14528,
+            14400,
+            14272,
+            14144,
+            14016,
+            13888,
+            13760,
+            13632,
+            13504,
+            13376,
+            13248,
+            13120,
+            12992,
+            12864,
+            12736,
+            12608,
+            12480,
+            12352,
+            12224,
+            12096,
+            11968,
+            11840,
+            11712,
+            11584,
+            11456,
+            11328,
+            11200,
+            11072,
+            10944,
+            10816,
+            10688,
+            10560,
+            10432,
+            10304,
+            10176,
+            10048,
+            9920,
+            9792,
+            9664,
+            9536,
+            9408,
+            9280,
+            9152,
+            9024,
+            8896,
+            8768,
+            8640,
+            8512,
+            8384,
+            8256,
+            8128,
+            8000,
+            7872,
+            7744,
+            7616,
+            7488,
+            7360,
+            7232,
+            7104,
+            6976,
+            6848,
+            6720,
+            6592,
+            6593,
+            6594,
+            6595,
+            6596,
+            6597,
+            6469,
+            6470,
+            6471,
+            6472,
+            6473,
+            6474,
+            6475,
+            6476,
+            6477,
+            6349,
+            6350,
+            6351,
+            6352,
+            6353,
+            6354,
+            6355,
+            6356,
+            6357,
+            6358,
+            6359,
+            6360,
+            6361,
+            6362,
+            6363,
+            6235,
+            6236,
+            6237,
+            6238,
+            6239,
+            6111,
+            6112,
+            6113,
+            6114,
+            6115,
+            6116,
+            6117,
+            6118,
+            6119,
+            5991,
+            5992,
+            5993,
+            5994,
+            5995,
+            5996,
+            5997,
+            5998,
+            5999,
+            6000,
+            6001,
+            6002,
+            6003,
+            6004,
+            6005,
+            6006,
+            6007,
+            5879
+          ]
+        }
+      }
+    },
+    {
+      "selection": "largest-miss-count",
+      "id": "NLB_504391195EDR_F0520004NCAM07753M1_merged",
+      "group": "0520004",
+      "labelMember": "ai4mars-dataset-merged-0.6/msl/ncam/labels/test/masked-gold-min3-100agree/NLB_504391195EDR_F0520004NCAM07753M1_merged.png",
+      "imageMember": "ai4mars-dataset-merged-0.6/msl/ncam/images/edr/NLB_504391195EDR_F0520004NCAM07753M1.JPG",
+      "counts": [
+        1428,
+        225,
+        3061,
+        6154
+      ],
+      "fixedHalfCounts": [
+        1068,
+        77,
+        3209,
+        6514
+      ],
+      "known": 10868,
+      "sampled": 16384,
+      "overlay": "largest-miss-count.jpg",
+      "routeAudit": {
+        "width": 128,
+        "height": 128,
+        "coordinateSystem": "image-lattice; 8 native pixels per step, no ground metres",
+        "coverage": "expert annotation availability used as common domain; not a deployed coverage estimator",
+        "start": 16205,
+        "target": 192,
+        "baseline": null,
+        "predicted": null,
+        "expertReference": null
+      }
+    }
+  ],
+  "slip": {
+    "matchedBeforeDriveOutcomes": 0,
+    "precision": null,
+    "recall": null,
+    "status": "No downloadable matched telemetry table obtained; published slip experiments not reproduced"
+  },
+  "deployment": {
+    "automaticPhysicalExclusionsAllowed": false,
+    "reason": "MSL Navcam appearance test does not validate Jezero orbital NOAH-H, Sol477 registration, soil support or astronaut sinkage.",
+    "localReviewRequired": true
+  },
+  "limitations": [
+    "Subsampled lattice, not full-resolution segmentation benchmark",
+    "128 training images; single frozen baseline; not a NASA flight classifier",
+    "Same site-drive removed from development; neighboring site-drives and repeated geological terrain can remain correlated",
+    "Confidence intervals bootstrap images, not independent drives or sites",
+    "Expert sand appearance is not measured slip, entrapment, or astronaut survival",
+    "Example route audits use image coordinates and oracle annotation coverage, not physical navigation"
+  ]
+}

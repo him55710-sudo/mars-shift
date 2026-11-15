@@ -47,3 +47,29 @@ pnpm build
 ```
 
 Only required members of the official ZIP are downloaded over verified byte ranges, with TLS verification retained. Each decompressed member passes ZIP CRC32 and has a published SHA-256. The full 16 GB archive MD5 is not verified by partial downloading. Cached original inputs and the locally fitted joblib model stay outside the repository. No downloaded pickle/model code is executed. Browser evaluation uses small precomputed reports and overlays; no training or per-frame inference runs inside the 3D renderer.
+
+
+## Measured results, 2026-11-15
+
+All 322 expert test images were processed, spanning 89 site-drive groups. Thirty-six had no agreed labels on the fixed sampled lattice. Confusion counts therefore come from 286 contributing images and 1,827,103 labeled lattice pixels, 34.63% of all sampled pixels.
+
+| Measure | Locked 0.40 threshold |
+| --- | ---: |
+| True sand detections (TP) | 427,643 |
+| False sand alarms (FP) | 133,539 |
+| Correct other-terrain predictions (TN) | 1,214,801 |
+| Missed sand (FN) | 51,120 |
+| Precision | 76.20% |
+| Recall | 89.32% |
+| False-positive rate, FP / (FP + TN) | 9.90% |
+| Miss rate, FN / (TP + FN) | 10.68% |
+| Sand IoU | 69.84% |
+| Image-bootstrap recall 95% interval | 85.30–93.17% |
+
+At the fixed 0.50 comparator, precision was 79.46%, recall 86.36%, false-positive rate 7.93%, and miss rate 13.64%. The calibration-selected threshold trades additional false alarms for fewer misses; it does not dominate the comparator on every metric.
+
+A post-hoc descriptive audit applied the already-defined image graph to all 322 test images without changing the model, endpoints or buffer. Coverage-only paths existed in 105 images, expert-sand reference paths in 84, and predicted-mask paths in 45. None of these 45 predicted paths crossed labeled expert sand on the sampled lattice. The model held in 39 images despite an available expert-sand reference path. These are conditional image-graph results: sparse expert coverage, no physical ground scale, incomplete hazard classes and no measured slip outcomes prevent a physical safety conclusion. All rows, including unavailable and HOLD results, are in `routing-audit.json`.
+
+Verification: 412 existing TypeScript tests passed in the full regression run. The focused 24-test run passed, including the 3 new evidence tests (415 distinct TypeScript tests checked overall). Five new Python numerical tests passed. The source audit and cached tabulation reproduced all 322 official image/label hashes and exact confusion counts; full inference was run once for this release. `--check` remains available for a complete inference rerun. The production build passed, retaining all 66 NASA photo assets and 1,045,833 original mesh triangles. Browser and final post-integration build verification are recorded in the release completion notes.
+
+Browser verification: desktop HUD results, largest false-positive and largest-miss overlays, expert-reference path selection, model HOLD outcome, mobile 390x844 layout with no horizontal overflow, and accessible panel close were checked. Training and inference are offline; the browser loads only precomputed reports and images.

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "frozenBeforeModelFit": true,
+  "dataset": "NASA/JPL AI4Mars merged 0.6, DOI 10.5281/zenodo.15995036",
+  "task": "MSL Navcam sand appearance versus other labeled terrain, NOT entrapment or astronaut sinkage",
+  "primaryTest": "All MSL expert min3 100%-agreement masks in archive; no label-based selection",
+  "split": "Site-drive groups parsed from image IDs. Exclude every test site-drive from development. Hash-order remaining site-drive groups; 128 training images then 32 calibration images from disjoint groups. At most one image per group per split.",
+  "seed": 3901,
+  "features": "Native grayscale brightness; local mean/std at 5,17,49 pixels; gradient magnitude mean at 5,17,49 pixels; absolute Laplacian mean at 5,17,49 pixels. No label or spatial-coordinate features.",
+  "model": "RandomForestClassifier, 64 trees, max_depth=14, min_samples_leaf=12, max_features=sqrt, class_weight=balanced_subsample, random_state=3901, n_jobs=2",
+  "trainingSampling": "Uniform random at most 2048 labeled pixels per training image; labels 0,1,2,3 only; 255 ignored",
+  "evaluationSampling": "Fixed native lattice stride 8, starting at pixel (4,4). No resizing of expert labels. Pixel metrics are sampled-lattice metrics, not full-resolution benchmark scores.",
+  "threshold": "Select from 0.10 through 0.90 in increments of 0.05 on calibration F2 only, ties prefer lower threshold. Lock before opening expert test labels. Report fixed 0.50 baseline too.",
+  "metrics": ["TP","FP","TN","FN","precision","recall","F1","F2","false positive rate","miss rate","IoU","per-image counts","image-bootstrap 95% intervals, 1000 draws, seed 3902"],
+  "baselines": ["always sand","never sand","same frozen model at threshold 0.50"],
+  "publication": "Publish all test per-image counts and source hashes; deterministic first hash-ordered test example, maximum FP and maximum FN examples; no suppression of failures.",
+  "routing": "Image-coordinate routing audit only on matching test predictions. Do not transfer Curiosity Navcam scores to Jezero orbital NOAH-H or unregistered Sol477 geometry. Existing HUD must show this scope and require local registration and independent local validation before automatic physical exclusions.",
+  "slipAudit": "Seek before-drive image plus independently measured per-drive slip with timestamps/locations. Papers, aggregate traverse distances and terrain masks alone do not qualify as matched slip outcomes. Publish retrieval outcomes; unavailable slip metrics remain null."
+}
