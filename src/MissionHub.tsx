@@ -20,7 +20,7 @@ export default function MissionHub({onNavigate,terrain,error,region,onRegion}:{o
    <div className="hub-planet-caption"><span>04 / SOLAR SYSTEM</span><strong>MARS</strong><span>18.45° N &nbsp; 77.64° E / JEZERO</span></div>
    <div className="hub-orbit-mark" aria-hidden="true">MARS RECONNAISSANCE / FIELD WORKSPACE</div>
   </section>
-  <SandNavigation terrain={terrain} error={error} region={region} onRegion={onRegion} onPlanning={()=>onNavigate('plan')} onSurface={()=>onNavigate('mission')}/>
+  <SandNavigation terrain={terrain} error={error} region={region} onRegion={onRegion} onPlanning={()=>onNavigate('plan')} onSurface={()=>onNavigate('explore')}/>
   <section className="hub-workspace" aria-labelledby="hub-workspace-title"><div className="hub-section-title"><div><span className="hub-eyebrow">YOUR WORKSPACE</span><h2 id="hub-workspace-title">Choose your next step.</h2></div><span className={`hub-connection ${online?'':'is-offline'}`} role="status"><i/>{online?'Online':'Offline · streamed Atlas requires a connection'}</span></div>
    <div className="hub-featured">
     <a {...link('explore')} className="hub-feature hub-feature-surface"><div className="hub-feature-visual"><img src="/data/navcam/observation.png" alt="Recorded NASA Navcam view of the Martian surface"/><span><Footprints size={15}/>SURFACE</span><ArrowUpRight size={20}/></div><div className="hub-feature-copy"><span>01 / EXPLORE</span><h3>Set foot on Mars.</h3><p>Walk recorded rover terrain. Look closer at the surface beneath you.</p><b>Open Surface Explorer <ArrowRight size={15}/></b></div></a>

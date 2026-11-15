@@ -1,0 +1,11 @@
+{
+  "surface": "perseverance-drive-1004-sol477",
+  "sourceCommit": "76444abbb4faff1b05f46a09b81ca2c24602b333",
+  "photoAssets": 66,
+  "triangles": 1045833,
+  "bytes": 36485580,
+  "sha256Verified": 66,
+  "unchangedGeometryTexturesAndTransforms": true,
+  "registrationToOrbitalMission": null,
+  "localSandEvidence": "User-reviewed candidates or explicitly simulated exclusions; no unregistered orbital classification."
+}
