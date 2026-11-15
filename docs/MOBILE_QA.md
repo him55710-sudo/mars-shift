@@ -1,6 +1,6 @@
 # Mobile EVA verification — 2026-11-15
 
-Browser: Chrome responsive viewport, not physical iOS/Android hardware. Sizes: 320 × 740, 390 × 844, and an 844 × 390 landscape surface-explorer smoke check.
+Browser: Chrome responsive viewport, not physical iOS/Android hardware. Sizes: 320 × 740, 390 × 844, and 844 × 390 landscape surface-explorer and HOLD scrolling checks.
 
 ## Completed flows
 
@@ -31,4 +31,4 @@ The checks use simulated checkpoint progression and Chrome viewport sizing. Phys
 
 ## Automated checks on integrated source
 
-54 test files / 384 tests passed. TypeScript, Vite production build, static/Navcam asset packaging and rover-display verification passed. `git diff --check` passed.
+55 test files / 391 tests passed after integrating the latest measured-terrain release. TypeScript, Vite production build, static/Navcam asset packaging and rover-display verification passed. `git diff --check` passed.
