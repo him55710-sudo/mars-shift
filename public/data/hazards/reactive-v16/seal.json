@@ -1,0 +1,29 @@
+{
+  "sealedAt": "2026-11-15T13:39:22.774Z",
+  "protocolSHA256": "d07a186d9bb1dfbee332b9143124473849064a45cbf8cf3488d1e9cb72a4c408",
+  "files": {
+    "src/reactive-evaluation-v16.ts": "ea840e4fd17eb3298921698e6a5c58c74bd0b2a22d6147cc3c1597f99505638a",
+    "src/hazard-mpc.ts": "8e967ee991118d01a8490a12a82ba5e639cda26de37c20d11c6f5b34c47c7241",
+    "src/encounter-v7.ts": "4cb5e9e3c1413cf49da8b16a1bec574107adcfd5476fa6f83c92045a012e004d",
+    "src/encounter-v8.ts": "25771ae8adce2314d85f08c81d83339858607deae97bc654cb01ed3710a0c7ee",
+    "src/vortex-forecast-v8.ts": "3d7bf1c149625512c0fafddc54eac0c6ef183a435c5b37c4ec938fd9a8c447be",
+    "src/escape-metrics.ts": "ab4ef155ff05b8c3159c5eb0a4a675baf19c2186138d0a573e73fa8e4cfbc767",
+    "src/rover-navigation.ts": "215e4df6724a98afd8fa0413011e6bb6597395c8e3611d9d88adb18ada23d11d",
+    "src/hazard-planner.ts": "a0ba97616451b61c3cfbaf161b59cb09f007ad43ccd186dabc23547143ca4343",
+    "scripts/reactive_fixtures_v16.ts": "bff6bae200153ed9127bfc180aa23abc8cdfc09ce938f43a921bb57ca2b8cf8a",
+    "scripts/evaluate_reactive_v16.ts": "5ecfc71132bdfdc00d69b9267f9e9d0e366134bdce55c67a681cfb7de48b5d13",
+    "scripts/freeze_reactive_v16.ts": "23a5f723c300a0f33db7c320f2852821d7fbbfa69f6a0558cff7df8fc9a92275",
+    "scripts/run_reactive_v16.mjs": "2db0e358e2879ffcce8078a09ba05007bc10d1f4e03091a2c82b353b5a2fa24c"
+  },
+  "sourceHashes": {
+    "public/data/hazards/reactive-v16/protocol-clarifications.json": "7887a2543632069738f193810afbdecc4d1cc6741cafac8a293fe5f1b57dc304",
+    "public/data/hazards/vortex-v8/holdout-final.json": "e6d782b2f36549ac7c29483f92c91fb5e537484dd75c219ac121a0451f78dfb8",
+    "public/data/hazards/vortex-v8/protocol-final.json": "15642859ce8e862e117f5f9f534adee25a55e29a721308d6f62e554412a05d39",
+    "public/data/hazards/vortex-v8/protocol-confirmation.json": "d4e15f4576bb156a7cec149ddcbd99cdc82cdfca3935500a0f3630111ec40378",
+    "public/data/hazards/vortex-v8/earth-analog-wind.json": "142ca95a5be6a81cc7e60094219974f453ee849807245632a968e32a7bf456e0",
+    "public/data/hazards/escape-v5/navigation-config.json": "7ed19e97c646f32352674fd25822665441d7842faef27f3b150a8fdd0ac5f748",
+    "public/data/noah/terrain.json": "9f3cbee784fda2df5fb488d4ecb61afd7ea2080ac543709faa827aeee6d210dc",
+    "public/data/noah/noah-terrain.json": "9d67db0bcd3daaa08bd361d64d5ddbfc780d9575a4022ec792eaab58e5dd28ca",
+    "public/data/drive1004/navigation-grid.json": "cb15cbf547da5823e117a4405e64ecdaddaed177819d0be637f921271811f518"
+  }
+}
