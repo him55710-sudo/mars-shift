@@ -17,3 +17,22 @@
 @media(prefers-reduced-motion:reduce){.rover-explorer button{transition:none}}
 
 .app-layout:has(.rover-explorer)>.site-header{display:none}.rover-brand{pointer-events:auto;color:inherit;text-decoration:none}
+/* Shared clarity rules: graphite, one route accent, readable supporting labels. */
+:root #root .rover-explorer{--glass:#172025f5;--line:#ffffff29;--muted:#bec9ce;--mint:#b3dfd3;font-family:'DM Sans',system-ui,sans-serif}
+:root #root .rover-explorer :is(button,select){border-radius:8px}
+:root #root .rover-explorer :is(.rover-mission,.rover-panel,.rover-dock,.rover-minimap,.rover-region){border-radius:10px!important;backdrop-filter:none;box-shadow:none}
+:root #root .rover-explorer .rover-visor{display:none}
+:root #root .rover-explorer .rover-panel{background:#172025;line-height:1.6}
+:root #root .rover-explorer .rover-panel :is(p,dd,em,label,summary){font-size:12px}
+:root #root .rover-explorer .rover-panel small{font-size:11px}
+:root #root .rover-explorer .rover-route-option strong{font-size:13px}
+:root #root .rover-explorer .rover-mission{padding:16px 18px}
+:root #root .rover-explorer .rover-eyebrow{font-size:10px;letter-spacing:.04em}
+:root #root .rover-explorer .rover-mission p{font-size:12px;margin-bottom:12px}
+:root #root .rover-explorer .rover-mission-meta{font-size:12px;padding-top:10px}
+:root #root .rover-explorer .rover-mission-foot{font-size:11px;margin-top:12px}
+:root #root .rover-explorer .rover-minimap>span{font-size:10px}
+:root #root .rover-explorer .rover-footer{font-size:10px}
+:root #root .rover-explorer .rover-footer button{min-width:44px;min-height:44px}
+:root #root .rover-explorer .rover-primary{background:#b3dfd3;color:#132522}
+@media(max-width:600px){:root #root .rover-explorer .rover-mission{width:218px;padding:12px 14px}:root #root .rover-explorer .rover-mission-meta{font-size:11px}:root #root .rover-explorer .rover-mission p{font-size:11px}:root #root .rover-explorer .rover-mission-foot{font-size:10px}:root #root .rover-explorer .rover-footer{font-size:9px}:root #root .rover-explorer .rover-brand small{font-size:9px;letter-spacing:.03em}:root #root .rover-explorer .rover-notice{top:345px}}
