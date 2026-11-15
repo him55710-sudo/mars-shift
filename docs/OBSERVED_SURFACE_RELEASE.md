@@ -20,7 +20,7 @@ The new Blender-prepared NASA EMU derivative has 57,160 triangles, seven materia
 
 ## Scientific boundary
 
-`planner.ts`, `mobility.ts`, orbital terrain analysis and hazard calculation engines are unchanged. A separate local graph adapter reuses their costs and resource metrics while requiring each graph edge to pass the same swept support/grade checks used by walking. Native mesh heights are sampled at 0.25 m graph spacing; this is **not positional accuracy**. Unknown cells, steep slopes, footprint margins and user exclusions block traversal. A reviewed annotation is a user judgment, not independently verified boulder truth. Simulated obstacles are explicitly tagged.
+The rover integration does not replace or reweight the existing orbital terrain, mobility or hazard engines. The latest concurrently published spatial release (88b5567), including its planner fixes, was merged intact before final validation. A separate local graph adapter reuses their costs and resource metrics while requiring each graph edge to pass the same swept support/grade checks used by walking. Native mesh heights are sampled at 0.25 m graph spacing; this is **not positional accuracy**. Unknown cells, steep slopes, footprint margins and user exclusions block traversal. A reviewed annotation is a user judgment, not independently verified boulder truth. Simulated obstacles are explicitly tagged.
 
 Route ribbons are display overlays. Their vertices sample the mesh-derived navigation height with a 6 cm display offset to avoid z-fighting. This display adjustment never changes collision or route costs. Coarse visual LoD can differ slightly from the navigation surface. The actual NASA source geometry is not sculpted.
 
@@ -50,7 +50,7 @@ The reproducible 0.65 m simulated obstruction at (-4.125 m north, 11.375 m east)
 
 ## Validation
 
-- 187 tests passed, including six new local-coordinate, swept-collision, obstacle, original-base return, hard-budget and actual-source route tests. Two earlier full-suite timeouts passed when rerun without competing heavy work; test assertions and deadlines were not weakened.
+- 194 tests passed after integrating the latest spatial release, including six new local-coordinate, swept-collision, obstacle, original-base return, hard-budget and actual-source route tests. Two earlier full-suite timeouts passed when rerun without competing heavy work; test assertions and deadlines were not weakened.
 - Both Python asset validators passed: all 82 distinct exported mesh accessor arrays and image dimensions match source; 64 independent triangle intersections agree with rounded exported heights to 4.791 micrometres. That is conversion consistency, not measurement accuracy. Crew dimensions, skin weights and topology checks passed.
 - Same-camera efficiency/native screenshots: eye position `[1.375, 1.71491, 5.375]` m, FOV 57°, identical quaternion verified from the live canvas. Images compare original parent versus finest available leaf assets at this source region, not different regions or AI enhancement. The quality improvement is bounded by the original sample imagery; close ground remains less detailed than a full-resolution reconstruction.
 - Browser checks cover target selection, obstacle detour/removal, detail switching, ground overlays, helmet/follow camera and keyboard movement. Performance measurements and screenshots are recorded with this release. Desktop results must not be treated as a guarantee for all GPUs or mobile devices.
