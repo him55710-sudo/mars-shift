@@ -1,0 +1,23 @@
+{
+  "classification": "DERIVED DISPLAY",
+  "sourceSha256": "46806cd4be7296da7f988416054b6e7a4b0aa64d151c99fb18c5f36a0ee14921",
+  "width": 1000,
+  "height": 1000,
+  "bounds": [
+    4364626.037914526,
+    1093118.6170900527,
+    4365626.037914526,
+    1094118.6170900527
+  ],
+  "crs": "PROJCS[\"Jezero_Crater_Projection\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "sunDirectionEastUpSouth": [
+    -48,
+    28,
+    -32
+  ],
+  "reachMetres": 192,
+  "stepMetres": 2,
+  "penumbraMetres": 0.5,
+  "shadowedPixels": 2620,
+  "meaning": "Simulated fixed sunlight occlusion from measured DEM. Crop restricted; no weather, surface observation or subpixel geometry is inferred."
+}

@@ -1,5 +1,7 @@
 # MARS SHIFT
 
+Current update: [spatial visor, competitor source review, continuous edge checks and return stress audit](docs/SPATIAL_HUD_UPGRADE.md). Open `/explore` for the revised visor. Reproduce the three-crop edge/return audit with `node scripts/run_spatial_analysis.mjs`.
+
 Flight Deck UI: [design system](DESIGN.md), [visual review and verification](docs/DESIGN_REVIEW.md). Shared navigation, readable field guidance and responsive terrain controls.
 Current release: [helmet navigation and recorded Navcam terrain](docs/HELMET_NAVCAM_RELEASE.md). `/explore` opens at human eye level with route choices, ground guidance, zoom, and a full navigation display for a declared visibility rehearsal. **NASA road view** opens a separate authentic Perseverance stereo station.
 

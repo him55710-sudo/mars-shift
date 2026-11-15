@@ -1,33 +1,29 @@
-import {blocked,index} from './planner';
+import {blocked,edgeBlocked,index} from './planner';
+import {GridHeap} from './grid-heap';
 import type {Exclusion,Point,Route,Settings,Terrain} from './planner';
 import {budgetForTravel,edgeTravelMinutes,expandedMobility,hasMobilityData} from './mobility';
 
 export const MAP_UNKNOWN=0,MAP_OVER_BUDGET=1,MAP_FEASIBLE=2,MAP_BLOCKED=3,MAP_DISCONNECTED=4;
 export type ReturnMap={localSecondsPerMetre:Float64Array;outbound:Float64Array;inbound:Float64Array;total:Float64Array;reserve:Float64Array;margin:Float64Array;state:Uint8Array;outParent:Int32Array;returnNext:Int32Array;counts:{unknown:number;overBudget:number;feasible:number;blocked:number;disconnected:number};baseValid:boolean;travelLimitMinutes:number;method:string};
-export class MinHeap {
- private data:{i:number;cost:number}[]=[];
- get length(){return this.data.length;}
- push(i:number,cost:number){let n=this.data.length;this.data.push({i,cost});while(n){const p=(n-1)>>1;if(this.data[p].cost<=cost)break;this.data[n]=this.data[p];n=p;}this.data[n]={i,cost};}
- pop(){const first=this.data[0],last=this.data.pop()!;if(this.data.length){let n=0;while(n*2+1<this.data.length){let c=n*2+1;if(c+1<this.data.length&&this.data[c+1].cost<this.data[c].cost)c++;if(this.data[c].cost>=last.cost)break;this.data[n]=this.data[c];n=c;}this.data[n]=last;}return first;}
-}
+export {GridHeap as MinHeap} from './grid-heap';
 /** Shared adjacency: full-cell constraints, no diagonal corner cutting, directional time. */
-export function graphNeighbours(t:Terrain,i:number,s:Settings,e:Exclusion|null,visit:(j:number)=>void){
+export function graphNeighbours(t:Terrain,i:number,s:Settings,e:Exclusion|null,visit:(j:number)=>void,allowed?:Uint8Array){
  const x=i%t.width,y=Math.floor(i/t.width);
  for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){
   if(!dx&&!dy)continue;const xx=x+dx,yy=y+dy;if(xx<0||yy<0||xx>=t.width||yy>=t.height)continue;
-  const j=yy*t.width+xx;if(blocked(t,j,s,e)||dx&&dy&&(blocked(t,y*t.width+xx,s,e)||blocked(t,yy*t.width+x,s,e)))continue;
+  const j=yy*t.width+xx;if(edgeBlocked(t,i,j,s,e,allowed))continue;
   visit(j);
  }
 }
 function timeMap(t:Terrain,base:number,s:Settings,e:Exclusion|null,reverse:boolean){
- const n=t.width*t.height,distance=new Float64Array(n).fill(Infinity),parent=new Int32Array(n).fill(-1),heap=new MinHeap();
- if(blocked(t,base,s,e))return {distance,parent};distance[base]=0;heap.push(base,0);
+ const n=t.width*t.height,distance=new Float64Array(n).fill(Infinity),parent=new Int32Array(n).fill(-1),heap=new GridHeap();
+ if(blocked(t,base,s,e))return {distance,parent};distance[base]=0;heap.push(base,0);const allowed=Uint8Array.from({length:n},(_,i)=>blocked(t,i,s,e)?0:1);
  while(heap.length){const current=heap.pop();if(current.cost!==distance[current.i])continue;
   graphNeighbours(t,current.i,s,e,j=>{
    // Reverse graph traverses incoming original edges. Do not copy outbound costs.
    const step=reverse?edgeTravelMinutes(t,j,current.i,s):edgeTravelMinutes(t,current.i,j,s),cost=current.cost+step;
    if(cost<distance[j]){distance[j]=cost;parent[j]=current.i;heap.push(j,cost);}
-  });
+  },allowed);
  }
  return {distance,parent};
 }
@@ -64,7 +60,7 @@ export function routeSensitivity(t:Terrain,route:Route,s:Settings,e:Exclusion|nu
   const closureDraw=rng(),eligible=route.cells.filter(i=>i!==route.cells[0]);
   const closureCell=closureDraw<config.blockFrequency&&eligible.length?eligible[Math.min(eligible.length-1,Math.floor(closureDraw/config.blockFrequency*eligible.length))]:null;
   const closure=closureCell!==null;
-  let minutes=0,invalid=false,unknown=false;for(let n=1;n<route.cells.length;n++){const a=route.cells[n-1],b=route.cells[n];invalid ||= blocked(t,a,scenario,e)||blocked(t,b,scenario,e);const dt=edgeTravelMinutes(t,a,b,scenario);if(!Number.isFinite(dt))unknown=true;else minutes+=dt;}
+  let minutes=0,invalid=false,unknown=false;for(let n=1;n<route.cells.length;n++){const a=route.cells[n-1],b=route.cells[n];invalid ||= edgeBlocked(t,a,b,scenario,e);const dt=edgeTravelMinutes(t,a,b,scenario);if(!Number.isFinite(dt))unknown=true;else minutes+=dt;}
   const budget=budgetForTravel(minutes,scenario);times.push(minutes);margins.push(budget.reserve-s.reservePercent);if(budget.timeRemaining<0)failures.time++;if(budget.reserve<s.reservePercent)failures.reserve++;if(closure||invalid)failures.blocked++;if(unknown)failures.unknown++;if(s.dust)failures.visibility++;if(budget.feasible&&!closure&&!invalid&&!unknown)passed++;
  }
  return {config:{...config},passed,frequency:passed/config.runs,travel:quantiles(times),reserveMargin:quantiles(margins),failures,meaning:'Seeded uniform sensitivity of the fixed selected route, without replanning. Failure counts can overlap. Synthetic route-closure frequency is an imposed assumption. These frequencies are not accident, survival or real-world reliability probabilities.'};

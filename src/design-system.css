@@ -338,24 +338,7 @@
  :root #root .xr-shell .eva-scene-label>span,:root #root .xr-shell .eva-scene-label>strong,:root #root .xr-shell .eva-scene-label>small{font-size:9px;line-height:1.4}
 }
 
-/* Helmet guidance shares the deck surfaces; terrain remains unobstructed by a decorative bezel. */
-:root #root .helmet-rim{display:none}
-:root #root .helmet-hud{background:none;color:var(--ms-text);font-family:'DM Sans',Arial,sans-serif}
-:root #root .helmet-hud button,:root #root .helmet-hud select,:root #root .helmet-resources,:root #root .helmet-waypoint,:root #root .helmet-dock,:root #root .helmet-route-picker{background:#101c27f2;border-color:var(--ms-line);backdrop-filter:none;box-shadow:none;border-radius:8px}
-:root #root .helmet-hud button[aria-pressed=true]{background:var(--ms-raised);border-color:var(--ms-action)}
-:root #root .helmet-exit{position:absolute;left:calc(4% + 250px);top:4%;width:44px;padding:0}
-:root #root .helmet-footer{white-space:normal;color:var(--ms-muted)}
-:root #root .helmet-footer>span:first-child{min-width:0;white-space:normal;overflow:visible}
-@media(max-width:760px){
- :root #root .helmet-exit{left:185px;top:24px}
- :root #root .helmet-hazard-legend{top:64px;bottom:auto;left:20px;right:20px;justify-content:center;font-size:10px}
- :root #root .helmet-hud .helmet-footer{display:grid;grid-template-columns:minmax(0,1fr) 110px;align-items:center;gap:12px;left:20px;right:20px;bottom:12px}
- :root #root .helmet-footer>span:first-child{display:block;font-size:9px;line-height:1.4}
- :root #root .helmet-footer small{font-size:9px;line-height:1.4;white-space:normal}
- :root #root .helmet-footer>span:nth-child(2){display:none}
- :root #root .helmet-footer select{width:110px;font-size:11px}
-}
-
+/* Helmet surfaces are owned by helmet-hud.css. */
 @media(max-width:550px){
  :root #root .slide-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}
  :root #root .slide-controls>div{grid-column:1/-1;grid-row:1;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;min-width:0}
@@ -396,20 +379,6 @@
 :root #root .slide-controls>div button[aria-current=step]{background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
 :root #root .app-layout .primary:not(:disabled){background:var(--ms-action);color:var(--ms-on-action);border-color:var(--ms-action)}
 :root #root .app-layout .primary:disabled{background:var(--ms-raised);color:var(--ms-subtle);border-color:var(--ms-line)}
-
-/* Stable contrast for operational text over changing terrain and sky. */
-:root #root .helmet-hud:before{content:'';position:absolute;inset:0 0 auto;height:112px;background:var(--ms-void);border-bottom:1px solid var(--ms-line)}
-:root #root .helmet-objective{background:#0d141cf5;border:1px solid var(--ms-line);border-left:2px solid var(--guidance-color);padding:12px 16px;border-radius:8px;text-shadow:none}
-:root #root .helmet-terrain{background:#0d141cf5;border:1px solid var(--ms-line);padding:12px;border-radius:8px;text-shadow:none}
-@media(max-width:760px){
- :root #root .helmet-hud:before{height:160px}
- :root #root .helmet-objective{padding:10px 12px}
- :root #root .helmet-terrain{padding:10px;max-width:180px;bottom:280px}
-}
-
-@media(max-width:760px){
- :root #root .helmet-exit{left:auto;right:20px;top:88px;z-index:2}
-}
 
 :root #root .xr-shell .xr-road-trigger{min-height:48px}
 :root #root .ma-bottom-bar{background:var(--ms-base);border-color:var(--ms-line);color:var(--ms-muted)}

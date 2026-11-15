@@ -1,5 +1,7 @@
 # MARS SHIFT — Flight Deck
 
+15 November update: the immersive visor now uses neutral translucent panels, rounded controls and a compact spatial dock at the user’s request. `src/helmet-hud.css` owns visor styling; general deck rules must not override it. See `docs/SPATIAL_HUD_UPGRADE.md` for the reviewed references, source reuse, responsive behavior and validation. The existing instrument-deck conventions below continue to apply to analysis and planning.
+
 Status: implemented and verified for the Flight Deck interface. See `docs/DESIGN_REVIEW.md` for evidence, test conditions and prototype limitations.
 
 ## Purpose and visual direction
