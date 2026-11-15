@@ -1,0 +1,15 @@
+{
+  "protocolHashesVerified": true,
+  "realNewIndependentTrajectories": 0,
+  "developmentSyntheticTrajectories": 96,
+  "confirmationSyntheticTrajectories": 192,
+  "initialEscapePlacements": 24,
+  "followupEscapePlacements": 36,
+  "directReplacementPromoted": false,
+  "guardPromotedForResearchRehearsal": true,
+  "guardBetterCases": 1,
+  "guardWorseCases": 0,
+  "guardSameCases": 35,
+  "measuredSourceDiscrepancyIsNotMetreAccuracy": true,
+  "uiSummaryBytes": 1926
+}

@@ -1,0 +1,8 @@
+
+ RUN  v4.1.12 C:/Users/user/OneDrive/바탕 화면/NASA/mars-shift-review-v15
+
+
+ Test Files  45 passed (45)
+      Tests  329 passed (329)
+   Start at  18:39:33
+   Duration  41.07s (transform 2.00s, setup 0ms, import 4.59s, tests 29.06s, environment 4ms)

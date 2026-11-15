@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "release": "v15",
+  "rubric": {
+    "scale": [
+      1,
+      5
+    ],
+    "weights": null,
+    "source": "https://www.spaceappschallenge.org/resources/judging-awards-guide/"
+  },
+  "observations": {
+    "metricEvents": 1,
+    "metricFrames": 4,
+    "futurePairs": 3,
+    "previouslyStudiedImageClips": 3,
+    "reconstructedPositionRMSE": 3.0403277056869147,
+    "unit": "m",
+    "groundTruth": "PAPER_APPROXIMATE_RANGE_RECONSTRUCTION",
+    "validatedOneMetreAccuracy": false
+  },
+  "forecast": {
+    "syntheticCases": 192,
+    "independentObservedEvents": 0,
+    "previousRMSE": 31.78633192079779,
+    "currentRMSE": 27.05087311831864,
+    "reductionPercent": 14.897783154969002,
+    "coverage": 0.917989417989418,
+    "worseCases": 47
+  },
+  "escape": {
+    "scope": "SYNTHETIC_VORTEX_ON_OBSERVED_DEM",
+    "cases": 36,
+    "arms": [
+      {
+        "arm": "Static",
+        "cases": 36,
+        "contactSeconds": 2.7613837311040403,
+        "noContact": 27,
+        "returnFailures": 0
+      },
+      {
+        "arm": "MARS SHIFT",
+        "cases": 36,
+        "contactSeconds": 2.4815939096666955,
+        "noContact": 27,
+        "returnFailures": 0
+      },
+      {
+        "arm": "Adaptive",
+        "cases": 36,
+        "contactSeconds": 2.490157241229021,
+        "noContact": 27,
+        "returnFailures": 0
+      },
+      {
+        "arm": "Guarded",
+        "cases": 36,
+        "contactSeconds": 2.479996144762622,
+        "noContact": 27,
+        "returnFailures": 0
+      },
+      {
+        "arm": "Oracle",
+        "cases": 36,
+        "contactSeconds": 2.4660548636875324,
+        "noContact": 27,
+        "returnFailures": 0
+      }
+    ],
+    "versusStaticPercent": 10.190093581413091,
+    "versusLegacyPercent": 0.06438462384394951,
+    "betterCases": 1,
+    "worseCases": 0,
+    "tiedCases": 35,
+    "realSafetyValidation": false
+  },
+  "sand": {
+    "scope": "OBSERVED_TEXTURE_MAP_WITH_SYNTHETIC_MISSIONS",
+    "cases": 26,
+    "unscreenedFeasible": 18,
+    "coverageOnlyFeasible": 14,
+    "screenedFeasible": 12,
+    "pairedFeasible": 12,
+    "pairedBufferBefore": 185,
+    "pairedBufferAfter": 0,
+    "meanDistanceAdded": 20.504728992169515,
+    "defaultBeforeMetres": 1751.4114378097947,
+    "defaultAfterMetres": 1874.3717168707435,
+    "defaultBeforeCells": 28,
+    "defaultAfterCells": 0,
+    "independentSoilFailureLabels": 0,
+    "validatedSinkageProbability": false
+  },
+  "boundaries": {
+    "coRegisteredSandAndSol477": false,
+    "physicalHeadsetValidated": false,
+    "nasaEndorsement": false
+  },
+  "sources": [
+    {
+      "role": "guard",
+      "url": "/data/hazards/adaptive-v13/guard-results.json",
+      "sha256": "f3dc1bc1c90ba9a1eb99670c73f33d31e0169d988a5c2e39bd9ffa93afc9f4c1"
+    },
+    {
+      "role": "sand",
+      "url": "/data/hazards/sand-v14/results.json",
+      "sha256": "ae8ad0ed7fa3d81ed85145736c359dbb05627a18bdeb122a24301bbf7fc8333c"
+    },
+    {
+      "role": "forecast",
+      "url": "/data/hazards/adaptive-v13/confirmation.json",
+      "sha256": "fc93871c8536714b6ca72986e56992218c8056f822ef02f06a4ac21e77eb4d89"
+    },
+    {
+      "role": "metric",
+      "url": "/data/hazards/metric-v12/ranged-results.json",
+      "sha256": "12532046642f30f117aca5265ad4fea2ad250e3f8e40073d317efa32c5746c3f"
+    },
+    {
+      "role": "observed",
+      "url": "/data/hazards/adaptive-v13/observed.json",
+      "sha256": "c640fc11384339995b7875e7d8fe656b12d3f3c59e22a9dd0b892cd55bd4258c"
+    },
+    {
+      "role": "images",
+      "url": "/data/hazards/observed-v11/image-results.json",
+      "sha256": "384e3ee45da6386a463463b6f34bfeab09764cb44f2fab5c1771204357fca0aa"
+    }
+  ],
+  "interpretation": "Secondary audit of existing frozen experiments. No new observation, model training, holdout or operational validation is claimed."
+}

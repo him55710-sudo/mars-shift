@@ -1,0 +1,2997 @@
+{
+  "kind": "POST_CONFIRMATION_DIAGNOSTIC_NO_RETUNING",
+  "case": "confirm-036",
+  "note": "Alternative paths evaluated from the adaptive astronaut state, not their independent rollouts. Future truth is used only for offline diagnosis.",
+  "rows": [
+    {
+      "time": 0,
+      "position": {
+        "x": 36,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0.7525091277494553,
+        "clearance": 99.93518155507083,
+        "margin": 274.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 98.98348404770594,
+        "margin": 328.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 30.56015798224464,
+        "margin": 328.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 2,
+      "position": {
+        "x": 36,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 22.23493721175462,
+        "margin": 271.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 14.17719688082043,
+        "margin": 326.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 26.77845618513468,
+        "margin": 326.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 4,
+      "position": {
+        "x": 36,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 14.681277706069116,
+        "margin": 321.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 13.88516901960279,
+        "margin": 325.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "HOLD",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 23.03186522361611,
+        "margin": 325.9285714285714,
+        "next": {
+          "x": 36,
+          "y": 46,
+          "time": 6
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 6,
+      "position": {
+        "x": 36,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 13.117463400980041,
+        "margin": 312.4285714285714,
+        "next": {
+          "x": 37,
+          "y": 46,
+          "time": 10
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 10.915888840741134,
+        "margin": 322.9285714285714,
+        "next": {
+          "x": 37,
+          "y": 45,
+          "time": 12
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 19.333644879259055,
+        "margin": 322.9285714285714,
+        "next": {
+          "x": 37,
+          "y": 45,
+          "time": 12
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 8,
+      "position": {
+        "x": 36.5,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 11.689975754101383,
+        "margin": 314.9285714285714,
+        "next": {
+          "x": 37,
+          "y": 46,
+          "time": 10
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 10.920966601736225,
+        "margin": 317.9285714285714,
+        "next": {
+          "x": 37,
+          "y": 46,
+          "time": 10
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 16.367874112165424,
+        "margin": 317.9285714285714,
+        "next": {
+          "x": 37,
+          "y": 46,
+          "time": 10
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 10,
+      "position": {
+        "x": 37,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 12.05982031638986,
+        "margin": 294.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 46,
+          "time": 14.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 8.986380082066262,
+        "margin": 313.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 45,
+          "time": 16.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 12.803568411613286,
+        "margin": 313.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 45,
+          "time": 16.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 12,
+      "position": {
+        "x": 37.44444444444444,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 11.999488307460403,
+        "margin": 302.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 46,
+          "time": 14.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 10.110867333847185,
+        "margin": 312.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 46,
+          "time": 14.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 9.217586546857762,
+        "margin": 312.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 46,
+          "time": 14.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 14,
+      "position": {
+        "x": 37.888888888888886,
+        "y": 46
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 11.26702569093895,
+        "margin": 303.42857142857133,
+        "next": {
+          "x": 39,
+          "y": 45,
+          "time": 21.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 10.015210742510437,
+        "margin": 309.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 45,
+          "time": 19.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 5.93404628459753,
+        "margin": 309.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 45,
+          "time": 19.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 16,
+      "position": {
+        "x": 38.214285714285715,
+        "y": 45.785714285714285
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0.4843386918158714,
+        "clearance": 9.735999358331476,
+        "margin": 251.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 47,
+          "time": 22
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 3.26669347588064,
+        "margin": 307.42857142857133,
+        "next": {
+          "x": 39,
+          "y": 45,
+          "time": 21.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 2.9982106064523766,
+        "margin": 307.42857142857133,
+        "next": {
+          "x": 39,
+          "y": 45,
+          "time": 21.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 18,
+      "position": {
+        "x": 38,
+        "y": 46.111111111111114
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 3.1043197037490913,
+        "clearance": 3.8736611173039943,
+        "margin": 249.42857142857133,
+        "next": {
+          "x": 38,
+          "y": 47,
+          "time": 22
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 1.6245535888409304,
+        "margin": 305.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 45,
+          "time": 23.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 0.09251878526299606,
+        "margin": 305.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 45,
+          "time": 23.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 20,
+      "position": {
+        "x": 38,
+        "y": 46.55555555555556
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0.69626069395499,
+        "band": 5.631060409586183,
+        "clearance": -1.2776639936428538,
+        "margin": 243.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 47,
+          "time": 22
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0.69626069395499,
+        "band": 0.69626069395499,
+        "clearance": -1.2776639936428538,
+        "margin": 243.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 47,
+          "time": 22
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 0.27837081940405106,
+        "margin": 260.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 47,
+          "time": 22
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 22,
+      "position": {
+        "x": 38,
+        "y": 47
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 3.478643719342479,
+        "band": 8.037608597095257,
+        "clearance": -4.3545116023608,
+        "margin": 236.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 48,
+          "time": 26.5
+        },
+        "actualFutureContact": 0.37449011153867673
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 3.478643719342479,
+        "band": 3.478643719342479,
+        "clearance": -4.3545116023608,
+        "margin": 236.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 48,
+          "time": 26.5
+        },
+        "actualFutureContact": 0.37449011153867673
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0.37449011153867673,
+        "band": 0.37449011153867673,
+        "clearance": -0.5533402090051922,
+        "margin": 236.92857142857133,
+        "next": {
+          "x": 38,
+          "y": 48,
+          "time": 26.5
+        },
+        "actualFutureContact": 0.37449011153867673
+      }
+    },
+    {
+      "time": 24,
+      "position": {
+        "x": 38,
+        "y": 47.44444444444444
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 4.339368726166882,
+        "band": 8.562833143041075,
+        "clearance": -6.997461004723718,
+        "margin": 236.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 48,
+          "time": 26.5
+        },
+        "actualFutureContact": 2.4654616803517797
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 4.339368726166882,
+        "band": 4.339368726166882,
+        "clearance": -6.997461004723718,
+        "margin": 236.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 48,
+          "time": 26.5
+        },
+        "actualFutureContact": 2.4654616803517797
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 2.297260694029802,
+        "band": 2.297260694029802,
+        "clearance": -3.6675437053022497,
+        "margin": 233.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 48,
+          "time": 26.5
+        },
+        "actualFutureContact": 2.2972606940298093
+      }
+    },
+    {
+      "time": 26,
+      "position": {
+        "x": 38,
+        "y": 47.888888888888886
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 3.9813220922588286,
+        "band": 8.56719536813035,
+        "clearance": -6.479157713896876,
+        "margin": 230.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 49,
+          "time": 31
+        },
+        "actualFutureContact": 4.46546168035178
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 4.017978523027558,
+        "band": 4.017978523027558,
+        "clearance": -6.590487679757642,
+        "margin": 230.42857142857127,
+        "next": {
+          "x": 38,
+          "y": 49,
+          "time": 31
+        },
+        "actualFutureContact": 4.305316500747104
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 4.297260694029802,
+        "band": 4.297260694029802,
+        "clearance": -6.983240661731162,
+        "margin": 231.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 49,
+          "time": 31
+        },
+        "actualFutureContact": 4.297260694029809
+      }
+    },
+    {
+      "time": 28,
+      "position": {
+        "x": 38,
+        "y": 48.333333333333336
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 1.973813669070843,
+        "band": 7.42813718552668,
+        "clearance": -2.880578296745038,
+        "margin": 225.42857142857127,
+        "next": {
+          "x": 38,
+          "y": 49,
+          "time": 31
+        },
+        "actualFutureContact": 6.297260694029809
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 1.973813669070843,
+        "band": 1.973813669070843,
+        "clearance": -2.880578296745038,
+        "margin": 225.42857142857127,
+        "next": {
+          "x": 38,
+          "y": 49,
+          "time": 31
+        },
+        "actualFutureContact": 6.297260694029809
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.297260694029802,
+        "band": 6.297260694029802,
+        "clearance": -9.242279280868159,
+        "margin": 231.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 49,
+          "time": 31
+        },
+        "actualFutureContact": 6.297260694029809
+      }
+    },
+    {
+      "time": 30,
+      "position": {
+        "x": 38,
+        "y": 48.77777777777778
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 9.547782327446917,
+        "clearance": 0.14667416609744954,
+        "margin": 228.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 50,
+          "time": 35
+        },
+        "actualFutureContact": 8.497414496200797
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 0.42985417311058605,
+        "margin": 228.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 50,
+          "time": 35
+        },
+        "actualFutureContact": 8.502739377750522
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.470438537711331,
+        "band": 6.470438537711331,
+        "clearance": -2.5328206015857946,
+        "margin": 238.42857142857127,
+        "next": {
+          "x": 37,
+          "y": 50,
+          "time": 37
+        },
+        "actualFutureContact": 6.470438537711338
+      }
+    },
+    {
+      "time": 32,
+      "position": {
+        "x": 38,
+        "y": 49.25
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 6.8262288082261335,
+        "band": 13.812763551227931,
+        "clearance": -2.409698577383148,
+        "margin": 233.42857142857127,
+        "next": {
+          "x": 38,
+          "y": 50,
+          "time": 35
+        },
+        "actualFutureContact": 6.743377010410391
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 7.2000851990106725,
+        "band": 7.2000851990106725,
+        "clearance": -2.098328319088882,
+        "margin": 227.92857142857127,
+        "next": {
+          "x": 38,
+          "y": 50,
+          "time": 35
+        },
+        "actualFutureContact": 6.994683598237344
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 241.42857142857127,
+        "next": {
+          "x": 38,
+          "y": 50,
+          "time": 35
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 34,
+      "position": {
+        "x": 38,
+        "y": 49.75
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 2.9535068206284905,
+        "band": 14.990435787057741,
+        "clearance": -0.38723207574881435,
+        "margin": 231.42857142857127,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 7.000638629268465
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 3.5077496397005277,
+        "band": 3.5077496397005277,
+        "clearance": -0.5453133936989722,
+        "margin": 222.42857142857127,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 7.247366025214674
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 235.92857142857127,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 36,
+      "position": {
+        "x": 37.81818181818182,
+        "y": 50.18181818181818
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 10.588571527058917,
+        "clearance": 0.22084394404154928,
+        "margin": 237.42857142857127,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 6.991863425540025
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 0.22084394404154928,
+        "margin": 235.42857142857127,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 6.991863425540025
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 240.92857142857127,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 38,
+      "position": {
+        "x": 37.45454545454545,
+        "y": 50.54545454545455
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 6.0853575235271435,
+        "band": 12.922255497742569,
+        "clearance": -2.2797739290964056,
+        "margin": 235.42857142857122,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 6.702611327230436
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.546912475056075,
+        "band": 6.546912475056075,
+        "clearance": -2.0825374020755536,
+        "margin": 213.92857142857122,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 7.247366025214674
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 234.92857142857122,
+        "next": {
+          "x": 37,
+          "y": 51,
+          "time": 40.5
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 40,
+      "position": {
+        "x": 37.09090909090909,
+        "y": 50.90909090909091
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 8.808565512436658,
+        "band": 16.528329185823672,
+        "clearance": -3.7844735188071343,
+        "margin": 234.92857142857122,
+        "next": {
+          "x": 36,
+          "y": 52,
+          "time": 45.5
+        },
+        "actualFutureContact": 6.702611327230436
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 9.435160038958465,
+        "band": 9.435160038958465,
+        "clearance": -3.980866725000416,
+        "margin": 219.92857142857122,
+        "next": {
+          "x": 36,
+          "y": 52,
+          "time": 45.5
+        },
+        "actualFutureContact": 7.23272848155473
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 236.42857142857122,
+        "next": {
+          "x": 36,
+          "y": 52,
+          "time": 45.5
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 42,
+      "position": {
+        "x": 36.7,
+        "y": 51.3
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 6.8907214293190435,
+        "band": 13.994397865620833,
+        "clearance": -2.153590841844652,
+        "margin": 227.42857142857122,
+        "next": {
+          "x": 36,
+          "y": 52,
+          "time": 45.5
+        },
+        "actualFutureContact": 6.743377010410391
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 7.365840398478788,
+        "band": 7.365840398478788,
+        "clearance": -2.092729101662087,
+        "margin": 205.92857142857122,
+        "next": {
+          "x": 36,
+          "y": 52,
+          "time": 45.5
+        },
+        "actualFutureContact": 7.247366025214674
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 233.42857142857122,
+        "next": {
+          "x": 36,
+          "y": 52,
+          "time": 45.5
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 44,
+      "position": {
+        "x": 36.300000000000004,
+        "y": 51.699999999999996
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 8.282388322647918,
+        "band": 13.427685532260867,
+        "clearance": -4.284836035880793,
+        "margin": 235.42857142857122,
+        "next": {
+          "x": 35,
+          "y": 53,
+          "time": 50
+        },
+        "actualFutureContact": 6.702611327230436
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 8.781845852190003,
+        "band": 8.781845852190003,
+        "clearance": -5.06315211954891,
+        "margin": 229.92857142857122,
+        "next": {
+          "x": 35,
+          "y": 52,
+          "time": 49
+        },
+        "actualFutureContact": 7.467725792667295
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 235.42857142857122,
+        "next": {
+          "x": 35,
+          "y": 53,
+          "time": 50
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 46,
+      "position": {
+        "x": 35.888888888888886,
+        "y": 52.111111111111114
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 11.737514170560381,
+        "band": 16.00386110747619,
+        "clearance": -10.593360118305952,
+        "margin": 251.92857142857122,
+        "next": {
+          "x": 35,
+          "y": 52,
+          "time": 49
+        },
+        "actualFutureContact": 8.020030567256043
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 11.789443038126066,
+        "band": 11.789443038126066,
+        "clearance": -11.220634857413685,
+        "margin": 238.42857142857122,
+        "next": {
+          "x": 35,
+          "y": 52,
+          "time": 49
+        },
+        "actualFutureContact": 8.296073246536267
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.702611327230436,
+        "band": 6.702611327230436,
+        "clearance": -2.7809705047576605,
+        "margin": 237.92857142857122,
+        "next": {
+          "x": 35,
+          "y": 53,
+          "time": 50
+        },
+        "actualFutureContact": 6.702611327230436
+      }
+    },
+    {
+      "time": 48,
+      "position": {
+        "x": 35.2962962962963,
+        "y": 52.03703703703704
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 8.320963949467107,
+        "band": 11.380623886589987,
+        "clearance": -6.645867836598162,
+        "margin": 243.92857142857122,
+        "next": {
+          "x": 35,
+          "y": 53,
+          "time": 51
+        },
+        "actualFutureContact": 7.40703694064652
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 8.590788879829333,
+        "band": 8.590788879829333,
+        "clearance": -6.151736687421822,
+        "margin": 222.42857142857122,
+        "next": {
+          "x": 34,
+          "y": 52,
+          "time": 52.5
+        },
+        "actualFutureContact": 7.517102769774219
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.9471169643939135,
+        "band": 6.9471169643939135,
+        "clearance": -3.0291204079295264,
+        "margin": 229.92857142857122,
+        "next": {
+          "x": 35,
+          "y": 53,
+          "time": 51
+        },
+        "actualFutureContact": 6.947116964393921
+      }
+    },
+    {
+      "time": 50,
+      "position": {
+        "x": 35.098765432098766,
+        "y": 52.67901234567901
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 9.237573155206285,
+        "band": 11.535580097661722,
+        "clearance": -7.553372180347187,
+        "margin": 246.92857142857122,
+        "next": {
+          "x": 34,
+          "y": 53,
+          "time": 54
+        },
+        "actualFutureContact": 7.745678429542416
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 9.304111234304827,
+        "band": 9.304111234304827,
+        "clearance": -6.5095713910426,
+        "margin": 223.92857142857122,
+        "next": {
+          "x": 34,
+          "y": 53,
+          "time": 54
+        },
+        "actualFutureContact": 7.367813643343219
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.9471169643939135,
+        "band": 6.9471169643939135,
+        "clearance": -3.0291204079295264,
+        "margin": 223.92857142857122,
+        "next": {
+          "x": 34,
+          "y": 54,
+          "time": 55.5
+        },
+        "actualFutureContact": 6.947116964393921
+      }
+    },
+    {
+      "time": 52,
+      "position": {
+        "x": 34.666666666666664,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 7.44653982281983,
+        "band": 9.865308118684553,
+        "clearance": -4.159485370599969,
+        "margin": 236.42857142857116,
+        "next": {
+          "x": 34,
+          "y": 53,
+          "time": 54
+        },
+        "actualFutureContact": 7.217523005679141
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 7.44653982281983,
+        "band": 7.44653982281983,
+        "clearance": -4.159485370599969,
+        "margin": 215.42857142857116,
+        "next": {
+          "x": 34,
+          "y": 53,
+          "time": 54
+        },
+        "actualFutureContact": 7.217523005679141
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 7.217523005679141,
+        "band": 7.217523005679141,
+        "clearance": -3.3245740910940826,
+        "margin": 244.92857142857116,
+        "next": {
+          "x": 34,
+          "y": 53,
+          "time": 54
+        },
+        "actualFutureContact": 7.217523005679141
+      }
+    },
+    {
+      "time": 54,
+      "position": {
+        "x": 34,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 8.774551458695775,
+        "band": 11.128864071131936,
+        "clearance": -4.304551567540994,
+        "margin": 238.92857142857116,
+        "next": {
+          "x": 33,
+          "y": 53,
+          "time": 57
+        },
+        "actualFutureContact": 7.217523005679141
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 8.774551458695775,
+        "band": 8.774551458695775,
+        "clearance": -4.304551567540994,
+        "margin": 209.92857142857116,
+        "next": {
+          "x": 33,
+          "y": 53,
+          "time": 57
+        },
+        "actualFutureContact": 7.217523005679141
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 7.217523005679141,
+        "band": 7.217523005679141,
+        "clearance": -3.3245740910940826,
+        "margin": 238.42857142857116,
+        "next": {
+          "x": 33,
+          "y": 53,
+          "time": 57
+        },
+        "actualFutureContact": 7.217523005679141
+      }
+    },
+    {
+      "time": 56,
+      "position": {
+        "x": 33.333333333333336,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 6.187137866296901,
+        "band": 7.5033582008406015,
+        "clearance": -2.094993762820641,
+        "margin": 240.92857142857116,
+        "next": {
+          "x": 32,
+          "y": 53,
+          "time": 60
+        },
+        "actualFutureContact": 6.857822780661422
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.187137866296901,
+        "band": 6.187137866296901,
+        "clearance": -2.094993762820641,
+        "margin": 204.92857142857116,
+        "next": {
+          "x": 32,
+          "y": 53,
+          "time": 60
+        },
+        "actualFutureContact": 6.857822780661422
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 6.857822780661422,
+        "band": 6.857822780661422,
+        "clearance": -3.3245740910940826,
+        "margin": 240.42857142857116,
+        "next": {
+          "x": 32,
+          "y": 53,
+          "time": 60
+        },
+        "actualFutureContact": 6.857822780661422
+      }
+    },
+    {
+      "time": 58,
+      "position": {
+        "x": 32.666666666666664,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 4.36376562383429,
+        "band": 5.2268412169656955,
+        "clearance": -2.609444416765206,
+        "margin": 234.42857142857116,
+        "next": {
+          "x": 32,
+          "y": 53,
+          "time": 60
+        },
+        "actualFutureContact": 4.857822780661422
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 4.36376562383429,
+        "band": 4.36376562383429,
+        "clearance": -2.609444416765206,
+        "margin": 200.92857142857116,
+        "next": {
+          "x": 32,
+          "y": 53,
+          "time": 60
+        },
+        "actualFutureContact": 4.857822780661422
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 4.857822780661422,
+        "band": 4.857822780661422,
+        "clearance": -3.32457409109408,
+        "margin": 239.42857142857116,
+        "next": {
+          "x": 32,
+          "y": 53,
+          "time": 60
+        },
+        "actualFutureContact": 4.857822780661422
+      }
+    },
+    {
+      "time": 60,
+      "position": {
+        "x": 32,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 2.5952203178615676,
+        "band": 3.381290297486828,
+        "clearance": -2.2662707479218493,
+        "margin": 236.42857142857116,
+        "next": {
+          "x": 31,
+          "y": 53,
+          "time": 63
+        },
+        "actualFutureContact": 2.8578227806614223
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 2.5952203178615676,
+        "band": 2.5952203178615676,
+        "clearance": -2.2662707479218493,
+        "margin": 200.92857142857116,
+        "next": {
+          "x": 31,
+          "y": 53,
+          "time": 63
+        },
+        "actualFutureContact": 2.8578227806614223
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 2.8578227806614223,
+        "band": 2.8578227806614223,
+        "clearance": -3.149128780063574,
+        "margin": 237.42857142857116,
+        "next": {
+          "x": 31,
+          "y": 53,
+          "time": 63
+        },
+        "actualFutureContact": 2.8578227806614223
+      }
+    },
+    {
+      "time": 62,
+      "position": {
+        "x": 31.333333333333332,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0.2830083389348914,
+        "band": 1.0518630641723163,
+        "clearance": -0.35257816005098164,
+        "margin": 237.92857142857116,
+        "next": {
+          "x": 30,
+          "y": 53,
+          "time": 66
+        },
+        "actualFutureContact": 0.8578227806614223
+      },
+      "endpointAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0.2830083389348914,
+        "band": 0.2830083389348914,
+        "clearance": -0.35257816005098164,
+        "margin": 241.92857142857116,
+        "next": {
+          "x": 31,
+          "y": 52,
+          "time": 66.5
+        },
+        "actualFutureContact": 0.8578227806614223
+      },
+      "oracleAtSamePosition": {
+        "action": "SIDESTEP",
+        "nominal": 0.8578227806614223,
+        "band": 0.8578227806614223,
+        "clearance": -1.245118683612759,
+        "margin": 239.92857142857116,
+        "next": {
+          "x": 31,
+          "y": 53,
+          "time": 64
+        },
+        "actualFutureContact": 0.8578227806614223
+      }
+    },
+    {
+      "time": 64,
+      "position": {
+        "x": 30.666666666666668,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "SIDESTEP",
+        "nominal": 0,
+        "band": 0.13025319323243423,
+        "clearance": 0.7033414424900979,
+        "margin": 233.42857142857116,
+        "next": {
+          "x": 30,
+          "y": 53,
+          "time": 66
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 0.7033414424900979,
+        "margin": 243.42857142857116,
+        "next": {
+          "x": 31,
+          "y": 52,
+          "time": 68.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 1.879874118914513,
+        "margin": 243.42857142857116,
+        "next": {
+          "x": 31,
+          "y": 52,
+          "time": 68.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 66,
+      "position": {
+        "x": 30,
+        "y": 53
+      },
+      "adaptive": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 5.300066409024534,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 52,
+          "time": 69.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 5.300066409024534,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 52,
+          "time": 69.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 5.524026828092632,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 52,
+          "time": 69.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 68,
+      "position": {
+        "x": 30,
+        "y": 52.42857142857143
+      },
+      "adaptive": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 7.425736752115492,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 51,
+          "time": 73
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 7.425736752115492,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 51,
+          "time": 73
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "DETOUR",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 9.087147111365065,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 51,
+          "time": 73
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 70,
+      "position": {
+        "x": 30,
+        "y": 51.857142857142854
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 10.616488712315117,
+        "margin": 239.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 51,
+          "time": 73
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 10.616488712315117,
+        "margin": 239.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 51,
+          "time": 73
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 12.901199568178948,
+        "margin": 239.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 51,
+          "time": 73
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 72,
+      "position": {
+        "x": 30,
+        "y": 51.285714285714285
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 15.506251543910977,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 50,
+          "time": 76.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 15.506251543910977,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 50,
+          "time": 76.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 16.861199087859603,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 50,
+          "time": 76.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 74,
+      "position": {
+        "x": 30,
+        "y": 50.714285714285715
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 19.864637798074092,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 50,
+          "time": 76.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 19.864637798074092,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 50,
+          "time": 76.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 20.91188263467925,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 50,
+          "time": 76.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 76,
+      "position": {
+        "x": 30,
+        "y": 50.142857142857146
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 24.312269144792282,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 49,
+          "time": 80
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 24.312269144792282,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 49,
+          "time": 80
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 25.022184167538462,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 49,
+          "time": 80
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 78,
+      "position": {
+        "x": 30,
+        "y": 49.57142857142857
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 29.1729369855871,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 49,
+          "time": 80
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 29.1729369855871,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 49,
+          "time": 80
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 29.17354780447301,
+        "margin": 240.9285714285711,
+        "next": {
+          "x": 30,
+          "y": 49,
+          "time": 80
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 80,
+      "position": {
+        "x": 30,
+        "y": 49
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 33.75294743262553,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 48,
+          "time": 83
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 33.75294743262553,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 48,
+          "time": 83
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 33.35429665086892,
+        "margin": 241.4285714285711,
+        "next": {
+          "x": 30,
+          "y": 48,
+          "time": 83
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 82,
+      "position": {
+        "x": 30,
+        "y": 48.333333333333336
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 36.846791592114585,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 31,
+          "y": 47,
+          "time": 86.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 36.846791592114585,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 31,
+          "y": 47,
+          "time": 86.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 37.62757751939963,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 31,
+          "y": 47,
+          "time": 86.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 84,
+      "position": {
+        "x": 30.285714285714285,
+        "y": 47.714285714285715
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 43.584952489551405,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 31,
+          "y": 47,
+          "time": 86.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 43.584952489551405,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 31,
+          "y": 47,
+          "time": 86.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 41.69684581192053,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 31,
+          "y": 47,
+          "time": 86.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 86,
+      "position": {
+        "x": 30.857142857142858,
+        "y": 47.142857142857146
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 45.36371017995295,
+        "margin": 241.92857142857105,
+        "next": {
+          "x": 32,
+          "y": 46,
+          "time": 90.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 45.36371017995295,
+        "margin": 241.92857142857105,
+        "next": {
+          "x": 32,
+          "y": 46,
+          "time": 90.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 45.568278368346405,
+        "margin": 241.92857142857105,
+        "next": {
+          "x": 32,
+          "y": 46,
+          "time": 90.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 88,
+      "position": {
+        "x": 31.375,
+        "y": 46.625
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 50.6168704238728,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 32,
+          "y": 46,
+          "time": 90.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 50.6168704238728,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 32,
+          "y": 46,
+          "time": 90.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 49.45419768998695,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 32,
+          "y": 46,
+          "time": 90.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 90,
+      "position": {
+        "x": 31.875,
+        "y": 46.125
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 53.99537226757092,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 53.99537226757092,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 53.35338212629532,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 92,
+      "position": {
+        "x": 32.27272727272727,
+        "y": 45.72727272727273
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 57.56529074265018,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 57.56529074265018,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 57.24503154720415,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 94,
+      "position": {
+        "x": 32.63636363636364,
+        "y": 45.36363636363636
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 61.04124478925232,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 61.04124478925232,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 61.137140549019435,
+        "margin": 241.42857142857105,
+        "next": {
+          "x": 33,
+          "y": 45,
+          "time": 96
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 96,
+      "position": {
+        "x": 33,
+        "y": 45
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 64.69812744421222,
+        "margin": 239.428571428571,
+        "next": {
+          "x": 34,
+          "y": 44,
+          "time": 101
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 64.69812744421222,
+        "margin": 239.428571428571,
+        "next": {
+          "x": 34,
+          "y": 44,
+          "time": 101
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 65.03494114314402,
+        "margin": 239.428571428571,
+        "next": {
+          "x": 34,
+          "y": 44,
+          "time": 101
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 98,
+      "position": {
+        "x": 33.4,
+        "y": 44.6
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 67.16120372417346,
+        "margin": 237.428571428571,
+        "next": {
+          "x": 34,
+          "y": 44,
+          "time": 101
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 67.16120372417346,
+        "margin": 237.428571428571,
+        "next": {
+          "x": 34,
+          "y": 44,
+          "time": 101
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 68.94615495188218,
+        "margin": 237.428571428571,
+        "next": {
+          "x": 34,
+          "y": 44,
+          "time": 101
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 100,
+      "position": {
+        "x": 33.8,
+        "y": 44.2
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 72.20099466363021,
+        "margin": 235.428571428571,
+        "next": {
+          "x": 35,
+          "y": 43,
+          "time": 104.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 72.20099466363021,
+        "margin": 235.428571428571,
+        "next": {
+          "x": 35,
+          "y": 43,
+          "time": 104.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 72.86226824803629,
+        "margin": 235.428571428571,
+        "next": {
+          "x": 35,
+          "y": 43,
+          "time": 104.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 102,
+      "position": {
+        "x": 34.285714285714285,
+        "y": 43.714285714285715
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 75.7077135983973,
+        "margin": 233.428571428571,
+        "next": {
+          "x": 35,
+          "y": 43,
+          "time": 104.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 75.7077135983973,
+        "margin": 233.428571428571,
+        "next": {
+          "x": 35,
+          "y": 43,
+          "time": 104.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 76.80462324218782,
+        "margin": 233.428571428571,
+        "next": {
+          "x": 35,
+          "y": 43,
+          "time": 104.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 104,
+      "position": {
+        "x": 34.857142857142854,
+        "y": 43.142857142857146
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 81.70083558660997,
+        "margin": 231.428571428571,
+        "next": {
+          "x": 36,
+          "y": 42,
+          "time": 108.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 81.70083558660997,
+        "margin": 231.428571428571,
+        "next": {
+          "x": 36,
+          "y": 42,
+          "time": 108.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 80.77535153144031,
+        "margin": 231.428571428571,
+        "next": {
+          "x": 36,
+          "y": 42,
+          "time": 108.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 106,
+      "position": {
+        "x": 35.375,
+        "y": 42.625
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 84.60677139817656,
+        "margin": 229.428571428571,
+        "next": {
+          "x": 36,
+          "y": 42,
+          "time": 108.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 84.60677139817656,
+        "margin": 229.428571428571,
+        "next": {
+          "x": 36,
+          "y": 42,
+          "time": 108.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 84.73748664472888,
+        "margin": 229.428571428571,
+        "next": {
+          "x": 36,
+          "y": 42,
+          "time": 108.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 108,
+      "position": {
+        "x": 35.875,
+        "y": 42.125
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 89.05693324147428,
+        "margin": 227.428571428571,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 89.05693324147428,
+        "margin": 227.428571428571,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 88.69907403689045,
+        "margin": 227.428571428571,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 110,
+      "position": {
+        "x": 36.214285714285715,
+        "y": 41.785714285714285
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 94.14480885197946,
+        "margin": 225.42857142857093,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 94.14480885197946,
+        "margin": 225.42857142857093,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 92.61694844030039,
+        "margin": 225.42857142857093,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 112,
+      "position": {
+        "x": 36.5,
+        "y": 41.5
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 96.72744245976234,
+        "margin": 223.42857142857093,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 96.72744245976234,
+        "margin": 223.42857142857093,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 96.52020036642132,
+        "margin": 223.42857142857093,
+        "next": {
+          "x": 37,
+          "y": 41,
+          "time": 115.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 114,
+      "position": {
+        "x": 36.785714285714285,
+        "y": 41.214285714285715
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 100.89853552663507,
+        "margin": 221.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 100.89853552663507,
+        "margin": 221.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 100.42423643619641,
+        "margin": 221.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 116,
+      "position": {
+        "x": 37.1,
+        "y": 41
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 104.53938007921458,
+        "margin": 219.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 104.53938007921458,
+        "margin": 219.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 104.25339640986755,
+        "margin": 219.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 118,
+      "position": {
+        "x": 37.5,
+        "y": 41
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 107.83417834449378,
+        "margin": 217.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 107.83417834449378,
+        "margin": 217.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 107.85630502437276,
+        "margin": 217.42857142857093,
+        "next": {
+          "x": 38,
+          "y": 41,
+          "time": 120.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 120,
+      "position": {
+        "x": 37.9,
+        "y": 41
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 110.66422802717484,
+        "margin": 215.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 110.66422802717484,
+        "margin": 215.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 111.45957373869031,
+        "margin": 215.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 122,
+      "position": {
+        "x": 38.25,
+        "y": 40.75
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 115.1213505847166,
+        "margin": 213.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 115.1213505847166,
+        "margin": 213.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 115.30129185982034,
+        "margin": 213.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 124,
+      "position": {
+        "x": 38.583333333333336,
+        "y": 40.416666666666664
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 119.43177040450169,
+        "margin": 211.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 119.43177040450169,
+        "margin": 211.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 119.22310081700891,
+        "margin": 211.4285714285709,
+        "next": {
+          "x": 39,
+          "y": 40,
+          "time": 126.5
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 126,
+      "position": {
+        "x": 38.916666666666664,
+        "y": 40.083333333333336
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 122.5416009409,
+        "margin": 209.4285714285709,
+        "next": {
+          "x": 40,
+          "y": 40,
+          "time": 130
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 122.5416009409,
+        "margin": 209.4285714285709,
+        "next": {
+          "x": 40,
+          "y": 40,
+          "time": 130
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 123.14562182700146,
+        "margin": 209.4285714285709,
+        "next": {
+          "x": 40,
+          "y": 40,
+          "time": 130
+        },
+        "actualFutureContact": 0
+      }
+    },
+    {
+      "time": 128,
+      "position": {
+        "x": 39.42857142857143,
+        "y": 40
+      },
+      "adaptive": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 128.4965139810269,
+        "margin": 207.42857142857088,
+        "next": {
+          "x": 40,
+          "y": 40,
+          "time": 130
+        },
+        "actualFutureContact": 0
+      },
+      "endpointAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 128.4965139810269,
+        "margin": 207.42857142857088,
+        "next": {
+          "x": 40,
+          "y": 40,
+          "time": 130
+        },
+        "actualFutureContact": 0
+      },
+      "oracleAtSamePosition": {
+        "action": "RETURN",
+        "nominal": 0,
+        "band": 0,
+        "clearance": 126.76221150602831,
+        "margin": 207.42857142857088,
+        "next": {
+          "x": 40,
+          "y": 40,
+          "time": 130
+        },
+        "actualFutureContact": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "frozenAt": "2026-11-15T05:42:20.344Z",
+  "scope": "Retrospective existing observations; previously studied clips/days, not new independent events. Component validation only.",
+  "image": {
+    "events": [
+      "PIA26074",
+      "PIA26528",
+      "PIA24039"
+    ],
+    "split": "For test index i: selection clip (i+1)%3, calibration clip (i+2)%3; test clip never enters selection or interval calibration.",
+    "history": 5,
+    "leads": [
+      1,
+      2,
+      3
+    ],
+    "units": "image pixels and frame steps; no metre conversion; PIA24039 seconds are assumed uniform",
+    "candidates": [
+      {
+        "name": "ROBUST",
+        "window": 3,
+        "damping": 0,
+        "widthMode": "last"
+      },
+      {
+        "name": "ROBUST",
+        "window": 3,
+        "damping": 0,
+        "widthMode": "median3"
+      },
+      {
+        "name": "ROBUST",
+        "window": 3,
+        "damping": 0.35,
+        "widthMode": "last"
+      },
+      {
+        "name": "ROBUST",
+        "window": 3,
+        "damping": 0.35,
+        "widthMode": "median3"
+      },
+      {
+        "name": "ROBUST",
+        "window": 5,
+        "damping": 0,
+        "widthMode": "last"
+      },
+      {
+        "name": "ROBUST",
+        "window": 5,
+        "damping": 0,
+        "widthMode": "median3"
+      },
+      {
+        "name": "ROBUST",
+        "window": 5,
+        "damping": 0.35,
+        "widthMode": "last"
+      },
+      {
+        "name": "ROBUST",
+        "window": 5,
+        "damping": 0.35,
+        "widthMode": "median3"
+      },
+      {
+        "name": "ROBUST",
+        "window": 7,
+        "damping": 0,
+        "widthMode": "last"
+      },
+      {
+        "name": "ROBUST",
+        "window": 7,
+        "damping": 0,
+        "widthMode": "median3"
+      },
+      {
+        "name": "ROBUST",
+        "window": 7,
+        "damping": 0.35,
+        "widthMode": "last"
+      },
+      {
+        "name": "ROBUST",
+        "window": 7,
+        "damping": 0.35,
+        "widthMode": "median3"
+      }
+    ],
+    "baselineNames": [
+      "PERSISTENCE",
+      "LAST2",
+      "OLS5",
+      "LOCAL7",
+      "CV_SMOOTH",
+      "CV_RESPONSIVE",
+      "IMM"
+    ],
+    "selectionLoss": "mean(abs(x error)/origin width + 0.5*abs(width error)/origin width)",
+    "interval": "90% empirical absolute residual quantile of separate calibration clip, by lead and normalized by origin width. No exchangeability or coverage guarantee.",
+    "gate": "Against CV_SMOOTH: >=10% lower equal-clip mean RMSE; no clip RMSE or width MAE worse; empirical position coverage >=90% on every clip. Engineering target, not safety standard.",
+    "navigationPromotion": false
+  },
+  "pressure": {
+    "developmentSol": 57,
+    "evaluationSol": 215,
+    "configs": [
+      {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.5,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.5,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.8,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 30,
+        "floor": 0.8,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.5,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.5,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.8,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 60,
+        "floor": 0.8,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.5,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.5,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.8,
+        "consecutive": 2,
+        "mad": 4,
+        "gap": 5
+      },
+      {
+        "kind": "trend",
+        "window": 90,
+        "floor": 0.8,
+        "consecutive": 3,
+        "mad": 4,
+        "gap": 5
+      }
+    ],
+    "legacy": {
+      "kind": "median",
+      "window": 30,
+      "floor": 0.8,
+      "consecutive": 3,
+      "mad": 4,
+      "gap": 0
+    },
+    "warmupSeconds": 100,
+    "matchingSeconds": [
+      10,
+      30,
+      60
+    ],
+    "primaryMatchingSeconds": 30,
+    "refractorySeconds": 60,
+    "catalog": "Hueso Table S2 amplitude >=0.5 Pa within fully observed common scoring intervals; nearest one-to-one time matching. Weak/edge catalog windows excluded from unmatched alarm count.",
+    "selection": "Maximum catalog-agreement F1 on sol57, then fewer unmatched alarms, then parameter order. This proxy is not truth-based precision.",
+    "gate": "Sol215 catalog recall improves and unmatched alerts/hour does not increase versus legacy at 30 s matching. Catalogue verification, not dusty-vortex specificity."
+  },
+  "hashes": {
+    "src/observed-validation-v11.ts": "f184c79fa0e422e7802b3514e7d82570c062152f6694e877798b23d9025d35f1",
+    "src/vortex-forecast-v8.ts": "3d7bf1c149625512c0fafddc54eac0c6ef183a435c5b37c4ec938fd9a8c447be",
+    "src/local-dust-tracker.ts": "c18b4fa04a014d7772225669006b521679ca5c775844a03d1f448f4e119035be",
+    "src/hazard-tracker.ts": "97ddb9c02fb8d41873ea5658e839665dfe29ab5fd17d10e40c298f42a2bd0e61",
+    "scripts/validate_observed_v11.ts": "336cab509eb31d69e06b39136a086439235f7b2d076fce3013e245ad60d7772a",
+    "scripts/prepare_observed_v11.py": "962d86f7ba7d098e6f2eda62deebee8351357ca14e291c78df2d15e17625edf6",
+    "public/data/hazards/local-observations.json": "f9a235e82404644679423c84d8734e60579a2f47c74d28b2545a3a94f1a97aa5",
+    "public/data/hazards/observed-v11/pressure-input.json": "d55d38c3bb0a79bcee5b6dffa45786eb4e161e41d0890881660ef561f694280d"
+  }
+}

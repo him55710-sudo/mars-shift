@@ -1,0 +1,40 @@
+{
+  "frozenAt": "2026-11-15T06:26:46.704Z",
+  "phase": "Follow-up after identifying invalid ground-contact interpretation of author scale marks. Previous protocol/results preserved, not used as an accuracy benchmark.",
+  "units": "Metres / seconds / local north-east. Range is separately supplied published image interpretation, not computed from apparent width.",
+  "eventCount": 1,
+  "observedRangeFrames": 4,
+  "models": [
+    "PERSISTENCE",
+    "LAST2",
+    "OLS",
+    "WEIGHTED_CV"
+  ],
+  "history": 2,
+  "maxFrameLead": 2,
+  "inputs": "Author approximate horizontal ranges 110,80,55(midpoint of50–60),30 m; source camera rays at digitized horizontal dust marks; exact PDS exposure SCLK. Published visible dust widths 2,11,11,11 m stay separate from fitted vortex diameter25m.",
+  "uncertainty": {
+    "seed": 120215,
+    "samples": 2000,
+    "rangeSigmaFraction": 0.1,
+    "minRangeSigma": 3,
+    "pixelSigma": 4,
+    "sharedRangeScaleSigma": 0.05,
+    "sharedAzimuthSigmaDegrees": 0.1,
+    "meaning": "Declared sensitivity assumptions, not calibrated instrument errors or confidence guarantees. Normal range/angle draws; common scale/azimuth draw per event.",
+    "alternativeFractions": [
+      0.05,
+      0.2
+    ]
+  },
+  "evaluation": "Three chronological forecast-target pairs, one event, no tuning or model promotion. Report metric discrepancy to later reconstructed coordinates and published approximate ranges. They share geometric calibration; neither is surveyed independent centre truth.",
+  "missingRange": "Never silently assign a default range or velocity. Metric position unavailable until a range provider is present.",
+  "navigation": "Retrospective published range cannot authorize live navigation. SITE7/DRIVE2050 must never be overlaid on Sol477/Drive1004.",
+  "hashes": {
+    "public/data/hazards/metric-v12/inputs.json": "9c567d434f45f61c24cc1e3239f124041c5fb91d35ab5e71d5aa4ae8f609a2d2",
+    "src/ranged-tracker-v12.ts": "4aa31ec4fd2e3460f4e5431bca4a1cf12fce5ed59f4a02524daf6ae0e4ff5a14",
+    "src/metric-vortex-v12.ts": "56ae6d58893514eff227a693060caf2060b22825b31ef618131e7ce09c1351d6",
+    "src/vendor/nasa-cahvore.js": "2a55aa33163d5ff6853262cbdd199632e18e0376df463ef2bef0978b933e4a78",
+    "scripts/analyze_ranged_v12.ts": "bde31dead4ae9f1f3c015b468e3f9e9de6be33f23e5cc8f44a04bda3ee9b74cc"
+  }
+}

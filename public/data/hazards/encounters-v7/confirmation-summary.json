@@ -1,0 +1,83 @@
+{
+  "mode": "confirmation",
+  "createdAt": "2026-11-15T02:58:11.206Z",
+  "protocolSHA256": "af9e68017b07a35623df598d30aabf8668c45c81c8d73d389f44a0de76a03657",
+  "engineSHA256": "4cb5e9e3c1413cf49da8b16a1bec574107adcfd5476fa6f83c92045a012e004d",
+  "summary": {
+    "Static:0": {
+      "cases": 72,
+      "noContact": 28,
+      "threats": 48,
+      "threatAvoided": 6,
+      "meanContact": 5.569846192957433,
+      "meanClearance": 9.97977257621992,
+      "meanHold": 40.333333333333336,
+      "meanAvoidableHold": 0,
+      "returnFailures": 0,
+      "budgetViolations": 0,
+      "meanP95Ms": 2.0300444444474124,
+      "limitedReplans": 0,
+      "meanDistance": 23.912895620839986
+    },
+    "Endpoint:0": {
+      "cases": 72,
+      "noContact": 32,
+      "threats": 48,
+      "threatAvoided": 8,
+      "meanContact": 4.757910453792903,
+      "meanClearance": 10.11126014221889,
+      "meanHold": 33.97222222222222,
+      "meanAvoidableHold": 0,
+      "returnFailures": 0,
+      "budgetViolations": 0,
+      "meanP95Ms": 3.846416666669765,
+      "limitedReplans": 0,
+      "meanDistance": 25.26392224095449
+    },
+    "LegacyAdaptive": {
+      "cases": 72,
+      "noContact": 31,
+      "threats": 48,
+      "threatAvoided": 7,
+      "meanContact": 4.9848746841193226,
+      "meanClearance": 9.792089577351648,
+      "meanHold": 30.25,
+      "meanAvoidableHold": 0,
+      "returnFailures": 0,
+      "budgetViolations": 0,
+      "meanP95Ms": 176.75902777777765,
+      "limitedReplans": 0,
+      "meanDistance": 25.612201349885634
+    },
+    "Adaptive:0.25": {
+      "cases": 72,
+      "noContact": 34,
+      "threats": 48,
+      "threatAvoided": 10,
+      "meanContact": 4.696932882704906,
+      "meanClearance": 10.179900279253436,
+      "meanHold": 32.02777777777778,
+      "meanAvoidableHold": 0,
+      "returnFailures": 0,
+      "budgetViolations": 0,
+      "meanP95Ms": 164.05877916666756,
+      "limitedReplans": 0,
+      "meanDistance": 25.738193960629914
+    },
+    "Oracle:0": {
+      "cases": 72,
+      "noContact": 35,
+      "threats": 48,
+      "threatAvoided": 11,
+      "meanContact": 4.496425226267483,
+      "meanClearance": 10.385497132828903,
+      "meanHold": 34.138888888888886,
+      "meanAvoidableHold": 0,
+      "returnFailures": 0,
+      "budgetViolations": 0,
+      "meanP95Ms": 66.9754069444458,
+      "limitedReplans": 0,
+      "meanDistance": 25.334169271372787
+    }
+  }
+}

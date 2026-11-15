@@ -1,0 +1,460 @@
+{
+  "createdAt": "2026-11-15T03:34:04.048Z",
+  "protocolSHA256": "15642859ce8e862e117f5f9f534adee25a55e29a721308d6f62e554412a05d39",
+  "engineSHA256": "3ac4e3622e88fb922be89d7c07b7717647562c2546f80d4ceca627c7fc32e6da",
+  "forecastSHA256": "3d7bf1c149625512c0fafddc54eac0c6ef183a435c5b37c4ec938fd9a8c447be",
+  "kind": "DEVELOPMENT_SYNTHETIC_POSITION_SELECTION",
+  "selected": "CV_SMOOTH",
+  "scores": [
+    {
+      "model": "CV_SMOOTH",
+      "rmse": 4.29375970390753
+    },
+    {
+      "model": "IMM",
+      "rmse": 4.947467143766677
+    },
+    {
+      "model": "LOCAL7",
+      "rmse": 5.086470762237162
+    },
+    {
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.10400230226191
+    }
+  ],
+  "rows": [
+    {
+      "case": "dev-001",
+      "model": "LOCAL7",
+      "rmse": 2.997537074201565,
+      "radiusMAE": 0.10971196863316468
+    },
+    {
+      "case": "dev-001",
+      "model": "CV_SMOOTH",
+      "rmse": 1.0812727276902154,
+      "radiusMAE": 0.10971196863316468
+    },
+    {
+      "case": "dev-001",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.580601277698992,
+      "radiusMAE": 0.10971196863316468
+    },
+    {
+      "case": "dev-001",
+      "model": "IMM",
+      "rmse": 1.4794969974470646,
+      "radiusMAE": 0.10971196863316468
+    },
+    {
+      "case": "dev-002",
+      "model": "LOCAL7",
+      "rmse": 1.8864384764656759,
+      "radiusMAE": 0.3882372760093861
+    },
+    {
+      "case": "dev-002",
+      "model": "CV_SMOOTH",
+      "rmse": 1.430157399322043,
+      "radiusMAE": 0.3882372760093861
+    },
+    {
+      "case": "dev-002",
+      "model": "CV_RESPONSIVE",
+      "rmse": 15.129183539884805,
+      "radiusMAE": 0.3882372760093861
+    },
+    {
+      "case": "dev-002",
+      "model": "IMM",
+      "rmse": 2.0960564879125183,
+      "radiusMAE": 0.3882372760093861
+    },
+    {
+      "case": "dev-003",
+      "model": "LOCAL7",
+      "rmse": 12.497685093642108,
+      "radiusMAE": 1.2982746152754372
+    },
+    {
+      "case": "dev-003",
+      "model": "CV_SMOOTH",
+      "rmse": 11.925501914939186,
+      "radiusMAE": 1.2982746152754372
+    },
+    {
+      "case": "dev-003",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.426839894033924,
+      "radiusMAE": 1.2982746152754372
+    },
+    {
+      "case": "dev-003",
+      "model": "IMM",
+      "rmse": 12.398359798201831,
+      "radiusMAE": 1.2982746152754372
+    },
+    {
+      "case": "dev-004",
+      "model": "LOCAL7",
+      "rmse": 3.3125756748362685,
+      "radiusMAE": 0.1630115952339621
+    },
+    {
+      "case": "dev-004",
+      "model": "CV_SMOOTH",
+      "rmse": 1.6134924312871308,
+      "radiusMAE": 0.1630115952339621
+    },
+    {
+      "case": "dev-004",
+      "model": "CV_RESPONSIVE",
+      "rmse": 11.43167625898835,
+      "radiusMAE": 0.1630115952339621
+    },
+    {
+      "case": "dev-004",
+      "model": "IMM",
+      "rmse": 3.346588928876435,
+      "radiusMAE": 0.1630115952339621
+    },
+    {
+      "case": "dev-005",
+      "model": "LOCAL7",
+      "rmse": 2.491995824870487,
+      "radiusMAE": 0.18558437763022786
+    },
+    {
+      "case": "dev-005",
+      "model": "CV_SMOOTH",
+      "rmse": 2.175321208569222,
+      "radiusMAE": 0.18558437763022786
+    },
+    {
+      "case": "dev-005",
+      "model": "CV_RESPONSIVE",
+      "rmse": 11.8659284874342,
+      "radiusMAE": 0.18558437763022786
+    },
+    {
+      "case": "dev-005",
+      "model": "IMM",
+      "rmse": 2.796214492965206,
+      "radiusMAE": 0.18558437763022786
+    },
+    {
+      "case": "dev-006",
+      "model": "LOCAL7",
+      "rmse": 11.429444136772814,
+      "radiusMAE": 1.0750956306281356
+    },
+    {
+      "case": "dev-006",
+      "model": "CV_SMOOTH",
+      "rmse": 10.733643049323764,
+      "radiusMAE": 1.0750956306281356
+    },
+    {
+      "case": "dev-006",
+      "model": "CV_RESPONSIVE",
+      "rmse": 11.931502292397875,
+      "radiusMAE": 1.0750956306281356
+    },
+    {
+      "case": "dev-006",
+      "model": "IMM",
+      "rmse": 10.395716319766105,
+      "radiusMAE": 1.0750956306281356
+    },
+    {
+      "case": "dev-007",
+      "model": "LOCAL7",
+      "rmse": 3.9560057783445997,
+      "radiusMAE": 0.17395047572300087
+    },
+    {
+      "case": "dev-007",
+      "model": "CV_SMOOTH",
+      "rmse": 2.0390116384188985,
+      "radiusMAE": 0.17395047572300087
+    },
+    {
+      "case": "dev-007",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.231932398157326,
+      "radiusMAE": 0.17395047572300087
+    },
+    {
+      "case": "dev-007",
+      "model": "IMM",
+      "rmse": 2.358293415329214,
+      "radiusMAE": 0.17395047572300087
+    },
+    {
+      "case": "dev-008",
+      "model": "LOCAL7",
+      "rmse": 3.2704911660158595,
+      "radiusMAE": 0.14116049114314233
+    },
+    {
+      "case": "dev-008",
+      "model": "CV_SMOOTH",
+      "rmse": 2.9883654711485326,
+      "radiusMAE": 0.14116049114314233
+    },
+    {
+      "case": "dev-008",
+      "model": "CV_RESPONSIVE",
+      "rmse": 10.931189520871541,
+      "radiusMAE": 0.14116049114314233
+    },
+    {
+      "case": "dev-008",
+      "model": "IMM",
+      "rmse": 3.9582829970129265,
+      "radiusMAE": 0.14116049114314233
+    },
+    {
+      "case": "dev-009",
+      "model": "LOCAL7",
+      "rmse": 11.446384806904028,
+      "radiusMAE": 0.6581272273574462
+    },
+    {
+      "case": "dev-009",
+      "model": "CV_SMOOTH",
+      "rmse": 10.828453472418703,
+      "radiusMAE": 0.6581272273574462
+    },
+    {
+      "case": "dev-009",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.191844364768697,
+      "radiusMAE": 0.6581272273574462
+    },
+    {
+      "case": "dev-009",
+      "model": "IMM",
+      "rmse": 10.856348243345101,
+      "radiusMAE": 0.6581272273574462
+    },
+    {
+      "case": "dev-010",
+      "model": "LOCAL7",
+      "rmse": 3.9949319822866705,
+      "radiusMAE": 0.12404031975465506
+    },
+    {
+      "case": "dev-010",
+      "model": "CV_SMOOTH",
+      "rmse": 2.068944042507197,
+      "radiusMAE": 0.12404031975465506
+    },
+    {
+      "case": "dev-010",
+      "model": "CV_RESPONSIVE",
+      "rmse": 11.348264820276649,
+      "radiusMAE": 0.12404031975465506
+    },
+    {
+      "case": "dev-010",
+      "model": "IMM",
+      "rmse": 2.7355448784388465,
+      "radiusMAE": 0.12404031975465506
+    },
+    {
+      "case": "dev-011",
+      "model": "LOCAL7",
+      "rmse": 6.334582579938286,
+      "radiusMAE": 0.4951818444379412
+    },
+    {
+      "case": "dev-011",
+      "model": "CV_SMOOTH",
+      "rmse": 6.139444427852859,
+      "radiusMAE": 0.4951818444379412
+    },
+    {
+      "case": "dev-011",
+      "model": "CV_RESPONSIVE",
+      "rmse": 13.808316767524852,
+      "radiusMAE": 0.4951818444379412
+    },
+    {
+      "case": "dev-011",
+      "model": "IMM",
+      "rmse": 6.43901128222101,
+      "radiusMAE": 0.4951818444379412
+    },
+    {
+      "case": "dev-012",
+      "model": "LOCAL7",
+      "rmse": 3.3274723273816686,
+      "radiusMAE": 1.1377056252189888
+    },
+    {
+      "case": "dev-012",
+      "model": "CV_SMOOTH",
+      "rmse": 3.3021930296683366,
+      "radiusMAE": 1.1377056252189888
+    },
+    {
+      "case": "dev-012",
+      "model": "CV_RESPONSIVE",
+      "rmse": 11.537523403629455,
+      "radiusMAE": 1.1377056252189888
+    },
+    {
+      "case": "dev-012",
+      "model": "IMM",
+      "rmse": 5.038469942531585,
+      "radiusMAE": 1.1377056252189888
+    },
+    {
+      "case": "dev-013",
+      "model": "LOCAL7",
+      "rmse": 3.756361431291624,
+      "radiusMAE": 0.18869570355936865
+    },
+    {
+      "case": "dev-013",
+      "model": "CV_SMOOTH",
+      "rmse": 1.313652745025106,
+      "radiusMAE": 0.18869570355936865
+    },
+    {
+      "case": "dev-013",
+      "model": "CV_RESPONSIVE",
+      "rmse": 14.746297314624366,
+      "radiusMAE": 0.18869570355936865
+    },
+    {
+      "case": "dev-013",
+      "model": "IMM",
+      "rmse": 2.5939161510587656,
+      "radiusMAE": 0.18869570355936865
+    },
+    {
+      "case": "dev-014",
+      "model": "LOCAL7",
+      "rmse": 5.816166533769833,
+      "radiusMAE": 0.31966444855990567
+    },
+    {
+      "case": "dev-014",
+      "model": "CV_SMOOTH",
+      "rmse": 5.536886943775075,
+      "radiusMAE": 0.31966444855990567
+    },
+    {
+      "case": "dev-014",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.167187569593048,
+      "radiusMAE": 0.31966444855990567
+    },
+    {
+      "case": "dev-014",
+      "model": "IMM",
+      "rmse": 5.975283893129502,
+      "radiusMAE": 0.31966444855990567
+    },
+    {
+      "case": "dev-015",
+      "model": "LOCAL7",
+      "rmse": 1.9798272456430914,
+      "radiusMAE": 0.8638796531886248
+    },
+    {
+      "case": "dev-015",
+      "model": "CV_SMOOTH",
+      "rmse": 2.192818130416089,
+      "radiusMAE": 0.8638796531886248
+    },
+    {
+      "case": "dev-015",
+      "model": "CV_RESPONSIVE",
+      "rmse": 6.75735614081124,
+      "radiusMAE": 0.8638796531886248
+    },
+    {
+      "case": "dev-015",
+      "model": "IMM",
+      "rmse": 2.798756730840129,
+      "radiusMAE": 0.8638796531886248
+    },
+    {
+      "case": "dev-016",
+      "model": "LOCAL7",
+      "rmse": 5.3089337382673065,
+      "radiusMAE": 0.1441554722145361
+    },
+    {
+      "case": "dev-016",
+      "model": "CV_SMOOTH",
+      "rmse": 4.40401582640337,
+      "radiusMAE": 0.1441554722145361
+    },
+    {
+      "case": "dev-016",
+      "model": "CV_RESPONSIVE",
+      "rmse": 12.919010178955237,
+      "radiusMAE": 0.1441554722145361
+    },
+    {
+      "case": "dev-016",
+      "model": "IMM",
+      "rmse": 4.572272770507932,
+      "radiusMAE": 0.1441554722145361
+    },
+    {
+      "case": "dev-017",
+      "model": "LOCAL7",
+      "rmse": 5.198169750905636,
+      "radiusMAE": 0.13623629533097967
+    },
+    {
+      "case": "dev-017",
+      "model": "CV_SMOOTH",
+      "rmse": 4.981923488450831,
+      "radiusMAE": 0.13623629533097967
+    },
+    {
+      "case": "dev-017",
+      "model": "CV_RESPONSIVE",
+      "rmse": 10.987013170682685,
+      "radiusMAE": 0.13623629533097967
+    },
+    {
+      "case": "dev-017",
+      "model": "IMM",
+      "rmse": 5.843838516473954,
+      "radiusMAE": 0.13623629533097967
+    },
+    {
+      "case": "dev-018",
+      "model": "LOCAL7",
+      "rmse": 2.551470098731384,
+      "radiusMAE": 1.3163730009981813
+    },
+    {
+      "case": "dev-018",
+      "model": "CV_SMOOTH",
+      "rmse": 2.532576723118998,
+      "radiusMAE": 1.3163730009981813
+    },
+    {
+      "case": "dev-018",
+      "model": "CV_RESPONSIVE",
+      "rmse": 8.880374040381097,
+      "radiusMAE": 1.3163730009981813
+    },
+    {
+      "case": "dev-018",
+      "model": "IMM",
+      "rmse": 3.371956741742064,
+      "radiusMAE": 1.3163730009981813
+    }
+  ]
+}
