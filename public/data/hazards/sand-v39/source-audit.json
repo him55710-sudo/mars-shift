@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "matchedSlipOutcomesObtained": 0,
+  "trapConfusionMatrix": null,
+  "retrievals": [
+    {
+      "url": "https://dataverse.jpl.nasa.gov/api/datasets/:persistentId/?persistentId=doi:10.48577/jpl.M8FWRK",
+      "status": 200,
+      "responseSHA256": "50a7af9ea7885800a470b16c7276351c77eed70879c9be85496c27cefb8ca8e5",
+      "files": [
+        {
+          "id": 80299,
+          "filename": "CL20_6574.pdf",
+          "bytes": 22477746
+        }
+      ],
+      "finding": "This repository entry supplies a paper PDF, not an image-to-slip telemetry table."
+    },
+    {
+      "url": "https://ntrs.nasa.gov/citations/20210006223",
+      "finding": "Slip study paper record; no downloadable per-drive table obtained."
+    },
+    {
+      "url": "https://www.roboticsproceedings.org/rss13/p38.pdf",
+      "finding": "Published in-situ slip/slope/thermal experiments; referenced method, not reproduced. Aggregate paper figures do not supply independent outcomes matched to our predictions."
+    },
+    {
+      "url": "https://zenodo.org/records/15995036",
+      "finding": "Official NASA/JPL AI4Mars expert terrain labels downloaded directly. Sand appearance only; no sinkage or drive slip outcome column."
+    }
+  ],
+  "scope": "Primary sources retrieved in this audit. Absence of an obtained matched table is not a claim that no public telemetry exists.",
+  "requiredForSlipEvaluation": [
+    "Image product ID and acquisition time before traversal",
+    "Drive ID and timestamp",
+    "Independent wheel/visual odometry slip definition and quality flags",
+    "Location and frame transform linking wheel footprints to input imagery",
+    "Whole-drive/site held-out split; commanded/achieved displacement alone must account for steering, turns and failed VO"
+  ],
+  "routingConsequence": "Withhold automatic physical hazard classification from the new appearance experiment; retain declared/manual exclusions and show local-validation requirement."
+}

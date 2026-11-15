@@ -10,6 +10,7 @@ import time
 import zipfile
 import zlib
 import struct
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import requests
 
@@ -33,14 +34,25 @@ class RemoteZip(io.RawIOBase):
         CACHE.mkdir(parents=True, exist_ok=True)
         p = CACHE / f'range-{self.pos}-{end}.bin'
         if p.exists(): data = p.read_bytes()
+        elif end-self.pos>1000000:
+            start=self.pos
+            def chunk(a):
+                remote=RemoteZip();remote.seek(a)
+                return remote.read(min(1000000,end-a+1))
+            with ThreadPoolExecutor(max_workers=6) as pool:
+                data=b''.join(pool.map(chunk,range(start,end+1,1000000)))
+            p.write_bytes(data)
         else:
             print('FETCH',self.pos,end,flush=True)
-            for retry in range(5):
-                r = requests.get(URL, headers={'Range':f'bytes={self.pos}-{end}'}, timeout=90)
-                print('RESPONSE',r.status_code,r.headers.get('Content-Range'),len(r.content),flush=True)
-                if r.status_code == 206 and r.headers.get('Content-Range') == f'bytes {self.pos}-{end}/{SIZE}': break
+            for retry in range(8):
+                try:
+                    r = requests.get(URL, headers={'Range':f'bytes={self.pos}-{end}'}, timeout=45)
+                    if r.status_code == 206 and r.headers.get('Content-Range') == f'bytes {self.pos}-{end}/{SIZE}': break
+                    print('Retrying unverified response',r.status_code,flush=True)
+                except requests.RequestException as error:
+                    print('Retrying transport error with TLS verification retained',type(error).__name__,flush=True)
                 time.sleep(2+retry)
-            else: raise ValueError(f'Unverified range response: {r.status_code}, {r.headers.get("Content-Range")}')
+            else: raise ValueError('Could not obtain verified byte range after retries')
             data = r.content
             if len(data) != end-self.pos+1: raise ValueError('Truncated byte range')
             # Keep large central directory blocks, not thousands of small member fragments.
